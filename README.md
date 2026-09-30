@@ -33,6 +33,14 @@ python demo.py
 
 The demo creates two synthetic aircraft on a converging path, generates a bounded advisory, applies fixture approval + acknowledgement, performs the simulated transition, and prints the audit chain.
 
+## Local scenario explorer (no SDK/model calls)
+
+```bash
+python explorer.py serve --port 8765
+```
+
+Open http://127.0.0.1:8765 for before/after trajectories, fixture controls, gate refusals, audit timeline, JSON export and deterministic replay. See [EXPLORER.md](EXPLORER.md) for fixed cases, CLI and tests. Research simulation only; no real approval authority.
+
 ## Strands path
 
 Install the SDK:
