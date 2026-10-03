@@ -218,18 +218,47 @@ class AdvisoryPlanner:
     def __init__(self, policy: SafetyPolicy) -> None:
         self.policy = policy
 
+    def _maneuver_candidates(self, target: Aircraft) -> Iterable[tuple[float, float, float]]:
+        """Yield (vx, vy, climb) candidates in fixed priority order.
+
+        Lateral-only variants come first to preserve the historical resolution
+        preference; climb and speed variants follow so vertical-convergence
+        conflicts (unresolvable laterally) still get a bounded safe advisory.
+        Combined lateral+climb variants are tried last. Duplicates are skipped.
+        Every candidate is still admitted only through ``advisory_safe``.
+        """
+        seen: set[tuple[float, float, float]] = set()
+
+        def _emit(vx: float, vy: float, climb: float) -> Iterable[tuple[float, float, float]]:
+            key = (vx, vy, climb)
+            if key not in seen:
+                seen.add(key)
+                yield key
+
+        for vy in (2.0, -2.0, 3.0, -3.0, 0.0):
+            yield from _emit(target.vx_nm_min, vy, target.climb_ft_min)
+        for climb in (0.0, 1000.0, -1000.0, 2000.0, -2000.0, 3000.0, -3000.0):
+            yield from _emit(target.vx_nm_min, target.vy_nm_min, climb)
+        for dvx in (1.0, -1.0, 2.0, -2.0):
+            yield from _emit(target.vx_nm_min + dvx, target.vy_nm_min, target.climb_ft_min)
+        for vy in (2.0, -2.0, 3.0, -3.0):
+            # Combined loop caps climb at +/-2000 (inside the gate's 3000 bound);
+            # wider climb setpoints are already covered by the climb-only loop above.
+            for climb in (0.0, 1000.0, -1000.0, 2000.0, -2000.0):
+                yield from _emit(target.vx_nm_min, vy, climb)
+
     def plan(self, state: WorldState, now: float) -> list[Advisory]:
         if not self.policy.state_has_conflict(state):
             return []
         values = sorted(state.aircraft, key=lambda x: x.aircraft_id)
         target = values[-1]
-        for vy in [2.0, -2.0, 3.0, -3.0, 0.0]:
+        for vx, vy, climb in self._maneuver_candidates(target):
             advisory = Advisory(
                 aircraft_id=target.aircraft_id,
                 world_hash=state.world_hash,
-                set_vx_nm_min=target.vx_nm_min,
+                set_vx_nm_min=vx,
                 set_vy_nm_min=vy,
-                set_climb_ft_min=target.climb_ft_min,
+                set_climb_ft_min=climb,
                 issued_at=now,
                 expires_at=now + 8.0,
                 rationale="synthetic projected-separation recovery",
