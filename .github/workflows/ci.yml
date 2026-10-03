@@ -1,0 +1,75 @@
+# TowerOps CI — issue #1 scaffold.
+#
+# Scope is the repo's actual toolchain (established from the repo's real files):
+#   - Python 3.12+ (README.md: "Requires Python 3.12+")
+#   - towerops.py is pure stdlib: unittest needs no installs
+#   - requirements.txt pins strands-agents==1.55.1 for strands_adapter.py only
+#
+# All actions SHA-pinned (resolved via git ls-remote, 2026-10-03):
+#   actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+#   actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deterministic:
+    name: Deterministic core (stdlib)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Compile check
+        run: python -m py_compile towerops.py demo.py strands_adapter.py tests/test_towerops.py
+
+      - name: Run deterministic tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Demo smoke run
+        run: |
+          python demo.py > demo_result.json
+          python - <<'EOF'
+          import json
+          d = json.load(open("demo_result.json"))
+          assert d["before_conflict"] is True, d
+          assert d["after_conflict"] is False, d
+          assert d["audit_valid"] is True, d
+          assert d["audit_events"][-1]["kind"] == "simulated_actuation", d
+          print("demo smoke ok: conflict resolved, audit valid")
+          EOF
+
+  strands-adapter:
+    name: Strands adapter dependency
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install declared dependency
+        run: pip install -r requirements.txt
+
+      - name: Import adapter
+        run: python -c "import strands_adapter; print('adapter import ok')"
