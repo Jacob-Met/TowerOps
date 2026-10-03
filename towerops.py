@@ -18,8 +18,12 @@ def sha256_obj(value: Any) -> str:
     return hashlib.sha256(canonical_bytes(value)).hexdigest()
 
 
-def _finite_time(value: Any) -> bool:
+def _finite_number(value: Any) -> bool:
     return type(value) is int or (type(value) is float and math.isfinite(value))
+
+
+def _finite_time(value: Any) -> bool:
+    return _finite_number(value)
 
 
 class GateRejected(RuntimeError):
@@ -52,6 +56,18 @@ class WorldState:
     version: int
     observed_at: float
     aircraft: tuple[Aircraft, ...]
+
+    def __post_init__(self) -> None:
+        # Aircraft ids key every id-based operation (get, replace_aircraft,
+        # advisory_safe's target exclusion). Duplicate ids would silently
+        # break those invariants — e.g. advisory_safe skips id-twins, letting
+        # an advisory that collides with a twin pass the gate — so malformed
+        # states are rejected at construction instead of failing open.
+        seen: set[str] = set()
+        for aircraft in self.aircraft:
+            if aircraft.aircraft_id in seen:
+                raise ValueError(f"duplicate aircraft_id: {aircraft.aircraft_id!r}")
+            seen.add(aircraft.aircraft_id)
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -178,6 +194,16 @@ class SafetyPolicy:
         return (lo, hi) if lo < hi else None
 
     def _pair_conflict(self, a: Aircraft, b: Aircraft) -> bool:
+        # Fail closed: a non-finite field (NaN/inf) means the separation is
+        # unknown, so the pair is treated as conflicting rather than safe.
+        # Without this, NaN comparisons silently evaluate False and an
+        # aircraft with unknown state could pass the safety gate.
+        for value in (
+            a.x_nm, a.y_nm, a.altitude_ft, a.vx_nm_min, a.vy_nm_min, a.climb_ft_min,
+            b.x_nm, b.y_nm, b.altitude_ft, b.vx_nm_min, b.vy_nm_min, b.climb_ft_min,
+        ):
+            if not _finite_number(value):
+                return True
         h = self._horizontal_unsafe_interval(
             a.x_nm - b.x_nm, a.y_nm - b.y_nm,
             a.vx_nm_min - b.vx_nm_min, a.vy_nm_min - b.vy_nm_min,
