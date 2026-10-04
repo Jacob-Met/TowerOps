@@ -7,10 +7,12 @@ also tries climb and speed variants in a fixed deterministic order, with
 lateral-only variants first to preserve the historical resolution preference.
 """
 
+import math
 from dataclasses import asdict
 
 from towerops import (
     Ack,
+    Advisory,
     AdvisoryPlanner,
     Aircraft,
     Approval,
@@ -108,3 +110,52 @@ def test_no_conflict_still_yields_no_advisory():
     )
     assert not policy.state_has_conflict(state)
     assert AdvisoryPlanner(policy).plan(state, now=1002.0) == []
+
+def _issue4_near_speed_limit_state() -> WorldState:
+    # The target crosses the other aircraft's track near the speed cap.
+    return WorldState(
+        version=1,
+        observed_at=1000.0,
+        aircraft=(
+            Aircraft("TWR101", -15.0, 0.0, 10000.0, 0.0, 0.0),
+            Aircraft("TWR202", 0.0, -3.0, 10000.0, -5.90, 0.0),
+        ),
+    )
+
+
+def test_issue4_near_limit_lateral_menu_resolves_within_speed_budget():
+    policy = SafetyPolicy()
+    state = _issue4_near_speed_limit_state()
+    assert policy.state_has_conflict(state)
+    target = state.get("TWR202")
+    for vy in (2.0, -2.0, 3.0, -3.0, 0.0):
+        old = Advisory(target.aircraft_id, state.world_hash, target.vx_nm_min, vy,
+                       target.climb_ft_min, 1002.0, 1010.0, "baseline fixed menu")
+        assert not policy.advisory_safe(state, old)
+    advisories = AdvisoryPlanner(policy).plan(state, now=1002.0)
+    assert advisories
+    for advisory in advisories:
+        assert policy.advisory_safe(state, advisory)
+        assert math.hypot(advisory.set_vx_nm_min, advisory.set_vy_nm_min) <= 6.0
+    assert advisories[0].set_vx_nm_min == -5.90
+    assert advisories[0].set_climb_ft_min == target.climb_ft_min
+    assert advisories[0].set_vy_nm_min < 0.0
+
+
+def test_lateral_candidate_order_is_budgeted_and_deduplicated():
+    policy = SafetyPolicy()
+    target = _issue4_near_speed_limit_state().get("TWR202")
+    candidates = list(AdvisoryPlanner(policy)._maneuver_candidates(target))
+    vy_max = math.sqrt(policy.max_speed_nm_min ** 2 - target.vx_nm_min ** 2)
+    while math.hypot(target.vx_nm_min, vy_max) > policy.max_speed_nm_min:
+        vy_max = math.nextafter(vy_max, 0.0)
+    expected = (vy_max, -vy_max, 0.0, vy_max / 2.0, -vy_max / 2.0,
+                vy_max / 4.0, -vy_max / 4.0)
+    lateral = candidates[:len(expected)]
+    assert len(lateral) == len(expected)
+    assert all(math.isclose(c[1], v, rel_tol=0.0, abs_tol=1e-12)
+               for c, v in zip(lateral, expected))
+    assert all(c[0] == target.vx_nm_min and c[2] == target.climb_ft_min
+               for c in lateral)
+    assert all(math.hypot(c[0], c[1]) <= policy.max_speed_nm_min
+               for c in lateral)

@@ -261,8 +261,23 @@ class AdvisoryPlanner:
                 seen.add(key)
                 yield key
 
-        for vy in (2.0, -2.0, 3.0, -3.0, 0.0):
-            yield from _emit(target.vx_nm_min, vy, target.climb_ft_min)
+        speed_limit = self.policy.max_speed_nm_min
+        vx = target.vx_nm_min
+        if _finite_number(vx) and abs(vx) <= speed_limit:
+            remaining_sq = max(0.0, speed_limit * speed_limit - vx * vx)
+            vy_max = math.sqrt(remaining_sq)
+            # Keep the boundary candidate inside policy after float rounding.
+            while math.hypot(vx, vy_max) > speed_limit and vy_max > 0.0:
+                vy_max = math.nextafter(vy_max, 0.0)
+            old_menu = (2.0, -2.0, 3.0, -3.0, 0.0)
+            lateral_values = (
+                *(max(-vy_max, min(vy_max, vy)) for vy in old_menu),
+                vy_max, -vy_max,
+                vy_max / 2.0, -vy_max / 2.0,
+                vy_max / 4.0, -vy_max / 4.0,
+            )
+            for vy in lateral_values:
+                yield from _emit(vx, vy, target.climb_ft_min)
         for climb in (0.0, 1000.0, -1000.0, 2000.0, -2000.0, 3000.0, -3000.0):
             yield from _emit(target.vx_nm_min, target.vy_nm_min, climb)
         for dvx in (1.0, -1.0, 2.0, -2.0):
