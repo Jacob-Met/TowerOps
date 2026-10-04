@@ -1,0 +1,12 @@
+# TowerOps lint policy — Option A: zero code churn.
+# Measured 0 hits on the post-ruff-clean tree (PR #13 head).
+# Adoption + pin/float + Option-B families are Jacob's call; see PR body.
+[lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B", "C4"]
+
+[lint.isort]
+force-single-line = false
+
+[lint.per-file-ignores]
+# test style: asserts are idiomatic in pytest
+"tests/**" = ["S101"]
