@@ -4,7 +4,9 @@ import os
 import tempfile
 import threading
 from pathlib import Path
+
 from playwright.sync_api import sync_playwright
+
 from explorer import Handler, ThreadingHTTPServer
 from scenarios import SCENARIOS
 
@@ -24,7 +26,7 @@ def main():
             for width, height in ((1280, 900), (390, 844)):
                 page = browser.new_page(viewport={"width": width, "height": height}, accept_downloads=True)
                 errors = []
-                page.on("pageerror", lambda error: errors.append(str(error)))
+                page.on("pageerror", lambda error, errors=errors: errors.append(str(error)))
                 page.goto(f"http://127.0.0.1:{server.server_port}")
                 page.wait_for_function("() => document.querySelector('#scenario').options.length === 8")
                 assert not page.locator("#export").is_enabled()

@@ -1,9 +1,14 @@
 """Regenerate presentation PNG/screenshots from the repo. Needs playwright+chromium (test-only dep).
 Usage: python presentation/build_assets.py   (run from repo root)"""
-import threading, sys, pathlib
+import pathlib
+import sys
+import threading
+
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 from playwright.sync_api import sync_playwright
+
 from explorer import Handler, ThreadingHTTPServer
+
 root = pathlib.Path(__file__).resolve().parent
 assets = root / "assets"; assets.mkdir(exist_ok=True)
 server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)

@@ -1,8 +1,17 @@
 """Fixed research fixtures: no live inputs, authority, or model calls."""
 from dataclasses import asdict, replace
 from typing import Any
-from towerops import (Ack, Approval, AdvisoryPlanner, Aircraft, ControlRoom,
-                      GateRejected, SafetyPolicy, WorldState)
+
+from towerops import (
+    Ack,
+    AdvisoryPlanner,
+    Aircraft,
+    Approval,
+    ControlRoom,
+    GateRejected,
+    SafetyPolicy,
+    WorldState,
+)
 
 DISCLAIMER = "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control."
 SCENARIOS = {
@@ -87,7 +96,7 @@ def replay_result(value: Any) -> dict[str, Any]:
     if not isinstance(request, dict) or set(request) != {"scenario", "include_approval", "include_ack"}:
         raise ValueError("Malformed fixture request")
     if not isinstance(request["scenario"], str):
-        raise ValueError("Scenario must be a string")
+        raise TypeError("Scenario must be a string")
     expected = run_scenario(**request)
     # JSON clients serialize 1001.0 as 1001. Accept equivalent finite numbers,
     # but never coerce booleans, strings, containers, or field presence.

@@ -1,6 +1,7 @@
 """Generate captions.srt from the segment list below (demo-script.md embeds the same segments; keep both in sync).
 Usage: python presentation/build_pack.py  (from repo root). Stdlib only."""
 import pathlib
+
 root = pathlib.Path(__file__).resolve().parent
 # (start_s, end_s, screen, narration)
 SEG = [

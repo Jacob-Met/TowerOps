@@ -3,6 +3,7 @@ import http.client
 import json
 import threading
 import unittest
+
 from explorer import Handler, ThreadingHTTPServer
 from scenarios import SCENARIOS, replay_result, run_scenario
 from towerops import AuditLog, canonical_bytes

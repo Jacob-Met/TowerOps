@@ -4,8 +4,9 @@ import argparse
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlsplit
 from typing import cast
+from urllib.parse import urlsplit
+
 from scenarios import DISCLAIMER, SCENARIOS, replay_result, run_scenario
 
 ROOT = Path(__file__).resolve().parent
