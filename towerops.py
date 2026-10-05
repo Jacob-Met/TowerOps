@@ -224,6 +224,20 @@ class SafetyPolicy:
         values = list(state.aircraft)
         return any(self._pair_conflict(values[i], values[j]) for i in range(len(values)) for j in range(i + 1, len(values)))
 
+    def conflicting_aircraft(self, state: WorldState) -> list[Aircraft]:
+        """Aircraft that participate in at least one conflicting pair, sorted by id.
+
+        The planner only proposes maneuvers for aircraft in this set: moving an
+        uninvolved aircraft can never open separation for a conflict pair, and
+        the gate alone cannot tell that an advisory is aimed at the wrong target.
+        """
+        values = sorted(state.aircraft, key=lambda x: x.aircraft_id)
+        return [
+            candidate
+            for candidate in values
+            if any(self._pair_conflict(candidate, other) for other in values if other.aircraft_id != candidate.aircraft_id)
+        ]
+
     def advisory_safe(self, state: WorldState, advisory: Advisory) -> bool:
         if advisory.world_hash != state.world_hash:
             return False
@@ -292,21 +306,26 @@ class AdvisoryPlanner:
     def plan(self, state: WorldState, now: float) -> list[Advisory]:
         if not self.policy.state_has_conflict(state):
             return []
-        values = sorted(state.aircraft, key=lambda x: x.aircraft_id)
-        target = values[-1]
-        for vx, vy, climb in self._maneuver_candidates(target):
-            advisory = Advisory(
-                aircraft_id=target.aircraft_id,
-                world_hash=state.world_hash,
-                set_vx_nm_min=vx,
-                set_vy_nm_min=vy,
-                set_climb_ft_min=climb,
-                issued_at=now,
-                expires_at=now + 8.0,
-                rationale="synthetic projected-separation recovery",
-            )
-            if self.policy.advisory_safe(state, advisory):
-                return [advisory]
+        # Target selection: only aircraft that actually participate in a
+        # conflict are maneuvered, highest id first (the historical default
+        # target was always the highest id). Aiming at an uninvolved aircraft
+        # produced gate-safe but useless advisories while the real conflict
+        # persisted, so the planner now never targets outside the conflict set.
+        targets = list(reversed(self.policy.conflicting_aircraft(state)))
+        for target in targets:
+            for vx, vy, climb in self._maneuver_candidates(target):
+                advisory = Advisory(
+                    aircraft_id=target.aircraft_id,
+                    world_hash=state.world_hash,
+                    set_vx_nm_min=vx,
+                    set_vy_nm_min=vy,
+                    set_climb_ft_min=climb,
+                    issued_at=now,
+                    expires_at=now + 8.0,
+                    rationale="synthetic projected-separation recovery",
+                )
+                if self.policy.advisory_safe(state, advisory):
+                    return [advisory]
         return []
 
 
