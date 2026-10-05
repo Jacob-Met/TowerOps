@@ -190,7 +190,9 @@ def main(argv: list[str]) -> int:
             "rejects": len(report.rejects),
             "issues": report.issues,
         }
-    except Exception as exc:  # fail closed: never die with a bare traceback
+    except (KeyError, TypeError, ValueError, AttributeError, IndexError) as exc:
+        # Fail closed on malformed audit data: never die with a bare traceback.
+        # KeyboardInterrupt / SystemExit still propagate (correct for a CLI).
         print(f"error: replay failed: {exc}", file=sys.stderr)
         return 2
     print(json.dumps(summary, indent=2))

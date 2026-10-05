@@ -245,6 +245,7 @@ def test_cli_accepts_demo_json(tmp_path):
         [sys.executable, "audit_replay.py", str(path)],
         cwd=repo_root,
         capture_output=True,
+        check=False,
         timeout=60,
     )
     assert proc.returncode == 0, proc.stderr.decode()
@@ -269,6 +270,7 @@ def test_cli_rejects_forged_chain(tmp_path):
         [sys.executable, "audit_replay.py", str(path)],
         cwd=repo_root,
         capture_output=True,
+        check=False,
         timeout=60,
     )
     assert proc.returncode == 1, proc.stdout.decode()
@@ -287,6 +289,7 @@ def test_cli_handles_malformed_event_without_traceback(tmp_path):
         [sys.executable, "audit_replay.py", str(path)],
         cwd=repo_root,
         capture_output=True,
+        check=False,
         timeout=60,
     )
     assert proc.returncode == 1, proc.stderr.decode()
