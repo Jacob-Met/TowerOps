@@ -1,0 +1,10 @@
+# Dependabot: keep the SHA-pinned GitHub Actions in .github/workflows/ci.yml fresh.
+# Follow-up to PR #7 (composite CI/test scaffold), per the independent review.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "deps"

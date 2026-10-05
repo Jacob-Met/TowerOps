@@ -2,7 +2,15 @@ import json
 import sys
 from dataclasses import asdict
 
-from towerops import Ack, Approval, AdvisoryPlanner, Aircraft, ControlRoom, SafetyPolicy, WorldState
+from towerops import (
+    Ack,
+    AdvisoryPlanner,
+    Aircraft,
+    Approval,
+    ControlRoom,
+    SafetyPolicy,
+    WorldState,
+)
 
 
 def main() -> int:
