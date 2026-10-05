@@ -3,10 +3,9 @@ from __future__ import annotations
 import hashlib
 import json
 import math
-from collections.abc import Iterable
-from dataclasses import asdict, dataclass, replace
 from fractions import Fraction
-from typing import Any
+from dataclasses import asdict, dataclass, replace
+from typing import Any, Iterable
 
 ZERO_HASH = "0" * 64
 
@@ -43,7 +42,7 @@ class Aircraft:
     vy_nm_min: float
     climb_ft_min: float = 0.0
 
-    def projected(self, minutes: float) -> Aircraft:
+    def projected(self, minutes: float) -> "Aircraft":
         return replace(
             self,
             x_nm=self.x_nm + self.vx_nm_min * minutes,
@@ -87,7 +86,7 @@ class WorldState:
                 return aircraft
         raise KeyError(aircraft_id)
 
-    def replace_aircraft(self, updated: Aircraft, observed_at: float) -> WorldState:
+    def replace_aircraft(self, updated: Aircraft, observed_at: float) -> "WorldState":
         values = tuple(updated if a.aircraft_id == updated.aircraft_id else a for a in self.aircraft)
         return WorldState(version=self.version + 1, observed_at=observed_at, aircraft=values)
 
