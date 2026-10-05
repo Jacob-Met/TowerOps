@@ -3,9 +3,10 @@ from __future__ import annotations
 import hashlib
 import json
 import math
-from fractions import Fraction
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass, replace
-from typing import Any, Iterable
+from fractions import Fraction
+from typing import Any
 
 ZERO_HASH = "0" * 64
 
@@ -18,8 +19,12 @@ def sha256_obj(value: Any) -> str:
     return hashlib.sha256(canonical_bytes(value)).hexdigest()
 
 
-def _finite_time(value: Any) -> bool:
+def _finite_number(value: Any) -> bool:
     return type(value) is int or (type(value) is float and math.isfinite(value))
+
+
+def _finite_time(value: Any) -> bool:
+    return _finite_number(value)
 
 
 class GateRejected(RuntimeError):
@@ -38,7 +43,7 @@ class Aircraft:
     vy_nm_min: float
     climb_ft_min: float = 0.0
 
-    def projected(self, minutes: float) -> "Aircraft":
+    def projected(self, minutes: float) -> Aircraft:
         return replace(
             self,
             x_nm=self.x_nm + self.vx_nm_min * minutes,
@@ -52,6 +57,18 @@ class WorldState:
     version: int
     observed_at: float
     aircraft: tuple[Aircraft, ...]
+
+    def __post_init__(self) -> None:
+        # Aircraft ids key every id-based operation (get, replace_aircraft,
+        # advisory_safe's target exclusion). Duplicate ids would silently
+        # break those invariants — e.g. advisory_safe skips id-twins, letting
+        # an advisory that collides with a twin pass the gate — so malformed
+        # states are rejected at construction instead of failing open.
+        seen: set[str] = set()
+        for aircraft in self.aircraft:
+            if aircraft.aircraft_id in seen:
+                raise ValueError(f"duplicate aircraft_id: {aircraft.aircraft_id!r}")
+            seen.add(aircraft.aircraft_id)
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -70,7 +87,7 @@ class WorldState:
                 return aircraft
         raise KeyError(aircraft_id)
 
-    def replace_aircraft(self, updated: Aircraft, observed_at: float) -> "WorldState":
+    def replace_aircraft(self, updated: Aircraft, observed_at: float) -> WorldState:
         values = tuple(updated if a.aircraft_id == updated.aircraft_id else a for a in self.aircraft)
         return WorldState(version=self.version + 1, observed_at=observed_at, aircraft=values)
 
@@ -178,6 +195,16 @@ class SafetyPolicy:
         return (lo, hi) if lo < hi else None
 
     def _pair_conflict(self, a: Aircraft, b: Aircraft) -> bool:
+        # Fail closed: a non-finite field (NaN/inf) means the separation is
+        # unknown, so the pair is treated as conflicting rather than safe.
+        # Without this, NaN comparisons silently evaluate False and an
+        # aircraft with unknown state could pass the safety gate.
+        for value in (
+            a.x_nm, a.y_nm, a.altitude_ft, a.vx_nm_min, a.vy_nm_min, a.climb_ft_min,
+            b.x_nm, b.y_nm, b.altitude_ft, b.vx_nm_min, b.vy_nm_min, b.climb_ft_min,
+        ):
+            if not _finite_number(value):
+                return True
         h = self._horizontal_unsafe_interval(
             a.x_nm - b.x_nm, a.y_nm - b.y_nm,
             a.vx_nm_min - b.vx_nm_min, a.vy_nm_min - b.vy_nm_min,
@@ -218,18 +245,62 @@ class AdvisoryPlanner:
     def __init__(self, policy: SafetyPolicy) -> None:
         self.policy = policy
 
+    def _maneuver_candidates(self, target: Aircraft) -> Iterable[tuple[float, float, float]]:
+        """Yield (vx, vy, climb) candidates in fixed priority order.
+
+        Lateral-only variants come first to preserve the historical resolution
+        preference; climb and speed variants follow so vertical-convergence
+        conflicts (unresolvable laterally) still get a bounded safe advisory.
+        Combined lateral+climb variants are tried last. Duplicates are skipped.
+        Every candidate is still admitted only through ``advisory_safe``.
+        """
+        seen: set[tuple[float, float, float]] = set()
+
+        def _emit(vx: float, vy: float, climb: float) -> Iterable[tuple[float, float, float]]:
+            key = (vx, vy, climb)
+            if key not in seen:
+                seen.add(key)
+                yield key
+
+        speed_limit = self.policy.max_speed_nm_min
+        vx = target.vx_nm_min
+        if _finite_number(vx) and abs(vx) <= speed_limit:
+            remaining_sq = max(0.0, speed_limit * speed_limit - vx * vx)
+            vy_max = math.sqrt(remaining_sq)
+            # Keep the boundary candidate inside policy after float rounding.
+            while math.hypot(vx, vy_max) > speed_limit and vy_max > 0.0:
+                vy_max = math.nextafter(vy_max, 0.0)
+            old_menu = (2.0, -2.0, 3.0, -3.0, 0.0)
+            lateral_values = (
+                *(max(-vy_max, min(vy_max, vy)) for vy in old_menu),
+                vy_max, -vy_max,
+                vy_max / 2.0, -vy_max / 2.0,
+                vy_max / 4.0, -vy_max / 4.0,
+            )
+            for vy in lateral_values:
+                yield from _emit(vx, vy, target.climb_ft_min)
+        for climb in (0.0, 1000.0, -1000.0, 2000.0, -2000.0, 3000.0, -3000.0):
+            yield from _emit(target.vx_nm_min, target.vy_nm_min, climb)
+        for dvx in (1.0, -1.0, 2.0, -2.0):
+            yield from _emit(target.vx_nm_min + dvx, target.vy_nm_min, target.climb_ft_min)
+        for vy in (2.0, -2.0, 3.0, -3.0):
+            # Combined loop caps climb at +/-2000 (inside the gate's 3000 bound);
+            # wider climb setpoints are already covered by the climb-only loop above.
+            for climb in (0.0, 1000.0, -1000.0, 2000.0, -2000.0):
+                yield from _emit(target.vx_nm_min, vy, climb)
+
     def plan(self, state: WorldState, now: float) -> list[Advisory]:
         if not self.policy.state_has_conflict(state):
             return []
         values = sorted(state.aircraft, key=lambda x: x.aircraft_id)
         target = values[-1]
-        for vy in [2.0, -2.0, 3.0, -3.0, 0.0]:
+        for vx, vy, climb in self._maneuver_candidates(target):
             advisory = Advisory(
                 aircraft_id=target.aircraft_id,
                 world_hash=state.world_hash,
-                set_vx_nm_min=target.vx_nm_min,
+                set_vx_nm_min=vx,
                 set_vy_nm_min=vy,
-                set_climb_ft_min=target.climb_ft_min,
+                set_climb_ft_min=climb,
                 issued_at=now,
                 expires_at=now + 8.0,
                 rationale="synthetic projected-separation recovery",
