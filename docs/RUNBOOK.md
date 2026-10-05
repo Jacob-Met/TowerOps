@@ -21,7 +21,7 @@ The components live in `towerops.py`:
 |---|---|
 | `Aircraft` / `WorldState` | Immutable synthetic state. `world_hash` binds advisories to the exact state they were planned against. Duplicate `aircraft_id`s are rejected at construction. |
 | `SafetyPolicy` | Separation thresholds and advisory bounds; projects constant-velocity pairs over a horizon and reports conflicts. Non-finite (NaN/inf) fields fail closed: the pair counts as conflicting. |
-| `AdvisoryPlanner` | Deterministic synthetic planner that emits at most one advisory for the lexicographically-last aircraft in a conflicted state. Tries lateral-only, climb, speed, then combined maneuvers; every candidate must pass `advisory_safe`. |
+| `AdvisoryPlanner` | Deterministic synthetic planner that emits at most one advisory, targeting the lexicographically-last aircraft among those participating in the conflict (never an uninvolved bystander). Tries lateral-only, climb, speed, then combined maneuvers; every candidate must pass `advisory_safe`. |
 | `ControlRoom` | The gate. `screen_batch` validates freshness/timing/world-hash/safety; `apply` additionally requires a matching `"approve"` approval and an `"accepted"` ack inside their timing windows, then performs the simulated transition and audits it. |
 | `AuditLog` | Append-only hash chain (`prev_hash` linkage). `AuditLog.verify(events)` replays the chain and returns `True` only if sequence numbers, links, and hashes all check out. |
 | `strands_adapter.py` | Proposal-only Strands tool boundary. It cannot apply, authorize, or bypass anything in `towerops.py`. |
