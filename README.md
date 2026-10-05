@@ -1,5 +1,7 @@
 # TowerOps
 
+[![ci](https://github.com/Jacob-Met/TowerOps/actions/workflows/ci.yml/badge.svg)](https://github.com/Jacob-Met/TowerOps/actions/workflows/ci.yml)
+
 TowerOps is a **synthetic air-traffic-control decision-support research demo** built for the AWS **Agents for Humans** challenge. It combines a Strands agent proposal boundary with deterministic conflict prediction, freshness checks, approval/acknowledgement binding, simulated state transition, and hash-chained audit/replay.
 
 > **Research simulation only.** TowerOps is not operational ATC software, aviation certification, a real clearance system, or connected to live aircraft/surveillance data.
@@ -57,7 +59,7 @@ pip install -r requirements.txt
 
 ## Architecture
 
-See [ARCHITECTURE.md](ARCHITECTURE.md).
+See [ARCHITECTURE.md](ARCHITECTURE.md) and the [operator runbook](docs/RUNBOOK.md).
 
 ## Known limits
 
@@ -66,3 +68,4 @@ TowerOps is a hackathon research prototype. Its geometry and timing logic are ev
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
