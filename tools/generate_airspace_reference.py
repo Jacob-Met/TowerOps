@@ -18,6 +18,7 @@ from towerops import (
   SafetyPolicy,
   WorldState,
 )
+
 CASES=[
  ('demo_crossing',WorldState(1,1000.0,(Aircraft('TWR218',-5.0,0.0,10000.0,1.0,0.0),Aircraft('TWR419',5.0,0.0,10000.0,-1.0,0.0)))),
  ('clear_same_track',WorldState(2,2000.0,(Aircraft('TWR218',-10.0,0.0,10000.0,1.0,0.0),Aircraft('TWR419',10.0,0.0,10000.0,1.0,0.0)))),
