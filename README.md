@@ -43,6 +43,12 @@ python explorer.py serve --port 8765
 
 Open http://127.0.0.1:8765 for before/after trajectories, fixture controls, gate refusals, audit timeline, JSON export and deterministic replay. See [EXPLORER.md](EXPLORER.md) for fixed cases, CLI and tests. Research simulation only; no real approval authority.
 
+## Interactive airspace lab
+
+[Open the Airspace Lab](https://jacobmetoyer.com/TowerOps/airspace/). This standalone TypeScript/Canvas page runs a browser port of the repository's `SafetyPolicy`, bounded `AdvisoryPlanner`, approval/readback gate, and audit chain. `tools/generate_airspace_reference.py` produces fixtures from the original Python classes; Vitest compares world hashes, conflicts, setpoints, state transitions, and audit hashes. The browser makes no model/API call and uses synthetic traffic only. It is not operational ATC.
+
+Run locally with `cd web/airspace && npm ci && npm run dev`; run `npm test` there for Python-reference parity.
+
 ## Strands path
 
 Install the SDK:
