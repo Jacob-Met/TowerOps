@@ -1,0 +1,50 @@
+name: TowerOps Airspace Lab
+on:
+  push:
+    branches: [main]
+    paths: [towerops.py, scenarios.py, tools/generate_airspace_reference.py, web/airspace/**, .github/workflows/airspace-demo.yml]
+  pull_request:
+    paths: [towerops.py, scenarios.py, tools/generate_airspace_reference.py, web/airspace/**, .github/workflows/airspace-demo.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/airspace/package-lock.json
+      - run: python tools/generate_airspace_reference.py --check
+      - run: npm ci
+        working-directory: web/airspace
+      - run: npm test
+        working-directory: web/airspace
+      - run: npm run build
+        working-directory: web/airspace
+      - run: |
+          mkdir -p site/airspace
+          cp -R web/airspace/dist/. site/airspace/
+          touch site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

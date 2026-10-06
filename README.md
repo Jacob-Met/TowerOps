@@ -1,78 +1,27 @@
-# TowerOps
+# TowerOps / Airspace Lab
 
-[![ci](https://github.com/Jacob-Met/TowerOps/actions/workflows/ci.yml/badge.svg)](https://github.com/Jacob-Met/TowerOps/actions/workflows/ci.yml)
+An interactive 2D traffic-management workbench, not a recorded animation. Add flights from your own callsign, position, flight level, bearing, speed and climb; or edit/import a `WorldState` JSON. Traffic advances from those velocity vectors. You can add/perturb/remove tracks, tune the horizontal/vertical separation envelope and look-ahead, run repeated planner passes, then approve and read back a world-bound setpoint before simulated actuation. A hash-chained audit trace can be verified in the page.
 
-TowerOps is a **synthetic air-traffic-control decision-support research demo** built for the AWS **Agents for Humans** challenge. It combines a Strands agent proposal boundary with deterministic conflict prediction, freshness checks, approval/acknowledgement binding, simulated state transition, and hash-chained audit/replay.
+## Real TowerOps logic
 
-> **Research simulation only.** TowerOps is not operational ATC software, aviation certification, a real clearance system, or connected to live aircraft/surveillance data.
+The browser hosts a faithful TypeScript port of the Python `SafetyPolicy`, `AdvisoryPlanner`, `ControlRoom` safety gates, canonical world/advisory hashes and SHA-256 audit log. `tools/generate_airspace_reference.py` executes the original Python classes to maintain four reference scenarios; Vitest checks the browser port against those outputs. Additional tests construct visitor-authored worlds and run them through conflict timing, advisory search, approval, readback, actuation and audit verification. No prerecorded output drives the UI, and there is no model, network, live aircraft or external data call.
 
-## Inspiration
+## Verify
 
-The initial idea came from seeing a social-media clip about two aircraft using the same callsign. That raised a broader question: what if an agent could help surface ambiguity, projected conflicts, stale state, or bad readbacks **without becoming the safety authority itself**?
-
-## Core loop
-
-```text
-synthetic world state
-→ conflict prediction
-→ Strands agent proposal boundary
-→ deterministic safety/freshness gate
-→ approval binding
-→ acknowledgement/readback binding
-→ simulated state transition
-→ audit/replay
-```
-
-The model proposes. Deterministic code decides whether the proposal is admissible.
-
-## Run the deterministic demo
-
-Requires Python 3.12+.
+From the repository root:
 
 ```bash
-python demo.py
+py -3 tools/generate_airspace_reference.py --check
+cd web/airspace
+npm ci
+npm test
+npm run build
 ```
 
-The demo creates two synthetic aircraft on a converging path, generates a bounded advisory, applies fixture approval + acknowledgement, performs the simulated transition, and prints the audit chain.
-
-## Local scenario explorer (no SDK/model calls)
+Optional Raider browser acceptance and desktop/phone captures:
 
 ```bash
-python explorer.py serve --port 8765
+py -3 tools/capture_airspace.py
 ```
 
-Open http://127.0.0.1:8765 for before/after trajectories, fixture controls, gate refusals, audit timeline, JSON export and deterministic replay. See [EXPLORER.md](EXPLORER.md) for fixed cases, CLI and tests. Research simulation only; no real approval authority.
-
-## Strands path
-
-Install the SDK:
-
-```bash
-pip install -r requirements.txt
-```
-
-`strands_adapter.py` exposes a structured advisory tool. The Strands layer is proposal-only; it cannot bypass `towerops.py` safety, freshness, approval, acknowledgement, or audit logic.
-
-## What is demonstrated
-
-- continuous projected conflict/separation checks for the synthetic constant-velocity model
-- exact world-state hash binding
-- stale/future-state rejection
-- contradictory recommendation rejection
-- bounded advisory schema
-- explicit approval requirement
-- acknowledgement binding and late/missing acknowledgement rejection
-- simulated state transition only after gates pass
-- hash-chained audit log with replay verification
-
-## Architecture
-
-See [ARCHITECTURE.md](ARCHITECTURE.md) and the [operator runbook](docs/RUNBOOK.md).
-
-## Known limits
-
-TowerOps is a hackathon research prototype. Its geometry and timing logic are evaluated on synthetic finite cases, but this repository does **not** claim operational aviation safety, exhaustive numeric coverage, live ATC integration, or production deployment. The demo uses fixture identities for approval/readback and no real-world authority.
-
-## License
-
-MIT — see [LICENSE](LICENSE).
+The app uses synthetic or visitor-provided state only. It is a research simulation, not operational air-traffic-control software or aviation assurance. Approval/readback controls are fixtures, not real authority.
