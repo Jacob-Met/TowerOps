@@ -21,5 +21,7 @@
 .depth-stack{display:grid;gap:10px;margin:22px 0 40px}.depth-label{margin:0 0 2px}
 .depth{border:1px solid var(--line);background:rgba(24,40,45,.94);padding:0}.depth>summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:15px 44px 15px 16px;position:relative}.depth>summary::-webkit-details-marker{display:none}.depth>summary span{color:var(--amber);font:12px var(--mono);letter-spacing:.08em}.depth>summary small{color:var(--muted);font:10px var(--mono);letter-spacing:.04em}.depth>summary:after{content:"+";position:absolute;right:16px;top:11px;color:var(--amber);font:18px var(--mono)}.depth[open]>summary:after{content:"\2212"}.depth>summary:hover span{color:var(--ink)}.depth>summary:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
 .depth[open]{padding-bottom:16px}.depth>:not(summary){margin-left:16px;margin-right:16px}.depth.control-card{padding:0}.depth.control-card[open]{padding-bottom:16px}.depth.state-workbench{padding:0}.depth.state-workbench[open]{padding-bottom:14px}
+.depth>textarea,.depth>.button{width:calc(100% - 32px)}
+.policy-editor input[type=range],.speed-control input[type=range]{margin-left:0;margin-right:0;min-width:0}
 .telemetry-wrap .telemetry-grid{margin:4px 16px 0}
 @media(max-width:560px){.depth-stack{width:calc(100% - 24px);margin-left:auto;margin-right:auto}.quick-steps li{font-size:9px;padding:6px 9px}}
