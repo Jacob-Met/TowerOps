@@ -23,7 +23,7 @@ def main():
    browser=pw.chromium.launch(**kw);ctx=browser.new_context(viewport={'width':1440,'height':1000})
    page=ctx.new_page();page.on('pageerror',lambda e:errors.append(str(e)));page.on('console',lambda m:errors.append(m.text) if m.type=='error' else None);page.on('response',lambda r:bad.append((r.status,r.url)) if r.status>=400 else None)
    page.goto(url,wait_until='networkidle');assert page.locator('#pair-count').inner_text()=='1'
-   page.locator('#run-planner').click();assert 'TWR419' in page.locator('#proposal-output').inner_text()
+   page.locator('#run-planner').click();page.wait_for_function("document.querySelector('#proposal-state').textContent==='PROPOSAL READY'",timeout=90000);assert 'TWR419' in page.locator('#proposal-output').inner_text()
    page.locator('#approve').click();page.locator('#readback').click();page.wait_for_function("document.querySelector('#world-title').textContent.includes('No projected conflict')")
    assert 'VALID' in page.locator('#audit-status').text_content();assert [page.locator(f'#{x} i').inner_text() for x in ('gate-screen','gate-approval','gate-ack')]==['PASS','APPROVED','ACCEPTED'];desktop=page.locator('#world-title').inner_text();page.screenshot(path=str(out/'airspace-desktop.png'),full_page=True)
    page.evaluate("document.querySelectorAll('details.depth').forEach(d=>d.open=true)");page.locator('#flight-id').fill('VISIT1');page.locator('#flight-x').fill('11');page.locator('#flight-y').fill('9');page.locator('#flight-level').fill('110');page.locator('#flight-bearing').fill('270');page.locator('#flight-speed').fill('150');page.locator('#add-custom-flight').click()
