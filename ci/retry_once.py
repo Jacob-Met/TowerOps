@@ -20,7 +20,6 @@ import os
 import re
 import subprocess
 import sys
-import time
 from datetime import datetime, timezone
 
 FAILED_RE = re.compile(r"^FAILED\s+(\S+?)(?:\s+-.*)?$")
@@ -34,7 +33,7 @@ def run_pytest(args, timeout=1200):
     cmd = [sys.executable, "-m", "pytest", "-p", "no:cacheprovider"] + args
     try:
         proc = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=timeout
+            cmd, capture_output=True, text=True, timeout=timeout, check=False
         )
         return proc.returncode, (proc.stdout or "") + (proc.stderr or "")
     except subprocess.TimeoutExpired:
@@ -53,10 +52,9 @@ def parse_failures(output):
             m = FAILED_RE.match(line) or ERROR_RE.match(line)
             if m:
                 ids.append(m.group(1))
-            elif line.strip() and not line.startswith(("FAILED", "ERROR", "PASSED", "SKIPPED", "XFAIL", "XPASS", "WARNING", "ERROR ")):
+            elif line.strip() and line.startswith("=") and not line.startswith(("FAILED", "ERROR", "PASSED", "SKIPPED", "XFAIL", "XPASS", "WARNING", "ERROR ")):
                 # summary section ended (next section header or blank-adjacent)
-                if line.startswith("="):
-                    break
+                break
     # de-dup, preserve order
     seen, ordered = set(), []
     for i in ids:
