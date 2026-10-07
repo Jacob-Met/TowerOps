@@ -1,11 +1,14 @@
 """Exercise deployed worker against the actual native Python oracle."""
 import json
-from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
-from threading import Thread
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from playwright.sync_api import sync_playwright
+from threading import Thread
+
 from generate_airspace_reference import CASES, result
+from playwright.sync_api import sync_playwright
+
 from towerops import SafetyPolicy
+
 ROOT=Path(__file__).resolve().parents[1]
 class Quiet(SimpleHTTPRequestHandler):
  def __init__(self,*a,**k):super().__init__(*a,directory=str(ROOT/'web/airspace/dist'),**k)
