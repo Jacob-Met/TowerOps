@@ -1,0 +1,37 @@
+name: flaky-guard
+# T165 pilot: flaky-test detection via retry-once wrapper.
+# Every failed test is retried ONCE in isolation. A test that passes only on
+# retry is recorded as FLAKY (exit 2 -> this workflow goes red) -- it is never
+# silently trusted. See FLAKY.md for the quarantine protocol.
+# NOTE: this is intentionally a separate workflow from ci.yml's test job so it
+# does not textually collide with open PRs #24/#9 editing ci.yml. Once this
+# pilot is validated, the wrapper should replace ci.yml's "Run tests" step.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  retry-once:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Install test deps
+        run: python -m pip install -q "pytest==8.3.5"
+      - name: Run tests with retry-once flake detection
+        run: python ci/retry_once.py
+      - name: Upload flake report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: flaky-report
+          path: ci/flaky-report.json
+          if-no-files-found: warn
