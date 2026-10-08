@@ -1,0 +1,22 @@
+Raw Vitest log SHA-256: 695447916ebf59db0a8d030f7b21dfded06fc391a3cf508fdc631977a917df6e
+Display transformation: removed ANSI control sequences and NUL only.
+
+
+ RUN  v4.1.11 /home/jacob/towerops-json-draft-bd1abdb2f886/web/airspace
+
+ ✓ tests/track-edit.test.ts (30 tests) 55ms
+ ✓ tests/encounter.test.ts (23 tests) 120ms
+ ✓ tests/audit-wire.test.ts (21 tests) 73ms
+ ✓ tests/advisory-numeric.test.ts (25 tests) 145ms
+ ✓ tests/python-float-parity.test.mjs (5 tests) 983ms
+     ✓ 'positive microsecond approval' preserves admitted state and audit hashes  325ms
+ ✓ tests/python-audit-interop.test.mjs (3 tests) 346ms
+ ✓ tests/decision-trace.test.mjs (6 tests) 702ms
+ ✓ tests/world-tools.test.ts (3 tests) 94ms
+ ✓ tests/algorithm.test.ts (4 tests) 97ms
+
+ Test Files  9 passed (9)
+      Tests  120 passed (120)
+   Start at  12:24:01
+   Duration  4.58s (transform 810ms, setup 0ms, import 1.31s, tests 2.62s, environment 3ms)
+

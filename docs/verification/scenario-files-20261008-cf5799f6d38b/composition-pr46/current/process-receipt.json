@@ -1,0 +1,188 @@
+{
+  "commands": [
+    {
+      "name": "private-dependencies",
+      "command": [
+        "cp",
+        "-cR",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2/web/airspace/node_modules",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/web/airspace/node_modules"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 0,
+      "seconds": 0.353
+    },
+    {
+      "name": "unit-tests",
+      "command": [
+        "npm",
+        "test",
+        "--",
+        "--reporter=json",
+        "--outputFile=/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/qualification/unit-tests.json"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/web/airspace",
+      "exit_code": 0,
+      "seconds": 3.957
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/web/airspace",
+      "exit_code": 0,
+      "seconds": 2.469
+    },
+    {
+      "name": "native-tests",
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/qualification/native-tests.xml"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 0,
+      "seconds": 1.745
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 1,
+      "seconds": 0.185
+    },
+    {
+      "name": "reference",
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "tools/generate_airspace_reference.py",
+        "--check"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 0,
+      "seconds": 0.075
+    },
+    {
+      "name": "author-browser",
+      "command": [
+        "node",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/author.mjs",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/author-browser"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k",
+      "exit_code": 0,
+      "seconds": 12.666
+    },
+    {
+      "name": "independent-browser",
+      "command": [
+        "node",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/independent.mjs",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/independent-browser"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k",
+      "exit_code": 0,
+      "seconds": 14.42
+    },
+    {
+      "name": "pending-browser",
+      "command": [
+        "node",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/pending.mjs",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/pending-browser"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k",
+      "exit_code": 0,
+      "seconds": 3.082
+    },
+    {
+      "name": "scenario-encounter-browser",
+      "command": [
+        "node",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-encounter.mjs",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/scenario-encounter-browser"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k",
+      "exit_code": 0,
+      "seconds": 6.026
+    },
+    {
+      "name": "encounter-owner-browser",
+      "command": [
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/playwright-tools/bin/python",
+        "tools/verify_encounter_browser.py",
+        "--chrome",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--out",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/encounter-owner-browser"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 0,
+      "seconds": 7.483
+    },
+    {
+      "name": "decision-trace-owner-browser",
+      "command": [
+        "node",
+        "tools/verify_decision_trace.mjs",
+        "--chrome",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--playwright",
+        "/private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/playwright-tools/lib/python3.12/site-packages/playwright/driver/package/index.mjs",
+        "--output",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/decision-trace-owner-browser"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 0,
+      "seconds": 9.0
+    },
+    {
+      "name": "scenario-decision-browser",
+      "command": [
+        "node",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-decision-trace.mjs",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/scenario-decision-browser"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k",
+      "exit_code": 0,
+      "seconds": 6.699
+    },
+    {
+      "name": "pr46-draft-browser",
+      "command": [
+        "node",
+        "web/airspace/tests/world-json-draft.browser.mjs",
+        "--root",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+        "--browser",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--toolchain",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/web/airspace/node_modules",
+        "--qa",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/pr46-qa",
+        "--output",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/pr46-draft-browser"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 1,
+      "seconds": 92.715
+    }
+  ]
+}

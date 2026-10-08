@@ -1,0 +1,11 @@
+--- a/receivers/scenario-raw-draft-v3.mjs
++++ b/receivers/scenario-raw-draft-v4.mjs
+@@ -128,7 +128,7 @@
+   await click(page,'#load-scenario');await settled(page);assert.equal(await draft(page),text);assert.deepEqual((await save(page)).document,target.document);
+   await click(page,'#export-world');await settled(page);assert.match(await feedback(page),/^Live world exported/);
+   assert.deepEqual(JSON.parse(await draft(page)),target.document.world);
+-  await click(page,'#add-traffic');await settled(page);const live=await save(page);
++  await open(page,'.control-card');await click(page,'#add-traffic');await settled(page);const live=await save(page);
+   assert.equal(live.document.world.aircraft.length,3);assert.deepEqual(JSON.parse(await draft(page)),live.document.world);
+   await page.setViewport({width:1250,height:940});await settled(page);assert.deepEqual(JSON.parse(await draft(page)),live.document.world);
+   await page.close();return{failed_draft_sha256:sha(text),review_preserved_after_refusal:true,restored_after_export:target.document.world,live_after_change:live.document.world};

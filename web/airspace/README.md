@@ -93,6 +93,19 @@ reconstruct aircraft motion or authenticate an approval. The replay source loads
 only when requested, so an unavailable replay module does not replace or disable
 the existing native planner.
 
+
+## Edit raw WorldState JSON
+
+Open **Inspect or load a WorldState** to edit the live world as JSON. Once you type, that draft stays in the editor for the current page session while traffic moves, flight selection changes, or the layout resizes. The simulation continues independently of the draft.
+
+**Load into simulation** validates and applies the entered world. If validation fails, the exact text stays available to correct. A successful load resumes the editor’s live updates. **Export live world** explicitly replaces the draft with the current simulated world and also resumes live updates.
+
+After installing the existing web dependencies, run the focused real-browser checks from the repository root with Node 22+ and Chrome/Chromium:
+
+```sh
+node web/airspace/tests/world-json-draft.browser.mjs --root . --browser /path/to/chromium --output /tmp/towerops-world-json-receiving
+```
+
 ## Save and reopen a scenario
 
 Open **Save or load a scenario** while traffic is paused and no planner or flight edit is active. **Save scenario file** downloads the current aircraft, complete separation policy, simulation clock, time scale and selected flight as one local JSON file.
@@ -102,6 +115,8 @@ Use **Choose scenario file** to read a saved file. Review its aircraft count, cl
 Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Run the existing planner, approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history.
 
 The existing **Inspect or load a WorldState** workbench continues to accept its original raw world shape. That shape contains only aircraft state and does not carry a policy. Use a scenario file when the separation envelope and clock must travel with the traffic.
+
+An authored raw WorldState JSON draft stays separate from the live simulation during scenario saving, file review, cancellation and loading. Loading a scenario keeps that unfinished text and labels it as a retained draft. Use **Export live world** to replace it with the restored scenario's aircraft; **Save scenario file** always downloads the actual live world and settings. A successful raw **Load into simulation** changes the live world and cancels any pending scenario review. A rejected raw load keeps both the draft and the scenario review available.
 
 ### Scenario format v1
 

@@ -1,0 +1,99 @@
+{
+  "schema": "towerops.scenario-publication-lint-policy.v1",
+  "input_source_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "input_product_tree": "77fee12e647a82dea99506ccef13e967c28aad92",
+  "policy_tree": "93171c5bbcff4ac43b3701ff87a3906d3343f29a",
+  "existing_source_files_preserved": 404,
+  "new_files": 2,
+  "root_config_files_present": [],
+  "application_ruff_settings_unchanged_after_path_normalization": true,
+  "normal_full_tree_command": [
+    "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+    "check",
+    "."
+  ],
+  "ruff_version": "ruff 0.16.10",
+  "results_scope": "406-file policy composition, before the additive PR46 receiving companion",
+  "commands": [
+    {
+      "name": "application-settings-before",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "check",
+        "--show-settings",
+        "towerops.py"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 0,
+      "seconds": 0.117
+    },
+    {
+      "name": "application-settings-after",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "check",
+        "--show-settings",
+        "towerops.py"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate",
+      "exit_code": 0,
+      "seconds": 0.011
+    },
+    {
+      "name": "full-tree-ruff",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "check",
+        "."
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate",
+      "exit_code": 0,
+      "seconds": 0.049
+    },
+    {
+      "name": "full-tree-ruff-json",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "check",
+        ".",
+        "--output-format",
+        "json"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate",
+      "exit_code": 0,
+      "seconds": 0.047
+    },
+    {
+      "name": "stage-policy",
+      "command": [
+        "git",
+        "add",
+        "docs/verification/scenario-files-20261008-cf5799f6d38b/.ruff.toml",
+        "docs/verification/scenario-files-20261008-cf5799f6d38b/PUBLICATION-LINT.md"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate",
+      "exit_code": 0,
+      "seconds": 0.042
+    },
+    {
+      "name": "policy-tree",
+      "command": [
+        "git",
+        "write-tree"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate",
+      "exit_code": 0,
+      "seconds": 0.029
+    },
+    {
+      "name": "ruff-version",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "--version"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k",
+      "exit_code": 0,
+      "seconds": 0.025
+    }
+  ]
+}

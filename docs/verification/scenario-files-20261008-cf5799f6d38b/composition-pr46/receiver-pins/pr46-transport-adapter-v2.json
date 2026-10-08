@@ -1,0 +1,14 @@
+{
+  "original_sha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+  "prior_receiver_sha256": "8e35af8c03c9d51ec598ac54a793474c16e46bd8bfad8599854112a018052015",
+  "receiver_sha256": "4fdbefad38521c10b210a27e4db752f667723486e3173e102ea0a0f188f70978",
+  "nine_predicate_bodies_byte_identical": true,
+  "predicate_sha256": "6687500786795aeb2358dffa93edd2e4444e43316f0b860b3db55be79a04afca",
+  "vite_serving_block_byte_identical": true,
+  "serving_sha256": "c4cad9b504f26aeabea2e8dc282a1b33129d38c14f4834be7f4090c8aa1f0a19",
+  "native_input_change": {
+    "old": "await press('a',65,2)",
+    "new": "await press('a',65,process.platform==='darwin'?4:2)",
+    "reason": "Preserved native Mac failure inserted text at the cursor because Control+A did not select all. The Mac receiver uses its platform Meta+A shortcut; other platforms retain Control+A."
+  }
+}

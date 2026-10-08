@@ -1,0 +1,227 @@
+PASS untouched editor follows the live world
+FAIL paused flight selection preserves an authored valid JSON draft: actual typing reaches editor
++ actual - expected
+... Skipped lines
+
+  '{\n' +
+    '  "aircraft": [\n' +
+    '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,{\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
+    '      "aircraft_id": "DRAFT101",\n' +
+    '      "altitude_ft": 10000,\n' +
+    '      "climb_ft_min": 0,\n' +
+    '      "vx_nm_min": 1,\n' +
+    '      "vy_nm_min": 0,\n' +
+...
+    '  "version": 1\n' +
++   '}\n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 5,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ],\n' +
++   '  "observed_at": 1000,\n' +
++   '  "version": 1\n' +
+    '}'
+
+FAIL loading after a focus-changing render applies the exact authored world: actual typing reaches editor
++ actual - expected
+... Skipped lines
+
+  '{\n' +
+    '  "aircraft": [\n' +
+    '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,{\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
+    '      "aircraft_id": "DRAFT202",\n' +
+    '      "altitude_ft": 10000,\n' +
+    '      "climb_ft_min": 0,\n' +
+    '      "vx_nm_min": 1,\n' +
+    '      "vy_nm_min": 0,\n' +
+...
+    '  "version": 1\n' +
++   '}\n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 5,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ],\n' +
++   '  "observed_at": 1000,\n' +
++   '  "version": 1\n' +
+    '}'
+
+FAIL resizing preserves an unfinished invalid JSON draft: actual typing reaches editor
++ actual - expected
+
++ '{\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,{\n' +
++   '  "version": \n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 5,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ],\n' +
++   '  "observed_at": 1000,\n' +
++   '  "version": 1\n' +
++   '}'
+- '{\n  "version": '
+
+FAIL moving traffic preserves the blurred draft while the simulation continues: actual typing reaches editor
++ actual - expected
+
++ '{\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,{"still editing": \n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 5,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ],\n' +
++   '  "observed_at": 1000,\n' +
++   '  "version": 1\n' +
++   '}'
+- '{"still editing": '
+
+FAIL a rejected load keeps invalid text through a later render: actual typing reaches editor
++ actual - expected
+
++ '{\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,{"version":-1,"aircraft":[]}\n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 5,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ],\n' +
++   '  "observed_at": 1000,\n' +
++   '  "version": 1\n' +
++   '}'
+- '{"version":-1,"aircraft":[]}'
+
+FAIL explicit Export live world replaces the draft and restores live synchronization: actual typing reaches editor
++ actual - expected
+
++ '{\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,{"unfinished":\n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 5,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ],\n' +
++   '  "observed_at": 1000,\n' +
++   '  "version": 1\n' +
++   '}'
+- '{"unfinished":'
+
+FAIL valid direct load normalizes successfully and restores live synchronization: actual typing reaches editor
++ actual - expected
+
++ '{\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,{"aircraft":[{"aircraft_id":"DRAFT303","altitude_ft":10000,"climb_ft_min":0,"vx_nm_min":1,"vy_nm_min":0,"x_nm":-5,"y_nm":0},{"aircraft_id":"TWR419","altitude_ft":10000,"climb_ft_min":0,"vx_nm_min":-1,"vy_nm_min":0,"x_nm":5,"y_nm":0}],"observed_at":1000,"version":1}\n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 5,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ],\n' +
++   '  "observed_at": 1000,\n' +
++   '  "version": 1\n' +
++   '}'
+- '{"aircraft":[{"aircraft_id":"DRAFT303","altitude_ft":10000,"climb_ft_min":0,"vx_nm_min":1,"vy_nm_min":0,"x_nm":-5,"y_nm":0},{"aircraft_id":"TWR419","altitude_ft":10000,"climb_ft_min":0,"vx_nm_min":-1,"vy_nm_min":0,"x_nm":5,"y_nm":0}],"observed_at":1000,"version":1}'
+
+PASS all observed browser paths are free from JavaScript exceptions
+{"status":"failed","passed":2,"failed":7,"pageErrors":0,"sourceChanged":[],"cleanup":{"status":"passed","profileRemoved":true},"report":"/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/pr46-draft-puppeteer-browser-v2/browser-report.json"}

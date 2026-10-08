@@ -1,0 +1,18 @@
+{
+  "candidate_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "product_source_tree": "77fee12e647a82dea99506ccef13e967c28aad92",
+  "source_files_unchanged": 404,
+  "commands_passed": 12,
+  "commands_failed": [
+    "ruff",
+    "pr46-draft-browser"
+  ],
+  "runtime": {
+    "node": "v26.3.0",
+    "python": "Python 3.12.8",
+    "pytest": "8.4.2",
+    "ruff": "ruff 0.16.10",
+    "chrome": "Google Chrome 154.0.8037.98",
+    "hosted_ci_runtime_parity_claimed": false
+  }
+}

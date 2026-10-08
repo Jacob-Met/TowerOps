@@ -1,0 +1,21 @@
+from pathlib import Path
+import datetime,hashlib,json,os,subprocess,time
+root=Path(__file__).resolve().parent
+source="/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate"
+script=root/"independent_raw_draft.mjs"
+output=root/"browser-r1"
+command=["node",str(script),source,str(output)]
+env=os.environ.copy()
+env["NODE_PATH"]="/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules"
+started=datetime.datetime.now(datetime.timezone.utc).isoformat()
+tick=time.monotonic()
+with (root/"browser-r1.stdout.log").open("xb") as stdout,(root/"browser-r1.stderr.log").open("xb") as stderr:
+    result=subprocess.run(command,env=env,stdout=stdout,stderr=stderr,timeout=150)
+receipt={"schema":"towerops.raw-draft-independent-process.v1","started_utc":started,
+"ended_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"seconds":time.monotonic()-tick,
+"command":command,"cwd":str(Path.cwd()),"exit_code":result.returncode,
+"receiver_sha256":hashlib.sha256(script.read_bytes()).hexdigest(),
+"node_path":env["NODE_PATH"],"source_or_build_edits":False,"new_browser_groups":2}
+(root/"process-receipt.json").write_text(json.dumps(receipt,indent=2)+"\n")
+print(json.dumps(receipt,indent=2))
+raise SystemExit(result.returncode)

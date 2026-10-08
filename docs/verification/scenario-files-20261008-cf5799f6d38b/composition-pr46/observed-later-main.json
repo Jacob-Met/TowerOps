@@ -1,0 +1,376 @@
+{
+  "observed_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "tree": "4a87643d57cabf81e570b21c119f00b43f79448e",
+  "subject": "Merge PR #48: review and select native advisory alternatives",
+  "parents": [
+    "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+    "952e6a9fd1e7a7b6e05d6ebc1d2700784ea6c0ca"
+  ],
+  "observed_url": "https://github.com/Jacob-Met/TowerOps/commit/093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "qualified_base": "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+  "qualified_candidate_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "changed_paths": [
+    {
+      "path": ".github/workflows/airspace-demo.yml",
+      "status": "modified",
+      "git_blob": "24356d4f5ce88f21cc1a27329b06df351e156810"
+    },
+    {
+      "path": "advisory_options.py",
+      "status": "added",
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/README.md",
+      "status": "added",
+      "git_blob": "8d326da2e3d0941e6ba85423e174f17f554fde4e"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/artifact-paths.json",
+      "status": "added",
+      "git_blob": "6ce0c29df599f61cbb4e792f89c960dc7e4aabcc"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/baseline-browser.json",
+      "status": "added",
+      "git_blob": "a6edbf0e4db75cb8de2564e202b6e3e326559459"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/baseline-browser.py.txt",
+      "status": "added",
+      "git_blob": "ccb3112b9e0dbffe23e9c988b72fa56cfba768b2"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/baseline-desktop.png",
+      "status": "added",
+      "git_blob": "f595cbc5119a53a6cef8a715903fe71b11b8afa7"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/browser-options-tests.log",
+      "status": "added",
+      "git_blob": "2a62413f2c8773cc71f263f34e85be309de9088c"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/browser/browser-receipt.json",
+      "status": "added",
+      "git_blob": "f42dffc4c289b0eeb00e57ab82cf471ab99be300"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/browser/desktop-alternatives.png",
+      "status": "added",
+      "git_blob": "9dd1a3f12057e6de9b63803c7631c7d0bd221793"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/browser/mobile-alternatives.png",
+      "status": "added",
+      "git_blob": "ce4ba704261f7dcb55cfd52140b1f8a4b8153082"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/current-main-build.log",
+      "status": "added",
+      "git_blob": "1386df1ba295c967e1b60a6739276c28700913da"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/current-main-composition.json",
+      "status": "added",
+      "git_blob": "4d385edeb03abd39d04ce327f29e3cfccb91cb35"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/current-main-mobile.json",
+      "status": "added",
+      "git_blob": "353014e1d4c61601ea70b6e2ce416666da01e957"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/current-main-mobile.png",
+      "status": "added",
+      "git_blob": "da156adf6b124b44664e7a2b4bf4519b4c26ee37"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/current-main-pytest.log",
+      "status": "added",
+      "git_blob": "01d5a8228ba2074dadd3c87b1637ba63087dfdd0"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/current-main-ruff-fixed.log",
+      "status": "added",
+      "git_blob": "1f5f344d054fae10f39140fb7199c99321d9190a"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/current-main-ruff.log",
+      "status": "added",
+      "git_blob": "9127119644050c201283a9fdb7b91da481c68e15"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/current-main-vitest.log",
+      "status": "added",
+      "git_blob": "e174cbe2548180e4b22954defca9ba99f08ce9f0"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/native-option-opportunity.json",
+      "status": "added",
+      "git_blob": "7b3de23a53e20a65e4d51977f7499a17f757c142"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/native-options-tests.log",
+      "status": "added",
+      "git_blob": "55ae6946719871302cef2f113350a81ebe4034a8"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/source-and-build.json",
+      "status": "added",
+      "git_blob": "77b5314fdbb969296fca5cb55c078bd8930f7e8f"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/author/typescript-options-tests.log",
+      "status": "added",
+      "git_blob": "90de0125814f798d8434ff8cea093534a60988d7"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/README.md",
+      "status": "added",
+      "git_blob": "8a017fe0c5f071775abbdac9989db343624ddc94"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/build-enospc.log",
+      "status": "added",
+      "git_blob": "3ec3798cb8bfa65927929bf1b742dd996dcaa133"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/build.log",
+      "status": "added",
+      "git_blob": "5c6071740ecdf2feacf651322a7a347cb014940b"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/composition.json",
+      "status": "added",
+      "git_blob": "a39496ec809f8439564a74cd9ff53ba559664899"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/file-hashes.json",
+      "status": "added",
+      "git_blob": "fefc456f99d6e75ffdbf97754f88307797b71b5f"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/browser.log",
+      "status": "added",
+      "git_blob": "15398399988a8a1a4609ac86f6109b5029ecc777"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/receipt.json",
+      "status": "added",
+      "git_blob": "24c2e83bc014e904d9480cd9fdde9d7a646f5968"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/receive-combined.py.txt",
+      "status": "added",
+      "git_blob": "7713d6700ee128a63f1a13f3f13b2ec38b48f654"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/selected-option-native-trace.json",
+      "status": "added",
+      "git_blob": "25f64470a1db0b29f4c2468bc4f7ab1350b007ec"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/worker-transcript.json",
+      "status": "added",
+      "git_blob": "d73f998cb123dbcb5a1b17e12d03eac0b2b64bad"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/current-main-composition/source-and-build.json",
+      "status": "added",
+      "git_blob": "b37863e3449f9c2f7e7d2a00b1bb09d7776656ef"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/file-hashes.json",
+      "status": "added",
+      "git_blob": "dfc857174e72eaa24b81bc6e1c1d16e59301aa02"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/REVIEW.md",
+      "status": "added",
+      "git_blob": "f6fa23915d8fe89c0f1f06c545dad670fff9708b"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/acceptance.json",
+      "status": "added",
+      "git_blob": "7e2faf6742c6e81606ea2e5b97f36e650179ae84"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/authored-world.json",
+      "status": "added",
+      "git_blob": "31b0d4386b9c168feec96c5a1687d125bee9255c"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/base/towerops.py.txt",
+      "status": "added",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/baseline-native-options.json",
+      "status": "added",
+      "git_blob": "61205b5b08fba396a4fec023f4bda5d569368729"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/baseline-native-options.log",
+      "status": "added",
+      "git_blob": "33fa6dfc6e63888ad86238dcd4fc3c851ad4c12b"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/browser-byte-harness-failure.json",
+      "status": "added",
+      "git_blob": "f34ccfd079a1833e51691a90de6287dd0dc3726c"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/browser-byte-harness.log",
+      "status": "added",
+      "git_blob": "e4df2b3946d04f911ab13b8a4f5d6914085786fd"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/browser-initial-harness-failure.json",
+      "status": "added",
+      "git_blob": "85597c62374021cfb0999b99930d0c7104419f44"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/browser-initial-harness.log",
+      "status": "added",
+      "git_blob": "72bde7ecac8f49741f828e760d03529976bf7432"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/browser-receipt.json",
+      "status": "added",
+      "git_blob": "968ecc2183f75f96722c2e835f9c71db15b08675"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/browser.log",
+      "status": "added",
+      "git_blob": "970cd070ba9f0ad78b82f7ac6749cf6911f826b4"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/byte-recorder-diagnostic.json",
+      "status": "added",
+      "git_blob": "22e127561e4533de894d4a175f7220c6627b35a7"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/current-main-tree.json",
+      "status": "added",
+      "git_blob": "567c8338b2a0df3d7fa36e09d5171da371f44561"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/establish-native-options.py.txt",
+      "status": "added",
+      "git_blob": "907cc0b6ee427c754746a9844c4e0cb97b9c7dc2"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/file-hashes.json",
+      "status": "added",
+      "git_blob": "dbcb41d8c8185f5293ecb1d4b60978d5a7f5b3c1"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/receive-browser.byte-harness.py.txt",
+      "status": "added",
+      "git_blob": "1b2c72b0ec1f09fb441253757646208015558019"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/receive-browser.initial.py.txt",
+      "status": "added",
+      "git_blob": "d1f00194bd98eb18f4114369e5dd87c0a70f948a"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/receive-browser.py.txt",
+      "status": "added",
+      "git_blob": "297389d0d71fc51b778b22e856b6d8be2a99652f"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/selected-option.png",
+      "status": "added",
+      "git_blob": "a978a0b1ce4ad36d760f51a945dd731ce635accf"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/source-readback.json",
+      "status": "added",
+      "git_blob": "63ae4d5602d4abbe16889451a008f043d5aaae55"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/source-readback.log",
+      "status": "added",
+      "git_blob": "043a9577ef486d2750af614703779544a328b935"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/source-readback.py.txt",
+      "status": "added",
+      "git_blob": "d58495b557535e0f61f6d62a5337cf2c97c69469"
+    },
+    {
+      "path": "docs/receiving/advisory-options-86776bb3cdb8/independent/worker-transcript.json",
+      "status": "added",
+      "git_blob": "20fd84004df3c70ed1fcedc25e9bdfe177c4e29a"
+    },
+    {
+      "path": "tests/test_advisory_options.py",
+      "status": "added",
+      "git_blob": "18f90aa8d7f2d6b3933a339d028cbede50261f4c"
+    },
+    {
+      "path": "tools/check_advisory_options_browser.py",
+      "status": "added",
+      "git_blob": "9746bd30b3ca2fb2b0a56db45a461c0f2884afaa"
+    },
+    {
+      "path": "web/airspace/README.md",
+      "status": "modified",
+      "git_blob": "02f93b18f0d6a243020ae1d2b1f85990376f7fe8"
+    },
+    {
+      "path": "web/airspace/index.html",
+      "status": "modified",
+      "git_blob": "fb2b2c2b9f0b1f1ea31c14191af328ef09d9e1ec"
+    },
+    {
+      "path": "web/airspace/prepare-python.mjs",
+      "status": "modified",
+      "git_blob": "5f816785223c30353f84d8c180e789d021b39a7b"
+    },
+    {
+      "path": "web/airspace/src/advisory-options.ts",
+      "status": "added",
+      "git_blob": "18d9a51c359007a39ed76352ce245f8a70c1f6c7"
+    },
+    {
+      "path": "web/airspace/src/advisory-review.ts",
+      "status": "added",
+      "git_blob": "5e31db5369be3294a0404667614520f58ab6dfe9"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "status": "modified",
+      "git_blob": "e29d9ea54665e0c93e2baa66e45fa08e12b52203"
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "status": "modified",
+      "git_blob": "b1c4218b2abd5d444687d0b728bce70509df8b01"
+    },
+    {
+      "path": "web/airspace/style.css",
+      "status": "modified",
+      "git_blob": "90dd61e262edd381a7ac9449e3643cc3dac65083"
+    },
+    {
+      "path": "web/airspace/tests/advisory-options.test.ts",
+      "status": "added",
+      "git_blob": "dc34af345e5be25302669d3641d63199c99cefcd"
+    }
+  ],
+  "material_overlaps": [
+    "web/airspace/src/main.ts",
+    "web/airspace/README.md",
+    "web/airspace/index.html",
+    "web/airspace/style.css"
+  ],
+  "material_receiving_dependencies": [
+    "web/airspace/src/python-worker.ts",
+    "web/airspace/prepare-python.mjs",
+    ".github/workflows/airspace-demo.yml"
+  ],
+  "action": "Reported to root without rebasing or changing the qualified candidate; this packet qualifies its stated 8d base, not later main."
+}

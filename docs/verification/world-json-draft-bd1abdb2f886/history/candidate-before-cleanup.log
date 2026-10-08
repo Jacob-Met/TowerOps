@@ -1,0 +1,21 @@
+PASS untouched editor follows the live world
+PASS paused flight selection preserves an authored valid JSON draft
+PASS loading after a focus-changing render applies the exact authored world
+PASS resizing preserves an unfinished invalid JSON draft
+PASS moving traffic preserves the blurred draft while the simulation continues
+PASS a rejected load keeps invalid text through a later render
+PASS explicit Export live world replaces the draft and restores live synchronization
+PASS valid direct load normalizes successfully and restores live synchronization
+PASS all observed browser paths are free from JavaScript exceptions
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+[Error: ENOTEMPTY: directory not empty, rmdir '/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-candidate-current/profile-p6G1EV/Default'] {
+  errno: -39,
+  code: 'ENOTEMPTY',
+  syscall: 'rmdir',
+  path: '/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-candidate-current/profile-p6G1EV/Default'
+}
+
+Node.js v22.22.1

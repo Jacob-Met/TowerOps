@@ -1,0 +1,168 @@
+{
+  "schema": "towerops.scenario.independent-browser.v1",
+  "source": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+  "source_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "node": "v26.3.0",
+  "browser": "Chrome/154.0.8037.98",
+  "groups": [
+    {
+      "name": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "old_verdict": "HASH CHAIN VALID - 4 EVENTS",
+      "after_apply_verdict": "",
+      "after_old_verification_completed": "",
+      "real_digest_calls": 4,
+      "real_digest_completions": 4,
+      "source_edits": false,
+      "hash_values_altered": false,
+      "passed": true,
+      "elapsed_ms": 2319
+    }
+  ],
+  "pageErrors": [],
+  "outside": [],
+  "blocked": [
+    {
+      "method": "GET",
+      "url": "http://clients2.google.com/time/1/current?cup2key=10:685_2rZYfVDMQOBFRITX8MmFfk9_Rt96zPqJx5kZoBQ&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.gstatic.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "update.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "android.clients.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    }
+  ],
+  "requests": [
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/",
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d",
+      "bytes": 15199
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797",
+      "bytes": 56334
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c",
+      "bytes": 19281
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/favicon.svg",
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+      "bytes": 252
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/assets/python-worker-CvN6OBkC.js",
+      "sha256": "ee3a0389239a60e88ac2c91d7ed5a1ee6ad7d281996481969dea74138c04b096",
+      "bytes": 3631
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/python/pyodide.mjs",
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+      "bytes": 13931
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/python/pyodide-lock.json",
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "bytes": 112205
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/python/pyodide.asm.js",
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "bytes": 1255688
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/python/python_stdlib.zip",
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "bytes": 2360737
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/python/pyodide.asm.wasm",
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "bytes": 10105545
+    },
+    {
+      "group": "pending_old_trace_verification_cannot_repaint_loaded_scenario",
+      "path": "/TowerOps/airspace/python/towerops.py",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "bytes": 19462
+    }
+  ],
+  "downloads": [
+    {
+      "guid": "54d6fe3b-07b4-423f-b866-573d05027f74",
+      "name": "towerops-scenario-v1.json",
+      "status": "completed"
+    }
+  ],
+  "external_accounts_used": false,
+  "production_data_used": false,
+  "full_real_python_worker": true,
+  "source_edits": false
+}

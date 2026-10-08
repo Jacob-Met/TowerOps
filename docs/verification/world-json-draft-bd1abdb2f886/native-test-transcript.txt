@@ -1,0 +1,21 @@
+
+ RUN  v4.1.11 /home/jacob/towerops-json-draft-bd1abdb2f886/web/airspace
+
+ ✓ tests/track-edit.test.ts (30 tests) 112ms
+ ✓ tests/encounter.test.ts (23 tests) 180ms
+ ✓ tests/audit-wire.test.ts (21 tests) 153ms
+ ✓ tests/advisory-numeric.test.ts (25 tests) 236ms
+ ✓ tests/python-float-parity.test.mjs (5 tests) 2014ms
+     ✓ 'positive microsecond approval' preserves admitted state and audit hashes  676ms
+     ✓ 'UI offsets yielding a small fraction' preserves admitted state and audit hashes  328ms
+     ✓ 'large fractional clock control' preserves admitted state and audit hashes  417ms
+     ✓ 'large clock in Python exponent notati…' preserves admitted state and audit hashes  410ms
+ ✓ tests/world-tools.test.ts (3 tests) 127ms
+ ✓ tests/python-audit-interop.test.mjs (3 tests) 532ms
+ ✓ tests/algorithm.test.ts (4 tests) 175ms
+
+ Test Files  8 passed (8)
+      Tests  114 passed (114)
+   Start at  11:47:23
+   Duration  6.54s (transform 852ms, setup 0ms, import 1.61s, tests 3.53s, environment 7ms)
+

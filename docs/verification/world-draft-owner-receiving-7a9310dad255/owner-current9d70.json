@@ -1,0 +1,691 @@
+{
+  "version": 1,
+  "source": "/home/jacob/hamon-7a9310dad255-tower-bd1/source-current9d70-owner",
+  "source_parent": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "source_tree": "27158d13dd400ef87357f7c4da00b4355e4ad1e6",
+  "source_manifest_sha256": "7fc71407415c13050a2a7a76c0a25ec39c7a210d7ddf9155ed12dba3ebf8ec2f",
+  "source_files": 141,
+  "driver_sha256": "f9adbf76945f82966c6f4632156f849326861cb11bfe3dde75c961bba53ce30c",
+  "node": "v22.22.1",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "checks": [
+    {
+      "name": "initial_editor_is_live_world",
+      "passed": true,
+      "detail": {
+        "aircraft": 2,
+        "version": 1
+      },
+      "failure": null
+    },
+    {
+      "name": "valid_draft_survives_blur_resize",
+      "passed": true,
+      "detail": {
+        "authored_sha256": "959abee3022b6b490fd36d1518a4de685351aaaf9470ec52707c5ed85e33b2cc",
+        "after_sha256": "959abee3022b6b490fd36d1518a4de685351aaaf9470ec52707c5ed85e33b2cc",
+        "world_unchanged": true
+      },
+      "failure": null
+    },
+    {
+      "name": "invalid_draft_survives_blur_resize",
+      "passed": true,
+      "detail": {
+        "authored_sha256": "26673234bec86b0feda1953e7a236c4d348c56fb5aeb7169d949888e301bb3a9",
+        "after_sha256": "26673234bec86b0feda1953e7a236c4d348c56fb5aeb7169d949888e301bb3a9",
+        "world_unchanged": true
+      },
+      "failure": null
+    },
+    {
+      "name": "failed_load_preserves_draft_for_correction",
+      "passed": true,
+      "detail": {
+        "error": "NOT LOADED: Expected ',' or '}' after property value in JSON at position 21 (line 1 column 22)",
+        "world_unchanged": true
+      },
+      "failure": null
+    },
+    {
+      "name": "explicit_export_replaces_draft",
+      "passed": true,
+      "detail": {
+        "explicit_replacement": true
+      },
+      "failure": null
+    },
+    {
+      "name": "valid_load_changes_world_and_resumes_sync",
+      "passed": true,
+      "detail": {
+        "loaded_version": 18,
+        "next_version": 19
+      },
+      "failure": null
+    },
+    {
+      "name": "clean_editor_follows_live_changes",
+      "passed": true,
+      "detail": {
+        "before_aircraft": 2,
+        "after_aircraft": 3
+      },
+      "failure": null
+    }
+  ],
+  "passed": 7,
+  "total": 7,
+  "exceptions": [],
+  "external_requests": [],
+  "proxy_blocks": [
+    "http://clients2.google.com/time/1/current?cup2key=10:LjY11dixqCuBrS6-ahbXF8B-FhQFfx70ZqiaJaYLFIw&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "www.google.com:443",
+    "accounts.google.com:443",
+    "www.google.com:443",
+    {
+      "socket_error": "ECONNRESET"
+    },
+    "www.google.com:443",
+    "update.googleapis.com:443",
+    "www.google.com:443",
+    "www.google.com:443",
+    "www.google.com:443",
+    "www.google.com:443",
+    "content-autofill.googleapis.com:443",
+    "content-autofill.googleapis.com:443",
+    "accounts.google.com:443",
+    "content-autofill.googleapis.com:443",
+    "content-autofill.googleapis.com:443",
+    "android.clients.google.com:443",
+    "accounts.google.com:443",
+    "content-autofill.googleapis.com:443"
+  ],
+  "served": [
+    {
+      "path": "/index.html",
+      "bytes": 12442,
+      "sha256": "98191c8d609d886457b104edd3a856e00a51365bb1e95d3609acecad7e173fea"
+    },
+    {
+      "path": "/index.html",
+      "bytes": 12442,
+      "sha256": "98191c8d609d886457b104edd3a856e00a51365bb1e95d3609acecad7e173fea"
+    },
+    {
+      "path": "/assets/index-fBr4_XjM.css",
+      "bytes": 16775,
+      "sha256": "b709a4a0dc3b7b81fcfcfc05e74841d4cd1fb473122dbe3962b75a529b2bff89"
+    },
+    {
+      "path": "/assets/index-674PkVzg.js",
+      "bytes": 43761,
+      "sha256": "5a99d641f4af0cfd039f03467a0071cb004f7bc9c9ca5b9c048fde82782ee472"
+    },
+    {
+      "path": "/favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    }
+  ],
+  "selfCheck": {
+    "url": "http://127.0.0.1:37617/",
+    "status": 200,
+    "bytes": 12442,
+    "sha256": "98191c8d609d886457b104edd3a856e00a51365bb1e95d3609acecad7e173fea"
+  },
+  "serverEvents": [
+    {
+      "kind": "request",
+      "url": "/",
+      "method": "GET"
+    },
+    {
+      "kind": "request",
+      "url": "/",
+      "method": "GET"
+    },
+    {
+      "kind": "request",
+      "url": "/assets/index-fBr4_XjM.css",
+      "method": "GET"
+    },
+    {
+      "kind": "request",
+      "url": "/assets/index-674PkVzg.js",
+      "method": "GET"
+    },
+    {
+      "kind": "request",
+      "url": "/favicon.svg",
+      "method": "GET"
+    }
+  ],
+  "networkEvents": [
+    {
+      "kind": "request",
+      "url": "http://127.0.0.1:37617/",
+      "requestId": "4F9A513DB70AE5AE749572F9284592BF"
+    },
+    {
+      "kind": "request",
+      "url": "http://127.0.0.1:37617/assets/index-674PkVzg.js",
+      "requestId": "2253233.2"
+    },
+    {
+      "kind": "request",
+      "url": "http://127.0.0.1:37617/assets/index-fBr4_XjM.css",
+      "requestId": "2253233.3"
+    },
+    {
+      "kind": "request",
+      "url": "http://127.0.0.1:37617/favicon.svg",
+      "requestId": "2253233.6"
+    }
+  ],
+  "debugEvents": [
+    {
+      "id": 1,
+      "hasResult": true
+    },
+    {
+      "id": 2,
+      "hasResult": true
+    },
+    {
+      "method": "Target.attachedToTarget",
+      "hasResult": false
+    },
+    {
+      "id": 3,
+      "hasResult": true
+    },
+    {
+      "method": "Runtime.executionContextCreated",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "id": 4,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 5,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 6,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "method": "Page.frameResized",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "id": 7,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 8,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "method": "Page.frameStartedNavigating",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Page.frameStartedLoading",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "id": 9,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "method": "Runtime.executionContextsCleared",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Runtime.executionContextsCleared",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Page.frameNavigated",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.policyUpdated",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Runtime.executionContextCreated",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.loadingFinished",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "id": 10,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.loadingFinished",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.loadingFinished",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "id": 11,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "method": "Page.domContentEventFired",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Page.loadEventFired",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Page.frameStoppedLoading",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "id": 12,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "id": 13,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "method": "Network.loadingFinished",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "id": 14,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 15,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 16,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 17,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 18,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 19,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 20,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 21,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 22,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 23,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 24,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 25,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 26,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 27,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 28,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 29,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 30,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 31,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 32,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 33,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 34,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 35,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 36,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 37,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 38,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 39,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 40,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 41,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "method": "Page.frameResized",
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": false
+    },
+    {
+      "id": 42,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 43,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 44,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 45,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 46,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 47,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 48,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 49,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 50,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 51,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 52,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 53,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 54,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 55,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 56,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 57,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    },
+    {
+      "id": 58,
+      "sessionId": "4C4805201AF46FCF3FAB1889A54DDEFD",
+      "hasResult": true
+    }
+  ],
+  "boundary": "Actual retained native product build, isolated browser/profile and loopback reads. No owner source or installed service mutation."
+}
