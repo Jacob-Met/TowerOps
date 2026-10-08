@@ -92,3 +92,16 @@ This reviews the recorded gate story; it does not rerun the separation policy,
 reconstruct aircraft motion or authenticate an approval. The replay source loads
 only when requested, so an unavailable replay module does not replace or disable
 the existing native planner.
+
+
+## Edit raw WorldState JSON
+
+Open **Inspect or load a WorldState** to edit the live world as JSON. Once you type, that draft stays in the editor for the current page session while traffic moves, flight selection changes, or the layout resizes. The simulation continues independently of the draft.
+
+**Load into simulation** validates and applies the entered world. If validation fails, the exact text stays available to correct. A successful load resumes the editor’s live updates. **Export live world** explicitly replaces the draft with the current simulated world and also resumes live updates.
+
+After installing the existing web dependencies, run the focused real-browser checks from the repository root with Node 22+ and Chrome/Chromium:
+
+```sh
+node web/airspace/tests/world-json-draft.browser.mjs --root . --browser /path/to/chromium --output /tmp/towerops-world-json-receiving
+```

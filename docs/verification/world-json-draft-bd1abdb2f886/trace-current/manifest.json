@@ -1,0 +1,61 @@
+{
+  "kind": "current-trace-composition-evidence",
+  "recordedAt": "2026-10-08T12:29:09.139Z",
+  "qualifiedApplicationBase": "9a2468f9bbaa25c0ab92cb12f712170420f9e622",
+  "publicationParent": "a704b2c9f957a5f65169fa7eeb5e98f34c5a9d2c",
+  "sourceMainSha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa",
+  "browserExitCode": 0,
+  "browserChecksPassed": 9,
+  "testsPassed": 120,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3365,
+      "sha256": "35605e5eabf7fcd14b751e2807c5294b8a01282bf596a6a3bfb3a3d237a3d163",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/trace-evidence-readme.md",
+      "transformation": "none"
+    },
+    {
+      "path": "browser-report.json",
+      "bytes": 42789,
+      "sha256": "c669f02e854169faeef36c0a49fb12418af7f2b5872a3faa757dd4a1ead2dd46",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-trace-current/browser-report.json",
+      "transformation": "none"
+    },
+    {
+      "path": "browser.log",
+      "bytes": 851,
+      "sha256": "a331e2400f28921e633e7f5af984772ea63e7181565999f06f9a7cad7d71067d",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-trace-current.log",
+      "transformation": "none"
+    },
+    {
+      "path": "native-driver.log",
+      "bytes": 2049,
+      "sha256": "3c0b14b5e367bdc6d44e9e01860623ddd9f2276abcba29ca4825338afb3ecb38",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/trace-native-driver.log",
+      "transformation": "none"
+    },
+    {
+      "path": "native-gates.json",
+      "bytes": 44130,
+      "sha256": "2088e0ae0026d35821e6a8e48ac04b67c4a055e7d539a0ff4bc1d84061f8a0ab",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/trace-native-gates.json",
+      "transformation": "none"
+    },
+    {
+      "path": "native-test-transcript.txt",
+      "bytes": 940,
+      "sha256": "57cddd9cef936a523b4c55e0ff7814d0be3768d22aba092260e70107b13d01e3",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/trace-vitest.log",
+      "transformation": "removed terminal controls"
+    },
+    {
+      "path": "source-composition.json",
+      "bytes": 838,
+      "sha256": "e6afb9a80b3b7b102de95cece0f0eec61691a088f58469391716a830c8a4e110",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/trace-current-composition.json",
+      "transformation": "none"
+    }
+  ]
+}

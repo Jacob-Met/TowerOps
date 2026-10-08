@@ -1,0 +1,14 @@
+{
+  "composedAt": "2026-10-08T12:15:21.361Z",
+  "base": "9a2468f9bbaa25c0ab92cb12f712170420f9e622",
+  "acceptedHistoricalCommit": "0d00f12b1b61416d5b59faa0f26666a57a6524d6",
+  "baseMainSha256": "347cca82b84ea49c55efd468db995820d55d32249543aa69cc744797c4f3fc80",
+  "candidateMainSha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa",
+  "readmeSha256": "3180fca723a615465152ab3586236c5e77f246107982df94c6076dd88a93fe68",
+  "receiverSha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+  "inverseFiveHunksEqualCurrentMain": true,
+  "currentReadmePrefixRetained": true,
+  "baseTree": "07cb60b0a501ec3ae66f3e5391f54ff11614f849",
+  "baseLeaves": 149,
+  "preservedSourceScope": "All trace, audit, encounter, reset and native worker source outside the same five raw-editor edits remains unchanged"
+}
