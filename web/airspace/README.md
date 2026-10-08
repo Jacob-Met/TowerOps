@@ -30,3 +30,39 @@ Open **Shape the traffic** and choose **Edit TWR419** (or the flight selected in
 **Preview edit** compares the current and edited conflict intervals without changing the world. **Apply scenario edit** replaces only that flight, advances the world version once, retains the existing decision trace, and clears previous planner proposals and approvals. This authors a synthetic scenario; run the planner on the changed world before its approval/readback flow. A scenario edit can introduce conflicts as well as remove them.
 
 **Cancel edit** preserves the world, pending proposal and approval, and returns the builder to its previous new-flight draft. Traffic stays paused. Changing a field invalidates the preview; a changed world, policy or clock also prevents applying a stale edit. Unchanged velocity vectors retain their exact values during position or altitude edits.
+
+## Explore a flight pair over time
+
+Open **Explore an encounter**, choose two current flights, and move the forecast
+cursor through the active look-ahead. The horizontal and vertical separation
+curves share a time axis; each dashed line marks the corresponding configured
+minimum. An orange band shows the continuous interval where both thresholds
+are intruded. Numeric cursor values and separate horizontal, vertical, and
+simultaneous intervals remain readable without interpreting color or the charts.
+
+**Jump to overlap midpoint** examines the interior of the predicted encounter;
+it is unavailable if the pair has no overlapping interval. **Closest horizontal
+approach** seeks to the bounded minimum horizontal distance, which may occur
+outside the simultaneous interval. **Return cursor to now** resets only the
+forecast cursor.
+
+The forecast uses each flight's current constant velocity and climb. It never
+advances the live world, changes a selected-flight edit, clears a planner
+proposal or approval, or changes the decision trace. Pause moving traffic to
+inspect a stable forecast. Changed world data and policy values refresh the
+view, and reducing the look-ahead bounds the cursor to the new horizon. A
+one-flight world asks for a second flight.
+
+Unsafe intervals come from the existing analytical policy functions. The 81
+points drawn on each curve are for visualization only; an encounter narrower
+than a sample step still has its analytical interval and midpoint. Equality
+meets the corresponding minimum; displayed values are rounded. This is a
+synthetic research forecast, not operational aviation assurance.
+
+A focused browser acceptance is available after the build (requires Playwright and an installed Chrome or Chromium):
+
+```bash
+python3 tools/verify_encounter_browser.py --chrome /path/to/chrome --out /new/evidence/directory
+```
+
+Run from the repository root. It uses an ephemeral loopback server and synthetic worlds, retains desktop/phone captures and source/build hashes, and exercises the actual Python planner and approval/readback gate. The output path must be new.
