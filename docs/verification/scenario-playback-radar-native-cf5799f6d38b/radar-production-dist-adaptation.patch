@@ -1,0 +1,63 @@
+--- owner/browser-v1-driver2.mjs
++++ prepared/browser-production-dist.mjs
+@@ -2,19 +2,46 @@
+ import path from 'node:path';
+ import crypto from 'node:crypto';
+ import assert from 'node:assert/strict';
+-import {createServer} from '/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/vite/dist/node/index.js';
++import http from 'node:http';
+ import puppeteer from '/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/puppeteer-core/lib/puppeteer/puppeteer-core.js';
+-const root=path.dirname(new URL(import.meta.url).pathname),source=path.join(root,'candidate-v1/source'),web=path.join(source,'web/airspace'),out=path.join(root,'evidence/candidate-v1-browser-driver2');
+-const deps='/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules';
++const argv = process.argv.slice(2), option = name => argv[argv.indexOf(name) + 1];
++for (const name of ['--repo','--manifest','--build-manifest','--base-commit','--source-tree','--out']) {
++ if (!argv.includes(name) || !option(name)) throw new Error(name+' is required');
++}
++const source=path.resolve(option('--repo')),web=path.join(source,'web/airspace'),out=path.resolve(option('--out'));
++const dist=path.resolve(argv.includes('--dist')?option('--dist'):path.join(web,'dist'));
++if (fs.existsSync(out)) throw new Error('Refusing an existing output directory');
++assert.match(option('--base-commit'),/^[0-9a-f]{40}$/);assert.match(option('--source-tree'),/^[0-9a-f]{40}$/);
+ const digest=b=>({bytes:b.length,sha256:crypto.createHash('sha256').update(b).digest('hex')});
+ fs.mkdirSync(out,{recursive:true});
+-const binding=JSON.parse(fs.readFileSync(path.join(root,'evidence/candidate-v1-native/result.json')));
+-const snapshot=()=>Object.fromEntries(Object.keys(binding.source_before).map(p=>[p,digest(fs.readFileSync(path.join(source,p))).sha256]));
+-const report={schema:'towerops-radar-full-app-native-receiving/1',source_commit:'093f88b29d6e1ede778f967528c7e010b7689ab1',started_at:new Date().toISOString(),boundary:'Actual unchanged application handlers plus frozen radar candidate in native Mac Chrome; existing pinned Vite source server and exact installed Pyodide/source bytes. Loopback receiving, not public deployment or physical-phone acceptance.',source_before:snapshot(),checks:[],captures:{},python_resources:{},page_errors:[],request_failures:[]};
++const sourceManifestBytes=fs.readFileSync(option('--manifest')),sourceManifest=JSON.parse(sourceManifestBytes);
++const buildManifestBytes=fs.readFileSync(option('--build-manifest')),buildManifest=JSON.parse(buildManifestBytes);
++assert.equal(sourceManifest.tree,option('--source-tree'));assert.equal(sourceManifest.base_commit,option('--base-commit'));
++const binding={source_before:Object.fromEntries(sourceManifest.files.map(entry=>[entry.path,entry.sha256]))};
++const snapshot=()=>Object.fromEntries(Object.keys(binding.source_before).map(p=>{
++ const file=path.resolve(source,p);assert.ok(file.startsWith(source+path.sep),'Source path escapes receiving root');
++ return[p,digest(fs.readFileSync(file)).sha256];
++}));
++const buildSnapshot=()=>Object.fromEntries(buildManifest.files.map(entry=>{
++ const file=path.resolve(dist,entry.path);assert.ok(file.startsWith(dist+path.sep),'Build path escapes receiving root');
++ const actual=digest(fs.readFileSync(file));assert.equal(actual.sha256,entry.sha256,entry.path);assert.equal(actual.bytes,entry.bytes,entry.path);
++ return[entry.path,actual];
++}));
++const report={schema:'towerops-radar-owner-predicates-production-dist-receiving/1',base_commit:option('--base-commit'),source_tree:option('--source-tree'),started_at:new Date().toISOString(),boundary:'The exact nineteen owner browser predicates against the frozen normal production build. Native Canvas observation forwards each original drawing call. Real app handlers and self-hosted CPython run unchanged; no public deployment claim.',source_manifest:digest(sourceManifestBytes),build_manifest:digest(buildManifestBytes),receiver:digest(fs.readFileSync(new URL(import.meta.url))),source_before:snapshot(),build_before:buildSnapshot(),checks:[],captures:{},python_resources:{},page_errors:[],request_failures:[]};
+ assert.deepEqual(report.source_before,binding.source_before);
+ const check=(name,condition,details)=>{report.checks.push({name,passed:!!condition,...(details===undefined?{}:{details})});assert.ok(condition,name)};
+ const pythonNames=new Set(['towerops.py','advisory_options.py','audit_replay.py','decision_trace.py','pyodide.mjs','pyodide.asm.js','pyodide.asm.wasm','python_stdlib.zip','pyodide-lock.json']);
+-const server=await createServer({root:web,base:'./',configFile:false,cacheDir:path.join(out,'vite-cache'),logLevel:'error',optimizeDeps:{noDiscovery:true,include:[]},server:{host:'127.0.0.1',port:0,fs:{allow:[source,deps]}},plugins:[{name:'native-exact-python-resources',configureServer(server){server.middlewares.use((req,res,next)=>{const url=new URL(req.url,'http://127.0.0.1');if(!url.pathname.startsWith('/python/'))return next();const name=url.pathname.slice('/python/'.length);if(!pythonNames.has(name)){res.statusCode=404;res.end('not found');return;}const p=name.endsWith('.py')?path.join(source,name):path.join(deps,'pyodide',name),b=fs.readFileSync(p);report.python_resources[name]={source:p,...digest(b)};res.setHeader('Content-Type',name.endsWith('.wasm')?'application/wasm':/\.(mjs|js)$/.test(name)?'text/javascript':name.endsWith('.json')?'application/json':'application/octet-stream');res.end(b);});}}]});
++const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.wasm':'application/wasm','.zip':'application/zip','.png':'image/png','.py':'text/plain'};
++const nativeServer=http.createServer((req,res)=>{
++ try{
++  const url=new URL(req.url,'http://127.0.0.1'),file=path.resolve(dist,'.'+(url.pathname==='/'?'/index.html':decodeURIComponent(url.pathname)));
++  if(!file.startsWith(dist+path.sep)||!fs.statSync(file).isFile()){res.writeHead(404);res.end('not found');return;}
++  const bytes=fs.readFileSync(file),name=path.basename(file);
++  if(url.pathname.startsWith('/python/')&&pythonNames.has(name))report.python_resources[name]={source:file,...digest(bytes)};
++  res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream'});res.end(bytes);
++ }catch{res.writeHead(404);res.end('not found');}
++});
++const server={httpServer:nativeServer,listen:()=>new Promise(resolve=>nativeServer.listen(0,'127.0.0.1',resolve)),close:()=>new Promise(resolve=>{nativeServer.closeAllConnections();nativeServer.close(resolve);})};
+ await server.listen();
+ const base='http://127.0.0.1:'+server.httpServer.address().port,profile=path.join(out,'profile');
+ let browser;
+@@ -90,5 +117,5 @@
+  report.source_after=snapshot();check('all frozen product and test source remains unchanged',JSON.stringify(report.source_before)===JSON.stringify(report.source_after));
+  report.passed=true;
+ }catch(e){report.error=String(e);process.exitCode=1;}
+-finally{if(browser)await browser.close();await server.close();fs.rmSync(profile,{recursive:true,force:true});report.finished_at=new Date().toISOString();fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(report,null,2)+'\n',{flag:'wx'});}
++finally{if(browser)await browser.close();await server.close();fs.rmSync(profile,{recursive:true,force:true});try{report.build_after=buildSnapshot();assert.deepEqual(report.build_after,report.build_before);report.build_unchanged=true;}catch(error){report.build_unchanged=false;report.error=String(error);report.passed=false;process.exitCode=1;}report.finished_at=new Date().toISOString();fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(report,null,2)+'\n',{flag:'wx'});}
+ console.log(JSON.stringify({passed:report.passed,checks:report.checks.length,failed:report.checks.filter(x=>!x.passed),error:report.error,result:path.join(out,'result.json')}));

@@ -1,0 +1,13 @@
+{
+  "schema": "towerops.playback-fixture-final-custody.v1",
+  "root_source_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+  "root_source_files_checked": 1017,
+  "root_build_files_checked": 16,
+  "root_mismatches": [],
+  "private_original_and_unowned_successor_mismatches": [],
+  "only_intended_test_successor": {
+    "bytes": 9131,
+    "sha256": "b9acb952ff5d6a1991d2d877fdf42b875dafa670f40bf81f108be75d5959a911",
+    "git_blob": "4e2196722e94c9970fa3e137327a5bb53ac15ad8"
+  }
+}

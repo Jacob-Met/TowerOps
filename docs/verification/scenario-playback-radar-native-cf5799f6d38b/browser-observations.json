@@ -1,0 +1,524 @@
+{
+  "desktop": {
+    "passed": true,
+    "page_errors": [],
+    "request_failures": null,
+    "cases": [
+      {
+        "name": "reset-3x",
+        "checks": 68,
+        "ok": true,
+        "reset": {
+          "rate": 1,
+          "rate_label": "1.0x",
+          "clock": "T+0 SEC",
+          "policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          }
+        }
+      },
+      {
+        "name": "reset-0.5x",
+        "checks": 57,
+        "ok": true,
+        "reset": {
+          "rate": 1,
+          "rate_label": "1.0x",
+          "clock": "T+0 SEC",
+          "policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          }
+        }
+      },
+      {
+        "name": "automatic-pause-policy-2x",
+        "checks": 33,
+        "ok": true,
+        "reset": {
+          "rate": null,
+          "rate_label": null,
+          "clock": null,
+          "policy": null
+        }
+      },
+      {
+        "name": "automatic-pause-refused-flight-2x",
+        "checks": 34,
+        "ok": true,
+        "reset": {
+          "rate": null,
+          "rate_label": null,
+          "clock": null,
+          "policy": null
+        }
+      }
+    ],
+    "checks": [],
+    "layout": {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "controls": {
+        "toggle-run": {
+          "x": 843.03125,
+          "y": 1086.515625,
+          "width": 193.96875,
+          "height": 33,
+          "visible": true,
+          "text": "Run traffic"
+        },
+        "reset-world": {
+          "x": 1045,
+          "y": 1086.515625,
+          "width": 193.984375,
+          "height": 33,
+          "visible": true,
+          "text": "Reset"
+        },
+        "speed-range": {
+          "x": 41,
+          "y": 1862.015625,
+          "width": 1198,
+          "height": 16,
+          "visible": true,
+          "text": ""
+        },
+        "speed-value": {
+          "x": 1214.078125,
+          "y": 1842.015625,
+          "width": 24.921875,
+          "height": 10,
+          "visible": true,
+          "text": "1.0x"
+        },
+        "policy-horizontal": {
+          "x": 52,
+          "y": 1959.015625,
+          "width": 1176,
+          "height": 16,
+          "visible": true,
+          "text": ""
+        },
+        "horizontal-value": {
+          "x": 52,
+          "y": 1941.015625,
+          "width": 1176,
+          "height": 11,
+          "visible": true,
+          "text": "5.0 NM"
+        },
+        "policy-vertical": {
+          "x": 52,
+          "y": 2022.015625,
+          "width": 1176,
+          "height": 16,
+          "visible": true,
+          "text": ""
+        },
+        "vertical-value": {
+          "x": 52,
+          "y": 2004.015625,
+          "width": 1176,
+          "height": 11,
+          "visible": true,
+          "text": "1,000 FT"
+        },
+        "policy-horizon": {
+          "x": 52,
+          "y": 2085.015625,
+          "width": 1176,
+          "height": 16,
+          "visible": true,
+          "text": ""
+        },
+        "horizon-value": {
+          "x": 52,
+          "y": 2067.015625,
+          "width": 1176,
+          "height": 11,
+          "visible": true,
+          "text": "5.0 MIN"
+        }
+      }
+    },
+    "screenshots": [
+      {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop.png",
+        "step": "reset-3x/after-reset-paused",
+        "bytes": 447703,
+        "sha256": "e44fc90ad1abe9507a85230a4a9105d62a7edc925a5117953e266a895de3f7f0",
+        "git_blob": "b18dd9587bda493e7c9e699995201cf88484b6c4"
+      }
+    ],
+    "python_resources": null
+  },
+  "mobile": {
+    "passed": true,
+    "page_errors": [],
+    "request_failures": null,
+    "cases": [
+      {
+        "name": "reset-3x",
+        "checks": 68,
+        "ok": true,
+        "reset": {
+          "rate": 1,
+          "rate_label": "1.0x",
+          "clock": "T+0 SEC",
+          "policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          }
+        }
+      },
+      {
+        "name": "reset-0.5x",
+        "checks": 57,
+        "ok": true,
+        "reset": {
+          "rate": 1,
+          "rate_label": "1.0x",
+          "clock": "T+0 SEC",
+          "policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          }
+        }
+      },
+      {
+        "name": "automatic-pause-policy-2x",
+        "checks": 33,
+        "ok": true,
+        "reset": {
+          "rate": null,
+          "rate_label": null,
+          "clock": null,
+          "policy": null
+        }
+      },
+      {
+        "name": "automatic-pause-refused-flight-2x",
+        "checks": 34,
+        "ok": true,
+        "reset": {
+          "rate": null,
+          "rate_label": null,
+          "clock": null,
+          "policy": null
+        }
+      }
+    ],
+    "checks": [],
+    "layout": {
+      "width": 390,
+      "scrollWidth": 390,
+      "controls": {
+        "toggle-run": {
+          "x": 43,
+          "y": 1517.125,
+          "width": 148,
+          "height": 33,
+          "visible": true,
+          "text": "Run traffic"
+        },
+        "reset-world": {
+          "x": 199,
+          "y": 1517.125,
+          "width": 148,
+          "height": 33,
+          "visible": true,
+          "text": "Reset"
+        },
+        "speed-range": {
+          "x": 43,
+          "y": 2402.625,
+          "width": 304,
+          "height": 16,
+          "visible": true,
+          "text": ""
+        },
+        "speed-value": {
+          "x": 322.078125,
+          "y": 2382.625,
+          "width": 24.921875,
+          "height": 10,
+          "visible": true,
+          "text": "1.0x"
+        },
+        "policy-horizontal": {
+          "x": 54,
+          "y": 2499.625,
+          "width": 282,
+          "height": 16,
+          "visible": true,
+          "text": ""
+        },
+        "horizontal-value": {
+          "x": 54,
+          "y": 2481.625,
+          "width": 282,
+          "height": 11,
+          "visible": true,
+          "text": "5.0 NM"
+        },
+        "policy-vertical": {
+          "x": 54,
+          "y": 2562.625,
+          "width": 282,
+          "height": 16,
+          "visible": true,
+          "text": ""
+        },
+        "vertical-value": {
+          "x": 54,
+          "y": 2544.625,
+          "width": 282,
+          "height": 11,
+          "visible": true,
+          "text": "1,000 FT"
+        },
+        "policy-horizon": {
+          "x": 54,
+          "y": 2625.625,
+          "width": 282,
+          "height": 16,
+          "visible": true,
+          "text": ""
+        },
+        "horizon-value": {
+          "x": 54,
+          "y": 2607.625,
+          "width": 282,
+          "height": 11,
+          "visible": true,
+          "text": "5.0 MIN"
+        }
+      }
+    },
+    "screenshots": [
+      {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile.png",
+        "step": "reset-3x/after-reset-paused",
+        "bytes": 264385,
+        "sha256": "db6bd680702616b64b39eb4602be301c91b72b80903b757c2dd9bdcc28c0edfd",
+        "git_blob": "1b3f2fbe02da4f8f856715fe7d0ae8f3ba9df442"
+      }
+    ],
+    "python_resources": null
+  },
+  "radar": {
+    "passed": true,
+    "page_errors": [],
+    "request_failures": [],
+    "cases": [],
+    "checks": [
+      {
+        "name": "initial canonical crossing and automatic range are rendered",
+        "passed": true
+      },
+      {
+        "name": "actual WorldState import retains exact near coordinates",
+        "passed": true
+      },
+      {
+        "name": "actual WorldState import retains exact translated coordinates",
+        "passed": true
+      },
+      {
+        "name": "translated four-NM separation keeps native screen scale",
+        "passed": true
+      },
+      {
+        "name": "native north ticks show positive absolute world coordinates increasing upward",
+        "passed": true
+      },
+      {
+        "name": "offset view does not relocate world-origin reference rings",
+        "passed": true
+      },
+      {
+        "name": "real pointer selection follows the selected flight without modifying world or audit",
+        "passed": true
+      },
+      {
+        "name": "raw JSON draft survives blur and selection-triggered rendering",
+        "passed": true
+      },
+      {
+        "name": "390px desktop emulation retains the draft and draws finite separated traffic",
+        "passed": true
+      },
+      {
+        "name": "explicit export still restores the unchanged live world",
+        "passed": true
+      },
+      {
+        "name": "reset retains the canonical crossing and selected TWR419",
+        "passed": true
+      },
+      {
+        "name": "real CPython planner proposes without changing world coordinates",
+        "passed": true
+      },
+      {
+        "name": "approval changes its gate without changing the world",
+        "passed": true
+      },
+      {
+        "name": "native readback still applies one world revision and a valid four-event audit",
+        "passed": true
+      },
+      {
+        "name": "finite admitted projection overflow is visibly unavailable without inventing coordinates",
+        "passed": true
+      },
+      {
+        "name": "nonfinite import remains rejected by the existing parser",
+        "passed": true
+      },
+      {
+        "name": "rejected import retains the last admitted world",
+        "passed": true
+      },
+      {
+        "name": "no page script errors",
+        "passed": true
+      },
+      {
+        "name": "all frozen product and test source remains unchanged",
+        "passed": true
+      }
+    ],
+    "layout": null,
+    "screenshots": null,
+    "python_resources": {
+      "pyodide.mjs": {
+        "source": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist/python/pyodide.mjs",
+        "bytes": 13931,
+        "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+      },
+      "python_stdlib.zip": {
+        "source": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist/python/python_stdlib.zip",
+        "bytes": 2360737,
+        "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+      },
+      "pyodide.asm.wasm": {
+        "source": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist/python/pyodide.asm.wasm",
+        "bytes": 10105545,
+        "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+      },
+      "pyodide-lock.json": {
+        "source": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist/python/pyodide-lock.json",
+        "bytes": 112205,
+        "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+      },
+      "pyodide.asm.js": {
+        "source": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist/python/pyodide.asm.js",
+        "bytes": 1255688,
+        "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+      },
+      "towerops.py": {
+        "source": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist/python/towerops.py",
+        "bytes": 19462,
+        "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+      }
+    }
+  },
+  "images": [
+    {
+      "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop.png",
+      "bytes": 447703,
+      "sha256": "e44fc90ad1abe9507a85230a4a9105d62a7edc925a5117953e266a895de3f7f0",
+      "git_blob": "b18dd9587bda493e7c9e699995201cf88484b6c4"
+    },
+    {
+      "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile.png",
+      "bytes": 264385,
+      "sha256": "db6bd680702616b64b39eb4602be301c91b72b80903b757c2dd9bdcc28c0edfd",
+      "git_blob": "1b3f2fbe02da4f8f856715fe7d0ae8f3ba9df442"
+    },
+    {
+      "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19/near.png",
+      "bytes": 36761,
+      "sha256": "88a85940c62609e13a663ac9396da2666f0e0d7d52109723bcbb9b85af5aaac0",
+      "git_blob": "c035e34e5c445d35b6ceec47dd0c57fab3b2f2f8"
+    },
+    {
+      "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19/readback.png",
+      "bytes": 36142,
+      "sha256": "9c062ff5c0ef10501f5c9f1888bb39147158d4e43fb791eb53214c8fd3dd60f9",
+      "git_blob": "91ee161bfd478028575be0dbfe007a14ddb60cc7"
+    },
+    {
+      "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19/translated-narrow.png",
+      "bytes": 19526,
+      "sha256": "c84cd76404de3bd0c0c51023bb3e9242786fdf0289e7cd1346fc696247366ec0",
+      "git_blob": "ed2f8d8bf4d544ccd5f575bae4779f7682c2fff8"
+    },
+    {
+      "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19/translated.png",
+      "bytes": 25860,
+      "sha256": "2db888b3278b46ed344dac0bd5f6ea1e0d22d9062a585f0ed8ea9907361b88c5",
+      "git_blob": "dbc35c7836e5552309a09a7fbb185cb342932c34"
+    },
+    {
+      "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19/unavailable.png",
+      "bytes": 18959,
+      "sha256": "56d001e33e97104a8d86b400465feb828477713f00caf6730280301f86c6dd48",
+      "git_blob": "736ebc9f2a23d5c6276d0a3a2af655a429858aa8"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "towerops.receiving-process.v1",
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/author.mjs",
+    "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate",
+    "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser"
+  ],
+  "cwd": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb",
+  "source_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+  "receiver_original": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/scenario-receiving/author.mjs",
+  "receiver_sha256": "3486cd53f70b44ec9d964d45d7e7688f2d3163cfd693af5beb951f583d65aab6",
+  "outer_timeout_seconds": 300,
+  "started_utc": "2026-10-08T16:13:03Z",
+  "state": "completed",
+  "pid": 70304,
+  "exit_code": 0,
+  "timed_out": false,
+  "exceptions": [],
+  "source_before": {
+    "stage": "before",
+    "source_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+    "source_pin_sha256": "c7a2fd2cee35e79b69fb74a520b15de0b2d697756ea60ac9b2ad68cbd86a2301",
+    "source_files": 1017,
+    "build_files": 16,
+    "differences": [],
+    "receiver_sha256": "3486cd53f70b44ec9d964d45d7e7688f2d3163cfd693af5beb951f583d65aab6",
+    "receiver_matches_original": true
+  },
+  "source_after": {
+    "stage": "after",
+    "source_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+    "source_pin_sha256": "c7a2fd2cee35e79b69fb74a520b15de0b2d697756ea60ac9b2ad68cbd86a2301",
+    "source_files": 1017,
+    "build_files": 16,
+    "differences": [],
+    "receiver_sha256": "3486cd53f70b44ec9d964d45d7e7688f2d3163cfd693af5beb951f583d65aab6",
+    "receiver_matches_original": true
+  },
+  "process_group": 70304,
+  "elapsed_seconds": 13.206,
+  "stdout": {
+    "bytes": 2316,
+    "sha256": "f845aad0ae00fbacf528d7c5c1337563daf8373d1c85ab7c6026f2b6d4c3ef88"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "finished_utc": "2026-10-08T16:13:16Z"
+}

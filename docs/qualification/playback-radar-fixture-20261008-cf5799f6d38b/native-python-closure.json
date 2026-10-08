@@ -1,0 +1,41 @@
+{
+  "schema": "towerops.playback-native-receiving-closure.v1",
+  "files": [
+    {
+      "path": "towerops.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "path": "decision_trace.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+      "bytes": 2099,
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+    },
+    {
+      "path": "audit_replay.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+      "bytes": 7927,
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+    },
+    {
+      "path": "advisory_options.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "bytes": 2380,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    }
+  ],
+  "reason": "Full maintained Vitest suite executes real Python requests from the repository root; the initial web-only receiving capture omitted these unchanged native files.",
+  "retained_incomplete_receiving": "composed-fixture-full",
+  "python": "Python 3.13.7",
+  "source_edits": false
+}

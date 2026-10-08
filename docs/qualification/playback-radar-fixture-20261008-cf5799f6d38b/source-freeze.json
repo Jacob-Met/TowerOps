@@ -1,0 +1,747 @@
+{
+  "schema": "towerops.playback-fixture-diagnosis-source.v1",
+  "root": "/tmp/towerops-playback-fixture-cf5799f6d38b-j_43xy6w",
+  "root_source": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate",
+  "root_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+  "base_commit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+  "root_pin_sha256": "c7a2fd2cee35e79b69fb74a520b15de0b2d697756ea60ac9b2ad68cbd86a2301",
+  "source_files": {
+    "composed": [
+      {
+        "path": "web/airspace/.gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "9bbb2245b44a9b8ecbefe94d9e24a478c3fffb63",
+        "bytes": 53,
+        "sha256": "3c3d8ee71c7cb202a6b724b6c42b8e104651dfa767292c29592ae5e4679befbe"
+      },
+      {
+        "path": "web/airspace/.npmrc",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "cab1cc56aa1525904e0b6171b685ee13fc28c91e",
+        "bytes": 156,
+        "sha256": "cc37e56acfb8e6a45d1fc786e6f4fa16a62a570ac7d85fb3ad84227e21694bcf"
+      },
+      {
+        "path": "web/airspace/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "de020ce10411826dfedfea540806d26e737d440e",
+        "bytes": 14464,
+        "sha256": "0c6bf0169d43bf75e17722cd11adbc259ffd0b3c347a010122493e7b696cc3fc"
+      },
+      {
+        "path": "web/airspace/index.html",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "c165a370e613adc90ae6b69fb75913fe063feec3",
+        "bytes": 16794,
+        "sha256": "3a330d588e7e4235217f7faf7beed717c190f7417c29d7aeeec8ff077556e31d"
+      },
+      {
+        "path": "web/airspace/package-lock.json",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "9d81d64088a09bf36ce116b67bf48eefc4fe7c27",
+        "bytes": 40499,
+        "sha256": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655"
+      },
+      {
+        "path": "web/airspace/package.json",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "836291c282e63943575c82dfaeaf653d278b48a1",
+        "bytes": 357,
+        "sha256": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd"
+      },
+      {
+        "path": "web/airspace/prepare-python.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "5f816785223c30353f84d8c180e789d021b39a7b",
+        "bytes": 605,
+        "sha256": "e67ea0d07b7043fc191b4bb4473ff6b45ba7f173eeec294c2f43ace429c61484"
+      },
+      {
+        "path": "web/airspace/public/captures/airspace-desktop.png",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "bd6e0d9fc6c7f07b52dd276b9df97bc0d9c34b02",
+        "bytes": 391153,
+        "sha256": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7"
+      },
+      {
+        "path": "web/airspace/public/captures/airspace-mobile.png",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "012be9dac2dfd5560162755c9b462213bf241ae9",
+        "bytes": 190636,
+        "sha256": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43"
+      },
+      {
+        "path": "web/airspace/public/favicon.svg",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "498832ec27a0a0515bccc5650b70e94bc952f99d",
+        "bytes": 252,
+        "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+      },
+      {
+        "path": "web/airspace/src/actuation.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "33e2c27481069712484bec409f5cbf2f23d8922f",
+        "bytes": 2358,
+        "sha256": "a6a3186003cbd7fdcba6e7bc0847c9abfa4ba5174d3c98ce2da651941360dcfb"
+      },
+      {
+        "path": "web/airspace/src/advisory-options.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "18d9a51c359007a39ed76352ce245f8a70c1f6c7",
+        "bytes": 3384,
+        "sha256": "4b001ebf546e10761906c19e09af5ef19967e45d994c1b090d376cad695ea976"
+      },
+      {
+        "path": "web/airspace/src/advisory-review.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "5e31db5369be3294a0404667614520f58ab6dfe9",
+        "bytes": 5453,
+        "sha256": "45c170f976ffc886db49aef120361cbabc99884f63b3f017fc7a0c7b9923ed3e"
+      },
+      {
+        "path": "web/airspace/src/audit.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b",
+        "bytes": 2397,
+        "sha256": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075"
+      },
+      {
+        "path": "web/airspace/src/core.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+        "bytes": 5158,
+        "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac"
+      },
+      {
+        "path": "web/airspace/src/decision-trace.css",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "b1c82719ccc80cec69667003b7d007a0e6dfec52",
+        "bytes": 1564,
+        "sha256": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e"
+      },
+      {
+        "path": "web/airspace/src/decision-trace.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "83fa2809dc0e375b8f8982387fdb8845bea721c3",
+        "bytes": 8484,
+        "sha256": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce"
+      },
+      {
+        "path": "web/airspace/src/draw.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "c3476aa53858de880c13f9a527aa5a446ca717da",
+        "bytes": 5705,
+        "sha256": "ae91897f2d4db234451c1fd8b81c9ddc5260e9b76b62c5ac21153d3c7ec2166d"
+      },
+      {
+        "path": "web/airspace/src/encounter-view.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "d31fa0ec6bb6c620e7f36f37db06d6f3726e336b",
+        "bytes": 8239,
+        "sha256": "329ac5994841291b3922702f035fac4d03766ae522eb52b807954f4d5ad508c4"
+      },
+      {
+        "path": "web/airspace/src/encounter.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "3620b0d81d745d8e5b467e5d3823bf5c0de31b21",
+        "bytes": 5033,
+        "sha256": "efd010d007c8b63830d09fdda9bf8724316803937e373f44fd7f504ff1355883"
+      },
+      {
+        "path": "web/airspace/src/gate.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "cd17b5191110ea47ee7771745b877fb8b65597a9",
+        "bytes": 2551,
+        "sha256": "3f135cabba46d9b6316475424841e543b5f7488a70d85cba25be5cd8cf5e8c8a"
+      },
+      {
+        "path": "web/airspace/src/main.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "81410babf8673b2acdf2decd68cce5dceb2b2b22",
+        "bytes": 28753,
+        "sha256": "945bc50ed6a6b81442f6f98764e02f6745c02efb8228f8d0aa5f91ca1cd2a50c"
+      },
+      {
+        "path": "web/airspace/src/maneuvers.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "bbe70e521c80e60123eb3ecc93e687e6bc576276",
+        "bytes": 1413,
+        "sha256": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d"
+      },
+      {
+        "path": "web/airspace/src/planner.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "82082fa50cbec1a0d30d377bb4cd3e1a67416d5e",
+        "bytes": 2046,
+        "sha256": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74"
+      },
+      {
+        "path": "web/airspace/src/python-worker.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "b1c4218b2abd5d444687d0b728bce70509df8b01",
+        "bytes": 5321,
+        "sha256": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987"
+      },
+      {
+        "path": "web/airspace/src/python.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "ef32ef39aa6c3bf7196c05fe10840f3c297156ce",
+        "bytes": 1163,
+        "sha256": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c"
+      },
+      {
+        "path": "web/airspace/src/radar-geometry.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "a14ac4a661b195d0b6136e209f9108a460ff1cfb",
+        "bytes": 4189,
+        "sha256": "4df8158d1ca92115ef9be8067fecb377a1e2ccf72b5cd0f3fa27691284e77349"
+      },
+      {
+        "path": "web/airspace/src/scenario-file.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "e499d279563c8b2e027309943caf9098c7e88776",
+        "bytes": 6438,
+        "sha256": "8ecfb59fefe8e979d31f00db0bef6240f317d8576ae0054b5143cb530c2c757c"
+      },
+      {
+        "path": "web/airspace/src/scenario-ui.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "f0b99a3d0e97fbf54fa177397e67b6aa9ade2063",
+        "bytes": 6213,
+        "sha256": "9eb933c3ad03670d4d504e45ad9049b4cfee09a273ec2c11aa7b7beff487fb07"
+      },
+      {
+        "path": "web/airspace/src/track-edit.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "ff3668979df28a70f848078356a096dd876cf692",
+        "bytes": 4597,
+        "sha256": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046"
+      },
+      {
+        "path": "web/airspace/src/world-tools.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "8e308d78c19389a6881aace8d22412e93557f066",
+        "bytes": 4263,
+        "sha256": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115"
+      },
+      {
+        "path": "web/airspace/style.css",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "bc7e3e834221c6738a952b4c41bcc5510eb5c066",
+        "bytes": 20691,
+        "sha256": "efe5faa57342fb4ba3215e0fc60bf59f780e9469ca9f123758c7b9923550829c"
+      },
+      {
+        "path": "web/airspace/tests/advisory-numeric.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "7da0bf284bd167429cab0a3cff27bfad49c87a18",
+        "bytes": 4121,
+        "sha256": "4c36af766b9b30160b069d6ce31580741387989680be0118a8ac6f5c5fe8fd19"
+      },
+      {
+        "path": "web/airspace/tests/advisory-options.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "dc34af345e5be25302669d3641d63199c99cefcd",
+        "bytes": 4425,
+        "sha256": "111e9cdef1612992382ef8b13e88184a41c760a5f16c72e79a865c9c971b7ff3"
+      },
+      {
+        "path": "web/airspace/tests/algorithm.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "1c6bca592af1f5d0613c37b241dec485bbfa2643",
+        "bytes": 2168,
+        "sha256": "117539be86d2fc5f26adef7151c8a55c85096d65e80ebc6e7d263aae89a3b178"
+      },
+      {
+        "path": "web/airspace/tests/audit-wire.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "47c1bbabe27c7e1773e092f59173a7c604952001",
+        "bytes": 4256,
+        "sha256": "7ced880e8615caef1e3b12b8097eee256b7b4cf286aedec59a68393d014ce8a7"
+      },
+      {
+        "path": "web/airspace/tests/decision-trace.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "8817db66c6ee3032a8c7f917fed031177c52db76",
+        "bytes": 3081,
+        "sha256": "92a6e7f2cd834fb271a3aadd37e3dc1235691b0e258d351e43cdb0e6a9b39c67"
+      },
+      {
+        "path": "web/airspace/tests/encounter.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "8fb7bf845b7796a3ac2c90f850f80006b8f9ea75",
+        "bytes": 10154,
+        "sha256": "81600f27fd777d2abbba2948267980b5bace5bec394f24373f9f1d89c3656488"
+      },
+      {
+        "path": "web/airspace/tests/playback-controls.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "de7a02cd88f69bf8192516cb1acf7aa6eb276853",
+        "bytes": 9072,
+        "sha256": "fbe02527200a428fae18c6d45b09ef942b9dcfd411d7e8a8bf11c30d5e74a845"
+      },
+      {
+        "path": "web/airspace/tests/python-audit-interop.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "47cf573b71eb42e1a77da59ec5a6ed168d1acda2",
+        "bytes": 2500,
+        "sha256": "d0538f519c8e2f4b0fef49580cd82178b16ccf53824b851226e263d2be80a77f"
+      },
+      {
+        "path": "web/airspace/tests/python-audit-wire.json",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "28febf3c725e2761895f55628fd5483e32b48da9",
+        "bytes": 24996,
+        "sha256": "7d30312dc70d7655cea7ab162912ced0265f21ebd3c4d9057933a51c72801e31"
+      },
+      {
+        "path": "web/airspace/tests/python-float-parity.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "7466b9213ecefe5ba3352ca9d0935fa9637532cf",
+        "bytes": 4672,
+        "sha256": "86b0eb813c03fecb7c188f6bb77d76f4b77cea8fe37c2d282cf602dafc27f235"
+      },
+      {
+        "path": "web/airspace/tests/python-reference.json",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "65b017ab362097b161ec1f7c103b55a3c42941f1",
+        "bytes": 14868,
+        "sha256": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2"
+      },
+      {
+        "path": "web/airspace/tests/radar-geometry.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "1d223a59e1ea94503906303140aee89952501164",
+        "bytes": 6858,
+        "sha256": "f7285383bd4f8039328adc23f41f21225d84d7b78642e0b91172d7049b27ace2"
+      },
+      {
+        "path": "web/airspace/tests/scenario-file.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "450dc4c6d2e9ff0e6e118e696fc34dd47f2d6a49",
+        "bytes": 9615,
+        "sha256": "f7680a85e2e59eca9e5b8bd381636f5eed533096e2cf800c51df6ac90d197bad"
+      },
+      {
+        "path": "web/airspace/tests/track-edit.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "3c0812f94ff7d2dd9ff6a32f573ac28102ff10fe",
+        "bytes": 9197,
+        "sha256": "58adb9d2d42ae7284e8d3c3a949157ff80b46a1d63d9a2859b28d418497a647e"
+      },
+      {
+        "path": "web/airspace/tests/world-json-draft.browser.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "aa01b6711f7aeb7358cc4bba21477d840f449d45",
+        "bytes": 14483,
+        "sha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f"
+      },
+      {
+        "path": "web/airspace/tests/world-tools.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "08a2cd5bda3f11e6c375d6f4f7660e8d4c4d33e5",
+        "bytes": 2478,
+        "sha256": "7c4f1889d0d4fd3104def954234fc0269820396ebb85f4495ee0b388969a7095"
+      },
+      {
+        "path": "web/airspace/tsconfig.json",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "da1989ed943ad339db9c78e57ce2fe0268523c48",
+        "bytes": 320,
+        "sha256": "994b5ffe77837a183106072a881d44d74a1b6a5d6e6e964ae5364971573c7e6a"
+      },
+      {
+        "path": "web/airspace/vite.config.ts",
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "9a35e51e99a33873dafcca04f18bf2ca8df589f5",
+        "bytes": 153,
+        "sha256": "36c16c15fb1ea9d20fafaf0962addb32ceb20e4b87868ac0656d1d9c4c4f7aa6"
+      }
+    ],
+    "current-main": [
+      {
+        "path": "web/airspace/.gitignore",
+        "mode": "100644",
+        "bytes": 53,
+        "sha256": "3c3d8ee71c7cb202a6b724b6c42b8e104651dfa767292c29592ae5e4679befbe",
+        "git_blob": "9bbb2245b44a9b8ecbefe94d9e24a478c3fffb63"
+      },
+      {
+        "path": "web/airspace/.npmrc",
+        "mode": "100644",
+        "bytes": 156,
+        "sha256": "cc37e56acfb8e6a45d1fc786e6f4fa16a62a570ac7d85fb3ad84227e21694bcf",
+        "git_blob": "cab1cc56aa1525904e0b6171b685ee13fc28c91e"
+      },
+      {
+        "path": "web/airspace/README.md",
+        "mode": "100644",
+        "bytes": 10600,
+        "sha256": "7e7d509289e988611415d963eab10e5f3267561b2c2369595c4c98fc2cd7c434",
+        "git_blob": "82b277e757aec4d8ef4057409c829f9629a08e16"
+      },
+      {
+        "path": "web/airspace/index.html",
+        "mode": "100644",
+        "bytes": 15383,
+        "sha256": "80acac2fadc82c049af4e553a52f2c9b3f7cc06b7d585954b056e957a28d0ed5",
+        "git_blob": "fb2b2c2b9f0b1f1ea31c14191af328ef09d9e1ec"
+      },
+      {
+        "path": "web/airspace/package-lock.json",
+        "mode": "100644",
+        "bytes": 40499,
+        "sha256": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+        "git_blob": "9d81d64088a09bf36ce116b67bf48eefc4fe7c27"
+      },
+      {
+        "path": "web/airspace/package.json",
+        "mode": "100644",
+        "bytes": 357,
+        "sha256": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd",
+        "git_blob": "836291c282e63943575c82dfaeaf653d278b48a1"
+      },
+      {
+        "path": "web/airspace/prepare-python.mjs",
+        "mode": "100644",
+        "bytes": 605,
+        "sha256": "e67ea0d07b7043fc191b4bb4473ff6b45ba7f173eeec294c2f43ace429c61484",
+        "git_blob": "5f816785223c30353f84d8c180e789d021b39a7b"
+      },
+      {
+        "path": "web/airspace/public/captures/airspace-desktop.png",
+        "mode": "100644",
+        "bytes": 391153,
+        "sha256": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7",
+        "git_blob": "bd6e0d9fc6c7f07b52dd276b9df97bc0d9c34b02"
+      },
+      {
+        "path": "web/airspace/public/captures/airspace-mobile.png",
+        "mode": "100644",
+        "bytes": 190636,
+        "sha256": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43",
+        "git_blob": "012be9dac2dfd5560162755c9b462213bf241ae9"
+      },
+      {
+        "path": "web/airspace/public/favicon.svg",
+        "mode": "100644",
+        "bytes": 252,
+        "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+        "git_blob": "498832ec27a0a0515bccc5650b70e94bc952f99d"
+      },
+      {
+        "path": "web/airspace/src/actuation.ts",
+        "mode": "100644",
+        "bytes": 2358,
+        "sha256": "a6a3186003cbd7fdcba6e7bc0847c9abfa4ba5174d3c98ce2da651941360dcfb",
+        "git_blob": "33e2c27481069712484bec409f5cbf2f23d8922f"
+      },
+      {
+        "path": "web/airspace/src/advisory-options.ts",
+        "mode": "100644",
+        "bytes": 3384,
+        "sha256": "4b001ebf546e10761906c19e09af5ef19967e45d994c1b090d376cad695ea976",
+        "git_blob": "18d9a51c359007a39ed76352ce245f8a70c1f6c7"
+      },
+      {
+        "path": "web/airspace/src/advisory-review.ts",
+        "mode": "100644",
+        "bytes": 5453,
+        "sha256": "45c170f976ffc886db49aef120361cbabc99884f63b3f017fc7a0c7b9923ed3e",
+        "git_blob": "5e31db5369be3294a0404667614520f58ab6dfe9"
+      },
+      {
+        "path": "web/airspace/src/audit.ts",
+        "mode": "100644",
+        "bytes": 2397,
+        "sha256": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075",
+        "git_blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b"
+      },
+      {
+        "path": "web/airspace/src/core.ts",
+        "mode": "100644",
+        "bytes": 5158,
+        "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+        "git_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7"
+      },
+      {
+        "path": "web/airspace/src/decision-trace.css",
+        "mode": "100644",
+        "bytes": 1564,
+        "sha256": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e",
+        "git_blob": "b1c82719ccc80cec69667003b7d007a0e6dfec52"
+      },
+      {
+        "path": "web/airspace/src/decision-trace.ts",
+        "mode": "100644",
+        "bytes": 8484,
+        "sha256": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce",
+        "git_blob": "83fa2809dc0e375b8f8982387fdb8845bea721c3"
+      },
+      {
+        "path": "web/airspace/src/draw.ts",
+        "mode": "100644",
+        "bytes": 5705,
+        "sha256": "ae91897f2d4db234451c1fd8b81c9ddc5260e9b76b62c5ac21153d3c7ec2166d",
+        "git_blob": "c3476aa53858de880c13f9a527aa5a446ca717da"
+      },
+      {
+        "path": "web/airspace/src/encounter-view.ts",
+        "mode": "100644",
+        "bytes": 8239,
+        "sha256": "329ac5994841291b3922702f035fac4d03766ae522eb52b807954f4d5ad508c4",
+        "git_blob": "d31fa0ec6bb6c620e7f36f37db06d6f3726e336b"
+      },
+      {
+        "path": "web/airspace/src/encounter.ts",
+        "mode": "100644",
+        "bytes": 5033,
+        "sha256": "efd010d007c8b63830d09fdda9bf8724316803937e373f44fd7f504ff1355883",
+        "git_blob": "3620b0d81d745d8e5b467e5d3823bf5c0de31b21"
+      },
+      {
+        "path": "web/airspace/src/gate.ts",
+        "mode": "100644",
+        "bytes": 2551,
+        "sha256": "3f135cabba46d9b6316475424841e543b5f7488a70d85cba25be5cd8cf5e8c8a",
+        "git_blob": "cd17b5191110ea47ee7771745b877fb8b65597a9"
+      },
+      {
+        "path": "web/airspace/src/main.ts",
+        "mode": "100644",
+        "bytes": 26595,
+        "sha256": "9cca9c2f411c2ecf982e341db3fb192ab89a587503a1f79b127612e292bc6819",
+        "git_blob": "7088ee75311962ff47afa8b252dc20e13625e418"
+      },
+      {
+        "path": "web/airspace/src/maneuvers.ts",
+        "mode": "100644",
+        "bytes": 1413,
+        "sha256": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d",
+        "git_blob": "bbe70e521c80e60123eb3ecc93e687e6bc576276"
+      },
+      {
+        "path": "web/airspace/src/planner.ts",
+        "mode": "100644",
+        "bytes": 2046,
+        "sha256": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74",
+        "git_blob": "82082fa50cbec1a0d30d377bb4cd3e1a67416d5e"
+      },
+      {
+        "path": "web/airspace/src/python-worker.ts",
+        "mode": "100644",
+        "bytes": 5321,
+        "sha256": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987",
+        "git_blob": "b1c4218b2abd5d444687d0b728bce70509df8b01"
+      },
+      {
+        "path": "web/airspace/src/python.ts",
+        "mode": "100644",
+        "bytes": 1163,
+        "sha256": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c",
+        "git_blob": "ef32ef39aa6c3bf7196c05fe10840f3c297156ce"
+      },
+      {
+        "path": "web/airspace/src/radar-geometry.ts",
+        "mode": "100644",
+        "bytes": 4189,
+        "sha256": "4df8158d1ca92115ef9be8067fecb377a1e2ccf72b5cd0f3fa27691284e77349",
+        "git_blob": "a14ac4a661b195d0b6136e209f9108a460ff1cfb"
+      },
+      {
+        "path": "web/airspace/src/track-edit.ts",
+        "mode": "100644",
+        "bytes": 4597,
+        "sha256": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046",
+        "git_blob": "ff3668979df28a70f848078356a096dd876cf692"
+      },
+      {
+        "path": "web/airspace/src/world-tools.ts",
+        "mode": "100644",
+        "bytes": 4263,
+        "sha256": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+        "git_blob": "8e308d78c19389a6881aace8d22412e93557f066"
+      },
+      {
+        "path": "web/airspace/style.css",
+        "mode": "100644",
+        "bytes": 19633,
+        "sha256": "9abb24f39088be588aff941dc1a456cb9cdf27fbb085d1514b68900b934dbe8f",
+        "git_blob": "90dd61e262edd381a7ac9449e3643cc3dac65083"
+      },
+      {
+        "path": "web/airspace/tests/advisory-numeric.test.ts",
+        "mode": "100644",
+        "bytes": 4121,
+        "sha256": "4c36af766b9b30160b069d6ce31580741387989680be0118a8ac6f5c5fe8fd19",
+        "git_blob": "7da0bf284bd167429cab0a3cff27bfad49c87a18"
+      },
+      {
+        "path": "web/airspace/tests/advisory-options.test.ts",
+        "mode": "100644",
+        "bytes": 4425,
+        "sha256": "111e9cdef1612992382ef8b13e88184a41c760a5f16c72e79a865c9c971b7ff3",
+        "git_blob": "dc34af345e5be25302669d3641d63199c99cefcd"
+      },
+      {
+        "path": "web/airspace/tests/algorithm.test.ts",
+        "mode": "100644",
+        "bytes": 2168,
+        "sha256": "117539be86d2fc5f26adef7151c8a55c85096d65e80ebc6e7d263aae89a3b178",
+        "git_blob": "1c6bca592af1f5d0613c37b241dec485bbfa2643"
+      },
+      {
+        "path": "web/airspace/tests/audit-wire.test.ts",
+        "mode": "100644",
+        "bytes": 4256,
+        "sha256": "7ced880e8615caef1e3b12b8097eee256b7b4cf286aedec59a68393d014ce8a7",
+        "git_blob": "47c1bbabe27c7e1773e092f59173a7c604952001"
+      },
+      {
+        "path": "web/airspace/tests/decision-trace.test.mjs",
+        "mode": "100644",
+        "bytes": 3081,
+        "sha256": "92a6e7f2cd834fb271a3aadd37e3dc1235691b0e258d351e43cdb0e6a9b39c67",
+        "git_blob": "8817db66c6ee3032a8c7f917fed031177c52db76"
+      },
+      {
+        "path": "web/airspace/tests/encounter.test.ts",
+        "mode": "100644",
+        "bytes": 10154,
+        "sha256": "81600f27fd777d2abbba2948267980b5bace5bec394f24373f9f1d89c3656488",
+        "git_blob": "8fb7bf845b7796a3ac2c90f850f80006b8f9ea75"
+      },
+      {
+        "path": "web/airspace/tests/playback-controls.test.ts",
+        "mode": "100644",
+        "bytes": 9072,
+        "sha256": "fbe02527200a428fae18c6d45b09ef942b9dcfd411d7e8a8bf11c30d5e74a845",
+        "git_blob": "de7a02cd88f69bf8192516cb1acf7aa6eb276853"
+      },
+      {
+        "path": "web/airspace/tests/python-audit-interop.test.mjs",
+        "mode": "100644",
+        "bytes": 2500,
+        "sha256": "d0538f519c8e2f4b0fef49580cd82178b16ccf53824b851226e263d2be80a77f",
+        "git_blob": "47cf573b71eb42e1a77da59ec5a6ed168d1acda2"
+      },
+      {
+        "path": "web/airspace/tests/python-audit-wire.json",
+        "mode": "100644",
+        "bytes": 24996,
+        "sha256": "7d30312dc70d7655cea7ab162912ced0265f21ebd3c4d9057933a51c72801e31",
+        "git_blob": "28febf3c725e2761895f55628fd5483e32b48da9"
+      },
+      {
+        "path": "web/airspace/tests/python-float-parity.test.mjs",
+        "mode": "100644",
+        "bytes": 4672,
+        "sha256": "86b0eb813c03fecb7c188f6bb77d76f4b77cea8fe37c2d282cf602dafc27f235",
+        "git_blob": "7466b9213ecefe5ba3352ca9d0935fa9637532cf"
+      },
+      {
+        "path": "web/airspace/tests/python-reference.json",
+        "mode": "100644",
+        "bytes": 14868,
+        "sha256": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+        "git_blob": "65b017ab362097b161ec1f7c103b55a3c42941f1"
+      },
+      {
+        "path": "web/airspace/tests/radar-geometry.test.ts",
+        "mode": "100644",
+        "bytes": 6858,
+        "sha256": "f7285383bd4f8039328adc23f41f21225d84d7b78642e0b91172d7049b27ace2",
+        "git_blob": "1d223a59e1ea94503906303140aee89952501164"
+      },
+      {
+        "path": "web/airspace/tests/track-edit.test.ts",
+        "mode": "100644",
+        "bytes": 9197,
+        "sha256": "58adb9d2d42ae7284e8d3c3a949157ff80b46a1d63d9a2859b28d418497a647e",
+        "git_blob": "3c0812f94ff7d2dd9ff6a32f573ac28102ff10fe"
+      },
+      {
+        "path": "web/airspace/tests/world-json-draft.browser.mjs",
+        "mode": "100644",
+        "bytes": 14483,
+        "sha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+        "git_blob": "aa01b6711f7aeb7358cc4bba21477d840f449d45"
+      },
+      {
+        "path": "web/airspace/tests/world-tools.test.ts",
+        "mode": "100644",
+        "bytes": 2478,
+        "sha256": "7c4f1889d0d4fd3104def954234fc0269820396ebb85f4495ee0b388969a7095",
+        "git_blob": "08a2cd5bda3f11e6c375d6f4f7660e8d4c4d33e5"
+      },
+      {
+        "path": "web/airspace/tsconfig.json",
+        "mode": "100644",
+        "bytes": 320,
+        "sha256": "994b5ffe77837a183106072a881d44d74a1b6a5d6e6e964ae5364971573c7e6a",
+        "git_blob": "da1989ed943ad339db9c78e57ce2fe0268523c48"
+      },
+      {
+        "path": "web/airspace/vite.config.ts",
+        "mode": "100644",
+        "bytes": 153,
+        "sha256": "36c16c15fb1ea9d20fafaf0962addb32ceb20e4b87868ac0656d1d9c4c4f7aa6",
+        "git_blob": "9a35e51e99a33873dafcca04f18bf2ca8df589f5"
+      }
+    ]
+  },
+  "dependency_source": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/node_modules",
+  "private_dependencies": "/tmp/towerops-playback-fixture-cf5799f6d38b-j_43xy6w/private-node_modules",
+  "dependency_install_performed": false,
+  "node": "v26.3.0"
+}

@@ -1,0 +1,224 @@
+{
+  "schema": "towerops-playback-radar-raw-archive-manifest/v1",
+  "archive": {
+    "path": "receiving-archive.json.gz",
+    "bytes": 824808,
+    "sha256": "4071872236f5b50bb5ec4f657da8629d64bc8857555b3f1e83de81d6697ec6d5",
+    "git_blob": "08d9dcc34b3b775b4a2c338474f55a20f0bf5665",
+    "mode": "100644"
+  },
+  "members": [
+    {
+      "path": "runs-8cd/inputs/build-manifest.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/inputs/build-manifest.json",
+      "bytes": 2669,
+      "sha256": "628b727288ecd462557385a5cad7a406b89aa7a6b32c60f86b8b416ea43ee762",
+      "git_blob": "0b941970adfe36f5714bab470af66a40e9195192",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/inputs/root-source-build-pin.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/inputs/root-source-build-pin.json",
+      "bytes": 339621,
+      "sha256": "c7a2fd2cee35e79b69fb74a520b15de0b2d697756ea60ac9b2ad68cbd86a2301",
+      "git_blob": "6fe6690b376938de6f9f5dde0b0dce474d200884",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/inputs/source-manifest.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/inputs/source-manifest.json",
+      "bytes": 335892,
+      "sha256": "5cfd3d5bde8314ce3bf81b48af43b67821d1549165375b4c00749cbaf02da9ab",
+      "git_blob": "38fdc3917d080da0bbfa37e0d63161af0420d4b0",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/playback-desktop-process.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop-process.json",
+      "bytes": 2340,
+      "sha256": "bd91a350666af7092b90a0ee9d32b7011e504b389b84a1cf8120ec14763aaff5",
+      "git_blob": "6a923cb0a63d900bf22185d1b7258125d598d0d7",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/playback-desktop.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop.json",
+      "bytes": 653350,
+      "sha256": "4d1a779b77665d070d6d02da14f12a334f6ec3d2c72c941772fac1bd77315710",
+      "git_blob": "52419f81fa39c8fcd17100f161296dd886cdcb61",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/playback-desktop.stderr.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/playback-desktop.stdout.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop.stdout.log",
+      "bytes": 503,
+      "sha256": "72f332e633e104722324118b3319860169b8ec2cdce87f21c7b4ee9d93a5cdb4",
+      "git_blob": "3da0f3f0c3af4e3c2cb380940f2c8dbfdf699998",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/playback-mobile-process.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile-process.json",
+      "bytes": 2351,
+      "sha256": "12d8f2f1aebb954e7b8779b00b925cc28665fda32a98d5df0ca207ed705b5f55",
+      "git_blob": "c314c4bae6fa5f163e4add45cd2a0c8ece89cf3c",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/playback-mobile.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile.json",
+      "bytes": 653287,
+      "sha256": "ba5faad6cfa9f5a54c4b788107da1f07676729ba20b10a236ca1f68855191385",
+      "git_blob": "51c96f613708a4b3d3cce26ab9be84c4cbc31b17",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/playback-mobile.stderr.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/playback-mobile.stdout.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile.stdout.log",
+      "bytes": 501,
+      "sha256": "0b90b05c18f7fbd8bef9b0566da6fba52dc265a9ebde54b17008acb095f042b2",
+      "git_blob": "8ee445a2af1021c04d02eddcc4edd099c9b7b942",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/qualification-summary.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/qualification-summary.json",
+      "bytes": 8666,
+      "sha256": "c32065fb9289a9d52ec1d167ec1bf4fdcc29a01df0448ca9c6440c71f2e6d5bf",
+      "git_blob": "c0029813cd1bae080989bedebbe36647befb9061",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/radar-owner19/result.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19/result.json",
+      "bytes": 506297,
+      "sha256": "afa03614d89f04b78b89037665c161d13230bb27c3b3685b3ed3276a09ce778a",
+      "git_blob": "fb3f3748953560f1041a44633afc7ebc2ca0ce24",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/radar-owner19-process.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19-process.json",
+      "bytes": 2124,
+      "sha256": "26a15a5d5b07112c0235cefc005c3d257546a73fde991395f70cf5e12a8dff4d",
+      "git_blob": "479bf3b555eda69e28e0cbee40e70d7147fd76d6",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/radar-owner19.stderr.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "runs-8cd/radar-owner19.stdout.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19.stdout.log",
+      "bytes": 147,
+      "sha256": "1050776c641d7cb0983e8a10c84a7bc563d2d979803dbb5834f9e9eadfc95e9a",
+      "git_blob": "635d1b585e988c157f101429cfcb6233ccd4fac6",
+      "mode": "100644"
+    },
+    {
+      "path": "receivers/playback/receiving-browser.mjs",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/playback/receiving-browser.mjs",
+      "bytes": 25299,
+      "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+      "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49",
+      "mode": "100644"
+    },
+    {
+      "path": "receivers/radar/browser-v1-driver2.mjs",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/radar/browser-v1-driver2.mjs",
+      "bytes": 12632,
+      "sha256": "7dc85c569334dad1d8c50a5023390e77795587a962d49cf1e9be53de39e0982e",
+      "git_blob": "aa614261ecc7426afc2f67803d8550e21f2598d8",
+      "mode": "100644"
+    },
+    {
+      "path": "prepare-owner-receivers.py.txt",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/prepare-owner-receivers.py.txt",
+      "bytes": 7346,
+      "sha256": "ef9bd39097109cf441d9a2ae781428557b913dabf87606c0ef885f83adc29f46",
+      "git_blob": "aa98f31d0944d45cf686365381612d03ff356743",
+      "mode": "100644"
+    },
+    {
+      "path": "receive-root-composition.py.txt",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receive-root-composition.py.txt",
+      "bytes": 6086,
+      "sha256": "1747afb89efb8d5a17521ad44ebe037c7e6424a74e04ec44653a5d777164a1dd",
+      "git_blob": "90bef7a41da73740681a0f9ec1ca277095d379d9",
+      "mode": "100644"
+    },
+    {
+      "path": "owner-receiver-extraction.json",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/owner-receiver-extraction.json",
+      "bytes": 1531,
+      "sha256": "965c66cc16a07c36927a3e723176249277df148139ad570e7a94dd6646307b4c",
+      "git_blob": "d0d103a5303c7cb52cc4c813fd5378880b180665",
+      "mode": "100644"
+    },
+    {
+      "path": "syntax-browser-production-dist.stderr.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/syntax-browser-production-dist.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "syntax-browser-production-dist.stdout.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/syntax-browser-production-dist.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "syntax-receiving-browser.stderr.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/syntax-receiving-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "syntax-receiving-browser.stdout.log",
+      "source_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/syntax-receiving-browser.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    }
+  ],
+  "python_transcript_names": [
+    {
+      "archive_path": "prepare-owner-receivers.py.txt",
+      "native_executed_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/prepare-owner-receivers.py.txt",
+      "publication_kind": "Exact executed receiving driver bytes archived under .py.txt; no Python module-discovery or lint qualification is claimed"
+    },
+    {
+      "archive_path": "receive-root-composition.py.txt",
+      "native_executed_path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receive-root-composition.py.txt",
+      "publication_kind": "Exact executed receiving driver bytes archived under .py.txt; no Python module-discovery or lint qualification is claimed"
+    }
+  ]
+}

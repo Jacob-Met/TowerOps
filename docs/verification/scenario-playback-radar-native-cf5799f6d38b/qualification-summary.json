@@ -1,0 +1,234 @@
+{
+  "schema": "towerops-playback-radar-composition-native-processes/v1",
+  "started_utc": "2026-10-08T15:45:44.475196+00:00",
+  "source_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+  "base_commit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+  "before": {
+    "source_files": 1017,
+    "build_files": 16,
+    "all_original_bytes_modes_and_blobs_exact": true,
+    "root_pin_unchanged": true
+  },
+  "runs": [
+    {
+      "name": "playback-desktop",
+      "command": [
+        "/opt/homebrew/bin/node",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/playback/receiving-browser.mjs",
+        "--chrome",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--repo",
+        "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate",
+        "--manifest",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/inputs/source-manifest.json",
+        "--dist",
+        "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist",
+        "--out",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 4.581,
+      "available_bytes_before": 694214656,
+      "stdout": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop.stdout.log",
+        "bytes": 503,
+        "sha256": "72f332e633e104722324118b3319860169b8ec2cdce87f21c7b4ee9d93a5cdb4",
+        "git_blob": "3da0f3f0c3af4e3c2cb380940f2c8dbfdf699998"
+      },
+      "stderr": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "report": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-desktop.json",
+        "bytes": 653350,
+        "sha256": "4d1a779b77665d070d6d02da14f12a334f6ec3d2c72c941772fac1bd77315710",
+        "git_blob": "52419f81fa39c8fcd17100f161296dd886cdcb61"
+      },
+      "passed": true,
+      "cases": [
+        {
+          "name": "reset-3x",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "name": "reset-0.5x",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "name": "automatic-pause-policy-2x",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "name": "automatic-pause-refused-flight-2x",
+          "passed": true,
+          "failed_checks": []
+        }
+      ],
+      "predicate_count": 0,
+      "failed_predicates": [],
+      "error": null,
+      "source_build_preserved": true,
+      "exact_readback": {
+        "source_files": 1017,
+        "build_files": 16,
+        "all_original_bytes_modes_and_blobs_exact": true,
+        "root_pin_unchanged": true
+      }
+    },
+    {
+      "name": "playback-mobile",
+      "command": [
+        "/opt/homebrew/bin/node",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/playback/receiving-browser.mjs",
+        "--chrome",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--repo",
+        "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate",
+        "--manifest",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/inputs/source-manifest.json",
+        "--dist",
+        "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist",
+        "--out",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile",
+        "--mobile"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 4.734,
+      "available_bytes_before": 682704896,
+      "stdout": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile.stdout.log",
+        "bytes": 501,
+        "sha256": "0b90b05c18f7fbd8bef9b0566da6fba52dc265a9ebde54b17008acb095f042b2",
+        "git_blob": "8ee445a2af1021c04d02eddcc4edd099c9b7b942"
+      },
+      "stderr": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "report": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/playback-mobile.json",
+        "bytes": 653287,
+        "sha256": "ba5faad6cfa9f5a54c4b788107da1f07676729ba20b10a236ca1f68855191385",
+        "git_blob": "51c96f613708a4b3d3cce26ab9be84c4cbc31b17"
+      },
+      "passed": true,
+      "cases": [
+        {
+          "name": "reset-3x",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "name": "reset-0.5x",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "name": "automatic-pause-policy-2x",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "name": "automatic-pause-refused-flight-2x",
+          "passed": true,
+          "failed_checks": []
+        }
+      ],
+      "predicate_count": 0,
+      "failed_predicates": [],
+      "error": null,
+      "source_build_preserved": true,
+      "exact_readback": {
+        "source_files": 1017,
+        "build_files": 16,
+        "all_original_bytes_modes_and_blobs_exact": true,
+        "root_pin_unchanged": true
+      }
+    },
+    {
+      "name": "radar-owner19",
+      "command": [
+        "/opt/homebrew/bin/node",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/radar/browser-production-dist.mjs",
+        "--repo",
+        "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate",
+        "--manifest",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/inputs/source-manifest.json",
+        "--build-manifest",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/inputs/build-manifest.json",
+        "--base-commit",
+        "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+        "--source-tree",
+        "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+        "--dist",
+        "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist",
+        "--out",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 3.919,
+      "available_bytes_before": 678121472,
+      "stdout": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19.stdout.log",
+        "bytes": 147,
+        "sha256": "1050776c641d7cb0983e8a10c84a7bc563d2d979803dbb5834f9e9eadfc95e9a",
+        "git_blob": "635d1b585e988c157f101429cfcb6233ccd4fac6"
+      },
+      "stderr": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "report": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/runs-8cd/radar-owner19/result.json",
+        "bytes": 506297,
+        "sha256": "afa03614d89f04b78b89037665c161d13230bb27c3b3685b3ed3276a09ce778a",
+        "git_blob": "fb3f3748953560f1041a44633afc7ebc2ca0ce24"
+      },
+      "passed": true,
+      "cases": [],
+      "predicate_count": 19,
+      "failed_predicates": [],
+      "error": null,
+      "source_build_preserved": true,
+      "exact_readback": {
+        "source_files": 1017,
+        "build_files": 16,
+        "all_original_bytes_modes_and_blobs_exact": true,
+        "root_pin_unchanged": true
+      }
+    }
+  ],
+  "after": {
+    "source_files": 1017,
+    "build_files": 16,
+    "all_original_bytes_modes_and_blobs_exact": true,
+    "root_pin_unchanged": true
+  },
+  "finished_utc": "2026-10-08T15:45:58.247511+00:00",
+  "passed": true,
+  "receiver_pins": {
+    "playback": {
+      "bytes": 25299,
+      "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+      "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49"
+    },
+    "radar": {
+      "bytes": 14401,
+      "sha256": "0a5008339e17ab794c84716de7996dd4c25b3986c2192abb3f8d575f14d70309",
+      "git_blob": "160ce227b896a4fd8a6a01080870fda776ca5f66"
+    }
+  }
+}

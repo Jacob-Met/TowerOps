@@ -1,0 +1,52 @@
+{
+  "source_commit": "9a422ce547d615ad9b382f748480b3effb9891b7",
+  "base_source_tree": "03a5ba38458234fe19cd38287e7b87624e7a01f8",
+  "source_pin_sha256": "92b8884c116f5b25477e356626f185ac0849d67f7a8899810497478452424ca4",
+  "base_entries": 1021,
+  "all_base_modes_bytes_git_blobs_exact": true,
+  "source_entry_vector_sha256": "65ffcaaf4cc4018b0893465243f2dbe969bd98631bae1e83e91097f79b6e8ce1",
+  "incoming_packets": [
+    {
+      "name": "playback-radar19",
+      "source_manifest": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/publication-manifest.json",
+      "sha256": "643d2bde792ac8913eb1c2b302202990b6c469f9775c54274c16a98f76a54190",
+      "bytes": 8537,
+      "git_blob": "3aaf6e1b65fc67bfe2788bacd7f44e5a7aade53f",
+      "files": 19,
+      "total_bytes": 1762051
+    },
+    {
+      "name": "inherited10",
+      "source_manifest": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/publication-manifest.json",
+      "sha256": "68f48a716aac067bc54e3dbabe0712c604e360fce0af518e83cd8b33ffbd4b36",
+      "bytes": 4857,
+      "git_blob": "e531e20fd2108ad11e763bb0790950ffd7f8a677",
+      "files": 10,
+      "total_bytes": 450072
+    },
+    {
+      "name": "fixture9",
+      "source_manifest": "/tmp/towerops-playback-fixture-cf5799f6d38b-j_43xy6w/frozen-publication/docs-only-manifest.json",
+      "sha256": "a41903fb6b8d0db90ad1f87274569b37f5bea1a1647689879e2825e8bfa44f89",
+      "bytes": 2961,
+      "git_blob": "db79902bf0dec8a031fa7a9b84518ecc5d2e52a1",
+      "files": 9,
+      "total_bytes": 806839
+    },
+    {
+      "name": "author-diagnosis11",
+      "source_manifest": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/publication-manifest.json",
+      "sha256": "af466b20e09088668dae8172821f10c076ff071d34249b34695921bfaf65a5e0",
+      "bytes": 5124,
+      "git_blob": "203cf0244f24d061c1980f60f7052ebe47ae3f12",
+      "files": 11,
+      "total_bytes": 266052
+    }
+  ],
+  "incoming_files": 49,
+  "all_incoming_original_and_copied_bytes_exact": true,
+  "inherited_build_assets_checked": 16,
+  "no_product_test_or_build_change": true,
+  "test_variant_boundaries": "8cd original failures;27d historical received +59-byte fixture;03a current owner +61-byte fixture retained with four exact docs",
+  "final_assembled_tree_and_full_publication_ruff": "Recorded in external final publication manifest; no self-referential tree hash is embedded here."
+}
