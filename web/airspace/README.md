@@ -128,7 +128,7 @@ node web/airspace/tests/world-json-draft.browser.mjs --root . --browser /path/to
 
 The radar automatically fits current aircraft positions and the existing look-ahead endpoints. A common east/north translation keeps the traffic geometry at the same screen scale. Grid values remain absolute nautical-mile coordinates: east and north are positive. The origin axes and distance reference rings stay at world (0, 0), so they may be outside the view for an offset scenario.
 
-The fitted range includes at least 2 NM of margin (10% for wider traffic), rounded up in 5 NM steps, with a minimum half-range of 15 NM. Empty, single and coincident drawing inputs have a stable range; the WorldState importer still requires 1–60 aircraft and finite numeric fields. There is no pan, zoom or saved camera state: the view refits as traffic and the projection horizon change.
+The fitted range includes at least 2 NM of margin (10% for wider traffic), rounded up in 5 NM steps, with a minimum half-range of 15 NM. Empty, single and coincident drawing inputs have a stable range; the WorldState importer still requires 1–60 aircraft and finite numeric fields. Automatic fitting is the default and refits as traffic and the projection horizon change.
 
 If admitted finite values overflow during look-ahead projection or cannot represent usable view bounds, the drawing and range readout say **RADAR VIEW UNAVAILABLE**. This leaves the world and planner policy unchanged; the drawing does not assert that traffic is clear. A canvas too small for its plot displays an enlarge-the-radar message. Grid iteration is bounded even for extreme coordinates.
 
@@ -169,3 +169,17 @@ The four built-in policy parameters are included for reproducibility. Version 1 
 Files are bounded to 256 KiB of UTF-8 JSON. Finite aircraft values, including signed zero, retain their numeric identity through save and load. The file is read as data and never supplies executable code or a network destination. No file is uploaded or automatically saved to browser storage. Browser download behavior still controls where the requested file is placed.
 
 The scenario-file tests run with the existing `npm test` command. Native receiving scripts and exact before/after evidence are recorded in the accompanying source qualification packet.
+
+## Navigate a manual radar view
+
+Use **Focus selected flight** to center the flight selected in the traffic register and bring a broad view down to at most ±15 NM. **Zoom in** halves the visible range down to ±1 NM; **Zoom out** doubles it. The four **Move view** buttons shift the center by a quarter of the shorter plotted axis. The range label explicitly changes to **MANUAL**, with the absolute east/north center below the controls.
+
+**Auto fit all** restores the existing automatic fit, including every current aircraft and look-ahead endpoint. Manual framing stays fixed while traffic moves, the horizon changes, or another world is loaded. It lasts only in this page session; reloading starts in automatic mode. Selecting a different flight alone does not move the camera; choose **Focus** when ready to center it.
+
+A focused radar also accepts arrow keys for pan, + / − for zoom, F for the selected flight and Home for automatic fit. These shortcuts apply only while the radar itself has keyboard focus; they do not capture keys typed into a draft or flight field. The buttons work with mouse, touch and keyboard.
+
+Manual views clip tracks, labels and projections at the plot boundary. The view summary counts aircraft positions and projection endpoints outside the actual rectangular plot, including an explicit notice if the selected flight is outside. **World check** and the planner still evaluate all traffic. Viewing controls do not move aircraft, advance or pause the simulation, select a flight, replace a raw JSON draft, invalidate an edit preview, change a proposal or approval, or append audit events.
+
+A zoom or pan that cannot represent finite usable coordinates is unavailable. If changed traffic makes the current manual frame unrepresentable, the radar says **RADAR VIEW UNAVAILABLE** and **Auto fit all** remains available. This is a display result, not a clear-world verdict. Existing absolute grid values, world-origin reference rings, automatic-fit margins and separation calculations are retained.
+
+Focused model, clipping and control checks: npm test -- radar-view.test.ts.

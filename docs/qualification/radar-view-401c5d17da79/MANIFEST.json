@@ -1,0 +1,402 @@
+{
+  "authored_source": "6eb54df0ad71ef3539d3ca6d8dd985eff875f435",
+  "current_runtime": "c06ade187171300112c29f2b9f4944d1e4b93240",
+  "current_tree": "6cb2831f10ec127c385b995925257e702ff0bc9c",
+  "accepted_receipts": {
+    "baseline": {
+      "source": "5b3015567a01017245c5f715c1bce65e20a06138",
+      "checks": 6,
+      "sha256": "28453f19222420c0351b0520399663a900cac9421276ec33acdcc333d19f4374"
+    },
+    "author_native": {
+      "source": "6eb54df0ad71ef3539d3ca6d8dd985eff875f435",
+      "checks": 22,
+      "sha256": "86872f63c3612bc7db709f51362c9c6df08ec2f44d2d6f3703f89df5f8f4823a"
+    },
+    "current_frontend": {
+      "source": "c06ade187171300112c29f2b9f4944d1e4b93240",
+      "tests": 236,
+      "typescript_build": true,
+      "sha256": "14d77f6739a161f8febd14436e75e60fa1be3d29019957ffd973e77987af8483"
+    },
+    "current_scenario_native": {
+      "source": "c06ade187171300112c29f2b9f4944d1e4b93240",
+      "checks": 18,
+      "sha256": "235d6b529a1387dd4ed07842ada07080ff6651af8335df634cf339adfc39e1e1"
+    },
+    "independent_native": {
+      "source": "6eb54df0ad71ef3539d3ca6d8dd985eff875f435",
+      "checks": 38,
+      "sha256": "9bbcc22006e7cd0e930d10f7be3e1f7d728ef8c44c46c950804ab980d7e310a9",
+      "receiving_successor": "55242537323d9ee47df505c6c5509de59acb66c3"
+    }
+  },
+  "archive": {
+    "file": "author-current-evidence.tar.gz",
+    "sha256": "4693ca2f36e9abef448ebbf3b302a016dfacb35199312f42c60e10e3613818ef",
+    "bytes": 2202201,
+    "files": 90
+  },
+  "members": {
+    "RUNTIME-FREEZE.json": {
+      "sha256": "99c1b130c5cc348c819e8332f8f3b3ecdced0d78a8ba7a27182c6c82adf7e20e",
+      "bytes": 68194
+    },
+    "evidence/baseline/broad-traffic-baseline.png": {
+      "sha256": "876329f990e352d8f5cd0a2770f2b8fcaf7b302045f9ecf84da653d1cd1d81d8",
+      "bytes": 203702
+    },
+    "evidence/baseline/browser-process.json": {
+      "sha256": "76c94c9427e939d9f28e0e3c2783c9cd41bfdabdc2ad754a407e1492b7a6e051",
+      "bytes": 3575
+    },
+    "evidence/baseline/prepare.json": {
+      "sha256": "732883d74fff105b6916110dd67928d04765fdfa4fce96791f3d3be410b4440f",
+      "bytes": 48
+    },
+    "evidence/baseline/receipt.json": {
+      "sha256": "28453f19222420c0351b0520399663a900cac9421276ec33acdcc333d19f4374",
+      "bytes": 69308
+    },
+    "evidence/browser-v1/browser-process.json": {
+      "sha256": "ed4b485772adeae51470b96e35c58d1c38b3f41a6c4b98aa0c81c9679bcfc124",
+      "bytes": 3727
+    },
+    "evidence/browser-v1/failure.png": {
+      "sha256": "288aa12c4ff29b5c4fa514f149f18c096f7af9b071ba4c558b3029d19c2cfe25",
+      "bytes": 118341
+    },
+    "evidence/browser-v1/receipt.json": {
+      "sha256": "5253d2e3d32a973516d21e379e095793d85a8a40a0e477b2d81a4ffdd084ba4a",
+      "bytes": 69248
+    },
+    "evidence/browser-v2/browser-process.json": {
+      "sha256": "f4e29f11a11d147ca81b6142341b68810710af3e8c2b98cd1de6afe543ca6f85",
+      "bytes": 3889
+    },
+    "evidence/browser-v2/failure.png": {
+      "sha256": "4528781b16299adfcc807f6fc097e48d35ee0096d7ee62155ff9bc2d699c0a64",
+      "bytes": 116016
+    },
+    "evidence/browser-v2/receipt.json": {
+      "sha256": "38584e935b668437720aebf44fd26a8575b88029a9d28f659b692eadc9b3cd04",
+      "bytes": 70012
+    },
+    "evidence/browser-v3/browser-process.json": {
+      "sha256": "02e50d5591a8fd126bdd6e1437ec92af3a2c79847df3c1f81781f71e7675edb4",
+      "bytes": 4333
+    },
+    "evidence/browser-v3/desktop-manual-view.png": {
+      "sha256": "00d7730782c695ceb4724f07d7ca06ef3c33788449c30ecf8bdcd02e8e92187e",
+      "bytes": 225680
+    },
+    "evidence/browser-v3/phone-320-manual-view.png": {
+      "sha256": "1321ca71ad92b8e7a2db9830df4e1c08d887c85cbd8d021fe2812c1b72ecd4ae",
+      "bytes": 69926
+    },
+    "evidence/browser-v3/phone-390-manual-view.png": {
+      "sha256": "1b53cc209f692385632f18e82775a3f86045f3420fe7965b8b2ff134422426cc",
+      "bytes": 81880
+    },
+    "evidence/browser-v3/receipt.json": {
+      "sha256": "86872f63c3612bc7db709f51362c9c6df08ec2f44d2d6f3703f89df5f8f4823a",
+      "bytes": 106590
+    },
+    "evidence/build-v1/native.log": {
+      "sha256": "1dcb6af5eb0741dd80cdb16206f268a994a0238bfe9661540378ed061bb43069",
+      "bytes": 508
+    },
+    "evidence/build-v1/receipt.json": {
+      "sha256": "682282492350f9239bd8de75f539dcc6ced6b6ec2f51f5d9ca249f2b83785bc0",
+      "bytes": 2585
+    },
+    "evidence/current-composition/CURRENT-FREEZE.json": {
+      "sha256": "584ad4d02bf3fd49260e9b39f3b389443654a47a4a08adae6b8b0f192e4e74d2",
+      "bytes": 5686
+    },
+    "evidence/current-composition/frontend-gate/command-0.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/current-composition/frontend-gate/command-0.stdout.log": {
+      "sha256": "3ea6685f15e88b7940ae7ffda044e2d81626a53e823ad5e145c6b53f322378dc",
+      "bytes": 360
+    },
+    "evidence/current-composition/frontend-gate/command-1.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/current-composition/frontend-gate/command-1.stdout.log": {
+      "sha256": "f946b2b7c862d083dfc61c3f697d852f8c1b8e8f8e3ee0901652be4e70f2b3ba",
+      "bytes": 508
+    },
+    "evidence/current-composition/frontend-gate/receipt.json": {
+      "sha256": "14d77f6739a161f8febd14436e75e60fa1be3d29019957ffd973e77987af8483",
+      "bytes": 185113
+    },
+    "evidence/current-composition/frontend-gate/vitest.json": {
+      "sha256": "b73d7ab7c0b2e5904ca5d4a54d719fdd591a2d7ed2d9446391e0f26c98df39d3",
+      "bytes": 81216
+    },
+    "evidence/current-composition/receiver-imports.json": {
+      "sha256": "1183eb735806dba7c2fbc7bac7f216f2ba0c5f48a09b8717f24f3da9cc6fad71",
+      "bytes": 1996
+    },
+    "evidence/current-composition/resolution-state.json": {
+      "sha256": "315fdac0c423c856640f073701d1bb8c7205231281a6fcdf6128616c55452909",
+      "bytes": 1084
+    },
+    "evidence/current-composition/scenario-camera-process-v1.log": {
+      "sha256": "f6ae2b2462f18e8c00581f115237d9890e2908ab40a0088d4b2f3304732a48dc",
+      "bytes": 860
+    },
+    "evidence/current-composition/scenario-camera-process-v2.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/current-composition/scenario-camera-process-v3.log": {
+      "sha256": "f44bd26f163ab57ea0eb2c45732be1322d926e97dc806d1d19b2b0325b81a28c",
+      "bytes": 1084
+    },
+    "evidence/current-composition/scenario-camera-process-v4.log": {
+      "sha256": "b1102cda8052f74ebbb2897a39fee7616b2541fc3f6a4f9a7a55e4954a3f4f10",
+      "bytes": 690
+    },
+    "evidence/current-composition/scenario-camera-process-v5.log": {
+      "sha256": "9de0a74a1fa31653710f5d3d725f2912ac1ea4379da5f8256452fc283d21b0c7",
+      "bytes": 1447
+    },
+    "evidence/current-composition/scenario-camera-process-v6.log": {
+      "sha256": "031f856b197e6d5b2788b5c33add853241c6cce32a5e67e6664b318691f99a98",
+      "bytes": 1542
+    },
+    "evidence/current-composition/scenario-camera-process-v7.log": {
+      "sha256": "7553d15c67962fd0e2e031b90941a90386eef57571c885b9eb9e0ea272789c34",
+      "bytes": 1736
+    },
+    "evidence/current-composition/scenario-camera-process-v8.log": {
+      "sha256": "a15715a4e8d4e5e4015f3be668dc805ec3349586a4838ba45efda35fa32a4b29",
+      "bytes": 1339
+    },
+    "evidence/current-composition/scenario-camera-v1/browser-process.json": {
+      "sha256": "1b6861fd91e87790990674576956eb1edadc2adf1abfdecec56acd7f4eecf45a",
+      "bytes": 3841
+    },
+    "evidence/current-composition/scenario-camera-v1/receipt.json": {
+      "sha256": "6a70763d286c6786456e8e7ffba85171cc06d8fe8f0fd3cd4713b115fb8d53f7",
+      "bytes": 3238
+    },
+    "evidence/current-composition/scenario-camera-v3/browser-process.json": {
+      "sha256": "2aec790e0c1d4ad9c82159030269645ff8443e3ae8eed9604cfd06b0344e60d3",
+      "bytes": 4126
+    },
+    "evidence/current-composition/scenario-camera-v3/failure-observations.json": {
+      "sha256": "c716c5087b4ff76771d4820e15b93ad4c41ecbd2eb7a2edf0cf36d96d6fd8c31",
+      "bytes": 5787
+    },
+    "evidence/current-composition/scenario-camera-v3/failure.png": {
+      "sha256": "e16a2b092bb8aa97bfe10d3fa737ed26e653ca1e279e3d0d3052213c77f6b377",
+      "bytes": 143293
+    },
+    "evidence/current-composition/scenario-camera-v3/radar-boundary-scenario.json": {
+      "sha256": "3eb64050f7276af2ac93486bf6eb1575b0c0dba071253887a5386d97c688e364",
+      "bytes": 812
+    },
+    "evidence/current-composition/scenario-camera-v3/receipt.json": {
+      "sha256": "64499929236a0a6289073c48b9a8c02a46ee5b3d4c7b2cc271caa5acccac958f",
+      "bytes": 3968
+    },
+    "evidence/current-composition/scenario-camera-v4/browser-start.json": {
+      "sha256": "0361b7123d0bf54833b3320ff906efdc72e9c9231861dcff4b9b2b9b8bd7bc8d",
+      "bytes": 454
+    },
+    "evidence/current-composition/scenario-camera-v4/receipt.json": {
+      "sha256": "a3cd73e33d5ee1614b28ecf9ee2ac8536d034a30738ab44d550ae39613a7c527",
+      "bytes": 1341
+    },
+    "evidence/current-composition/scenario-camera-v5/browser-process.json": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/current-composition/scenario-camera-v5/failure-observations.json": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/current-composition/scenario-camera-v6/browser-process.json": {
+      "sha256": "db70811d67058896b3e56f21bb3a2927159ec6e2b2da9ecbd48222f0e63a7102",
+      "bytes": 4092
+    },
+    "evidence/current-composition/scenario-camera-v6/failure-observations.json": {
+      "sha256": "4ca7d2aa8aa62b5608695e648b7e4fdbf642c90b1a1ce8baea9710afcaa52b87",
+      "bytes": 8209
+    },
+    "evidence/current-composition/scenario-camera-v6/failure.png": {
+      "sha256": "534831431a218115b23aa122353266199ad772579fb321ab0151b7ac5025ad33",
+      "bytes": 145505
+    },
+    "evidence/current-composition/scenario-camera-v6/radar-boundary-scenario.json": {
+      "sha256": "3eb64050f7276af2ac93486bf6eb1575b0c0dba071253887a5386d97c688e364",
+      "bytes": 812
+    },
+    "evidence/current-composition/scenario-camera-v6/receipt.json": {
+      "sha256": "d4cf976ac315f94aa3246c1e25c11f76ba6c53a0fbb468ae366b0e7843d075d8",
+      "bytes": 8540
+    },
+    "evidence/current-composition/scenario-camera-v6/review-preserved.png": {
+      "sha256": "072b2677eac61283d5074d0454af27792f0e3fda1c1cf5d2ca0c0ce364737571",
+      "bytes": 141408
+    },
+    "evidence/current-composition/scenario-camera-v7/browser-process.json": {
+      "sha256": "27a1eb993e82645f6d5bfaba20a17bb06bfe09418ed1c2f9c1aa74428ef24d25",
+      "bytes": 3976
+    },
+    "evidence/current-composition/scenario-camera-v7/failure-observations.json": {
+      "sha256": "9136ed41a7256b7e3afd10981e7b9505bb55011d1b4281ab6d2a42a9cca5c515",
+      "bytes": 9257
+    },
+    "evidence/current-composition/scenario-camera-v7/failure.png": {
+      "sha256": "f2b69fbbe372655e7a73d872b5cfd8975d6e5ccf1fa3af197273db97f0961ca0",
+      "bytes": 141621
+    },
+    "evidence/current-composition/scenario-camera-v7/loaded-manual.png": {
+      "sha256": "7be99df441cfeb4dce0c1b8986172a145b1cb0ee5de1ec08795f8b779a4923c3",
+      "bytes": 184444
+    },
+    "evidence/current-composition/scenario-camera-v7/radar-boundary-scenario.json": {
+      "sha256": "3eb64050f7276af2ac93486bf6eb1575b0c0dba071253887a5386d97c688e364",
+      "bytes": 812
+    },
+    "evidence/current-composition/scenario-camera-v7/receipt.json": {
+      "sha256": "e8bf8e6ea410a9607e1c0d20b31687a5afc44078fd820492fa3285fb38aa7dd6",
+      "bytes": 9372
+    },
+    "evidence/current-composition/scenario-camera-v7/review-preserved.png": {
+      "sha256": "072b2677eac61283d5074d0454af27792f0e3fda1c1cf5d2ca0c0ce364737571",
+      "bytes": 141408
+    },
+    "evidence/current-composition/scenario-camera-v8/browser-process.json": {
+      "sha256": "3397740063196acbf172dfa40b047473d3217b4ecb8efe71f8dba47833561023",
+      "bytes": 4286
+    },
+    "evidence/current-composition/scenario-camera-v8/downloads/towerops-scenario-v1.json": {
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "bytes": 812
+    },
+    "evidence/current-composition/scenario-camera-v8/downloads/towerops-scenario-v73.json": {
+      "sha256": "3eb64050f7276af2ac93486bf6eb1575b0c0dba071253887a5386d97c688e364",
+      "bytes": 812
+    },
+    "evidence/current-composition/scenario-camera-v8/loaded-manual.png": {
+      "sha256": "7be99df441cfeb4dce0c1b8986172a145b1cb0ee5de1ec08795f8b779a4923c3",
+      "bytes": 184444
+    },
+    "evidence/current-composition/scenario-camera-v8/native-observations.json": {
+      "sha256": "c307ab4cfa0355b0c333ed4c20ea142db794f0a93d2d3f1971fd6a3e567942fd",
+      "bytes": 13429
+    },
+    "evidence/current-composition/scenario-camera-v8/radar-boundary-scenario.json": {
+      "sha256": "3eb64050f7276af2ac93486bf6eb1575b0c0dba071253887a5386d97c688e364",
+      "bytes": 812
+    },
+    "evidence/current-composition/scenario-camera-v8/receipt.json": {
+      "sha256": "235d6b529a1387dd4ed07842ada07080ff6651af8335df634cf339adfc39e1e1",
+      "bytes": 9633
+    },
+    "evidence/current-composition/scenario-camera-v8/review-preserved.png": {
+      "sha256": "072b2677eac61283d5074d0454af27792f0e3fda1c1cf5d2ca0c0ce364737571",
+      "bytes": 141408
+    },
+    "evidence/current-composition/scenario-camera-v8/visual-review.json": {
+      "sha256": "e6d55c3fe41c317f18bf87a3f7d11717455a1d16052d8a64b8b1f88ae12f26b0",
+      "bytes": 560
+    },
+    "evidence/current-composition/whitespace-scope.json": {
+      "sha256": "f006890a3b0b800f60a2a12a5f3aa52b6fc69262d6aeb4798eb6aa78fc095000",
+      "bytes": 2306
+    },
+    "evidence/first-compile-focused/command-0.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/first-compile-focused/command-1.log": {
+      "sha256": "664e655e075b788d6a7a23d3845ed253a4ad6b58e51644045a8df1bcaf1cfab9",
+      "bytes": 140
+    },
+    "evidence/first-compile-focused/receipt.json": {
+      "sha256": "fed25be466e1014a09bb8f687972a0f6880d5675739e30e41ad326bae96292e2",
+      "bytes": 508
+    },
+    "evidence/first-compile-focused/vitest.json": {
+      "sha256": "599295eb3b9ab78ebad1abb75569010d7499068ecb4af269f62996c39a812af4",
+      "bytes": 4102
+    },
+    "evidence/full-unit-v1/native.log": {
+      "sha256": "b42549c0e4cc95c5fbbddc0711564bf69a24b27dc898d7ab9013fd903802f1cc",
+      "bytes": 131
+    },
+    "evidence/full-unit-v1/receipt.json": {
+      "sha256": "567e23cd245a1c9837f5ca60fb561af630af92cae8a84ee730bc68e5c336f9e0",
+      "bytes": 373
+    },
+    "evidence/full-unit-v1/vitest.json": {
+      "sha256": "eb6e24fb0cd19a4ecbdd4eeb8b19b310f838192f0dfe4ade3b54f82c94fff61c",
+      "bytes": 60310
+    },
+    "methods/baseline.mjs": {
+      "sha256": "84210918a35d208326da7a478cb89d6c2d530373ef0c845ddd7b4ace180dcc01",
+      "bytes": 5688
+    },
+    "methods/candidate-v2.mjs": {
+      "sha256": "18d0227697ac8ecdcdf7f8f92d3e1b2948813c025d950d1b5faecb3149944c6e",
+      "bytes": 15075
+    },
+    "methods/candidate-v3.mjs": {
+      "sha256": "a8797a3e764dc74ed46f06bc408da1c8f14cc34e71653c9668924fd3ceecf4cc",
+      "bytes": 15419
+    },
+    "methods/candidate.mjs": {
+      "sha256": "ad1932387d6bbfb56403e35dcac3f93ab3e159c96e7c4b76ece8a4fd3425e35a",
+      "bytes": 15094
+    },
+    "methods/cdp-scenario.mjs": {
+      "sha256": "b78859bb0b5ccc262f102b4b27fcde8a3f9d4ff06f2d40bcf2e25a0aa96e2e77",
+      "bytes": 5755
+    },
+    "methods/cdp.mjs": {
+      "sha256": "be20b757f9cd7b3b85bcc701b589d61ad338123be70d75acb914eda529af5639",
+      "bytes": 5755
+    },
+    "methods/scenario-camera-v1.mjs": {
+      "sha256": "b7d483b71880f885290d3fe70184297536411111543160e59437d319cf226054",
+      "bytes": 13692
+    },
+    "methods/scenario-camera-v2.mjs": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "methods/scenario-camera-v3.mjs": {
+      "sha256": "e7e861cd2a3cea3d7fa07d8f634d832ef2cf96ad5645a5087b31b5d70e2b8c8a",
+      "bytes": 13978
+    },
+    "methods/scenario-camera-v4.mjs": {
+      "sha256": "35a131518ce90cb3af35c28c5c23f08d432c22ce3f45bd96cda4cbc372dea5d8",
+      "bytes": 14188
+    },
+    "methods/scenario-camera-v5.mjs": {
+      "sha256": "81837456fa0975278f0a6d454bb4a6cd2c52e534e70da7a2a6cdc8a25e371b4b",
+      "bytes": 14197
+    },
+    "methods/scenario-camera-v6.mjs": {
+      "sha256": "0d1c91a98d39258ec3c41e309230a6bdaa149fdd1e07be991f7c1a69fc3c9d22",
+      "bytes": 14205
+    },
+    "methods/scenario-camera-v7.mjs": {
+      "sha256": "193c8b97e0c15fb25542caf7daac72c0e431a4346ee702177454d6f5beefa140",
+      "bytes": 14949
+    },
+    "methods/scenario-camera-v8.mjs": {
+      "sha256": "fea2a8d3b10eac41f1cec2a591e8bdfd4e9890a0ea0cf18cb579fee2104f7a34",
+      "bytes": 14904
+    }
+  }
+}
