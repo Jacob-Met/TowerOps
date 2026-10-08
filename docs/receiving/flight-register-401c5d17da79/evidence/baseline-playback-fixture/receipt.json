@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "seconds": 20.086,
+  "argv": [
+    "/usr/bin/node",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-flight-register/baseline-units/web/airspace/node_modules/vitest/vitest.mjs",
+    "run",
+    "tests/playback-controls.test.ts",
+    "--config",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-flight-register/methods/vitest-baseline-playback.config.mjs",
+    "--reporter=json",
+    "--outputFile=/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-flight-register/evidence/baseline-playback-fixture/vitest.json"
+  ],
+  "tests": {
+    "numPassedTests": 14,
+    "numFailedTests": 0,
+    "numTotalTests": 14,
+    "success": true
+  },
+  "source_files": 26,
+  "source_changed": []
+}

@@ -11,6 +11,9 @@ vi.mock('../src/draw', async (importOriginal) => ({
   drawAirspace: draw,
 }));
 vi.mock('../src/python', () => ({ towerPython: python }));
+// The retained fixture deliberately has no native DOM. Keep register drawing
+// outside these playback/worker assertions; its real DOM is received in Chromium.
+vi.mock('../src/flight-register', () => ({ createFlightRegister: () => ({ update: vi.fn() }) }));
 
 type Listener = (event: { currentTarget: ElementStub; target: ElementStub }) => unknown;
 class ElementStub {

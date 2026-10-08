@@ -1,0 +1,30 @@
+{
+  "issue": {
+    "url": "https://github.com/Jacob-Met/TowerOps/issues/63",
+    "title": "Traffic register: find and order live flights without changing the scenario",
+    "issue_number": 63,
+    "body": "## Intended user flow\n\nFind and select a flight in the live traffic register without scrolling through the entire supported 60-aircraft scenario. Add literal, case-insensitive callsign search and scenario/callsign/altitude ordering, a visible match count, and an explicit notice when the selected flight is temporarily filtered out.\n\n## Source and ownership fence\n\nWorker: estate-401c5d17da79, integration lane. Exact current parent: `89529c5459b1c3d52448e197de2b2f7fe8b6d128`, tree `03fec48eb2a60ff34084051d55ce4c5b446c7bb1`.\n\nOwn scope: new register model/view/scoped CSS; the existing Traffic panel controls immediately before `#flight-list`; one register import/initialization and only the flight-list portion of `drawLists` in `web/airspace/src/main.ts`; focused native tests and operator guidance.\n\nCoordinated directly with the #59 radar owner. Its current-main composition leaves `drawLists` unchanged. Preserve all existing scenario selectors, conflict-list rendering, radar geometry/navigation, undo, advisory review, worker/planner/gate, clock, world-editor and track-edit handlers.\n\n## Behavioral contract and receiving\n\nThe default remains scenario order. Search and ordering are view-only: they never change world arrays, simulation clock, proposal, approval, audit or unfinished inputs. Filtering out the selected flight preserves selection and identifies it explicitly. A flight changes only through deliberate selection using the existing guard against busy work or active track editing. User text is rendered literally.\n\nQualify the feature through the current native Chromium app, including a nontrivial 60-flight world loaded through its normal JSON input, keyboard selection/focus retention, hidden selection, stable ordering, live updates and unchanged protected operational state. Preserve source pins and distinguish the unchanged baseline from the feature candidate. No installed runtime or service changes.\n\nThis records source work in an isolated checkout; it does not claim integration or live adoption.",
+    "state": "open",
+    "user": {
+      "login": "Jacob-Met",
+      "name": "Jacob-Met",
+      "email": null,
+      "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+      "id": 150724801
+    },
+    "assignees": null,
+    "labels": null,
+    "milestone": null,
+    "state_reason": null,
+    "comments": 0,
+    "created_at": "2026-10-08T17:51:05Z",
+    "updated_at": "2026-10-08T17:51:05Z",
+    "closed_at": null,
+    "display_url": "https://github.com/Jacob-Met/TowerOps/issues/63",
+    "display_title": "Traffic register: find and order live flights without changing the scenario"
+  },
+  "url": "https://github.com/Jacob-Met/TowerOps/issues/63",
+  "title": "Traffic register: find and order live flights without changing the scenario",
+  "display_url": "https://github.com/Jacob-Met/TowerOps/issues/63",
+  "display_title": "Traffic register: find and order live flights without changing the scenario"
+}

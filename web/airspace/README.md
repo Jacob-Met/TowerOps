@@ -169,3 +169,15 @@ The four built-in policy parameters are included for reproducibility. Version 1 
 Files are bounded to 256 KiB of UTF-8 JSON. Finite aircraft values, including signed zero, retain their numeric identity through save and load. The file is read as data and never supplies executable code or a network destination. No file is uploaded or automatically saved to browser storage. Browser download behavior still controls where the requested file is placed.
 
 The scenario-file tests run with the existing `npm test` command. Native receiving scripts and exact before/after evidence are recorded in the accompanying source qualification packet.
+
+## Find and order live traffic
+
+Open **Under the hood → Traffic** to find a flight in the live register. **Find callsign** performs a literal, case-insensitive search of callsigns only; outer whitespace is ignored. The register shows the matching count separately from the full flight count. Clear the search to restore every flight.
+
+**Order by** starts in scenario order. Callsign order is A–Z; altitude can run low to high or high to low. Equal altitudes retain scenario order, and ordering uses the current exact altitude before the displayed flight level is rounded. Search and order remain local to the open page and are not saved in scenario files.
+
+Filtering out the selected flight keeps that selection and shows an explicit notice. **Show selected** searches for that callsign without selecting a different flight. Click a visible callsign, or Tab to its button and press Enter or Space, to select it through the existing flight-selection control. Selection stays unavailable while planning or editing a track, while search and order remain available.
+
+Searching and ordering change only this register. They do not pause traffic, edit its world or clock, replace a proposal or approval, alter the decision trace, or replace an unfinished flight or JSON draft. Live rows continue updating without replacing the search field or the focused visible flight button. A replacement scenario removes old rows while retaining the current search and ordering preferences.
+
+The native qualification record and retained controls are in [the register receiving packet](../../docs/receiving/flight-register-401c5d17da79/README.md).

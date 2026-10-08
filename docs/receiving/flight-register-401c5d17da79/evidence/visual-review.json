@@ -1,0 +1,13 @@
+{
+  "schema": "towerops.flight-register-visual-review.v1",
+  "reviewer": "estate-401c5d17da79/integration_discovery",
+  "scope": "Visual inspection of recorded actual Chromium frames, not a new runtime invocation",
+  "findings": [
+    "390px controls, matching count, hidden selected-flight notice and one-column rows fit and remain readable.",
+    "Desktop register presents search/order in two columns, the explicit hidden selection, stable altitude order and unchanged adjacent separation watch."
+  ],
+  "files": {
+    "register-390-filtered.png": "085ed466e71440497e8ca23ce5cf51c066d202dfdef6915566eb86f5042c61e9",
+    "register-60-altitude-order.png": "a2c01bc54811719ab08e8b96e9a86b6e625832bd94abd816cfe6703dc395bf81"
+  }
+}
