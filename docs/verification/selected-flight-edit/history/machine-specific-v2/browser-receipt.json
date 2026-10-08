@@ -1,0 +1,634 @@
+{
+  "status": "pass",
+  "receiver": "integration-72ac1419",
+  "browser": "Google Chrome 154.0.8037.98",
+  "node": "v26.3.0",
+  "base": "e522e53246986327b7903f3c404abf8a04ab5f1d",
+  "browserContextId": "8F50396F1BDCF828D041C24A4501F2D4",
+  "browserContextMode": "explicit disposable CDP context",
+  "checks": [
+    "Actual local CPython planner creates an approvable world-bound proposal",
+    "Native Tab/ArrowUp/Enter previews analytic conflict removal; Cancel preserves exact world, draft and approval",
+    "The proposal retained by Cancel actually passes Python readback and appends four valid audit events",
+    "Apply advances one version, preserves the other track and audit, and rejects a preview after a native field change",
+    "Applying an edit while an approved proposal exists clears all previous proposal/approval gates without erasing history",
+    "Replanning the edited world runs actual Python actuation and retains the previous four-event audit prefix in an eight-event valid chain",
+    "390px browser layout presents the interval table; invalid numeric input refuses Apply and corrected keyboard submission succeeds",
+    "Recorded page requests remain local, real Python/WASM assets were served, and all33 source files remain byte-identical"
+  ],
+  "checkpoints": {
+    "approvedBeforeEdit": {
+      "world": {
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "altitude_ft": 10000,
+            "climb_ft_min": 0,
+            "vx_nm_min": 1,
+            "vy_nm_min": 0,
+            "x_nm": -5,
+            "y_nm": 0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "altitude_ft": 10000,
+            "climb_ft_min": 0,
+            "vx_nm_min": -1,
+            "vy_nm_min": 0,
+            "x_nm": 5,
+            "y_nm": 0
+          }
+        ],
+        "observed_at": 1000,
+        "version": 1
+      },
+      "draft": {
+        "flight-id": "DRAFT72",
+        "flight-x": "-3.5",
+        "flight-y": "7.5",
+        "flight-level": "130",
+        "flight-bearing": "15",
+        "flight-speed": "155",
+        "flight-climb": "250"
+      },
+      "mode": "BUILD A FLIGHT",
+      "preview": "",
+      "rows": [],
+      "feedback": "0° = north; 90° = east. Select a flight in the traffic register to edit it, or inject a new track.",
+      "proposal": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+      "proposalState": "PROPOSAL READY",
+      "gates": [
+        "gate-step done",
+        "gate-step done",
+        "gate-step wait"
+      ],
+      "disabled": {
+        "run-planner": true,
+        "approve": true,
+        "readback": false,
+        "toggle-run": true,
+        "reset-world": false,
+        "apply-track-edit": true,
+        "policy-horizontal": false,
+        "load-world": false
+      },
+      "audit": [],
+      "auditStatus": "0 EVENTS / VALID",
+      "python": "Live CPython · towerops.py · AdvisoryPlanner",
+      "idReadonly": false,
+      "active": "approve",
+      "bodyOverflow": false
+    },
+    "altitudePreview": {
+      "world": {
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "altitude_ft": 10000,
+            "climb_ft_min": 0,
+            "vx_nm_min": 1,
+            "vy_nm_min": 0,
+            "x_nm": -5,
+            "y_nm": 0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "altitude_ft": 10000,
+            "climb_ft_min": 0,
+            "vx_nm_min": -1,
+            "vy_nm_min": 0,
+            "x_nm": 5,
+            "y_nm": 0
+          }
+        ],
+        "observed_at": 1000,
+        "version": 1
+      },
+      "draft": {
+        "flight-id": "TWR419",
+        "flight-x": "5",
+        "flight-y": "0",
+        "flight-level": "110",
+        "flight-bearing": "270",
+        "flight-speed": "60",
+        "flight-climb": "0"
+      },
+      "mode": "EDIT TWR419",
+      "preview": "1 current → 0 edited conflict pairs inside 5.0 min.TWR419: east 5 NM, north 0 NM, 11000 FT; vector -1.000000 / 0.000000 NM/M, climb 0 FT/M.Projected conflict intervalsPairCurrent intervalEdited intervalTWR218 / TWR419T+2.50–5.00 minNoneApply changes this synthetic scenario. Run the planner afterward to evaluate its new world.",
+      "rows": [
+        [
+          "TWR218 / TWR419",
+          "T+2.50–5.00 min",
+          "None"
+        ]
+      ],
+      "feedback": "Preview ready for TWR419. Review the intervals, then Apply or Cancel.",
+      "proposal": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+      "proposalState": "PROPOSAL READY",
+      "gates": [
+        "gate-step done",
+        "gate-step done",
+        "gate-step wait"
+      ],
+      "disabled": {
+        "run-planner": true,
+        "approve": true,
+        "readback": true,
+        "toggle-run": true,
+        "reset-world": true,
+        "apply-track-edit": false,
+        "policy-horizontal": true,
+        "load-world": true
+      },
+      "audit": [],
+      "auditStatus": "0 EVENTS / VALID",
+      "python": "Live CPython · towerops.py · AdvisoryPlanner",
+      "idReadonly": true,
+      "active": "preview-track-edit",
+      "bodyOverflow": false
+    },
+    "firstActuation": {
+      "world": {
+        "version": 2,
+        "observed_at": 1002.5,
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "x_nm": -5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": 1,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "x_nm": 5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": -1,
+            "vy_nm_min": 2,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "draft": {
+        "flight-id": "DRAFT72",
+        "flight-x": "-3.5",
+        "flight-y": "7.5",
+        "flight-level": "130",
+        "flight-bearing": "15",
+        "flight-speed": "155",
+        "flight-climb": "250"
+      },
+      "mode": "BUILD A FLIGHT",
+      "preview": "",
+      "rows": [],
+      "feedback": "Edit to TWR419 canceled. World and proposal retained; traffic remains paused.",
+      "proposal": "Simulated setpoint applied. No projected conflict remains in the policy window.",
+      "proposalState": "IDLE",
+      "gates": [
+        "gate-step done",
+        "gate-step done",
+        "gate-step done"
+      ],
+      "disabled": {
+        "run-planner": true,
+        "approve": true,
+        "readback": true,
+        "toggle-run": false,
+        "reset-world": false,
+        "apply-track-edit": true,
+        "policy-horizontal": false,
+        "load-world": false
+      },
+      "audit": [
+        "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+        "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+        "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+        "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387"
+      ],
+      "auditStatus": "4 EVENTS / VALID",
+      "python": "Live CPython · ControlRoom.apply · audit verified",
+      "idReadonly": false,
+      "active": "",
+      "bodyOverflow": false
+    },
+    "reintroducedConflict": {
+      "world": {
+        "version": 3,
+        "observed_at": 1002.5,
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "x_nm": -5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": 1,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "x_nm": 5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": -1,
+            "vy_nm_min": -1.8369701987210297e-16,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "draft": {
+        "flight-id": "DRAFT72",
+        "flight-x": "-3.5",
+        "flight-y": "7.5",
+        "flight-level": "130",
+        "flight-bearing": "15",
+        "flight-speed": "155",
+        "flight-climb": "250"
+      },
+      "mode": "BUILD A FLIGHT",
+      "preview": "",
+      "rows": [],
+      "feedback": "TWR419 edited at world version 3. Existing decision trace retained; previous proposals cleared.",
+      "proposal": "Track edited. Run the planner on the changed world before approval and readback.",
+      "proposalState": "NEEDS REVIEW",
+      "gates": [
+        "gate-step wait",
+        "gate-step wait",
+        "gate-step wait"
+      ],
+      "disabled": {
+        "run-planner": false,
+        "approve": true,
+        "readback": true,
+        "toggle-run": false,
+        "reset-world": false,
+        "apply-track-edit": true,
+        "policy-horizontal": false,
+        "load-world": false
+      },
+      "audit": [
+        "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+        "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+        "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+        "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387"
+      ],
+      "auditStatus": "4 EVENTS / VALID",
+      "python": "Live CPython · ControlRoom.apply · audit verified",
+      "idReadonly": false,
+      "active": "edit-selected-track",
+      "bodyOverflow": false
+    },
+    "clearedApprovedProposal": {
+      "world": {
+        "version": 4,
+        "observed_at": 1002.5,
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "x_nm": -5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": 1,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "x_nm": 5.5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": -1,
+            "vy_nm_min": -1.8369701987210297e-16,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "draft": {
+        "flight-id": "DRAFT72",
+        "flight-x": "-3.5",
+        "flight-y": "7.5",
+        "flight-level": "130",
+        "flight-bearing": "15",
+        "flight-speed": "155",
+        "flight-climb": "250"
+      },
+      "mode": "BUILD A FLIGHT",
+      "preview": "",
+      "rows": [],
+      "feedback": "TWR419 edited at world version 4. Existing decision trace retained; previous proposals cleared.",
+      "proposal": "Track edited. Run the planner on the changed world before approval and readback.",
+      "proposalState": "NEEDS REVIEW",
+      "gates": [
+        "gate-step wait",
+        "gate-step wait",
+        "gate-step wait"
+      ],
+      "disabled": {
+        "run-planner": false,
+        "approve": true,
+        "readback": true,
+        "toggle-run": false,
+        "reset-world": false,
+        "apply-track-edit": true,
+        "policy-horizontal": false,
+        "load-world": false
+      },
+      "audit": [
+        "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+        "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+        "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+        "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387"
+      ],
+      "auditStatus": "4 EVENTS / VALID",
+      "python": "Live CPython · towerops.py · AdvisoryPlanner",
+      "idReadonly": false,
+      "active": "edit-selected-track",
+      "bodyOverflow": false
+    },
+    "finalActuation": {
+      "world": {
+        "version": 5,
+        "observed_at": 1003,
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "x_nm": -5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": 1,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "x_nm": 5.5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": -1,
+            "vy_nm_min": 2,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "draft": {
+        "flight-id": "DRAFT72",
+        "flight-x": "-3.5",
+        "flight-y": "7.5",
+        "flight-level": "130",
+        "flight-bearing": "15",
+        "flight-speed": "155",
+        "flight-climb": "250"
+      },
+      "mode": "BUILD A FLIGHT",
+      "preview": "",
+      "rows": [],
+      "feedback": "TWR419 edited at world version 4. Existing decision trace retained; previous proposals cleared.",
+      "proposal": "Simulated setpoint applied. No projected conflict remains in the policy window.",
+      "proposalState": "IDLE",
+      "gates": [
+        "gate-step done",
+        "gate-step done",
+        "gate-step done"
+      ],
+      "disabled": {
+        "run-planner": true,
+        "approve": true,
+        "readback": true,
+        "toggle-run": false,
+        "reset-world": false,
+        "apply-track-edit": true,
+        "policy-horizontal": false,
+        "load-world": false
+      },
+      "audit": [
+        "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+        "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+        "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+        "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387",
+        "04  screen_pass  {\"world_hash\":\"e62272ef12c9335e3b48c30166f9e694c8ac76c2e7d0d96cc70804d102367f30\",\"advisory_hashes\":[\"c766ea45b401f37c0b3  f2df5745040d",
+        "05  approval  {\"advisory_hash\":\"c766ea45b401f37c0b319b82fede07213e0fa5b38bd66dbf86629148fd13e353\",\"decision\":\"approve\",\"approved_at\":1  a3c7fd61fff8",
+        "06  ack  {\"advisory_hash\":\"c766ea45b401f37c0b319b82fede07213e0fa5b38bd66dbf86629148fd13e353\",\"status\":\"accepted\",\"acknowledged_at  950c66a7b6cf",
+        "07  simulated_actuation  {\"advisory_hash\":\"c766ea45b401f37c0b319b82fede07213e0fa5b38bd66dbf86629148fd13e353\",\"before_world_hash\":\"e62272ef12c9335  e69afec9f724"
+      ],
+      "auditStatus": "8 EVENTS / VALID",
+      "python": "Live CPython · ControlRoom.apply · audit verified",
+      "idReadonly": false,
+      "active": "verify-audit",
+      "bodyOverflow": false
+    },
+    "mobilePreview": {
+      "world": {
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "altitude_ft": 10000,
+            "climb_ft_min": 0,
+            "vx_nm_min": 1,
+            "vy_nm_min": 0,
+            "x_nm": -5,
+            "y_nm": 0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "altitude_ft": 10000,
+            "climb_ft_min": 0,
+            "vx_nm_min": -1,
+            "vy_nm_min": 0,
+            "x_nm": 5,
+            "y_nm": 0
+          }
+        ],
+        "observed_at": 1000,
+        "version": 1
+      },
+      "draft": {
+        "flight-id": "TWR419",
+        "flight-x": "5",
+        "flight-y": "0",
+        "flight-level": "110",
+        "flight-bearing": "270",
+        "flight-speed": "60",
+        "flight-climb": "0"
+      },
+      "mode": "EDIT TWR419",
+      "preview": "1 current → 0 edited conflict pairs inside 5.0 min.TWR419: east 5 NM, north 0 NM, 11000 FT; vector -1.000000 / 0.000000 NM/M, climb 0 FT/M.Projected conflict intervalsPairCurrent intervalEdited intervalTWR218 / TWR419T+2.50–5.00 minNoneApply changes this synthetic scenario. Run the planner afterward to evaluate its new world.",
+      "rows": [
+        [
+          "TWR218 / TWR419",
+          "T+2.50–5.00 min",
+          "None"
+        ]
+      ],
+      "feedback": "Preview ready for TWR419. Review the intervals, then Apply or Cancel.",
+      "proposal": "No proposal yet. The planner only returns a setpoint if it clears the separation policy.",
+      "proposalState": "NEEDS REVIEW",
+      "gates": [
+        "gate-step wait",
+        "gate-step wait",
+        "gate-step wait"
+      ],
+      "disabled": {
+        "run-planner": true,
+        "approve": true,
+        "readback": true,
+        "toggle-run": true,
+        "reset-world": true,
+        "apply-track-edit": false,
+        "policy-horizontal": true,
+        "load-world": true
+      },
+      "audit": [],
+      "auditStatus": "0 EVENTS / VALID",
+      "python": "Python loads when you run the planner.",
+      "idReadonly": true,
+      "active": "preview-track-edit",
+      "bodyOverflow": false
+    }
+  },
+  "sourceSha256": {
+    "web/airspace/prepare-python.mjs": "1949ceaca9b4171c62c52dfa9797e3b3b698c751bffcb5eb1beed75266cb506c",
+    "web/airspace/src/python-worker.ts": "24f7c0fc48a5ff8c75ef236bff1b50f0353950938303f6c7a21ad5235573ac7f",
+    "web/airspace/src/python.ts": "29d3f95865af46d8f2f1d74eedaaddfbb01f1dd90e1cc413573084b4da0912cc",
+    "web/airspace/tsconfig.json": "994b5ffe77837a183106072a881d44d74a1b6a5d6e6e964ae5364971573c7e6a",
+    "web/airspace/vite.config.ts": "36c16c15fb1ea9d20fafaf0962addb32ceb20e4b87868ac0656d1d9c4c4f7aa6",
+    "web/airspace/.npmrc": "cc37e56acfb8e6a45d1fc786e6f4fa16a62a570ac7d85fb3ad84227e21694bcf",
+    "tools/generate_airspace_reference.py": "c2ec9aabed66ccdf8251e0f0a92209d953a905d2aab07e38776b7e5d87e2ff6f",
+    "tools/capture_airspace.py": "a0d3316d75f89a35586ba7e20707de86e25344c3a0913c7249ebfee124fe1d75",
+    ".github/workflows/airspace-demo.yml": "1181f7cebbc182ac4689f962f8c5851275adda2cd65f6b01cbd2053789cf6813",
+    "towerops.py": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e",
+    "README.md": "1764ed3034c409a855397ed0984b9afeb07f7e5083504ef3af9a981fdf5923c6",
+    "web/airspace/.gitignore": "3c3d8ee71c7cb202a6b724b6c42b8e104651dfa767292c29592ae5e4679befbe",
+    "web/airspace/package-lock.json": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+    "web/airspace/src/actuation.ts": "a6a3186003cbd7fdcba6e7bc0847c9abfa4ba5174d3c98ce2da651941360dcfb",
+    "web/airspace/src/audit.ts": "a3ec4bb0c29fcfa52475ab50772b44fc17746722ad9c7ac9d94ea2908705d787",
+    "web/airspace/src/draw.ts": "75ed074644787c22d5c067e96b4dab852401a367b3d2ad5211f30913238319dc",
+    "web/airspace/src/gate.ts": "3f135cabba46d9b6316475424841e543b5f7488a70d85cba25be5cd8cf5e8c8a",
+    "web/airspace/src/maneuvers.ts": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d",
+    "web/airspace/src/planner.ts": "04e38fc3b87fae9d4531e6867ad2bf81dfdf48fb86053aab7d4f83266b21652f",
+    "web/airspace/tests/algorithm.test.ts": "117539be86d2fc5f26adef7151c8a55c85096d65e80ebc6e7d263aae89a3b178",
+    "web/airspace/tests/python-reference.json": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+    "web/airspace/public/favicon.svg": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+    "tools/verify_browser_python.py": "de75b20face400ab0390c0dd2171cf3b7652e0b4e36e92ab8c64554d6411f591",
+    "web/airspace/src/main.ts": "e712557df83d2159d8c496393e982de28dc7258be1beeefb7d3d4da0664b8d9f",
+    "web/airspace/src/world-tools.ts": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+    "web/airspace/README.md": "ad1502b77c1854b182d1b676eba510ca81155a8cdc8276d746142a700f19ea17",
+    "web/airspace/index.html": "aada9ddb9f7ca77b954026402000e33ec3209e9de953d2173db1e27efa1e3d0b",
+    "web/airspace/tests/world-tools.test.ts": "7c4f1889d0d4fd3104def954234fc0269820396ebb85f4495ee0b388969a7095",
+    "web/airspace/src/core.ts": "99855c0bea2f6c04df3fc972aeb885df09015d0d071b4ab3bdeaeefedaf1d147",
+    "web/airspace/package.json": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd",
+    "web/airspace/style.css": "01f123c9e760b6f3735ac3ee0b2466b3f5effad55717ef4528316503a90bbd20",
+    "web/airspace/src/track-edit.ts": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046",
+    "web/airspace/tests/track-edit.test.ts": "58adb9d2d42ae7284e8d3c3a949157ff80b46a1d63d9a2859b28d418497a647e"
+  },
+  "served": [
+    {
+      "path": "/index.html",
+      "bytes": 10070,
+      "sha256": "4802752378cdd5b0ee903f16641f45f2c2d2baea4cd48bb4fe6e8f96f7811d2e"
+    },
+    {
+      "path": "/index.html",
+      "bytes": 10070,
+      "sha256": "4802752378cdd5b0ee903f16641f45f2c2d2baea4cd48bb4fe6e8f96f7811d2e"
+    },
+    {
+      "path": "/assets/index-DQHL8flo.js",
+      "bytes": 36240,
+      "sha256": "4faba04b36916cdd2ce2e25c03ee13bb2fcb81c40c64ea64676166f3b3528f82"
+    },
+    {
+      "path": "/assets/index-DNkt_xJY.css",
+      "bytes": 13947,
+      "sha256": "3bbea4e27973bc9b03ed7d90cedd69760f22f23b14b24045e7c9f63d7c529a62"
+    },
+    {
+      "path": "/favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "path": "/assets/python-worker-Dt6KeInE.js",
+      "bytes": 2215,
+      "sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc"
+    },
+    {
+      "path": "/python/pyodide.mjs",
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "/python/pyodide-lock.json",
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "/python/python_stdlib.zip",
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "/python/pyodide.asm.js",
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "/python/pyodide.asm.wasm",
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "/python/towerops.py",
+      "bytes": 19073,
+      "sha256": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e"
+    },
+    {
+      "path": "/index.html",
+      "bytes": 10070,
+      "sha256": "4802752378cdd5b0ee903f16641f45f2c2d2baea4cd48bb4fe6e8f96f7811d2e"
+    },
+    {
+      "path": "/assets/index-DNkt_xJY.css",
+      "bytes": 13947,
+      "sha256": "3bbea4e27973bc9b03ed7d90cedd69760f22f23b14b24045e7c9f63d7c529a62"
+    },
+    {
+      "path": "/assets/index-DQHL8flo.js",
+      "bytes": 36240,
+      "sha256": "4faba04b36916cdd2ce2e25c03ee13bb2fcb81c40c64ea64676166f3b3528f82"
+    },
+    {
+      "path": "/favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    }
+  ],
+  "requests": [
+    "http://127.0.0.1:58703/",
+    "http://127.0.0.1:58703/assets/index-DQHL8flo.js",
+    "http://127.0.0.1:58703/assets/index-DNkt_xJY.css",
+    "http://127.0.0.1:58703/favicon.svg",
+    "http://127.0.0.1:58703/assets/python-worker-Dt6KeInE.js",
+    "http://127.0.0.1:58703/",
+    "http://127.0.0.1:58703/assets/index-DQHL8flo.js",
+    "http://127.0.0.1:58703/assets/index-DNkt_xJY.css",
+    "http://127.0.0.1:58703/favicon.svg"
+  ],
+  "exceptions": [],
+  "viewports": [
+    [
+      1280,
+      1000
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "actualBrowser": true,
+  "actualPythonWorker": true,
+  "serving": "isolated loopback static server",
+  "operationalAviationOrDeploymentClaimed": false
+}

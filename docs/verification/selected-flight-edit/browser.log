@@ -1,0 +1,24 @@
+LOOPBACK_SELF_PROBE_PASS http://127.0.0.1:60161/
+CHECK_PASS Actual local CPython planner creates an approvable world-bound proposal
+CHECK_PASS Native Tab/ArrowUp/Enter previews analytic conflict removal; Cancel preserves exact world, draft and approval
+CHECK_PASS The proposal retained by Cancel actually passes Python readback and appends four valid audit events
+CHECK_PASS Apply advances one version, preserves the other track and audit, and rejects a preview after a native field change
+CHECK_PASS Applying an edit while an approved proposal exists clears all previous proposal/approval gates without erasing history
+CHECK_PASS Replanning the edited world runs actual Python actuation and retains the previous four-event audit prefix in an eight-event valid chain
+CHECK_PASS 390px browser layout presents the interval table; invalid numeric input refuses Apply and corrected keyboard submission succeeds
+CHECK_PASS Recorded page requests remain local, real Python/WASM assets were served, and all33 source files remain byte-identical
+{
+  "status": "pass",
+  "checks": [
+    "Actual local CPython planner creates an approvable world-bound proposal",
+    "Native Tab/ArrowUp/Enter previews analytic conflict removal; Cancel preserves exact world, draft and approval",
+    "The proposal retained by Cancel actually passes Python readback and appends four valid audit events",
+    "Apply advances one version, preserves the other track and audit, and rejects a preview after a native field change",
+    "Applying an edit while an approved proposal exists clears all previous proposal/approval gates without erasing history",
+    "Replanning the edited world runs actual Python actuation and retains the previous four-event audit prefix in an eight-event valid chain",
+    "390px browser layout presents the interval table; invalid numeric input refuses Apply and corrected keyboard submission succeeds",
+    "Recorded page requests remain local, real Python/WASM assets were served, and all33 source files remain byte-identical"
+  ],
+  "browser": "Google Chrome 154.0.8037.98",
+  "error": null
+}
