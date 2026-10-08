@@ -1,0 +1,506 @@
+{
+  "schema": "towerops-radar-author-qualification/1",
+  "status": "Frozen native candidate qualified; integration, independent receiving and public deployment remain separate gates",
+  "source_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "source_tree": "4a87643d57cabf81e570b21c119f00b43f79448e",
+  "claim": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6061148593",
+  "source_changes": [
+    {
+      "path": "web/airspace/src/radar-geometry.ts",
+      "bytes": 4189,
+      "sha256": "4df8158d1ca92115ef9be8067fecb377a1e2ccf72b5cd0f3fa27691284e77349",
+      "git_blob": "a14ac4a661b195d0b6136e209f9108a460ff1cfb"
+    },
+    {
+      "path": "web/airspace/src/draw.ts",
+      "bytes": 5705,
+      "sha256": "ae91897f2d4db234451c1fd8b81c9ddc5260e9b76b62c5ac21153d3c7ec2166d",
+      "git_blob": "c3476aa53858de880c13f9a527aa5a446ca717da"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "bytes": 26206,
+      "sha256": "75d93d07777251492e4bd219527f5b5342393df0598585573fa8fae0204875f4",
+      "git_blob": "bf685d4bd355a46fb46199e27d4c67f212e18085"
+    },
+    {
+      "path": "web/airspace/tests/radar-geometry.test.ts",
+      "bytes": 6858,
+      "sha256": "f7285383bd4f8039328adc23f41f21225d84d7b78642e0b91172d7049b27ace2",
+      "git_blob": "1d223a59e1ea94503906303140aee89952501164"
+    },
+    {
+      "path": "web/airspace/README.md",
+      "bytes": 10600,
+      "sha256": "7e7d509289e988611415d963eab10e5f3267561b2c2369595c4c98fc2cd7c434",
+      "git_blob": "82b277e757aec4d8ef4057409c829f9629a08e16"
+    }
+  ],
+  "source_fence": {
+    "canonical_runtime_source_files": 46,
+    "candidate_source_test_files": 48,
+    "existing_unchanged_files": 43,
+    "main_exact_literal_edits": [
+      {
+        "name": "import",
+        "literal": "import { drawAirspace,viewRange } from './draw';",
+        "canonical_occurrences": 1,
+        "scenario_occurrences": 1,
+        "replacement": "import { drawAirspace,radarRangeLabel } from './draw';"
+      },
+      {
+        "name": "range",
+        "literal": "setText('range-label',`RANGE +/- ${viewRange(state,policy)} NM`);",
+        "canonical_occurrences": 1,
+        "scenario_occurrences": 1,
+        "replacement": "setText('range-label',radarRangeLabel(state,policy));"
+      }
+    ],
+    "aircraft_drawing_function_unchanged": true,
+    "conflict_marker_calculation_unchanged": true,
+    "owner_context": {
+      "repository_full_name": "Jacob-Met/TowerOps",
+      "canonical_main": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+      "scenario_pr": 47,
+      "scenario_head": "e8f8fe37e31067c8dbd789577544525afca5e009",
+      "scenario_base": "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+      "scenario_main_blob": "8b36b59b4eff0fe31ae4f68b7a7c9736acf0f85a",
+      "spans": [
+        {
+          "name": "import",
+          "literal": "import { drawAirspace,viewRange } from './draw';",
+          "canonical_occurrences": 1,
+          "scenario_occurrences": 1
+        },
+        {
+          "name": "range",
+          "literal": "setText('range-label',`RANGE +/- ${viewRange(state,policy)} NM`);",
+          "canonical_occurrences": 1,
+          "scenario_occurrences": 1
+        }
+      ],
+      "boundary": "Read-only check of the existing scenario owner candidate; no scenario files or handlers taken over.",
+      "checked_at": "2026-10-08T14:29:26.410Z"
+    }
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v26.3.0",
+    "browser": "Chrome/154.0.8037.98",
+    "dependencies": {
+      "typescript": {
+        "version": "5.7.3",
+        "package_sha256": "1e03325943793f3bf11667b94fca412fe5ba617c85b84c16f0474933da156baa"
+      },
+      "vite": {
+        "version": "8.3.3",
+        "package_sha256": "334c8847b7f71cebb8a9c7e0fa56163941305ef13a970a15d4a43c7cdfef915b"
+      },
+      "vitest": {
+        "version": "4.1.11",
+        "package_sha256": "a28126d97bcaf567da5bed69443b7f3bcd9a7a8c38c8b66e554686b6bb2c10e0"
+      },
+      "pyodide": {
+        "version": "0.27.7",
+        "package_sha256": "bf221f60c881626236d3501375a97753672a7fa6fed70e469e083f157c8a30d4"
+      }
+    }
+  },
+  "baseline": {
+    "started_at": "2026-10-08T13:50:36.433Z",
+    "finished_at": "2026-10-08T13:50:38.718Z",
+    "boundary": "Actual native Chrome Canvas execution of unchanged Git-pinned renderer/core/parser, transpiled read-only by TypeScript; isolated renderer page, not full application or public deployment.",
+    "canvas": {
+      "width": 800,
+      "height": 600,
+      "rect": {
+        "width": 800,
+        "height": 600
+      }
+    },
+    "defects": {
+      "translation": {
+        "near_glyph_separation_px": 74.13333333333333,
+        "translated_glyph_separation_px": 1.1064676616915676,
+        "unchanged_world_relative_separation_nm": 4
+      },
+      "north_tick": {
+        "expected_world_north_10_label": "10",
+        "observed_labels": [
+          {
+            "method": "fillText",
+            "args": [
+              "-15",
+              133,
+              308
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "15",
+              413,
+              571
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "-10",
+              225.66666666666666,
+              308
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "10",
+              413,
+              478.33333333333337
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "-5",
+              318.3333333333333,
+              308
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "5",
+              413,
+              385.6666666666667
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "5",
+              503.6666666666667,
+              308
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "-5",
+              413,
+              200.33333333333331
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "10",
+              596.3333333333334,
+              308
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "-10",
+              413,
+              107.66666666666666
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "15",
+              689,
+              308
+            ]
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "-15",
+              413,
+              15
+            ]
+          }
+        ]
+      }
+    },
+    "confirmed": true
+  },
+  "qualification": {
+    "started_at": "2026-10-08T14:14:37.356Z",
+    "finished_at": "2026-10-08T14:14:40.236Z",
+    "typecheck_exit": 0,
+    "tests": {
+      "total": 144,
+      "passed": 144,
+      "failed": 0
+    },
+    "bundle_outputs": [
+      {
+        "path": "assets/index-CKSWCXtL.js",
+        "bytes": 57393,
+        "sha256": "73e4e5f5c14685115f9ddf759d6e6a2a31c57fe7d8b3c7e09cf4708421ad94ac"
+      },
+      {
+        "path": "assets/index-BHHse_Io.css",
+        "bytes": 20856,
+        "sha256": "15c8901b2335cfbe0fa49187ebaa7a30cfbe959bfa5be22fa2727d2e840af009"
+      },
+      {
+        "path": "assets/python-worker-D9QUacUJ.js",
+        "bytes": 4419,
+        "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804"
+      },
+      {
+        "path": "index.html",
+        "bytes": 15485,
+        "sha256": "de8aa777752d025d1259d4c3ea24cd2b9a09968fc8488bdde85eb0fc50e5c63e"
+      }
+    ],
+    "source_unchanged": true
+  },
+  "full_app": {
+    "started_at": "2026-10-08T14:19:54.661Z",
+    "finished_at": "2026-10-08T14:19:59.136Z",
+    "boundary": "Actual unchanged application handlers plus frozen radar candidate in native Mac Chrome; existing pinned Vite source server and exact installed Pyodide/source bytes. Loopback receiving, not public deployment or physical-phone acceptance.",
+    "checks": [
+      {
+        "name": "initial canonical crossing and automatic range are rendered",
+        "passed": true
+      },
+      {
+        "name": "actual WorldState import retains exact near coordinates",
+        "passed": true
+      },
+      {
+        "name": "actual WorldState import retains exact translated coordinates",
+        "passed": true
+      },
+      {
+        "name": "translated four-NM separation keeps native screen scale",
+        "passed": true,
+        "details": {
+          "near_px": 60.799999999999955,
+          "translated_px": 60.799999999999955
+        }
+      },
+      {
+        "name": "native north ticks show positive absolute world coordinates increasing upward",
+        "passed": true,
+        "details": [
+          {
+            "method": "fillText",
+            "args": [
+              "985",
+              57,
+              483,
+              54
+            ],
+            "fillStyle": "#91aaa5",
+            "strokeStyle": "#294148",
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "990",
+              57,
+              407,
+              54
+            ],
+            "fillStyle": "#91aaa5",
+            "strokeStyle": "#294148",
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "995",
+              57,
+              331,
+              54
+            ],
+            "fillStyle": "#91aaa5",
+            "strokeStyle": "#294148",
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "1000",
+              57,
+              255,
+              54
+            ],
+            "fillStyle": "#91aaa5",
+            "strokeStyle": "#294148",
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "1005",
+              57,
+              179,
+              54
+            ],
+            "fillStyle": "#91aaa5",
+            "strokeStyle": "#294148",
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "1010",
+              57,
+              103,
+              54
+            ],
+            "fillStyle": "#91aaa5",
+            "strokeStyle": "#294148",
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "1015",
+              57,
+              27,
+              54
+            ],
+            "fillStyle": "#91aaa5",
+            "strokeStyle": "#294148",
+            "textAlign": "right"
+          }
+        ]
+      },
+      {
+        "name": "offset view does not relocate world-origin reference rings",
+        "passed": true
+      },
+      {
+        "name": "real pointer selection follows the selected flight without modifying world or audit",
+        "passed": true
+      },
+      {
+        "name": "raw JSON draft survives blur and selection-triggered rendering",
+        "passed": true
+      },
+      {
+        "name": "390px desktop emulation retains the draft and draws finite separated traffic",
+        "passed": true,
+        "details": {
+          "separation_px": 30.133333333333326,
+          "canvas": {
+            "width": 318,
+            "height": 320,
+            "cssWidth": 318,
+            "cssHeight": 320
+          },
+          "document_width": 390,
+          "viewport": 390
+        }
+      },
+      {
+        "name": "explicit export still restores the unchanged live world",
+        "passed": true
+      },
+      {
+        "name": "reset retains the canonical crossing and selected TWR419",
+        "passed": true
+      },
+      {
+        "name": "real CPython planner proposes without changing world coordinates",
+        "passed": true
+      },
+      {
+        "name": "approval changes its gate without changing the world",
+        "passed": true
+      },
+      {
+        "name": "native readback still applies one world revision and a valid four-event audit",
+        "passed": true,
+        "details": "4 EVENTS / VALID"
+      },
+      {
+        "name": "finite admitted projection overflow is visibly unavailable without inventing coordinates",
+        "passed": true
+      },
+      {
+        "name": "nonfinite import remains rejected by the existing parser",
+        "passed": true
+      },
+      {
+        "name": "rejected import retains the last admitted world",
+        "passed": true
+      },
+      {
+        "name": "no page script errors",
+        "passed": true,
+        "details": []
+      },
+      {
+        "name": "all frozen product and test source remains unchanged",
+        "passed": true
+      }
+    ],
+    "python_resources": {
+      "pyodide.mjs": {
+        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide.mjs",
+        "bytes": 13931,
+        "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+      },
+      "python_stdlib.zip": {
+        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/python_stdlib.zip",
+        "bytes": 2360737,
+        "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+      },
+      "pyodide.asm.wasm": {
+        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide.asm.wasm",
+        "bytes": 10105545,
+        "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+      },
+      "pyodide-lock.json": {
+        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide-lock.json",
+        "bytes": 112205,
+        "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+      },
+      "pyodide.asm.js": {
+        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide.asm.js",
+        "bytes": 1255688,
+        "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+      },
+      "towerops.py": {
+        "source": "/Users/me/workspace/towerops-radar-52e56ea8fcca/candidate-v1/source/towerops.py",
+        "bytes": 19462,
+        "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+      }
+    },
+    "page_errors": [],
+    "request_failures": [],
+    "source_unchanged": true
+  },
+  "limits": [
+    "First full-app driver stopped after one check due to unsupported Puppeteer keyboard.insertText; original driver/negative receipt retained, supported keyboard.type driver passed on identical product bytes.",
+    "Adjacent altitude/speed labels retain original placement and may crowd.",
+    "390px viewport is desktop Chrome emulation; no physical phone, Safari, touch, human acceptance or public deployment claim.",
+    "Initial renderer baseline and full-app measurements use different canvas sizes; exact sizes retained.",
+    "In-memory Vite production build is distinct from the hosted npm build/Pages deployment gate."
+  ],
+  "native_packet": {
+    "path": "native-receiving.json.gz",
+    "bytes": 342417,
+    "sha256": "1540c789c3a071d42409e36cd98df4b849a9aa47f7382914e2cd4a7f45a437c9",
+    "git_blob": "5af0cc6c24991748ea76ffaa07bb9d3e72c94a0b",
+    "members": 30
+  },
+  "receiving_route": {
+    "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+    "workflow": ".github/workflows/airspace-demo.yml",
+    "workflow_blob": "24356d4f5ce88f21cc1a27329b06df351e156810",
+    "mode": "Existing Pages deploy on main push after normal Airspace gates"
+  }
+}

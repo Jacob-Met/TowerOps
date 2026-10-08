@@ -1,0 +1,26 @@
+{
+  "before_driver_sha256": "6d55047158fbcfc6c19e7198422cc025e98f884fd78e151e8e9fa964bb0853a6",
+  "finding_resolved": true,
+  "receiving_limits": [
+    "Separate native build evidence must establish correspondence between the recorded source and built artifacts; the browser driver itself checks artifact identity and immutability.",
+    "The browser driver deliberately does not invoke planner, approval/readback or Pyodide.",
+    "Actual Mac build, Vitest and Chrome result qualification remains pending at this source-review stage."
+  ],
+  "repair": [
+    "Reset run label, slider, rate readout and visible clock have distinct checks.",
+    "Expected baseline additionally requires exact prior-rate readout and complete native progression at that prior rate, including world version, identity and unchanged velocities.",
+    "Expected reset failure names are an exact set of default-rate readout/clock and only the nonzero-velocity axes; no prefix allowlist remains.",
+    "Expected automatic-pause baseline additionally requires the exact stale Pause traffic label and only its one known action-label failure.",
+    "All remaining failed checks reject expected-baseline admission."
+  ],
+  "repaired_driver_sha256": "32ceece05135ae23dbf6442b2c3755da0a1602e85d7408328b9118b23d43ce93",
+  "review_kind": "Read-only source and exact delta review before native execution. No browser, product, or new test execution by the reviewer.",
+  "schema": "independent-browser-driver-static-review.v1",
+  "unchanged_reviewed_boundaries": [
+    "Real Chrome Input.dispatchMouseEvent/Input.dispatchKeyEvent are observed with event.isTrusted and required native controls must receive events.",
+    "Actual WorldState is obtained through the native Export live world event, alongside actual DOM labels and native canvas pixels.",
+    "Only requestAnimationFrame scheduling is controlled; native handlers, physics, drawing and served built files remain unchanged by the driver.",
+    "Source-manifest fingerprints and served build-file fingerprints are checked before and after execution.",
+    "Desktop/mobile claims are viewport/layout and screenshot evidence in Chrome, not a physical mobile-device or touch-interaction qualification."
+  ]
+}

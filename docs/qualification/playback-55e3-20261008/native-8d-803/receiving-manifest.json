@@ -1,0 +1,84 @@
+{
+  "boundary": "Baseline53 and candidate54 native134/build completed; first ENOSPC attempt preserved. Browser launcher transfer timed out and entrypoint/aggregate readback were absent; no browser qualification for this8d cut.",
+  "files": [
+    {
+      "bytes": 824,
+      "git_blob": "c5607099d1b62370909e6e6e247c9c9fdeb25aea",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/evidence/baseline-build.log",
+      "path": "evidence/baseline-build.log",
+      "sha256": "7d6193a9fc204979ea8593ba9b430d0a0a099e4513fbcd52219f14daa253b2a4",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/evidence/baseline-build.log"
+    },
+    {
+      "bytes": 508,
+      "git_blob": "e0faab9aa2c1acb8fb116448bedb5c2a35843db6",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/evidence/native-attempt-2/baseline-build.log",
+      "path": "evidence/native-attempt-2/baseline-build.log",
+      "sha256": "4332d60595f5046a1f268d8aea8e5a1660650ea1981d9f980ebe5a9d8f871d94",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/evidence/native-attempt-2/baseline-build.log"
+    },
+    {
+      "bytes": 508,
+      "git_blob": "c6990ceddc3658ab8b2223c7a24a60565f67ec4c",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/evidence/native-attempt-2/candidate-build.log",
+      "path": "evidence/native-attempt-2/candidate-build.log",
+      "sha256": "5d14511178d076defbe5c00d1834738bb652ba104f1d0839dda705168a29b50c",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/evidence/native-attempt-2/candidate-build.log"
+    },
+    {
+      "bytes": 1785,
+      "git_blob": "1eed623cef1e920957844f13695d2785811e43f8",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/evidence/native-attempt-2/candidate-vitest-full.log",
+      "path": "evidence/native-attempt-2/candidate-vitest-full.log",
+      "sha256": "87d2a42cfadf8176cad5498e0d8bac679a3bf6a8140fc2c51f837af764aac66d",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/evidence/native-attempt-2/candidate-vitest-full.log"
+    },
+    {
+      "bytes": 56954,
+      "git_blob": "c4f87cb288bea327611f357128989a98c5080000",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/evidence/native-attempt-2/native-stage-build.json",
+      "path": "evidence/native-attempt-2/native-stage-build.json",
+      "sha256": "96107e05496a62c897b1c46dba5d3a560cd774eeda67b2e85d9ac0554b1076ce",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/evidence/native-attempt-2/native-stage-build.json"
+    },
+    {
+      "bytes": 25776,
+      "git_blob": "e4117531503de8d0e7d17ab6946c670c1946d408",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/evidence/native-stage-build.json",
+      "path": "evidence/native-stage-build.json",
+      "sha256": "185358380084d0e3c69223658e466fc64ab6195024c7c0b075cd73b8c92216a6",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/evidence/native-stage-build.json"
+    },
+    {
+      "bytes": 29771,
+      "git_blob": "581fb24c18be6d9d3eb2d94db3871002a90cc4a5",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/source-manifest.json",
+      "path": "source-manifest.json",
+      "sha256": "b2beaec2b16661d845328b7c703003f5ad10536587b850c97fec997bf60914ae",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/source-manifest.json"
+    },
+    {
+      "bytes": 28332,
+      "git_blob": "07b91557538345f24394ec5e32121557bf21b3fb",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/candidate-source-manifest.json",
+      "path": "candidate-source-manifest.json",
+      "sha256": "b19979d5ff60d0baf2b19d3bb2ec7a5f0314e1f0f8707d3d8cac79f04428a058",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/candidate-source-manifest.json"
+    },
+    {
+      "bytes": 25299,
+      "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/receiving-browser.mjs",
+      "path": "receiving-browser.mjs",
+      "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/receiving-browser.mjs"
+    }
+  ],
+  "root": "/tmp/towerops-playback-55e3-ypg8xw8q/current-8d",
+  "schema": "towerops.current8d-native-receiving-text.v1",
+  "archive": {
+    "path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current8d-native/receiving-text.json.gz",
+    "bytes": 59305,
+    "sha256": "b976d13ac123e972ca31ef49f12e899c6c8f88097e85b0d4419914c2aeb0c540"
+  }
+}

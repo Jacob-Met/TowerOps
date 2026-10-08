@@ -1,0 +1,40 @@
+{
+  "schema": "towerops.independent-c4-native-visual-review.v1",
+  "at_utc": "2026-10-08T13:31:55.417550+00:00",
+  "source_main_sha256": "c4eefbe7b3fa6b259933e893ca625b279fb079905632ec31597295f61b5ee91e",
+  "native_receiving_receipt_sha256": "28f2695db9703c7ce1f74e2d5e2b57b2c08b4bbc7c1e3eb37cac09efb64a6c7b",
+  "provider_image_manifest_sha256": "9dbc51837cee37e145bb2617590a734fc7a47272d4755558441cf156775ba02c",
+  "images": [
+    {
+      "bytes": 432107,
+      "git_blob": "180ae7a35e9e3d338d9aae08ed874e611a5d32ad",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/baseline-desktop.png",
+      "path": "evidence/joint-v1/baseline-desktop.png",
+      "sha256": "3fe0f86abfe06652286c7ff0ed38014e66fe75114c3b9b4a6cadfd5ee5fc9adc",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/baseline-desktop.png"
+    },
+    {
+      "bytes": 431987,
+      "git_blob": "aa475cce6e49d2a70d634881eba4fb1f6d9de2a7",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-desktop.png",
+      "path": "evidence/joint-v1/candidate-desktop.png",
+      "sha256": "67595dde5b63b59c884f028568db2a4ccc3b56776af572002a29f6ccfd60f2e4",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-desktop.png"
+    },
+    {
+      "bytes": 257630,
+      "git_blob": "5bcc55a716fd4cf46ae3da0245b6319fab6176b8",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-mobile.png",
+      "path": "evidence/joint-v1/candidate-mobile.png",
+      "sha256": "c6445cae285f9f8f92ea7f68b38db6049da07ed38e4e77aeee0e5fc8b0fcac29",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-mobile.png"
+    }
+  ],
+  "observed": {
+    "baseline_desktop": "Native paused Reset screenshot retains 3.0x and policy readouts 6.0 NM / 1,500 FT / 6.0 MIN despite default range positions; it agrees with the admitted known baseline mismatches.",
+    "candidate_desktop": "Native Reset shows Run traffic, 1.0x, 5.0 NM, 1,000 FT and 5.0 MIN with visible ranges and no scoped control clipping.",
+    "candidate_mobile": "At the 390 px emulated viewport, the same controls and default labels remain legible and contained in the native layout; no scoped control overflow or overlay obscuration is visible."
+  },
+  "accepted": true,
+  "boundary": "Actual original native PNG bytes visually inspected, not recreated or edited. Completes only the C4/fbe source cut; later8d draft-preservation composition remains separate. These screenshots show the Reset3x step; they do not depict every behavioral assertion or a physical mobile device."
+}

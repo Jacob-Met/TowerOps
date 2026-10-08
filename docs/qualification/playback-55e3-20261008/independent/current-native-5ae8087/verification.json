@@ -1,0 +1,19 @@
+{
+  "all_prior_39_payloads_unchanged": true,
+  "candidate_main_sha256": "c5867cb7c293eb3f5f104b5f3a0e5d2c94a5b8bb42be833bd2f7df42085ac312",
+  "commit": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+  "current_audit_git_blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b",
+  "current_audit_sha256": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075",
+  "driver_sha256": "7803c72ba02684290b8bd93fb2ee7c2052a1201b222d8a28d59c11c47f3c501b",
+  "failed": 0,
+  "old_audit_sha256": "a3ec4bb0c29fcfa52475ab50772b44fc17746722ad9c7ac9d94ea2908705d787",
+  "passed": 10,
+  "prior_publication_manifest_sha256": "9b6bb8a527bfebb7447fac7a621b73a88b19206a5e7d31445b769a4929c8b4fa",
+  "raw_log_sha256": "87cea15156de2e3dc8e3ed47473101c4ab4b4036bb384ba8510230817a13c19b",
+  "report_sha256": "c71cec37cc0f470eddb60b84e2cc55b4bfe0dffecee9787e19458e91e9ec9364",
+  "schema": "independent-towerops-playback-current-native-compatibility.v1",
+  "scope": "Existing private main overlay with current native audit; exact-module Node receiving over explicit DOM/draw/Python boundaries. Actual current audit empty-log rendering is exercised. No received-Python-audit preimage, native Vitest, browser, build or deployment claim.",
+  "source_manifest_sha256": "0cd23671e9c53aba5b6ca4ea3802fe175ad9818a5c93175087e7b7a38f153df7",
+  "source_pins_unchanged": true,
+  "tree": "356e66716c8953a3c2aac8a23790ce6eeaba20d0"
+}

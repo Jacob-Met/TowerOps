@@ -1,0 +1,57 @@
+{
+  "schema": "towerops.world-draft-qualified-composition.v1",
+  "inputs": {
+    "common": {
+      "path": "/dev/shm/estate-55e3e26c5905/towerops-native-9a2468f/repo/web/airspace/src/main.ts",
+      "sha256": "347cca82b84ea49c55efd468db995820d55d32249543aa69cc744797c4f3fc80"
+    },
+    "qualifiedC4": {
+      "path": "/dev/shm/estate-55e3e26c5905/towerops-reset-composition/candidate/web/airspace/src/main.ts",
+      "sha256": "c4eefbe7b3fa6b259933e893ca625b279fb079905632ec31597295f61b5ee91e"
+    },
+    "current8d": {
+      "path": "/dev/shm/estate-55e3e26c5905/towerops-native-8d4933f/repo/web/airspace/src/main.ts",
+      "sha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa"
+    }
+  },
+  "candidate": {
+    "path": "/dev/shm/estate-55e3e26c5905/towerops-native-8d4933f/candidate/web/airspace/src/main.ts",
+    "sha256": "80333c3dc3f533fdc0b9cfc3f807ce0475a5656c2a294f3b8838028d3bf92b86",
+    "bytes": 23509
+  },
+  "bd1_five_edits": [
+    "draft flag",
+    "render guard",
+    "explicit Export clears draft flag",
+    "successful Load clears draft flag after parsing",
+    "native draft input binding"
+  ],
+  "qualified_edits": [
+    "pause helper",
+    "addTraffic existing pause point",
+    "addCustomFlight existing pause point",
+    "removeSelected existing pause point",
+    "updatePolicy existing pause point",
+    "perturbTrack existing pause point",
+    "Load existing pause point",
+    "planner existing pause point",
+    "exact qualified existing-owner Reset body"
+  ],
+  "proofs": {
+    "common_plus_five_bd1_edits_equals_current8d": true,
+    "common_plus_qualified_edits_equals_C4": true,
+    "current8d_plus_qualified_edits_equals_C4_plus_bd1_edits": true,
+    "inverse_bd1_recovers_every_C4_byte": true,
+    "inverse_qualified_recovers_every_current8d_byte": true,
+    "qualified_reset_body_is_byte_identical": true,
+    "successful_load_order_is_parse_then_clear_draft_flag_then_pause_then_assign": true
+  },
+  "preserved": [
+    "All five merged bd1 draft edits",
+    "C4 pause label and encounter updates",
+    "Existing-owner Reset policy/rate/control synchronization",
+    "Selected-track editor and decision trace",
+    "Current WorldState draft behavior through Reset; no new flag clearing was added"
+  ],
+  "qualification": "Source-only composition and inverse proof. Earlier C4 native tests/build/browser receipts remain tied to C4. New native receiving is pending."
+}

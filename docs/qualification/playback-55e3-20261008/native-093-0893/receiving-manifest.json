@@ -1,0 +1,179 @@
+{
+  "boundary": "Exact current093 baseline59/candidate60. Full147 Vitest/build and unchanged f116 native Chrome playback/Export baseline+desktop/mobile receiving. No Python/planner/alternatives-choice/draft-persistence browser claim.",
+  "files": [
+    {
+      "bytes": 508,
+      "git_blob": "b8b080351d0aaeb23cdbd741bde7ba33637f5618",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/baseline-build.log",
+      "path": "evidence/baseline-build.log",
+      "sha256": "4b655efcdf381280d53e01e122d94995a46d5470699700c40a3c221d1d709489",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/baseline-build.log"
+    },
+    {
+      "bytes": 5177,
+      "git_blob": "b69477e2a8b9ebf31a62eeeecd9851a0a9f996a3",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/baseline-desktop-process.json",
+      "path": "evidence/baseline-desktop-process.json",
+      "sha256": "cbb459826f5d83e56b482a369ab1cda7898221f5dc507a72207e0157ec026917",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/baseline-desktop-process.json"
+    },
+    {
+      "bytes": 117680,
+      "git_blob": "cff1afa66724852562a97dc1fe9fd7143e90300b",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/baseline-desktop.json",
+      "path": "evidence/baseline-desktop.json",
+      "sha256": "28830fc954c89c53b9278bd452d38d9e328ae3710e4e9fa8a66dafc092a50ed7",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/baseline-desktop.json"
+    },
+    {
+      "bytes": 605,
+      "git_blob": "1436fdda5e28553a68141fbf35372ba0d128b46d",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/baseline-desktop.log",
+      "path": "evidence/baseline-desktop.log",
+      "sha256": "2f514abdbad33675a35e57b44d82ee0f7a5ab25c43659cbbd1ea829990afb4c4",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/baseline-desktop.log"
+    },
+    {
+      "bytes": 507,
+      "git_blob": "e5310461f3d0a26a5ceb9944c59c22f197b41e59",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-build.log",
+      "path": "evidence/candidate-build.log",
+      "sha256": "f331173aa710d162b2acadb584f856a9e786b41045dfaa3b972e58448fb1d071",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/candidate-build.log"
+    },
+    {
+      "bytes": 4290,
+      "git_blob": "5ed1630cb8b6e83a6606a0d209ed2948dcfaae57",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-desktop-process.json",
+      "path": "evidence/candidate-desktop-process.json",
+      "sha256": "62c971b0bd2a8541f387fd2ae4b725d7175a4a44065991266aea1457730c4f40",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/candidate-desktop-process.json"
+    },
+    {
+      "bytes": 110557,
+      "git_blob": "d5fd9e96ed6a20cf74c576de6aa292c7b074e0e8",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-desktop.json",
+      "path": "evidence/candidate-desktop.json",
+      "sha256": "1cc0fa9d768f651e686c5cbf47554041adcfc68f0ead3c1ad57f002d77d26586",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/candidate-desktop.json"
+    },
+    {
+      "bytes": 497,
+      "git_blob": "b116cc4f6c203fbbb68a93d03ad1170838dd1f52",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-desktop.log",
+      "path": "evidence/candidate-desktop.log",
+      "sha256": "d17172a8ff2f0e791e34c3838301d6988ce920af72400859205156becc71a2b8",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/candidate-desktop.log"
+    },
+    {
+      "bytes": 4240,
+      "git_blob": "d532ee66f1720a47f1f33fce32a36f54915a3f87",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-mobile-process.json",
+      "path": "evidence/candidate-mobile-process.json",
+      "sha256": "5c62c0cb602f504311d06f5708e6894e3c396eb40a8c573d47bec90e64dec882",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/candidate-mobile-process.json"
+    },
+    {
+      "bytes": 110494,
+      "git_blob": "55667c5340ede8a436f305a6dd294cfce77413aa",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-mobile.json",
+      "path": "evidence/candidate-mobile.json",
+      "sha256": "bd0fbbb2f2024a9ad9ca5cd89fdef3f9b499f8e04199b97286992a48ff443553",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/candidate-mobile.json"
+    },
+    {
+      "bytes": 495,
+      "git_blob": "fea2ce194acc9b40acd4923f8918840b939f448c",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-mobile.log",
+      "path": "evidence/candidate-mobile.log",
+      "sha256": "a9113aca7dacca0e842e867e775c27154b2bfba05ce37a224678fe471c6e0979",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/candidate-mobile.log"
+    },
+    {
+      "bytes": 1761,
+      "git_blob": "3c518cce3fec7735da01159e63297290e69154c8",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-vitest-full.log",
+      "path": "evidence/candidate-vitest-full.log",
+      "sha256": "e4d4ee18228b51e842e3cd544a9f6ee1d385971aa30a55391555e53e036f5267",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/candidate-vitest-full.log"
+    },
+    {
+      "bytes": 18229,
+      "git_blob": "f7145b6545810212677fd715fd104faba5f8ef82",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/native-browser-processes.json",
+      "path": "evidence/native-browser-processes.json",
+      "sha256": "779505295f37a824f346f37a527a08890d36c69e358dd24b47c1588dc73b00f1",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/native-browser-processes.json"
+    },
+    {
+      "bytes": 62632,
+      "git_blob": "31a63c670288051fb7645dede13dcc1a137ef172",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/native-stage-build.json",
+      "path": "evidence/native-stage-build.json",
+      "sha256": "2b0566e401ce560443a9158251b20c6978d311db56da294aac25468a9804af44",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/evidence/native-stage-build.json"
+    },
+    {
+      "bytes": 33268,
+      "git_blob": "aaad4132ae0dd02d4d0baf6102d39953747651fb",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/source-manifest.json",
+      "path": "source-manifest.json",
+      "sha256": "4a695377d3d974fe2643b550442ee5459eaf162af1fe972e97e883abc3cfb106",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/source-manifest.json"
+    },
+    {
+      "bytes": 31285,
+      "git_blob": "285140afc6b9dc559b80c547df6a789c93cc020e",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/candidate-source-manifest.json",
+      "path": "candidate-source-manifest.json",
+      "sha256": "bd65ceeabbf436b1ba620fbaa1202242dc95dca144e5f2ed189788e45c01202d",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/candidate-source-manifest.json"
+    },
+    {
+      "bytes": 25299,
+      "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/receiving-browser.mjs",
+      "path": "receiving-browser.mjs",
+      "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/receiving-browser.mjs"
+    },
+    {
+      "bytes": 5204,
+      "git_blob": "da1885f07941fd237acfee98f1b5b9546971f693",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/run-browser.py",
+      "path": "run-browser.py",
+      "sha256": "dcda193c3b1f5d63b76a167b78f84f3371aa72eb2aa89fd7153649726cd54cd0",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/run-browser.py"
+    }
+  ],
+  "images_preserved_on_native_host": [
+    {
+      "bytes": 444253,
+      "git_blob": "ccb4016485a3d3e3c73f7242e56739c67b591cd6",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/baseline-desktop.png",
+      "path": "evidence/baseline-desktop.png",
+      "sha256": "5a53dfb10321f7f4e0cfc58c5bb02dde3c82186578447552192226675fccd8e1"
+    },
+    {
+      "bytes": 442715,
+      "git_blob": "6f88dacace2322251ae382176068b8edbb15f5a5",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-desktop.png",
+      "path": "evidence/candidate-desktop.png",
+      "sha256": "6d4936a3886cb0bd19fd00d4f0d4259c00a0f4b941c6cd5424e4879214fe628a"
+    },
+    {
+      "bytes": 260098,
+      "git_blob": "124d8243164cbcd752cba476a49f7d23da928a60",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093/evidence/candidate-mobile.png",
+      "path": "evidence/candidate-mobile.png",
+      "sha256": "738e3d24d0096006dbf9ee42998e2862d619fddc07f029ed9bfa351af07aa4f8"
+    }
+  ],
+  "root": "/tmp/towerops-playback-55e3-ypg8xw8q/current-093",
+  "schema": "towerops.current093-native-receiving-text.v1",
+  "archive": {
+    "path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current093-native/receiving-text.json.gz",
+    "bytes": 143946,
+    "sha256": "ebbcfa95201660c59a7c5421ddd4adb17ed7c86d9bba1bcbeb3633279c788554"
+  }
+}

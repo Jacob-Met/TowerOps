@@ -1,15 +1,41 @@
 import {Aircraft,SafetyPolicy,WorldState,conflictPairs,horizontalUnsafeInterval,linearAbsUnsafeInterval,projected} from './core';
+import { fitRadar, radarNumber, radarPoint, radarTicks, radarViewport } from './radar-geometry';
+export { radarRangeLabel } from './radar-geometry';
 const C={grid:'#294148',muted:'#91aaa5',safe:'#85d6c7',risk:'#f28e73',amber:'#e0bb72',ink:'#f1e9dc'};
 export function drawAirspace(canvas:HTMLCanvasElement,state:WorldState,selected:string,policy:SafetyPolicy):void{
  const r=canvas.getBoundingClientRect(),dpr=Math.min(2,window.devicePixelRatio||1),w=Math.max(1,r.width),h=Math.max(1,r.height);
  if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}
  const ctx=canvas.getContext('2d');if(!ctx)return;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#111f24';ctx.fillRect(0,0,w,h);
- const pad={l:34,r:18,t:18,b:26},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b,range=viewRange(state,policy),scale=Math.min(cw,ch)/(range*2),cx=pad.l+cw/2,cy=pad.t+ch/2;
- const xy=(x:number,y:number)=>[cx+x*scale,cy-y*scale] as const;
+ const pad={l:64,r:28,t:24,b:40},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b;
+ const frame=fitRadar(state,policy),view=frame&&radarViewport(frame,cw,ch);
+ if(!view){
+  ctx.fillStyle=C.amber;ctx.font='12px Consolas,monospace';ctx.fillText('RADAR VIEW UNAVAILABLE',12,Math.max(18,h/2-8),Math.max(1,w-24));
+  ctx.fillStyle=C.muted;ctx.font='10px Consolas,monospace';ctx.fillText(frame?'Enlarge the radar to show traffic.':'Traffic or look-ahead coordinates cannot be drawn.',12,Math.max(34,h/2+12),Math.max(1,w-24));
+  return;
+ }
+ const xy=(x:number,y:number)=>{const [px,py]=radarPoint(view,x,y);return [pad.l+px,pad.t+py] as const;};
  ctx.lineWidth=1;ctx.strokeStyle=C.grid;ctx.fillStyle=C.muted;ctx.font='9px Consolas,monospace';
- const gridStep=Math.max(5,Math.ceil(range/20)*5);for(let n=-range;n<=range;n+=gridStep){const [gx]=xy(n,0),[,gy]=xy(0,n);ctx.beginPath();ctx.moveTo(gx,pad.t);ctx.lineTo(gx,pad.t+ch);ctx.stroke();ctx.beginPath();ctx.moveTo(pad.l,gy);ctx.lineTo(pad.l+cw,gy);ctx.stroke();if(n!==0){ctx.fillText(String(n),gx+3,cy+12);ctx.fillText(String(-n),cx+5,gy-3);}}
- ctx.setLineDash([3,5]);ctx.strokeStyle='#466168';ctx.beginPath();ctx.moveTo(cx,pad.t);ctx.lineTo(cx,pad.t+ch);ctx.moveTo(pad.l,cy);ctx.lineTo(pad.l+cw,cy);ctx.stroke();ctx.setLineDash([]);
- for(const nm of [policy.min_horizontal_nm,policy.min_horizontal_nm*2]){ctx.strokeStyle='#37545a';ctx.beginPath();ctx.arc(cx,cy,nm*scale,0,Math.PI*2);ctx.stroke();ctx.fillStyle=C.muted;ctx.fillText(`${nm} NM`,cx+nm*scale+3,cy-3);}
+ let previousLabelRight=-Infinity;
+ for(const n of radarTicks(view.min_x_nm,view.max_x_nm,cw/80)){
+  const [gx]=xy(n,view.center_y_nm);ctx.beginPath();ctx.moveTo(gx,pad.t);ctx.lineTo(gx,pad.t+ch);ctx.stroke();
+  const label=radarNumber(n),labelWidth=ctx.measureText(label).width,x=Math.max(2,Math.min(w-labelWidth-2,gx-labelWidth/2));
+  if(x>=previousLabelRight+8){ctx.fillText(label,x,pad.t+ch+14);previousLabelRight=x+labelWidth;}
+ }
+ for(const n of radarTicks(view.min_y_nm,view.max_y_nm,ch/60)){
+  const [,gy]=xy(view.center_x_nm,n);ctx.beginPath();ctx.moveTo(pad.l,gy);ctx.lineTo(pad.l+cw,gy);ctx.stroke();
+  const label=radarNumber(n);ctx.textAlign='right';ctx.fillText(label,pad.l-7,gy+3,pad.l-10);ctx.textAlign='left';
+ }
+ // Axes and distance reference rings remain at the actual world origin.
+ ctx.save();ctx.beginPath();ctx.rect(pad.l,pad.t,cw,ch);ctx.clip();
+ ctx.setLineDash([3,5]);ctx.strokeStyle='#466168';ctx.beginPath();
+ if(view.min_x_nm<=0&&view.max_x_nm>=0){const [x]=xy(0,view.center_y_nm);ctx.moveTo(x,pad.t);ctx.lineTo(x,pad.t+ch);}
+ if(view.min_y_nm<=0&&view.max_y_nm>=0){const [,y]=xy(view.center_x_nm,0);ctx.moveTo(pad.l,y);ctx.lineTo(pad.l+cw,y);}
+ ctx.stroke();ctx.setLineDash([]);
+ for(const nm of [policy.min_horizontal_nm,policy.min_horizontal_nm*2]){
+  if(!Number.isFinite(nm)||nm<=0||view.min_x_nm>nm||view.max_x_nm < -nm||view.min_y_nm>nm||view.max_y_nm < -nm)continue;
+  const [ox,oy]=xy(0,0),radius=nm*view.scale;if(![ox,oy,radius].every(Number.isFinite))continue;
+  ctx.strokeStyle='#37545a';ctx.beginPath();ctx.arc(ox,oy,radius,0,Math.PI*2);ctx.stroke();ctx.fillStyle=C.muted;ctx.fillText(nm+' NM',ox+radius+3,oy-3);
+ }
  const byId=new Map(state.aircraft.map(a=>[a.aircraft_id,a]));
  for(const [aid,bid] of conflictPairs(state,policy)){
   const a=byId.get(aid)!,b=byId.get(bid)!;
@@ -19,10 +45,11 @@ export function drawAirspace(canvas:HTMLCanvasElement,state:WorldState,selected:
   const t=(lo+end)/2,pa=projected(a,t),pb=projected(b,t),p1=xy(pa.x_nm,pa.y_nm),p2=xy(pb.x_nm,pb.y_nm),mx=(p1[0]+p2[0])/2,my=(p1[1]+p2[1])/2;
   ctx.strokeStyle=C.risk;ctx.lineWidth=2;ctx.setLineDash([5,4]);ctx.beginPath();ctx.moveTo(p1[0],p1[1]);ctx.lineTo(p2[0],p2[1]);ctx.stroke();ctx.setLineDash([]);ctx.beginPath();ctx.arc(mx,my,9,0,Math.PI*2);ctx.stroke();
  }
+ ctx.restore();
  for(const a of state.aircraft)drawAircraft(ctx,a,xy,selected,policy.horizon_min,conflictPairs(state,policy).some(p=>p.includes(a.aircraft_id)));
- ctx.fillStyle=C.muted;ctx.font='9px Consolas,monospace';ctx.fillText('EAST / WEST',pad.l+4,h-7);ctx.fillText('NORTH',w-55,pad.t+10);
+ ctx.fillStyle=C.muted;ctx.font='9px Consolas,monospace';ctx.fillText('EAST + / WEST - (NM)',pad.l,h-7);ctx.fillText('NORTH + / SOUTH - (NM)',pad.l,14);
+ if(!state.aircraft.length){ctx.fillStyle=C.muted;ctx.font='12px Consolas,monospace';ctx.fillText('NO TRAFFIC',pad.l+12,pad.t+22);}
 }
-export function viewRange(state:WorldState,policy:SafetyPolicy):number{const extent=Math.max(12,...state.aircraft.flatMap(a=>{const end=projected(a,policy.horizon_min);return [Math.abs(a.x_nm),Math.abs(a.y_nm),Math.abs(end.x_nm),Math.abs(end.y_nm)];}));return Math.ceil((extent+2)/5)*5;}
 function drawAircraft(ctx:CanvasRenderingContext2D,a:Aircraft,xy:(x:number,y:number)=>readonly [number,number],selected:string,horizon:number,risk:boolean):void{
  const [x,y]=xy(a.x_nm,a.y_nm),[ex,ey]=xy(a.x_nm+a.vx_nm_min*horizon,a.y_nm+a.vy_nm_min*horizon),c=risk?C.risk:C.safe;
  ctx.strokeStyle=c;ctx.lineWidth=1.5;ctx.setLineDash([5,5]);ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(ex,ey);ctx.stroke();ctx.setLineDash([]);

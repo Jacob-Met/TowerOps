@@ -1,0 +1,76 @@
+{
+  "schema": "towerops.current8d-rdc-timeouts.v1",
+  "recorded_at": {
+    "current_time": "2026-10-08 13:56:37 UTC"
+  },
+  "device_id": "0e3d582f-e25b-44b2-8418-9639fc4e4e33",
+  "launcher_write": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: __ERROR__: Path validation operation timed out after 10 seconds"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "structuredContent": {
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  },
+  "launcher_start": {
+    "content": [
+      {
+        "type": "text",
+        "text": "MCP error -32001: Request timed out [device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "structuredContent": {
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  },
+  "fresh_device_block": [
+    "7. Mac.lan",
+    "   Status: Online",
+    "   ID: 0e3d582f-e25b-44b2-8418-9639fc4e4e33",
+    "   Last seen: 5m ago",
+    "   App version: 0.2.52"
+  ],
+  "boundary": "No process identity was returned; no browser execution outcome is inferred. Native current test/build receipts remain separate.",
+  "entrypoint_readback": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: ENOENT: no such file or directory, stat '/private/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/run-browser.py'"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "structuredContent": {
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  },
+  "aggregate_readback": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: ENOENT: no such file or directory, stat '/private/tmp/towerops-playback-55e3-ypg8xw8q/current-8d/evidence/native-attempt-2/native-browser-processes.json'"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "structuredContent": {
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  },
+  "receiving_outcome": "No launcher file or aggregate browser receipt was present at the bounded same-device readback. No replacement launch was requested. Current803 native134/build is completed separately; current093 source composition is pending."
+}

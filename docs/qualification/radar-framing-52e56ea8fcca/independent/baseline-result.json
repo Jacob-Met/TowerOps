@@ -1,0 +1,122 @@
+{
+  "schema": "towerops-independent-canvas-commands/1",
+  "source": "Jacob-Met/TowerOps@093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "source_sha256": {
+    "draw": "75ed074644787c22d5c067e96b4dab852401a367b3d2ad5211f30913238319dc",
+    "core": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac"
+  },
+  "runtime": "v24.19.0",
+  "passed": 5,
+  "failed": 4,
+  "results": [
+    {
+      "name": "Equal translations retain each actual marker position",
+      "passed": false,
+      "error": "Translation changes positions: [{\"dx\":1000,\"dy\":-500,\"delta\":[350.0903722623252,286.639732243441]}]"
+    },
+    {
+      "name": "Traffic ordering does not alter per-ID screen positions",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "East/right, north/up and equal-axis scale survive a translated scene",
+      "passed": true,
+      "detail": {
+        "east": 5.295238095238005,
+        "north": 5.295238095238062
+      }
+    },
+    {
+      "name": "Every current position and authored look-ahead endpoint stays visible",
+      "passed": true,
+      "detail": [
+        [
+          366.28502415458934,
+          164.35748792270533
+        ],
+        [
+          363.01932367149755,
+          161.90821256038646
+        ],
+        [
+          366.9381642512077,
+          163.86763285024153
+        ],
+        [
+          371.02028985507246,
+          165.50048309178743
+        ]
+      ]
+    },
+    {
+      "name": "Absolute tick text matches the world coordinates of its grid line",
+      "passed": false,
+      "error": "No bound absolute ticks for both axes"
+    },
+    {
+      "name": "Range rings refer to the true world origin after recentering",
+      "passed": true,
+      "detail": {
+        "origin": {
+          "x": 408,
+          "y": 296
+        },
+        "arcs": [
+          [
+            408,
+            296,
+            92.66666666666667
+          ],
+          [
+            408,
+            296,
+            185.33333333333334
+          ]
+        ]
+      }
+    },
+    {
+      "name": "Empty, single and coincident traffic have finite bounded drawing",
+      "passed": true,
+      "detail": [
+        {
+          "markers": [],
+          "label": null
+        },
+        {
+          "markers": [
+            {
+              "x": 546.6533665835411,
+              "y": 573.3067331670823
+            }
+          ],
+          "label": null
+        },
+        {
+          "markers": [
+            {
+              "x": 546.6533665835411,
+              "y": 573.3067331670823
+            },
+            {
+              "x": 546.6533665835411,
+              "y": 573.3067331670823
+            }
+          ],
+          "label": null
+        }
+      ]
+    },
+    {
+      "name": "Finite overflow becomes an explicit unavailable view with no invalid Canvas coordinates",
+      "passed": false,
+      "error": "Nonfinite Canvas command or source mutation"
+    },
+    {
+      "name": "A collapsed canvas cannot produce a negative-radius or invalid draw",
+      "passed": false,
+      "error": "Negative Canvas arc radius"
+    }
+  ]
+}

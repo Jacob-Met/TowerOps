@@ -1,0 +1,533 @@
+{
+  "schema": "towerops.current-parent-integration.v1",
+  "observed_at_utc": "2026-10-08 15:07:08 UTC",
+  "prior_source_head": "78b4f2f94492de220e0a1ce18bd5621908a6caa9",
+  "qualified_native_base": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "actual_new_parent": "53aa5048b6585aa08592d5513cfcf555a8bba018",
+  "actual_new_parent_tree": "fc29ac4a02c151ba66ca37c029ff74d968662d58",
+  "source_changes_from_qualified_base": [
+    {
+      "path": "PLAN_WORLD.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b73b0ff02748528ed698118e034c79ef517f9be",
+      "size": 7722,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/4b73b0ff02748528ed698118e034c79ef517f9be"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d51c0341cd2b85169dbe62d62f178bdfc544f2e7",
+      "size": 2018,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/d51c0341cd2b85169dbe62d62f178bdfc544f2e7"
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6504759b94bf71424572ce724e8f1af9ecd0437",
+      "size": 4423,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/d6504759b94bf71424572ce724e8f1af9ecd0437"
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/author-evidence.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31f4abefe6164d7537f4999943f06379c404826d",
+      "size": 26019,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/31f4abefe6164d7537f4999943f06379c404826d"
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/independent/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa9fb7bda801e4bc7cc878949d2600df79cbf871",
+      "size": 4674,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/aa9fb7bda801e4bc7cc878949d2600df79cbf871"
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/independent/raw-evidence.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37bc865002b7543dbb32faa40f8f3a1b68beb5b9",
+      "size": 63879,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/37bc865002b7543dbb32faa40f8f3a1b68beb5b9"
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/independent/receiving.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "357dbc9d363205d145f17416fa664ccd86ba59cb",
+      "size": 6943,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/357dbc9d363205d145f17416fa664ccd86ba59cb"
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/source-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47e739bf8f07adffc53e398d892cbfcd06158038",
+      "size": 8992,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/47e739bf8f07adffc53e398d892cbfcd06158038"
+    },
+    {
+      "path": "plan_world.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e826a10cc2f9425de26727dce07851497174bba",
+      "size": 8119,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/8e826a10cc2f9425de26727dce07851497174bba"
+    },
+    {
+      "path": "tests/test_plan_world.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ea1e3f8ea138f9b5b8b42fdadba2bc147c0db6f",
+      "size": 16361,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/8ea1e3f8ea138f9b5b8b42fdadba2bc147c0db6f"
+    },
+    {
+      "path": "tests/test_plan_world_receiving.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cab5b89008adf3ef0ba4200f2a073330d77fe1d",
+      "size": 12680,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/2cab5b89008adf3ef0ba4200f2a073330d77fe1d"
+    }
+  ],
+  "removed": [],
+  "qualified_native_files": [
+    {
+      "path": ".github/workflows/airspace-demo.yml",
+      "expected_blob": "24356d4f5ce88f21cc1a27329b06df351e156810",
+      "composed_blob": "24356d4f5ce88f21cc1a27329b06df351e156810",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "expected_blob": "4791e16741c2ee136585d8f4d99f918535a3a017",
+      "composed_blob": "4791e16741c2ee136585d8f4d99f918535a3a017",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "advisory_options.py",
+      "expected_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "composed_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "audit_replay.py",
+      "expected_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+      "composed_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "decision_trace.py",
+      "expected_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+      "composed_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "scenarios.py",
+      "expected_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "composed_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "tests/test_advisory_options.py",
+      "expected_blob": "18f90aa8d7f2d6b3933a339d028cbede50261f4c",
+      "composed_blob": "18f90aa8d7f2d6b3933a339d028cbede50261f4c",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "tests/test_decision_trace.py",
+      "expected_blob": "55e6cd3cceeb93cb3dc41d73c6c46fdfad6a39dc",
+      "composed_blob": "55e6cd3cceeb93cb3dc41d73c6c46fdfad6a39dc",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "tools/capture_airspace.py",
+      "expected_blob": "4c0f078d45eb99151fcd28c6688c039480542df9",
+      "composed_blob": "4c0f078d45eb99151fcd28c6688c039480542df9",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "tools/check_advisory_options_browser.py",
+      "expected_blob": "9746bd30b3ca2fb2b0a56db45a461c0f2884afaa",
+      "composed_blob": "9746bd30b3ca2fb2b0a56db45a461c0f2884afaa",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "tools/generate_airspace_reference.py",
+      "expected_blob": "8be5631d8a36630933c0d782a33cf9d162c78ce7",
+      "composed_blob": "8be5631d8a36630933c0d782a33cf9d162c78ce7",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "tools/verify_browser_python.py",
+      "expected_blob": "9072976649f1d7e78689cd38487d6e5222feb28d",
+      "composed_blob": "9072976649f1d7e78689cd38487d6e5222feb28d",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "tools/verify_decision_trace.mjs",
+      "expected_blob": "7fdbdebaadfa141b948a1029a9c6d4ea9dc286ef",
+      "composed_blob": "7fdbdebaadfa141b948a1029a9c6d4ea9dc286ef",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "tools/verify_encounter_browser.py",
+      "expected_blob": "bfef37643d4d7bfe84ba84eaaa21a6f5f425dc96",
+      "composed_blob": "bfef37643d4d7bfe84ba84eaaa21a6f5f425dc96",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "towerops.py",
+      "expected_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "composed_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/.gitignore",
+      "expected_blob": "9bbb2245b44a9b8ecbefe94d9e24a478c3fffb63",
+      "composed_blob": "9bbb2245b44a9b8ecbefe94d9e24a478c3fffb63",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/.npmrc",
+      "expected_blob": "cab1cc56aa1525904e0b6171b685ee13fc28c91e",
+      "composed_blob": "cab1cc56aa1525904e0b6171b685ee13fc28c91e",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/README.md",
+      "expected_blob": "02f93b18f0d6a243020ae1d2b1f85990376f7fe8",
+      "composed_blob": "02f93b18f0d6a243020ae1d2b1f85990376f7fe8",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/index.html",
+      "expected_blob": "fb2b2c2b9f0b1f1ea31c14191af328ef09d9e1ec",
+      "composed_blob": "fb2b2c2b9f0b1f1ea31c14191af328ef09d9e1ec",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/package-lock.json",
+      "expected_blob": "9d81d64088a09bf36ce116b67bf48eefc4fe7c27",
+      "composed_blob": "9d81d64088a09bf36ce116b67bf48eefc4fe7c27",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/package.json",
+      "expected_blob": "836291c282e63943575c82dfaeaf653d278b48a1",
+      "composed_blob": "836291c282e63943575c82dfaeaf653d278b48a1",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/prepare-python.mjs",
+      "expected_blob": "5f816785223c30353f84d8c180e789d021b39a7b",
+      "composed_blob": "5f816785223c30353f84d8c180e789d021b39a7b",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/public/captures/airspace-desktop.png",
+      "expected_blob": "bd6e0d9fc6c7f07b52dd276b9df97bc0d9c34b02",
+      "composed_blob": "bd6e0d9fc6c7f07b52dd276b9df97bc0d9c34b02",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/public/captures/airspace-mobile.png",
+      "expected_blob": "012be9dac2dfd5560162755c9b462213bf241ae9",
+      "composed_blob": "012be9dac2dfd5560162755c9b462213bf241ae9",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/public/favicon.svg",
+      "expected_blob": "498832ec27a0a0515bccc5650b70e94bc952f99d",
+      "composed_blob": "498832ec27a0a0515bccc5650b70e94bc952f99d",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/actuation.ts",
+      "expected_blob": "33e2c27481069712484bec409f5cbf2f23d8922f",
+      "composed_blob": "33e2c27481069712484bec409f5cbf2f23d8922f",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/advisory-options.ts",
+      "expected_blob": "18d9a51c359007a39ed76352ce245f8a70c1f6c7",
+      "composed_blob": "18d9a51c359007a39ed76352ce245f8a70c1f6c7",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/advisory-review.ts",
+      "expected_blob": "5e31db5369be3294a0404667614520f58ab6dfe9",
+      "composed_blob": "5e31db5369be3294a0404667614520f58ab6dfe9",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/audit.ts",
+      "expected_blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b",
+      "composed_blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/core.ts",
+      "expected_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+      "composed_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/decision-trace.css",
+      "expected_blob": "b1c82719ccc80cec69667003b7d007a0e6dfec52",
+      "composed_blob": "b1c82719ccc80cec69667003b7d007a0e6dfec52",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/decision-trace.ts",
+      "expected_blob": "83fa2809dc0e375b8f8982387fdb8845bea721c3",
+      "composed_blob": "83fa2809dc0e375b8f8982387fdb8845bea721c3",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/draw.ts",
+      "expected_blob": "1cbdddb0ee7e4bab181992e5b6b20baea725b433",
+      "composed_blob": "1cbdddb0ee7e4bab181992e5b6b20baea725b433",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/encounter-view.ts",
+      "expected_blob": "d31fa0ec6bb6c620e7f36f37db06d6f3726e336b",
+      "composed_blob": "d31fa0ec6bb6c620e7f36f37db06d6f3726e336b",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/encounter.ts",
+      "expected_blob": "3620b0d81d745d8e5b467e5d3823bf5c0de31b21",
+      "composed_blob": "3620b0d81d745d8e5b467e5d3823bf5c0de31b21",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/gate.ts",
+      "expected_blob": "cd17b5191110ea47ee7771745b877fb8b65597a9",
+      "composed_blob": "cd17b5191110ea47ee7771745b877fb8b65597a9",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "expected_blob": "3c29b72c944df2c38a5a5fc6104aea6809bdca55",
+      "composed_blob": "3c29b72c944df2c38a5a5fc6104aea6809bdca55",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/maneuvers.ts",
+      "expected_blob": "bbe70e521c80e60123eb3ecc93e687e6bc576276",
+      "composed_blob": "bbe70e521c80e60123eb3ecc93e687e6bc576276",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/planner.ts",
+      "expected_blob": "82082fa50cbec1a0d30d377bb4cd3e1a67416d5e",
+      "composed_blob": "82082fa50cbec1a0d30d377bb4cd3e1a67416d5e",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "expected_blob": "b1c4218b2abd5d444687d0b728bce70509df8b01",
+      "composed_blob": "b1c4218b2abd5d444687d0b728bce70509df8b01",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/python.ts",
+      "expected_blob": "ef32ef39aa6c3bf7196c05fe10840f3c297156ce",
+      "composed_blob": "ef32ef39aa6c3bf7196c05fe10840f3c297156ce",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/track-edit.ts",
+      "expected_blob": "ff3668979df28a70f848078356a096dd876cf692",
+      "composed_blob": "ff3668979df28a70f848078356a096dd876cf692",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/src/world-tools.ts",
+      "expected_blob": "8e308d78c19389a6881aace8d22412e93557f066",
+      "composed_blob": "8e308d78c19389a6881aace8d22412e93557f066",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/style.css",
+      "expected_blob": "90dd61e262edd381a7ac9449e3643cc3dac65083",
+      "composed_blob": "90dd61e262edd381a7ac9449e3643cc3dac65083",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/advisory-numeric.test.ts",
+      "expected_blob": "7da0bf284bd167429cab0a3cff27bfad49c87a18",
+      "composed_blob": "7da0bf284bd167429cab0a3cff27bfad49c87a18",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/advisory-options.test.ts",
+      "expected_blob": "dc34af345e5be25302669d3641d63199c99cefcd",
+      "composed_blob": "dc34af345e5be25302669d3641d63199c99cefcd",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/algorithm.test.ts",
+      "expected_blob": "1c6bca592af1f5d0613c37b241dec485bbfa2643",
+      "composed_blob": "1c6bca592af1f5d0613c37b241dec485bbfa2643",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/audit-wire.test.ts",
+      "expected_blob": "47c1bbabe27c7e1773e092f59173a7c604952001",
+      "composed_blob": "47c1bbabe27c7e1773e092f59173a7c604952001",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/decision-trace.test.mjs",
+      "expected_blob": "8817db66c6ee3032a8c7f917fed031177c52db76",
+      "composed_blob": "8817db66c6ee3032a8c7f917fed031177c52db76",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/encounter.test.ts",
+      "expected_blob": "8fb7bf845b7796a3ac2c90f850f80006b8f9ea75",
+      "composed_blob": "8fb7bf845b7796a3ac2c90f850f80006b8f9ea75",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/playback-controls.test.ts",
+      "expected_blob": "de7a02cd88f69bf8192516cb1acf7aa6eb276853",
+      "composed_blob": "de7a02cd88f69bf8192516cb1acf7aa6eb276853",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/python-audit-interop.test.mjs",
+      "expected_blob": "47cf573b71eb42e1a77da59ec5a6ed168d1acda2",
+      "composed_blob": "47cf573b71eb42e1a77da59ec5a6ed168d1acda2",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/python-audit-wire.json",
+      "expected_blob": "28febf3c725e2761895f55628fd5483e32b48da9",
+      "composed_blob": "28febf3c725e2761895f55628fd5483e32b48da9",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/python-float-parity.test.mjs",
+      "expected_blob": "7466b9213ecefe5ba3352ca9d0935fa9637532cf",
+      "composed_blob": "7466b9213ecefe5ba3352ca9d0935fa9637532cf",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/python-reference.json",
+      "expected_blob": "65b017ab362097b161ec1f7c103b55a3c42941f1",
+      "composed_blob": "65b017ab362097b161ec1f7c103b55a3c42941f1",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/track-edit.test.ts",
+      "expected_blob": "3c0812f94ff7d2dd9ff6a32f573ac28102ff10fe",
+      "composed_blob": "3c0812f94ff7d2dd9ff6a32f573ac28102ff10fe",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/world-json-draft.browser.mjs",
+      "expected_blob": "aa01b6711f7aeb7358cc4bba21477d840f449d45",
+      "composed_blob": "aa01b6711f7aeb7358cc4bba21477d840f449d45",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tests/world-tools.test.ts",
+      "expected_blob": "08a2cd5bda3f11e6c375d6f4f7660e8d4c4d33e5",
+      "composed_blob": "08a2cd5bda3f11e6c375d6f4f7660e8d4c4d33e5",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/tsconfig.json",
+      "expected_blob": "da1989ed943ad339db9c78e57ce2fe0268523c48",
+      "composed_blob": "da1989ed943ad339db9c78e57ce2fe0268523c48",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    },
+    {
+      "path": "web/airspace/vite.config.ts",
+      "expected_blob": "9a35e51e99a33873dafcca04f18bf2ca8df589f5",
+      "composed_blob": "9a35e51e99a33873dafcca04f18bf2ca8df589f5",
+      "expected_mode": "100644",
+      "composed_mode": "100644"
+    }
+  ],
+  "acceptance": {
+    "all_60_native_inputs_exact": true,
+    "source_and_local_browser_rerun_needed": false,
+    "reason": "Concurrent PR50 adds a separate saved-world CLI, tests and documentation; no qualified Airspace execution/build/source input changes.",
+    "native_tests": 147,
+    "native_desktop_cases": 4,
+    "native_mobile_cases": 4,
+    "hosted_78b_tree": "f1b78f00aff2bd3f3cafa1c7df5d8bf014d3e404",
+    "final_hosted_checks": "pending on the following publication head",
+    "deployment": "pending after merge"
+  },
+  "preservation": "All prior158 owned paths are retained; final native, independent, intermediate and hosted evidence is additive. Every actual-parent unowned leaf is retained."
+}

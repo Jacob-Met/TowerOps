@@ -1,0 +1,53 @@
+{
+  "schema": "towerops.playback.current-composition-review.v1",
+  "reviewed_at": "2026-10-08T12:43:12.510907+00:00",
+  "source_commit": "9a2468f9bbaa25c0ab92cb12f712170420f9e622",
+  "source_tree": "07cb60b0a501ec3ae66f3e5391f54ff11614f849",
+  "baseline_main_sha256": "347cca82b84ea49c55efd468db995820d55d32249543aa69cc744797c4f3fc80",
+  "candidate_main_sha256": "aec0e5398939e3b99cfe1e4b0cbe9ba5a63cb0df0de095a98f45aa035a4c11f9",
+  "inverse_delta_exact": true,
+  "same_pause_sites": 8,
+  "preserved_source": "Every current main.ts byte is reproduced by undoing the helper, its eight calls, the reset rate assignment and consolidated reset label assignment. Current encounter, decision-trace, selected-flight editing, frame integration, manual toggle and validation ordering remain otherwise intact.",
+  "composition_finding": {
+    "kind": "source-derived receiving requirement",
+    "cause": "Invalid custom-flight and last-aircraft refusal paths pause and return without calling render.",
+    "repair": "The pause helper refreshes the existing encounter panel with the current state and policy and running=false. Native encounter implementation is unchanged.",
+    "claim_boundary": "No baseline encounter behavioral result is inferred from a native test that exits earlier on the stale playback label."
+  },
+  "native_test_composition": {
+    "cases": 14,
+    "new_module_mocks": 0,
+    "existing_boundaries": [
+      "drawing",
+      "Python promise",
+      "minimal native DOM/RAF boundary"
+    ],
+    "dom_additions": [
+      "ID querySelector",
+      "select options",
+      "attributes/setAttribute",
+      "createElementNS"
+    ],
+    "additional_assertions": [
+      "invalid custom-flight refusal enables encounter controls and shows content",
+      "last-aircraft refusal shows native missing-second-flight message"
+    ]
+  },
+  "initial_native_ci": {
+    "run_id": 37774105963,
+    "head_sha": "92700c313125d2c1fd32f7d016febe7090e6adc6",
+    "checkout_sha": "83b2e80af7b0143b4c0c399973aef80734e7b99f",
+    "base_sha": "9a2468f9bbaa25c0ab92cb12f712170420f9e622",
+    "existing_test_passes": 120,
+    "playback_setup_failures": 14,
+    "behavioral_assertions_reached": false,
+    "failure": "TypeError: Cannot read properties of null (reading addEventListener), createEncounterExplorer src/encounter-view.ts:107",
+    "explanation": "The initial test DOM stub lacked current native ID querySelector operations. The current test adds the operations without mocking the new modules.",
+    "build_and_browser": "skipped after npm test failed",
+    "raw_log_sha256": "5c5d18fc37b07c9cb74ec2874a90702727f313bce2736a22874a65e27d079ba0"
+  },
+  "current_native_execution": "pending at this source-review freeze",
+  "source_files": 52,
+  "candidate_files": 53,
+  "scope": "Source composition and preserved initial CI failure. Native Mac and corrected CI results are recorded in later additive receipts."
+}

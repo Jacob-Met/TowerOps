@@ -1,0 +1,10 @@
+{
+  "changed_lines": "Only default app root/output path; all controlled cases, expectations, loader and observations are unchanged.",
+  "original_driver_sha256": "e1cf78edbb1d5a83d18ba5a65c83a27122c65a0e7f9bf0a46634d364149e84c3",
+  "published_driver_sha256": "8ad7a0c75ef38a2a51813212ac2776cbdb2288432e7e2e901fc05f9622848282",
+  "native_vitest_test": {
+    "path": "web/airspace/tests/playback-controls.test.ts",
+    "sha256": "f34433a5699025d4533860ce000d3ce7dcabf874144639800e4ffe7dfa4a4077",
+    "status": "authored; Node TypeScript syntax erasure passed; native Vitest runtime unavailable and not claimed"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "towerops.independent-8d-source-review.v1",
+  "at_utc": "2026-10-08T13:46:33.875751+00:00",
+  "native_base_commit": "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+  "manifests": {
+    "source-manifest.json": {
+      "manifest": {
+        "bytes": 29771,
+        "sha256": "b2beaec2b16661d845328b7c703003f5ad10536587b850c97fec997bf60914ae",
+        "git_blob": "581fb24c18be6d9d3eb2d94db3871002a90cc4a5"
+      },
+      "file_count": 53,
+      "verified_entries_sha256": "14f7ddc0b267c4e1654ddb77601cdc7750dfe0f431d76a9ceebd2b2cc28ac5bc"
+    },
+    "candidate-source-manifest.json": {
+      "manifest": {
+        "bytes": 28332,
+        "sha256": "b19979d5ff60d0baf2b19d3bb2ec7a5f0314e1f0f8707d3d8cac79f04428a058",
+        "git_blob": "07b91557538345f24394ec5e32121557bf21b3fb"
+      },
+      "file_count": 54,
+      "verified_entries_sha256": "fdaa959e402edfb92f038345f9d8624e7f11564c72ddabdf8f21af640ea3f4b1"
+    }
+  },
+  "native_main": {
+    "bytes": 23120,
+    "sha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa",
+    "git_blob": "d975ab8c55c01b0f6177ad736ed0c6b1fa821599"
+  },
+  "candidate_main": {
+    "bytes": 23509,
+    "sha256": "80333c3dc3f533fdc0b9cfc3f807ce0475a5656c2a294f3b8838028d3bf92b86",
+    "git_blob": "35a72d5c9b3a3072f2c6069aa4964964521fb38f"
+  },
+  "unchanged_playback_test": {
+    "bytes": 9072,
+    "sha256": "fbe02527200a428fae18c6d45b09ef942b9dcfd411d7e8a8bf11c30d5e74a845",
+    "git_blob": "de7a02cd88f69bf8192516cb1acf7aa6eb276853"
+  },
+  "native_changes_from9a": {
+    "changed": [
+      "web/airspace/README.md",
+      "web/airspace/src/main.ts"
+    ],
+    "added": [
+      "web/airspace/tests/world-json-draft.browser.mjs"
+    ]
+  },
+  "inverse_proofs": {
+    "remove_five_bd1_from8d_recovers_exact9a": true,
+    "remove_five_bd1_from_candidate_recovers_exactC4": true,
+    "remove_qualified_edits_from_candidate_recovers_exact8d": true,
+    "reset_body_exactC4": true,
+    "all_current_unowned_leaves_preserved": true
+  },
+  "boundary_findings": {
+    "export": "Unchanged receiver invokes native Export before reading live WorldState; this intentionally replaces editor text and clears the draft flag.",
+    "load": "Successful JSON parsing and native WorldState shape validation precede flag clearing, the existing pause, and state assignment. Rejection by either parser occurs before those changes. This is not a rollback guarantee for exceptions later in pause, assignment, or rendering. Existing native test direct value assignment does not qualify a typed draft lifecycle.",
+    "reset": "Exact C4 Reset does not clear the draft flag. No new draft-discard behavior introduced.",
+    "receiving_limit": "Four playback browser cases do not type a WorldState draft. They qualify playback with the merged source, not draft persistence. The owner standalone draft browser script is captured unchanged but unexecuted here.",
+    "raf": "No new application RAF consumer or changed playback/export control IDs."
+  },
+  "driver": {
+    "bytes": 25299,
+    "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+    "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49"
+  },
+  "result": "accepted_source_only",
+  "runtime_limit": "No product edit or runtime replay by this reviewer. Completed C4 native receipts remain separate; actual803/fbe receiving pending.",
+  "storage_attempt": "Prior attempt encountered ENOSPC while copying the first manifest into the own review folder. That partial copy is not evidence. This complete verification was performed without filesystem writes; source manifest and inverse results are retained in tool output pending artifact storage.",
+  "proposed_repo_path": "docs/qualification/playback-55e3-20261008/independent/current-8d-source-review.json"
+}

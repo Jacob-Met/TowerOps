@@ -1,0 +1,84 @@
+--- receiving-browser.mjs@2bb8ad31
++++ receiving-browser-joint.mjs
+@@ -22,7 +22,7 @@
+ const dist = resolve(option('--dist') || join(app, 'dist')), out = resolve(option('--out'));
+ const mobile = args.includes('--mobile'), expectBroken = args.includes('--expect-broken');
+ const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+-const report = { schema: 'towerops-native-playback-receiving/v1', started_at: new Date().toISOString(),
++const report = { schema: 'towerops-native-playback-receiving/v2', started_at: new Date().toISOString(),
+   mobile, expect_broken: expectBroken, cases: [], screenshots: [], page_errors: [], requests: [],
+   boundaries: ['Exact built app and source manifest checked before and after execution.',
+     'RAF callbacks receive controlled timestamps; page physics and drawing are unchanged.',
+@@ -118,6 +118,12 @@
+     return { world:JSON.parse(document.querySelector('#world-json').value),
+       label:document.querySelector('#toggle-run').textContent, rate:+document.querySelector('#speed-range').value,
+       rate_label:document.querySelector('#speed-value').textContent, clock:document.querySelector('#sim-clock').textContent,
++      policy:Object.fromEntries([
++        ['horizontal','policy-horizontal','horizontal-value','policy-stat-horizontal'],
++        ['vertical','policy-vertical','vertical-value','policy-stat-vertical'],
++        ['horizon','policy-horizon','horizon-value','policy-stat-horizon']
++      ].map(([name,slider,readout,stat])=>[name,{value:+document.getElementById(slider).value,
++        label:document.getElementById(readout).textContent,active:document.getElementById(stat).textContent}])),
+       feedback:document.querySelector('#builder-feedback').textContent,
+       python:document.querySelector('#python-status').textContent,
+       encounter:{hidden:document.querySelector('#encounter-content').hidden,
+@@ -159,7 +165,8 @@
+ async function screenshot(test) {
+   await details('.state-workbench', false);
+   report.layout = await evaluate(`(() => ({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,
+-    controls:Object.fromEntries(['toggle-run','reset-world','speed-range','speed-value'].map(id=>{
++    controls:Object.fromEntries(['toggle-run','reset-world','speed-range','speed-value',
++      'policy-horizontal','horizontal-value','policy-vertical','vertical-value','policy-horizon','horizon-value'].map(id=>{
+       const n=document.getElementById(id),r=n.getBoundingClientRect();
+       return [id,{x:r.x,y:r.y+scrollY,width:r.width,height:r.height,visible:!!n.getClientRects().length,text:n.textContent}];
+     }))}))()`);
+@@ -231,6 +238,20 @@
+   })();`});
+   for(const rate of [3,0.5]){
+     const test={name:`reset-${rate}x`,checks:[],observations:{}};report.cases.push(test);await freshPage();
++    await details('.policy-editor');
++    const verticalLabels=await evaluate('({chosen:(1500).toLocaleString()+" FT",default:(1000).toLocaleString()+" FT"})');
++    const policies=[
++      {name:'horizontal',chosen:6,chosenLabel:'6.0 NM',chosenActive:'6.0',default:5,defaultLabel:'5.0 NM',defaultActive:'5.0'},
++      {name:'vertical',chosen:1500,chosenLabel:verticalLabels.chosen,chosenActive:'1,500',default:1000,defaultLabel:verticalLabels.default,defaultActive:'1,000'},
++      {name:'horizon',chosen:6,chosenLabel:'6.0 MIN',chosenActive:'6.0',default:5,defaultLabel:'5.0 MIN',defaultActive:'5.0'}
++    ];
++    for(const policy of policies)await setRange(`#policy-${policy.name}`,policy.chosen);
++    const edited=await world();test.observations.edited_policy=edited.policy;
++    for(const policy of policies){
++      check(test,`chosen ${policy.name} policy slider`,edited.policy[policy.name].value,policy.chosen);
++      check(test,`chosen ${policy.name} policy readout`,edited.policy[policy.name].label,policy.chosenLabel);
++      check(test,`chosen active ${policy.name} policy`,edited.policy[policy.name].active,policy.chosenActive);
++    }
+     await setRange('#speed-range',rate);await click('#toggle-run');await tick(1000);await tick(1080);
+     const moving=await world();test.observations.moving=moving;
+     progression(test,'chosen rate',fixture.state,moving.world,0.08*rate,fixture.now);
+@@ -241,6 +262,11 @@
+     check(test,'reset slider value',reset.rate,1);
+     check(test,'reset rate readout',reset.rate_label,'1.0x');
+     check(test,'reset visible clock',reset.clock,'T+0 SEC');
++    for(const policy of policies){
++      check(test,`reset ${policy.name} policy slider`,reset.policy[policy.name].value,policy.default);
++      check(test,`reset ${policy.name} policy readout`,reset.policy[policy.name].label,policy.defaultLabel);
++      check(test,`reset active ${policy.name} policy`,reset.policy[policy.name].active,policy.defaultActive);
++    }
+     check(test,'reset encounter forecast',[reset.encounter.hidden,reset.encounter.time_disabled],[false,false]);
+     check(test,'reset encounter source',reset.encounter.source,`WORLD ${reset.world.version} · CURRENT PAUSED TRAFFIC`);
+     if(rate===3)await screenshot(test);
+@@ -254,10 +280,16 @@
+       check(test,'known baseline stale rate readout',reset.rate_label,`${rate.toFixed(1)}x`);
+       progression(test,'known baseline retained rate',fixture.state,resumed.world,0.08*rate,fixture.now);
+       test.expected_baseline_failures=['reset rate readout','reset default engine rate: clock'];
++      for(const policy of policies){
++        check(test,`known baseline stale ${policy.name} policy readout`,reset.policy[policy.name].label,policy.chosenLabel);
++        test.expected_baseline_failures.push(`reset ${policy.name} policy readout`);
++      }
+       for(const aircraft of fixture.state.aircraft)for(const [axis,velocity] of [['east','vx_nm_min'],['north','vy_nm_min'],['altitude','climb_ft_min']])
+         if(aircraft[velocity]!==0)test.expected_baseline_failures.push(`reset default engine rate: ${aircraft.aircraft_id} ${axis}`);
+     }
+     test.events=await evaluate('window.__toweropsPlaybackReceiving.events');
++    for(const policy of policies)check(test,`policy-${policy.name} received native input`,
++      test.events.some(e=>e.id===`policy-${policy.name}`&&e.type==='input'&&e.trusted),true);
+   }
+   for(const kind of ['policy','refused-flight']){
+     const test={name:`automatic-pause-${kind}-2x`,checks:[],observations:{}};report.cases.push(test);await freshPage();

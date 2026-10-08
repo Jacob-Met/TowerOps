@@ -1,0 +1,400 @@
+﻿2026-10-08T12:02:38.8969485Z Current runner version: '2.337.0'
+2026-10-08T12:02:38.8995588Z ##[group]Runner Image Provisioner
+2026-10-08T12:02:38.8996471Z Hosted Compute Agent
+2026-10-08T12:02:38.8997211Z Version: 20261002.596
+2026-10-08T12:02:38.8997875Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T12:02:38.8998661Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T12:02:38.8999645Z Worker ID: {e025ade8-f890-4a9e-8d71-26093949897e}
+2026-10-08T12:02:38.9000371Z Region: eastus
+2026-10-08T12:02:38.9001016Z Cloud: Azure
+2026-10-08T12:02:38.9001575Z ##[endgroup]
+2026-10-08T12:02:38.9003086Z ##[group]Operating System
+2026-10-08T12:02:38.9003937Z Ubuntu
+2026-10-08T12:02:38.9004495Z 24.04.5
+2026-10-08T12:02:38.9005100Z LTS
+2026-10-08T12:02:38.9005629Z ##[endgroup]
+2026-10-08T12:02:38.9006199Z ##[group]Runner Image
+2026-10-08T12:02:38.9006912Z Image: ubuntu-24.04
+2026-10-08T12:02:38.9007507Z Version: 20261004.327.1
+2026-10-08T12:02:38.9009127Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T12:02:38.9010843Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T12:02:38.9011996Z ##[endgroup]
+2026-10-08T12:02:38.9013105Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T12:02:38.9015501Z Contents: read
+2026-10-08T12:02:38.9016205Z Metadata: read
+2026-10-08T12:02:38.9016875Z ##[endgroup]
+2026-10-08T12:02:38.9019545Z Secret source: Actions
+2026-10-08T12:02:38.9020604Z Cache mode: write
+2026-10-08T12:02:38.9021554Z Prepare workflow directory
+2026-10-08T12:02:38.9354499Z Prepare all required actions
+2026-10-08T12:02:38.9402259Z Getting action download info
+2026-10-08T12:02:39.1620153Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-08T12:02:39.2759924Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-08T12:02:39.3535901Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-08T12:02:39.4539311Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+2026-10-08T12:02:39.6574725Z Getting action download info
+2026-10-08T12:02:39.7187825Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-08T12:02:39.8472669Z Complete job name: build
+2026-10-08T12:02:39.9362846Z ##[group]Run actions/checkout@v4
+2026-10-08T12:02:39.9363802Z with:
+2026-10-08T12:02:39.9364264Z   repository: Jacob-Met/TowerOps
+2026-10-08T12:02:39.9367974Z   token: ***
+2026-10-08T12:02:39.9368420Z   ssh-strict: true
+2026-10-08T12:02:39.9369227Z   ssh-user: git
+2026-10-08T12:02:39.9369838Z   persist-credentials: true
+2026-10-08T12:02:39.9370351Z   clean: true
+2026-10-08T12:02:39.9370811Z   sparse-checkout-cone-mode: true
+2026-10-08T12:02:39.9371346Z   fetch-depth: 1
+2026-10-08T12:02:39.9371778Z   fetch-tags: false
+2026-10-08T12:02:39.9372231Z   show-progress: true
+2026-10-08T12:02:39.9372702Z   lfs: false
+2026-10-08T12:02:39.9373120Z   submodules: false
+2026-10-08T12:02:39.9373582Z   set-safe-directory: true
+2026-10-08T12:02:39.9374102Z   allow-unsafe-pr-checkout: false
+2026-10-08T12:02:39.9374946Z ##[endgroup]
+2026-10-08T12:02:40.0396065Z Syncing repository: Jacob-Met/TowerOps
+2026-10-08T12:02:40.0399240Z ##[group]Getting Git version info
+2026-10-08T12:02:40.0400876Z Working directory is '/home/runner/work/TowerOps/TowerOps'
+2026-10-08T12:02:40.0402746Z [command]/usr/bin/git version
+2026-10-08T12:02:40.0494560Z git version 2.55.0
+2026-10-08T12:02:40.0556857Z ##[endgroup]
+2026-10-08T12:02:40.0569819Z Temporarily overriding HOME='/home/runner/work/_temp/7e68819e-e928-403a-a386-12236aadee14' before making global git config changes
+2026-10-08T12:02:40.0572111Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T12:02:40.0576418Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TowerOps/TowerOps
+2026-10-08T12:02:40.0633689Z Deleting the contents of '/home/runner/work/TowerOps/TowerOps'
+2026-10-08T12:02:40.0638272Z ##[group]Initializing the repository
+2026-10-08T12:02:40.0642494Z [command]/usr/bin/git init /home/runner/work/TowerOps/TowerOps
+2026-10-08T12:02:40.0769935Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T12:02:40.0771491Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T12:02:40.0773188Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T12:02:40.0774449Z hint: call:
+2026-10-08T12:02:40.0775465Z hint:
+2026-10-08T12:02:40.0776301Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T12:02:40.0777269Z hint:
+2026-10-08T12:02:40.0778178Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T12:02:40.0779960Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T12:02:40.0780788Z hint:
+2026-10-08T12:02:40.0781227Z hint: 	git branch -m <name>
+2026-10-08T12:02:40.0781736Z hint:
+2026-10-08T12:02:40.0782377Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T12:02:40.0783423Z Initialized empty Git repository in /home/runner/work/TowerOps/TowerOps/.git/
+2026-10-08T12:02:40.0786315Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/TowerOps
+2026-10-08T12:02:40.0839054Z ##[endgroup]
+2026-10-08T12:02:40.0839951Z ##[group]Disabling automatic garbage collection
+2026-10-08T12:02:40.0849120Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T12:02:40.0881352Z ##[endgroup]
+2026-10-08T12:02:40.0882754Z ##[group]Setting up auth
+2026-10-08T12:02:40.0890531Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T12:02:40.0938051Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T12:02:40.1342752Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T12:02:40.1382677Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T12:02:40.1608360Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T12:02:40.1643251Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T12:02:40.1870363Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T12:02:40.1912323Z ##[endgroup]
+2026-10-08T12:02:40.1913957Z ##[group]Fetching the repository
+2026-10-08T12:02:40.1924880Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +83b2e80af7b0143b4c0c399973aef80734e7b99f:refs/remotes/pull/44/merge
+2026-10-08T12:02:40.5645886Z From https://github.com/Jacob-Met/TowerOps
+2026-10-08T12:02:40.5652657Z  * [new ref]         83b2e80af7b0143b4c0c399973aef80734e7b99f -> pull/44/merge
+2026-10-08T12:02:40.5656994Z ##[endgroup]
+2026-10-08T12:02:40.5658174Z ##[group]Determining the checkout info
+2026-10-08T12:02:40.5660331Z ##[endgroup]
+2026-10-08T12:02:40.5661703Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T12:02:40.5723409Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T12:02:40.5756554Z ##[group]Checking out the ref
+2026-10-08T12:02:40.5760141Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/44/merge
+2026-10-08T12:02:40.6130669Z Note: switching to 'refs/remotes/pull/44/merge'.
+2026-10-08T12:02:40.6131859Z 
+2026-10-08T12:02:40.6132642Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T12:02:40.6134457Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T12:02:40.6136598Z state without impacting any branches by switching back to a branch.
+2026-10-08T12:02:40.6137682Z 
+2026-10-08T12:02:40.6138521Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T12:02:40.6141441Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T12:02:40.6142905Z 
+2026-10-08T12:02:40.6143562Z   git switch -c <new-branch-name>
+2026-10-08T12:02:40.6144590Z 
+2026-10-08T12:02:40.6145225Z Or undo this operation with:
+2026-10-08T12:02:40.6146247Z 
+2026-10-08T12:02:40.6146863Z   git switch -
+2026-10-08T12:02:40.6147704Z 
+2026-10-08T12:02:40.6149269Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T12:02:40.6151318Z 
+2026-10-08T12:02:40.6153416Z HEAD is now at 83b2e80 Merge 92700c313125d2c1fd32f7d016febe7090e6adc6 into 9a2468f9bbaa25c0ab92cb12f712170420f9e622
+2026-10-08T12:02:40.6160250Z ##[endgroup]
+2026-10-08T12:02:40.6194798Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T12:02:40.6222735Z 83b2e80af7b0143b4c0c399973aef80734e7b99f
+2026-10-08T12:02:40.6605619Z ##[group]Run actions/setup-python@v5
+2026-10-08T12:02:40.6606755Z with:
+2026-10-08T12:02:40.6607520Z   python-version: 3.12
+2026-10-08T12:02:40.6608425Z   check-latest: false
+2026-10-08T12:02:40.6618014Z   token: ***
+2026-10-08T12:02:40.6619097Z   update-environment: true
+2026-10-08T12:02:40.6620235Z   allow-prereleases: false
+2026-10-08T12:02:40.6621227Z   freethreaded: false
+2026-10-08T12:02:40.6622090Z ##[endgroup]
+2026-10-08T12:02:40.7948314Z ##[group]Installed versions
+2026-10-08T12:02:40.8063821Z (node:2282) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T12:02:40.8068117Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T12:02:40.8070362Z Successfully set up CPython (3.12.15)
+2026-10-08T12:02:40.8072205Z ##[endgroup]
+2026-10-08T12:02:40.8409875Z ##[group]Run actions/setup-node@v4
+2026-10-08T12:02:40.8410999Z with:
+2026-10-08T12:02:40.8411761Z   node-version: 20
+2026-10-08T12:02:40.8412560Z   cache: npm
+2026-10-08T12:02:40.8413559Z   cache-dependency-path: web/airspace/package-lock.json
+2026-10-08T12:02:40.8414858Z   always-auth: false
+2026-10-08T12:02:40.8415685Z   check-latest: false
+2026-10-08T12:02:40.8424453Z   token: ***
+2026-10-08T12:02:40.8425195Z env:
+2026-10-08T12:02:40.8426136Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:40.8427801Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T12:02:40.8429600Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:40.8431092Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:40.8432584Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:40.8434106Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T12:02:40.8435420Z ##[endgroup]
+2026-10-08T12:02:40.9980922Z Attempting to download 20...
+2026-10-08T12:02:41.0090281Z (node:2291) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T12:02:41.0094090Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T12:02:41.5302793Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-10-08T12:02:41.8454593Z Extracting ...
+2026-10-08T12:02:41.8605009Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/30390b5d-77eb-441f-b295-b3175ba4ee0e -f /home/runner/work/_temp/ba49ad50-3c34-4576-b0ad-06e01c8f45a5
+2026-10-08T12:02:42.8841707Z Adding to the cache ...
+2026-10-08T12:02:44.7813119Z ##[group]Environment details
+2026-10-08T12:02:45.0134227Z node: v20.20.2
+2026-10-08T12:02:45.0134981Z npm: 10.8.2
+2026-10-08T12:02:45.0135334Z yarn: 1.22.22
+2026-10-08T12:02:45.0136130Z ##[endgroup]
+2026-10-08T12:02:45.0161494Z [command]/opt/hostedtoolcache/node/20.20.2/x64/bin/npm config get cache
+2026-10-08T12:02:45.1182595Z /home/runner/.npm
+2026-10-08T12:02:45.1798305Z Cache hit for: node-cache-Linux-x64-npm-a65227902b64a495e3d3fc6744c3411a8ba970e4a17124137da1c86a2fb41143
+2026-10-08T12:02:45.1906502Z (node:2291) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-08T12:02:45.5338117Z Received 36075156 of 36075156 (100.0%), 120.7 MBs/sec
+2026-10-08T12:02:45.5339741Z Cache Size: ~34 MB (36075156 B)
+2026-10-08T12:02:45.5373753Z [command]/usr/bin/tar -xf /home/runner/work/_temp/55ad8039-6f1b-4c48-92b8-c5d1ef69592e/cache.tzst -P -C /home/runner/work/TowerOps/TowerOps --use-compress-program unzstd
+2026-10-08T12:02:45.6020982Z Cache restored successfully
+2026-10-08T12:02:45.6041921Z Cache restored from key: node-cache-Linux-x64-npm-a65227902b64a495e3d3fc6744c3411a8ba970e4a17124137da1c86a2fb41143
+2026-10-08T12:02:45.6282130Z ##[group]Run python tools/generate_airspace_reference.py --check
+2026-10-08T12:02:45.6282697Z [36;1mpython tools/generate_airspace_reference.py --check[0m
+2026-10-08T12:02:45.6569280Z shell: /usr/bin/bash -e {0}
+2026-10-08T12:02:45.6569598Z env:
+2026-10-08T12:02:45.6569923Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:45.6570492Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T12:02:45.6571039Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:45.6571519Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:45.6572001Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:45.6572484Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T12:02:45.6572893Z ##[endgroup]
+2026-10-08T12:02:45.7993556Z Python reference OK: 4 real-source scenarios
+2026-10-08T12:02:45.8112427Z ##[group]Run npm ci
+2026-10-08T12:02:45.8112727Z [36;1mnpm ci[0m
+2026-10-08T12:02:45.8179599Z shell: /usr/bin/bash -e {0}
+2026-10-08T12:02:45.8179865Z env:
+2026-10-08T12:02:45.8180145Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:45.8180615Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T12:02:45.8181054Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:45.8181453Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:45.8181842Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:45.8182254Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T12:02:45.8182593Z ##[endgroup]
+2026-10-08T12:02:47.1359888Z 
+2026-10-08T12:02:47.1390013Z added 49 packages, and audited 50 packages in 1s
+2026-10-08T12:02:47.1394273Z 
+2026-10-08T12:02:47.1394717Z 18 packages are looking for funding
+2026-10-08T12:02:47.1395418Z   run `npm fund` for details
+2026-10-08T12:02:47.1395873Z 
+2026-10-08T12:02:47.1396228Z found 0 vulnerabilities
+2026-10-08T12:02:47.1611887Z ##[group]Run npm test
+2026-10-08T12:02:47.1612175Z [36;1mnpm test[0m
+2026-10-08T12:02:47.1677816Z shell: /usr/bin/bash -e {0}
+2026-10-08T12:02:47.1678070Z env:
+2026-10-08T12:02:47.1678337Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:47.1679055Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T12:02:47.1679528Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:47.1679940Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:47.1680348Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T12:02:47.1680757Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T12:02:47.1681086Z ##[endgroup]
+2026-10-08T12:02:47.2849400Z 
+2026-10-08T12:02:47.2850713Z > towerops-airspace-lab@0.1.0 test
+2026-10-08T12:02:47.2851485Z > vitest run
+2026-10-08T12:02:47.2851850Z 
+2026-10-08T12:02:47.6634849Z 
+2026-10-08T12:02:47.6641701Z [1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/runner/work/TowerOps/TowerOps/web/airspace[39m
+2026-10-08T12:02:47.6642969Z 
+2026-10-08T12:02:48.1440906Z  [32m✓[39m tests/encounter.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 71[2mms[22m[39m
+2026-10-08T12:02:48.1542648Z  [32m✓[39m tests/track-edit.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+2026-10-08T12:02:48.3878572Z  [31m❯[39m tests/playback-controls.test.ts [2m([22m[2m14 tests[22m[2m | [22m[31m14 failed[39m[2m)[22m[32m 289[2mms[22m[39m
+2026-10-08T12:02:48.3880380Z [31m     [31m×[31m starts at the displayed default rate[39m[32m 190[2mms[22m[39m
+2026-10-08T12:02:48.3881735Z [31m     [31m×[31m Reset restores the default engine rate after 0.5x playback[39m[32m 8[2mms[22m[39m
+2026-10-08T12:02:48.3883372Z [31m     [31m×[31m Reset restores the default engine rate after 3x playback[39m[32m 16[2mms[22m[39m
+2026-10-08T12:02:48.3885186Z [31m     [31m×[31m add-traffic pauses playback and displays the action that resumes it[39m[32m 12[2mms[22m[39m
+2026-10-08T12:02:48.3887082Z [31m     [31m×[31m perturb-track pauses playback and displays the action that resumes it[39m[32m 5[2mms[22m[39m
+2026-10-08T12:02:48.3889397Z [31m     [31m×[31m policy-horizontal pauses playback and displays the action that resumes it[39m[32m 5[2mms[22m[39m
+2026-10-08T12:02:48.3891304Z [31m     [31m×[31m add-custom-flight pauses playback and displays the action that resumes it[39m[32m 9[2mms[22m[39m
+2026-10-08T12:02:48.3893043Z [31m     [31m×[31m remove-selected pauses playback and displays the action that resumes it[39m[32m 5[2mms[22m[39m
+2026-10-08T12:02:48.3894034Z [31m     [31m×[31m load-world pauses playback and displays the action that resumes it[39m[32m 7[2mms[22m[39m
+2026-10-08T12:02:48.3894994Z [31m     [31m×[31m displays the existing pause when custom-flight validation returns early[39m[32m 6[2mms[22m[39m
+2026-10-08T12:02:48.3896476Z [31m     [31m×[31m displays the existing pause when removal must retain the last aircraft[39m[32m 11[2mms[22m[39m
+2026-10-08T12:02:48.3898480Z [31m     [31m×[31m keeps playback running when WorldState validation fails before the pause point[39m[32m 3[2mms[22m[39m
+2026-10-08T12:02:48.3931210Z [31m     [31m×[31m updates the pause label before the planner promise settles[39m[32m 4[2mms[22m[39m
+2026-10-08T12:02:48.3932968Z [31m     [31m×[31m retains the chosen rate through manual pause and resume[39m[32m 4[2mms[22m[39m
+2026-10-08T12:02:48.4560980Z  [32m✓[39m tests/audit-wire.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 60[2mms[22m[39m
+2026-10-08T12:02:48.7050631Z  [32m✓[39m tests/advisory-numeric.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 75[2mms[22m[39m
+2026-10-08T12:02:49.1693492Z  [32m✓[39m tests/python-float-parity.test.mjs [2m([22m[2m5 tests[22m[2m)[22m[33m 743[2mms[22m[39m
+2026-10-08T12:02:49.1921958Z  [32m✓[39m tests/python-audit-interop.test.mjs [2m([22m[2m3 tests[22m[2m)[22m[32m 249[2mms[22m[39m
+2026-10-08T12:02:49.2740164Z  [32m✓[39m tests/decision-trace.test.mjs [2m([22m[2m6 tests[22m[2m)[22m[33m 593[2mms[22m[39m
+2026-10-08T12:02:49.4091306Z  [32m✓[39m tests/algorithm.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+2026-10-08T12:02:49.4110354Z  [32m✓[39m tests/world-tools.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+2026-10-08T12:02:49.4148413Z 
+2026-10-08T12:02:49.4149649Z [31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 14 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+2026-10-08T12:02:49.4150664Z 
+2026-10-08T12:02:49.4156050Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mstarts at the displayed default rate
+2026-10-08T12:02:49.4159279Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mReset restores the default engine rate after 0.5x playback
+2026-10-08T12:02:49.4162265Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mReset restores the default engine rate after 3x playback
+2026-10-08T12:02:49.4165576Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22madd-traffic pauses playback and displays the action that resumes it
+2026-10-08T12:02:49.4168689Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mperturb-track pauses playback and displays the action that resumes it
+2026-10-08T12:02:49.4172312Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mpolicy-horizontal pauses playback and displays the action that resumes it
+2026-10-08T12:02:49.4175464Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22madd-custom-flight pauses playback and displays the action that resumes it
+2026-10-08T12:02:49.4178572Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mremove-selected pauses playback and displays the action that resumes it
+2026-10-08T12:02:49.4181853Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mload-world pauses playback and displays the action that resumes it
+2026-10-08T12:02:49.4184900Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mdisplays the existing pause when custom-flight validation returns early
+2026-10-08T12:02:49.4187958Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mdisplays the existing pause when removal must retain the last aircraft
+2026-10-08T12:02:49.4191578Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mkeeps playback running when WorldState validation fails before the pause point
+2026-10-08T12:02:49.4194717Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mupdates the pause label before the planner promise settles
+2026-10-08T12:02:49.4197575Z [41m[1m FAIL [22m[49m tests/playback-controls.test.ts[2m > [22mtraffic playback controls[2m > [22mretains the chosen rate through manual pause and resume
+2026-10-08T12:02:49.4200047Z [31m[1mTypeError[22m: Cannot read properties of null (reading 'addEventListener')[39m
+2026-10-08T12:02:49.4201864Z [36m [2m❯[22m createEncounterExplorer src/encounter-view.ts:[2m107:9[22m[39m
+2026-10-08T12:02:49.4242099Z     [90m105|[39m   }
+2026-10-08T12:02:49.4243808Z     [90m106|[39m   [35mfunction[39m [34mseek[39m(next[33m:[39m number) { minutes [33m=[39m next[33m;[39m [34mrender[39m()[33m;[39m }
+2026-10-08T12:02:49.4246484Z     [90m107|[39m   first[33m.[39m[34maddEventListener[39m([32m'change'[39m[33m,[39m () [33m=>[39m { [34mrefreshPair[39m()[33m;[39m [34mrender[39m()[33m;[39m })[33m;[39m
+2026-10-08T12:02:49.4248646Z     [90m   |[39m         [31m^[39m
+2026-10-08T12:02:49.4250578Z     [90m108|[39m   second[33m.[39m[34maddEventListener[39m([32m'change'[39m[33m,[39m render)[33m;[39m
+2026-10-08T12:02:49.4251366Z 
+2026-10-08T12:02:49.4252663Z     [90m109|[39m   cursor.addEventListener('input', () => seek(cursor.valueAsNumber / 6…
+2026-10-08T12:02:49.4254486Z [2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m9 passed[39m[22m[90m (10)[39m
+2026-10-08T12:02:49.4256531Z [2m      Tests [22m [1m[31m14 failed[39m[22m[2m | [22m[1m[32m120 passed[39m[22m[90m (134)[39m
+2026-10-08T12:02:49.4282987Z [90m [2m❯[22m src/main.ts:[2m18:25[22m[39m
+2026-10-08T12:02:49.4283758Z [2m   Start at [22m 12:02:47
+2026-10-08T12:02:49.4285063Z [90m [2m❯[22m tests/playback-controls.test.ts:[2m69:3[22m[39m
+2026-10-08T12:02:49.4287307Z [2m   Duration [22m 1.74s[2m (transform 468ms, setup 0ms, import 697ms, tests 2.18s, environment 1ms)[22m
+2026-10-08T12:02:49.4288280Z 
+2026-10-08T12:02:49.4319345Z 
+2026-10-08T12:02:49.4320081Z [31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/14]⎯[22m[39m
+2026-10-08T12:02:49.4333324Z 
+2026-10-08T12:02:49.4333500Z 
+2026-10-08T12:02:49.4364225Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4375863Z 
+2026-10-08T12:02:49.4380263Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4382882Z 
+2026-10-08T12:02:49.4386420Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4389509Z 
+2026-10-08T12:02:49.4393156Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4396011Z 
+2026-10-08T12:02:49.4399901Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4402786Z 
+2026-10-08T12:02:49.4406415Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4408555Z 
+2026-10-08T12:02:49.4411929Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4413966Z 
+2026-10-08T12:02:49.4416004Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4417197Z 
+2026-10-08T12:02:49.4419156Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4423046Z 
+2026-10-08T12:02:49.4437802Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4439715Z 
+2026-10-08T12:02:49.4443028Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4444454Z 
+2026-10-08T12:02:49.4446481Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4447685Z 
+2026-10-08T12:02:49.4449723Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4450949Z 
+2026-10-08T12:02:49.4452667Z ##[error]TypeError: Cannot read properties of null (reading 'addEventListener')
+ ❯ createEncounterExplorer src/encounter-view.ts:107:9
+ ❯ src/main.ts:18:25
+ ❯ tests/playback-controls.test.ts:69:3
+
+
+2026-10-08T12:02:49.4663694Z ##[error]Process completed with exit code 1.
+2026-10-08T12:02:49.4861343Z Post job cleanup.
+2026-10-08T12:02:49.5889644Z [command]/usr/bin/git version
+2026-10-08T12:02:49.5939588Z git version 2.55.0
+2026-10-08T12:02:49.5981930Z Temporarily overriding HOME='/home/runner/work/_temp/14cbfeae-5176-4050-9c2d-63892ed1d06c' before making global git config changes
+2026-10-08T12:02:49.5984224Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T12:02:49.5990343Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TowerOps/TowerOps
+2026-10-08T12:02:49.6060021Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T12:02:49.6082835Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T12:02:49.6380797Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T12:02:49.6420016Z http.https://github.com/.extraheader
+2026-10-08T12:02:49.6431407Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-08T12:02:49.6479702Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T12:02:49.6749484Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T12:02:49.6785206Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T12:02:49.7317659Z Cleaning up orphan processes
+2026-10-08T12:02:49.7581974Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
