@@ -1,0 +1,101 @@
+{
+  "schema": "towerops-hosted-http-v2-independent-source-review/v1",
+  "repository": "Jacob-Met/TowerOps",
+  "reviewer": "/root/memory_capability",
+  "review_date": "2026-10-08",
+  "accepted_for_declared_source_scope": true,
+  "assembly_history": "This written receipt assembles the source/input review completed before the first hosted request. It was saved after that request; no earlier standalone receipt timestamp is implied. The original source files, failed first save and execution packet remain unchanged.",
+  "source_pins": [
+    {
+      "file": "receiving-browser-hosted.mjs",
+      "bytes": 26523,
+      "sha256": "3fe8fff96047e14ecffdc5f706c40abc551b855329fd853452f405d30c0919d7",
+      "git_blob": "bc82520d9a9e3b6f5ac892b6d3091539cb9b2086"
+    },
+    {
+      "file": "pages-delivery.mjs",
+      "bytes": 11674,
+      "sha256": "227824abe3bbb332348b59d552d24a2892a3137af0536e40268a32122bd68939",
+      "git_blob": "bf30a767944463c5571643afb7e4ffacf7b9416a"
+    },
+    {
+      "file": "run-hosted.py",
+      "bytes": 5479,
+      "sha256": "357925aa37f9e9676080e99a953bde984635d8aed15a3fc7b55593508d04cb09",
+      "git_blob": "5b68914955e2b8070f895c222a72bf9c1839f18a"
+    },
+    {
+      "file": "v1-to-v2.patch",
+      "bytes": 12972,
+      "sha256": "3f0c15ac70d76530b71a2f3cd520d38e234bf0a5247700c31cce08bcd658298f"
+    }
+  ],
+  "source_root": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/hosted-preparation-v2",
+  "checks": {
+    "exact_three_file_patch_regenerated": true,
+    "entire_selected_case_region": {
+      "whole_case_region_byte_exact": true,
+      "original_v1_driver_sha256": "afa04e1e07bcc2d982115811b70f9377c1e08254622fe1fa9472d603a7f5ddef",
+      "v2_driver_sha256": "3fe8fff96047e14ecffdc5f706c40abc551b855329fd853452f405d30c0919d7",
+      "case_bytes": 8399,
+      "review_kind": "read-only source preservation"
+    },
+    "preserved_cases": [
+      "Reset from3x",
+      "automatic policy pause at2x"
+    ],
+    "actual_input_received": {
+      "kind": "Actual input validation through frozen readPagesReceipt only",
+      "input_sha256": "92dc59d6c2c50731ed3b8380537bb9ac20fd02f72320b635130dc531d1a1d95a",
+      "merge_commit": "7865ffeda311b711b13f2d04fedeeef5c432017e",
+      "merge_tree": "878ecf58ab8a99c77331aa99ff1278b902f3aa75",
+      "run": {
+        "id": 37798915263,
+        "attempt": 1,
+        "head_sha": "7865ffeda311b711b13f2d04fedeeef5c432017e",
+        "event": "push",
+        "head_branch": "main",
+        "path": ".github/workflows/airspace-demo.yml",
+        "conclusion": "success"
+      },
+      "deploy_job": {
+        "id": 113386069706,
+        "run_id": 37798915263,
+        "conclusion": "success",
+        "artifact_id": 11560420141,
+        "page_url": "http://jacobmetoyer.com/TowerOps/"
+      },
+      "artifact_id": 11560420141,
+      "archive_sha256": "516bbc7a96dc242c023bf2d7cb221e5e5ecab8fe79d6c93e2a0167cf204642a5",
+      "app_url": "http://jacobmetoyer.com/TowerOps/airspace/",
+      "source_blob_count": 60,
+      "artifact_app_file_count": 16,
+      "artifact_app_bytes": 14557974,
+      "network_calls": 0,
+      "scope": "Source manifest declarations and actual deployment input agree; raw GitHub/archive authenticity remains root custody; no served request or browser execution."
+    },
+    "redirect_boundary": "The helper preserves the actual HTTP(S) page URL. It verifies the document first, follows only observed HTTP(S) redirects (maximum five per file), rejects cycles, different hostname/port, credentials, queries/fragments and HTTPS downgrades, and records each response/hop. Asset URLs resolve against the observed final document location.",
+    "browser_capture_boundary": "The browser target origin is set after served-file verification resolves the app URL. Browser redirect targets must bind the corresponding verified artifact file; tracked Document/Script/Stylesheet bodies retain byte-hash checks with disabled cache/service workers in a fresh profile.",
+    "canvas_change": "The page still obtains native canvas ImageData. The same RGBA bytes are transferred in bounded base64 chunks and hashed by Node, avoiding reliance on unavailable crypto.subtle on ordinary HTTP. No app or build source change is introduced.",
+    "launcher_change": "Only the two expected receiver source hashes change in the launcher.",
+    "no_remote_calls_or_browser_during_this_review": true
+  },
+  "custody_limits": [
+    "The actual deployment run/job/artifact and archive-extraction provenance is supplied and independently acquired by the parent. The helper checks that structured input and native source/build pins agree; it does not independently authenticate GitHub or reacquire the archive.",
+    "Source acceptance does not claim an exercised redirect, canvas path, browser case or hosted page result. The actual first request and its failed artifact admission are received separately.",
+    "The selected case bodies are unchanged from the previously qualified driver. This hosted selection covers two cases only; no new mobile or four-case hosted result is implied."
+  ],
+  "preserved_inspection_failures": [
+    {
+      "kind": "ENOSPC receipt save",
+      "path": "/dev/shm/hamon-memory-capability-55e3e26c5905/towerops-hosted-http-v2-review/hosted-receiver-http-v2-source-review.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualified": false
+    },
+    {
+      "kind": "source-inspection helper anchor",
+      "description": "The first read-only comparison used a nonexistent beforeRate anchor and stopped. The corrected observed loop anchor established the exact8399-byte case-region comparison. No native run or product finding resulted."
+    }
+  ]
+}

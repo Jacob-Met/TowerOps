@@ -1,0 +1,201 @@
+--- v1/receiving-browser-hosted.mjs
++++ v2/receiving-browser-hosted.mjs
+@@ -24,10 +24,11 @@
+ const mobile = false, expectBroken = false;
+ assert.ok(!args.includes('--mobile') && !args.includes('--expect-broken'), 'One candidate hosted desktop receiver');
+ const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+-const report = { schema: 'towerops-hosted-playback-receiving/v1', started_at: new Date().toISOString(),
++const report = { schema: 'towerops-hosted-playback-receiving/v2', started_at: new Date().toISOString(),
+   mobile, expect_broken: expectBroken, cases: [], screenshots: [], page_errors: [], requests: [],
+   boundaries: ['Local qualification source/build remain exact; served bytes are compared with the actual Actions Pages artifact.',
+     'RAF callbacks receive controlled timestamps; page physics and drawing are unchanged.',
++    'The actual returned HTTP(S) URL and observed redirects are retained; native ImageData bytes are hashed in the receiver.',
+     'Controls use Chrome input events; observations use the native Export live world action.',
+     'Hosted scope is Reset after 3x and policy auto-pause at 2x; no planner, approval, readback, Pyodide execution, main-hub installation, or user profile qualification.'] };
+ let server, chrome, socket, profile, origin, nextId = 0, chromeErrors = '';
+@@ -114,10 +115,11 @@
+ }
+ async function world() {
+   await details('.state-workbench'); await click('#export-world');
+-  return evaluate(`(async () => {
++  const observation = await evaluate(`(async () => {
+     const canvas=document.querySelector('#airspace'), ctx=canvas.getContext('2d');
+     const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+-    const digest=await crypto.subtle.digest('SHA-256',pixels);
++    let binary='';
++    for(let i=0;i<pixels.length;i+=32768)binary+=String.fromCharCode(...pixels.subarray(i,i+32768));
+     return { world:JSON.parse(document.querySelector('#world-json').value),
+       label:document.querySelector('#toggle-run').textContent, rate:+document.querySelector('#speed-range').value,
+       rate_label:document.querySelector('#speed-value').textContent, clock:document.querySelector('#sim-clock').textContent,
+@@ -133,8 +135,11 @@
+         time_disabled:document.querySelector('#encounter-time').disabled,
+         message:document.querySelector('#encounter-message').textContent,
+         source:document.querySelector('#encounter-source').textContent},
+-      canvas:{width:canvas.width,height:canvas.height,sha256:Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('')} };
++      canvas:{width:canvas.width,height:canvas.height,pixels_b64:btoa(binary)} };
+   })()`);
++  observation.canvas.sha256=createHash('sha256').update(Buffer.from(observation.canvas.pixels_b64,'base64')).digest('hex');
++  delete observation.canvas.pixels_b64;
++  return observation;
+ }
+ function check(test, name, actual, expected) {
+   try { assert.deepEqual(actual, expected); test.checks.push({ name, ok: true }); }
+@@ -214,7 +219,8 @@
+     else if(message.method==='Network.responseReceived'){
+       const r=message.params.response;report.requests.push({url:r.url,status:r.status,mime:r.mimeType});
+       deliveryTracker.response(message.params);
+-    }else if(message.method==='Network.loadingFinished')deliveryTracker.finished(message.params);
++    }else if(message.method==='Network.requestWillBeSent'&&message.params.redirectResponse)deliveryTracker.redirect(message.params);
++    else if(message.method==='Network.loadingFinished')deliveryTracker.finished(message.params);
+     else if(message.method==='Network.loadingFailed')deliveryTracker.failed(message.params);
+   });
+   await new Promise((resolve,reject)=>{socket.addEventListener('open',resolve,{once:true});socket.addEventListener('error',reject,{once:true});});
+--- v1/pages-delivery.mjs
++++ v2/pages-delivery.mjs
+@@ -8,6 +8,17 @@
+ const hex = (value, length) => typeof value === 'string' && new RegExp(`^[0-9a-f]{${length}}$`).test(value);
+ const positive = value => Number.isSafeInteger(value) && value > 0;
+ const trackedTypes = new Set(['Document', 'Script', 'Stylesheet']);
++const redirectStatuses = new Set([301, 302, 303, 307, 308]);
++
++function checkedRedirect(from, location) {
++  const before = new URL(from), after = new URL(location, before);
++  assert.ok(['http:', 'https:'].includes(after.protocol), 'Redirect must use HTTP(S)');
++  assert.equal(after.username + after.password + after.search + after.hash, '', 'Unexpected redirect URL fields');
++  assert.equal(after.hostname, before.hostname, 'Cross-host redirect is outside this receiving scope');
++  assert.equal(after.port, before.port, 'Redirect changed the service port');
++  assert.ok(before.protocol !== 'https:' || after.protocol === 'https:', 'HTTPS downgrade is outside this receiving scope');
++  return after.href;
++}
+ 
+ export async function readPagesReceipt(path, source, report) {
+   const raw = await readFile(path), input = JSON.parse(raw);
+@@ -34,7 +45,7 @@
+   assert.ok(hex(artifact.archive_sha256, 64));
+   assert.notEqual(artifact.expired, true);
+   const base = new URL(input.deploy_job.page_url);
+-  assert.equal(base.protocol, 'https:');
++  assert.ok(['http:', 'https:'].includes(base.protocol), 'Preserve the actual returned HTTP(S) URL');
+   assert.equal(base.username + base.password + base.search + base.hash, '');
+   if (!base.pathname.endsWith('/')) base.pathname += '/';
+   const appUrl = new URL('airspace/', base).href, files = new Map(), byUrl = new Map();
+@@ -62,36 +73,85 @@
+   assert.ok([...files.keys()].some(path => /^airspace\/assets\/.+\.js$/.test(path)));
+   assert.ok([...files.keys()].some(path => /^airspace\/assets\/.+\.css$/.test(path)));
+   report.delivery = { input: { path, bytes: raw.length, sha256: sha256(raw) }, identity: input,
+-    app_url: appUrl, artifact_app_bytes: bytes, served: [], browser_responses: [], browser_errors: [],
++    app_url: appUrl, artifact_app_bytes: bytes, served: [], browser_responses: [], browser_redirects: [], browser_errors: [],
+     boundary: 'Archive identity and regular-file map are supplied by the parent from the actual Actions artifact; this receiver verifies the delivered bytes and browser bodies.' };
+-  return { appUrl, files, byUrl };
++  return { appUrl, requestedAppUrl: appUrl, files, byUrl };
+ }
+ 
+ export async function verifyServedFiles(delivery, report) {
+-  for (const file of delivery.files.values()) {
+-    const row = { path: file.path, url: file.url, expected_bytes: file.bytes,
+-      expected_sha256: file.sha256, requested_at: new Date().toISOString() };
++  // Resolve the actual app document first. No scheme or new base is invented.
++  const index = delivery.files.get('airspace/index.html');
++  const ordered = [index, ...[...delivery.files.values()].filter(file => file !== index)];
++  for (const file of ordered) {
++    const requested = file === index ? delivery.requestedAppUrl
++      : new URL(file.path.slice(9), new URL('.', delivery.appUrl)).href;
++    const row = { path: file.path, url: requested, expected_bytes: file.bytes,
++      expected_sha256: file.sha256, requested_at: new Date().toISOString(), redirects: [], responses: [] };
+     report.delivery.served.push(row);
+-    const response = await fetch(file.url, { redirect: 'error', cache: 'no-store',
+-      signal: AbortSignal.timeout(30000), headers: { 'Accept-Encoding': 'identity', 'Cache-Control': 'no-cache' } });
+-    row.status = response.status; row.returned_url = response.url;
+-    row.headers = Object.fromEntries(['content-type', 'content-length', 'etag', 'last-modified',
+-      'cache-control', 'age', 'x-github-request-id'].map(key => [key, response.headers.get(key)]));
+-    assert.equal(response.status, 200, file.path); assert.equal(response.url, file.url);
++    let current = requested, response;
++    const seen = new Set([current]);
++    while (true) {
++      response = await fetch(current, { redirect: 'manual', cache: 'no-store',
++        signal: AbortSignal.timeout(30000), headers: { 'Accept-Encoding': 'identity', 'Cache-Control': 'no-cache' } });
++      const headers = Object.fromEntries(['content-type', 'content-length', 'etag', 'last-modified',
++        'cache-control', 'age', 'x-github-request-id', 'location'].map(key => [key, response.headers.get(key)]));
++      row.responses.push({ url: current, status: response.status, returned_url: response.url, headers });
++      assert.equal(response.url, current, 'Manual fetch must expose the actual response URL');
++      if (!redirectStatuses.has(response.status)) {
++        row.status = response.status; row.returned_url = response.url; row.headers = headers;
++        break;
++      }
++      const hop = { from: current, status: response.status, location: headers.location };
++      row.redirects.push(hop);
++      await response.body?.cancel();
++      assert.ok(row.redirects.length <= 5, 'At most five observed redirects per file');
++      assert.ok(headers.location, 'Redirect lacks a Location header');
++      hop.to = checkedRedirect(current, headers.location);
++      assert.ok(!seen.has(hop.to), 'Redirect cycle');
++      seen.add(hop.to); current = hop.to;
++    }
++    assert.equal(response.status, 200, file.path);
+     const hash = createHash('sha256'); let bytes = 0;
+     for await (const chunk of response.body) {
+-      bytes += chunk.length; assert.ok(bytes <= file.bytes, `Oversized response: ${file.path}`);
++      bytes += chunk.length; assert.ok(bytes <= file.bytes, 'Oversized response: ' + file.path);
+       hash.update(chunk);
+     }
+     row.bytes = bytes; row.sha256 = hash.digest('hex');
+     assert.equal(bytes, file.bytes, file.path); assert.equal(row.sha256, file.sha256, file.path);
+     row.ok = true;
+-    console.log(JSON.stringify({ step: 'served-artifact-file', path: file.path, bytes, ok: true }));
++    delivery.byUrl.set(requested, file); delivery.byUrl.set(current, file);
++    if (file === index) {
++      delivery.appUrl = current; report.delivery.resolved_app_url = current;
++      for (const asset of delivery.files.values()) {
++        const url = asset === index ? current : new URL(asset.path.slice(9), new URL('.', current)).href;
++        delivery.byUrl.set(url, asset);
++      }
++    }
++    console.log(JSON.stringify({ step: 'served-artifact-file', path: file.path, bytes,
++      returned_url: current, redirect_count: row.redirects.length, ok: true }));
+   }
+ }
+ 
+ export function browserDelivery(delivery, report, command) {
+-  const requests = new Map(), pending = new Set(), errors = report.delivery.browser_errors;
++  const requests = new Map(), pending = new Set(), redirectCounts = new Map(), errors = report.delivery.browser_errors;
++  function redirect(params) {
++    const from = params.redirectResponse.url, to = params.request.url;
++    const file = delivery.byUrl.get(from);
++    if (!file && !trackedTypes.has(params.type)) return;
++    const hop = { request_id: params.requestId, from, to, status: params.redirectResponse.status,
++      location: params.redirectResponse.headers?.location ?? params.redirectResponse.headers?.Location ?? null,
++      artifact_path: file?.path };
++    report.delivery.browser_redirects.push(hop);
++    try {
++      const count = (redirectCounts.get(params.requestId) || 0) + 1;
++      redirectCounts.set(params.requestId, count);
++      assert.ok(count <= 5, 'At most five browser redirects');
++      assert.ok(file, 'Unbound browser redirect source');
++      assert.equal(checkedRedirect(from, to), to);
++      assert.equal(delivery.byUrl.get(to)?.path, file.path, 'Browser redirect target was not verified in asset receiving');
++      hop.ok = true;
++    } catch (error) { hop.ok = false; errors.push('Browser redirect refused: ' + error); }
++  }
+   function response(params) {
+     const r = params.response, file = delivery.byUrl.get(r.url), tracked = trackedTypes.has(params.type);
+     if (!file && !tracked) return;
+@@ -128,5 +188,5 @@
+     for (const type of trackedTypes)
+       assert.ok(report.delivery.browser_responses.some(row => row.type === type && row.ok), `Received ${type}`);
+   }
+-  return { response, finished, failed, settle, complete };
++  return { redirect, response, finished, failed, settle, complete };
+ }
+--- v1/run-hosted.py
++++ v2/run-hosted.py
+@@ -32,8 +32,8 @@
+ input_path = root / 'pages-receipt.json'
+ require(pin(input_path)['sha256'] == expected_input_sha256, 'Actual deployment input changed')
+ expected_receiver = {
+-    'receiving-browser-hosted.mjs': 'afa04e1e07bcc2d982115811b70f9377c1e08254622fe1fa9472d603a7f5ddef',
+-    'pages-delivery.mjs': '50d5cfe2c429f69e0e505f22331dc1cd69eba2d69524d544bddcfa9e01d434db',
++    'receiving-browser-hosted.mjs': '3fe8fff96047e14ecffdc5f706c40abc551b855329fd853452f405d30c0919d7',
++    'pages-delivery.mjs': '227824abe3bbb332348b59d552d24a2892a3137af0536e40268a32122bd68939',
+ }
+ receiver_before = {name: pin(root / name) for name in expected_receiver}
+ for name, sha256 in expected_receiver.items():

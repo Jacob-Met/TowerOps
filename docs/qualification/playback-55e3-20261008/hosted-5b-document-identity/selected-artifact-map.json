@@ -1,0 +1,112 @@
+{
+  "schema": "towerops-selected-pages-artifact-map/v1",
+  "repository": "Jacob-Met/TowerOps",
+  "run_id": 37804950753,
+  "head_sha": "5b3015567a01017245c5f715c1bce65e20a06138",
+  "artifact_id": 11561948285,
+  "archive_path": "/workspace/scratch/55e3e26c5905/receiving/towerops-pages-7865ff/towerops-pages-5b3015-37804950753.zip",
+  "archive_bytes": 6450539,
+  "archive_sha256": "96e88f7e5925ed04de48e81e55a8dc7979abb6e3c1921e75bf15d5e89b20edae",
+  "zip_entries": [
+    {
+      "path": "artifact.tar",
+      "bytes": 14581760,
+      "compressed_bytes": 6450401,
+      "directory": false
+    }
+  ],
+  "tar_bytes": 14581760,
+  "tar_sha256": "a00b60a747e7eb07a38d0e2f26883c39292a392b49bf9f89855d5fb30945daa3",
+  "files": [
+    {
+      "path": "airspace/favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "path": "airspace/assets/index-BHHse_Io.css",
+      "bytes": 20856,
+      "sha256": "15c8901b2335cfbe0fa49187ebaa7a30cfbe959bfa5be22fa2727d2e840af009"
+    },
+    {
+      "path": "airspace/assets/python-worker-D9QUacUJ.js",
+      "bytes": 4419,
+      "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804"
+    },
+    {
+      "path": "airspace/assets/index-CLwLT_75.js",
+      "bytes": 57665,
+      "sha256": "b6d32ffc38b4e2c405d62393adc67d632eda3f681c2648c823e1f39f312a09d1"
+    },
+    {
+      "path": "airspace/index.html",
+      "bytes": 15485,
+      "sha256": "ea6f785d08a05249dcdcb648f7d8a9fa24c1cbe05a21b618a2aeba151b38ee2e"
+    },
+    {
+      "path": "airspace/python/pyodide.mjs",
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "airspace/python/decision_trace.py",
+      "bytes": 2099,
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+    },
+    {
+      "path": "airspace/python/audit_replay.py",
+      "bytes": 7927,
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+    },
+    {
+      "path": "airspace/python/pyodide.asm.wasm",
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "airspace/python/advisory_options.py",
+      "bytes": 2380,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "path": "airspace/python/towerops.py",
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "path": "airspace/python/pyodide-lock.json",
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "airspace/python/pyodide.asm.js",
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "airspace/python/python_stdlib.zip",
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "airspace/captures/airspace-mobile.png",
+      "bytes": 190636,
+      "sha256": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43"
+    },
+    {
+      "path": "airspace/captures/airspace-desktop.png",
+      "bytes": 391153,
+      "sha256": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "file_count": 17,
+  "total_file_bytes": 14560440,
+  "receiving_prior_artifact_id": 11560420141,
+  "receiving_observed_document_sha256": "ea6f785d08a05249dcdcb648f7d8a9fa24c1cbe05a21b618a2aeba151b38ee2e",
+  "observed_document_matches_selected_newer_artifact": true
+}

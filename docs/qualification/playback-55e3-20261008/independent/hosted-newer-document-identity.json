@@ -1,0 +1,53 @@
+{
+  "schema": "towerops-hosted-newer-document-independent-identity/v1",
+  "repository": "Jacob-Met/TowerOps",
+  "reviewer": "/root/memory_capability",
+  "review_date": "2026-10-08",
+  "accepted_for_document_identity_only": true,
+  "predecessor_receiving": {
+    "report_sha256": "785ceb2aaedcc7744d2d210359676fca4638ae3428b27529f2eed77c3b7679c5",
+    "process_sha256": "da249b7fb5ef3c5f80a05630ba078a246c2f2ec79e4ddf074a94c8d44ded2ab4",
+    "request_utc": "2026-10-08T16:02:05.664Z",
+    "expected_old_artifact_id": 11560420141
+  },
+  "proof": {
+    "kind": "Independent offline document identity addendum after the preserved failed7865 hosted attempt",
+    "accepted": true,
+    "map_sha256": "129b8123219ba90746129a0264eb0e5fc9f808dbea792739ef2b03dfa9b6a975",
+    "archive": {
+      "bytes": 6450539,
+      "sha256": "96e88f7e5925ed04de48e81e55a8dc7979abb6e3c1921e75bf15d5e89b20edae"
+    },
+    "inner_tar": {
+      "bytes": 14581760,
+      "sha256": "a00b60a747e7eb07a38d0e2f26883c39292a392b49bf9f89855d5fb30945daa3"
+    },
+    "document": {
+      "bytes": 15485,
+      "sha256": "ea6f785d08a05249dcdcb648f7d8a9fa24c1cbe05a21b618a2aeba151b38ee2e",
+      "git_blob": "8e6e441ccb538ae36bb5b8ca1b73cec6800d6072",
+      "normalized_tar_member": "airspace/index.html",
+      "zip_member": "artifact.tar"
+    },
+    "matches_received_streaming_hash": true,
+    "root_supplied_deployment_selection": {
+      "head_sha": "5b3015567a01017245c5f715c1bce65e20a06138",
+      "run_id": 37804950753,
+      "artifact_id": 11561948285
+    },
+    "independent_remote_requests": 0,
+    "served_js_requested": false,
+    "browser_run": false,
+    "limits": "The actual captured document hash matches this newer archive document exactly. This adds offline document identity only; other served assets, runtime behavior and the full public release are not qualified. Run/artifact acquisition provenance remains the parent’s independently captured GitHub custody."
+  },
+  "archive_source_path": "/workspace/scratch/55e3e26c5905/receiving/towerops-pages-7865ff/towerops-pages-5b3015-37804950753.zip",
+  "parent_map_source_path": "/dev/shm/estate-55e3e26c5905/towerops-pages5b-artifact-map.json",
+  "method": "Read-only local archive check: rehashed the ZIP, required its sole artifact.tar member, rehashed that tar, selected its single regular normalized airspace/index.html member, and matched the document bytes/length/SHA256 to both the parent's artifact map and the preserved native streaming hash.",
+  "conclusion": "The document observed by the failed7865 attempt matches the newer5b301556 artifact's document exactly. The old artifact mismatch remains valid negative evidence; it is not a playback regression.",
+  "limits": [
+    "No served JavaScript, CSS, Python asset, complete current release or browser behavior was received by this addendum.",
+    "The parent owns the observed GitHub run/deploy selection provenance. This reviewer made no additional network request.",
+    "A matching document hash identifies these document bytes; it does not establish uniqueness among releases that could contain identical HTML.",
+    "All earlier source/native/hosted receipts remain at their actual cuts."
+  ]
+}
