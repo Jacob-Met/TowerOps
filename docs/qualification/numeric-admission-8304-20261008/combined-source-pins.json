@@ -1,0 +1,27 @@
+{
+  "receiving_main": "728387a51fba7be34cf8344fe4f5cd9c7b12b6ad",
+  "main_tree": "48febf222e37e4bddd5da24cdf543f31afed3c9c",
+  "numeric_author_head": "070b78e4ec2e3ec119e4610e046865953eac29f2",
+  "files": [
+    {
+      "path": "towerops.py",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "path": "web/airspace/src/planner.ts",
+      "git_blob": "82082fa50cbec1a0d30d377bb4cd3e1a67416d5e",
+      "sha256": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74"
+    },
+    {
+      "path": "web/airspace/src/core.ts",
+      "git_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+      "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac"
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "git_blob": "ab9e4e0bfa21edd3603294ac3bfc77e048022180",
+      "sha256": "54882f2f3f4b351f17fec31f6f75cc21e9446da6486ab911ac69a3d0e7bb52db"
+    }
+  ]
+}

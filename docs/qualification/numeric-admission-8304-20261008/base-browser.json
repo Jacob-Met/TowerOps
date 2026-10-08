@@ -1,0 +1,390 @@
+{
+  "project": "/dev/shm/towerops-receiving-8304/review/base",
+  "url": "http://127.0.0.1:33497/",
+  "source_sha256": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e",
+  "worker": "python-worker-Dt6KeInE.js",
+  "worker_sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc",
+  "cases": [
+    {
+      "name": "finite_single_target",
+      "valid_control": true,
+      "numeric_wire": false,
+      "response": {
+        "id": 1,
+        "result": {
+          "state": {
+            "version": 2,
+            "observed_at": 1002.5,
+            "aircraft": [
+              {
+                "aircraft_id": "SOLO",
+                "x_nm": 0,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 0.5,
+                "vy_nm_min": 0.25,
+                "climb_ft_min": 50
+              }
+            ]
+          },
+          "events": [
+            {
+              "seq": 0,
+              "kind": "screen_pass",
+              "payload": {
+                "world_hash": "3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7",
+                "advisory_hashes": [
+                  "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95"
+                ]
+              },
+              "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+              "event_hash": "55fce9e11541bdc87b5f6c6fdef8e69bee310321037a25a6b3a36c7114d33b6b"
+            },
+            {
+              "seq": 1,
+              "kind": "approval",
+              "payload": {
+                "advisory_hash": "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95",
+                "decision": "approve",
+                "approved_at": 1002.2,
+                "approver": "synthetic-controller"
+              },
+              "prev_hash": "55fce9e11541bdc87b5f6c6fdef8e69bee310321037a25a6b3a36c7114d33b6b",
+              "event_hash": "88d383ef6ea0a664c19dc6e76c127c4f7d0f6d29560e48382ee384a871c1a47e"
+            },
+            {
+              "seq": 2,
+              "kind": "ack",
+              "payload": {
+                "advisory_hash": "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95",
+                "status": "accepted",
+                "acknowledged_at": 1002.4
+              },
+              "prev_hash": "88d383ef6ea0a664c19dc6e76c127c4f7d0f6d29560e48382ee384a871c1a47e",
+              "event_hash": "1b0800dc4d859d4792826aa1daa09bc9dc3673c40676fb3ff38f5d131151e0a7"
+            },
+            {
+              "seq": 3,
+              "kind": "simulated_actuation",
+              "payload": {
+                "advisory_hash": "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95",
+                "before_world_hash": "3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7",
+                "after_world_hash": "f68fe0ba8401b1b174fc20c0e6ee2a5644b0a974d5c7f76b754394d6158c7242"
+              },
+              "prev_hash": "1b0800dc4d859d4792826aa1daa09bc9dc3673c40676fb3ff38f5d131151e0a7",
+              "event_hash": "10338d148f67e82c1030fa8447dacae91dc5ffc108b5fdd363a755c049242681"
+            }
+          ],
+          "valid": true,
+          "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7\", \"advisory_hashes\": [\"b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"55fce9e11541bdc87b5f6c6fdef8e69bee310321037a25a6b3a36c7114d33b6b\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"55fce9e11541bdc87b5f6c6fdef8e69bee310321037a25a6b3a36c7114d33b6b\", \"event_hash\": \"88d383ef6ea0a664c19dc6e76c127c4f7d0f6d29560e48382ee384a871c1a47e\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"88d383ef6ea0a664c19dc6e76c127c4f7d0f6d29560e48382ee384a871c1a47e\", \"event_hash\": \"1b0800dc4d859d4792826aa1daa09bc9dc3673c40676fb3ff38f5d131151e0a7\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95\", \"before_world_hash\": \"3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7\", \"after_world_hash\": \"f68fe0ba8401b1b174fc20c0e6ee2a5644b0a974d5c7f76b754394d6158c7242\"}, \"prev_hash\": \"1b0800dc4d859d4792826aa1daa09bc9dc3673c40676fb3ff38f5d131151e0a7\", \"event_hash\": \"10338d148f67e82c1030fa8447dacae91dc5ffc108b5fdd363a755c049242681\"}]"
+        }
+      }
+    },
+    {
+      "name": "finite_replacement_recovers_old_velocity",
+      "valid_control": true,
+      "numeric_wire": false,
+      "response": {
+        "id": 2,
+        "result": {
+          "state": {
+            "version": 2,
+            "observed_at": 1002.5,
+            "aircraft": [
+              {
+                "aircraft_id": "SOLO",
+                "x_nm": 0,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 0.5,
+                "vy_nm_min": 0.25,
+                "climb_ft_min": 50
+              }
+            ]
+          },
+          "events": [
+            {
+              "seq": 0,
+              "kind": "screen_pass",
+              "payload": {
+                "world_hash": "3373a2bc4a89c3b97cb42b61de3d15a45a2f3f4356b7b67c4a6a6a1b195da71f",
+                "advisory_hashes": [
+                  "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b"
+                ]
+              },
+              "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+              "event_hash": "a92e106ed2e7a14df9a32177286b80864ea4b8e404a0b6e2c1f3f614eef15bd3"
+            },
+            {
+              "seq": 1,
+              "kind": "approval",
+              "payload": {
+                "advisory_hash": "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b",
+                "decision": "approve",
+                "approved_at": 1002.2,
+                "approver": "synthetic-controller"
+              },
+              "prev_hash": "a92e106ed2e7a14df9a32177286b80864ea4b8e404a0b6e2c1f3f614eef15bd3",
+              "event_hash": "2013b3d12bc9af27d245ebf552a1c9773f50951371edc20c9a98b53a18037d4a"
+            },
+            {
+              "seq": 2,
+              "kind": "ack",
+              "payload": {
+                "advisory_hash": "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b",
+                "status": "accepted",
+                "acknowledged_at": 1002.4
+              },
+              "prev_hash": "2013b3d12bc9af27d245ebf552a1c9773f50951371edc20c9a98b53a18037d4a",
+              "event_hash": "6a419aec4451f30aa451b1e84c49a11e046983d6c508c87a1bad51fd3f9871ed"
+            },
+            {
+              "seq": 3,
+              "kind": "simulated_actuation",
+              "payload": {
+                "advisory_hash": "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b",
+                "before_world_hash": "3373a2bc4a89c3b97cb42b61de3d15a45a2f3f4356b7b67c4a6a6a1b195da71f",
+                "after_world_hash": "f68fe0ba8401b1b174fc20c0e6ee2a5644b0a974d5c7f76b754394d6158c7242"
+              },
+              "prev_hash": "6a419aec4451f30aa451b1e84c49a11e046983d6c508c87a1bad51fd3f9871ed",
+              "event_hash": "acd86dfd222528082896bc2a98b6916323bb2660143b73dac532d6845902b8e4"
+            }
+          ],
+          "valid": true,
+          "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"3373a2bc4a89c3b97cb42b61de3d15a45a2f3f4356b7b67c4a6a6a1b195da71f\", \"advisory_hashes\": [\"5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"a92e106ed2e7a14df9a32177286b80864ea4b8e404a0b6e2c1f3f614eef15bd3\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"a92e106ed2e7a14df9a32177286b80864ea4b8e404a0b6e2c1f3f614eef15bd3\", \"event_hash\": \"2013b3d12bc9af27d245ebf552a1c9773f50951371edc20c9a98b53a18037d4a\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"2013b3d12bc9af27d245ebf552a1c9773f50951371edc20c9a98b53a18037d4a\", \"event_hash\": \"6a419aec4451f30aa451b1e84c49a11e046983d6c508c87a1bad51fd3f9871ed\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b\", \"before_world_hash\": \"3373a2bc4a89c3b97cb42b61de3d15a45a2f3f4356b7b67c4a6a6a1b195da71f\", \"after_world_hash\": \"f68fe0ba8401b1b174fc20c0e6ee2a5644b0a974d5c7f76b754394d6158c7242\"}, \"prev_hash\": \"6a419aec4451f30aa451b1e84c49a11e046983d6c508c87a1bad51fd3f9871ed\", \"event_hash\": \"acd86dfd222528082896bc2a98b6916323bb2660143b73dac532d6845902b8e4\"}]"
+        }
+      }
+    },
+    {
+      "name": "nan_command_vx",
+      "valid_control": false,
+      "numeric_wire": false,
+      "response": {
+        "id": 3,
+        "error": "SyntaxError: Unexpected token 'N', ...\"_nm_min\": NaN, \"vy_n\"... is not valid JSON"
+      }
+    },
+    {
+      "name": "infinite_command_vy",
+      "valid_control": false,
+      "numeric_wire": false,
+      "response": {
+        "id": 4,
+        "result": {
+          "error": "unsafe_advisory",
+          "events": [
+            {
+              "seq": 0,
+              "kind": "reject",
+              "payload": {
+                "reason": "unsafe_advisory",
+                "advisory_hash": "0dcc9b35662b8dfa8abdd11e4dabffa449d3d7fd641eabc99caf3692390ed76b"
+              },
+              "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+              "event_hash": "1aa05fbefebd0d33a6452a1006a9022c0b967332a2452855472642b70207f4e5"
+            }
+          ],
+          "audit_json": "[{\"seq\": 0, \"kind\": \"reject\", \"payload\": {\"reason\": \"unsafe_advisory\", \"advisory_hash\": \"0dcc9b35662b8dfa8abdd11e4dabffa449d3d7fd641eabc99caf3692390ed76b\"}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1aa05fbefebd0d33a6452a1006a9022c0b967332a2452855472642b70207f4e5\"}]"
+        }
+      }
+    },
+    {
+      "name": "nan_command_climb",
+      "valid_control": false,
+      "numeric_wire": false,
+      "response": {
+        "id": 5,
+        "error": "SyntaxError: Unexpected token 'N', ...\"_ft_min\": NaN}]}, \"e\"... is not valid JSON"
+      }
+    },
+    {
+      "name": "retained_nan_x",
+      "valid_control": false,
+      "numeric_wire": false,
+      "response": {
+        "id": 6,
+        "error": "SyntaxError: Unexpected token 'N', ...\", \"x_nm\": NaN, \"y_nm\"... is not valid JSON"
+      }
+    },
+    {
+      "name": "retained_infinite_y",
+      "valid_control": false,
+      "numeric_wire": false,
+      "response": {
+        "id": 7,
+        "error": "SyntaxError: Unexpected token 'I', ...\", \"y_nm\": Infinity, \"... is not valid JSON"
+      }
+    },
+    {
+      "name": "retained_nan_altitude",
+      "valid_control": false,
+      "numeric_wire": false,
+      "response": {
+        "id": 8,
+        "error": "SyntaxError: Unexpected token 'N', ...\"tude_ft\": NaN, \"vx_n\"... is not valid JSON"
+      }
+    },
+    {
+      "name": "js_nan_serializes_as_null",
+      "valid_control": false,
+      "numeric_wire": true,
+      "response": {
+        "id": 9,
+        "error": "PythonError: Traceback (most recent call last):\n  File \"/lib/python312.zip/_pyodide/_base.py\", line 597, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python312.zip/_pyodide/_base.py\", line 411, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<exec>\", line 1, in <module>\n  File \"<exec>\", line 17, in browser_request\nTypeError: float() argument must be a string or a real number, not 'NoneType'\n"
+      }
+    }
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "served": [
+    {
+      "path": "/",
+      "size": 10070,
+      "sha256": "4802752378cdd5b0ee903f16641f45f2c2d2baea4cd48bb4fe6e8f96f7811d2e"
+    },
+    {
+      "path": "/assets/index-DNkt_xJY.css",
+      "size": 13947,
+      "sha256": "3bbea4e27973bc9b03ed7d90cedd69760f22f23b14b24045e7c9f63d7c529a62"
+    },
+    {
+      "path": "/assets/index-DQHL8flo.js",
+      "size": 36240,
+      "sha256": "4faba04b36916cdd2ce2e25c03ee13bb2fcb81c40c64ea64676166f3b3528f82"
+    },
+    {
+      "path": "/assets/python-worker-Dt6KeInE.js",
+      "size": 2215,
+      "sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc"
+    },
+    {
+      "path": "/python/pyodide.mjs",
+      "size": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "/python/pyodide-lock.json",
+      "size": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "/python/python_stdlib.zip",
+      "size": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "/python/pyodide.asm.js",
+      "size": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "/python/pyodide.asm.wasm",
+      "size": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "/python/towerops.py",
+      "size": 19073,
+      "sha256": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e"
+    },
+    {
+      "path": "/assets/python-worker-Dt6KeInE.js",
+      "size": 2215,
+      "sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc"
+    },
+    {
+      "path": "/python/pyodide.mjs",
+      "size": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "/python/pyodide-lock.json",
+      "size": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "/python/pyodide.asm.js",
+      "size": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "/python/python_stdlib.zip",
+      "size": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "/python/pyodide.asm.wasm",
+      "size": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "/python/towerops.py",
+      "size": 19073,
+      "sha256": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e"
+    }
+  ],
+  "browser": "153.0.8010.0",
+  "ui": {
+    "invalid_import_feedback": "NOT LOADED: TWR218.x_nm must be a finite number.",
+    "invalid_import_preserves_state": true,
+    "before": {
+      "aircraft": [
+        {
+          "aircraft_id": "TWR218",
+          "altitude_ft": 10000,
+          "climb_ft_min": 0,
+          "vx_nm_min": 1,
+          "vy_nm_min": 0,
+          "x_nm": -5,
+          "y_nm": 0
+        },
+        {
+          "aircraft_id": "TWR419",
+          "altitude_ft": 10000,
+          "climb_ft_min": 0,
+          "vx_nm_min": -1,
+          "vy_nm_min": 0,
+          "x_nm": 5,
+          "y_nm": 0
+        }
+      ],
+      "observed_at": 1000,
+      "version": 1
+    },
+    "after": {
+      "version": 2,
+      "observed_at": 1002.5,
+      "aircraft": [
+        {
+          "aircraft_id": "TWR218",
+          "x_nm": -5,
+          "y_nm": 0,
+          "altitude_ft": 10000,
+          "vx_nm_min": 1,
+          "vy_nm_min": 0,
+          "climb_ft_min": 0
+        },
+        {
+          "aircraft_id": "TWR419",
+          "x_nm": 5,
+          "y_nm": 0,
+          "altitude_ft": 10000,
+          "vx_nm_min": -1,
+          "vy_nm_min": 2,
+          "climb_ft_min": 0
+        }
+      ]
+    },
+    "proposal": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+    "audit": [
+      "00 screen_pass {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c 1347d837ac80",
+      "01 approval {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1 9da8e15a5d4b",
+      "02 ack {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at 72859479c128",
+      "03 simulated_actuation {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13 04ad4e345387"
+    ],
+    "audit_status": "4 EVENTS / VALID",
+    "audit_verdict": "HASH CHAIN VALID - 4 EVENTS",
+    "python_status": "Live CPython · ControlRoom.apply · audit verified"
+  },
+  "source_unchanged": true
+}

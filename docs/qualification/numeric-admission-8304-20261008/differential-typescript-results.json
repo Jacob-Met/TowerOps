@@ -1,0 +1,210 @@
+{
+  "observed_at": "2026-10-08T09:23:14.988Z",
+  "runtime": "v24.19.0",
+  "typescript": "5.7.3",
+  "sha256": {
+    "core": "99855c0bea2f6c04df3fc972aeb885df09015d0d071b4ab3bdeaeefedaf1d147",
+    "maneuvers": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d",
+    "baseline": "04e38fc3b87fae9d4531e6867ad2bf81dfdf48fb86053aab7d4f83266b21652f",
+    "candidate": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74",
+    "cases": "8ab840d80308afbc5190ece6e278c45140f3e87845ab2ba7ada0b2a5b1d9a50a"
+  },
+  "rows": [
+    {
+      "id": "finite_diagonal_boundary",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "expected_candidate": "accept",
+      "passed": true
+    },
+    {
+      "id": "finite_distant_peer",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "expected_candidate": "accept",
+      "passed": true
+    },
+    {
+      "id": "nan_command_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "boolean_command_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "null_climb_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "string_retained_altitude_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "boolean_retained_y_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "nan_retained_x_singleton",
+      "baseline": {
+        "outcome": "hash-error",
+        "error_type": "Error",
+        "error": "TowerOps state must be finite",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "hash-error",
+        "error_type": "Error",
+        "error": "TowerOps state must be finite",
+        "world_unchanged": true
+      },
+      "expected_candidate": "hash-error",
+      "passed": true
+    },
+    {
+      "id": "replace_nonfinite_motion_safe_peer",
+      "baseline": {
+        "outcome": "hash-error",
+        "error_type": "Error",
+        "error": "TowerOps state must be finite",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "hash-error",
+        "error_type": "Error",
+        "error": "TowerOps state must be finite",
+        "world_unchanged": true
+      },
+      "expected_candidate": "hash-error",
+      "passed": true
+    },
+    {
+      "id": "replace_nonfinite_motion_conflicting_peer",
+      "baseline": {
+        "outcome": "hash-error",
+        "error_type": "Error",
+        "error": "TowerOps state must be finite",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "hash-error",
+        "error_type": "Error",
+        "error": "TowerOps state must be finite",
+        "world_unchanged": true
+      },
+      "expected_candidate": "hash-error",
+      "passed": true
+    },
+    {
+      "id": "replace_nonnumeric_motion_safe_peer",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "expected_candidate": "accept",
+      "passed": true
+    },
+    {
+      "id": "replace_nonnumeric_motion_conflicting_peer",
+      "baseline": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "invalid_untouched_peer",
+      "baseline": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "nan_command_distant_peer",
+      "baseline": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    }
+  ],
+  "passed": 14,
+  "total": 14
+}

@@ -7,8 +7,10 @@ export interface AdvisoryBody {
 export type Advisory=AdvisoryBody&{advisory_hash:string};
 export async function advisorySafe(state:WorldState,a:AdvisoryBody,policy:SafetyPolicy=DEFAULT_POLICY):Promise<boolean> {
   if(a.world_hash!==await worldHash(state)) return false;
+  if(![a.set_vx_nm_min,a.set_vy_nm_min,a.set_climb_ft_min].every(Number.isFinite)) return false;
   if(Math.hypot(a.set_vx_nm_min,a.set_vy_nm_min)>policy.max_speed_nm_min||Math.abs(a.set_climb_ft_min)>policy.max_climb_ft_min) return false;
   const target=state.aircraft.find(x=>x.aircraft_id===a.aircraft_id); if(!target) return false;
+  if(![target.x_nm,target.y_nm,target.altitude_ft].every(Number.isFinite)) return false;
   const candidate={...target,vx_nm_min:a.set_vx_nm_min,vy_nm_min:a.set_vy_nm_min,climb_ft_min:a.set_climb_ft_min};
   return state.aircraft.every(other=>other.aircraft_id===candidate.aircraft_id||!pairConflict(candidate,other,policy));
 }

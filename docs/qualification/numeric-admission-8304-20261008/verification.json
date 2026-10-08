@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "name": "finite_single_target",
+      "outcome": "native after-state and four-event audit exactly preserved"
+    },
+    {
+      "name": "finite_replacement_recovers_old_velocity",
+      "outcome": "native after-state and four-event audit exactly preserved"
+    },
+    {
+      "name": "nan_command_vx",
+      "outcome": "structured rejection with valid native audit and no returned state"
+    },
+    {
+      "name": "infinite_command_vy",
+      "outcome": "structured rejection with valid native audit and no returned state"
+    },
+    {
+      "name": "nan_command_climb",
+      "outcome": "structured rejection with valid native audit and no returned state"
+    },
+    {
+      "name": "retained_nan_x",
+      "outcome": "structured rejection with valid native audit and no returned state"
+    },
+    {
+      "name": "retained_infinite_y",
+      "outcome": "structured rejection with valid native audit and no returned state"
+    },
+    {
+      "name": "retained_nan_altitude",
+      "outcome": "structured rejection with valid native audit and no returned state"
+    },
+    {
+      "name": "js_nan_serializes_as_null",
+      "outcome": "unchanged JSON null rejection before admission"
+    }
+  ],
+  "ui_exactly_preserved": true,
+  "native_audit_verification": true,
+  "evidence": [
+    {
+      "path": "source-tree.json",
+      "sha256": "07fe374a0142c29b99bf9f16a9d94252bd73bb40d5e888655d54054cd33b2b27"
+    },
+    {
+      "path": "browser_receiving.mjs",
+      "sha256": "d39582a06af9c056fa15c96ba23947d15b3e310bb9add46bc3d2fcf6eabc0565"
+    },
+    {
+      "path": "build_cases.py",
+      "sha256": "233b55f5e3fe89dea433e8bb35b95187b67b0d2629c009ab61a73bb48766d5f8"
+    },
+    {
+      "path": "worker-cases.json",
+      "sha256": "21e5366684f46070e36ee7b0093b61dd4226bbbee199d5822976d9d138cb7061"
+    },
+    {
+      "path": "base-browser.json",
+      "sha256": "484c1bf2b73df4f4cee9537e4db8ac632a4f7a57ac918ed5a4276bfa3a1277f5"
+    },
+    {
+      "path": "candidate-browser.json",
+      "sha256": "6fd458781dddb605cd7ccd7d8dd17583c4ae7dc116a2767c43fa44a6bfdb0fe4"
+    }
+  ]
+}

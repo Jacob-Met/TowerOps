@@ -1,0 +1,47 @@
+{
+  "receiving_main": "728387a51fba7be34cf8344fe4f5cd9c7b12b6ad",
+  "main_tree": "48febf222e37e4bddd5da24cdf543f31afed3c9c",
+  "numeric_author_head": "070b78e4ec2e3ec119e4610e046865953eac29f2",
+  "browser": "153.0.8010.0",
+  "worker": "python-worker-DZJBTUKm.js",
+  "worker_sha256": "13766c18793b307bf94c018b1216f5440ea6c50fd8ed8b0d580780ebff445cd7",
+  "native_source_sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+  "worker_cases": 9,
+  "valid_native_controls": 2,
+  "audited_rejections": 6,
+  "unchanged_transport_rejection": 1,
+  "worker_results_exactly_preserved": true,
+  "ui_state_and_audit_exactly_preserved": true,
+  "all_native_audits_valid": true,
+  "source_pins_unchanged": true,
+  "page_errors": [],
+  "external_requests": [],
+  "baseline_rerun": false,
+  "broader_tests_rerun": false,
+  "evidence": [
+    {
+      "path": "combined-source-pins.json",
+      "sha256": "89dc642c0b6d50adfc7f04626bbdd3e8765ef89f5904f435197760f4abfcb393"
+    },
+    {
+      "path": "combined-build.log",
+      "sha256": "0378475cbc31fc15d155153782bf707ff8b683ea93751dfb3e8888268db5c640"
+    },
+    {
+      "path": "combined-build-manifest.json",
+      "sha256": "278797feabd02120327c12be01f1a5e9cca0a85f71bb74211145a4346a055a57"
+    },
+    {
+      "path": "combined-browser.json",
+      "sha256": "432f08b866bd51141d4d5878bb412beef2615378b6a0a582508fa9a0d2fc783b"
+    },
+    {
+      "path": "browser_receiving.mjs",
+      "sha256": "d39582a06af9c056fa15c96ba23947d15b3e310bb9add46bc3d2fcf6eabc0565"
+    },
+    {
+      "path": "worker-cases.json",
+      "sha256": "21e5366684f46070e36ee7b0093b61dd4226bbbee199d5822976d9d138cb7061"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "observed_at": "2026-10-08T09:23:14.691587+00:00",
+  "runtime": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "baseline_ref": "74593888a7b6b1d63b3acc2dbde678a4a9d2d0b7",
+  "sha256": {
+    "baseline": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e",
+    "candidate": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "cases": "8ab840d80308afbc5190ece6e278c45140f3e87845ab2ba7ada0b2a5b1d9a50a"
+  },
+  "rows": [
+    {
+      "id": "finite_diagonal_boundary",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "expected_candidate": "accept",
+      "passed": true
+    },
+    {
+      "id": "finite_distant_peer",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "expected_candidate": "accept",
+      "passed": true
+    },
+    {
+      "id": "nan_command_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "boolean_command_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "null_climb_singleton",
+      "baseline": {
+        "outcome": "error",
+        "error_type": "TypeError",
+        "error": "bad operand type for abs(): 'NoneType'",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "string_retained_altitude_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "boolean_retained_y_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "nan_retained_x_singleton",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "replace_nonfinite_motion_safe_peer",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "expected_candidate": "accept",
+      "passed": true
+    },
+    {
+      "id": "replace_nonfinite_motion_conflicting_peer",
+      "baseline": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "replace_nonnumeric_motion_safe_peer",
+      "baseline": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "accept",
+        "world_unchanged": true
+      },
+      "expected_candidate": "accept",
+      "passed": true
+    },
+    {
+      "id": "replace_nonnumeric_motion_conflicting_peer",
+      "baseline": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "invalid_untouched_peer",
+      "baseline": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    },
+    {
+      "id": "nan_command_distant_peer",
+      "baseline": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "candidate": {
+        "outcome": "reject",
+        "world_unchanged": true
+      },
+      "expected_candidate": "reject",
+      "passed": true
+    }
+  ],
+  "passed": 14,
+  "total": 14
+}

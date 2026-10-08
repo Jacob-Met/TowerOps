@@ -1,0 +1,61 @@
+{
+  "source_base": "d99d238f7da62d74852e07fc90da406f87c2d371",
+  "native_candidate_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+  "files": [
+    {
+      "path": "assets/index-DNkt_xJY.css",
+      "bytes": 13947,
+      "sha256": "3bbea4e27973bc9b03ed7d90cedd69760f22f23b14b24045e7c9f63d7c529a62"
+    },
+    {
+      "path": "assets/index-DQHL8flo.js",
+      "bytes": 36240,
+      "sha256": "4faba04b36916cdd2ce2e25c03ee13bb2fcb81c40c64ea64676166f3b3528f82"
+    },
+    {
+      "path": "assets/python-worker-Dt6KeInE.js",
+      "bytes": 2215,
+      "sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 10070,
+      "sha256": "4802752378cdd5b0ee903f16641f45f2c2d2baea4cd48bb4fe6e8f96f7811d2e"
+    },
+    {
+      "path": "python/pyodide-lock.json",
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "python/pyodide.asm.js",
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "python/pyodide.asm.wasm",
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "python/pyodide.mjs",
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "python/python_stdlib.zip",
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "python/towerops.py",
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    }
+  ]
+}

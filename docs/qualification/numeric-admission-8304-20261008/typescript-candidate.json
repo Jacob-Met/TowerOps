@@ -1,0 +1,343 @@
+{
+  "runtime": "Node 24.19.0; Vitest 4.1.11; TypeScript 5.7.3",
+  "tests": 62,
+  "passed": 62,
+  "failed": 0,
+  "success": true,
+  "suites": [
+    {
+      "name": "/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "name": "numeric admission does not depend on another aircraft rejects NaN in set_vx_nm_min through the screening gate",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects NaN in set_vy_nm_min through the screening gate",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects NaN in set_climb_ft_min through the screening gate",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vx_nm_min'=true",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vx_nm_min'='1'",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vx_nm_min'=null",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vy_nm_min'=true",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vy_nm_min'='1'",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vy_nm_min'=null",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_climb_ft_min'=true",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_climb_ft_min'='1'",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_climb_ft_min'=null",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'x_nm'=false",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'x_nm'='0'",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'x_nm'=null",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'y_nm'=false",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'y_nm'='0'",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'y_nm'=null",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'altitude_ft'=false",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'altitude_ft'='0'",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'altitude_ft'=null",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft preserves finite approved rates (0, 0, 0), including the exact bounds",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft preserves finite approved rates (6, 0, 3000), including the exact bounds",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft preserves finite approved rates (0, -6, -3000), including the exact bounds",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft still rejects an unknown target with finite rates",
+          "status": "passed",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "name": "/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/algorithm.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "name": "TypeScript port matches real TowerOps Python runs 'demo_crossing'",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "TypeScript port matches real TowerOps Python runs 'clear_same_track'",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "TypeScript port matches real TowerOps Python runs 'vertical_separation'",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "TypeScript port matches real TowerOps Python runs 'three_way_traffic'",
+          "status": "passed",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "name": "/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/track-edit.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "name": "selected-flight what-if edits prefills vector (0, 1) with bearing 0 degrees",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits prefills vector (1, 0) with bearing 90 degrees",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits prefills vector (0, -1) with bearing 180 degrees",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits prefills vector (-1, 0) with bearing 270 degrees",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits prefills vector (0, 0) with bearing 0 degrees",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits previews a resolved crossing without mutating the original world",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits shows introduced conflicts as editable scenario data",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits changes bearing and speed using the same conversion as the flight builder",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits retains untouched vectors and numeric values exactly during an unrelated edit",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits treats equivalent full-turn bearings as unchanged",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses a no-op instead of advancing the world version",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses invalid x_nm=NaN and retains the source",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses invalid y_nm=Infinity and retains the source",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses invalid flight_level=-1 and retains the source",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses invalid flight_level=1.7976931348623157e+308 and retains the source",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses invalid bearing_deg=NaN and retains the source",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses invalid speed_kt=-1 and retains the source",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses invalid speed_kt=361 and retains the source",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses invalid climb_ft_min=3001 and retains the source",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits requires an existing unambiguous target",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses version 9007199254740991 rather than reuse its identity",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses version 9007199254740992 rather than reuse its identity",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits requires another preview when edited values change after review",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses another flight's preview even when the snapshot and numeric fields match",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses a preview after a changed world",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses a preview after a changed version",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses a preview after a changed policy",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses a preview after a changed clock",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits refuses a preview after a changed removed target",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "selected-flight what-if edits isolates preview data and reconstructs the reviewed candidate at apply",
+          "status": "passed",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "name": "/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/world-tools.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "name": "visitor-authored TowerOps worlds converts a visitor bearing and speed into world velocity",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "visitor-authored TowerOps worlds rejects duplicate callsigns before the safety solver sees them",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "visitor-authored TowerOps worlds solves a visitor crossing through plan, approval, readback and verified audit",
+          "status": "passed",
+          "failures": []
+        }
+      ]
+    }
+  ]
+}
