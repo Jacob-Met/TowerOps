@@ -1,0 +1,281 @@
+{
+  "total_count": 3,
+  "jobs": [
+    {
+      "id": 113433130185,
+      "run_id": 37812639867,
+      "workflow_name": "ci",
+      "head_branch": "ultra/1b3276062063-towerops-plan-compare",
+      "run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37812639867",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUbLgRs8AAAAaaSQ0yQ",
+      "head_sha": "1a71f19dfbc1eb89c05baecd2e2f49bc6e6e0613",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/jobs/113433130185",
+      "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37812639867/job/113433130185",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-08T16:56:02Z",
+      "started_at": "2026-10-08T16:56:04Z",
+      "completed_at": "2026-10-08T16:56:12Z",
+      "name": "lint",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-08T16:56:04Z",
+          "completed_at": "2026-10-08T16:56:05Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-08T16:56:05Z",
+          "completed_at": "2026-10-08T16:56:07Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-08T16:56:07Z",
+          "completed_at": "2026-10-08T16:56:07Z"
+        },
+        {
+          "name": "Install ruff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-08T16:56:07Z",
+          "completed_at": "2026-10-08T16:56:10Z"
+        },
+        {
+          "name": "Run ruff",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5,
+          "started_at": "2026-10-08T16:56:10Z",
+          "completed_at": "2026-10-08T16:56:10Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-08T16:56:10Z",
+          "completed_at": "2026-10-08T16:56:10Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-08T16:56:10Z",
+          "completed_at": "2026-10-08T16:56:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-08T16:56:10Z",
+          "completed_at": "2026-10-08T16:56:10Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-runs/113433130185",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000007686,
+      "runner_name": "GitHub Actions 1000007686",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 113433130672,
+      "run_id": 37812639867,
+      "workflow_name": "ci",
+      "head_branch": "ultra/1b3276062063-towerops-plan-compare",
+      "run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37812639867",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUbLgRs8AAAAaaSQ2sA",
+      "head_sha": "1a71f19dfbc1eb89c05baecd2e2f49bc6e6e0613",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/jobs/113433130672",
+      "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37812639867/job/113433130672",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-08T16:56:02Z",
+      "started_at": "2026-10-08T16:56:04Z",
+      "completed_at": "2026-10-08T16:56:19Z",
+      "name": "test",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-08T16:56:05Z",
+          "completed_at": "2026-10-08T16:56:06Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-08T16:56:06Z",
+          "completed_at": "2026-10-08T16:56:09Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-08T16:56:09Z",
+          "completed_at": "2026-10-08T16:56:09Z"
+        },
+        {
+          "name": "Install test deps",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-08T16:56:09Z",
+          "completed_at": "2026-10-08T16:56:11Z"
+        },
+        {
+          "name": "Run tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5,
+          "started_at": "2026-10-08T16:56:11Z",
+          "completed_at": "2026-10-08T16:56:16Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-08T16:56:16Z",
+          "completed_at": "2026-10-08T16:56:16Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-08T16:56:16Z",
+          "completed_at": "2026-10-08T16:56:16Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-08T16:56:16Z",
+          "completed_at": "2026-10-08T16:56:16Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-runs/113433130672",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000007687,
+      "runner_name": "GitHub Actions 1000007687",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 113433130699,
+      "run_id": 37812639867,
+      "workflow_name": "ci",
+      "head_branch": "ultra/1b3276062063-towerops-plan-compare",
+      "run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37812639867",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUbLgRs8AAAAaaSQ2yw",
+      "head_sha": "1a71f19dfbc1eb89c05baecd2e2f49bc6e6e0613",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/jobs/113433130699",
+      "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37812639867/job/113433130699",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-08T16:56:02Z",
+      "started_at": "2026-10-08T16:56:40Z",
+      "completed_at": "2026-10-08T16:56:54Z",
+      "name": "strands-adapter",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-08T16:56:41Z",
+          "completed_at": "2026-10-08T16:56:41Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-08T16:56:41Z",
+          "completed_at": "2026-10-08T16:56:42Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-08T16:56:42Z",
+          "completed_at": "2026-10-08T16:56:42Z"
+        },
+        {
+          "name": "Install declared dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-08T16:56:42Z",
+          "completed_at": "2026-10-08T16:56:51Z"
+        },
+        {
+          "name": "Import adapter",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-08T16:56:51Z",
+          "completed_at": "2026-10-08T16:56:52Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-08T16:56:52Z",
+          "completed_at": "2026-10-08T16:56:52Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-08T16:56:52Z",
+          "completed_at": "2026-10-08T16:56:52Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-08T16:56:52Z",
+          "completed_at": "2026-10-08T16:56:52Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-runs/113433130699",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000007688,
+      "runner_name": "GitHub Actions 1000007688",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

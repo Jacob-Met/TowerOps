@@ -13,6 +13,11 @@ existing native planner and returns every individually screened alternative.
 It preserves the saved input and performs no actuation. See [PLAN_WORLD.md](PLAN_WORLD.md)
 for file/stdin use, clock and policy settings, complete results, and refusal limits.
 
+`python3 compare_plans.py left.plan.json right.plan.json` compares saved policy
+experiments for the same exact native world and review clock, showing policy
+changes and complete advisory membership/order without planning again.
+See [COMPARE_PLANS.md](COMPARE_PLANS.md) for exact identities, file limits and JSON output.
+
 ## Verify
 
 From the repository root:

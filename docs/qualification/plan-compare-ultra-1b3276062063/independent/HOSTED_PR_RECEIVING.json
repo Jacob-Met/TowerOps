@@ -1,0 +1,683 @@
+{
+  "format": "towerops.independent-comparison-receiving.v1",
+  "source_sha256": "2042f344a71cdbcebbe97ad7e31fdcdb359be3282a8e4427b728cc1afe6d76c0",
+  "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+  "github_sha": "5d93029ebfed871b6b0b56fbe9a19086fd83896c",
+  "github_run_id": "37820535313",
+  "api": {
+    "case_count": 27,
+    "passed": true,
+    "results": [
+      {
+        "name": "tighten_policy_loses_four",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 62,
+          "left_only": 4,
+          "right_only": 0,
+          "rank_changed": 54
+        },
+        "output_sha256": "da87c89db1c32172ea82b0c42dfbbc26bfc0d865637d24512e45c5760a6bc7ed"
+      },
+      {
+        "name": "loosen_policy_gains_four",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 62,
+          "left_only": 0,
+          "right_only": 4,
+          "rank_changed": 54
+        },
+        "output_sha256": "ef1387e0ce1402e19fabca708b3dc7801f6016a64511757b11d405b998c890ff"
+      },
+      {
+        "name": "identical_report",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 66,
+          "left_only": 0,
+          "right_only": 0,
+          "rank_changed": 0
+        },
+        "output_sha256": "0324909bccdf025afb399d523bd7936e36c746d669242ca56e503ebd8de5aad0"
+      },
+      {
+        "name": "policy_change_same_full_menu",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 66,
+          "left_only": 0,
+          "right_only": 0,
+          "rank_changed": 0
+        },
+        "output_sha256": "669cdf5fa34f11804ed94da7f57f9aac092e81a8cab0a0a76c22c7d8b54247ea"
+      },
+      {
+        "name": "short_horizon_empty_menu",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 0,
+          "left_only": 66,
+          "right_only": 0,
+          "rank_changed": 0
+        },
+        "output_sha256": "9a99dea54eea8114d22dba08d01adaeb64b4087b0630fa5269b0a741e7cda084"
+      },
+      {
+        "name": "format_and_aircraft_order",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 66,
+          "left_only": 0,
+          "right_only": 0,
+          "rank_changed": 0
+        },
+        "output_sha256": "1691a3a8dc021275938ffb9343a3c47c4ff3ce611936232cd245d0f2143991e4"
+      },
+      {
+        "name": "saved_rank_rotation",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 66,
+          "left_only": 0,
+          "right_only": 0,
+          "rank_changed": 66
+        },
+        "output_sha256": "73522c71ec0933a183cf1c402f8edfdaa9263182499b8f48a8070ca7733530ef"
+      },
+      {
+        "name": "full_body_identity",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 65,
+          "left_only": 1,
+          "right_only": 1,
+          "rank_changed": 0
+        },
+        "output_sha256": "7223d3fa221fa3d24431c7b9fee5ed7699fb0b1195121cfb9a119bfa9562f64a"
+      },
+      {
+        "name": "policy_numeric_token",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 66,
+          "left_only": 0,
+          "right_only": 0,
+          "rank_changed": 0
+        },
+        "output_sha256": "ef1d00f47e28a39693bd47ec3980d322cf4c940cf59a17c353c15aa6733ee8ad"
+      },
+      {
+        "name": "empty_world_same_clock",
+        "expected": "accept",
+        "observed": "accept",
+        "passed": true,
+        "counts": {
+          "retained": 0,
+          "left_only": 0,
+          "right_only": 0,
+          "rank_changed": 0
+        },
+        "output_sha256": "42dab53f8e62fce19c69c6847a4749f74981eb587a511d6b5c626e43d49c6bc0"
+      },
+      {
+        "name": "clock_signed_zero",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "reports have different exact native review clocks",
+        "passed": true
+      },
+      {
+        "name": "clock_integer_float",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "reports have different exact native review clocks",
+        "passed": true
+      },
+      {
+        "name": "clock_change",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "reports have different exact native review clocks",
+        "passed": true
+      },
+      {
+        "name": "world_version_change",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "reports describe different exact native worlds",
+        "passed": true
+      },
+      {
+        "name": "world_number_type",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "reports describe different exact native worlds",
+        "passed": true
+      },
+      {
+        "name": "body_hash_mismatch",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: Advisory 1 advisory_hash does not match its complete body",
+        "passed": true
+      },
+      {
+        "name": "world_hash_mismatch",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: world_hash does not match the complete native world",
+        "passed": true
+      },
+      {
+        "name": "duplicate_advisory_identity",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: duplicate advisory identity in a saved menu",
+        "passed": true
+      },
+      {
+        "name": "incomplete_advisory_body",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: Advisory 1 must contain exactly its documented fields",
+        "passed": true
+      },
+      {
+        "name": "simulation_flag",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: report must explicitly describe synthetic proposals only",
+        "passed": true
+      },
+      {
+        "name": "status_menu_inconsistency",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: saved status, conflicting identities and menu counts disagree",
+        "passed": true
+      },
+      {
+        "name": "boolean_candidate_count",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: candidate_count must be a bounded nonnegative JSON integer",
+        "passed": true
+      },
+      {
+        "name": "candidate_count_below_admitted",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: advisories must be a list no larger than candidate_count",
+        "passed": true
+      },
+      {
+        "name": "duplicate_json_key",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: invalid report JSON: duplicate JSON object field",
+        "passed": true
+      },
+      {
+        "name": "infinite_json_number",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: Review clock must be a finite bounded JSON number",
+        "passed": true
+      },
+      {
+        "name": "over_four_mib",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: report exceeds 4194304 bytes",
+        "passed": true
+      },
+      {
+        "name": "invalid_utf8",
+        "expected": "refuse",
+        "observed": "refuse",
+        "error_type": "ValueError",
+        "error": "Right report: invalid report JSON: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte",
+        "passed": true
+      }
+    ]
+  },
+  "cli": {
+    "case_count": 22,
+    "process_count": 22,
+    "passed": true,
+    "results": [
+      {
+        "name": "tighten_policy_loses_four",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/six.json",
+          "--json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 39277,
+        "stdout_sha256": "f987657c0f5248342e83eae490d0f90ffae8ea94a6f874d25e623f352e709bd9",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.047425855000028605,
+        "passed": true
+      },
+      {
+        "name": "loosen_policy_gains_four",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/six.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "--json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 39281,
+        "stdout_sha256": "7054d1160818e74f52de62c545a028f3b540b2f0a865307c1eabd998c1d56b1c",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.04712075800000548,
+        "passed": true
+      },
+      {
+        "name": "identical_report",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "--json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 39156,
+        "stdout_sha256": "56726db93bd51af2a7e9276a422dd6ed79b56295f45066aeb337293ff7405d64",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.04784899799994946,
+        "passed": true
+      },
+      {
+        "name": "policy_change_same_full_menu",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/three.json",
+          "--json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 39266,
+        "stdout_sha256": "417be03d3089eb4671f04982ae76a3ec4d4257bbc1834c255f745c33c69fe57c",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.047829257999978836,
+        "passed": true
+      },
+      {
+        "name": "short_horizon_empty_menu",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/short.json",
+          "--json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 39366,
+        "stdout_sha256": "f5ede33914e8e4a78ff23483f74986638f05b522605011368f72c92780f4fd4c",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.04567546499998798,
+        "passed": true
+      },
+      {
+        "name": "format_and_aircraft_order",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/formatted.json",
+          "--json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 39161,
+        "stdout_sha256": "413ecf032e52a65f3bb07052dea8b062744ac952b0929d09dca3618cc70045db",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.049511195999969004,
+        "passed": true
+      },
+      {
+        "name": "saved_rank_rotation",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/reordered.json",
+          "--json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 39162,
+        "stdout_sha256": "989334298bf5f8ccfaf2a5b40f4db8cba2cfd4524ce4c18b3ade4a1181cd0471",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.05044658600002094,
+        "passed": true
+      },
+      {
+        "name": "full_body_identity",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/body_identity.json",
+          "--json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 39751,
+        "stdout_sha256": "93f5e480df11b10bb823ae1c87544cb639dd072348a5f2a45470574a51b88d7c",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.04930780199998708,
+        "passed": true
+      },
+      {
+        "name": "empty_world_same_clock",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/zero.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/zero.json",
+          "--json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 1860,
+        "stdout_sha256": "1e011459eb6d9a389e8cd09e89088a7f2b7c642d6609e6d31117def946f70dc0",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.046702943000013875,
+        "passed": true
+      },
+      {
+        "name": "clock_signed_zero",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/zero.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/minus_zero.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 85,
+        "stderr": "error: cannot compare saved plans: reports have different exact native review clocks\n",
+        "elapsed_seconds": 0.04643061500001977,
+        "passed": true
+      },
+      {
+        "name": "clock_integer_float",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/integer_clock.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 85,
+        "stderr": "error: cannot compare saved plans: reports have different exact native review clocks\n",
+        "elapsed_seconds": 0.04917355999998563,
+        "passed": true
+      },
+      {
+        "name": "world_version_change",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/new_world.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 82,
+        "stderr": "error: cannot compare saved plans: reports describe different exact native worlds\n",
+        "elapsed_seconds": 0.04917787700003373,
+        "passed": true
+      },
+      {
+        "name": "body_hash_mismatch",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/bad_body_hash_mismatch.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 107,
+        "stderr": "error: cannot compare saved plans: Right report: Advisory 1 advisory_hash does not match its complete body\n",
+        "elapsed_seconds": 0.04965631300001405,
+        "passed": true
+      },
+      {
+        "name": "duplicate_json_key",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/bad_duplicate_json_key.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 98,
+        "stderr": "error: cannot compare saved plans: Right report: invalid report JSON: duplicate JSON object field\n",
+        "elapsed_seconds": 0.04972203099998751,
+        "passed": true
+      },
+      {
+        "name": "over_four_mib",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/bad_over_four_mib.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 64,
+        "stderr": "error: cannot compare saved plans: report exceeds 4194304 bytes\n",
+        "elapsed_seconds": 0.04620332500002178,
+        "passed": true
+      },
+      {
+        "name": "text_output",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/six.json"
+        ],
+        "exit": 0,
+        "stdout_bytes": 17812,
+        "stdout_sha256": "2692c66922e8f38675a15df052957bd3547309f00975cab6781394d6b567432e",
+        "stderr_bytes": 0,
+        "stderr": "",
+        "elapsed_seconds": 0.04968721900002038,
+        "passed": true
+      },
+      {
+        "name": "missing_input",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/missing.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 181,
+        "stderr": "error: cannot compare saved plans: [Errno 2] No such file or directory: '/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/missing.json'\n",
+        "elapsed_seconds": 0.04491714100004174,
+        "passed": true
+      },
+      {
+        "name": "directory_input",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 105,
+        "stderr": "error: cannot compare saved plans: report paths must be direct regular files, not links or special files\n",
+        "elapsed_seconds": 0.04568802400001459,
+        "passed": true
+      },
+      {
+        "name": "symlink_input",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/linked.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 105,
+        "stderr": "error: cannot compare saved plans: report paths must be direct regular files, not links or special files\n",
+        "elapsed_seconds": 0.04478906899998947,
+        "passed": true
+      },
+      {
+        "name": "dangling_symlink_input",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/dangling.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 105,
+        "stderr": "error: cannot compare saved plans: report paths must be direct regular files, not links or special files\n",
+        "elapsed_seconds": 0.04364741100005176,
+        "passed": true
+      },
+      {
+        "name": "fifo_input",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/fifo.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 105,
+        "stderr": "error: cannot compare saved plans: report paths must be direct regular files, not links or special files\n",
+        "elapsed_seconds": 0.04344083099999807,
+        "passed": true
+      },
+      {
+        "name": "output_device_failure",
+        "command": [
+          "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+          "-B",
+          "/home/runner/work/TowerOps/TowerOps/compare_plans.py",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/five.json",
+          "/tmp/pytest-of-runner/pytest-0/test_frozen_independent_receiv0/independent-receiving/fixtures/six.json",
+          "--json"
+        ],
+        "exit": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 67,
+        "stderr": "error: cannot write comparison: [Errno 28] No space left on device\n",
+        "elapsed_seconds": 0.050156841999978496,
+        "passed": true
+      }
+    ]
+  },
+  "source_unchanged": true,
+  "passed": true
+}

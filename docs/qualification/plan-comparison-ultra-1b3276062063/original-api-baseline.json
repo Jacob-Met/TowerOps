@@ -1,0 +1,114 @@
+{
+  "captured_at": "2026-10-08T16:27:23.373502+00:00",
+  "executable": "/usr/local/bin/python3",
+  "execution_kind": "Actual native APIs from authenticated unchanged Git source loaded in isolated process memory; no filesystem/CLI receiving claimed",
+  "existing_intake_refusals": [
+    {
+      "consumer": "native_world_admission",
+      "error_type": "ValueError",
+      "message": "World must contain exactly version, observed_at and aircraft.",
+      "rejected": true
+    },
+    {
+      "consumer": "fixed_scenario_replay",
+      "error_type": "ValueError",
+      "message": "Unsupported export format",
+      "rejected": true
+    }
+  ],
+  "file_or_cache_writes": false,
+  "format": "towerops-plan-compare-api-baseline.v1",
+  "input_sha256": "deb9542d45a2dc003ed562469857d14c0e1f1ee1800b87a43298df7d5e0c8087",
+  "left": {
+    "advisories": 66,
+    "bytes": 29580,
+    "candidates": 74,
+    "first_advisory_hash": "b11d27112f7a48316f518c9d496a0d49a3970da94ce3bb41802cf94506456228",
+    "report_sha256": "e474d633536bd15146c3a0fd4dff0052a69c8b9aedf0d53291619551b5e1bf26",
+    "status": "options_available"
+  },
+  "membership": {
+    "left_only": 0,
+    "retained": 66,
+    "right_only": 0
+  },
+  "policy_change": {
+    "min_horizontal_nm": [
+      5,
+      3
+    ]
+  },
+  "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "reviewed_at": 120,
+  "right": {
+    "advisories": 66,
+    "bytes": 29580,
+    "candidates": 74,
+    "first_advisory_hash": "b11d27112f7a48316f518c9d496a0d49a3970da94ce3bb41802cf94506456228",
+    "report_sha256": "522d9e3f10083fab910eaeb37c950ad67644f1ff10185ae7d653eb6055e2111d",
+    "status": "options_available"
+  },
+  "source": [
+    {
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "path": "towerops.py",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "path": "advisory_options.py",
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "git_blob": "8e826a10cc2f9425de26727dce07851497174bba",
+      "path": "plan_world.py",
+      "sha256": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e"
+    },
+    {
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "path": "scenarios.py",
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    {
+      "git_blob": "d19e5bf1bd2991b076d7166fc2280b7f1d312d9a",
+      "path": "explorer.py",
+      "sha256": "c16106e27f44f9dd247bcbc6ae677dc74db5340ffc8d2df9fd6df655fc9cb340"
+    }
+  ],
+  "source_commit": "5b3015567a01017245c5f715c1bce65e20a06138",
+  "source_tree": "89a7769301291fb66605eb0a4e45cc9ce285861a",
+  "world": {
+    "aircraft": [
+      {
+        "aircraft_id": "EAST",
+        "altitude_ft": 12000,
+        "climb_ft_min": 0,
+        "vx_nm_min": 2,
+        "vy_nm_min": 0,
+        "x_nm": -8,
+        "y_nm": 1
+      },
+      {
+        "aircraft_id": "WEST",
+        "altitude_ft": 12000,
+        "climb_ft_min": 0,
+        "vx_nm_min": -2,
+        "vy_nm_min": 0,
+        "x_nm": 8,
+        "y_nm": 1
+      },
+      {
+        "aircraft_id": "FAR",
+        "altitude_ft": 25000,
+        "climb_ft_min": 0,
+        "vx_nm_min": 0,
+        "vy_nm_min": 0,
+        "x_nm": 40,
+        "y_nm": 40
+      }
+    ],
+    "observed_at": 120,
+    "version": 7
+  },
+  "world_hash": "ae8ce380ecdddcef10cedfcdd46fcd601d9b6bdef5d33f90c4f531c2a5ed7150"
+}

@@ -1,0 +1,4 @@
+# Preserve these immutable pre-candidate review artifacts byte-for-byte.
+# Maintained tests and compare_plans.py remain under the repository lint gate.
+# The frozen receiving script is executed by tests/test_compare_plans.py.
+extend-exclude = ["independent_compare.py", "producer_fixture_builder.py"]

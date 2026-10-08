@@ -1,0 +1,96 @@
+from __future__ import annotations
+import hashlib
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import time
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / "baseline"
+EVIDENCE = ROOT / "evidence"
+FIXTURES = ROOT / "fixtures"
+RESERVE = 512 * 1024 * 1024
+
+def digest(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+def put(path, raw):
+    if shutil.disk_usage(ROOT).free < RESERVE + 8 * 1024 * 1024:
+        raise RuntimeError("512MiB reserve plus bounded write budget unavailable")
+    with path.open("xb") as handle:
+        handle.write(raw)
+
+def run(name, args):
+    free = shutil.disk_usage(ROOT).free
+    if free < RESERVE + 8 * 1024 * 1024:
+        raise RuntimeError("512MiB reserve plus bounded run budget unavailable")
+    started = time.monotonic()
+    result = subprocess.run([sys.executable, "-B", *args], cwd=SOURCE,
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=30, check=False,
+        env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"})
+    put(EVIDENCE / (name + ".stdout"), result.stdout)
+    put(EVIDENCE / (name + ".stderr"), result.stderr)
+    return {"name": name, "argv": [sys.executable, "-B", *args],
+        "returncode": result.returncode, "seconds": time.monotonic() - started,
+        "stdout_sha256": digest(result.stdout), "stdout_bytes": len(result.stdout),
+        "stderr_sha256": digest(result.stderr), "stderr_bytes": len(result.stderr)}, result
+
+world = {"version": 7, "observed_at": 120.0, "aircraft": [
+    {"aircraft_id": "EAST", "x_nm": -8.0, "y_nm": 1.0, "altitude_ft": 12000.0, "vx_nm_min": 2.0, "vy_nm_min": 0.0, "climb_ft_min": 0.0},
+    {"aircraft_id": "WEST", "x_nm": 8.0, "y_nm": 1.0, "altitude_ft": 12000.0, "vx_nm_min": -2.0, "vy_nm_min": 0.0, "climb_ft_min": 0.0},
+    {"aircraft_id": "FAR", "x_nm": 40.0, "y_nm": 40.0, "altitude_ft": 25000.0, "vx_nm_min": 0.0, "vy_nm_min": 0.0, "climb_ft_min": 0.0}
+]}
+raw_world = (json.dumps(world, indent=2, allow_nan=False) + "\n").encode("utf-8")
+world_path = FIXTURES / "world.json"
+put(world_path, raw_world)
+records = []
+reports = {}
+for name, extra in (("left", []), ("right", ["--horizontal-nm", "3"])):
+    record, result = run("produce-" + name, [str(SOURCE / "plan_world.py"), str(world_path), *extra])
+    records.append(record)
+    if result.returncode != 0 or result.stderr:
+        raise RuntimeError("native producer did not complete: " + name)
+    document = json.loads(result.stdout)
+    put(FIXTURES / (name + ".json"), result.stdout)
+    reports[name] = document
+left, right = reports["left"], reports["right"]
+assert left["world_hash"] == right["world_hash"]
+assert left["reviewed_at"] == right["reviewed_at"] == 120.0
+assert left["policy"]["min_horizontal_nm"] == 5.0
+assert right["policy"]["min_horizontal_nm"] == 3.0
+assert left["advisories"] and right["advisories"]
+for name, consumer in (("plan-report-intake", "plan_world.py"), ("fixed-replay-report-intake", "explorer.py")):
+    args = [str(SOURCE / consumer)]
+    if consumer == "explorer.py":
+        args.append("replay")
+    args.append(str(FIXTURES / "left.json"))
+    record, result = run(name, args)
+    records.append(record)
+    assert result.returncode != 0
+    assert not result.stdout
+assert world_path.read_bytes() == raw_world
+left_keys = {row["advisory_hash"] for row in left["advisories"]}
+right_keys = {row["advisory_hash"] for row in right["advisories"]}
+pin = json.loads((EVIDENCE / "source-pin.json").read_text())
+unchanged = []
+for entry in pin["files"]:
+    raw = (SOURCE / entry["path"]).read_bytes()
+    assert digest(raw) == entry["sha256"]
+    unchanged.append(entry["path"])
+receipt = {"format": "towerops-plan-compare-baseline.v1", "source_commit": pin["commit"],
+    "source_tree": pin["tree"], "python": sys.version, "python_executable": sys.executable,
+    "claim": "https://github.com/Jacob-Met/TowerOps/issues/56",
+    "original_workflow_absent": not (SOURCE / "compare_plans.py").exists(),
+    "absence_meaning": "Existing consumers correctly refuse an unsupported saved-report format; no supported-format defect is claimed.",
+    "left": {"status": left["status"], "candidate_count": left["candidate_count"], "advisories": len(left_keys)},
+    "right": {"status": right["status"], "candidate_count": right["candidate_count"], "advisories": len(right_keys)},
+    "membership": {"retained": len(left_keys & right_keys), "left_only": len(left_keys-right_keys), "right_only": len(right_keys-left_keys)},
+    "world_hash": left["world_hash"], "reviewed_at": left["reviewed_at"],
+    "input_sha256": digest(raw_world), "fixtures": {
+        path.name: {"sha256": digest(path.read_bytes()), "bytes": path.stat().st_size} for path in sorted(FIXTURES.iterdir())},
+    "processes": records, "unchanged_source": unchanged, "free_bytes_after": shutil.disk_usage(ROOT).free}
+put(EVIDENCE / "baseline.json", (json.dumps(receipt, indent=2, sort_keys=True) + "\n").encode("utf-8"))
+print(json.dumps({key: receipt[key] for key in ("source_commit", "original_workflow_absent", "left", "right", "membership", "free_bytes_after")}, sort_keys=True))
