@@ -1,0 +1,539 @@
+{
+  "groups": [
+    {
+      "name": "download and reviewed import reproduce the saved policy",
+      "passed": true,
+      "milliseconds": 1331,
+      "download_sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "conflicts_before": 1,
+      "changed_policy_conflicts": 0,
+      "restored_conflicts": 1
+    },
+    {
+      "name": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "passed": true,
+      "milliseconds": 2132,
+      "python_roundtrips": 2,
+      "audit_restored_from_file": false,
+      "deterministic_new_trace": true
+    },
+    {
+      "name": "a changed simulation invalidates the reviewed replacement",
+      "passed": true,
+      "milliseconds": 1072,
+      "invalidated_by": [
+        "policy",
+        "time scale",
+        "flight editor",
+        "running traffic"
+      ],
+      "paused_controls_available": true
+    },
+    {
+      "name": "canceled and superseded asynchronous file reads cannot publish a replacement",
+      "passed": true,
+      "milliseconds": 1070,
+      "fault": "delayed File.text only; production source unchanged",
+      "canceled": true,
+      "newest_wins": true,
+      "changed_context_refused": true
+    },
+    {
+      "name": "invalid files preserve the current world, proposal, approval and trace",
+      "passed": true,
+      "milliseconds": 2108,
+      "refused_files": [
+        "broken.json",
+        "wrong-version.json",
+        "unknown-field.json",
+        "invisible-policy.json",
+        "oversize.json",
+        "foreign-selection.json"
+      ],
+      "messages": [
+        "NOT LOADED: The selected file is not valid JSON.",
+        "NOT LOADED: Choose a TowerOps Airspace scenario file with format version 1. Raw WorldState JSON uses the existing workbench below.",
+        "NOT LOADED: Scenario needs exactly these fields: format, version, world, policy, now, time_scale, selected_aircraft_id.",
+        "NOT LOADED: max_speed_nm_min is not configurable in scenario format v1; expected 6.",
+        "NOT LOADED: Scenario files must be at most 256 KiB.",
+        "NOT LOADED: selected_aircraft_id must identify an aircraft in this world."
+      ],
+      "unreadable_file_preserved": true
+    },
+    {
+      "name": "legacy WorldState and selected-flight preview/apply remain usable",
+      "passed": true,
+      "milliseconds": 858,
+      "legacy_raw_world": true,
+      "versioned_selected_edit": true,
+      "other_aircraft_preserved": true
+    },
+    {
+      "name": "phone review supports literal filenames, keyboard apply and bounded layout",
+      "passed": true,
+      "milliseconds": 981,
+      "phone_width": 390,
+      "no_horizontal_overflow": true,
+      "literal_filename": true,
+      "keyboard_confirmed": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "proxyBlocks": [
+    {
+      "method": "GET",
+      "url": "http://clients2.google.com/time/1/current?cup2key=10:KWgqNgUjHBUA-WE0P2QxQIBMiPBOQHUZ6TDrbLpJ7nk&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.gstatic.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "update.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "android.clients.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    }
+  ],
+  "requests": [
+    {
+      "group": "download and reviewed import reproduce the saved policy",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "3f8f6caa2ca2b7a60a4adc4a7be98ecc2d8eef264599c49ccec2e0db0da3c053"
+    },
+    {
+      "group": "download and reviewed import reproduce the saved policy",
+      "path": "/TowerOps/airspace/assets/index-AAJY_5y0.css",
+      "status": 200,
+      "sha256": "79d338fcb0216bd3fbe1c353fd5ebae187f31ba0551389829c8da1bb3a4f9c4a"
+    },
+    {
+      "group": "download and reviewed import reproduce the saved policy",
+      "path": "/TowerOps/airspace/assets/index-DL7pjmuN.js",
+      "status": 200,
+      "sha256": "1a2127e5fd304828c1fc3d3f5b8a181d8c64a8a365a4083fa561a319270b6094"
+    },
+    {
+      "group": "download and reviewed import reproduce the saved policy",
+      "path": "/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "3f8f6caa2ca2b7a60a4adc4a7be98ecc2d8eef264599c49ccec2e0db0da3c053"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/assets/index-AAJY_5y0.css",
+      "status": 200,
+      "sha256": "79d338fcb0216bd3fbe1c353fd5ebae187f31ba0551389829c8da1bb3a4f9c4a"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/assets/index-DL7pjmuN.js",
+      "status": 200,
+      "sha256": "1a2127e5fd304828c1fc3d3f5b8a181d8c64a8a365a4083fa561a319270b6094"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/assets/python-worker-Dt6KeInE.js",
+      "status": 200,
+      "sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "group": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "path": "/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "sha256": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e"
+    },
+    {
+      "group": "a changed simulation invalidates the reviewed replacement",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "3f8f6caa2ca2b7a60a4adc4a7be98ecc2d8eef264599c49ccec2e0db0da3c053"
+    },
+    {
+      "group": "a changed simulation invalidates the reviewed replacement",
+      "path": "/TowerOps/airspace/assets/index-DL7pjmuN.js",
+      "status": 200,
+      "sha256": "1a2127e5fd304828c1fc3d3f5b8a181d8c64a8a365a4083fa561a319270b6094"
+    },
+    {
+      "group": "a changed simulation invalidates the reviewed replacement",
+      "path": "/TowerOps/airspace/assets/index-AAJY_5y0.css",
+      "status": 200,
+      "sha256": "79d338fcb0216bd3fbe1c353fd5ebae187f31ba0551389829c8da1bb3a4f9c4a"
+    },
+    {
+      "group": "canceled and superseded asynchronous file reads cannot publish a replacement",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "3f8f6caa2ca2b7a60a4adc4a7be98ecc2d8eef264599c49ccec2e0db0da3c053"
+    },
+    {
+      "group": "canceled and superseded asynchronous file reads cannot publish a replacement",
+      "path": "/TowerOps/airspace/assets/index-AAJY_5y0.css",
+      "status": 200,
+      "sha256": "79d338fcb0216bd3fbe1c353fd5ebae187f31ba0551389829c8da1bb3a4f9c4a"
+    },
+    {
+      "group": "canceled and superseded asynchronous file reads cannot publish a replacement",
+      "path": "/TowerOps/airspace/assets/index-DL7pjmuN.js",
+      "status": 200,
+      "sha256": "1a2127e5fd304828c1fc3d3f5b8a181d8c64a8a365a4083fa561a319270b6094"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "3f8f6caa2ca2b7a60a4adc4a7be98ecc2d8eef264599c49ccec2e0db0da3c053"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/assets/index-AAJY_5y0.css",
+      "status": 200,
+      "sha256": "79d338fcb0216bd3fbe1c353fd5ebae187f31ba0551389829c8da1bb3a4f9c4a"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/assets/index-DL7pjmuN.js",
+      "status": 200,
+      "sha256": "1a2127e5fd304828c1fc3d3f5b8a181d8c64a8a365a4083fa561a319270b6094"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/assets/python-worker-Dt6KeInE.js",
+      "status": 200,
+      "sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "group": "invalid files preserve the current world, proposal, approval and trace",
+      "path": "/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "sha256": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e"
+    },
+    {
+      "group": "legacy WorldState and selected-flight preview/apply remain usable",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "3f8f6caa2ca2b7a60a4adc4a7be98ecc2d8eef264599c49ccec2e0db0da3c053"
+    },
+    {
+      "group": "legacy WorldState and selected-flight preview/apply remain usable",
+      "path": "/TowerOps/airspace/assets/index-DL7pjmuN.js",
+      "status": 200,
+      "sha256": "1a2127e5fd304828c1fc3d3f5b8a181d8c64a8a365a4083fa561a319270b6094"
+    },
+    {
+      "group": "legacy WorldState and selected-flight preview/apply remain usable",
+      "path": "/TowerOps/airspace/assets/index-AAJY_5y0.css",
+      "status": 200,
+      "sha256": "79d338fcb0216bd3fbe1c353fd5ebae187f31ba0551389829c8da1bb3a4f9c4a"
+    },
+    {
+      "group": "phone review supports literal filenames, keyboard apply and bounded layout",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "3f8f6caa2ca2b7a60a4adc4a7be98ecc2d8eef264599c49ccec2e0db0da3c053"
+    },
+    {
+      "group": "phone review supports literal filenames, keyboard apply and bounded layout",
+      "path": "/TowerOps/airspace/assets/index-AAJY_5y0.css",
+      "status": 200,
+      "sha256": "79d338fcb0216bd3fbe1c353fd5ebae187f31ba0551389829c8da1bb3a4f9c4a"
+    },
+    {
+      "group": "phone review supports literal filenames, keyboard apply and bounded layout",
+      "path": "/TowerOps/airspace/assets/index-DL7pjmuN.js",
+      "status": 200,
+      "sha256": "1a2127e5fd304828c1fc3d3f5b8a181d8c64a8a365a4083fa561a319270b6094"
+    }
+  ],
+  "error": "Error: EISDIR: illegal operation on a directory, read",
+  "stack": "Error: EISDIR: illegal operation on a directory, read\n    at async readFileHandle (node:internal/fs/promises:1203:24)\n    at async file:///private/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/scenario-browser-receiving.mjs:183:38",
+  "pages": [
+    {
+      "url": "about:blank",
+      "status": {}
+    }
+  ]
+}

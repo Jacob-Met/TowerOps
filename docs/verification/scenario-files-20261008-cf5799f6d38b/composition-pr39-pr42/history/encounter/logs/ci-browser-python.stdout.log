@@ -1,0 +1,2 @@
+{"entry": "/private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate/tools/verify_browser_python.py", "entry_sha256": "de75b20face400ab0390c0dd2171cf3b7652e0b4e36e92ab8c64554d6411f591", "browser_executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", "override": "installed browser executable only; original oracle predicates unchanged"}
+{"native_python_cases": 4, "planner_gate_audit_parity": true, "missing_approval_and_ack_rejected": true, "source_load_failure_closed": true}

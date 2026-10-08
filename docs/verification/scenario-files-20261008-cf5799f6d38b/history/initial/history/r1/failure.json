@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "download and reviewed import reproduce the saved policy",
+      "passed": true,
+      "milliseconds": 1352,
+      "download_sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "conflicts_before": 1,
+      "changed_policy_conflicts": 0,
+      "restored_conflicts": 1
+    },
+    {
+      "name": "cancel preserves approvals; confirmed import starts an empty native Python trace",
+      "passed": false,
+      "milliseconds": 30664,
+      "error": "TimeoutError: Waiting failed: 30000ms exceeded"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "error": "TimeoutError: Waiting failed: 30000ms exceeded",
+  "stack": "TimeoutError: Waiting failed: 30000ms exceeded\n    at new WaitTask (file:///Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at file:///private/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/scenario-browser-receiving.mjs:89:49\n    at async group (file:///private/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/scenario-browser-receiving.mjs:51:86)\n    at async file:///private/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/scenario-browser-receiving.mjs:86:3"
+}

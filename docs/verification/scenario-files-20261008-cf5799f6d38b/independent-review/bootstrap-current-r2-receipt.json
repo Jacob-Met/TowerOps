@@ -1,0 +1,21 @@
+{
+  "source_tree": "d6b4a1ec5757144f848e1d6ce851a766a7413f2c",
+  "parent": "09b96e31d2867af5b7a9738406d0431cf1010090",
+  "source_files": 136,
+  "feature_files": 7,
+  "unowned_files_preserved": 129,
+  "feature_paths": [
+    "web/airspace/README.md",
+    "web/airspace/index.html",
+    "web/airspace/src/main.ts",
+    "web/airspace/src/scenario-file.ts",
+    "web/airspace/src/scenario-ui.ts",
+    "web/airspace/style.css",
+    "web/airspace/tests/scenario-file.test.ts"
+  ],
+  "only_changed_path_from_current": [
+    "web/airspace/src/main.ts"
+  ],
+  "build_returncode": 0,
+  "source_unchanged_after_build": true
+}

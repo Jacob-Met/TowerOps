@@ -1,0 +1,523 @@
+{
+  "schema": "towerops.independent-browser-files.v1",
+  "files": [
+    {
+      "run": "browser-v1",
+      "path": "fixtures/exact-numeric-world.json",
+      "bytes": 565,
+      "sha256": "845279e377db83d6e96885c122ffbca2be145778feb8ba19f8d7fd91c1e15995",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":41,\"observed_at\":2500.25,\"aircraft\":[{\"aircraft_id\":\"REVIEWB\",\"x_nm\":6.75,\"y_nm\":0,\"altitude_ft\":9500,\"vx_nm_min\":-1,\"vy_nm_min\":0.1,\"climb_ft_min\":250},{\"aircraft_id\":\"REVIEWA\",\"x_nm\":-0,\"y_nm\":0,\"altitude_ft\":9000,\"vx_nm_min\":-0,\"vy_nm_min\":1,\"climb_ft_min\":-0}]},\"policy\":{\"min_horizontal_nm\":3.5,\"min_vertical_ft\":600,\"horizon_min\":8.5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":2507.75,\"time_scale\":0.5,\"selected_aircraft_id\":\"REVIEWB\"}"
+    },
+    {
+      "run": "browser-v1",
+      "path": "fixtures/stale-clock.json",
+      "bytes": 546,
+      "sha256": "63e1388337100493aea1cdab95aed955dbebdf79bce83458e973a0bf0b7f59d7",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1012.75,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "run": "browser-v1",
+      "path": "downloads/108f37e7-b488-4b51-806c-ab0129f0c129",
+      "bytes": 831,
+      "sha256": "76087bb793bbec0e91b7359cb5a698fb4f9ab400b0fd3e7e52f37049b65eb271",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 42,\n    \"observed_at\": 2507.75,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-v1",
+      "path": "downloads/3acc1611-49f2-44c6-a1bd-f2446734bbec",
+      "bytes": 834,
+      "sha256": "38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 41,\n    \"observed_at\": 2500.25,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 6.75,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-v1",
+      "path": "downloads/3d9c0bec-7143-45ba-a00f-543f8ad51caa",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v1",
+      "path": "downloads/3e4e92dd-21f5-47cd-9c44-f194393f7f30",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v1",
+      "path": "downloads/49e23fe5-a21e-4d5b-9fd4-971b11616fb8",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v1",
+      "path": "downloads/8f939a89-c66b-4dff-8015-8401284f80fe",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v1",
+      "path": "downloads/b62954b4-edcd-4536-807f-9cb1afa4318b",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v1",
+      "path": "downloads/d40581cd-67e1-4010-a392-6c548e1dd474",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v1",
+      "path": "downloads/ebf7af90-f6fc-4148-9daf-4233eaefa64f",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "fixtures/exact-numeric-world.json",
+      "bytes": 565,
+      "sha256": "845279e377db83d6e96885c122ffbca2be145778feb8ba19f8d7fd91c1e15995",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":41,\"observed_at\":2500.25,\"aircraft\":[{\"aircraft_id\":\"REVIEWB\",\"x_nm\":6.75,\"y_nm\":0,\"altitude_ft\":9500,\"vx_nm_min\":-1,\"vy_nm_min\":0.1,\"climb_ft_min\":250},{\"aircraft_id\":\"REVIEWA\",\"x_nm\":-0,\"y_nm\":0,\"altitude_ft\":9000,\"vx_nm_min\":-0,\"vy_nm_min\":1,\"climb_ft_min\":-0}]},\"policy\":{\"min_horizontal_nm\":3.5,\"min_vertical_ft\":600,\"horizon_min\":8.5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":2507.75,\"time_scale\":0.5,\"selected_aircraft_id\":\"REVIEWB\"}"
+    },
+    {
+      "run": "browser-v2",
+      "path": "fixtures/future-clock.json",
+      "bytes": 542,
+      "sha256": "329dad06c84951a96a5c2780492987091caba15ed5d78365d4bd8fb8f1fd5104",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":995,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "run": "browser-v2",
+      "path": "fixtures/stale-clock.json",
+      "bytes": 546,
+      "sha256": "63e1388337100493aea1cdab95aed955dbebdf79bce83458e973a0bf0b7f59d7",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1012.75,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/09edc16b-d8ad-477d-a79b-ee84d685f75b",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/14fc5291-d2af-4f0f-8851-ddd47502150d",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/1fc1241d-e40f-4a12-8876-c7d88249cd54",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/30f056d0-c832-4481-a329-e7e6fe767d0c",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/4e7ba7e6-10eb-4eea-8c99-0a84d9598e2b",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 995,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/505abafa-8366-4f43-872e-5a4f02edb3ce",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 995,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/5561e33a-c84e-44c7-a511-8a9b1694605f",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/70f805cd-a513-4c25-bbdd-6d3cb38afb06",
+      "bytes": 831,
+      "sha256": "76087bb793bbec0e91b7359cb5a698fb4f9ab400b0fd3e7e52f37049b65eb271",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 42,\n    \"observed_at\": 2507.75,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/859fcbb0-4528-4c89-bc96-c15d4c28c8d8",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/864f939c-ff3a-40dc-b452-66525c58e0e1",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/c8b46d2c-c812-4ee1-93f6-79c58b92918f",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-v2",
+      "path": "downloads/ebc603c7-aa70-43c1-8d01-4a6a51ac21a6",
+      "bytes": 834,
+      "sha256": "38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 41,\n    \"observed_at\": 2500.25,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 6.75,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "fixtures/exact-numeric-world.json",
+      "bytes": 565,
+      "sha256": "845279e377db83d6e96885c122ffbca2be145778feb8ba19f8d7fd91c1e15995",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":41,\"observed_at\":2500.25,\"aircraft\":[{\"aircraft_id\":\"REVIEWB\",\"x_nm\":6.75,\"y_nm\":0,\"altitude_ft\":9500,\"vx_nm_min\":-1,\"vy_nm_min\":0.1,\"climb_ft_min\":250},{\"aircraft_id\":\"REVIEWA\",\"x_nm\":-0,\"y_nm\":0,\"altitude_ft\":9000,\"vx_nm_min\":-0,\"vy_nm_min\":1,\"climb_ft_min\":-0}]},\"policy\":{\"min_horizontal_nm\":3.5,\"min_vertical_ft\":600,\"horizon_min\":8.5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":2507.75,\"time_scale\":0.5,\"selected_aircraft_id\":\"REVIEWB\"}"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "fixtures/future-clock.json",
+      "bytes": 542,
+      "sha256": "329dad06c84951a96a5c2780492987091caba15ed5d78365d4bd8fb8f1fd5104",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":995,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "fixtures/stale-clock.json",
+      "bytes": 546,
+      "sha256": "63e1388337100493aea1cdab95aed955dbebdf79bce83458e973a0bf0b7f59d7",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1012.75,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/08f493f2-a17d-4654-ae9a-80699677de35",
+      "bytes": 834,
+      "sha256": "38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 41,\n    \"observed_at\": 2500.25,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 6.75,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/22fa797a-114d-4f2c-b418-795960b1dee5",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/2c80aa3e-7b8e-45e4-8d59-05dc978263df",
+      "bytes": 831,
+      "sha256": "76087bb793bbec0e91b7359cb5a698fb4f9ab400b0fd3e7e52f37049b65eb271",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 42,\n    \"observed_at\": 2507.75,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/34227617-af7f-4b9a-928b-23bc131fa9c8",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/353ea6de-f10d-4306-884e-9ad5e685e597",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/3d19638b-2b74-46d8-a34e-5aa49c4170c8",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/41353e19-a364-4a11-baaf-f820197d197c",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/59a7d6f9-89ea-45dc-8bfc-4ebe839d6cbb",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 995,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/896dc8a7-cec1-4ae2-854c-a59ccd9f078a",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/9cb80397-8c35-47ff-9db5-bf8a7b6e2dc6",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/bfafffe9-b3f9-4a52-b956-4bd19172a020",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 995,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "path": "downloads/c1f59afa-bc3a-4d8a-84ab-89a8fe17bd3a",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "fixtures/exact-numeric-world.json",
+      "bytes": 565,
+      "sha256": "845279e377db83d6e96885c122ffbca2be145778feb8ba19f8d7fd91c1e15995",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":41,\"observed_at\":2500.25,\"aircraft\":[{\"aircraft_id\":\"REVIEWB\",\"x_nm\":6.75,\"y_nm\":0,\"altitude_ft\":9500,\"vx_nm_min\":-1,\"vy_nm_min\":0.1,\"climb_ft_min\":250},{\"aircraft_id\":\"REVIEWA\",\"x_nm\":-0,\"y_nm\":0,\"altitude_ft\":9000,\"vx_nm_min\":-0,\"vy_nm_min\":1,\"climb_ft_min\":-0}]},\"policy\":{\"min_horizontal_nm\":3.5,\"min_vertical_ft\":600,\"horizon_min\":8.5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":2507.75,\"time_scale\":0.5,\"selected_aircraft_id\":\"REVIEWB\"}"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "fixtures/future-clock.json",
+      "bytes": 542,
+      "sha256": "329dad06c84951a96a5c2780492987091caba15ed5d78365d4bd8fb8f1fd5104",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":995,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "fixtures/stale-clock.json",
+      "bytes": 546,
+      "sha256": "63e1388337100493aea1cdab95aed955dbebdf79bce83458e973a0bf0b7f59d7",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1012.75,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/123cadba-7c91-40c8-b6b8-0a3a49b8a334",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/16464a55-4711-4d9a-a5fe-d703886102bc",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/2065491c-a821-4eab-8fe5-3136c84ce747",
+      "bytes": 831,
+      "sha256": "76087bb793bbec0e91b7359cb5a698fb4f9ab400b0fd3e7e52f37049b65eb271",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 42,\n    \"observed_at\": 2507.75,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/20dbe499-1e04-4e4b-bfdb-c191e51ec376",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 995,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/231aa30d-bf4c-4671-86e3-27fae40c1275",
+      "bytes": 834,
+      "sha256": "38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 41,\n    \"observed_at\": 2500.25,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 6.75,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/8883c8ba-a96e-41cd-8d20-86355431242b",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/8a677643-07ba-4d10-b084-aeee40306d0d",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/c19aa222-36a7-490a-934a-2648376fc463",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/ca21c3b8-5e0d-4ffb-a136-da8a16873fa0",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/ec53345f-370b-4f97-8350-aaaa672d02f1",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/f25d7b4b-4691-4a55-90cb-1de02117fc85",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 995,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-v2b",
+      "path": "downloads/fa7d42ba-233f-4e28-887b-893207b32930",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "fixtures/exact-numeric-world.json",
+      "bytes": 565,
+      "sha256": "845279e377db83d6e96885c122ffbca2be145778feb8ba19f8d7fd91c1e15995",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":41,\"observed_at\":2500.25,\"aircraft\":[{\"aircraft_id\":\"REVIEWB\",\"x_nm\":6.75,\"y_nm\":0,\"altitude_ft\":9500,\"vx_nm_min\":-1,\"vy_nm_min\":0.1,\"climb_ft_min\":250},{\"aircraft_id\":\"REVIEWA\",\"x_nm\":-0,\"y_nm\":0,\"altitude_ft\":9000,\"vx_nm_min\":-0,\"vy_nm_min\":1,\"climb_ft_min\":-0}]},\"policy\":{\"min_horizontal_nm\":3.5,\"min_vertical_ft\":600,\"horizon_min\":8.5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":2507.75,\"time_scale\":0.5,\"selected_aircraft_id\":\"REVIEWB\"}"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "fixtures/future-clock.json",
+      "bytes": 542,
+      "sha256": "329dad06c84951a96a5c2780492987091caba15ed5d78365d4bd8fb8f1fd5104",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":995,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "fixtures/stale-clock.json",
+      "bytes": 546,
+      "sha256": "63e1388337100493aea1cdab95aed955dbebdf79bce83458e973a0bf0b7f59d7",
+      "utf8": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1012.75,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/10777777-8fc9-4857-94a0-a042e58edf98",
+      "bytes": 831,
+      "sha256": "76087bb793bbec0e91b7359cb5a698fb4f9ab400b0fd3e7e52f37049b65eb271",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 42,\n    \"observed_at\": 2507.75,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/11a71e1b-54d8-4aca-876f-2d0573cd770a",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/178403e9-a003-4a8f-9648-ac9fe03e5f6f",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 995,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/388f82c6-dfd3-46bf-b8f1-8f7530fc2aa3",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/5177a148-a067-4795-8b48-7ecb2b37d27e",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 995,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/597c9951-e425-4316-bbff-00e351fe2cf9",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/63208330-2523-4cda-8911-b46120789820",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/9afc0625-5ada-4d96-8598-5e88418195c0",
+      "bytes": 834,
+      "sha256": "38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 41,\n    \"observed_at\": 2500.25,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 6.75,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/abc5d2b7-6bc1-4330-b9df-f44cfce71af7",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/b1e70eee-4e59-44c6-a9ac-26b9391cd176",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/c1ed01bd-866b-46c9-8bf5-d4203209ac14",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "path": "downloads/e3dd8eab-653f-4978-9f40-4c5a0b0c1e72",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "pending-r2",
+      "path": "downloads/3cebf438-93e3-40bb-989e-0c66dba7b57d",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "pending-current",
+      "path": "downloads/7eb22fdc-d2f9-441c-891b-9398e647f148",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "run": "pending-current-r2",
+      "path": "downloads/c76d7c9d-0075-4f95-9ace-2c1ede20716f",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "utf8": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    }
+  ]
+}

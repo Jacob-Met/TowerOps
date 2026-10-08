@@ -1,0 +1,52 @@
+{
+  "workspace": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa",
+  "prior_source": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+  "prior_tree": "9ed528ac4281d4ec098b4717d909a08869057d40",
+  "current_commit": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "current_tree": "e50e0f2c6302be0b5a1d90fed7fffa2a197bd321",
+  "current_files": 140,
+  "agents_files": [],
+  "apply_exit": 1,
+  "conflicts": [
+    "web/airspace/README.md",
+    "web/airspace/src/main.ts",
+    "web/airspace/style.css"
+  ],
+  "feature_paths": [
+    {
+      "path": "web/airspace/src/scenario-file.ts",
+      "sha256": "8ecfb59fefe8e979d31f00db0bef6240f317d8576ae0054b5143cb530c2c757c",
+      "git_blob": "e499d279563c8b2e027309943caf9098c7e88776"
+    },
+    {
+      "path": "web/airspace/src/scenario-ui.ts",
+      "sha256": "9eb933c3ad03670d4d504e45ad9049b4cfee09a273ec2c11aa7b7beff487fb07",
+      "git_blob": "f0b99a3d0e97fbf54fa177397e67b6aa9ade2063"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "sha256": "30f98ad9f24081026c54ae16703175a738639673d32a75a353b42a20ebcaf3f1",
+      "git_blob": "98694cffa5a60414e021f948d08e32fc665f5885"
+    },
+    {
+      "path": "web/airspace/index.html",
+      "sha256": "cd2127c068849a04c73c97dd9a7f85bbb866858befef28c3e03fae31eadec269",
+      "git_blob": "f35b02ede907a20394b7ca0e0ba2662546aa472b"
+    },
+    {
+      "path": "web/airspace/style.css",
+      "sha256": "e7ce591249c4fd3c769e46db92545196f1ef8326a375d8e66f0c6588ef588b41",
+      "git_blob": "d234aaca29bd6e584cec8ae4509a30a9bff209bc"
+    },
+    {
+      "path": "web/airspace/tests/scenario-file.test.ts",
+      "sha256": "f7680a85e2e59eca9e5b8bd381636f5eed533096e2cf800c51df6ac90d197bad",
+      "git_blob": "450dc4c6d2e9ff0e6e118e696fc34dd47f2d6a49"
+    },
+    {
+      "path": "web/airspace/README.md",
+      "sha256": "4f99e0adbbb2f0c619be5978ab25044f6ae851bce4dda555bff2f15938cbe889",
+      "git_blob": "537d0ebbf75d28352b27f6b7ad5458ebdc1af786"
+    }
+  ]
+}

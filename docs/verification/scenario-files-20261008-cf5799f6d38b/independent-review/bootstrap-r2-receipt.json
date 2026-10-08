@@ -1,0 +1,9 @@
+{
+  "source_tree": "91131fb20fd40fd7281201f3626638cffac3f532",
+  "source_files": 99,
+  "changed_paths": [
+    "web/airspace/src/main.ts"
+  ],
+  "build_returncode": 0,
+  "source_unchanged_after_build": true
+}

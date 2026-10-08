@@ -1,0 +1,161 @@
+{
+  "schema": "towerops.independent-process-output.v1",
+  "logs": [
+    {
+      "path": "build-current-r2.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "build-current-r2.stdout.log",
+      "bytes": 507,
+      "sha256": "bab35cfde7d6d79bcb1145e79ec2631f62cd137207b0c79f053391e7fbad89eb",
+      "utf8": "\n> towerops-airspace-lab@0.1.0 build\n> node prepare-python.mjs && tsc --noEmit && vite build\n\nvite v8.3.3 building client environment for production...\ntransforming...\n✓ 17 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/python-worker-DZJBTUKm.js   2.83 kB\ndist/index.html                        11.48 kB │ gzip:  4.02 kB\ndist/assets/index-AAJY_5y0.css         14.91 kB │ gzip:  3.79 kB\ndist/assets/index-DD6Srhif.js          44.31 kB │ gzip: 14.05 kB\n\n✓ built in 78ms\n"
+    },
+    {
+      "path": "build-current.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "build-current.stdout.log",
+      "bytes": 508,
+      "sha256": "2a1656edddce9bb64a9b105463d78e28f169b1c0b3139b16106bf7765e370bf9",
+      "utf8": "\n> towerops-airspace-lab@0.1.0 build\n> node prepare-python.mjs && tsc --noEmit && vite build\n\nvite v8.3.3 building client environment for production...\ntransforming...\n✓ 17 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/python-worker-DZJBTUKm.js   2.83 kB\ndist/index.html                        11.48 kB │ gzip:  4.02 kB\ndist/assets/index-AAJY_5y0.css         14.91 kB │ gzip:  3.79 kB\ndist/assets/index-D99A7Bt_.js          44.26 kB │ gzip: 14.01 kB\n\n✓ built in 105ms\n"
+    },
+    {
+      "path": "build-r2.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "build-r2.stdout.log",
+      "bytes": 507,
+      "sha256": "ee42b24efbb0440e1aa4a452707ab7b48216081cbb6171c596b5b6be37611462",
+      "utf8": "\n> towerops-airspace-lab@0.1.0 build\n> node prepare-python.mjs && tsc --noEmit && vite build\n\nvite v8.3.3 building client environment for production...\ntransforming...\n✓ 17 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/python-worker-Dt6KeInE.js   2.21 kB\ndist/index.html                        11.48 kB │ gzip:  4.02 kB\ndist/assets/index-AAJY_5y0.css         14.91 kB │ gzip:  3.79 kB\ndist/assets/index-Dx9hcTJF.js          44.10 kB │ gzip: 13.91 kB\n\n✓ built in 86ms\n"
+    },
+    {
+      "path": "build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "build.stdout.log",
+      "bytes": 508,
+      "sha256": "4ed69acece633ae68efb2a46c66b15ea9bd4fbddd60db410e7feef063bae5e5f",
+      "utf8": "\n> towerops-airspace-lab@0.1.0 build\n> node prepare-python.mjs && tsc --noEmit && vite build\n\nvite v8.3.3 building client environment for production...\ntransforming...\n✓ 17 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/python-worker-Dt6KeInE.js   2.21 kB\ndist/index.html                        11.48 kB │ gzip:  4.02 kB\ndist/assets/index-AAJY_5y0.css         14.91 kB │ gzip:  3.79 kB\ndist/assets/index-DL7pjmuN.js          44.08 kB │ gzip: 13.91 kB\n\n✓ built in 101ms\n"
+    },
+    {
+      "path": "pending-current-r2.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "pending-current-r2.stdout.log",
+      "bytes": 311,
+      "sha256": "f7a295692e81e014e42790ad677f23c49c3ed80f74fbc8d1ccf207317e0cd70b",
+      "utf8": "{\"name\":\"pending_old_trace_verification_cannot_repaint_loaded_scenario\",\"old_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"after_apply_verdict\":\"\",\"after_old_verification_completed\":\"\",\"real_digest_calls\":4,\"real_digest_completions\":4,\"source_edits\":false,\"hash_values_altered\":false,\"passed\":true,\"elapsed_ms\":2411}\n"
+    },
+    {
+      "path": "pending-current.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "pending-current.stdout.log",
+      "bytes": 1348,
+      "sha256": "4b6700df6c86459e81ed1ed5ba5a7f4a38144f53411d1370e7b6b3b432a7249a",
+      "utf8": "{\"name\":\"pending_old_trace_verification_cannot_repaint_loaded_scenario\",\"old_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"after_apply_verdict\":\"\",\"after_old_verification_completed\":\"HASH CHAIN VALID - 0 EVENTS\",\"real_digest_calls\":4,\"real_digest_completions\":4,\"source_edits\":false,\"hash_values_altered\":false,\"passed\":false,\"error\":\"AssertionError [ERR_ASSERTION]: A verification of the discarded trace must not publish into the replacement scenario\\n+ actual - expected\\n\\n+ 'HASH CHAIN VALID - 0 EVENTS'\\n- ''\\n\",\"failed_snapshot\":{\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"selected\":\"Edit TWR419\",\"policy\":[5,1000,5],\"rate\":1,\"rate_label\":\"1.0x\",\"clock\":\"T+0 SEC\",\"proposal\":\"Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.\",\"approval_disabled\":true,\"readback_disabled\":true,\"audit\":\"\",\"audit_status\":\"0 EVENTS / VALID\",\"audit_verdict\":\"HASH CHAIN VALID - 0 EVENTS\",\"gates\":[\"01Fresh state + safety screenWAIT\",\"02Controller approval fixtureWAIT\",\"03Readback acknowledgementWAIT\"],\"python\":\"Live CPython · ControlRoom.apply · audit verified\"},\"elapsed_ms\":2654}\n"
+    },
+    {
+      "path": "pending-r2.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "pending-r2.stdout.log",
+      "bytes": 1348,
+      "sha256": "19a3875314efbe47cd290199cd50a6b020f3053e1b7b585eb4d1e9f4d5f34591",
+      "utf8": "{\"name\":\"pending_old_trace_verification_cannot_repaint_loaded_scenario\",\"old_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"after_apply_verdict\":\"\",\"after_old_verification_completed\":\"HASH CHAIN VALID - 0 EVENTS\",\"real_digest_calls\":4,\"real_digest_completions\":4,\"source_edits\":false,\"hash_values_altered\":false,\"passed\":false,\"error\":\"AssertionError [ERR_ASSERTION]: A verification of the discarded trace must not publish into the replacement scenario\\n+ actual - expected\\n\\n+ 'HASH CHAIN VALID - 0 EVENTS'\\n- ''\\n\",\"failed_snapshot\":{\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"selected\":\"Edit TWR419\",\"policy\":[5,1000,5],\"rate\":1,\"rate_label\":\"1.0x\",\"clock\":\"T+0 SEC\",\"proposal\":\"Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.\",\"approval_disabled\":true,\"readback_disabled\":true,\"audit\":\"\",\"audit_status\":\"0 EVENTS / VALID\",\"audit_verdict\":\"HASH CHAIN VALID - 0 EVENTS\",\"gates\":[\"01Fresh state + safety screenWAIT\",\"02Controller approval fixtureWAIT\",\"03Readback acknowledgementWAIT\"],\"python\":\"Live CPython · ControlRoom.apply · audit verified\"},\"elapsed_ms\":2382}\n"
+    },
+    {
+      "path": "review-current-r2-v2b.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "review-current-r2-v2b.stdout.log",
+      "bytes": 1694,
+      "sha256": "0817831fc621b563de07ab1562c521fd43eba9bccea4d15f5dd4369073010894",
+      "utf8": "{\"name\":\"clock_freshness_reaches_actual_python_gate\",\"clock_controls\":[{\"label\":\"stale\",\"now\":1012.75,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: stale_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"future\",\"now\":995,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: future_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"fresh\",\"now\":1002,\"world_version\":2,\"proposal\":\"Simulated setpoint applied. No projected conflict remains in the policy window.\"}],\"same_world_three_clock_controls\":true,\"passed\":true,\"elapsed_ms\":3165}\n{\"name\":\"new_scenario_discards_prior_audit_verification_result\",\"previous_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"loaded_verdict\":\"\",\"loaded_event_list\":\"\",\"loaded_audit_status\":\"0 EVENTS / VALID\",\"old_authority_buttons_cleared\":true,\"passed\":true,\"elapsed_ms\":1991}\n{\"name\":\"file_bytes_preserve_signed_zero_policy_selection_and_clock\",\"download_sha256\":\"38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6\",\"imported_world_version\":41,\"edited_world_version\":42,\"signed_zero_retained\":true,\"unedited_aircraft_retained\":true,\"passed\":true,\"elapsed_ms\":1057}\n{\"name\":\"approval_change_invalidates_review_without_erasing_approval\",\"prior_review_cannot_be_applied\":true,\"valid_approval_still_applies\":true,\"passed\":true,\"elapsed_ms\":1997}\n{\"name\":\"late_file_read_cannot_replace_completed_native_readback\",\"completed_world_version\":2,\"late_read_held\":true,\"audit_status\":\"4 EVENTS / VALID\",\"passed\":true,\"elapsed_ms\":1895}\n{\"name\":\"selected_edit_cancel_retains_draft_and_pending_decision\",\"draft_retained\":true,\"pending_decision_retained\":true,\"stale_import_not_revived\":true,\"passed\":true,\"elapsed_ms\":2543}\n"
+    },
+    {
+      "path": "review-current-v2b.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "review-current-v2b.stdout.log",
+      "bytes": 1694,
+      "sha256": "a9aeaea357570759cf41f19400be3a302f581e41fbfb8471d42f0093429aec9b",
+      "utf8": "{\"name\":\"clock_freshness_reaches_actual_python_gate\",\"clock_controls\":[{\"label\":\"stale\",\"now\":1012.75,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: stale_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"future\",\"now\":995,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: future_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"fresh\",\"now\":1002,\"world_version\":2,\"proposal\":\"Simulated setpoint applied. No projected conflict remains in the policy window.\"}],\"same_world_three_clock_controls\":true,\"passed\":true,\"elapsed_ms\":2827}\n{\"name\":\"new_scenario_discards_prior_audit_verification_result\",\"previous_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"loaded_verdict\":\"\",\"loaded_event_list\":\"\",\"loaded_audit_status\":\"0 EVENTS / VALID\",\"old_authority_buttons_cleared\":true,\"passed\":true,\"elapsed_ms\":2123}\n{\"name\":\"file_bytes_preserve_signed_zero_policy_selection_and_clock\",\"download_sha256\":\"38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6\",\"imported_world_version\":41,\"edited_world_version\":42,\"signed_zero_retained\":true,\"unedited_aircraft_retained\":true,\"passed\":true,\"elapsed_ms\":1073}\n{\"name\":\"approval_change_invalidates_review_without_erasing_approval\",\"prior_review_cannot_be_applied\":true,\"valid_approval_still_applies\":true,\"passed\":true,\"elapsed_ms\":2045}\n{\"name\":\"late_file_read_cannot_replace_completed_native_readback\",\"completed_world_version\":2,\"late_read_held\":true,\"audit_status\":\"4 EVENTS / VALID\",\"passed\":true,\"elapsed_ms\":1879}\n{\"name\":\"selected_edit_cancel_retains_draft_and_pending_decision\",\"draft_retained\":true,\"pending_decision_retained\":true,\"stale_import_not_revived\":true,\"passed\":true,\"elapsed_ms\":2411}\n"
+    },
+    {
+      "path": "review-r2-v2.stderr.log",
+      "bytes": 480,
+      "sha256": "453cf5aeb04d3b475be3cbe3e0634af202a8330dc1c08569880b888bcac59619",
+      "utf8": "node:events:487\n      throw er; // Unhandled 'error' event\n      ^\n\nError: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\nEmitted 'error' event on Socket instance at:\n    at emitErrorNT (node:internal/streams/destroy:170:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\n  errno: -54,\n  code: 'ECONNRESET',\n  syscall: 'read'\n}\n\nNode.js v26.3.0\n"
+    },
+    {
+      "path": "review-r2-v2.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "review-r2-v2b.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "review-r2-v2b.stdout.log",
+      "bytes": 1694,
+      "sha256": "9ead106726e02c0842ec05fad504ce20daa29a27fddb0185c4f58992595faa8b",
+      "utf8": "{\"name\":\"clock_freshness_reaches_actual_python_gate\",\"clock_controls\":[{\"label\":\"stale\",\"now\":1012.75,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: stale_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"future\",\"now\":995,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: future_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"fresh\",\"now\":1002,\"world_version\":2,\"proposal\":\"Simulated setpoint applied. No projected conflict remains in the policy window.\"}],\"same_world_three_clock_controls\":true,\"passed\":true,\"elapsed_ms\":2892}\n{\"name\":\"new_scenario_discards_prior_audit_verification_result\",\"previous_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"loaded_verdict\":\"\",\"loaded_event_list\":\"\",\"loaded_audit_status\":\"0 EVENTS / VALID\",\"old_authority_buttons_cleared\":true,\"passed\":true,\"elapsed_ms\":1944}\n{\"name\":\"file_bytes_preserve_signed_zero_policy_selection_and_clock\",\"download_sha256\":\"38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6\",\"imported_world_version\":41,\"edited_world_version\":42,\"signed_zero_retained\":true,\"unedited_aircraft_retained\":true,\"passed\":true,\"elapsed_ms\":1089}\n{\"name\":\"approval_change_invalidates_review_without_erasing_approval\",\"prior_review_cannot_be_applied\":true,\"valid_approval_still_applies\":true,\"passed\":true,\"elapsed_ms\":1985}\n{\"name\":\"late_file_read_cannot_replace_completed_native_readback\",\"completed_world_version\":2,\"late_read_held\":true,\"audit_status\":\"4 EVENTS / VALID\",\"passed\":true,\"elapsed_ms\":1825}\n{\"name\":\"selected_edit_cancel_retains_draft_and_pending_decision\",\"draft_retained\":true,\"pending_decision_retained\":true,\"stale_import_not_revived\":true,\"passed\":true,\"elapsed_ms\":2279}\n"
+    },
+    {
+      "path": "review-v1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "review-v1.stdout.log",
+      "bytes": 3061,
+      "sha256": "45ced0897188e0bce8a41e750892786369f3246088c53de075b9d3c4ceff1971",
+      "utf8": "{\"name\":\"clock_freshness_reaches_actual_python_gate\",\"passed\":false,\"error\":\"AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\\n\\nfalse !== true\\n\",\"failed_snapshot\":{\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"selected\":\"Edit TWR419\",\"policy\":[5,1000,5],\"rate\":1,\"rate_label\":\"1.0x\",\"clock\":\"T+10 SEC\",\"proposal\":\"TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.\",\"approval_disabled\":false,\"readback_disabled\":true,\"audit\":\"\",\"audit_status\":\"0 EVENTS / VALID\",\"audit_verdict\":\"\",\"gates\":[\"01Fresh state + safety screenPASS\",\"02Controller approval fixtureWAIT\",\"03Readback acknowledgementWAIT\"],\"python\":\"Live CPython · towerops.py · AdvisoryPlanner\"},\"elapsed_ms\":2132}\n{\"name\":\"new_scenario_discards_prior_audit_verification_result\",\"previous_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"loaded_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"loaded_event_list\":\"\",\"loaded_audit_status\":\"0 EVENTS / VALID\",\"old_authority_buttons_cleared\":true,\"passed\":false,\"error\":\"AssertionError [ERR_ASSERTION]: Previous verification belongs to a discarded trace\\n+ actual - expected\\n\\n+ 'HASH CHAIN VALID - 4 EVENTS'\\n- ''\\n\",\"failed_snapshot\":{\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"selected\":\"Edit TWR419\",\"policy\":[5,1000,5],\"rate\":1,\"rate_label\":\"1.0x\",\"clock\":\"T+0 SEC\",\"proposal\":\"Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.\",\"approval_disabled\":true,\"readback_disabled\":true,\"audit\":\"\",\"audit_status\":\"0 EVENTS / VALID\",\"audit_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"gates\":[\"01Fresh state + safety screenWAIT\",\"02Controller approval fixtureWAIT\",\"03Readback acknowledgementWAIT\"],\"python\":\"Live CPython · ControlRoom.apply · audit verified\"},\"elapsed_ms\":2074}\n{\"name\":\"file_bytes_preserve_signed_zero_policy_selection_and_clock\",\"download_sha256\":\"38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6\",\"imported_world_version\":41,\"edited_world_version\":42,\"signed_zero_retained\":true,\"unedited_aircraft_retained\":true,\"passed\":true,\"elapsed_ms\":1030}\n{\"name\":\"approval_change_invalidates_review_without_erasing_approval\",\"prior_review_cannot_be_applied\":true,\"valid_approval_still_applies\":true,\"passed\":true,\"elapsed_ms\":1982}\n{\"name\":\"late_file_read_cannot_replace_completed_native_readback\",\"completed_world_version\":2,\"late_read_held\":true,\"audit_status\":\"4 EVENTS / VALID\",\"passed\":true,\"elapsed_ms\":1892}\n{\"name\":\"selected_edit_cancel_retains_draft_and_pending_decision\",\"draft_retained\":true,\"pending_decision_retained\":true,\"stale_import_not_revived\":true,\"passed\":true,\"elapsed_ms\":2273}\n"
+    },
+    {
+      "path": "review-v2.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8": ""
+    },
+    {
+      "path": "review-v2.stdout.log",
+      "bytes": 2697,
+      "sha256": "0872d421102f8583cddfa24cf47a62c7df015487f72493e3ddf1d94e4212358a",
+      "utf8": "{\"name\":\"clock_freshness_reaches_actual_python_gate\",\"clock_controls\":[{\"label\":\"stale\",\"now\":1012.75,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: stale_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"future\",\"now\":995,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: future_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"fresh\",\"now\":1002,\"world_version\":2,\"proposal\":\"Simulated setpoint applied. No projected conflict remains in the policy window.\"}],\"same_world_three_clock_controls\":true,\"passed\":true,\"elapsed_ms\":2884}\n{\"name\":\"new_scenario_discards_prior_audit_verification_result\",\"previous_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"loaded_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"loaded_event_list\":\"\",\"loaded_audit_status\":\"0 EVENTS / VALID\",\"old_authority_buttons_cleared\":true,\"passed\":false,\"error\":\"AssertionError [ERR_ASSERTION]: Previous verification belongs to a discarded trace\\n+ actual - expected\\n\\n+ 'HASH CHAIN VALID - 4 EVENTS'\\n- ''\\n\",\"failed_snapshot\":{\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"selected\":\"Edit TWR419\",\"policy\":[5,1000,5],\"rate\":1,\"rate_label\":\"1.0x\",\"clock\":\"T+0 SEC\",\"proposal\":\"Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.\",\"approval_disabled\":true,\"readback_disabled\":true,\"audit\":\"\",\"audit_status\":\"0 EVENTS / VALID\",\"audit_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"gates\":[\"01Fresh state + safety screenWAIT\",\"02Controller approval fixtureWAIT\",\"03Readback acknowledgementWAIT\"],\"python\":\"Live CPython · ControlRoom.apply · audit verified\"},\"elapsed_ms\":2087}\n{\"name\":\"file_bytes_preserve_signed_zero_policy_selection_and_clock\",\"download_sha256\":\"38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6\",\"imported_world_version\":41,\"edited_world_version\":42,\"signed_zero_retained\":true,\"unedited_aircraft_retained\":true,\"passed\":true,\"elapsed_ms\":1045}\n{\"name\":\"approval_change_invalidates_review_without_erasing_approval\",\"prior_review_cannot_be_applied\":true,\"valid_approval_still_applies\":true,\"passed\":true,\"elapsed_ms\":2011}\n{\"name\":\"late_file_read_cannot_replace_completed_native_readback\",\"completed_world_version\":2,\"late_read_held\":true,\"audit_status\":\"4 EVENTS / VALID\",\"passed\":true,\"elapsed_ms\":1845}\n{\"name\":\"selected_edit_cancel_retains_draft_and_pending_decision\",\"draft_retained\":true,\"pending_decision_retained\":true,\"stale_import_not_revived\":true,\"passed\":true,\"elapsed_ms\":2227}\n"
+    }
+  ]
+}

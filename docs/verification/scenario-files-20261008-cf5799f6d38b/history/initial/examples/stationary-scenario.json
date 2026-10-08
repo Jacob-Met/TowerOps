@@ -1,0 +1,40 @@
+{
+  "format": "towerops.airspace-scenario",
+  "version": 1,
+  "world": {
+    "version": 7,
+    "observed_at": 1002,
+    "aircraft": [
+      {
+        "aircraft_id": "TWR101",
+        "x_nm": 0,
+        "y_nm": 0,
+        "altitude_ft": 10000,
+        "vx_nm_min": 0,
+        "vy_nm_min": 0,
+        "climb_ft_min": 0
+      },
+      {
+        "aircraft_id": "TWR202",
+        "x_nm": 7,
+        "y_nm": 0,
+        "altitude_ft": 10000,
+        "vx_nm_min": 0,
+        "vy_nm_min": 0,
+        "climb_ft_min": 0
+      }
+    ]
+  },
+  "policy": {
+    "min_horizontal_nm": 9,
+    "min_vertical_ft": 1500,
+    "horizon_min": 8,
+    "sample_step_min": 0.5,
+    "max_state_age_sec": 10,
+    "max_speed_nm_min": 6,
+    "max_climb_ft_min": 3000
+  },
+  "now": 1002,
+  "time_scale": 2.5,
+  "selected_aircraft_id": "TWR202"
+}

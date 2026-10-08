@@ -63,3 +63,16 @@
 .encounter-windows dd{font:12px/1.7 var(--mono);color:var(--amber);margin:6px 0 0;overflow-wrap:anywhere}
 #encounter-content[hidden]{display:none}
 @media(max-width:620px){.encounter-charts{grid-template-columns:1fr}.encounter-windows{grid-template-columns:1fr}.encounter-windows div{display:grid;grid-template-columns:1fr 1fr;gap:8px}.encounter-windows dd{margin:0}.encounter-pair{gap:10px}.encounter-readings b{font-size:18px}}
+
+/* Local scenario files use the existing progressive-depth workbench. */
+.scenario-workbench p{font-size:12px;line-height:1.6;color:var(--muted);overflow-wrap:anywhere}
+.scenario-file-controls{display:flex;flex-wrap:wrap;gap:8px}
+.scenario-file-controls .button{flex:1 1 160px;min-height:40px}
+.scenario-review{border:1px solid var(--line);background:var(--bg);padding:14px;margin-top:14px;overflow-wrap:anywhere}
+.scenario-review h3{font:16px var(--serif);margin:0 0 10px;color:var(--ink)}
+.scenario-review h3:focus{outline:2px solid var(--amber);outline-offset:4px}
+.scenario-policy{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;margin:14px 0;font:11px/1.5 var(--mono)}
+.scenario-policy dt{color:var(--muted)}.scenario-policy dd{margin:0;color:var(--ink);text-align:right}
+.scenario-review .button{min-height:40px}
+#scenario-review[hidden],#cancel-scenario[hidden],#scenario-file[hidden]{display:none}
+@media(max-width:560px){.scenario-review{padding:12px}.scenario-policy{gap:8px;font-size:10px}.scenario-review .button{width:100%}}

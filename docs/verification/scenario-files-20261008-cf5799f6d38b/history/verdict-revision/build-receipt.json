@@ -1,0 +1,32 @@
+{
+  "schema": "towerops.scenario-native-build.v2",
+  "source_tree": "91131fb20fd40fd7281201f3626638cffac3f532",
+  "source_files": 99,
+  "node": "v26.3.0",
+  "commands": [
+    {
+      "name": "unit-tests",
+      "command": [
+        "npm",
+        "test",
+        "--",
+        "--reporter=json",
+        "--outputFile=/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/qualification-r2/unit-tests.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.776
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.148
+    }
+  ],
+  "source_unchanged_after": true,
+  "source_manifest_sha256": "a0fc7af66738686f1eeb4e099b95e4b17a8da2fdbd9738a16a7a74ddd8d2eed1"
+}

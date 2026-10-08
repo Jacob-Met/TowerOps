@@ -1,0 +1,82 @@
+{
+  "schema": "towerops.scenario-current-composition-receiving.v1",
+  "source_tree": "8ac56fee8a2f65503f8cd118c11d4379a521cfcf",
+  "base_commit": "9a2468f9bbaa25c0ab92cb12f712170420f9e622",
+  "runtime": {
+    "node": "v26.3.0",
+    "browser": "Chrome/154.0.8037.98",
+    "puppeteer": "25.12.0",
+    "native_python": {
+      "version": "3.12.8 (main, Dec  3 2024, 18:42:41) [Clang 16.0.0 (clang-1600.0.26.4)]",
+      "pytest": "8.4.2"
+    },
+    "playwright": {
+      "python": "3.12.8 (main, Dec  3 2024, 18:42:41) [Clang 16.0.0 (clang-1600.0.26.4)]",
+      "playwright": "1.63.0"
+    },
+    "ruff": "ruff 0.16.10"
+  },
+  "tests": {
+    "frontend_passed": 188,
+    "native_passed": 108,
+    "skipped": 0
+  },
+  "browser_groups": [
+    {
+      "name": "author",
+      "count": 7,
+      "passed": 7,
+      "receipt": "trace-r2-author-browser/receipt.json",
+      "sha256": "19114aff3aab08a66a14d15692db31622eae6c6112332f6b20805ff3b7958252"
+    },
+    {
+      "name": "independent",
+      "count": 6,
+      "passed": 6,
+      "receipt": "trace-r2-independent-browser/receipt.json",
+      "sha256": "c100ebcd98ad519c7b9826d6d19e3efaf2e18a95042cded9a56f7d5ee26e5a0e"
+    },
+    {
+      "name": "pending",
+      "count": 1,
+      "passed": 1,
+      "receipt": "trace-r2-pending-browser/receipt.json",
+      "sha256": "71d23f1f60f02816ab47ccdff105be9e1a2d477ef601a136f04700d8fb84ba03"
+    },
+    {
+      "name": "scenario-encounter",
+      "count": 3,
+      "passed": 3,
+      "receipt": "trace-r2-scenario-encounter-browser/receipt.json",
+      "sha256": "4d8076ffb9c087eda06bac143e90727585f8524127142a86fe00c288c0e5ba03"
+    },
+    {
+      "name": "encounter-owner",
+      "count": 10,
+      "passed": 10,
+      "receipt": "trace-r2-encounter-owner-browser/receipt.json",
+      "sha256": "6f05665dbfa3bcad6e8773805495ff1b5a349a10a475977e6e684b52276dea14"
+    },
+    {
+      "name": "decision-trace-owner",
+      "count": 11,
+      "passed": 11,
+      "receipt": "trace-r2-decision-trace-owner-browser/browser-receipt.json",
+      "sha256": "6a47c1e07da3c84a0ea4057ee2fa138c3897efe43ff6c455e915591760c1703c"
+    },
+    {
+      "name": "scenario-decision",
+      "count": 2,
+      "passed": 2,
+      "receipt": "trace-r2-scenario-decision-browser/receipt.json",
+      "sha256": "3a0f843eb4eb90fdeda25297e980ef088dcfa59bc8ac20059de8b11da9bd9b78"
+    }
+  ],
+  "browser_total": 40,
+  "source_files_unchanged": 152,
+  "unowned_main_files_preserved": 145,
+  "native_worker_oracle_passed": true,
+  "existing_capture_predicates_passed": true,
+  "hosted_ci_for_this_candidate_claimed": false,
+  "production_delivery_claimed": false
+}

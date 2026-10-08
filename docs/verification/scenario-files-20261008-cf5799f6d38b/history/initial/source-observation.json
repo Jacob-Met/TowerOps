@@ -1,0 +1,48 @@
+{
+  "schema": "towerops.scenario-source-observation.v1",
+  "observed_utc": "2026-10-08 09:45:18 UTC",
+  "repository": "Jacob-Met/TowerOps",
+  "parent_commit": "d99d238f7da62d74852e07fc90da406f87c2d371",
+  "parent_tree": "f870d8a9d7d7af73035a2ab7465f757f8d19138f",
+  "source_tree": "9d4d1320fcd59b7a635adb6439ca512650e2df71",
+  "current_main_readback": "d99d238f7da62d74852e07fc90da406f87c2d371",
+  "owner_check": {
+    "completed_scope": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6056567216",
+    "root_announced_new_scope": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6056849222",
+    "repo_open_scopes": [
+      23,
+      24,
+      25,
+      26,
+      29,
+      30,
+      31
+    ],
+    "overlapping_product_scope_found": false,
+    "agents_md_paths": []
+  },
+  "contextual_seeds": {
+    "url": "https://app.notion.com/p/3ecaedcdf4a5811887d4e41514460dee?pvs=204",
+    "edited_at": "2026-10-01T05:10:13.445Z",
+    "verification": "unverified",
+    "ids": [
+      "D101",
+      "D112"
+    ],
+    "use": "Discovery context only. The implemented current-browser gap was separately reproduced on exact source; this contribution does not edit demo.py."
+  },
+  "verified_boundary": {
+    "world_export_fields": [
+      "version",
+      "observed_at",
+      "aircraft"
+    ],
+    "retained_foreign_policy_after_load": true,
+    "synthetic_distance_nm": 7,
+    "original_horizontal_policy_nm": 9,
+    "replacement_horizontal_policy_nm": 3,
+    "conflicts_before": 1,
+    "conflicts_after_wrong_policy": 0,
+    "conflicts_after_scenario_restore": 1
+  }
+}
