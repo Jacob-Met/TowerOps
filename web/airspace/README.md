@@ -123,3 +123,13 @@ After installing the existing web dependencies, run the focused real-browser che
 ```sh
 node web/airspace/tests/world-json-draft.browser.mjs --root . --browser /path/to/chromium --output /tmp/towerops-world-json-receiving
 ```
+
+## Radar coordinate framing
+
+The radar automatically fits current aircraft positions and the existing look-ahead endpoints. A common east/north translation keeps the traffic geometry at the same screen scale. Grid values remain absolute nautical-mile coordinates: east and north are positive. The origin axes and distance reference rings stay at world (0, 0), so they may be outside the view for an offset scenario.
+
+The fitted range includes at least 2 NM of margin (10% for wider traffic), rounded up in 5 NM steps, with a minimum half-range of 15 NM. Empty, single and coincident drawing inputs have a stable range; the WorldState importer still requires 1–60 aircraft and finite numeric fields. There is no pan, zoom or saved camera state: the view refits as traffic and the projection horizon change.
+
+If admitted finite values overflow during look-ahead projection or cannot represent usable view bounds, the drawing and range readout say **RADAR VIEW UNAVAILABLE**. This leaves the world and planner policy unchanged; the drawing does not assert that traffic is clear. A canvas too small for its plot displays an enlarge-the-radar message. Grid iteration is bounded even for extreme coordinates.
+
+Focused geometry tests: `npm test -- radar-geometry.test.ts`. The radar changes do not alter selection, raw JSON draft preservation, proposal/approval state, simulation controls or the audit trail.
