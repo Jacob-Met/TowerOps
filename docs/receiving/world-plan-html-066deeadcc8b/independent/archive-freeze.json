@@ -1,0 +1,12 @@
+{
+  "format": "towerops-peer-archive-freeze-v1",
+  "archive": {
+    "bytes": 908628,
+    "sha256": "e868b0055987f58504d62ab28501c83633754a4cc69e551c44f2e26de5082172",
+    "git_blob": "89d5821c4d26654edfef7a4841029fcb72d4ec0d"
+  },
+  "members": 382,
+  "ordinary_relative_members": true,
+  "native_inputs_unchanged": true,
+  "uncompressed_bytes": 20093159
+}

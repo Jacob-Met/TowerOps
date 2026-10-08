@@ -1,0 +1,66 @@
+{
+  "schema": "towerops.plan-html-author-receipt/1",
+  "frozen_at": "2026-10-08T19:51:03.515872+00:00",
+  "scope_issue": "https://github.com/Jacob-Met/TowerOps/issues/65",
+  "source_base": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "candidate_manifest_sha256": "f9f0b0e2fc2a60e6d3bdfdfd0177cef7db035c9dd62f8aa51ecce0aa48467397",
+  "status": "Author implementation and native qualification complete; independent receiving and current-head integration remain separate",
+  "archive_members": 211,
+  "manifest_artifacts": 210,
+  "native_tests": {
+    "passed": 155,
+    "subtests_passed": 89
+  },
+  "actual_cli_triples": 6,
+  "advisory_bodies_recomputed": 200,
+  "accepted_browser_checks": 72,
+  "accepted_case_downloads": 6,
+  "all_retained_download_files": 9,
+  "normal_and_optimized_verifier_outputs_identical": true,
+  "verification_sha256": "247f3b4c7f953b3f425c254843dd3938dac3d0752c362e10911d1cd60deb016b",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 8110,
+      "sha256": "f18bec33a6a985960ed4c0bc91af78d4874793471dda2647e9e12a3dfe4a3c5a",
+      "git_blob": "06d40fe75a70cbe9ab2f74e44275b77cabe406b8",
+      "mode": "100644"
+    },
+    {
+      "path": "native-packet.tar.xz",
+      "bytes": 801012,
+      "sha256": "324591b384d27b3820d5e181a0d39572f27ed040679ae979d0f42d61ad4f5985",
+      "git_blob": "76998c8c32883bd255c270b4e17f95aba30e4bff",
+      "mode": "100644"
+    },
+    {
+      "path": "native-manifest.json",
+      "bytes": 36818,
+      "sha256": "57141a6bda2919e667e4f20aefe12d0a19fb9b0ec57b21c0d703926b039f8d05",
+      "git_blob": "2a03b309206a5b40d46563e3f57c7001a9394e16",
+      "mode": "100644"
+    },
+    {
+      "path": "verify-author.py",
+      "bytes": 14141,
+      "sha256": "a3e50a15fe4d4d02274406b39c8311b1cf214421d7375563dc6740cfd906f288",
+      "git_blob": "aeea61f1abaa82f0c06f6afff007374383208a47",
+      "mode": "100644"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 3806,
+      "sha256": "247f3b4c7f953b3f425c254843dd3938dac3d0752c362e10911d1cd60deb016b",
+      "git_blob": "2dd831fe03f55ecd4f3066552202868244be0dcb",
+      "mode": "100644"
+    },
+    {
+      "path": "packaging-verification.json",
+      "bytes": 1149,
+      "sha256": "d164b0c52e60fd15ad13cf3377a5ab48047a4718b0fc6b2b48bf84708a3528ce",
+      "git_blob": "941bd4107e1d201f921c4e37c8ba75d8f23e9467",
+      "mode": "100644"
+    }
+  ],
+  "boundary": "No product execution during cold verification. Native copy explorer.py mode 0644 differs from canonical Git mode 100755; final overlay must preserve canonical unowned mode."
+}

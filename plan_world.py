@@ -159,6 +159,10 @@ def main(argv: list[str] | None = None) -> int:
         "--horizon-min", type=_argument_number, default=defaults.horizon_min,
         help=f"Projection horizon in minutes (default: {defaults.horizon_min})",
     )
+    parser.add_argument(
+        "--html", action="store_true",
+        help="Write a standalone offline alternative review instead of JSON",
+    )
     args = parser.parse_args(argv)
     try:
         policy = replace(
@@ -173,6 +177,10 @@ def main(argv: list[str] | None = None) -> int:
                 raw = stream.read(MAX_WORLD_BYTES + 1)
         result = review_world(raw, args.now, policy)
         output = json.dumps(result, ensure_ascii=False, allow_nan=False, indent=2) + "\n"
+        if args.html:
+            from world_plan_html import render_plan_html
+
+            output = render_plan_html(output)
     except GateRejected as exc:
         print(f"error: native review refused: {exc.reason}", file=sys.stderr)
         return 1
