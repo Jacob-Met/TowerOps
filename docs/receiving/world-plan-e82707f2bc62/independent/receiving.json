@@ -1,0 +1,136 @@
+{
+  "kind": "independent native world-plan CLI receiving",
+  "project": "TowerOps",
+  "native_issue": 49,
+  "reviewer": "estate-e82707f2bc62/runtime_discovery",
+  "recorded_at_utc": "2026-10-08T14:02:11.650354+00:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "source": {
+    "baseline_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+    "baseline_tree": "4a87643d57cabf81e570b21c119f00b43f79448e",
+    "plan_world_blob": "3efe3d7e817b8c3757eb1453b8cfa5237bbf1f1e",
+    "plan_world_sha256": "6c001f4b39658a3a89fba3f458bcae46fe9577425274f16d17082cd83a40265e",
+    "towerops_sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "advisory_options_sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "contract_sha256": "e081823cb1b43aa458a25590d63785ee7b12b26d67bae53e70d20ad43505d3e7"
+  },
+  "protocol_sha256": "ca943b55637ca02405f4f7376b0825b3f05cbe28b55380469d2da9f4231be533",
+  "baseline": {
+    "source_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+    "test_sha256": "1afa3ef344900661cb17b0912e17578675af078e762005d5f1b6917f23171fc5",
+    "returncode": 1,
+    "elapsed_seconds": 0.139,
+    "log_sha256": "94c08f1d10a8a6c4b3ee1d9fb775b514f378ac1260f8ff0d455267a3c1dfed3d"
+  },
+  "candidate": {
+    "source_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+    "candidate_sha256": "6c001f4b39658a3a89fba3f458bcae46fe9577425274f16d17082cd83a40265e",
+    "test_sha256": "1afa3ef344900661cb17b0912e17578675af078e762005d5f1b6917f23171fc5",
+    "returncode": 0,
+    "elapsed_seconds": 0.94,
+    "log_sha256": "02e30644cee5697830e1d7ab93cf81ede482d0bf921dca73e1021b8d1332a9cd"
+  },
+  "results": {
+    "methods": 4,
+    "baseline_failed": 4,
+    "baseline_errors": 0,
+    "candidate_passed": 4,
+    "candidate_failed": 0,
+    "candidate_errors": 0,
+    "candidate_skipped": 0,
+    "actual_cli_processes": 11,
+    "exit_counts": {
+      "0": 7,
+      "1": 2,
+      "2": 2
+    },
+    "native_outcomes": {
+      "paired": {
+        "status": "options_available",
+        "candidate_count": 148,
+        "admitted": 136
+      },
+      "short_horizon": {
+        "status": "no_conflict",
+        "candidate_count": 0,
+        "admitted": 0
+      },
+      "empty": {
+        "status": "no_conflict",
+        "candidate_count": 0,
+        "admitted": 0
+      },
+      "coincident": {
+        "status": "no_admitted_option",
+        "candidate_count": 62,
+        "admitted": 0
+      }
+    }
+  },
+  "consequential_observations": [
+    "The distinct four-aircraft/two-encounter world returns every one of 136 native admitted proposals in original order, from 148 examined candidates; all full bodies, hashes and first-choice priority match immutable native APIs.",
+    "Actual file named ./- and byte-identical stdin produce byte-identical report output. A formatting-only input change alters input_sha256 while preserving native world and proposal hashes.",
+    "Exact A/a and B/b identities, integer and floating values, signed floating zero, explicit clock and all seven policy fields survive canonical native serialization.",
+    "The first admitted alternative remains a proposal: an unrelated encounter remains conflicting in a counterfactual native world, and ControlRoom.apply with no approval rejects human_approval_required without world mutation.",
+    "The requested shorter horizon yields no_conflict; empty snapshots still reject future_state and stale_state with exit 1 and empty stdout.",
+    "A coincident conflicting pair is completed with status no_admitted_option, 62 examined candidates and no fabricated advisory.",
+    "A real generated planning report fed back as raw-world input returns 2/no report. A real closed stdout pipe returns a clean output-failure 2. Every child leaves inputs, pre-existing working-directory content and source hashes unchanged."
+  ],
+  "protocol_note": "Inputs and semantic assertions plus full native baseline oracles were frozen before plan_world.py was read. The test then mapped the frozen assertions onto the actual report field names. It remained byte-identical through baseline and candidate runs; no receiver correction or production change was requested.",
+  "limits": [
+    "Synthetic research-simulator receiving only; no operational aviation or deployment claim.",
+    "No additional dependencies or mocked planner/gate/CLI were used.",
+    "Local native stdlib acceptance is tied to this exact source snapshot. Author/root own current-parent composition, retained exact lint and full hosted gates."
+  ],
+  "archive": {
+    "filename": "raw-evidence.zip",
+    "bytes": 63879,
+    "sha256": "a97e1aa437b4338cfa4f37ca2672925b2fe5890dc7afe0fd7af7a4727b63208d",
+    "original_archive_all_members_byte_identical": true,
+    "original_files_verified": 45,
+    "successor_files_verified": 5,
+    "full_native_136_option_oracle_and_actual_output_included": true
+  },
+  "executed_test": {
+    "path": "tests/test_plan_world_receiving.py",
+    "sha256": "1afa3ef344900661cb17b0912e17578675af078e762005d5f1b6917f23171fc5",
+    "git_blob": "9247c0bea10a72ab00e7c828874919dc12876300"
+  },
+  "published_test": {
+    "path": "tests/test_plan_world_receiving.py",
+    "sha256": "9735fb2605e232cd079685aca0f016c6995f8cb4043a1b864ac63dd34bcad4ed",
+    "git_blob": "2cab5b89008adf3ef0ba4200f2a073330d77fe1d"
+  },
+  "hosted_successor": {
+    "production_blob": "8e826a10cc2f9425de26727dce07851497174bba",
+    "production_sha256": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e",
+    "change": "One review_world now parameter annotation changed from int|float|None to float|None; no value conversion or algorithm change, as recorded by author annotation-only AST proof.",
+    "peer_test_change": {
+      "original_test_sha256": "1afa3ef344900661cb17b0912e17578675af078e762005d5f1b6917f23171fc5",
+      "successor_test_sha256": "9735fb2605e232cd079685aca0f016c6995f8cb4043a1b864ac63dd34bcad4ed",
+      "successor_test_blob": "2cab5b89008adf3ef0ba4200f2a073330d77fe1d",
+      "all_four_test_method_asts_unchanged": true,
+      "changed_helpers": [
+        "aircraft",
+        "cli"
+      ],
+      "normalised_helper_asts_equal": true,
+      "normalisations": [
+        "dict keyword constructor to ordered dict literal",
+        "stdout=PIPE and stderr=PIPE to capture_output=True in normal subprocess branch"
+      ],
+      "imports": "Ruff I001 ordering only",
+      "ruff_binary": "/workspace/scratch/e82707f2bc62/capturesuite-numeric/tools-runtime/bin/ruff",
+      "ruff_selected_rules": [
+        "I001",
+        "C408",
+        "UP022"
+      ],
+      "ruff_result": "All checks passed",
+      "semantic_tests_rerun": false
+    },
+    "semantic_tests_rerun": false,
+    "acceptance": "Original four-case pass remains bound to original production3efe3d7e and original test9247c0be. This lint-only/test plus annotation-only/source successor requires the existing full hosted gate."
+  }
+}
