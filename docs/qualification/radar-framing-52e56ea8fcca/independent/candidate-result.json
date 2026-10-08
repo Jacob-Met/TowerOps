@@ -1,0 +1,163 @@
+{
+  "schema": "towerops-independent-canvas-commands/1",
+  "source": "TowerOps radar v1: draw c3476aa53858de880c13f9a527aa5a446ca717da, geometry a14ac4a661b195d0b6136e209f9108a460ff1cfb",
+  "source_sha256": {
+    "core": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+    "draw": "ae91897f2d4db234451c1fd8b81c9ddc5260e9b76b62c5ac21153d3c7ec2166d",
+    "radar-geometry": "4df8158d1ca92115ef9be8067fecb377a1e2ccf72b5cd0f3fa27691284e77349"
+  },
+  "runtime": "v24.19.0",
+  "passed": 9,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Equal translations retain each actual marker position",
+      "passed": true,
+      "detail": [
+        {
+          "dx": 1000,
+          "dy": -500,
+          "delta": [
+            0,
+            0
+          ]
+        },
+        {
+          "dx": -1200,
+          "dy": 800,
+          "delta": [
+            0,
+            0
+          ]
+        },
+        {
+          "dx": 37,
+          "dy": 21,
+          "delta": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Traffic ordering does not alter per-ID screen positions",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "East/right, north/up and equal-axis scale survive a translated scene",
+      "passed": true,
+      "detail": {
+        "east": 71.4666666666667,
+        "north": 71.4666666666667
+      }
+    },
+    {
+      "name": "Every current position and authored look-ahead endpoint stays visible",
+      "passed": true,
+      "detail": [
+        [
+          190.65,
+          261.8666666666667
+        ],
+        [
+          91.31666666666666,
+          187.36666666666667
+        ],
+        [
+          210.51666666666668,
+          246.96666666666667
+        ],
+        [
+          334.68333333333334,
+          296.6333333333333
+        ]
+      ]
+    },
+    {
+      "name": "Absolute tick text matches the world coordinates of its grid line",
+      "passed": true,
+      "detail": {
+        "labels": 15,
+        "axes": [
+          "x",
+          "y"
+        ]
+      }
+    },
+    {
+      "name": "Range rings refer to the true world origin after recentering",
+      "passed": true,
+      "detail": {
+        "origin": {
+          "x": 364.4,
+          "y": 309.8666666666667
+        },
+        "arcs": [
+          [
+            364.4,
+            309.8666666666667,
+            89.33333333333334
+          ],
+          [
+            364.4,
+            309.8666666666667,
+            178.66666666666669
+          ]
+        ]
+      }
+    },
+    {
+      "name": "Empty, single and coincident traffic have finite bounded drawing",
+      "passed": true,
+      "detail": [
+        {
+          "markers": [],
+          "label": "AUTO FIT +/- 15 NM"
+        },
+        {
+          "markers": [
+            {
+              "x": 418,
+              "y": 292
+            }
+          ],
+          "label": "AUTO FIT +/- 15 NM"
+        },
+        {
+          "markers": [
+            {
+              "x": 418,
+              "y": 292
+            },
+            {
+              "x": 418,
+              "y": 292
+            }
+          ],
+          "label": "AUTO FIT +/- 15 NM"
+        }
+      ]
+    },
+    {
+      "name": "Finite overflow becomes an explicit unavailable view with no invalid Canvas coordinates",
+      "passed": true,
+      "detail": {
+        "label": "RADAR VIEW UNAVAILABLE",
+        "text": [
+          "RADAR VIEW UNAVAILABLE",
+          "Traffic or look-ahead coordinates cannot be drawn."
+        ]
+      }
+    },
+    {
+      "name": "A collapsed canvas cannot produce a negative-radius or invalid draw",
+      "passed": true,
+      "detail": {
+        "markers": 0,
+        "label": "AUTO FIT +/- 15 NM"
+      }
+    }
+  ]
+}

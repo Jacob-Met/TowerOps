@@ -1,0 +1,52 @@
+{
+  "schema": "towerops-radar-root-composition/1",
+  "base_commit": "53aa5048b6585aa08592d5513cfcf555a8bba018",
+  "base_tree": "fc29ac4a02c151ba66ca37c029ff74d968662d58",
+  "native_qualification_base": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "source_blobs": [
+    {
+      "path": "web/airspace/src/radar-geometry.ts",
+      "git_blob": "a14ac4a661b195d0b6136e209f9108a460ff1cfb",
+      "sha256": "4df8158d1ca92115ef9be8067fecb377a1e2ccf72b5cd0f3fa27691284e77349"
+    },
+    {
+      "path": "web/airspace/src/draw.ts",
+      "git_blob": "c3476aa53858de880c13f9a527aa5a446ca717da",
+      "sha256": "ae91897f2d4db234451c1fd8b81c9ddc5260e9b76b62c5ac21153d3c7ec2166d"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "git_blob": "bf685d4bd355a46fb46199e27d4c67f212e18085",
+      "sha256": "75d93d07777251492e4bd219527f5b5342393df0598585573fa8fae0204875f4"
+    },
+    {
+      "path": "web/airspace/tests/radar-geometry.test.ts",
+      "git_blob": "1d223a59e1ea94503906303140aee89952501164",
+      "sha256": "f7285383bd4f8039328adc23f41f21225d84d7b78642e0b91172d7049b27ace2"
+    },
+    {
+      "path": "web/airspace/README.md",
+      "git_blob": "82b277e757aec4d8ef4057409c829f9629a08e16",
+      "sha256": "7e7d509289e988611415d963eab10e5f3267561b2c2369595c4c98fc2cd7c434"
+    }
+  ],
+  "independent_receiver_sha256": "7173fc939e43ec84b693bd2e76fdda91541f40203f89ddc486826d2bab8a4ee5",
+  "independent_gate": {
+    "baseline": "5/9",
+    "candidate": "9/9"
+  },
+  "changed_existing_paths": [
+    "web/airspace/src/draw.ts",
+    "web/airspace/src/main.ts",
+    "web/airspace/README.md"
+  ],
+  "other_existing_blobs_preserved": 255,
+  "source_fence": "main.ts is exactly the current main plus the two qualified literal substitutions; README only appends framing guide; other runtime state/parser/planner/owner paths preserved.",
+  "publication_manifest_sha256": "a3669dfdc2baaece9e619c48be349a63459a43ea1dafd299e80f7386ecd07abd",
+  "created_at": "2026-10-08 14:56:14 UTC",
+  "limits": [
+    "Native author Chrome and independent recording-Canvas receiver are distinct.",
+    "No physical phone or human acceptance; aircraft label crowding remains.",
+    "Integration/public deployment not yet received."
+  ]
+}
