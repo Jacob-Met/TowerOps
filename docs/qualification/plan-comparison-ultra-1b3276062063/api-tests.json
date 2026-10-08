@@ -1,0 +1,52 @@
+{
+  "blocked_effect_attempts": [],
+  "candidate": [
+    {
+      "bytes": 17358,
+      "module": "compare_plans",
+      "sha256": "6130e332cea63f42e34aaf86fe50c72ac6c6212372368409914ba3e6c554ba75"
+    },
+    {
+      "bytes": 24468,
+      "module": "test_compare_plans",
+      "sha256": "48fda1c2ff39ee9599f2b947b4b9b6870eb53916e4b79d6198e27986f836464c"
+    }
+  ],
+  "captured_at": "2026-10-08T16:44:00.378737+00:00",
+  "errors": 0,
+  "failures": 0,
+  "format": "towerops-plan-compare-api-tests.v1",
+  "kind": "native Python3.13 API-only; filesystem mutations/subprocess/network effects refused by audit hook; real CLI tests not executed",
+  "log": "test_actual_empty_outcomes_remain_explicit (test_compare_plans.PlanComparisonTests.test_actual_empty_outcomes_remain_explicit) ... ok\ntest_changed_world_identity_is_refused_even_for_equal_numeric_values (test_compare_plans.PlanComparisonTests.test_changed_world_identity_is_refused_even_for_equal_numeric_values) ... ok\ntest_complete_report_policy_world_and_advisory_shapes_are_required (test_compare_plans.PlanComparisonTests.test_complete_report_policy_world_and_advisory_shapes_are_required) ... ok\ntest_consumer_never_calls_planning_or_screening (test_compare_plans.PlanComparisonTests.test_consumer_never_calls_planning_or_screening) ... ok\ntest_exact_review_clock_keeps_integer_float_and_signed_zero_identity (test_compare_plans.PlanComparisonTests.test_exact_review_clock_keeps_integer_float_and_signed_zero_identity) ... ok\ntest_file_formatting_and_native_world_order_keep_both_source_identities (test_compare_plans.PlanComparisonTests.test_file_formatting_and_native_world_order_keep_both_source_identities) ... ok\ntest_full_advisory_identity_is_not_replaced_by_maneuver_or_rounded_numbers (test_compare_plans.PlanComparisonTests.test_full_advisory_identity_is_not_replaced_by_maneuver_or_rounded_numbers) ... ok\ntest_hashes_bind_complete_world_and_advisory_bodies_and_duplicates_refuse (test_compare_plans.PlanComparisonTests.test_hashes_bind_complete_world_and_advisory_bodies_and_duplicates_refuse) ... ok\ntest_malformed_json_duplicate_fields_unicode_depth_and_size_refuse (test_compare_plans.PlanComparisonTests.test_malformed_json_duplicate_fields_unicode_depth_and_size_refuse) ... ok\ntest_native_maximum_clock_expiry_and_literal_text_remain_readable (test_compare_plans.PlanComparisonTests.test_native_maximum_clock_expiry_and_literal_text_remain_readable) ... ok\ntest_policy_change_does_not_imply_a_changed_menu (test_compare_plans.PlanComparisonTests.test_policy_change_does_not_imply_a_changed_menu) ... ok\ntest_policy_numeric_representation_is_a_visible_saved_difference (test_compare_plans.PlanComparisonTests.test_policy_numeric_representation_is_a_visible_saved_difference) ... ok\ntest_real_policy_change_keeps_complete_records_and_native_menu_order (test_compare_plans.PlanComparisonTests.test_real_policy_change_keeps_complete_records_and_native_menu_order) ... ok\ntest_recorded_flags_status_counts_and_identity_lists_are_not_coerced (test_compare_plans.PlanComparisonTests.test_recorded_flags_status_counts_and_identity_lists_are_not_coerced) ... ok\ntest_reversing_inputs_keeps_new_rows_in_their_saved_right_order (test_compare_plans.PlanComparisonTests.test_reversing_inputs_keeps_new_rows_in_their_saved_right_order) ... ok\ntest_saved_priority_changes_are_not_hidden_by_set_comparison (test_compare_plans.PlanComparisonTests.test_saved_priority_changes_are_not_hidden_by_set_comparison) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.216s\n\nOK\n",
+  "skipped": 0,
+  "source": [
+    {
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "path": "towerops.py",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "path": "advisory_options.py",
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "git_blob": "8e826a10cc2f9425de26727dce07851497174bba",
+      "path": "plan_world.py",
+      "sha256": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e"
+    },
+    {
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "path": "scenarios.py",
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    {
+      "git_blob": "d19e5bf1bd2991b076d7166fc2280b7f1d312d9a",
+      "path": "explorer.py",
+      "sha256": "c16106e27f44f9dd247bcbc6ae677dc74db5340ffc8d2df9fd6df655fc9cb340"
+    }
+  ],
+  "source_commit": "5b3015567a01017245c5f715c1bce65e20a06138",
+  "successful": true,
+  "tests_run": 16
+}

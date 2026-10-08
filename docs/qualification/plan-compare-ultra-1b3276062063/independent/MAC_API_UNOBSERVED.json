@@ -1,0 +1,13 @@
+{
+  "format": "towerops.independent-native-receiving-unobserved.v1",
+  "requested_after": "2026-10-08 17:21:55 UTC",
+  "failure_observed_before": "2026-10-08 17:30:31 UTC",
+  "operation": "RDC start_process for read-only in-memory candidate API receiving",
+  "device_id": "0e3d582f-e25b-44b2-8418-9639fc4e4e33",
+  "command": {
+    "bytes": 224255,
+    "sha256": "5f9ff3e342d141d5cae585a20d74d5e403dec912a107abcecc39b6a4518d43d1"
+  },
+  "tool_error": "tool call error: tool call failed for `codex_apps/remote_desktop_commander.start_process`\nCaused by:\n    Mcp error: -32603: MCP request timed out",
+  "result": "No PID or process output was returned. Whether that remote process ran/completed is unknown. No native candidate result or Mac receiving is claimed. The route was not retried."
+}

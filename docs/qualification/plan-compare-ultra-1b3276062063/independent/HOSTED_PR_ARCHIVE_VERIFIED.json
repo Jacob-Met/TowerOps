@@ -1,0 +1,20 @@
+{
+  "format": "towerops.hosted-archive-preservation.v1",
+  "source_head": "a75888c42338ae0ffe165aa522a01c3e27e3d1d2",
+  "synthetic_test_checkout": "5d93029ebfed871b6b0b56fbe9a19086fd83896c",
+  "workflow_run": 37820535313,
+  "test_job": 113460110868,
+  "verification": {
+    "api": 27,
+    "cli": 22,
+    "compressed_sha256": "c1e905647f8360bacffd9afba797ba6a1917289877d005a31dc1463f9305443c",
+    "file_count": 47,
+    "raw_bytes": 516392,
+    "raw_sha256": "9b4aed1031e606cf8d9f40866ce642d09d63b12ef08467627087704797fc971c",
+    "receiving_hash_matches_root_packet": true,
+    "source_sha256": "2042f344a71cdbcebbe97ad7e31fdcdb359be3282a8e4427b728cc1afe6d76c0",
+    "verified": true
+  },
+  "verification_method": "Source owner independently decoded the connector-delivered job-log envelope in memory with Python stdlib, checked both archive layers, every retained file and the receiving hash against the separately verified root packet. No files or native receiver were written.",
+  "artifact_successor": "Only additive receipt/evidence files and preservation of current main's five unrelated scenario evidence leaves; every accepted comparison product/test/fixture byte remains unchanged."
+}

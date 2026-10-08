@@ -1,0 +1,30 @@
+{
+  "request": {
+    "repository_full_name": "Jacob-Met/TowerOps",
+    "head": "ultra/1b3276062063-towerops-plan-compare",
+    "base": "main",
+    "title": "Compare saved policy experiments without replanning",
+    "body": "## Compare saved policy experiments\n\nThe native world planner already retains every individually screened alternative, but its saved reports have no comparison consumer. The active-world browser and fixed-scenario replay cover different workflows. This adds `python3 compare_plans.py LEFT.json RIGHT.json [--json]` for two saved `towerops.world-plan.v1` outputs of the same exact native world and review clock.\n\nThe consumer displays complete saved policy context, full source/body hashes, retained and one-sided advisory identities, and their original menu ranks. It refuses incompatible worlds/clocks and malformed, incomplete or internally inconsistent reports before output. Integer/float, signed-zero, literal text and exact advisory identity are preserved. It reads direct regular files only and never runs planning, chooses a preferred policy, approves or applies a proposal.\n\n### Scope and source\n\nCloses #56. Four product paths: new `compare_plans.py`, `tests/test_compare_plans.py`, `COMPARE_PLANS.md`, and four additive README lines. No planner, safety/admission, audit, TypeScript, UI, CSV #52, Undo #51, radar #59, dependency or workflow changes.\n\nExact head `1a71f19dfbc1eb89c05baecd2e2f49bc6e6e0613`, tree `6735fb90acd7286acbf4ec5270ed4bb623ba68a6`, parent `c9547893ee4a9f4cdfc64dfe555f8f313ba8237a`. All461 unrelated parent blobs/modes are preserved; the native producer dependencies are byte-identical to the original5b301 source. [Source and qualification packet](docs/qualification/plan-comparison-ultra-1b3276062063/README.md).\n\n### Qualification at draft publication\n\n- **Passed:**16 actual Mac Python3.13 API methods against exact native source. A process audit hook forbade filesystem mutation, subprocess and network effects; zero were attempted.\n- **Original native controls:**5NM→3NM changes policy but retains all66 saved identities;6NM retains62/removes4;0.1-minute horizon records no conflict/zero alternatives. Original native WorldState/fixed-scenario intake APIs refuse a saved planning report.\n- **Pending:**8 authored real CLI/file methods through the existing ordinary hosted Python3.12 pytest/Ruff workflow; independent source/contract review; final integration/receiving.\n- **Preserved limitation:**both Mac file-bootstrap attempts stopped before workspace creation, first at shell ENOSPC and then at the unchanged512MiB reserve guard. No Mac file/CLI, installed runtime, browser or Windows-hub receiving is claimed.\n\nThis is inspection of recorded results. Body hashes establish internal consistency, not trusted producer provenance, original-input possession, complete menu reproduction, a fresh safety decision or a causal policy-quality conclusion. Menu entries remain alternatives, never a simultaneous batch. Output failure is nonzero and can follow a partial stdout write.\n\nThe PR remains draft until the actual hosted native gates and independent review are complete.",
+    "draft": true,
+    "maintainer_can_modify": true
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "GitHub API error 403: {\"message\":\"You have exceeded a secondary rate limit and have been temporarily blocked from content creation. Please retry your request again later. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service) If you reach out to GitHub Support for help, please include the request ID 3267:B9122:201D22A:6AE1686:6AC7CBE6 and timestamp 2026-10-08 16:59:30 UTC.\",\"documentation_url\":\"/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits\",\"status\":\"403\"}"
+      }
+    ],
+    "structuredContent": {
+      "error": "GitHub API error 403: {\"message\":\"You have exceeded a secondary rate limit and have been temporarily blocked from content creation. Please retry your request again later. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service) If you reach out to GitHub Support for help, please include the request ID 3267:B9122:201D22A:6AE1686:6AC7CBE6 and timestamp 2026-10-08 16:59:30 UTC.\",\"documentation_url\":\"/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits\",\"status\":\"403\"}",
+      "error_code": "FORBIDDEN",
+      "error_data": {
+        "message": "You have exceeded a secondary rate limit and have been temporarily blocked from content creation. Please retry your request again later. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service) If you reach out to GitHub Support for help, please include the request ID 3267:B9122:201D22A:6AE1686:6AC7CBE6 and timestamp 2026-10-08 16:59:30 UTC.",
+        "documentation_url": "/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits",
+        "status": "403"
+      }
+    },
+    "isError": true
+  },
+  "next_attempt_no_earlier_than": "2026-10-08T17:29:30Z"
+}
