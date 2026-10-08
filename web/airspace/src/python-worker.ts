@@ -22,6 +22,12 @@ def browser_audit(room):
 
 def browser_request(raw):
     q = json.loads(raw)
+    if q.get('op') == 'review_trace':
+        from decision_trace import review_trace
+        try:
+            return json.dumps(review_trace(q.get('trace_json')), allow_nan=False)
+        except (TypeError, ValueError) as error:
+            return json.dumps({'error': str(error)})
     s = q['state']
     state = WorldState(s['version'], float(s['observed_at']), tuple(Aircraft(**{k: (v if k == 'aircraft_id' else float(v)) for k,v in a.items()}) for a in s['aircraft']))
     policy = SafetyPolicy(**{k: float(v) for k,v in q['policy'].items()})
@@ -52,8 +58,21 @@ def browser_request(raw):
  })().catch(e=>{runtime=null;throw e;});
  return runtime;
 }
+// Replay is an optional, read-only consumer. A missing replay module must not
+// prevent the existing planner/apply path from starting or being retried.
+let replaySources:Promise<void>|null=null;
+async function loadReplaySources(py:any,base:string):Promise<void>{
+ if(!replaySources)replaySources=(async()=>{
+  for(const name of ['audit_replay.py','decision_trace.py']){
+   const response=await fetch(base+'python/'+name);
+   if(!response.ok)throw new Error('Decision replay Python source could not load');
+   py.FS.writeFile(name,await response.text());
+  }
+ })().catch(e=>{replaySources=null;throw e;});
+ return replaySources;
+}
 self.onmessage=async(event)=>{
  const {id,base,request}=event.data;
- try{const py=await python(base);py.globals.set('browser_payload',JSON.stringify(request));const result=JSON.parse(await py.runPythonAsync('browser_request(browser_payload)'));self.postMessage({id,result});}
+ try{const py=await python(base);if(request?.op==='review_trace')await loadReplaySources(py,base);py.globals.set('browser_payload',JSON.stringify(request));const result=JSON.parse(await py.runPythonAsync('browser_request(browser_payload)'));self.postMessage({id,result});}
  catch(e){self.postMessage({id,error:String(e)});}
 };

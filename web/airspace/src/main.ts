@@ -9,6 +9,7 @@ import { AuditLog } from './audit';
 import { Ack,Approval,GateRejected } from './gate';
 import { AuditEvent } from './audit';
 import { drawAirspace,viewRange } from './draw';
+import { DecisionTraceReport,initializeDecisionTrace } from './decision-trace';
 type Scenario={name:string;state:WorldState;now:number};
 const fixture=(reference as unknown as {scenarios:Scenario[]}).scenarios[0]!;
 const $=<T extends HTMLElement>(id:string)=>document.getElementById(id) as T;
@@ -17,6 +18,7 @@ let policy:SafetyPolicy={...DEFAULT_POLICY};
 let state=copy(fixture.state),now=fixture.now,selected='TWR419',running=false,pending:Advisory|null=null,approval:Approval|null=null,audit=new AuditLog();
 let rate=1,lastFrame=0,trafficSeq=0,busy=false,pythonAudit='[]';
 let trackEdit:TrackEditSession|null=null,trackPreview:TrackEditPreview|null=null,injectDraft:Record<string,string>|null=null;
+const decisionTrace=initializeDecisionTrace({getCurrentTrace:()=>pythonAudit,reviewTrace:reviewDecisionTrace});
 const flightFields=['flight-id','flight-x','flight-y','flight-level','flight-bearing','flight-speed','flight-climb'];
 type GateState='wait'|'done'|'fail'; let gateScreen:GateState='wait',gateApproval:GateState='wait',gateAck:GateState='wait';
 function setText(id:string,value:string){$(id).textContent=value;}
@@ -31,6 +33,7 @@ function drawLists(pairs:Array<[string,string]>){
 }
 let proposalMessage='No proposal yet. The planner only returns a setpoint if it clears the separation policy.';
 async function render():Promise<void>{
+ decisionTrace.setBusy(busy);
  const pairs=conflictPairs(state,policy);drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);drawLists(pairs);
  const badge=$('world-badge');badge.className=`badge ${pairs.length?'alert':'safe'}`;badge.textContent=pairs.length?'ACTION':'CLEAR';
  setText('world-title',pairs.length?`${pairs.length} conflict pair${pairs.length===1?'':'s'} inside policy envelope`:'No projected conflict');
@@ -118,6 +121,19 @@ function exportWorld(){const editor=$<HTMLTextAreaElement>('world-json');editor.
 function loadWorld(){try{const next=parseWorldState(JSON.parse($<HTMLTextAreaElement>('world-json').value));running=false;state=next;now=next.observed_at;selected=next.aircraft[0]!.aircraft_id;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';clearPending('Visitor WorldState loaded. The solver runs on this exact input.');setText('world-json-feedback',`Loaded ${state.aircraft.length} aircraft at version ${state.version}.`);void render();}catch(err){setText('world-json-feedback',`NOT LOADED: ${err instanceof Error?err.message:String(err)}`);}}function perturbTrack(){running=false;clearPending('Track changed. The safety policy is being recomputed from the new vector.');state={version:state.version+1,observed_at:now,aircraft:state.aircraft.map(a=>a.aircraft_id===selected?{...a,vx_nm_min:a.vx_nm_min+0.4,vy_nm_min:a.vy_nm_min+0.3}:a)};void render();}
 async function runPlanner(){running=false;busy=true;setText('python-status','Loading real TowerOps Python… (first run only)');await render();try{const result=await towerPython({op:'plan',state,now,policy});const plan:Advisory|null=result.advisory;setText('python-status','Live CPython · towerops.py · AdvisoryPlanner');if(!plan){const has=conflictPairs(state,policy).length>0;clearPending(has?'No admissible maneuver in the bounded candidate set. No state changed.':'No projected conflict. No advisory needed.');if(has)gateScreen='fail';}else{pending=plan;approval=null;proposalMessage='The Python planner found a safe candidate. Review the exact world-bound setpoint, then approve and acknowledge it.';gateScreen='done';gateApproval='wait';gateAck='wait';}}catch(err){clearPending('Python unavailable. No substitute planner or state change.');setText('python-status',String(err));}finally{busy=false;await render();}}
 function approvePlan(){if(!pending)return;approval={advisory_hash:pending.advisory_hash,decision:'approve',approved_at:now+0.2,approver:'synthetic-controller'};gateApproval='done';gateAck='wait';proposalMessage='Approval is bound to this advisory hash. Readback is still required before simulated actuation.';void render();}
+
+async function reviewDecisionTrace(raw:string):Promise<DecisionTraceReport>{
+ if(busy)throw new Error('Finish the current Python request before reviewing a trace.');
+ if(running)throw new Error('Pause traffic before reviewing a decision trace.');
+ busy=true;
+ try{
+  await render();
+  const result=await towerPython({op:'review_trace',trace_json:raw});
+  if(result.error)throw new Error(result.error);
+  return result as DecisionTraceReport;
+ }
+ finally{busy=false;await render();}
+}
 
 async function acceptReadback(){if(busy||!pending||!approval)return;const a=pending,applyNow=now+0.5,ack:Ack={advisory_hash:a.advisory_hash,status:'accepted',acknowledged_at:now+0.4};try{busy=true;await render();const result=await towerPython({op:'apply',state,advisory:a,approval,ack,now:applyNow,policy,audit_json:pythonAudit});pythonAudit=result.audit_json;audit.events=result.events as AuditEvent[];if(result.error)throw new GateRejected(result.error);if(!result.valid)throw new Error('Python audit chain verification failed');state=result.state;setText('python-status','Live CPython · ControlRoom.apply · audit verified');now=applyNow;pending=null;approval=null;gateScreen='done';gateApproval='done';gateAck='done';const n=conflictPairs(state,policy).length;proposalMessage=n?`Actuation is simulated; ${n} conflict pair(s) remain. Run another bounded pass.`:'Simulated setpoint applied. No projected conflict remains in the policy window.';}catch(err){proposalMessage=`GATE REJECTED: ${err instanceof GateRejected?err.reason:String(err)}. No state transition was applied.`;pending=null;approval=null;gateScreen='fail';gateAck='fail';}finally{busy=false;}await render();}
 function resetWorld(){running=false;policy={...DEFAULT_POLICY};$<HTMLInputElement>('policy-horizontal').value='5';$<HTMLInputElement>('policy-vertical').value='1000';$<HTMLInputElement>('policy-horizon').value='5';state=copy(fixture.state);now=fixture.now;selected='TWR419';trafficSeq=0;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';gateScreen='wait';gateApproval='wait';gateAck='wait';proposalMessage='Reset to the crossing scenario from demo.py. Run the bounded planner to propose a safe vector.';$<HTMLInputElement>('speed-range').value='1';$('toggle-run').textContent='Run traffic';void render();}

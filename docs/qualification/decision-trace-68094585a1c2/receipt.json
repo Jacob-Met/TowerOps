@@ -1,0 +1,775 @@
+{
+  "schema": "towerops.decision-trace.receiving.v2",
+  "repository": "Jacob-Met/TowerOps",
+  "feature": "Native decision-trail review, original-text export and saved-file reopening",
+  "prepared_at_utc": "2026-10-08T11:28:09.451918+00:00",
+  "target_branch": "main",
+  "source": {
+    "repository": "Jacob-Met/TowerOps",
+    "receiving_parent": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+    "receiving_parent_tree": "356e66716c8953a3c2aac8a23790ce6eeaba20d0",
+    "final_source_tree": "e5e2537982b09aee9a5ab4ffa23d7b913ef1b9c4",
+    "files": [
+      {
+        "path": ".github/workflows/airspace-demo.yml",
+        "mode": "100644",
+        "bytes": 2270,
+        "sha256": "f23d0a2019e5658b7e04634f7cc9d4cc13b87c622202044bffe2520979aeea00",
+        "git_blob": "03e96daeaf2d1147000b54d9be04af3b40869fb3",
+        "before_git_blob": "7cafaa92cc7a08c97db20397edac8f46e01ad2d6"
+      },
+      {
+        "path": "decision_trace.py",
+        "mode": "100644",
+        "bytes": 2099,
+        "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+        "git_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+        "before_git_blob": null
+      },
+      {
+        "path": "tests/test_decision_trace.py",
+        "mode": "100644",
+        "bytes": 5604,
+        "sha256": "0cda939bf8534deb9450ed70e840ea44dc67144afa74dd7e9f48eed7a13dcba6",
+        "git_blob": "55e6cd3cceeb93cb3dc41d73c6c46fdfad6a39dc",
+        "before_git_blob": null
+      },
+      {
+        "path": "tools/verify_decision_trace.mjs",
+        "mode": "100644",
+        "bytes": 18183,
+        "sha256": "27affb1f6f54029582506967e5587676dcad37054c2cab8bcfe7be6d86fad9e8",
+        "git_blob": "7fdbdebaadfa141b948a1029a9c6d4ea9dc286ef",
+        "before_git_blob": null
+      },
+      {
+        "path": "web/airspace/README.md",
+        "mode": "100644",
+        "bytes": 4097,
+        "sha256": "c5358bdd532d633920365d6aa2c892e1c26a668bf5ec488f32139e32336dc48f",
+        "git_blob": "32d62f47569876403fdba7fae078c11769d77c40",
+        "before_git_blob": "ba599a0d74a6ea586ea53bdc7cb4ee5eb0671be8"
+      },
+      {
+        "path": "web/airspace/index.html",
+        "mode": "100644",
+        "bytes": 11314,
+        "sha256": "19f1e40cf4b7ab8cc94bf83166973c726249760124d789ac503512a942492550",
+        "git_blob": "a3891442d0b6ebcae65c03ea5102135e1f165a59",
+        "before_git_blob": "a473918c4694202460d6f2c208163bb276751f6d"
+      },
+      {
+        "path": "web/airspace/prepare-python.mjs",
+        "mode": "100644",
+        "bytes": 526,
+        "sha256": "485f8a094d5ae5d67f60362eaa88a2492c53e90edc440102357fa7e9d93a8ab4",
+        "git_blob": "d4065a6df484ca8ac32f08fee93b5d8740578303",
+        "before_git_blob": "7f50ba4edb7e058be7196386fa3699605e8697f2"
+      },
+      {
+        "path": "web/airspace/src/decision-trace.css",
+        "mode": "100644",
+        "bytes": 1564,
+        "sha256": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e",
+        "git_blob": "b1c82719ccc80cec69667003b7d007a0e6dfec52",
+        "before_git_blob": null
+      },
+      {
+        "path": "web/airspace/src/decision-trace.ts",
+        "mode": "100644",
+        "bytes": 8484,
+        "sha256": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce",
+        "git_blob": "83fa2809dc0e375b8f8982387fdb8845bea721c3",
+        "before_git_blob": null
+      },
+      {
+        "path": "web/airspace/src/main.ts",
+        "mode": "100644",
+        "bytes": 22594,
+        "sha256": "45ce025563017374d14c0240c656d98234c8d4ae16e948626ca16e2d7ad547ae",
+        "git_blob": "e6e640af5d182d4b07dc5fcebbd6a64659d60c20",
+        "before_git_blob": "2aabfdba1292f6db0890b2fb0b9bc8cf9e027636"
+      },
+      {
+        "path": "web/airspace/src/python-worker.ts",
+        "mode": "100644",
+        "bytes": 4294,
+        "sha256": "155dc539f71439b9d8849c20a498e74a797d9d7912ca911d6a5e60ff688c8358",
+        "git_blob": "2147ae0d2a02af97fbcba6cce5d56276a3ada866",
+        "before_git_blob": "688f4b0ba15fb86f89de07b39640603e4c860760"
+      },
+      {
+        "path": "web/airspace/tests/decision-trace.test.mjs",
+        "mode": "100644",
+        "bytes": 3081,
+        "sha256": "92a6e7f2cd834fb271a3aadd37e3dc1235691b0e258d351e43cdb0e6a9b39c67",
+        "git_blob": "8817db66c6ee3032a8c7f917fed031177c52db76",
+        "before_git_blob": null
+      }
+    ],
+    "base_leaves": 136,
+    "unchanged_base_leaves": 130,
+    "replaced_leaves": 6,
+    "added_leaves": 6,
+    "deleted_leaves": 0,
+    "candidate_leaves": 142,
+    "source_pins_verified_before_after": true,
+    "manifest_sha256": "31197c0b04c9a3e494d0a62f8808a948ff89dbe3831ce9e581951eaad78759f4",
+    "native_freeze_after": {
+      "path_in_evidence": "current-receiving/source-freeze-after.json",
+      "bytes": 37626,
+      "sha256": "3c1bbe899c5755493ed8fb083f5189ed8103338182dff4007c733eee40b9afc8",
+      "git_blob": "155fefd9a9e61373e76af985c83d124d9b7f0090"
+    },
+    "applicable_AGENTS_or_CONTINUE": []
+  },
+  "current_parent_change": {
+    "merged_pr": 38,
+    "scope": "Python Worker emits original canonical event bodies; current client registers the metadata and current AuditLog verifies it against displayed events.",
+    "receiving_action": "Compose only the existing trace review branch, optional module loader and request hook into the current Worker. Preserve all current import/helper/success/rejection behavior and leave client/audit/core/native inputs unchanged.",
+    "independent_source_review": {
+      "schema": "hamon.towerops.decision-trace.worker-receiving-review.v1",
+      "reviewer": "68094585a1c2/production",
+      "parent": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+      "parent_tree": "356e66716c8953a3c2aac8a23790ce6eeaba20d0",
+      "decision": "source composition accepted; current runtime qualification remains separately attributed to its author",
+      "current_worker": {
+        "git_blob": "688f4b0ba15fb86f89de07b39640603e4c860760",
+        "sha256": "9980f9f7d39a139ce59901c593c5f40926efb0ad1615e4d2667db31ffd111536",
+        "bytes": 3314
+      },
+      "candidate_worker": {
+        "git_blob": "2147ae0d2a02af97fbcba6cce5d56276a3ada866",
+        "sha256": "155dc539f71439b9d8849c20a498e74a797d9d7912ca911d6a5e60ff688c8358",
+        "bytes": 4294
+      },
+      "independent_check": "Removing only the three byte-identical previously accepted review additions reproduces every byte of the independently retrieved current PR38 worker. Thus canonical_bytes import, browser_audit helper, both native success/rejection return paths, integer guard and existing request/error transport are retained.",
+      "unchanged_feature_additions": [
+        {
+          "name": "early native read-only branch",
+          "bytes": 283,
+          "sha256": "22222979d381373f84b1fa35a9c530e778b7337bcb7690a04237f57fe422cd0d"
+        },
+        {
+          "name": "optional replay module loader",
+          "bytes": 632,
+          "sha256": "15a0ed038094a1762f33c802c1c49d7eb65d50ed9ca36628c6775b6fdf6c01d6"
+        },
+        {
+          "name": "existing request transport review load hook",
+          "bytes": 65,
+          "sha256": "15668f5ef7cc18131985c4f5cead9d815635f18c43ecc69b974a1427d2d9bc5e"
+        }
+      ],
+      "current_inputs_preserved": [
+        {
+          "path": "web/airspace/src/python.ts",
+          "git_blob": "ef32ef39aa6c3bf7196c05fe10840f3c297156ce",
+          "mode": "100644"
+        },
+        {
+          "path": "web/airspace/src/audit.ts",
+          "git_blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b",
+          "mode": "100644"
+        },
+        {
+          "path": "web/airspace/src/core.ts",
+          "git_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+          "mode": "100644"
+        },
+        {
+          "path": "towerops.py",
+          "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+          "mode": "100644"
+        },
+        {
+          "path": "audit_replay.py",
+          "git_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+          "mode": "100644"
+        }
+      ],
+      "shared_hooks": "main.ts and index.html are byte-identical to the previously accepted review feature and their 5ae before-images are unchanged; scenario world/clock/policy import behavior is not altered.",
+      "old_candidate_disposition": "The frozen 09b packet is valid historical evidence but is not a current-main integration overlay; replacing current worker with that old source would remove required audit_canonical metadata.",
+      "verified_files": [
+        {
+          "path": ".github/workflows/airspace-demo.yml",
+          "mode": "100644",
+          "bytes": 2270,
+          "sha256": "f23d0a2019e5658b7e04634f7cc9d4cc13b87c622202044bffe2520979aeea00",
+          "git_blob": "03e96daeaf2d1147000b54d9be04af3b40869fb3",
+          "before_git_blob": "7cafaa92cc7a08c97db20397edac8f46e01ad2d6",
+          "changed_from_previous_candidate": false
+        },
+        {
+          "path": "decision_trace.py",
+          "mode": "100644",
+          "bytes": 2099,
+          "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+          "git_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+          "before_git_blob": null,
+          "changed_from_previous_candidate": false
+        },
+        {
+          "path": "tests/test_decision_trace.py",
+          "mode": "100644",
+          "bytes": 5604,
+          "sha256": "0cda939bf8534deb9450ed70e840ea44dc67144afa74dd7e9f48eed7a13dcba6",
+          "git_blob": "55e6cd3cceeb93cb3dc41d73c6c46fdfad6a39dc",
+          "before_git_blob": null,
+          "changed_from_previous_candidate": false
+        },
+        {
+          "path": "tools/verify_decision_trace.mjs",
+          "mode": "100644",
+          "bytes": 18183,
+          "sha256": "27affb1f6f54029582506967e5587676dcad37054c2cab8bcfe7be6d86fad9e8",
+          "git_blob": "7fdbdebaadfa141b948a1029a9c6d4ea9dc286ef",
+          "before_git_blob": null,
+          "changed_from_previous_candidate": true
+        },
+        {
+          "path": "web/airspace/README.md",
+          "mode": "100644",
+          "bytes": 4097,
+          "sha256": "c5358bdd532d633920365d6aa2c892e1c26a668bf5ec488f32139e32336dc48f",
+          "git_blob": "32d62f47569876403fdba7fae078c11769d77c40",
+          "before_git_blob": "ba599a0d74a6ea586ea53bdc7cb4ee5eb0671be8",
+          "changed_from_previous_candidate": false
+        },
+        {
+          "path": "web/airspace/index.html",
+          "mode": "100644",
+          "bytes": 11314,
+          "sha256": "19f1e40cf4b7ab8cc94bf83166973c726249760124d789ac503512a942492550",
+          "git_blob": "a3891442d0b6ebcae65c03ea5102135e1f165a59",
+          "before_git_blob": "a473918c4694202460d6f2c208163bb276751f6d",
+          "changed_from_previous_candidate": false
+        },
+        {
+          "path": "web/airspace/prepare-python.mjs",
+          "mode": "100644",
+          "bytes": 526,
+          "sha256": "485f8a094d5ae5d67f60362eaa88a2492c53e90edc440102357fa7e9d93a8ab4",
+          "git_blob": "d4065a6df484ca8ac32f08fee93b5d8740578303",
+          "before_git_blob": "7f50ba4edb7e058be7196386fa3699605e8697f2",
+          "changed_from_previous_candidate": false
+        },
+        {
+          "path": "web/airspace/src/decision-trace.css",
+          "mode": "100644",
+          "bytes": 1564,
+          "sha256": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e",
+          "git_blob": "b1c82719ccc80cec69667003b7d007a0e6dfec52",
+          "before_git_blob": null,
+          "changed_from_previous_candidate": false
+        },
+        {
+          "path": "web/airspace/src/decision-trace.ts",
+          "mode": "100644",
+          "bytes": 8484,
+          "sha256": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce",
+          "git_blob": "83fa2809dc0e375b8f8982387fdb8845bea721c3",
+          "before_git_blob": null,
+          "changed_from_previous_candidate": false
+        },
+        {
+          "path": "web/airspace/src/main.ts",
+          "mode": "100644",
+          "bytes": 22594,
+          "sha256": "45ce025563017374d14c0240c656d98234c8d4ae16e948626ca16e2d7ad547ae",
+          "git_blob": "e6e640af5d182d4b07dc5fcebbd6a64659d60c20",
+          "before_git_blob": "2aabfdba1292f6db0890b2fb0b9bc8cf9e027636",
+          "changed_from_previous_candidate": false
+        },
+        {
+          "path": "web/airspace/src/python-worker.ts",
+          "mode": "100644",
+          "bytes": 4294,
+          "sha256": "155dc539f71439b9d8849c20a498e74a797d9d7912ca911d6a5e60ff688c8358",
+          "git_blob": "2147ae0d2a02af97fbcba6cce5d56276a3ada866",
+          "before_git_blob": "688f4b0ba15fb86f89de07b39640603e4c860760",
+          "changed_from_previous_candidate": true
+        },
+        {
+          "path": "web/airspace/tests/decision-trace.test.mjs",
+          "mode": "100644",
+          "bytes": 3081,
+          "sha256": "92a6e7f2cd834fb271a3aadd37e3dc1235691b0e258d351e43cdb0e6a9b39c67",
+          "git_blob": "8817db66c6ee3032a8c7f917fed031177c52db76",
+          "before_git_blob": null,
+          "changed_from_previous_candidate": false
+        }
+      ],
+      "no_native_tests_rerun": true,
+      "no_external_mutations": true,
+      "patch_sha256": "11caec39092d13888e2accea5314258a5aca8b8cd33110079bc13c54daffc236"
+    },
+    "independent_review_sha256": "9cbb506bc3860d847285b0eb6fe8ad7577d5109cbcba3baaa60036f6c3093a4c"
+  },
+  "contract": {
+    "callable": "decision_trace.review_trace(raw: str) -> dict[str, Any]",
+    "worker_request": {
+      "op": "review_trace",
+      "trace_json": "Original native JSON text"
+    },
+    "response_keys": [
+      "chain_valid",
+      "ok",
+      "event_count",
+      "advisories",
+      "rejects",
+      "issues"
+    ],
+    "delivery_error": {
+      "error": "Short fixed text; malformed input has no semantic acceptance"
+    },
+    "accepted_documents": [
+      "Raw native event list",
+      "Native demo object containing audit_events"
+    ],
+    "max_utf8_bytes": 2097152,
+    "max_events": 5000,
+    "download_limit": null,
+    "live_effect": "Review requires paused traffic, uses the existing busy guard and does not adopt or mutate world, policy, clock, proposals, approvals or live audit.",
+    "client_api_preserved": "towerPython(request: unknown): Promise<any>",
+    "native_replay_unchanged": {
+      "path": "audit_replay.py",
+      "git_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+    },
+    "raw_text_reason": "Do not round-trip file JSON through JavaScript: native 1.0, -0.0 and scientific float spellings must retain their Python numeric interpretation for canonical chain verification."
+  },
+  "qualification": {
+    "environment": {
+      "native_python": "3.13.7",
+      "pytest": "8.3.5",
+      "ruff": "0.16.10",
+      "native_platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "node": "v26.3.0",
+      "chrome": "Google Chrome 154.0.8037.98",
+      "pyodide": "0.27.7",
+      "package_and_lock_changes": false,
+      "playwright": "1.63.0"
+    },
+    "current_frontend": {
+      "passed": 97,
+      "files": 8,
+      "includes_current_audit_wire_cases": 21
+    },
+    "current_build": {
+      "returncode": 0,
+      "components": [
+        "Python packaging",
+        "TypeScript",
+        "Vite"
+      ]
+    },
+    "current_gates": [
+      {
+        "name": "frontend-tests",
+        "command": [
+          "/opt/homebrew/bin/npm",
+          "test",
+          "--",
+          "--no-cache",
+          "--configLoader",
+          "runner"
+        ],
+        "cwd": "/Users/me/hamon-towerops-decision-trace-68094585a1c2/receiving-audit-wire-source/web/airspace",
+        "returncode": 0,
+        "elapsed_seconds": 1.101
+      },
+      {
+        "name": "build",
+        "command": [
+          "/opt/homebrew/bin/npm",
+          "run",
+          "build"
+        ],
+        "cwd": "/Users/me/hamon-towerops-decision-trace-68094585a1c2/receiving-audit-wire-source/web/airspace",
+        "returncode": 0,
+        "elapsed_seconds": 1.223
+      },
+      {
+        "name": "maintained-browser",
+        "command": [
+          "/bin/bash",
+          "-e",
+          "-o",
+          "pipefail",
+          "-c",
+          "TOWEROPS_PLAYWRIGHT_JS=\"$(python -c 'from pathlib import Path; import playwright; print(Path(playwright.__file__).parent / \"driver\" / \"package\" / \"index.mjs\")')\"\nnode tools/verify_decision_trace.mjs --playwright \"$TOWEROPS_PLAYWRIGHT_JS\" --output \"$RUNNER_TEMP/towerops-decision-trace-browser\" --chrome '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'\n"
+        ],
+        "cwd": "/Users/me/hamon-towerops-decision-trace-68094585a1c2/receiving-audit-wire-source",
+        "returncode": 0,
+        "elapsed_seconds": 6.33
+      }
+    ],
+    "current_browser": {
+      "source_root": "/Users/me/hamon-towerops-decision-trace-68094585a1c2/receiving-audit-wire-source",
+      "node": "v26.3.0",
+      "platform": "darwin",
+      "arch": "arm64",
+      "controls": [
+        {
+          "name": "actual planner approval readback, native review and exact download",
+          "passed": true,
+          "detail": {
+            "events": 4,
+            "visible_chain_verdict": "HASH CHAIN VALID - 4 EVENTS",
+            "downloaded_sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+            "native_cli": {
+              "ok": true,
+              "chain_valid": true,
+              "advisories": 1,
+              "actuated": 1,
+              "rejects": 0,
+              "issues": []
+            }
+          }
+        },
+        {
+          "name": "saved file reopened while another world-bound approval remains pending",
+          "passed": true,
+          "detail": {
+            "opened_events": 4,
+            "retained_live_trace": "[]",
+            "pending_readback_preserved": true
+          }
+        },
+        {
+          "name": "hash-valid decision issue: unapproved.json",
+          "passed": true,
+          "detail": {
+            "issues": [
+              "d7af68a35f2b: ack recorded without any approval",
+              "d7af68a35f2b: actuation without approval"
+            ]
+          }
+        },
+        {
+          "name": "hash-valid decision issue: wrong-world.json",
+          "passed": true,
+          "detail": {
+            "issues": [
+              "d7af68a35f2b: actuation before_world_hash does not match screened world_hash"
+            ]
+          }
+        },
+        {
+          "name": "hash-valid decision issue: wrong-order.json",
+          "passed": true,
+          "detail": {
+            "issues": [
+              "d7af68a35f2b: ack recorded before approval"
+            ]
+          }
+        },
+        {
+          "name": "tampered hash chain",
+          "passed": true,
+          "detail": [
+            "audit chain integrity check failed"
+          ]
+        },
+        {
+          "name": "malformed and excessive event files return short errors without state adoption",
+          "passed": true,
+          "detail": [
+            "Decision trace has malformed event data and could not be reviewed.",
+            "Decision trace exceeds the 5,000 event limit."
+          ]
+        },
+        {
+          "name": "file byte limit refuses before a native request",
+          "passed": true,
+          "detail": {
+            "native_requests_started": 0
+          }
+        },
+        {
+          "name": "native labels stay literal and mobile review fits",
+          "passed": true,
+          "detail": {
+            "literal_text": true,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        {
+          "name": "demo document compatibility and later native apply retain the live audit",
+          "passed": true,
+          "detail": {
+            "new_live_events": 4,
+            "imported_history_adopted": false,
+            "visible_chain_verdict": "HASH CHAIN VALID - 4 EVENTS"
+          }
+        },
+        {
+          "name": "missing optional replay source preserves planning and an explicit retry succeeds",
+          "passed": true,
+          "detail": {
+            "real_workers": 1,
+            "planner_available": true,
+            "retry_report": "empty trace"
+          }
+        }
+      ],
+      "page_errors": [],
+      "console_errors": [],
+      "requests_failed": [
+        {
+          "page": "missing-replay-source",
+          "url": "http://127.0.0.1:52503/python/audit_replay.py",
+          "error": "net::ERR_FAILED"
+        }
+      ],
+      "served_files": [
+        {
+          "path": "assets/index-B2idHoMT.js",
+          "bytes": 41361,
+          "sha256": "62f2a09d8f625c67458d619ce9006e851e3b786020749842d4f25c88e98659c8"
+        },
+        {
+          "path": "assets/index-VQ_-jyWG.css",
+          "bytes": 15486,
+          "sha256": "102397cee559db6e3cc15667375334577965b4891e30ed0287d91aa38cf163ad"
+        },
+        {
+          "path": "assets/python-worker-CvN6OBkC.js",
+          "bytes": 3631,
+          "sha256": "ee3a0389239a60e88ac2c91d7ed5a1ee6ad7d281996481969dea74138c04b096"
+        },
+        {
+          "path": "captures/airspace-desktop.png",
+          "bytes": 391153,
+          "sha256": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7"
+        },
+        {
+          "path": "captures/airspace-mobile.png",
+          "bytes": 190636,
+          "sha256": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43"
+        },
+        {
+          "path": "favicon.svg",
+          "bytes": 252,
+          "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+        },
+        {
+          "path": "index.html",
+          "bytes": 11416,
+          "sha256": "8310fe6c00ff2d79b82a9fe2237969c2eff2b504cebd3a56df8ddf88787d2794"
+        },
+        {
+          "path": "python/audit_replay.py",
+          "bytes": 7927,
+          "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+        },
+        {
+          "path": "python/decision_trace.py",
+          "bytes": 2099,
+          "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+        },
+        {
+          "path": "python/pyodide-lock.json",
+          "bytes": 112205,
+          "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+        },
+        {
+          "path": "python/pyodide.asm.js",
+          "bytes": 1255688,
+          "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+        },
+        {
+          "path": "python/pyodide.asm.wasm",
+          "bytes": 10105545,
+          "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+        },
+        {
+          "path": "python/pyodide.mjs",
+          "bytes": 13931,
+          "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+        },
+        {
+          "path": "python/python_stdlib.zip",
+          "bytes": 2360737,
+          "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+        },
+        {
+          "path": "python/towerops.py",
+          "bytes": 19462,
+          "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+        }
+      ],
+      "source_files": [
+        {
+          "path": "audit_replay.py",
+          "bytes": 7927,
+          "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+        },
+        {
+          "path": "decision_trace.py",
+          "bytes": 2099,
+          "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+        },
+        {
+          "path": "towerops.py",
+          "bytes": 19462,
+          "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+        },
+        {
+          "path": "web/airspace/src/python-worker.ts",
+          "bytes": 4294,
+          "sha256": "155dc539f71439b9d8849c20a498e74a797d9d7912ca911d6a5e60ff688c8358"
+        },
+        {
+          "path": "web/airspace/src/python.ts",
+          "bytes": 1163,
+          "sha256": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c"
+        },
+        {
+          "path": "web/airspace/src/audit.ts",
+          "bytes": 2397,
+          "sha256": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075"
+        },
+        {
+          "path": "web/airspace/src/core.ts",
+          "bytes": 5158,
+          "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac"
+        },
+        {
+          "path": "web/airspace/src/main.ts",
+          "bytes": 22594,
+          "sha256": "45ce025563017374d14c0240c656d98234c8d4ae16e948626ca16e2d7ad547ae"
+        },
+        {
+          "path": "web/airspace/src/decision-trace.ts",
+          "bytes": 8484,
+          "sha256": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce"
+        },
+        {
+          "path": "web/airspace/src/decision-trace.css",
+          "bytes": 1564,
+          "sha256": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e"
+        },
+        {
+          "path": "web/airspace/index.html",
+          "bytes": 11314,
+          "sha256": "19f1e40cf4b7ab8cc94bf83166973c726249760124d789ac503512a942492550"
+        },
+        {
+          "path": "web/airspace/package-lock.json",
+          "bytes": 40499,
+          "sha256": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655"
+        },
+        {
+          "path": "tools/verify_decision_trace.mjs",
+          "bytes": 18183,
+          "sha256": "27affb1f6f54029582506967e5587676dcad37054c2cab8bcfe7be6d86fad9e8"
+        }
+      ],
+      "browser": "154.0.8037.98",
+      "url": "http://127.0.0.1:52503/",
+      "python": "Python 3.13.7",
+      "passed": true
+    },
+    "maintained_command": "TOWEROPS_PLAYWRIGHT_JS=\"$(python -c 'from pathlib import Path; import playwright; print(Path(playwright.__file__).parent / \"driver\" / \"package\" / \"index.mjs\")')\"\nnode tools/verify_decision_trace.mjs --playwright \"$TOWEROPS_PLAYWRIGHT_JS\" --output \"$RUNNER_TEMP/towerops-decision-trace-browser\"\n",
+    "native_browser_override": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "override_reason": "Native default Playwright Chromium revision1243 was absent; the existing installed Chrome154 executable was used. Maintained CI uses its existing Chromium installation and omits this override.",
+    "same_native_qualification": {
+      "native_passed": 108,
+      "ruff_returncode": 0,
+      "reference_scenarios": 4,
+      "qualified_parent": "09b96e31d2867af5b7a9738406d0431cf1010090",
+      "files": [
+        {
+          "path": "towerops.py",
+          "bytes": 19462,
+          "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+          "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1"
+        },
+        {
+          "path": "audit_replay.py",
+          "bytes": 7927,
+          "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+          "git_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540"
+        },
+        {
+          "path": "decision_trace.py",
+          "bytes": 2099,
+          "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+          "git_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d"
+        },
+        {
+          "path": "tests/test_decision_trace.py",
+          "bytes": 5604,
+          "sha256": "0cda939bf8534deb9450ed70e840ea44dc67144afa74dd7e9f48eed7a13dcba6",
+          "git_blob": "55e6cd3cceeb93cb3dc41d73c6c46fdfad6a39dc"
+        },
+        {
+          "path": "web/airspace/package.json",
+          "bytes": 357,
+          "sha256": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd",
+          "git_blob": "836291c282e63943575c82dfaeaf653d278b48a1"
+        },
+        {
+          "path": "web/airspace/package-lock.json",
+          "bytes": 40499,
+          "sha256": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+          "git_blob": "9d81d64088a09bf36ce116b67bf48eefc4fe7c27"
+        }
+      ],
+      "native_108_suite_repeated": false,
+      "reason": "Native producer, replay, adapter and native controls are unchanged. Qualification targets changed Worker/client/browser consumer inputs."
+    },
+    "historical_author": {
+      "parent": "728387a51fba7be34cf8344fe4f5cd9c7b12b6ad",
+      "native_passed": 78,
+      "frontend_passed": 51,
+      "browser_passed": 11
+    },
+    "historical_09b_receiving": {
+      "parent": "09b96e31d2867af5b7a9738406d0431cf1010090",
+      "native_passed": 108,
+      "frontend_passed": 76,
+      "browser_passed": 11,
+      "receipt_path_in_evidence": "previous-publication/contribution/docs/qualification/decision-trace-68094585a1c2/receipt.json"
+    },
+    "historical_independent_receiving": {
+      "native_methods": 6,
+      "normal_and_optimized_on_original_and_09b_producers": true,
+      "browser_methods": 2,
+      "browser_build": "frozen original author build",
+      "unchanged_receiver_sha256": "9f64bba80127198fe65c1f6a0c1826c017dc707b449c3da0a464b589300c4d2d",
+      "exact_receipt_and_artifacts": "previous-decision-trace-evidence.tar.gz / independent-receiving"
+    },
+    "count_interpretation": "Repeated interpreter modes, source bindings and driver entry runs qualify the same named cases; they are not added independent capability trials.",
+    "hosted_ci_claimed": false
+  },
+  "evidence": {
+    "path": "evidence.tar.gz",
+    "bytes": 1781760,
+    "sha256": "08ea6d6fff0485ab4c98665fd7a7f15e9e05366c026f7c7ad3ff313392116a98",
+    "git_blob": "20e599b06128789501f8048afe1746f3cd042b22",
+    "members": 40,
+    "member_manifest": "packet-members.json",
+    "previous_evidence_sha256": "f0028c0777260109b3160f39b46efecddc667f4e2f4529d443470b04ad808110",
+    "previous_publication_manifest_sha256": "a8f979a34e9afaac0c29ba89cf1371852207c69a884cb484929b3dc0854ebb9d",
+    "previous_publication_archive_sha256": "8d94d03f14834add886f3fd370b1b7ff1a6ee6936728baf68a0e395d00cf4650"
+  },
+  "limits": [
+    "Replay checks the existing recorded decision sequence and available world links; it does not rerun the safety policy, reconstruct motion or authenticate approval.",
+    "Native handling of unknown event kinds and omitted optional world hashes is preserved.",
+    "Browser input is bounded; full native downloads can be reviewed with the existing CLI outside those browser bounds.",
+    "These are local source/native/browser results. No hosted CI, merge or public deployment is asserted."
+  ],
+  "sources": [
+    "https://github.com/Jacob-Met/TowerOps/commit/5ae808749c8624d9e267d23997beaa3ae5220dbc",
+    "https://github.com/Jacob-Met/TowerOps/blob/5ae808749c8624d9e267d23997beaa3ae5220dbc/web/airspace/src/python-worker.ts",
+    "https://github.com/Jacob-Met/TowerOps/blob/5ae808749c8624d9e267d23997beaa3ae5220dbc/web/airspace/src/python.ts",
+    "https://github.com/Jacob-Met/TowerOps/blob/5ae808749c8624d9e267d23997beaa3ae5220dbc/web/airspace/src/audit.ts",
+    "https://github.com/Jacob-Met/TowerOps/blob/5ae808749c8624d9e267d23997beaa3ae5220dbc/audit_replay.py"
+  ]
+}

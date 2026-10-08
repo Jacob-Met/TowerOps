@@ -30,3 +30,29 @@ Open **Shape the traffic** and choose **Edit TWR419** (or the flight selected in
 **Preview edit** compares the current and edited conflict intervals without changing the world. **Apply scenario edit** replaces only that flight, advances the world version once, retains the existing decision trace, and clears previous planner proposals and approvals. This authors a synthetic scenario; run the planner on the changed world before its approval/readback flow. A scenario edit can introduce conflicts as well as remove them.
 
 **Cancel edit** preserves the world, pending proposal and approval, and returns the builder to its previous new-flight draft. Traffic stays paused. Changing a field invalidates the preview; a changed world, policy or clock also prevents applying a stale edit. Unchanged velocity vectors retain their exact values during position or altitude edits.
+
+## Review and save a decision trail
+
+After a planner → approval → readback pass, open **Under the hood** and use
+**Review current trace** in the Decision trace panel. Pause traffic before
+reviewing. The existing Python `audit_replay.py` checks the recorded screening,
+approval, acknowledgement and actuation order, together with the screened-world
+hash links. The review shows each advisory's event sequence, actor, world hashes
+and any recorded rejections or issues. A valid hash chain can still have an
+invalid decision sequence; the two results are shown separately.
+
+**Download current trace** saves the original native audit JSON. Use **Open trace
+file**, then **Review opened trace**, to inspect that file in a later session.
+Opening or reviewing a trace does not load aircraft, change the active policy,
+replace the live audit, or apply decisions. Pending proposals and approvals are
+retained. The same downloaded event list can be reviewed outside the page with
+`python3 audit_replay.py towerops-decision-trace.json`; native demo documents with
+an `audit_events` list are also accepted by the page.
+
+Browser review accepts up to 2 MiB of UTF-8 JSON and 5,000 events. Downloads retain
+the full current trace; larger files can be reviewed with the native CLI. Empty
+traces, broken hashes, semantic issues and unreadable files have distinct results.
+This reviews the recorded gate story; it does not rerun the separation policy,
+reconstruct aircraft motion or authenticate an approval. The replay source loads
+only when requested, so an unavailable replay module does not replace or disable
+the existing native planner.
