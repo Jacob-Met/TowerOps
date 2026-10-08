@@ -1,0 +1,74 @@
+{
+  "schema": "towerops-playback-radar-compatibility-root/1",
+  "base_commit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+  "base_tree": "aa483f5d708f4f6f6ab510168884eaf4d25cf9e1",
+  "original_radar_head": "3e06e34668c6ae180a09c0cb034b3971269aa4f1",
+  "actual_radar_merge": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+  "actual_merge_preservation": {
+    "base": "878ecf58ab8a99c77331aa99ff1278b902f3aa75",
+    "tree": "aa483f5d708f4f6f6ab510168884eaf4d25cf9e1",
+    "existingChanged": [
+      {
+        "path": "web/airspace/README.md",
+        "before": "02f93b18f0d6a243020ae1d2b1f85990376f7fe8",
+        "after": "82b277e757aec4d8ef4057409c829f9629a08e16"
+      },
+      {
+        "path": "web/airspace/src/draw.ts",
+        "before": "1cbdddb0ee7e4bab181992e5b6b20baea725b433",
+        "after": "c3476aa53858de880c13f9a527aa5a446ca717da"
+      },
+      {
+        "path": "web/airspace/src/main.ts",
+        "before": "3c29b72c944df2c38a5a5fc6104aea6809bdca55",
+        "after": "7088ee75311962ff47afa8b252dc20e13625e418"
+      }
+    ],
+    "newPaths": [
+      "docs/qualification/radar-framing-52e56ea8fcca/MANIFEST.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/README.md",
+      "docs/qualification/radar-framing-52e56ea8fcca/RESULT.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/baseline-translated.png",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/README.md",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/baseline-result.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/baseline-tool-result.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/candidate-result.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/candidate-tool-result.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/initial-loader-failure.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/initial-receiver-body.cjs",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/integration.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/receiver-body.cjs",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/run.cjs",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/source-baseline.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/independent/source-candidate.json",
+      "docs/qualification/radar-framing-52e56ea8fcca/native-receiving.json.gz",
+      "docs/qualification/radar-framing-52e56ea8fcca/restore-packet.cjs",
+      "docs/qualification/radar-framing-52e56ea8fcca/translated-desktop.png",
+      "docs/qualification/radar-framing-52e56ea8fcca/translated-narrow.png",
+      "docs/qualification/radar-framing-52e56ea8fcca/unavailable.png",
+      "web/airspace/src/radar-geometry.ts",
+      "web/airspace/tests/radar-geometry.test.ts"
+    ],
+    "preserved": 428
+  },
+  "main_composition": {
+    "parent_blob": "3c29b72c944df2c38a5a5fc6104aea6809bdca55",
+    "merged_blob": "7088ee75311962ff47afa8b252dc20e13625e418",
+    "exact_two_qualified_substitutions": true
+  },
+  "source_proof": {
+    "preimage": "de7a02cd88f69bf8192516cb1acf7aa6eb276853",
+    "repair_blob": "878ca0a8824c64b88c305899c4caa8d2eea5ceb0",
+    "only_change": {
+      "old": "vi.mock('../src/draw', () => ({ drawAirspace: draw, viewRange: () => 12 }));",
+      "new": "vi.mock('../src/draw', async (importOriginal) => ({\n  ...await importOriginal<typeof import('../src/draw')>(),\n  drawAirspace: draw,\n}));"
+    }
+  },
+  "native_gate": "Exact current playback test failed 3 of 14 cases with the missing mock export; only the partial mock changed. Full current suite then passed 158/158, TypeScript and actual-composition production build.",
+  "archive_sha256": "e65bc542dbe143a849ca81b0b7ebe2bec0850afd39b013c60ef353925ba6f1e6",
+  "coordination": [
+    "https://github.com/Jacob-Met/TowerOps/pull/53#issuecomment-6063312633",
+    "https://github.com/Jacob-Met/TowerOps/pull/44#issuecomment-6063312983"
+  ],
+  "created_at": "2026-10-08 15:48:02 UTC"
+}

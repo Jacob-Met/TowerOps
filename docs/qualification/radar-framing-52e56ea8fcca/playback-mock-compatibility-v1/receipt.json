@@ -1,0 +1,75 @@
+{
+  "schema": "towerops-playback-mock-compatibility/1",
+  "qualified_at": "2026-10-08T15:31:46.773Z",
+  "base_commit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+  "base_tree": "aa483f5d708f4f6f6ab510168884eaf4d25cf9e1",
+  "hosted_failure": {
+    "run_id": 37799166962,
+    "job_id": 113386463050,
+    "url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37799166962",
+    "step": "npm test",
+    "error": "No radarRangeLabel export is defined on the ../src/draw mock",
+    "build": "failure",
+    "deploy": "skipped"
+  },
+  "negative": {
+    "canonical_files": 49,
+    "tests": 14,
+    "passed": 11,
+    "failed": 3,
+    "source_unchanged": true
+  },
+  "repair": {
+    "base_commit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+    "base_tree": "aa483f5d708f4f6f6ab510168884eaf4d25cf9e1",
+    "changed": [
+      {
+        "path": "web/airspace/tests/playback-controls.test.ts",
+        "old_git_blob": "de7a02cd88f69bf8192516cb1acf7aa6eb276853",
+        "old_sha256": "fbe02527200a428fae18c6d45b09ef942b9dcfd411d7e8a8bf11c30d5e74a845",
+        "bytes": 9133,
+        "sha256": "1a3d17a0f87c9e250da5996fbf15d87ed2329bc66d1da6297e58932a0bcefe89",
+        "git_blob": "878ca0a8824c64b88c305899c4caa8d2eea5ceb0",
+        "old_span": "vi.mock('../src/draw', () => ({ drawAirspace: draw, viewRange: () => 12 }));",
+        "new_span": "vi.mock('../src/draw', async (importOriginal) => ({\n  ...await importOriginal<typeof import('../src/draw')>(),\n  drawAirspace: draw,\n}));"
+      }
+    ],
+    "unchanged_files": 48,
+    "production_source_unchanged": true,
+    "typecheck_exit": 0,
+    "tests": 158,
+    "passed": 158,
+    "failed": 0,
+    "source_unchanged": true
+  },
+  "bundle_outputs": [
+    {
+      "path": "assets/index-CLwLT_75.js",
+      "bytes": 57665,
+      "sha256": "b6d32ffc38b4e2c405d62393adc67d632eda3f681c2648c823e1f39f312a09d1"
+    },
+    {
+      "path": "assets/index-BHHse_Io.css",
+      "bytes": 20856,
+      "sha256": "15c8901b2335cfbe0fa49187ebaa7a30cfbe959bfa5be22fa2727d2e840af009"
+    },
+    {
+      "path": "assets/python-worker-D9QUacUJ.js",
+      "bytes": 4419,
+      "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804"
+    },
+    {
+      "path": "index.html",
+      "bytes": 15485,
+      "sha256": "ea6f785d08a05249dcdcb648f7d8a9fa24c1cbe05a21b618a2aeba151b38ee2e"
+    }
+  ],
+  "public_receiving": "pending corrected main-push Pages build and deploy; this receipt makes no deployment claim",
+  "archive": {
+    "path": "native-receiving.json.gz",
+    "bytes": 79338,
+    "sha256": "e65bc542dbe143a849ca81b0b7ebe2bec0850afd39b013c60ef353925ba6f1e6",
+    "git_blob": "ea07137516b2501b7a7378aee86fe73648b26e86",
+    "members": 9
+  }
+}

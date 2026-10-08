@@ -6,7 +6,10 @@ import reference from './python-reference.json';
 // Exercise the page's actual event handlers and RAF integration. Only drawing
 // and the asynchronous Python boundary are mocked; no browser DOM is required.
 const { draw, python } = vi.hoisted(() => ({ draw: vi.fn(), python: vi.fn() }));
-vi.mock('../src/draw', () => ({ drawAirspace: draw, viewRange: () => 12 }));
+vi.mock('../src/draw', async (importOriginal) => ({
+  ...await importOriginal<typeof import('../src/draw')>(),
+  drawAirspace: draw,
+}));
 vi.mock('../src/python', () => ({ towerPython: python }));
 
 type Listener = (event: { currentTarget: ElementStub; target: ElementStub }) => unknown;
