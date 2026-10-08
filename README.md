@@ -6,6 +6,13 @@ An interactive 2D traffic-management workbench, not a recorded animation. Add fl
 
 The browser hosts a faithful TypeScript port of the Python `SafetyPolicy`, `AdvisoryPlanner`, `ControlRoom` safety gates, canonical world/advisory hashes and SHA-256 audit log. `tools/generate_airspace_reference.py` executes the original Python classes to maintain four reference scenarios; Vitest checks the browser port against those outputs. Additional tests construct visitor-authored worlds and run them through conflict timing, advisory search, approval, readback, actuation and audit verification. No prerecorded output drives the UI, and there is no model, network, live aircraft or external data call.
 
+## Review a saved world from the terminal
+
+`python3 plan_world.py world.json` inspects raw synthetic WorldState JSON with the
+existing native planner and returns every individually screened alternative.
+It preserves the saved input and performs no actuation. See [PLAN_WORLD.md](PLAN_WORLD.md)
+for file/stdin use, clock and policy settings, complete results, and refusal limits.
+
 ## Verify
 
 From the repository root:
