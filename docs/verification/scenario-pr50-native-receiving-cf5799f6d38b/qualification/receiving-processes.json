@@ -1,0 +1,203 @@
+{
+  "schema": "towerops.pr50-native-build-processes.v1",
+  "processes": [
+    {
+      "name": "source-before-tree",
+      "argv": [
+        "git",
+        "write-tree"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:43.510767+00:00",
+      "finished_utc": "2026-10-08T14:55:43.549941+00:00",
+      "duration_seconds": 0.039,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-before-tree.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-before-tree.stderr.log"
+    },
+    {
+      "name": "copy-private-node-dependencies",
+      "argv": [
+        "/bin/cp",
+        "-cR",
+        "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace/node_modules",
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed/web/airspace/node_modules"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh",
+      "started_utc": "2026-10-08T14:55:43.551425+00:00",
+      "finished_utc": "2026-10-08T14:55:43.785851+00:00",
+      "duration_seconds": 0.234,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-node-dependencies.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-node-dependencies.stderr.log"
+    },
+    {
+      "name": "copy-private-python-environment",
+      "argv": [
+        "/bin/cp",
+        "-cR",
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv",
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh",
+      "started_utc": "2026-10-08T14:55:43.786116+00:00",
+      "finished_utc": "2026-10-08T14:55:44.554307+00:00",
+      "duration_seconds": 0.768,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-python-environment.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-python-environment.stderr.log"
+    },
+    {
+      "name": "copy-private-ruff",
+      "argv": [
+        "/bin/cp",
+        "-c",
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/bin/ruff"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh",
+      "started_utc": "2026-10-08T14:55:44.554782+00:00",
+      "finished_utc": "2026-10-08T14:55:44.560173+00:00",
+      "duration_seconds": 0.005,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-ruff.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-ruff.stderr.log"
+    },
+    {
+      "name": "runtime-python",
+      "argv": [
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python/bin/python3",
+        "-c",
+        "import sys,json,pytest,platform;print(json.dumps({'executable':sys.executable,'prefix':sys.prefix,'base_prefix':sys.base_prefix,'version':platform.python_version(),'pytest':pytest.__version__,'pytest_file':pytest.__file__}))"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:44.684718+00:00",
+      "finished_utc": "2026-10-08T14:55:44.865031+00:00",
+      "duration_seconds": 0.18,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-python.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-python.stderr.log"
+    },
+    {
+      "name": "runtime-node",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:44.865252+00:00",
+      "finished_utc": "2026-10-08T14:55:44.907564+00:00",
+      "duration_seconds": 0.042,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-node.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-node.stderr.log"
+    },
+    {
+      "name": "runtime-npm",
+      "argv": [
+        "npm",
+        "--version"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:44.907725+00:00",
+      "finished_utc": "2026-10-08T14:55:45.084522+00:00",
+      "duration_seconds": 0.177,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-npm.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-npm.stderr.log"
+    },
+    {
+      "name": "runtime-ruff",
+      "argv": [
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/bin/ruff",
+        "--version"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:45.084766+00:00",
+      "finished_utc": "2026-10-08T14:55:45.095539+00:00",
+      "duration_seconds": 0.011,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-ruff.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-ruff.stderr.log"
+    },
+    {
+      "name": "native-pytest",
+      "argv": [
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/native-tests.xml"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:45.107589+00:00",
+      "finished_utc": "2026-10-08T14:55:48.512603+00:00",
+      "duration_seconds": 3.405,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/native-pytest.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/native-pytest.stderr.log"
+    },
+    {
+      "name": "ruff",
+      "argv": [
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/bin/ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:48.512842+00:00",
+      "finished_utc": "2026-10-08T14:55:48.533614+00:00",
+      "duration_seconds": 0.021,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/ruff.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/ruff.stderr.log"
+    },
+    {
+      "name": "reference",
+      "argv": [
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python/bin/python3",
+        "tools/generate_airspace_reference.py",
+        "--check"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:48.533897+00:00",
+      "finished_utc": "2026-10-08T14:55:48.603833+00:00",
+      "duration_seconds": 0.07,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/reference.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/reference.stderr.log"
+    },
+    {
+      "name": "production-build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed/web/airspace",
+      "started_utc": "2026-10-08T14:55:48.604036+00:00",
+      "finished_utc": "2026-10-08T14:55:50.160769+00:00",
+      "duration_seconds": 1.557,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/production-build.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/production-build.stderr.log"
+    },
+    {
+      "name": "source-after-tree",
+      "argv": [
+        "git",
+        "write-tree"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:50.209356+00:00",
+      "finished_utc": "2026-10-08T14:55:50.230201+00:00",
+      "duration_seconds": 0.021,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-after-tree.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-after-tree.stderr.log"
+    }
+  ]
+}

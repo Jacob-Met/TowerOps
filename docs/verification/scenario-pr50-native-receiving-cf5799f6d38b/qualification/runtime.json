@@ -1,0 +1,62 @@
+{
+  "captured_utc": "2026-10-08T14:55:45.096567+00:00",
+  "node": "v26.3.0",
+  "npm": "11.16.0",
+  "python": {
+    "executable": "/private/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python/bin/python3",
+    "prefix": "/private/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python",
+    "base_prefix": "/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12",
+    "version": "3.12.8",
+    "pytest": "8.4.2",
+    "pytest_file": "/private/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python/lib/python3.12/site-packages/pytest/__init__.py"
+  },
+  "ruff": "ruff 0.16.10",
+  "packages": {
+    "typescript": {
+      "version": "5.7.3",
+      "package_json_sha256": "1e03325943793f3bf11667b94fca412fe5ba617c85b84c16f0474933da156baa"
+    },
+    "vite": {
+      "version": "8.3.3",
+      "package_json_sha256": "334c8847b7f71cebb8a9c7e0fa56163941305ef13a970a15d4a43c7cdfef915b"
+    },
+    "vitest": {
+      "version": "4.1.11",
+      "package_json_sha256": "a28126d97bcaf567da5bed69443b7f3bcd9a7a8c38c8b66e554686b6bb2c10e0"
+    },
+    "pyodide": {
+      "version": "0.27.7",
+      "package_json_sha256": "bf221f60c881626236d3501375a97753672a7fa6fed70e469e083f157c8a30d4"
+    }
+  },
+  "dependency_copy_method": "macOS cp -cR (private copy-on-write copies, source read-only)",
+  "node_dependencies": {
+    "source": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace/node_modules",
+    "destination": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed/web/airspace/node_modules"
+  },
+  "python_environment": {
+    "source": "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv",
+    "destination": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python",
+    "base_interpreter_shared": true
+  },
+  "ruff_binary": {
+    "source": "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+    "destination": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/bin/ruff",
+    "sha256": "70e977860c228661a4992c9558b8350903351845fa945715584f4c176a0f6c61"
+  },
+  "package_lock_sha256": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "GIT_OPTIONAL_LOCKS": "0",
+    "TOWEROPS_PYTHON": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python/bin/python3",
+    "TOWEROPS_RECEIVING_OUTPUT": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving"
+  },
+  "cleared_environment_keys": [
+    "PYTHONPATH",
+    "PYTHONHOME",
+    "PYTHONSTARTUP",
+    "PYTHONOPTIMIZE"
+  ],
+  "hosted_ci_runtime_parity_claimed": false,
+  "dependency_install_performed": false
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/publication/restore-replay.cjs",
+    "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/publication/receiving-archive.json.gz",
+    "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/publication/archive-manifest.json",
+    "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/archive-roundtrip"
+  ],
+  "exit_code": 0,
+  "restored_members": 32,
+  "all_restored_bytes_exact": true,
+  "stdout": "{\"restored\":32,\"destination\":\"/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/archive-roundtrip\",\"archive_sha256\":\"6a4b29e2184fc692e047296ea6f47384eb4d8078f61102e3072bf15b9dedf6d6\"}\n",
+  "stderr": ""
+}

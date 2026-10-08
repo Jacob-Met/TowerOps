@@ -1,0 +1,333 @@
+{
+  "schema": "towerops.scenario-alternatives-independent-publication.v1",
+  "frozen_utc": "2026-10-08T14:22:46.829002+00:00",
+  "publication_prefix": "docs/verification/scenario-alternatives-independent-cf5799f6d38b",
+  "receiver_sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+  "phases": [
+    {
+      "phase": "initial",
+      "source_tree": "f4bc1ce05953dde6a33cea8588033fea9e18c5c4",
+      "source_files": 251,
+      "build_files": 16,
+      "passed": 1,
+      "total": 2,
+      "input_manifest_sha256": "022805ce6de15626e92fdfa6daac13349191085d7655e7cd6b35c63dc168e0e6",
+      "browser_receipt_sha256": "1303827a92ad39b226bb65cde592442924e936463ad3636f127391ae8ec3fb1e"
+    },
+    {
+      "phase": "reset",
+      "source_tree": "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993",
+      "source_files": 251,
+      "build_files": 16,
+      "passed": 2,
+      "total": 2,
+      "input_manifest_sha256": "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba",
+      "browser_receipt_sha256": "178791aaccba6520b324c20f88d2f2b55530b8bd52a961454f2358daa075acf3"
+    }
+  ],
+  "file_count": 33,
+  "bytes": 547856,
+  "archival_name_mappings": {
+    "run_initial.py": "run_initial.py.txt",
+    "run_reset.py": "run_reset.py.txt"
+  },
+  "files": [
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/REVIEW.md",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/REVIEW.md",
+      "native_relative_path": "REVIEW.md",
+      "bytes": 7684,
+      "sha256": "96be4576190419cccc4fe859376f9cc33df90b9ab951bba752a5f5420791b974",
+      "git_blob": "cf3edb74fe3dce872edf6cc58601f59aee2d82fe",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/authoring-receipt.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/authoring-receipt.json",
+      "native_relative_path": "authoring-receipt.json",
+      "bytes": 392,
+      "sha256": "0d93ea943cdadd34f2a3b9c591fadf57497fe8405723405e360a9c5d0f21c0b2",
+      "git_blob": "ad9f92d2fab03f96eeb445cc9d006c9a2e72a965",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/final-integrity.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/final-integrity.json",
+      "native_relative_path": "final-integrity.json",
+      "bytes": 1119,
+      "sha256": "cde5b31508c33f19c0d40ab8a8770cef973cfeb7c409a6b0f15a42eaed6575a3",
+      "git_blob": "f150a4b4e7b6d2a7b9505f3874a0a0dfc0b47bc3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/independent_alternative_reset.mjs",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/independent_alternative_reset.mjs",
+      "native_relative_path": "independent_alternative_reset.mjs",
+      "bytes": 14632,
+      "sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+      "git_blob": "ed39378886a48bac61d9b695ebbd4cc0f030c507",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-browser/downloads/54817cb9-a78a-4671-894c-38b27a6e1655",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-browser/downloads/54817cb9-a78a-4671-894c-38b27a6e1655",
+      "native_relative_path": "initial-browser/downloads/54817cb9-a78a-4671-894c-38b27a6e1655",
+      "bytes": 812,
+      "sha256": "e8abe6495e414188a1d0c531d14f1ff5c184d922604b4e6d8bd3b39d93b8097e",
+      "git_blob": "ef1211111a6948d32c38915b228fe2c85b102024",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-browser/downloads/5821f30b-2656-457a-a99b-61fda378d6f8",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-browser/downloads/5821f30b-2656-457a-a99b-61fda378d6f8",
+      "native_relative_path": "initial-browser/downloads/5821f30b-2656-457a-a99b-61fda378d6f8",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-browser/downloads/61e77cb3-0854-47aa-ba9f-51a5d7ff572d",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-browser/downloads/61e77cb3-0854-47aa-ba9f-51a5d7ff572d",
+      "native_relative_path": "initial-browser/downloads/61e77cb3-0854-47aa-ba9f-51a5d7ff572d",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-browser/downloads/e8d88341-4be1-4dbb-93da-073022bd4a58",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-browser/downloads/e8d88341-4be1-4dbb-93da-073022bd4a58",
+      "native_relative_path": "initial-browser/downloads/e8d88341-4be1-4dbb-93da-073022bd4a58",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-browser/fixtures/changed-version-scenario.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-browser/fixtures/changed-version-scenario.json",
+      "native_relative_path": "initial-browser/fixtures/changed-version-scenario.json",
+      "bytes": 543,
+      "sha256": "72e11258086baedf41670d94122853e53301f912649e96357401cdc77c9bf536",
+      "git_blob": "14850566b569b68c56b74bb505fc7b97d9e7edc9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-browser/receipt.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-browser/receipt.json",
+      "native_relative_path": "initial-browser/receipt.json",
+      "bytes": 36058,
+      "sha256": "1303827a92ad39b226bb65cde592442924e936463ad3636f127391ae8ec3fb1e",
+      "git_blob": "e0cb22103f87c19a5016757d2723a0eaf7510353",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-browser/same-value-alternatives.png",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-browser/same-value-alternatives.png",
+      "native_relative_path": "initial-browser/same-value-alternatives.png",
+      "bytes": 130263,
+      "sha256": "ce38b710f8cc58b8e326884ebdb072787a4e752f63c025d5c5fbe04f88a11cf8",
+      "git_blob": "cea02d5f5772ec90b4943e5cd4e14ca8a99a4d99",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-evidence-manifest.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-evidence-manifest.json",
+      "native_relative_path": "initial-evidence-manifest.json",
+      "bytes": 3067,
+      "sha256": "a1089ff3934f431c0f833df9418f3e09ba0e8f7609ac4d57a6e9d718f28a907e",
+      "git_blob": "808cf944cb3449751a8de204d80cc5f4b6b613c8",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-process-receipt.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-process-receipt.json",
+      "native_relative_path": "initial-process-receipt.json",
+      "bytes": 1075,
+      "sha256": "50150fd49a6dbc5fbf6ac5728255c5e8cb12ecf4595582247b136ff5277cfa7a",
+      "git_blob": "ee010052a8b24ead1c5aac9cb9344a32eae6475c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-source-build-pin.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-source-build-pin.json",
+      "native_relative_path": "initial-source-build-pin.json",
+      "bytes": 78433,
+      "sha256": "022805ce6de15626e92fdfa6daac13349191085d7655e7cd6b35c63dc168e0e6",
+      "git_blob": "62a20a58a9a1a6341b618a6eb27868e8026aa0c1",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial-tool-result.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-tool-result.json",
+      "native_relative_path": "initial-tool-result.json",
+      "bytes": 1468,
+      "sha256": "886f52c67fdb4bc52d9040bf73ef8449fba36a20ac15be58798a0ca2e6e66fd0",
+      "git_blob": "770a88eae1a6ad290c9f574c32a15a087c61cef5",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial.stderr.log",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial.stderr.log",
+      "native_relative_path": "initial.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/initial.stdout.log",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial.stdout.log",
+      "native_relative_path": "initial.stdout.log",
+      "bytes": 14752,
+      "sha256": "82c185566058e32502787bb93c7cfe5067919f3961ddf22cb489637358ca7916",
+      "git_blob": "bf265bed57519eb15dfdeadf76fe6850de9d3301",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-browser/downloads/413f6bc3-3ef7-4044-a718-45c0075e8260",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-browser/downloads/413f6bc3-3ef7-4044-a718-45c0075e8260",
+      "native_relative_path": "reset-browser/downloads/413f6bc3-3ef7-4044-a718-45c0075e8260",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-browser/downloads/644ed66f-5190-4362-8729-1c421cb3696c",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-browser/downloads/644ed66f-5190-4362-8729-1c421cb3696c",
+      "native_relative_path": "reset-browser/downloads/644ed66f-5190-4362-8729-1c421cb3696c",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-browser/downloads/8b55ff73-92f6-4413-b22b-2c93386ce977",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-browser/downloads/8b55ff73-92f6-4413-b22b-2c93386ce977",
+      "native_relative_path": "reset-browser/downloads/8b55ff73-92f6-4413-b22b-2c93386ce977",
+      "bytes": 812,
+      "sha256": "e8abe6495e414188a1d0c531d14f1ff5c184d922604b4e6d8bd3b39d93b8097e",
+      "git_blob": "ef1211111a6948d32c38915b228fe2c85b102024",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-browser/downloads/c6eb2bc5-8a99-44da-ae5e-c32091c26d62",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-browser/downloads/c6eb2bc5-8a99-44da-ae5e-c32091c26d62",
+      "native_relative_path": "reset-browser/downloads/c6eb2bc5-8a99-44da-ae5e-c32091c26d62",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-browser/fixtures/changed-version-scenario.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-browser/fixtures/changed-version-scenario.json",
+      "native_relative_path": "reset-browser/fixtures/changed-version-scenario.json",
+      "bytes": 543,
+      "sha256": "72e11258086baedf41670d94122853e53301f912649e96357401cdc77c9bf536",
+      "git_blob": "14850566b569b68c56b74bb505fc7b97d9e7edc9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-browser/receipt.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-browser/receipt.json",
+      "native_relative_path": "reset-browser/receipt.json",
+      "bytes": 35713,
+      "sha256": "178791aaccba6520b324c20f88d2f2b55530b8bd52a961454f2358daa075acf3",
+      "git_blob": "622915d2079fd7787a0caa08a42b5eefa6c81424",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-browser/same-value-alternatives.png",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-browser/same-value-alternatives.png",
+      "native_relative_path": "reset-browser/same-value-alternatives.png",
+      "bytes": 108973,
+      "sha256": "877a7ea5ef4e20a21d8cc9c7581b68651e5c31fee3da001f819d473041b11954",
+      "git_blob": "9f1b4d211fbe57706fca73f5fe90888f50fc8544",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-process-receipt.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-process-receipt.json",
+      "native_relative_path": "reset-process-receipt.json",
+      "bytes": 1074,
+      "sha256": "d643dbdf5ff5ca2ef6113a1ee6dad1fc795ade0f3ec59b2ff72dfb087b7b720b",
+      "git_blob": "7f5573d553b9d3950121a90fd27043d7aa418a2f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-source-build-pin.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-source-build-pin.json",
+      "native_relative_path": "reset-source-build-pin.json",
+      "bytes": 78715,
+      "sha256": "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba",
+      "git_blob": "62bc62d75e39c00b6c34cd3fcd85fba51634e652",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset-tool-result.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-tool-result.json",
+      "native_relative_path": "reset-tool-result.json",
+      "bytes": 1467,
+      "sha256": "21e529ef74485ba2a1fc14aec2116ba53c285ec0f831484669286bac0bac14f2",
+      "git_blob": "cc8decfbc570df4e0262c801349eea0796f8ff66",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset.stderr.log",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset.stderr.log",
+      "native_relative_path": "reset.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/reset.stdout.log",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset.stdout.log",
+      "native_relative_path": "reset.stdout.log",
+      "bytes": 14292,
+      "sha256": "085ce58bd8d0a1143614b9fb4ba6e0bcaab757af66a66175bf5a8c227b4a04cd",
+      "git_blob": "84325f06d48af21ab5227cdfd3901ab590271141",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/run_initial.py.txt",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/run_initial.py",
+      "native_relative_path": "run_initial.py",
+      "bytes": 2391,
+      "sha256": "9f5b239aaf1ad2a72d6cbbab44f0b858a29ceb42e61cdc7c6b454e306c9a207c",
+      "git_blob": "72b60d5079914626cab7864f6465e68e7ff8f1a3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/run_reset.py.txt",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/run_reset.py",
+      "native_relative_path": "run_reset.py",
+      "bytes": 2386,
+      "sha256": "6e79b8f9043bdac23f17495b588ab35a34c0896dae8f5ebb8880a768aa5eedcc",
+      "git_blob": "761290f97725810cb7c9531d1f265c88a686b841",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/source-observation.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/source-observation.json",
+      "native_relative_path": "source-observation.json",
+      "bytes": 2337,
+      "sha256": "26b5c884d64b283353934d454b22223de5d9fd481147bc1e364d97f9e1b62782",
+      "git_blob": "b542a2496e5ba90245c7903925e1f1ef4a90bc36",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/successor-source-review.json",
+      "source_path": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/successor-source-review.json",
+      "native_relative_path": "successor-source-review.json",
+      "bytes": 3983,
+      "sha256": "dcec527a44ff177bf5b26e5288d8b81552f291c0f65c118a3f844cc742371190",
+      "git_blob": "02cd30b27bcd0b4c1c7d23452afa87eeec66878c",
+      "mode": "100644"
+    }
+  ]
+}

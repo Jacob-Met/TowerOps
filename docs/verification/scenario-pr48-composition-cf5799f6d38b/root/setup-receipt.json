@@ -1,0 +1,61 @@
+[
+  {
+    "name": "qualified-object",
+    "command": [
+      "git",
+      "cat-file",
+      "-t",
+      "efd5d1d99edc0595111e15836c18a9b178abb4c3"
+    ],
+    "cwd": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+    "exit_code": 0,
+    "seconds": 0.028
+  },
+  {
+    "name": "frozen-pr46-product-patch",
+    "command": [
+      "git",
+      "diff",
+      "--binary",
+      "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+      "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+      "--",
+      "web/airspace/README.md",
+      "web/airspace/index.html",
+      "web/airspace/style.css",
+      "web/airspace/src/main.ts",
+      "web/airspace/src/scenario-file.ts",
+      "web/airspace/src/scenario-ui.ts",
+      "web/airspace/tests/scenario-file.test.ts"
+    ],
+    "cwd": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+    "exit_code": 0,
+    "seconds": 0.041
+  },
+  {
+    "name": "clone",
+    "command": [
+      "git",
+      "clone",
+      "--shared",
+      "--no-checkout",
+      "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial"
+    ],
+    "cwd": null,
+    "exit_code": 0,
+    "seconds": 0.07
+  },
+  {
+    "name": "has-pr48-base",
+    "command": [
+      "git",
+      "cat-file",
+      "-e",
+      "093f88b29d6e1ede778f967528c7e010b7689ab1"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+    "exit_code": 1,
+    "seconds": 0.03
+  }
+]

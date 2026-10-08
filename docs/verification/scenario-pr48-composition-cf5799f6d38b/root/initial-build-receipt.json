@@ -1,0 +1,16 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "build",
+    "--",
+    "--configLoader",
+    "native"
+  ],
+  "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial/web/airspace",
+  "exit_code": 0,
+  "seconds": 4.663,
+  "source_tree": "f4bc1ce05953dde6a33cea8588033fea9e18c5c4",
+  "dependency_source": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/web/airspace/node_modules",
+  "loader_choice": "Native configuration loading avoids a generated bundled-config cache in the shared dependency directory."
+}

@@ -1,0 +1,48 @@
+{
+  "format": "towerops.world-plan.v1",
+  "simulation_only": true,
+  "proposal_only": true,
+  "input_sha256": "36dcf81a47c504059e258255f856189efae2f9fb87ac51e69b3510ed2d97dfd5",
+  "world": {
+    "version": 2,
+    "observed_at": 10.0,
+    "aircraft": [
+      {
+        "aircraft_id": "L",
+        "x_nm": 1,
+        "y_nm": 0,
+        "altitude_ft": 12000,
+        "vx_nm_min": 0,
+        "vy_nm_min": 2,
+        "climb_ft_min": 0.0
+      },
+      {
+        "aircraft_id": "l",
+        "x_nm": 1.0,
+        "y_nm": -0.0,
+        "altitude_ft": 12000.0,
+        "vx_nm_min": 0.0,
+        "vy_nm_min": -2.0,
+        "climb_ft_min": -0.0
+      }
+    ]
+  },
+  "world_hash": "2f7beff74b2bc4d3da5cb8193a4c00d1e8fef7d7e2152fe3fc6260ff22fc007e",
+  "reviewed_at": 10.0,
+  "policy": {
+    "min_horizontal_nm": 5.0,
+    "min_vertical_ft": 1000.0,
+    "horizon_min": 5.0,
+    "sample_step_min": 0.5,
+    "max_state_age_sec": 10.0,
+    "max_speed_nm_min": 6.0,
+    "max_climb_ft_min": 3000.0
+  },
+  "status": "no_admitted_option",
+  "conflicting_aircraft": [
+    "L",
+    "l"
+  ],
+  "candidate_count": 62,
+  "advisories": []
+}

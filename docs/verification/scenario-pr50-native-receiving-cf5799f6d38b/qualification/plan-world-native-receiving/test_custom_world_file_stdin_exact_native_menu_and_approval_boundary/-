@@ -1,0 +1,42 @@
+{
+   "version": 41,
+   "observed_at": 250,
+   "aircraft": [
+      {
+         "aircraft_id": "b",
+         "x_nm": 8,
+         "y_nm": 60.0,
+         "altitude_ft": 12000,
+         "vx_nm_min": -2.0,
+         "vy_nm_min": 0.0,
+         "climb_ft_min": 0
+      },
+      {
+         "aircraft_id": "A",
+         "x_nm": -8,
+         "y_nm": -0.0,
+         "altitude_ft": 12000,
+         "vx_nm_min": 2.0,
+         "vy_nm_min": 0,
+         "climb_ft_min": -0.0
+      },
+      {
+         "aircraft_id": "a",
+         "x_nm": 8.0,
+         "y_nm": 0,
+         "altitude_ft": 12000.0,
+         "vx_nm_min": -2,
+         "vy_nm_min": -0.0,
+         "climb_ft_min": 0
+      },
+      {
+         "aircraft_id": "B",
+         "x_nm": -8.0,
+         "y_nm": 60,
+         "altitude_ft": 12000,
+         "vx_nm_min": 2,
+         "vy_nm_min": 0,
+         "climb_ft_min": 0.0
+      }
+   ]
+}

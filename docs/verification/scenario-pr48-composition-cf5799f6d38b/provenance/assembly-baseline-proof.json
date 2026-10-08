@@ -1,0 +1,29 @@
+{
+  "schema": "towerops-publication-baseline-preservation/v1",
+  "source_root": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/publication-candidate",
+  "source_tree": "8c11186b1a3f6391879fb0aef14738487f09dc2a",
+  "source_file_count": 589,
+  "base_commit": "53aa5048b6585aa08592d5513cfcf555a8bba018",
+  "base_tree": "fc29ac4a02c151ba66ca37c029ff74d968662d58",
+  "product_source_tree": "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993",
+  "product_paths": [
+    "web/airspace/README.md",
+    "web/airspace/index.html",
+    "web/airspace/src/main.ts",
+    "web/airspace/src/scenario-file.ts",
+    "web/airspace/src/scenario-ui.ts",
+    "web/airspace/style.css",
+    "web/airspace/tests/scenario-file.test.ts"
+  ],
+  "historical_published_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+  "historical_tree": "464299ede19b44fdd1d0d8d8590c9a34e4896df5",
+  "historical_evidence_paths_exact": 328,
+  "current_unowned_base_paths_exact": 254,
+  "product_paths_exact": 7,
+  "source_checkout_bytes_match_index": true,
+  "source_manifest_external": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/initial-589-source-readback.json",
+  "source_manifest_sha256": "6123e4d28b27b0a761f75cdb5481463be240b53b0c2f0b03786b267876442362",
+  "source_memory_manifest_sha256": "95cd7172d2f0bf2d2d1d651d58e69dbcd25067df95c33321db1fc84f2c8cc935",
+  "no_rebase_beyond_base": true,
+  "build_or_dependency_copy_performed": false
+}

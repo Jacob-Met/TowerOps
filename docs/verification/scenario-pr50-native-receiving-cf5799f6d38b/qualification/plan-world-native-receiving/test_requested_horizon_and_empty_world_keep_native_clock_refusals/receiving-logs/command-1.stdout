@@ -1,0 +1,63 @@
+{
+  "format": "towerops.world-plan.v1",
+  "simulation_only": true,
+  "proposal_only": true,
+  "input_sha256": "2c8f41416122613af31e53910bfbcf79148d5e66d5c8a030819e3f85909f008b",
+  "world": {
+    "version": 41,
+    "observed_at": 250,
+    "aircraft": [
+      {
+        "aircraft_id": "A",
+        "x_nm": -8,
+        "y_nm": -0.0,
+        "altitude_ft": 12000,
+        "vx_nm_min": 2.0,
+        "vy_nm_min": 0,
+        "climb_ft_min": -0.0
+      },
+      {
+        "aircraft_id": "B",
+        "x_nm": -8.0,
+        "y_nm": 60,
+        "altitude_ft": 12000,
+        "vx_nm_min": 2,
+        "vy_nm_min": 0,
+        "climb_ft_min": 0.0
+      },
+      {
+        "aircraft_id": "a",
+        "x_nm": 8.0,
+        "y_nm": 0,
+        "altitude_ft": 12000.0,
+        "vx_nm_min": -2,
+        "vy_nm_min": -0.0,
+        "climb_ft_min": 0
+      },
+      {
+        "aircraft_id": "b",
+        "x_nm": 8,
+        "y_nm": 60.0,
+        "altitude_ft": 12000,
+        "vx_nm_min": -2.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0
+      }
+    ]
+  },
+  "world_hash": "94e5d06bd8670e2adb4369e60155bfb9145ff27d6ba7939a45e82231f66c2c0a",
+  "reviewed_at": 258.0,
+  "policy": {
+    "min_horizontal_nm": 3.0,
+    "min_vertical_ft": 750,
+    "horizon_min": 2,
+    "sample_step_min": 0.5,
+    "max_state_age_sec": 10.0,
+    "max_speed_nm_min": 6.0,
+    "max_climb_ft_min": 3000.0
+  },
+  "status": "no_conflict",
+  "conflicting_aircraft": [],
+  "candidate_count": 0,
+  "advisories": []
+}

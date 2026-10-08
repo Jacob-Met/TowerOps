@@ -1,0 +1,549 @@
+diff --git a/web/airspace/README.md b/web/airspace/README.md
+index ba599a0..537d0eb 100644
+--- a/web/airspace/README.md
++++ b/web/airspace/README.md
+@@ -30,3 +30,37 @@ Open **Shape the traffic** and choose **Edit TWR419** (or the flight selected in
+ **Preview edit** compares the current and edited conflict intervals without changing the world. **Apply scenario edit** replaces only that flight, advances the world version once, retains the existing decision trace, and clears previous planner proposals and approvals. This authors a synthetic scenario; run the planner on the changed world before its approval/readback flow. A scenario edit can introduce conflicts as well as remove them.
+ 
+ **Cancel edit** preserves the world, pending proposal and approval, and returns the builder to its previous new-flight draft. Traffic stays paused. Changing a field invalidates the preview; a changed world, policy or clock also prevents applying a stale edit. Unchanged velocity vectors retain their exact values during position or altitude edits.
++
++## Save and reopen a scenario
++
++Open **Save or load a scenario** while traffic is paused and no planner or flight edit is active. **Save scenario file** downloads the current aircraft, complete separation policy, simulation clock, time scale and selected flight as one local JSON file.
++
++Use **Choose scenario file** to read a saved file. Review its aircraft count, clock, selected flight and all seven policy values, then choose **Load reviewed scenario**. Reading and reviewing do not change the simulation. **Cancel import**, malformed files and failed reads preserve the current world, proposal, approval and decision trace. If those values change during a read or review, choose the file again before loading.
++
++Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Run the existing planner, approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history.
++
++The existing **Inspect or load a WorldState** workbench continues to accept its original raw world shape. That shape contains only aircraft state and does not carry a policy. Use a scenario file when the separation envelope and clock must travel with the traffic.
++
++### Scenario format v1
++
++The top-level fields are `format: "towerops.airspace-scenario"`, `version: 1`, `world`, `policy`, `now`, `time_scale` and `selected_aircraft_id`. Unknown or missing fields are rejected, including nested world, aircraft and policy fields.
++
++| Value | Supported file values |
++| --- | --- |
++| World | Existing WorldState fields; 1–60 aircraft, unique uppercase callsigns, finite numeric fields and a nonnegative safe integer version |
++| Horizontal separation | 3–10 NM in 0.5 NM steps |
++| Vertical separation | 500–2,500 FT in 100 FT steps |
++| Look-ahead | 2–10 MIN in 0.5 MIN steps |
++| Recorded sample step | Current built-in value, 0.5 MIN |
++| Maximum state age | Current built-in value, 10 SEC |
++| Speed limit | Current built-in value, 6 NM/MIN |
++| Climb limit | Current built-in value, 3,000 FT/MIN |
++| Clock | Finite `now` in seconds, separate from `world.observed_at`; the existing gate still evaluates freshness |
++| Time scale | 0.5–3 in 0.5 steps |
++| Selected flight | An exact callsign in the saved world |
++
++The four built-in policy parameters are included for reproducibility. Version 1 refuses changes to them because the current lab has no controls to represent those changes. Editable parameters use the same ranges and steps as the existing controls.
++
++Files are bounded to 256 KiB of UTF-8 JSON. Finite aircraft values, including signed zero, retain their numeric identity through save and load. The file is read as data and never supplies executable code or a network destination. No file is uploaded or automatically saved to browser storage. Browser download behavior still controls where the requested file is placed.
++
++The scenario-file tests run with the existing `npm test` command. Native receiving scripts and exact before/after evidence are recorded in the accompanying source qualification packet.
+diff --git a/web/airspace/index.html b/web/airspace/index.html
+index a473918..f35b02e 100644
+--- a/web/airspace/index.html
++++ b/web/airspace/index.html
+@@ -10,6 +10,17 @@
+ <div id="track-edit-controls" hidden><div class="button-row"><button id="preview-track-edit" class="button button-primary">Preview edit</button><button id="apply-track-edit" class="button button-quiet" disabled>Apply scenario edit</button></div><button id="cancel-track-edit" class="button button-wide">Cancel edit</button></div>
+ <div id="track-edit-preview" class="track-edit-preview" role="status" aria-live="polite" hidden></div>
+ <p id="builder-feedback" class="fine-print" role="status">0° = north; 90° = east. Select a flight in the traffic register to edit it, or inject a new track.</p></div><button id="perturb-track" class="button button-wide">Perturb selected track</button><label class="speed-control" for="speed-range"><span>TIME SCALE</span><output id="speed-value">1.0x</output><input id="speed-range" type="range" min="0.5" max="3" step="0.5" value="1"></label><details class="policy-editor"><summary>Adjust the safety envelope</summary><label>Horizontal · <output id="horizontal-value">5.0 NM</output><input id="policy-horizontal" type="range" min="3" max="10" step="0.5" value="5"></label><label>Vertical · <output id="vertical-value">1,000 FT</output><input id="policy-vertical" type="range" min="500" max="2500" step="100" value="1000"></label><label>Look-ahead · <output id="horizon-value">5.0 MIN</output><input id="policy-horizon" type="range" min="2" max="10" step="0.5" value="5"></label><p class="fine-print">These values feed the planner and safety gate.</p></details><p class="fine-print">Every marker advances from its velocity vector. Add, edit or perturb traffic; the solver recomputes the live world.</p></details>
++<details class="depth scenario-workbench"><summary><span>Save or load a scenario</span><small>traffic, policy and clock in one local file</small></summary>
++<p>Save the traffic and complete separation policy in a local JSON file. Choose a file to review it before loading.</p>
++<div class="scenario-file-controls"><button id="save-scenario" class="button button-quiet">Save scenario file</button><button id="choose-scenario" class="button button-primary">Choose scenario file</button><button id="cancel-scenario" class="button button-quiet" hidden>Cancel import</button></div>
++<input id="scenario-file" type="file" accept=".json,application/json" hidden aria-label="Choose a TowerOps scenario JSON file">
++<p id="scenario-availability" class="fine-print"></p>
++<section id="scenario-review" class="scenario-review" aria-labelledby="scenario-review-title" hidden>
++<h3 id="scenario-review-title" tabindex="-1">Review saved scenario</h3><p id="scenario-summary"></p><dl id="scenario-policy" class="scenario-policy"></dl>
++<p>Loading replaces the traffic, policy, clock and selected flight. It clears pending proposals, approvals and the decision trace. The imported traffic starts paused.</p>
++<button id="load-scenario" class="button button-primary" disabled>Load reviewed scenario</button></section>
++<p id="scenario-status" class="fine-print" role="status" aria-live="polite">No scenario file selected.</p>
++</details>
+ <details class="depth state-workbench"><summary><span>Inspect or load a WorldState</span><small>the raw JSON the solver sees</small></summary><p>Paste a TowerOps state to run the same conflict detector and bounded planner on your own traffic. Export any live state to keep iterating.</p><textarea id="world-json" rows="10" spellcheck="false" aria-label="Editable TowerOps WorldState JSON"></textarea><div class="button-row"><button id="export-world" class="button button-quiet">Export live world</button><button id="load-world" class="button button-primary">Load into simulation</button></div><p id="world-json-feedback" role="status" class="fine-print">One to 60 aircraft; finite numeric fields and unique callsigns required.</p></details><details class="depth telemetry-wrap"><summary><span>Under the hood</span><small>traffic register, separation watch, hash-chained decision trace</small></summary><div class="telemetry-grid"><article class="data-panel"><div class="panel-head"><div><span class="micro">LIVE REGISTER</span><strong>Traffic</strong></div><span id="flight-count" class="count-chip">0 FLIGHTS</span></div><div id="flight-list" class="flight-list"></div></article>
+ <article class="data-panel"><div class="panel-head"><div><span class="micro">POLICY CHECK</span><strong>Separation watch</strong></div><span class="micro">CONTINUOUS MODEL</span></div><div id="conflict-list" class="conflict-list"></div></article>
+ <article class="data-panel audit-panel"><div class="panel-head"><div><span class="micro">HASH-CHAINED</span><strong>Decision trace</strong></div><span id="audit-status" class="count-chip">0 EVENTS</span><button id="verify-audit" class="button button-quiet">Verify chain</button></div><ol id="audit-events" class="audit-events"></ol><p id="audit-verdict" class="fine-print" role="status"></p></article>
+diff --git a/web/airspace/src/main.ts b/web/airspace/src/main.ts
+index 2aabfdb..73f72a1 100644
+--- a/web/airspace/src/main.ts
++++ b/web/airspace/src/main.ts
+@@ -2,6 +2,8 @@ import '../style.css';
+ import reference from '../tests/python-reference.json';
+ import { Aircraft,DEFAULT_POLICY,SafetyPolicy,WorldState,conflictPairs,projected } from './core';
+ import { createAircraft,conflictWindows,parseWorldState } from './world-tools';
++import { ScenarioFile, createScenario } from './scenario-file';
++import { connectScenarioFiles } from './scenario-ui';
+ import { TrackEditInput,TrackEditPreview,TrackEditSession,applyTrackEdit,beginTrackEdit,previewTrackEdit } from './track-edit';
+ import { Advisory } from './planner';
+ import { towerPython } from './python';
+@@ -18,6 +20,29 @@ let state=copy(fixture.state),now=fixture.now,selected='TWR419',running=false,pe
+ let rate=1,lastFrame=0,trafficSeq=0,busy=false,pythonAudit='[]';
+ let trackEdit:TrackEditSession|null=null,trackPreview:TrackEditPreview|null=null,injectDraft:Record<string,string>|null=null;
+ const flightFields=['flight-id','flight-x','flight-y','flight-level','flight-bearing','flight-speed','flight-climb'];
++const scenarioFiles=connectScenarioFiles({
++ capture:()=>({world:state,policy,now,time_scale:rate,selected_aircraft_id:selected}),
++ context:()=>[state,policy,now,rate,selected,pending,approval,audit.events,pythonAudit,busy,trackEdit,running],
++ available:()=>!busy&&!trackEdit&&!running,
++ load:loadSavedScenario,
++});
++function loadSavedScenario(value:ScenarioFile):void {
++ const restored=createScenario(value);
++ state=restored.world;policy=restored.policy;now=restored.now;rate=restored.time_scale;selected=restored.selected_aircraft_id;
++ running=false;lastFrame=0;trafficSeq=0;audit=new AuditLog();pythonAudit='[]';
++ clearPending('Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.');
++ $<HTMLInputElement>('policy-horizontal').value=String(policy.min_horizontal_nm);
++ $<HTMLInputElement>('policy-vertical').value=String(policy.min_vertical_ft);
++ $<HTMLInputElement>('policy-horizon').value=String(policy.horizon_min);
++ $<HTMLInputElement>('speed-range').value=String(rate);
++ setText('horizontal-value',`${policy.min_horizontal_nm.toFixed(1)} NM`);
++ setText('vertical-value',`${policy.min_vertical_ft.toLocaleString()} FT`);
++ setText('horizon-value',`${policy.horizon_min.toFixed(1)} MIN`);
++ setText('toggle-run','Run traffic');
++ setText('world-json-feedback',`Loaded scenario with ${state.aircraft.length} aircraft at version ${state.version}.`);
++ announce('Saved scenario loaded. Traffic is paused. Previous proposals and decision trace cleared.');
++ void render();
++}
+ type GateState='wait'|'done'|'fail'; let gateScreen:GateState='wait',gateApproval:GateState='wait',gateAck:GateState='wait';
+ function setText(id:string,value:string){$(id).textContent=value;}
+ function gate(id:string,status:'wait'|'done'|'fail',label:string){const node=$(id);node.className=`gate-step ${status}`;const i=node.querySelector('i');if(i)i.textContent=label;}
+@@ -31,6 +56,7 @@ function drawLists(pairs:Array<[string,string]>){
+ }
+ let proposalMessage='No proposal yet. The planner only returns a setpoint if it clears the separation policy.';
+ async function render():Promise<void>{
++ scenarioFiles.refresh();
+  const pairs=conflictPairs(state,policy);drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);drawLists(pairs);
+  const badge=$('world-badge');badge.className=`badge ${pairs.length?'alert':'safe'}`;badge.textContent=pairs.length?'ACTION':'CLEAR';
+  setText('world-title',pairs.length?`${pairs.length} conflict pair${pairs.length===1?'':'s'} inside policy envelope`:'No projected conflict');
+@@ -122,9 +148,9 @@ function approvePlan(){if(!pending)return;approval={advisory_hash:pending.adviso
+ async function acceptReadback(){if(busy||!pending||!approval)return;const a=pending,applyNow=now+0.5,ack:Ack={advisory_hash:a.advisory_hash,status:'accepted',acknowledged_at:now+0.4};try{busy=true;await render();const result=await towerPython({op:'apply',state,advisory:a,approval,ack,now:applyNow,policy,audit_json:pythonAudit});pythonAudit=result.audit_json;audit.events=result.events as AuditEvent[];if(result.error)throw new GateRejected(result.error);if(!result.valid)throw new Error('Python audit chain verification failed');state=result.state;setText('python-status','Live CPython · ControlRoom.apply · audit verified');now=applyNow;pending=null;approval=null;gateScreen='done';gateApproval='done';gateAck='done';const n=conflictPairs(state,policy).length;proposalMessage=n?`Actuation is simulated; ${n} conflict pair(s) remain. Run another bounded pass.`:'Simulated setpoint applied. No projected conflict remains in the policy window.';}catch(err){proposalMessage=`GATE REJECTED: ${err instanceof GateRejected?err.reason:String(err)}. No state transition was applied.`;pending=null;approval=null;gateScreen='fail';gateAck='fail';}finally{busy=false;}await render();}
+ function resetWorld(){running=false;policy={...DEFAULT_POLICY};$<HTMLInputElement>('policy-horizontal').value='5';$<HTMLInputElement>('policy-vertical').value='1000';$<HTMLInputElement>('policy-horizon').value='5';state=copy(fixture.state);now=fixture.now;selected='TWR419';trafficSeq=0;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';gateScreen='wait';gateApproval='wait';gateAck='wait';proposalMessage='Reset to the crossing scenario from demo.py. Run the bounded planner to propose a safe vector.';$<HTMLInputElement>('speed-range').value='1';$('toggle-run').textContent='Run traffic';void render();}
+ function frame(t:number){if(!lastFrame)lastFrame=t;const elapsed=Math.min(0.08,Math.max(0,(t-lastFrame)/1000));lastFrame=t;if(running){const minutes=elapsed*rate;now+=minutes*60;state={version:state.version+1,observed_at:now,aircraft:state.aircraft.map(a=>projected(a,minutes))};drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);setText('sim-clock',`T+${Math.floor(now-fixture.now)} SEC`);if(t%250<20)void render();}requestAnimationFrame(frame);}
+-$('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');});
++$('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';scenarioFiles.refresh();if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');});
+ $('reset-world').addEventListener('click',resetWorld);$('add-traffic').addEventListener('click',addTraffic);$('perturb-track').addEventListener('click',perturbTrack);$('run-planner').addEventListener('click',()=>void runPlanner());$('approve').addEventListener('click',approvePlan);$('readback').addEventListener('click',()=>void acceptReadback());
+-$('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>void audit.verify().then(ok=>setText('audit-verdict',ok?`HASH CHAIN VALID - ${audit.events.length} EVENTS`:'HASH CHAIN INVALID')));$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);});
++$('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>void audit.verify().then(ok=>setText('audit-verdict',ok?`HASH CHAIN VALID - ${audit.events.length} EVENTS`:'HASH CHAIN INVALID')));$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);scenarioFiles.refresh();});
+ $('edit-selected-track').addEventListener('click',startTrackEdit);$('preview-track-edit').addEventListener('click',previewSelectedTrack);$('apply-track-edit').addEventListener('click',applySelectedTrack);$('cancel-track-edit').addEventListener('click',cancelSelectedTrack);
+ for(const id of flightFields.filter(id=>id!=='flight-id'))$(id).addEventListener('input',invalidateTrackPreview);
+ function announce(message:string){setText('announcer',message);}
+diff --git a/web/airspace/src/scenario-file.ts b/web/airspace/src/scenario-file.ts
+new file mode 100644
+index 0000000..e499d27
+--- /dev/null
++++ b/web/airspace/src/scenario-file.ts
+@@ -0,0 +1,118 @@
++import { DEFAULT_POLICY, SafetyPolicy, WorldState } from './core';
++import { parseWorldState } from './world-tools';
++
++export const SCENARIO_FORMAT = 'towerops.airspace-scenario';
++export const MAX_SCENARIO_BYTES = 256 * 1024;
++
++export interface ScenarioSnapshot {
++  world: WorldState;
++  policy: SafetyPolicy;
++  now: number;
++  time_scale: number;
++  selected_aircraft_id: string;
++}
++export interface ScenarioFile extends ScenarioSnapshot {
++  format: typeof SCENARIO_FORMAT;
++  version: 1;
++}
++
++function record(value: unknown, label: string): Record<string, unknown> {
++  if (!value || typeof value !== 'object' || Array.isArray(value)) {
++    throw new Error(`${label} must be an object.`);
++  }
++  return value as Record<string, unknown>;
++}
++function exactKeys(value: Record<string, unknown>, keys: readonly string[], label: string): void {
++  const actual = Object.keys(value);
++  if (actual.length !== keys.length || actual.some(key => !keys.includes(key))) {
++    throw new Error(`${label} needs exactly these fields: ${keys.join(', ')}.`);
++  }
++}
++function finite(value: unknown, label: string): number {
++  if (typeof value !== 'number' || !Number.isFinite(value)) throw new Error(`${label} must be a finite number.`);
++  return value;
++}
++function controlValue(value: unknown, min: number, max: number, step: number, label: string): number {
++  const number = finite(value, label);
++  if (number < min || number > max || !Number.isInteger((number - min) / step)) {
++    throw new Error(`${label} must be between ${min} and ${max}, in steps of ${step}.`);
++  }
++  return number;
++}
++function checkedWorld(value: unknown): WorldState {
++  const world = record(value, 'world');
++  exactKeys(world, ['version', 'observed_at', 'aircraft'], 'world');
++  if (!Number.isSafeInteger(world.version) || (world.version as number) < 0) {
++    throw new Error('world.version must be a non-negative safe integer.');
++  }
++  if (Array.isArray(world.aircraft)) {
++    for (const [index, value] of world.aircraft.entries()) {
++      exactKeys(record(value, `Aircraft ${index + 1}`),
++        ['aircraft_id', 'x_nm', 'y_nm', 'altitude_ft', 'vx_nm_min', 'vy_nm_min', 'climb_ft_min'],
++        `Aircraft ${index + 1}`);
++    }
++  }
++  const parsed = parseWorldState(world);
++  for (const [index, aircraft] of parsed.aircraft.entries()) {
++    if (aircraft.aircraft_id !== (world.aircraft as Record<string, unknown>[])[index]!.aircraft_id) {
++      throw new Error('Scenario callsigns must use uppercase letters, digits, _ or -.');
++    }
++  }
++  return parsed;
++}
++function checkedPolicy(value: unknown): SafetyPolicy {
++  const input = record(value, 'policy');
++  exactKeys(input, Object.keys(DEFAULT_POLICY), 'policy');
++  const policy: SafetyPolicy = {
++    min_horizontal_nm: controlValue(input.min_horizontal_nm, 3, 10, 0.5, 'Horizontal separation (NM)'),
++    min_vertical_ft: controlValue(input.min_vertical_ft, 500, 2500, 100, 'Vertical separation (FT)'),
++    horizon_min: controlValue(input.horizon_min, 2, 10, 0.5, 'Look-ahead (MIN)'),
++    sample_step_min: finite(input.sample_step_min, 'sample_step_min'),
++    max_state_age_sec: finite(input.max_state_age_sec, 'max_state_age_sec'),
++    max_speed_nm_min: finite(input.max_speed_nm_min, 'max_speed_nm_min'),
++    max_climb_ft_min: finite(input.max_climb_ft_min, 'max_climb_ft_min'),
++  };
++  // These four parameters have no editor in this lab. Do not silently import
++  // an invisible policy change which the current controls cannot reproduce.
++  for (const key of ['sample_step_min', 'max_state_age_sec', 'max_speed_nm_min', 'max_climb_ft_min'] as const) {
++    if (policy[key] !== DEFAULT_POLICY[key]) throw new Error(`${key} is not configurable in scenario format v1; expected ${DEFAULT_POLICY[key]}.`);
++  }
++  return policy;
++}
++export function createScenario(snapshot: ScenarioSnapshot): ScenarioFile {
++  const world = checkedWorld(snapshot.world);
++  const policy = checkedPolicy(snapshot.policy);
++  const now = finite(snapshot.now, 'now');
++  const time_scale = controlValue(snapshot.time_scale, 0.5, 3, 0.5, 'Time scale');
++  const selected_aircraft_id = snapshot.selected_aircraft_id;
++  if (typeof selected_aircraft_id !== 'string' || !world.aircraft.some(a => a.aircraft_id === selected_aircraft_id)) {
++    throw new Error('selected_aircraft_id must identify an aircraft in this world.');
++  }
++  return { format: SCENARIO_FORMAT, version: 1, world, policy, now, time_scale, selected_aircraft_id };
++}
++export function parseScenario(text: string): ScenarioFile {
++  if (new TextEncoder().encode(text).byteLength > MAX_SCENARIO_BYTES) throw new Error('Scenario files must be at most 256 KiB.');
++  let parsed: unknown;
++  try { parsed = JSON.parse(text); } catch { throw new Error('The selected file is not valid JSON.'); }
++  const value = record(parsed, 'Scenario');
++  if (value.format !== SCENARIO_FORMAT || value.version !== 1) throw new Error('Choose a TowerOps Airspace scenario file with format version 1. Raw WorldState JSON uses the existing workbench below.');
++  exactKeys(value, ['format', 'version', 'world', 'policy', 'now', 'time_scale', 'selected_aircraft_id'], 'Scenario');
++  return createScenario(value as unknown as ScenarioSnapshot);
++}
++
++// JSON.stringify changes -0 into 0; TowerOps world hashes distinguish them.
++// Format the validated data only, keeping ordinary JSON number syntax even for
++// large or subnormal finite values. JSON.parse restores the signed zero.
++function dataJson(value: unknown, depth = 0): string {
++  if (typeof value === 'number') return Object.is(value, -0) ? '-0' : JSON.stringify(value);
++  if (value === null || typeof value !== 'object') return JSON.stringify(value);
++  const indent = '  '.repeat(depth), child = indent + '  ';
++  if (Array.isArray(value)) return value.length ? '[\n' + value.map(item => child + dataJson(item, depth + 1)).join(',\n') + '\n' + indent + ']' : '[]';
++  return '{\n' + Object.entries(value).map(([key, item]) => child + JSON.stringify(key) + ': ' + dataJson(item, depth + 1)).join(',\n') + '\n' + indent + '}';
++}
++export function serializeScenario(snapshot: ScenarioSnapshot): { text: string; filename: string; mime: string } {
++  const scenario = createScenario(snapshot);
++  const text = dataJson(scenario) + '\n';
++  if (new TextEncoder().encode(text).byteLength > MAX_SCENARIO_BYTES) throw new Error('The scenario is larger than the 256 KiB file limit.');
++  return { text, filename: `towerops-scenario-v${scenario.world.version}.json`, mime: 'application/json;charset=utf-8' };
++}
+diff --git a/web/airspace/src/scenario-ui.ts b/web/airspace/src/scenario-ui.ts
+new file mode 100644
+index 0000000..f0b99a3
+--- /dev/null
++++ b/web/airspace/src/scenario-ui.ts
+@@ -0,0 +1,117 @@
++import { MAX_SCENARIO_BYTES, ScenarioFile, ScenarioSnapshot, parseScenario, serializeScenario } from './scenario-file';
++
++interface ScenarioControls {
++  capture: () => ScenarioSnapshot;
++  context: () => readonly unknown[];
++  available: () => boolean;
++  load: (scenario: ScenarioFile) => void;
++}
++interface Review { scenario: ScenarioFile; context: readonly unknown[] }
++
++export function connectScenarioFiles(options: ScenarioControls): { refresh: () => void } {
++  const get = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
++  const fileInput = get<HTMLInputElement>('scenario-file');
++  const save = get<HTMLButtonElement>('save-scenario');
++  const choose = get<HTMLButtonElement>('choose-scenario');
++  const apply = get<HTMLButtonElement>('load-scenario');
++  const cancel = get<HTMLButtonElement>('cancel-scenario');
++  const panel = get('scenario-review');
++  const status = get('scenario-status');
++  let review: Review | null = null, reading: readonly unknown[] | null = null, epoch = 0;
++  const urls = new Set<string>();
++  const sameContext = (context: readonly unknown[]) => {
++    const current = options.context();
++    return current.length === context.length && current.every((value, index) => Object.is(value, context[index]));
++  };
++  function clear(message?: string): void {
++    epoch++; review = null; reading = null; panel.hidden = true;
++    cancel.hidden = true; apply.disabled = true; fileInput.value = '';
++    if (message !== undefined) status.textContent = message;
++  }
++  function refresh(): void {
++    const available = options.available();
++    save.disabled = !available; choose.disabled = !available;
++    get('scenario-availability').textContent = available
++      ? 'Files stay on your device. Loading starts a fresh decision trace.'
++      : 'Pause traffic or finish the active planner or flight edit before using scenario files.';
++    const context = review?.context ?? reading;
++    if (context && (!available || !sameContext(context))) {
++      clear('The simulation changed. Choose the file again to review its replacement.');
++    }
++    apply.disabled = !review || !available;
++  }
++  function showReview(scenario: ScenarioFile, filename: string): void {
++    get('scenario-summary').textContent =
++      `${filename}: ${scenario.world.aircraft.length} aircraft, world version ${scenario.world.version}. Clock ${scenario.now} s; ${scenario.time_scale}× time scale; selected ${scenario.selected_aircraft_id}.`;
++    const list = get('scenario-policy'); list.replaceChildren();
++    const fields: [string, number, string][] = [
++      ['Horizontal separation', scenario.policy.min_horizontal_nm, 'NM'],
++      ['Vertical separation', scenario.policy.min_vertical_ft, 'FT'],
++      ['Look-ahead', scenario.policy.horizon_min, 'MIN'],
++      ['Recorded sample step', scenario.policy.sample_step_min, 'MIN'],
++      ['Maximum state age', scenario.policy.max_state_age_sec, 'SEC'],
++      ['Speed limit', scenario.policy.max_speed_nm_min, 'NM/MIN'],
++      ['Climb limit', scenario.policy.max_climb_ft_min, 'FT/MIN'],
++    ];
++    for (const [label, value, unit] of fields) {
++      const dt = document.createElement('dt'), dd = document.createElement('dd');
++      dt.textContent = label; dd.textContent = `${value} ${unit}`; list.append(dt, dd);
++    }
++    panel.hidden = false; cancel.hidden = false;
++    status.textContent = 'Review the saved scenario. The current simulation is unchanged.';
++    refresh(); get('scenario-review-title').focus();
++  }
++  async function readSelectedFile(): Promise<void> {
++    const file = fileInput.files?.[0];
++    if (!file) return;
++    clear(); refresh();
++    if (!options.available()) { status.textContent = 'Pause traffic or finish the active operation before choosing a scenario.'; return; }
++    const ticket = epoch, context = [...options.context()];
++    reading = context; cancel.hidden = false; status.textContent = 'Reading the selected scenario…';
++    try {
++      if (file.size > MAX_SCENARIO_BYTES) throw new Error('Scenario files must be at most 256 KiB.');
++      const text = await file.text();
++      if (ticket !== epoch) return;
++      if (!options.available() || !sameContext(context)) { clear('The simulation changed while reading. Choose the file again.'); return; }
++      const scenario = parseScenario(text);
++      reading = null; review = { scenario, context }; showReview(scenario, file.name);
++    } catch (error) {
++      if (ticket !== epoch) return;
++      clear(`NOT LOADED: ${error instanceof Error ? error.message : String(error)}`);
++    }
++  }
++  choose.addEventListener('click', () => { refresh(); if (options.available()) fileInput.click(); });
++  fileInput.addEventListener('change', () => void readSelectedFile());
++  cancel.addEventListener('click', () => { clear('Import canceled. The current simulation is unchanged.'); choose.focus(); });
++  apply.addEventListener('click', () => {
++    refresh();
++    if (!review || !options.available()) return;
++    const scenario = review.scenario;
++    clear();
++    try {
++      options.load(scenario);
++      status.textContent = 'Scenario loaded with its saved policy. Traffic is paused and the decision trace starts empty.';
++      choose.focus();
++    } catch (error) {
++      status.textContent = `NOT LOADED: ${error instanceof Error ? error.message : String(error)}`;
++    }
++  });
++  save.addEventListener('click', () => {
++    refresh(); if (!options.available()) return;
++    try {
++      const file = serializeScenario(options.capture());
++      const url = URL.createObjectURL(new Blob([file.text], { type: file.mime }));
++      urls.add(url);
++      const anchor = document.createElement('a'); anchor.href = url; anchor.download = file.filename;
++      document.body.append(anchor);
++      try { anchor.click(); } finally { anchor.remove(); }
++      setTimeout(() => { URL.revokeObjectURL(url); urls.delete(url); }, 30000);
++      status.textContent = 'Scenario file prepared. Check your browser downloads.';
++    } catch (error) {
++      status.textContent = `NOT SAVED: ${error instanceof Error ? error.message : String(error)}`;
++    }
++  });
++  window.addEventListener('pagehide', () => { clear(); for (const url of urls) URL.revokeObjectURL(url); urls.clear(); });
++  refresh();
++  return { refresh };
++}
+diff --git a/web/airspace/style.css b/web/airspace/style.css
+index 5f009e6..d234aac 100644
+--- a/web/airspace/style.css
++++ b/web/airspace/style.css
+@@ -26,3 +26,16 @@
+ .policy-editor input[type=range],.speed-control input[type=range]{margin-left:0;margin-right:0;min-width:0}
+ .telemetry-wrap .telemetry-grid{margin:4px 16px 0}
+ @media(max-width:560px){.depth-stack{width:calc(100% - 24px);margin-left:auto;margin-right:auto}.quick-steps li{font-size:9px;padding:6px 9px}}
++
++/* Local scenario files use the existing progressive-depth workbench. */
++.scenario-workbench p{font-size:12px;line-height:1.6;color:var(--muted);overflow-wrap:anywhere}
++.scenario-file-controls{display:flex;flex-wrap:wrap;gap:8px}
++.scenario-file-controls .button{flex:1 1 160px;min-height:40px}
++.scenario-review{border:1px solid var(--line);background:var(--bg);padding:14px;margin-top:14px;overflow-wrap:anywhere}
++.scenario-review h3{font:16px var(--serif);margin:0 0 10px;color:var(--ink)}
++.scenario-review h3:focus{outline:2px solid var(--amber);outline-offset:4px}
++.scenario-policy{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;margin:14px 0;font:11px/1.5 var(--mono)}
++.scenario-policy dt{color:var(--muted)}.scenario-policy dd{margin:0;color:var(--ink);text-align:right}
++.scenario-review .button{min-height:40px}
++#scenario-review[hidden],#cancel-scenario[hidden],#scenario-file[hidden]{display:none}
++@media(max-width:560px){.scenario-review{padding:12px}.scenario-policy{gap:8px;font-size:10px}.scenario-review .button{width:100%}}
+diff --git a/web/airspace/tests/scenario-file.test.ts b/web/airspace/tests/scenario-file.test.ts
+new file mode 100644
+index 0000000..450dc4c
+--- /dev/null
++++ b/web/airspace/tests/scenario-file.test.ts
+@@ -0,0 +1,148 @@
++import { describe, expect, it } from 'vitest';
++import { DEFAULT_POLICY, conflictPairs, worldHash } from '../src/core';
++import { MAX_SCENARIO_BYTES, SCENARIO_FORMAT, ScenarioSnapshot, createScenario, parseScenario, serializeScenario } from '../src/scenario-file';
++
++function snapshot(): ScenarioSnapshot {
++  return {
++    world: { version: 7, observed_at: 1000, aircraft: [
++      { aircraft_id: 'TWR101', x_nm: 0, y_nm: 0, altitude_ft: 10000, vx_nm_min: 0, vy_nm_min: 0, climb_ft_min: 0 },
++      { aircraft_id: 'TWR202', x_nm: 7, y_nm: 0, altitude_ft: 10000, vx_nm_min: 0, vy_nm_min: 0, climb_ft_min: 0 },
++    ] },
++    policy: { ...DEFAULT_POLICY, min_horizontal_nm: 9, min_vertical_ft: 1500, horizon_min: 8 },
++    now: 1002.5, time_scale: 2.5, selected_aircraft_id: 'TWR202',
++  };
++}
++const read = (value: unknown) => parseScenario(JSON.stringify(value));
++
++describe('portable synthetic scenarios', () => {
++  it('restores the policy that determines the saved conflict, plus clock and selection', async () => {
++    const before = snapshot();
++    const file = serializeScenario(before), after = parseScenario(file.text);
++    expect(conflictPairs(before.world, before.policy)).toEqual([['TWR101', 'TWR202']]);
++    expect(conflictPairs(before.world, { ...DEFAULT_POLICY, min_horizontal_nm: 3 })).toEqual([]);
++    expect(conflictPairs(after.world, after.policy)).toEqual(conflictPairs(before.world, before.policy));
++    expect(await worldHash(after.world)).toBe(await worldHash(before.world));
++    expect(after).toEqual({ format: SCENARIO_FORMAT, version: 1, ...before });
++    expect(file.filename).toBe('towerops-scenario-v7.json');
++    expect(file.mime).toBe('application/json;charset=utf-8');
++  });
++  it('makes independent data copies and emits only scenario data', () => {
++    const before = snapshot(), saved = createScenario(before);
++    const original = serializeScenario(before).text;
++    before.world.aircraft[0]!.x_nm = 44; before.policy.min_horizontal_nm = 3;
++    expect(saved.world.aircraft[0]!.x_nm).toBe(0); expect(saved.policy.min_horizontal_nm).toBe(9);
++    expect(serializeScenario(saved).text).toBe(original);
++    expect(Object.keys(saved).sort()).toEqual(['format','now','policy','selected_aircraft_id','time_scale','version','world']);
++  });
++  it.each([-0, Number.MIN_VALUE, Number.MAX_VALUE, 1e21, 1e-20, Math.PI, -123.456])('round-trips finite numeric value %s without changing its identity', value => {
++    const before = snapshot(); before.world.aircraft[0]!.x_nm = value; before.now = value;
++    const result = parseScenario(serializeScenario(before).text);
++    expect(Object.is(result.world.aircraft[0]!.x_nm, value)).toBe(true);
++    expect(Object.is(result.now, value)).toBe(true);
++  });
++  it('keeps the signed-zero world hash stable through actual JSON text', async () => {
++    const before = snapshot(); before.world.aircraft[0]!.vx_nm_min = -0;
++    const after = parseScenario(serializeScenario(before).text);
++    expect(await worldHash(after.world)).toBe(await worldHash(before.world));
++    expect(Object.is(after.world.aircraft[0]!.vx_nm_min, -0)).toBe(true);
++  });
++  it.each([1, 60])('supports %s aircraft with preserved ordering and selection', count => {
++    const before = snapshot();
++    before.world.aircraft = Array.from({ length: count }, (_, i) => ({ ...before.world.aircraft[0]!, aircraft_id: 'TWR' + i }));
++    before.selected_aircraft_id = 'TWR' + (count - 1);
++    const after = parseScenario(serializeScenario(before).text);
++    expect(after.world.aircraft.map(a => a.aircraft_id)).toEqual(before.world.aircraft.map(a => a.aircraft_id));
++    expect(after.selected_aircraft_id).toBe(before.selected_aircraft_id);
++  });
++  it.each([0, 61])('refuses unsupported aircraft count %s', count => {
++    const before = snapshot();
++    before.world.aircraft = Array.from({ length: count }, (_, i) => ({ ...snapshot().world.aircraft[0]!, aircraft_id: 'TWR' + i }));
++    expect(() => createScenario(before)).toThrow('between 1 and 60');
++  });
++  it('refuses duplicate or noncanonical callsigns without silently renaming a saved identity', () => {
++    const before = snapshot(); before.world.aircraft[1]!.aircraft_id = 'TWR101';
++    expect(() => createScenario(before)).toThrow('Duplicate callsign');
++    before.world.aircraft[1]!.aircraft_id = 'twr202';
++    expect(() => createScenario(before)).toThrow('uppercase');
++  });
++  it('requires selection to belong to the saved world', () => {
++    const before = snapshot(); before.selected_aircraft_id = 'FOREIGN';
++    expect(() => createScenario(before)).toThrow('selected_aircraft_id');
++  });
++  it.each([-1, 0.5, Number.MAX_SAFE_INTEGER + 1, '7', true])('refuses invalid world version %s', value => {
++    const doc = createScenario(snapshot()); (doc.world as unknown as Record<string, unknown>).version = value;
++    expect(() => read(doc)).toThrow('safe integer');
++  });
++  it('preserves a valid large version without unsafe filename characters', () => {
++    const before = snapshot(); before.world.version = Number.MAX_SAFE_INTEGER;
++    const file = serializeScenario(before);
++    expect(file.filename).toBe('towerops-scenario-v9007199254740991.json');
++    expect(parseScenario(file.text).world.version).toBe(Number.MAX_SAFE_INTEGER);
++  });
++  it('rejects extra world and aircraft data rather than silently discarding it', () => {
++    const doc = createScenario(snapshot());
++    expect(() => read({ ...doc, world: { ...doc.world, approval: {} } })).toThrow('world needs exactly');
++    expect(() => read({ ...doc, world: { ...doc.world, aircraft: [{ ...doc.world.aircraft[0], url: 'https://invalid.example/' }] } })).toThrow('Aircraft 1 needs exactly');
++  });
++  it.each(['x_nm','y_nm','altitude_ft','vx_nm_min','vy_nm_min','climb_ft_min'])('refuses malformed %s without coercion', key => {
++    for (const value of ['1', null, true, NaN, Infinity]) {
++      const doc = createScenario(snapshot());
++      (doc.world.aircraft[0] as unknown as Record<string, unknown>)[key] = value;
++      expect(() => read(doc)).toThrow('finite number');
++    }
++  });
++  it('rejects nonfinite or coerced clock values', () => {
++    const doc = createScenario(snapshot());
++    for (const now of [true, null, '1002', Infinity, NaN]) expect(() => read({ ...doc, now })).toThrow('finite number');
++    expect(() => parseScenario(JSON.stringify(doc).replace('"now":1002.5','"now":1e999'))).toThrow('finite number');
++  });
++  it('keeps finite clock offsets for the existing freshness gate to evaluate', () => {
++    const before = snapshot(); before.now = before.world.observed_at + 99;
++    expect(parseScenario(serializeScenario(before).text).now).toBe(1099);
++  });
++  it.each([
++    ['min_horizontal_nm',2.5],['min_horizontal_nm',10.5],['min_horizontal_nm',3.1],
++    ['min_vertical_ft',400],['min_vertical_ft',2600],['min_vertical_ft',1550],
++    ['horizon_min',1.5],['horizon_min',10.5],['horizon_min',4.1],
++  ])('refuses a %s setting that the current controls cannot represent: %s', (key, value) => {
++    const doc = createScenario(snapshot()); (doc.policy as unknown as Record<string, unknown>)[key as string] = value;
++    expect(() => read(doc)).toThrow('in steps');
++  });
++  it.each(['sample_step_min','max_state_age_sec','max_speed_nm_min','max_climb_ft_min'])('does not import an invisible change to %s', key => {
++    const doc = createScenario(snapshot()); (doc.policy as unknown as Record<string, unknown>)[key] = 0;
++    expect(() => read(doc)).toThrow('not configurable');
++  });
++  it('requires all policy fields and refuses unexpected policy fields', () => {
++    const doc = createScenario(snapshot()), policy = { ...doc.policy } as Record<string, unknown>;
++    delete policy.horizon_min;
++    expect(() => read({ ...doc, policy })).toThrow('policy needs exactly');
++    expect(() => read({ ...doc, policy: { ...doc.policy, approve_all: true } })).toThrow('policy needs exactly');
++    expect(() => read({ ...doc, policy: { ...doc.policy, horizon_min: '8' } })).toThrow('finite number');
++  });
++  it.each([0, 0.75, 3.5, '2', true])('refuses unsupported time scale %s', time_scale => {
++    expect(() => read({ ...createScenario(snapshot()), time_scale })).toThrow();
++  });
++  it.each([0.5, 1, 1.5, 2, 2.5, 3])('restores the supported time scale %s', time_scale => {
++    expect(read({ ...createScenario(snapshot()), time_scale }).time_scale).toBe(time_scale);
++  });
++  it('rejects raw WorldState with a useful pointer to its existing reader', () => {
++    expect(() => read(snapshot().world)).toThrow('Raw WorldState JSON uses the existing workbench');
++  });
++  it.each([0, 2, '1', true])('refuses unsupported format version %s', version => {
++    expect(() => read({ ...createScenario(snapshot()), version })).toThrow('format version 1');
++  });
++  it.each([null, false, [], 4, 'text'])('rejects a non-object document %j', value => {
++    expect(() => read(value)).toThrow('must be an object');
++  });
++  it('refuses unknown top-level metadata, approvals and prototype keys', () => {
++    const doc = createScenario(snapshot());
++    expect(() => read({ ...doc, approval: { decision: 'approve' } })).toThrow('Scenario needs exactly');
++    expect(() => parseScenario(JSON.stringify(doc).replace('{','{"__proto__":{"polluted":true},'))).toThrow('Scenario needs exactly');
++    expect(({} as Record<string, unknown>).polluted).toBeUndefined();
++  });
++  it('reports malformed JSON and bounds UTF-8 file input before parsing', () => {
++    expect(() => parseScenario('{not json')).toThrow('not valid JSON');
++    expect(() => parseScenario(' '.repeat(MAX_SCENARIO_BYTES + 1))).toThrow('256 KiB');
++    expect(() => parseScenario('😀'.repeat(MAX_SCENARIO_BYTES / 4 + 1))).toThrow('256 KiB');
++  });
++});

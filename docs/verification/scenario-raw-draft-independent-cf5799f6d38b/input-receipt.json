@@ -1,0 +1,25 @@
+{
+  "schema": "towerops.raw-draft-independent-inputs.v1",
+  "captured_utc": "2026-10-08T13:13:08.909838+00:00",
+  "source": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+  "source_manifest_sha256": "238311ba022629ad4cef386c0fd6afee0ee7f94126ccdcaaae7077fef606c50a",
+  "nominated_composition_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "nominated_product_source_tree": "77fee12e647a82dea99506ccef13e967c28aad92",
+  "verified_source_files": 404,
+  "main_sha256": "f4976fa8729cd3e5507ec1f721931706c91ecdec773443687aa3e3b451f9f7e4",
+  "build_root": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/web/airspace/dist",
+  "build_files": 15,
+  "build_bytes": 14554080,
+  "pr46_edits_received_verbatim": 5,
+  "runtime": {
+    "node": "v26.3.0",
+    "chrome": "Google Chrome 154.0.8037.98",
+    "puppeteer_module": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/puppeteer",
+    "puppeteer_version": "25.12.0"
+  },
+  "source_and_build_served_read_only": true,
+  "source_or_dependency_copy": false,
+  "owner_git_index_access": false,
+  "owner_build_provenance": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/qualification/build.stdout.log",
+  "planned_browser_controls": 2
+}

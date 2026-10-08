@@ -1,0 +1,531 @@
+{
+  "run": {
+    "id": 37779096644,
+    "name": "ci",
+    "node_id": "WFR_kwLOUbLgRs8AAAAIy89ERA",
+    "head_branch": "feat/scenario-files-cf5799f6d38b",
+    "head_sha": "9c6bef26bfef04f1eca264dec533e47e0f270aa8",
+    "path": ".github/workflows/ci.yml",
+    "display_title": "feat(airspace): save and review complete local scenarios",
+    "run_number": 133,
+    "event": "push",
+    "status": "completed",
+    "conclusion": "failure",
+    "workflow_id": 374181601,
+    "check_suite_id": 102350258132,
+    "check_suite_node_id": "CS_kwDOUbLgRs8AAAAX1Iz_1A",
+    "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37779096644",
+    "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37779096644",
+    "pull_requests": [
+      {
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/pulls/47",
+        "id": 4787006626,
+        "number": 47,
+        "head": {
+          "ref": "feat/scenario-files-cf5799f6d38b",
+          "sha": "9c6bef26bfef04f1eca264dec533e47e0f270aa8",
+          "repo": {
+            "id": 1370677318,
+            "url": "https://api.github.com/repos/Jacob-Met/TowerOps",
+            "name": "TowerOps"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+          "repo": {
+            "id": 1370677318,
+            "url": "https://api.github.com/repos/Jacob-Met/TowerOps",
+            "name": "TowerOps"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-08T12:44:56Z",
+    "updated_at": "2026-10-08T12:45:15Z",
+    "actor": {
+      "login": "Jacob-Met",
+      "id": 150724801,
+      "node_id": "U_kgDOCPvgwQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jacob-Met",
+      "html_url": "https://github.com/Jacob-Met",
+      "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+      "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+      "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+      "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-10-08T12:44:56Z",
+    "triggering_actor": {
+      "login": "Jacob-Met",
+      "id": 150724801,
+      "node_id": "U_kgDOCPvgwQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jacob-Met",
+      "html_url": "https://github.com/Jacob-Met",
+      "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+      "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+      "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+      "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37779096644/jobs",
+    "logs_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37779096644/logs",
+    "check_suite_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-suites/102350258132",
+    "artifacts_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37779096644/artifacts",
+    "cancel_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37779096644/cancel",
+    "rerun_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37779096644/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/workflows/374181601",
+    "head_commit": {
+      "id": "9c6bef26bfef04f1eca264dec533e47e0f270aa8",
+      "tree_id": "d5d9827824e0d6f79fc54e5565698dc5d5a783ce",
+      "message": "feat(airspace): save and review complete local scenarios\n\nPreserve aircraft, complete policy, clock, time scale and selection in versioned JSON, with explicit review and atomic paused loading.\n\nCompose encounter and decision-trail panels; retain exact source history, baseline failures and native/browser receiving.",
+      "timestamp": "2026-10-08T12:44:54Z",
+      "author": {
+        "name": "Jacob Metoyer",
+        "email": "150724801+Jacob-Met@users.noreply.github.com"
+      },
+      "committer": {
+        "name": "Jacob Metoyer",
+        "email": "150724801+Jacob-Met@users.noreply.github.com"
+      }
+    },
+    "repository": {
+      "id": 1370677318,
+      "node_id": "R_kgDOUbLgRg",
+      "name": "TowerOps",
+      "full_name": "Jacob-Met/TowerOps",
+      "private": false,
+      "owner": {
+        "login": "Jacob-Met",
+        "id": 150724801,
+        "node_id": "U_kgDOCPvgwQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Jacob-Met",
+        "html_url": "https://github.com/Jacob-Met",
+        "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+        "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+        "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+        "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+        "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/Jacob-Met/TowerOps",
+      "description": "Synthetic ATC conflict-awareness and bounded-agent research demo built with Strands Agents",
+      "fork": false,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps",
+      "forks_url": "https://api.github.com/repos/Jacob-Met/TowerOps/forks",
+      "keys_url": "https://api.github.com/repos/Jacob-Met/TowerOps/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/Jacob-Met/TowerOps/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/Jacob-Met/TowerOps/teams",
+      "hooks_url": "https://api.github.com/repos/Jacob-Met/TowerOps/hooks",
+      "issue_events_url": "https://api.github.com/repos/Jacob-Met/TowerOps/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/Jacob-Met/TowerOps/events",
+      "assignees_url": "https://api.github.com/repos/Jacob-Met/TowerOps/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/Jacob-Met/TowerOps/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/Jacob-Met/TowerOps/tags",
+      "blobs_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/Jacob-Met/TowerOps/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/Jacob-Met/TowerOps/languages",
+      "stargazers_url": "https://api.github.com/repos/Jacob-Met/TowerOps/stargazers",
+      "contributors_url": "https://api.github.com/repos/Jacob-Met/TowerOps/contributors",
+      "subscribers_url": "https://api.github.com/repos/Jacob-Met/TowerOps/subscribers",
+      "subscription_url": "https://api.github.com/repos/Jacob-Met/TowerOps/subscription",
+      "commits_url": "https://api.github.com/repos/Jacob-Met/TowerOps/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/Jacob-Met/TowerOps/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/Jacob-Met/TowerOps/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/Jacob-Met/TowerOps/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/Jacob-Met/TowerOps/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/Jacob-Met/TowerOps/merges",
+      "archive_url": "https://api.github.com/repos/Jacob-Met/TowerOps/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/Jacob-Met/TowerOps/downloads",
+      "issues_url": "https://api.github.com/repos/Jacob-Met/TowerOps/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/Jacob-Met/TowerOps/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/Jacob-Met/TowerOps/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/Jacob-Met/TowerOps/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/Jacob-Met/TowerOps/labels{/name}",
+      "releases_url": "https://api.github.com/repos/Jacob-Met/TowerOps/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/Jacob-Met/TowerOps/deployments"
+    },
+    "head_repository": {
+      "id": 1370677318,
+      "node_id": "R_kgDOUbLgRg",
+      "name": "TowerOps",
+      "full_name": "Jacob-Met/TowerOps",
+      "private": false,
+      "owner": {
+        "login": "Jacob-Met",
+        "id": 150724801,
+        "node_id": "U_kgDOCPvgwQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Jacob-Met",
+        "html_url": "https://github.com/Jacob-Met",
+        "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+        "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+        "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+        "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+        "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/Jacob-Met/TowerOps",
+      "description": "Synthetic ATC conflict-awareness and bounded-agent research demo built with Strands Agents",
+      "fork": false,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps",
+      "forks_url": "https://api.github.com/repos/Jacob-Met/TowerOps/forks",
+      "keys_url": "https://api.github.com/repos/Jacob-Met/TowerOps/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/Jacob-Met/TowerOps/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/Jacob-Met/TowerOps/teams",
+      "hooks_url": "https://api.github.com/repos/Jacob-Met/TowerOps/hooks",
+      "issue_events_url": "https://api.github.com/repos/Jacob-Met/TowerOps/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/Jacob-Met/TowerOps/events",
+      "assignees_url": "https://api.github.com/repos/Jacob-Met/TowerOps/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/Jacob-Met/TowerOps/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/Jacob-Met/TowerOps/tags",
+      "blobs_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/Jacob-Met/TowerOps/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/Jacob-Met/TowerOps/languages",
+      "stargazers_url": "https://api.github.com/repos/Jacob-Met/TowerOps/stargazers",
+      "contributors_url": "https://api.github.com/repos/Jacob-Met/TowerOps/contributors",
+      "subscribers_url": "https://api.github.com/repos/Jacob-Met/TowerOps/subscribers",
+      "subscription_url": "https://api.github.com/repos/Jacob-Met/TowerOps/subscription",
+      "commits_url": "https://api.github.com/repos/Jacob-Met/TowerOps/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/Jacob-Met/TowerOps/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/Jacob-Met/TowerOps/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/Jacob-Met/TowerOps/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/Jacob-Met/TowerOps/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/Jacob-Met/TowerOps/merges",
+      "archive_url": "https://api.github.com/repos/Jacob-Met/TowerOps/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/Jacob-Met/TowerOps/downloads",
+      "issues_url": "https://api.github.com/repos/Jacob-Met/TowerOps/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/Jacob-Met/TowerOps/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/Jacob-Met/TowerOps/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/Jacob-Met/TowerOps/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/Jacob-Met/TowerOps/labels{/name}",
+      "releases_url": "https://api.github.com/repos/Jacob-Met/TowerOps/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/Jacob-Met/TowerOps/deployments"
+    }
+  },
+  "jobs": {
+    "total_count": 3,
+    "jobs": [
+      {
+        "id": 113317356527,
+        "run_id": 37779096644,
+        "workflow_name": "ci",
+        "head_branch": "feat/scenario-files-cf5799f6d38b",
+        "run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37779096644",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOUbLgRs8AAAAaYj2j7w",
+        "head_sha": "9c6bef26bfef04f1eca264dec533e47e0f270aa8",
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/jobs/113317356527",
+        "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37779096644/job/113317356527",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-08T12:44:57Z",
+        "started_at": "2026-10-08T12:44:59Z",
+        "completed_at": "2026-10-08T12:45:06Z",
+        "name": "test",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-08T12:45:00Z",
+            "completed_at": "2026-10-08T12:45:00Z"
+          },
+          {
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-08T12:45:00Z",
+            "completed_at": "2026-10-08T12:45:01Z"
+          },
+          {
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-08T12:45:01Z",
+            "completed_at": "2026-10-08T12:45:01Z"
+          },
+          {
+            "name": "Install test deps",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-08T12:45:01Z",
+            "completed_at": "2026-10-08T12:45:03Z"
+          },
+          {
+            "name": "Run tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-08T12:45:03Z",
+            "completed_at": "2026-10-08T12:45:05Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-10-08T12:45:05Z",
+            "completed_at": "2026-10-08T12:45:05Z"
+          },
+          {
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-08T12:45:05Z",
+            "completed_at": "2026-10-08T12:45:05Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-08T12:45:05Z",
+            "completed_at": "2026-10-08T12:45:05Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-runs/113317356527",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000005613,
+        "runner_name": "GitHub Actions 1000005613",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 113317356876,
+        "run_id": 37779096644,
+        "workflow_name": "ci",
+        "head_branch": "feat/scenario-files-cf5799f6d38b",
+        "run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37779096644",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOUbLgRs8AAAAaYj2lTA",
+        "head_sha": "9c6bef26bfef04f1eca264dec533e47e0f270aa8",
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/jobs/113317356876",
+        "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37779096644/job/113317356876",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-08T12:44:57Z",
+        "started_at": "2026-10-08T12:44:59Z",
+        "completed_at": "2026-10-08T12:45:14Z",
+        "name": "strands-adapter",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-08T12:45:00Z",
+            "completed_at": "2026-10-08T12:45:01Z"
+          },
+          {
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-08T12:45:01Z",
+            "completed_at": "2026-10-08T12:45:02Z"
+          },
+          {
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-08T12:45:02Z",
+            "completed_at": "2026-10-08T12:45:03Z"
+          },
+          {
+            "name": "Install declared dependency",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-08T12:45:03Z",
+            "completed_at": "2026-10-08T12:45:11Z"
+          },
+          {
+            "name": "Import adapter",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-08T12:45:11Z",
+            "completed_at": "2026-10-08T12:45:11Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-10-08T12:45:11Z",
+            "completed_at": "2026-10-08T12:45:11Z"
+          },
+          {
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-08T12:45:11Z",
+            "completed_at": "2026-10-08T12:45:12Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-08T12:45:12Z",
+            "completed_at": "2026-10-08T12:45:12Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-runs/113317356876",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000005615,
+        "runner_name": "GitHub Actions 1000005615",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 113317356889,
+        "run_id": 37779096644,
+        "workflow_name": "ci",
+        "head_branch": "feat/scenario-files-cf5799f6d38b",
+        "run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37779096644",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOUbLgRs8AAAAaYj2lWQ",
+        "head_sha": "9c6bef26bfef04f1eca264dec533e47e0f270aa8",
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/jobs/113317356889",
+        "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37779096644/job/113317356889",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-10-08T12:44:57Z",
+        "started_at": "2026-10-08T12:44:59Z",
+        "completed_at": "2026-10-08T12:45:07Z",
+        "name": "lint",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-08T12:45:00Z",
+            "completed_at": "2026-10-08T12:45:01Z"
+          },
+          {
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-08T12:45:01Z",
+            "completed_at": "2026-10-08T12:45:03Z"
+          },
+          {
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-08T12:45:03Z",
+            "completed_at": "2026-10-08T12:45:03Z"
+          },
+          {
+            "name": "Install ruff",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-08T12:45:03Z",
+            "completed_at": "2026-10-08T12:45:05Z"
+          },
+          {
+            "name": "Run ruff",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-10-08T12:45:05Z",
+            "completed_at": "2026-10-08T12:45:05Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-10-08T12:45:05Z",
+            "completed_at": "2026-10-08T12:45:05Z"
+          },
+          {
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-08T12:45:05Z",
+            "completed_at": "2026-10-08T12:45:05Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-08T12:45:05Z",
+            "completed_at": "2026-10-08T12:45:05Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-runs/113317356889",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000005614,
+        "runner_name": "GitHub Actions 1000005614",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      }
+    ]
+  }
+}

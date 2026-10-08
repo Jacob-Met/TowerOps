@@ -1,0 +1,241 @@
+from __future__ import annotations
+import base64
+import hashlib
+import json
+import os
+from pathlib import Path
+import shutil
+import stat
+import subprocess
+
+ASSEMBLY = Path("/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4")
+OVERLAY = ASSEMBLY / "overlay"
+ROOT = Path("/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj")
+OLD = Path("/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate")
+OLD_TREE = "464299ede19b44fdd1d0d8d8590c9a34e4896df5"
+OLD_HEAD = "e8f8fe37e31067c8dbd789577544525afca5e009"
+PREFIX = "docs/verification/scenario-pr48-composition-cf5799f6d38b"
+
+def identity_bytes(data):
+    return {
+        "bytes": len(data),
+        "sha256": hashlib.sha256(data).hexdigest(),
+        "git_blob": hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest(),
+    }
+
+def identity(path):
+    data = path.read_bytes()
+    return {**identity_bytes(data), "mode": "100755" if path.stat().st_mode & stat.S_IXUSR else "100644"}
+
+def write_json(relative, value):
+    target = OVERLAY / relative
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes((json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode())
+    return relative
+
+reuses = {}
+for record in subprocess.check_output(["git", "ls-tree", "-rz", OLD_TREE], cwd=OLD).split(b"\0"):
+    if not record:
+        continue
+    meta, path = record.split(b"\t", 1)
+    mode, kind, blob = meta.decode().split()
+    if kind == "blob":
+        reuses.setdefault(blob, []).append({"path": path.decode(), "mode": mode, "existing_commit": OLD_HEAD})
+
+copied = []
+source_custody = []
+
+def copy_exact(source, relative, expected=None):
+    source = Path(source)
+    row = identity(source)
+    if expected:
+        for key in ("bytes", "sha256", "git_blob", "mode"):
+            if key in expected and expected[key] != row[key]:
+                raise RuntimeError(f"Source mismatch {source}: {key}")
+    target = OVERLAY / relative
+    if target.exists():
+        if identity(target) != row:
+            raise RuntimeError(f"Conflicting destination {relative}")
+    else:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(source.read_bytes())
+        target.chmod(0o755 if row["mode"] == "100755" else 0o644)
+    if identity(target) != row:
+        raise RuntimeError(f"Copy mismatch {relative}")
+    result = {"source_path": str(source), "path": relative, **row}
+    copied.append(result)
+    reuses.setdefault(row["git_blob"], []).append({"path": relative, "mode": row["mode"], "new_companion": True})
+    return result
+
+peer_specs = [
+    ("maintained", "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/publication-manifest.json", "56bd3ee78a7eb7a8ac137c8947183be363d5b8406ccc81241936bac3059a3724", 32),
+    ("alternatives", "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/review-manifest.json", "f4a76b8b8af896a9d411d0bdfe852db0535d9d0e750541b411ef3cb614c0fe11", 33),
+    ("inherited-raw-draft", "/tmp/towerops-raw-draft-pr48-replay-cf5799f6d38b-f6aomq6w/review-manifest.json", "655b20dcf5093ab9090e10d154397820f1c09c1c4789ecf06db5531ed9cc17e3", 26),
+]
+peers = []
+for label, manifest_path, expected_hash, count in peer_specs:
+    manifest = Path(manifest_path)
+    manifest_pin = identity(manifest)
+    if manifest_pin["sha256"] != expected_hash:
+        raise RuntimeError(f"Manifest mismatch {manifest}")
+    parsed = json.loads(manifest.read_bytes())
+    if len(parsed["files"]) != count:
+        raise RuntimeError(f"Manifest count mismatch {manifest}")
+    for entry in parsed["files"]:
+        copy_exact(entry["source_path"], entry["path"], entry)
+    alias = f"{PREFIX}/provenance/{label}-original-manifest.json"
+    copy_exact(manifest, alias)
+    peers.append({"label": label, "original_manifest": manifest_path, "manifest_path": alias, "declared_files": count, **manifest_pin})
+
+def preserve(source, target, reuse=True):
+    source = Path(source)
+    row = identity(source)
+    compatible = [x for x in reuses.get(row["git_blob"], []) if x["mode"] == row["mode"]]
+    if reuse and compatible:
+        selected = compatible[0]
+        result = {"source_path": str(source), "path": selected["path"], "preservation": "existing-identical-blob", **row, **{k: v for k, v in selected.items() if k != "path"}}
+    else:
+        result = {**copy_exact(source, target), "preservation": "copied-exact"}
+    source_custody.append(result)
+    return result
+
+root_exact = [
+    "setup-info.json", "setup-receipt.json", "setup-r1-observed-failure.txt",
+    "setup-resume-receipt.json", "completed-root-profile-cleanup.json",
+    "initial-build-receipt.json", "reset-process-receipt.json",
+    "style-conflict-before-resolution.txt", "style-resolution.json",
+    "composition-pr46.patch", "initial-composition.patch", "alternative-reset.patch",
+    "main.ts.pr48-composition-diff.txt", "README.md.pr48-composition-diff.txt",
+    "index.html.pr48-composition-diff.txt",
+    "initial-source-build-pin.json", "reset-source-build-pin.json",
+    "qualification/gates-summary.json", "qualification/process-receipt.json",
+    "qualification/source-build-pin.json", "qualification/build-identity-comparison.json",
+    "qualification/runtime.json", "qualification/receiver-pins.json",
+    "qualification/frontend-tests.json", "qualification/native-tests.xml",
+]
+for relative in root_exact:
+    preserve(ROOT / relative, f"{PREFIX}/root/{relative}")
+
+archives = []
+drivers = [Path("/tmp/towerops-root-advisory-setup-cf5799f6d38b.py")] + [
+    ROOT / name for name in ["resume-setup.py", "freeze-build-initial.py", "create-reset-successor.py", "qualify-publication.py"]
+]
+for source in drivers:
+    relative = f"{PREFIX}/root/drivers/{source.name}.txt"
+    entry = preserve(source, relative, reuse=False)
+    archives.append({
+        "original_native_path": str(source), "original_name": source.name,
+        "published_path": relative,
+        "purpose": "Exact executed historical setup/qualification transcript; transport name only, not a requalified Python module.",
+        **{key: entry[key] for key in ("bytes", "sha256", "git_blob", "mode")},
+    })
+
+receivers = []
+for source in sorted((ROOT / "receivers").iterdir()):
+    if not source.is_file():
+        continue
+    pin = identity(source)
+    candidates = [x for x in reuses.get(pin["git_blob"], []) if x.get("existing_commit") == OLD_HEAD and x["mode"] == pin["mode"]]
+    if not candidates:
+        raise RuntimeError(f"No historical receiver match for {source}")
+    chosen = candidates[0]
+    receivers.append({
+        "native_executed_path": str(source), **pin, "published_path": chosen["path"],
+        "published_commit": OLD_HEAD,
+        "url": f"https://github.com/Jacob-Met/TowerOps/blob/{OLD_HEAD}/{chosen['path']}",
+    })
+
+logs = []
+for parent in [ROOT, ROOT / "qualification"]:
+    for source in sorted(parent.glob("*.log")):
+        data = source.read_bytes()
+        # Decode bytes directly; never use universal-newline text reads.
+        text = data.decode("utf-8")
+        if text.encode("utf-8") != data:
+            raise RuntimeError(f"Non-reversible text {source}")
+        logs.append({"source_path": str(source), "native_relative_path": str(source.relative_to(ROOT)), **identity(source), "encoding": "utf-8", "content": text})
+log_path = write_json(f"{PREFIX}/root/exact-command-transcripts.json", {
+    "schema": "towerops-exact-byte-transcript-archive/v1",
+    "note": "Decode content as UTF-8 without newline conversion; verify bytes/SHA256/Git blob against each entry. Empty logs are retained.",
+    "files": logs,
+})
+for entry in json.loads((OVERLAY / log_path).read_bytes())["files"]:
+    if identity_bytes(entry["content"].encode()) != {k: entry[k] for k in ("bytes", "sha256", "git_blob")}:
+        raise RuntimeError("Transcript roundtrip failed")
+
+browser_names = [
+    "author-browser", "independent-browser", "pending-browser", "scenario-encounter-browser",
+    "encounter-owner-browser", "decision-trace-owner-browser", "scenario-decision-browser",
+    "pr46-draft-browser", "scenario-raw-draft-browser",
+]
+browser_files = []
+blob_payloads = {}
+for name in browser_names:
+    directory = ROOT / name
+    for source in sorted(directory.rglob("*")):
+        if not source.is_file() or "profile" in source.relative_to(directory).parts:
+            continue
+        rel = str(source.relative_to(ROOT))
+        pin = identity(source)
+        if source.suffix == ".png" or source.name in ("receipt.json", "browser-receipt.json", "browser-report.json"):
+            entry = preserve(source, f"{PREFIX}/root/{rel}")
+            browser_files.append({"native_relative_path": rel, **entry})
+            continue
+        data = source.read_bytes()
+        blob = pin["git_blob"]
+        if blob not in blob_payloads:
+            # Oversize negative fixtures are exact repeated bytes. The compact
+            # encoding reproduces their executed bytes without a large bundle.
+            if len(data) > 65536 and len(set(data)) == 1:
+                payload = {"encoding": "repeat-byte", "byte": data[0], "count": len(data)}
+            else:
+                try:
+                    payload = {"encoding": "utf-8", "content": data.decode("utf-8")}
+                except UnicodeDecodeError:
+                    payload = {"encoding": "base64", "content": base64.b64encode(data).decode("ascii")}
+            blob_payloads[blob] = {**identity_bytes(data), **payload}
+        browser_files.append({"source_path": str(source), "native_relative_path": rel, **pin, "preservation": "exact-blob-archive", "archive": f"{PREFIX}/root/exact-browser-artifacts.json", "archive_git_blob": blob})
+archive_path = write_json(f"{PREFIX}/root/exact-browser-artifacts.json", {
+    "schema": "towerops-exact-byte-browser-archive/v1",
+    "note": "All actual downloads and generated fixtures are retained by exact Git blob. UTF-8 content is encoded without newline conversion; repeat-byte explicitly represents the two large uniform negative fixtures.",
+    "files": [x for x in browser_files if x["preservation"] == "exact-blob-archive"],
+    "blobs": list(blob_payloads.values()),
+})
+for payload in json.loads((OVERLAY / archive_path).read_bytes())["blobs"]:
+    if payload["encoding"] == "repeat-byte":
+        data = bytes([payload["byte"]]) * payload["count"]
+    elif payload["encoding"] == "base64":
+        data = base64.b64decode(payload["content"])
+    else:
+        data = payload["content"].encode("utf-8")
+    if identity_bytes(data) != {k: payload[k] for k in ("bytes", "sha256", "git_blob")}:
+        raise RuntimeError("Browser archive roundtrip failed")
+
+write_json(f"{PREFIX}/provenance/root-receiving-map.json", {
+    "schema": "towerops-root-receiving-preservation/v1",
+    "native_root": str(ROOT),
+    "historical_commit": OLD_HEAD,
+    "historical_tree": OLD_TREE,
+    "peer_manifests": peers,
+    "root_exact_files": source_custody,
+    "unchanged_receivers": receivers,
+    "archival_python_name_mappings": archives,
+    "command_transcript_archive": log_path,
+    "command_transcript_files": len(logs),
+    "browser_files": browser_files,
+    "excluded": [
+        {"paths": ["qualification/source-manifest.json", "initial-source-manifest.json", "reset-source-manifest.json"], "reason": "Their full source lists are preserved in corresponding source-build-pin.json files; standalone duplicate serialization omitted."},
+        {"paths": ["publication-product-transfer.json"], "reason": "Transport wrapper, not executed product or receiving source; seven exact product leaves are carried in final composition."},
+        {"paths": ["candidate-initial/", "candidate-reset/", "publication-qualified/", "*/profile/", "*/node_modules/", "*/dist/"], "reason": "Source/build bytes remain pinned by manifests. Runtime bundles, dependencies, temporary profiles and complete captured worktrees are not publication artifacts."},
+    ],
+})
+summary = {
+    "assembly": str(ASSEMBLY), "peer_files_exact": sum(x["declared_files"] for x in peers),
+    "root_raw_log_files": len(logs), "root_browser_files_preserved": len(browser_files),
+    "unique_browser_artifact_blobs": len(blob_payloads),
+    "unchanged_receivers_reused": len(receivers),
+    "overlay_files_so_far": len([x for x in OVERLAY.rglob("*") if x.is_file()]),
+    "overlay_bytes_so_far": sum(x.stat().st_size for x in OVERLAY.rglob("*") if x.is_file()),
+}
+(ASSEMBLY / "phase1-summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+print(json.dumps(summary, indent=2))

@@ -1,0 +1,13 @@
+{
+  "all_source_blobs_match": true,
+  "build_returncode": 0,
+  "dependency_root": "/private/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/source/web/airspace/node_modules",
+  "node": "v26.3.0",
+  "npm": "11.16.0",
+  "parent": "d99d238f7da62d74852e07fc90da406f87c2d371",
+  "source_files": 99,
+  "source_root": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/candidate",
+  "source_tree": "9d4d1320fcd59b7a635adb6439ca512650e2df71",
+  "started_at_utc": "2026-10-08T10:02:07.080435+00:00",
+  "tracked_source_unchanged_after_build": true
+}

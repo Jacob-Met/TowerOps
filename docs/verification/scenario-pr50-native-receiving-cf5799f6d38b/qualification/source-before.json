@@ -1,0 +1,9 @@
+{
+  "captured_utc": "2026-10-08T14:55:43.550265+00:00",
+  "source_root": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+  "source_tree": "8c11186b1a3f6391879fb0aef14738487f09dc2a",
+  "expected_tree": "8c11186b1a3f6391879fb0aef14738487f09dc2a",
+  "source_files": 589,
+  "mismatched_paths": [],
+  "all_source_bytes_modes_and_blobs_match": true
+}

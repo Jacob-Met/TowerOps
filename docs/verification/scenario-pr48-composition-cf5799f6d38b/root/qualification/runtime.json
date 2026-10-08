@@ -1,0 +1,15 @@
+{
+  "node": "v26.3.0",
+  "python": "Python 3.12.8",
+  "pytest": "8.4.2",
+  "ruff": "ruff 0.16.10",
+  "chrome": "Google Chrome 154.0.8037.98",
+  "packages": {
+    "typescript": "5.7.3",
+    "vite": "8.3.3",
+    "vitest": "4.1.11",
+    "pyodide": "0.27.7"
+  },
+  "private_dependency_copy": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace/node_modules",
+  "hosted_ci_runtime_parity_claimed": false
+}

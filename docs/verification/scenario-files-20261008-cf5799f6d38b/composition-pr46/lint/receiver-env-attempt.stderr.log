@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/prepare-publication-policy.py", line 70, in <module>
+    before = run("application-settings-before", [ruff, "check", "--show-settings", "towerops.py"], source).decode()
+             ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/prepare-publication-policy.py", line 25, in run
+    assert result.returncode == expected, name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: application-settings-before

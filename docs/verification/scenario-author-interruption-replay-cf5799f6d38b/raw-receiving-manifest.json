@@ -1,0 +1,254 @@
+{
+  "schema": "towerops.receiving-byte-archive-manifest.v1",
+  "archive": {
+    "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/publication/raw-receiving.json.gz",
+    "bytes": 98593,
+    "sha256": "c83fc8d1673e03e2e24ee7ec406170d708d3702d50b55f7fc8122e871419ca20",
+    "git_blob": "1f9dde859cb1dd99b68b55e880b8e1b1dc69888f",
+    "mode": "100644"
+  },
+  "members": [
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/initial-observation.json",
+      "bytes": 18506,
+      "sha256": "c790c913218fb101e0e4640c20e29b0cdab5e4c0f5374e6d71ecf17325015528",
+      "git_blob": "15209a4d59aa47c5a6d5b7c62f74294d715922b3",
+      "mode": "100644",
+      "path": "initial-observation.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/original-author.mjs",
+      "bytes": 20441,
+      "sha256": "3486cd53f70b44ec9d964d45d7e7688f2d3163cfd693af5beb951f583d65aab6",
+      "git_blob": "2f84eac00c90d80f4f0470e43b654eb3a13dedc9",
+      "mode": "100644",
+      "path": "original-author.mjs",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/original-author.stdout.log",
+      "bytes": 259,
+      "sha256": "202b4cdb7142708943369b2f7ca5be7aea12c3a51dfa3033ef5e23dbebcbb01e",
+      "git_blob": "f80bafc8ec1f67d38670cfe19c74f198ed1489b6",
+      "mode": "100644",
+      "path": "original-author.stdout.log",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/original-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "path": "original-author.stderr.log",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/original-wrapper.py.txt",
+      "bytes": 2478,
+      "sha256": "cfe5d42b608dbd35b31d7305b69cd802c4dc55f11505cb6b8bce3da721968b12",
+      "git_blob": "186ed6a3818c143263c5671e86840a9c52343ab5",
+      "mode": "100644",
+      "path": "original-wrapper.py.txt",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/preservation-receipt.json",
+      "bytes": 1316,
+      "sha256": "6ea7156aa069f58cd8b41586cd0e6cf0ce7b083b5efcc57ec9d729b625e26480",
+      "git_blob": "82d2a19bbaf2d2fe81e9d357e3898fec61697a68",
+      "mode": "100644",
+      "path": "preservation-receipt.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/original-download-c8eb971a-f938-4862-b947-d4390892079a.json",
+      "bytes": 812,
+      "sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8",
+      "mode": "100644",
+      "path": "original-download-c8eb971a-f938-4862-b947-d4390892079a.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/initial-observation.py.txt",
+      "bytes": 4682,
+      "sha256": "0579bb31d4a2b3b6b4a20185f5e29a9610f97e6aed73be378ebc0d5e501b835f",
+      "git_blob": "4f32175b9a7dec23bba9a6e721257cb7f6c8df63",
+      "mode": "100644",
+      "path": "drivers/initial-observation.py.txt",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/run-unchanged-author.py",
+      "bytes": 4072,
+      "sha256": "3de63c0cd416c11cb3bda67aca6b7a065b95ec469f17a9a3152e7434d856310b",
+      "git_blob": "0282efefc3be9f96844688a61dc713cd97e21c1d",
+      "mode": "100644",
+      "path": "drivers/run-unchanged-author.py.txt",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/after-source-build.json",
+      "bytes": 367,
+      "sha256": "cd131732ce753364487e3fbccd5ddf1cab4f83bb6aa5c9762f9f0b458374c4c8",
+      "git_blob": "6df74c8dd17560527716c2263a0e4197bc31e07a",
+      "mode": "100644",
+      "path": "unchanged-author-replay/after-source-build.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/author.mjs",
+      "bytes": 20441,
+      "sha256": "3486cd53f70b44ec9d964d45d7e7688f2d3163cfd693af5beb951f583d65aab6",
+      "git_blob": "2f84eac00c90d80f4f0470e43b654eb3a13dedc9",
+      "mode": "100644",
+      "path": "unchanged-author-replay/author.mjs",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/before-source-build.json",
+      "bytes": 368,
+      "sha256": "9e5d7e717135c8225ec13b7711caea73a9bb06e542aaa761f2de63dbc526405b",
+      "git_blob": "caa0aed4830e4834ee8a6aabe1c7695f3105fc74",
+      "mode": "100644",
+      "path": "unchanged-author-replay/before-source-build.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/downloads/66eef720-0287-482b-989e-4f54b26d02b2",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/downloads/66eef720-0287-482b-989e-4f54b26d02b2",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/downloads/e121f1d1-61e1-4de3-8420-9f82141f85d5",
+      "bytes": 812,
+      "sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/downloads/e121f1d1-61e1-4de3-8420-9f82141f85d5",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/fixtures/<img onerror=alert(1)>.json",
+      "bytes": 812,
+      "sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/fixtures/<img onerror=alert(1)>.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/fixtures/broken.json",
+      "bytes": 5,
+      "sha256": "935aaf3a54c0648c74df48a8025f20086019843f5b9fbffe5540b9cba0edcc97",
+      "git_blob": "b3bf120ee577dd19c9a704bd31cab4006d6b5f84",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/fixtures/broken.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/fixtures/foreign-selection.json",
+      "bytes": 544,
+      "sha256": "73c6d5eef522aeb1240c2be5709887f869a1936ee8281fac5f5d7cd6612f4436",
+      "git_blob": "b829937f49409bfe87f062e1fe10e7d293523cec",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/fixtures/foreign-selection.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/fixtures/invisible-policy.json",
+      "bytes": 544,
+      "sha256": "9305b699ba2f6fdfb8b43f199096af3ca1c15ae0f0907a737eb017490f946f70",
+      "git_blob": "f90027f991ea54b2062f562f61de8faf4750324a",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/fixtures/invisible-policy.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/fixtures/oversize.json",
+      "bytes": 262145,
+      "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+      "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/fixtures/oversize.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/fixtures/unknown-field.json",
+      "bytes": 577,
+      "sha256": "acf08bf9ae27faaa51b347ee643beca7124cceaee1a1b0652691464ff4ec4402",
+      "git_blob": "08795830078f3c6f30da09470a4b2f1a4c6e4a37",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/fixtures/unknown-field.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/fixtures/wrong-version.json",
+      "bytes": 543,
+      "sha256": "39b1305010e3a6c7ccdf381e080a7e8ce2ff42ef643a53c2e6fa7a7973f1bb4e",
+      "git_blob": "4d3567191b41ea6bc4bcceecaddc2f0590198a1a",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/fixtures/wrong-version.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/browser/receipt.json",
+      "bytes": 306620,
+      "sha256": "bd0d4d258c8708dfd093291b7d4f7b3190e9affd50791c3859a82d8d1c399cf3",
+      "git_blob": "c6fcb83c362362ff9ab2a6ef27ac0964d79fae03",
+      "mode": "100644",
+      "path": "unchanged-author-replay/browser/receipt.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/process-receipt.json",
+      "bytes": 2000,
+      "sha256": "65084b6e06dc256b8256d4aa6e8e71285d40d76ec246f0cbc72f7cb59c927d8e",
+      "git_blob": "93c10c983de77b121f120fffd48d2d76aa6a8705",
+      "mode": "100644",
+      "path": "unchanged-author-replay/process-receipt.json",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "path": "unchanged-author-replay/stderr.log",
+      "encoding": "utf8"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/unchanged-author-replay/stdout.log",
+      "bytes": 2316,
+      "sha256": "f845aad0ae00fbacf528d7c5c1337563daf8373d1c85ab7c6026f2b6d4c3ef88",
+      "git_blob": "974af7454df4371684f82ffaf1b2585da99231f1",
+      "mode": "100644",
+      "path": "unchanged-author-replay/stdout.log",
+      "encoding": "utf8"
+    }
+  ],
+  "python_transport_names": [
+    {
+      "source_path": "/tmp/towerops-root-current-browser-cf5799f6d38b.py",
+      "archive_path": "original-wrapper.py.txt",
+      "sha256": "cfe5d42b608dbd35b31d7305b69cd802c4dc55f11505cb6b8bce3da721968b12"
+    },
+    {
+      "source_path": "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/run-unchanged-author.py",
+      "archive_path": "drivers/run-unchanged-author.py.txt",
+      "sha256": "3de63c0cd416c11cb3bda67aca6b7a065b95ec469f17a9a3152e7434d856310b"
+    },
+    {
+      "source_path": "python3 -c (exact preserved transcript)",
+      "archive_path": "drivers/initial-observation.py.txt",
+      "sha256": "0579bb31d4a2b3b6b4a20185f5e29a9610f97e6aed73be378ebc0d5e501b835f"
+    }
+  ]
+}

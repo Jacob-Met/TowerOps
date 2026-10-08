@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+    "check",
+    "--no-cache",
+    "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/receive_existing.py"
+  ],
+  "exit_code": 1,
+  "driver_sha256": "b17896ab3ece6807b215e5e300354caab8fcdcbca97de400a201ed31cf7f00c1"
+}

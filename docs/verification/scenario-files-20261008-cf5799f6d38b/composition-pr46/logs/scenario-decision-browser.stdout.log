@@ -1,0 +1,3 @@
+{"name":"scenario Apply clears the native current trace while an opened prior history remains read-only","passed":true,"milliseconds":2850,"old_trace_sha256":"456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a","old_event_count":4,"current_trace_after_scenario_load":"[]","opened_report_is_named_history":true,"scenario_and_gates_unchanged_by_history_review":true}
+{"name":"native trace review invalidates a pending scenario import and preserves its live approved decision","passed":true,"milliseconds":2742,"pending_import_invalidated":true,"approval_preserved":true,"native_readback_accepted":true,"new_world_version":2}
+{"passed":2,"total":2,"errors":[],"external":[],"out":"/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/scenario-decision-browser"}

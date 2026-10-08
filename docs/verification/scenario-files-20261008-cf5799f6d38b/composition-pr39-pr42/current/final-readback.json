@@ -1,0 +1,38 @@
+{
+  "schema": "towerops.scenario-composition-readback.v1",
+  "checked_at": "2026-10-08T12:13:26.949760+00:00",
+  "current_source_tree": "8ac56fee8a2f65503f8cd118c11d4379a521cfcf",
+  "source_files_checked": {
+    "current": 152,
+    "encounter": 143,
+    "wire": 139
+  },
+  "original_116_file_packet_checked": 116,
+  "original_packet_manifest_sha256": "19aced495094d620beacbdc01bf11146ace34afd5901d2a84aa423bf83fc41aa",
+  "current_unowned_paths_preserved": 145,
+  "historical_reconstructions": [
+    {
+      "name": "wire",
+      "base_commit": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+      "patch": "scenario-on-wire.patch",
+      "patch_sha256": "41d514c2cd6d2d25c50bb8310085e4b628343e3e41b01264ea88780923ba0422",
+      "reconstructed_tree": "9ed528ac4281d4ec098b4717d909a08869057d40"
+    },
+    {
+      "name": "encounter",
+      "base_commit": "9d70db6352875c380d64639be2212f1e71de2d12",
+      "patch": "scenario-on-encounter.patch",
+      "patch_sha256": "14ca8522bfbdc7b22c5b6f49b66c7cfb331cf31d66a6e1c6d7ad06dd3c41dc77",
+      "reconstructed_tree": "0bcf1ca084c9cca0a422b76d8443a8b543d6e923"
+    },
+    {
+      "name": "current",
+      "base_commit": "9a2468f9bbaa25c0ab92cb12f712170420f9e622",
+      "patch": "scenario-on-decision-trace.patch",
+      "patch_sha256": "d0cbe3f935a66e68fef5ccec6ff97950d22dc6f6da6029f83ed926fbb73ea6ba",
+      "reconstructed_tree": "8ac56fee8a2f65503f8cd118c11d4379a521cfcf"
+    }
+  ],
+  "github_mutations": false,
+  "source_changed_after_receiving": false
+}

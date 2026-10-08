@@ -1,0 +1,70 @@
+--- a/web/airspace/tests/world-json-draft.browser.mjs
++++ b/receivers/pr46-puppeteer-receiver-v3.mjs
+@@ -1,5 +1,7 @@
+ #!/usr/bin/env node
+ import assert from 'node:assert/strict';
++import {createRequire} from 'node:module';
++const require=createRequire(import.meta.url),puppeteer=require('puppeteer');
+ import fs from 'node:fs';
+ import {readFile,writeFile,mkdir,mkdtemp,rm} from 'node:fs/promises';
+ import {createHash} from 'node:crypto';
+@@ -37,11 +39,10 @@
+ const base='http://127.0.0.1:'+server.httpServer.address().port;
+ const profile=await mkdtemp(join(output,'profile-'));
+ const report={kind:'raw-world-json-draft-browser-receiving',receiverSha256:sha(await readFile(fileURLToPath(import.meta.url))),node:process.version,startedAt:new Date().toISOString(),root,baseCommit:execFileSync('git',['-C',root,'rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceBefore,toolchain,dependencyLockSha256:sha(lock),dependencies,serving:'Exact source through existing pinned Vite API; configFile:false, own cache only',checks:[],observations:[],pageErrors:[]};
+-let browser,browserClosed,socket,sessionId,browserLog='',sequence=0;
+-const pending=new Map();
++let browser,browserSession,pageSession,browserLog='';
+ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+ async function waitFor(check,label){let last;for(let n=0;n<200;n++){try{if(await check())return;}catch(e){last=e;}await sleep(100);}throw Error('Timed out: '+label+(last?' '+last.message:''));}
+-function command(method,params={},scoped=true){const id=++sequence;return new Promise((resolve,reject)=>{const timer=setTimeout(()=>{pending.delete(id);reject(Error('CDP timeout '+method));},10000);pending.set(id,{resolve,reject,timer});socket.send(JSON.stringify({id,method,params,...scoped&&sessionId?{sessionId}:{}}));});}
++function command(method,params={},scoped=true){return (scoped?pageSession:browserSession).send(method,params);}
+ async function evaluate(expression){const r=await command('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description??r.exceptionDetails.text);return r.result.value;}
+ async function click(selector){
+  const point=await evaluate('(()=>{const n=document.querySelector('+JSON.stringify(selector)+');if(!n)throw Error("Missing element");n.scrollIntoView({block:"center"});const r=n.getBoundingClientRect();if(!r.width||!r.height)throw Error("Hidden element");return {x:r.x+r.width/2,y:r.y+r.height/2}})()');
+@@ -50,7 +51,7 @@
+  await command('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,...point});
+ }
+ async function press(key,code,modifiers=0){for(const type of ['keyDown','keyUp'])await command('Input.dispatchKeyEvent',{type,key,code:key,windowsVirtualKeyCode:code,nativeVirtualKeyCode:code,modifiers});}
+-async function edit(text){await click('#world-json');await press('a',65,2);await command('Input.insertText',{text});assert.equal(await evaluate('document.querySelector("#world-json").value'),text,'actual typing reaches editor');}
++async function edit(text){await click('#world-json');await command('Input.dispatchKeyEvent',{type:'rawKeyDown',key:'a',code:'KeyA',windowsVirtualKeyCode:65,modifiers:process.platform==='darwin'?4:2,commands:['selectAll']});await command('Input.dispatchKeyEvent',{type:'keyUp',key:'a',code:'KeyA',windowsVirtualKeyCode:65,modifiers:process.platform==='darwin'?4:2});await command('Input.insertText',{text});assert.equal(await evaluate('document.querySelector("#world-json").value'),text,'actual typing reaches editor');}
+ const editor=()=>evaluate('document.querySelector("#world-json").value');
+ const feedback=()=>evaluate('document.querySelector("#world-json-feedback").textContent');
+ const register=()=>evaluate('[...document.querySelectorAll("#flight-list button")].map(n=>n.textContent)');
+@@ -62,17 +63,13 @@
+ }
+ async function check(name,fn){try{await fn();report.checks.push({name,status:'passed'});console.log('PASS '+name);}catch(e){report.checks.push({name,status:'failed',error:e.message});console.log('FAIL '+name+': '+e.message);}}
+ try{
+- browser=spawn(executable,['--headless=new','--no-sandbox','--disable-gpu','--disable-background-networking','--disable-component-update','--disable-sync','--no-first-run','--no-default-browser-check','--remote-debugging-address=127.0.0.1','--remote-debugging-port=0','--user-data-dir='+profile,'about:blank'],{stdio:['ignore','ignore','pipe']});
+- browserClosed=new Promise(resolve=>{browser.once('close',resolve);browser.once('error',resolve);});
+- browser.stderr.on('data',b=>{browserLog=(browserLog+b.toString()).slice(-5000);});
+- let launchError;browser.on('error',e=>{launchError=e;});let port,endpoint;
+- await waitFor(async()=>{if(launchError)throw launchError;if(browser.exitCode!==null)throw Error('Browser exited '+browser.exitCode+' '+browserLog);[port,endpoint]=(await readFile(join(profile,'DevToolsActivePort'),'utf8')).trim().split('\n');return port&&endpoint;},'browser startup');
+- socket=new WebSocket('ws://127.0.0.1:'+port+endpoint);
+- socket.addEventListener('message',event=>{const m=JSON.parse(event.data);if(m.id){const p=pending.get(m.id);if(!p)return;pending.delete(m.id);clearTimeout(p.timer);m.error?p.reject(Error(m.error.message)):p.resolve(m.result);}else if(m.method==='Runtime.exceptionThrown')report.pageErrors.push(m.params.exceptionDetails.exception?.description??m.params.exceptionDetails.text);});
+- await new Promise((r,j)=>{socket.addEventListener('open',r,{once:true});socket.addEventListener('error',j,{once:true});});
++ browser=await puppeteer.launch({executablePath:executable,headless:true,userDataDir:profile,args:['--no-sandbox','--disable-gpu','--disable-background-networking','--disable-component-update','--disable-sync','--no-first-run','--no-default-browser-check']});
++ browserSession=await browser.target().createCDPSession();
+  report.browser=await command('Browser.getVersion',{},false);
+- const {targetId}=await command('Target.createTarget',{url:'about:blank'},false);
+- ({sessionId}=await command('Target.attachToTarget',{targetId,flatten:true},false));
++ report.transport={kind:'Puppeteer25.12 CDP sessions',originalReceiverSha256:"441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",change:'Replace only handrolled WebSocket/session launch and cleanup transport; retain pinned Vite serving, native CDP input and all nine predicate bodies.'};
++ const page=await browser.newPage();
++ pageSession=await page.createCDPSession();
++ pageSession.on('Runtime.exceptionThrown',params=>report.pageErrors.push(params.exceptionDetails.exception?.description??params.exceptionDetails.text));
+  await command('Page.enable');await command('Runtime.enable');
+  await check('untouched editor follows the live world',async()=>{
+   await navigate();const initial=JSON.parse(await editor());assert.deepEqual(initial.aircraft.map(a=>a.aircraft_id),await register());
+@@ -116,11 +113,7 @@
+ finally{
+  report.sourceAfter=snapshot();report.sourceChanged=Object.keys(sourceBefore).filter(p=>sourceBefore[p]!==report.sourceAfter[p]);
+  try{
+-  if(socket?.readyState===WebSocket.OPEN)await Promise.race([command('Browser.close',{},false).catch(()=>{}),browserClosed,sleep(1000)]);
+-  if(browserClosed)await Promise.race([browserClosed,sleep(5000)]);
+-  if(browser&&browser.exitCode===null&&browser.signalCode===null){browser.kill('SIGTERM');await Promise.race([browserClosed,sleep(5000)]);}
+-  socket?.close();
+-  for(const p of pending.values())clearTimeout(p.timer);pending.clear();
++  if(browser)await browser.close();
+   await server.close();
+   await rm(profile,{recursive:true,force:true,maxRetries:8,retryDelay:150});
+   report.cleanup={status:'passed',profileRemoved:!fs.existsSync(profile)};

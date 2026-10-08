@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/tmp/towerops-current-final-evidence-cf5799f6d38b-te7otege/publication/docs/verification/scenario-current-composition-cf5799f6d38b/restore-receiving.mjs",
+    "/tmp/towerops-current-final-evidence-cf5799f6d38b-te7otege/publication/docs/verification/scenario-current-composition-cf5799f6d38b/receiving-records.json.gz",
+    "/tmp/towerops-current-final-evidence-cf5799f6d38b-te7otege/final-archive-roundtrip"
+  ],
+  "exit_code": 0,
+  "seconds": 0.116,
+  "aliases_checked": 133,
+  "unique_blobs": 74,
+  "all_alias_bytes_sha256_git_blobs_modes_exact": true,
+  "stdout": "{\"restored_aliases\":133,\"unique_blobs\":74,\"output\":\"/tmp/towerops-current-final-evidence-cf5799f6d38b-te7otege/final-archive-roundtrip\"}\n",
+  "stderr": ""
+}

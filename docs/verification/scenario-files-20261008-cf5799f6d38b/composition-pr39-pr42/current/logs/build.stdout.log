@@ -1,0 +1,15 @@
+
+> towerops-airspace-lab@0.1.0 build
+> node prepare-python.mjs && tsc --noEmit && vite build
+
+vite v8.3.3 building client environment for production...
+transforming...
+✓ 21 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/python-worker-CvN6OBkC.js   3.63 kB
+dist/index.html                        15.19 kB │ gzip:  5.05 kB
+dist/assets/index-_-jBUDYi.css         19.28 kB │ gzip:  4.62 kB
+dist/assets/index-DT0sfup_.js          56.06 kB │ gzip: 17.97 kB
+
+✓ built in 125ms

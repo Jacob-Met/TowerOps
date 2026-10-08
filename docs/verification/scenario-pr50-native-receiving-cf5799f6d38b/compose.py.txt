@@ -1,0 +1,151 @@
+from pathlib import Path
+import datetime
+import hashlib
+import json
+import os
+import shutil
+import stat
+import subprocess
+import tempfile
+import time
+
+owner = Path("/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified")
+owner_pin_path = owner.parent / "qualification/source-build-pin.json"
+frozen_tree = "cde965df1dc4a18a94443c386e48686dd6280073"
+old_base = "093f88b29d6e1ede778f967528c7e010b7689ab1"
+new_base = "53aa5048b6585aa08592d5513cfcf555a8bba018"
+new_base_tree = "fc29ac4a02c151ba66ca37c029ff74d968662d58"
+root = Path(tempfile.mkdtemp(prefix="towerops-pr50-receiving-cf5799f6d38b-", dir="/tmp"))
+repo = root / "composed"
+out = root / "qualification"
+out.mkdir()
+env = {**os.environ, "GIT_OPTIONAL_LOCKS": "0", "GIT_TERMINAL_PROMPT": "0"}
+records = []
+sha = lambda data: hashlib.sha256(data).hexdigest()
+blob = lambda data: hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
+def run(name, command, cwd, data=None, required=True):
+    start = time.monotonic()
+    completed = subprocess.run(command, cwd=cwd, env=env, input=data, capture_output=True, timeout=180, check=False)
+    (out / (name + ".stdout.log")).write_bytes(completed.stdout)
+    (out / (name + ".stderr.log")).write_bytes(completed.stderr)
+    record = {"name": name, "command": command, "cwd": str(cwd), "exit_code": completed.returncode,
+              "seconds": time.monotonic() - start}
+    records.append(record)
+    (out / "composition-processes.json").write_text(json.dumps(records, indent=2) + "\n")
+    if completed.returncode and required:
+        print(json.dumps({"root": str(root), "failed": record,
+                          "stderr": completed.stderr.decode(errors="replace")[-2000:]}), flush=True)
+        raise SystemExit(completed.returncode)
+    return completed
+def git(*args):
+    return subprocess.check_output(["git", *args], cwd=repo, env=env)
+def entries(tree):
+    result = {}
+    for item in git("ls-tree", "-rz", "--full-tree", tree).split(b"\0"):
+        if item:
+            meta, name = item.split(b"\t", 1)
+            mode, kind, oid = meta.decode().split()
+            result[name.decode()] = {"mode": mode, "type": kind, "git_blob": oid}
+    return result
+
+owner_pin_body = owner_pin_path.read_bytes()
+owner_pin = json.loads(owner_pin_body)
+if owner_pin["source_tree"] != frozen_tree or len(owner_pin["source_files"]) != 579:
+    raise RuntimeError("root qualified publication pin differs")
+for row in owner_pin["source_files"]:
+    data = (owner / row["path"]).read_bytes()
+    if len(data) != row["bytes"] or sha(data) != row["sha256"] or blob(data) != row["git_blob"]:
+        raise RuntimeError("root frozen source changed: " + row["path"])
+(root / "root-qualified-source-build-pin.json").write_bytes(owner_pin_body)
+print(json.dumps({"root": str(root), "root_source579_verified": True,
+                  "free_bytes": shutil.disk_usage(root).free}), flush=True)
+
+run("clone", ["git", "clone", "--shared", "--no-checkout", str(owner), str(repo)], root)
+probe = run("known-head-object-probe", ["git", "cat-file", "-e", new_base + "^{commit}"], repo, required=False)
+if probe.returncode:
+    run("fetch-named-head", ["git", "-c", "credential.helper=", "-c", "core.askpass=",
+                            "fetch", "--depth=1", "https://github.com/Jacob-Met/TowerOps.git", new_base], repo)
+if git("rev-parse", new_base + "^{tree}").decode().strip() != new_base_tree:
+    raise RuntimeError("named PR50 head has an unexpected tree")
+base_before, base_after, contribution_source = entries(old_base), entries(new_base), entries(frozen_tree)
+if len(contribution_source) != 579:
+    raise RuntimeError("qualified tree does not contain 579 leaves")
+changes = {name for name in set(base_before) | set(contribution_source)
+           if base_before.get(name) != contribution_source.get(name)}
+if len(changes) != 335 or any(name not in contribution_source for name in changes):
+    raise RuntimeError("frozen contribution is not the expected 335-path nondeleting overlay")
+delta = [name for name in sorted(set(base_before) | set(base_after))
+         if base_before.get(name) != base_after.get(name)]
+added = [name for name in delta if name not in base_before]
+modified = [name for name in delta if name in base_before and name in base_after]
+removed = [name for name in delta if name not in base_after]
+if len(delta) != 11 or len(added) != 10 or modified != ["README.md"] or removed:
+    raise RuntimeError("PR50 is not the declared ten additions plus root README")
+if set(delta) & changes:
+    raise RuntimeError("PR50 overlaps the frozen contribution")
+run("checkout-named-head", ["git", "checkout", "--detach", new_base], repo)
+index = b"".join((contribution_source[name]["mode"] + " " + contribution_source[name]["git_blob"] + "\t").encode()
+                 + name.encode() + b"\0" for name in sorted(changes))
+run("overlay-frozen-contribution", ["git", "update-index", "-z", "--index-info"], repo, data=index)
+run("materialize", ["git", "checkout-index", "--all", "--force"], repo)
+tree = git("write-tree").decode().strip()
+current = entries(tree)
+if len(current) != 589:
+    raise RuntimeError("composition is not 589 leaves")
+for name in changes:
+    if current[name] != contribution_source[name]:
+        raise RuntimeError("contribution entry differs: " + name)
+unowned = {name: row for name, row in base_after.items() if name not in changes}
+if len(unowned) != 254:
+    raise RuntimeError("unowned base is not 254 leaves")
+for name, row in unowned.items():
+    if current.get(name) != row:
+        raise RuntimeError("unowned base entry changed: " + name)
+exact_delta = [name for name in sorted(set(current) | set(contribution_source))
+               if current.get(name) != contribution_source.get(name)]
+if exact_delta != delta:
+    raise RuntimeError("qualified-publication composition changed beyond the exact PR50 eleven paths")
+files = []
+for name, row in sorted(current.items()):
+    file = repo / name
+    if row["type"] != "blob":
+        raise RuntimeError("unexpected nonblob source entry")
+    data = file.read_bytes()
+    if blob(data) != row["git_blob"]:
+        raise RuntimeError("worktree bytes differ: " + name)
+    executable = bool(file.stat().st_mode & (stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH))
+    if executable != (row["mode"] == "100755"):
+        raise RuntimeError("worktree executable mode differs: " + name)
+    files.append({"path": name, **row, "bytes": len(data), "sha256": sha(data)})
+pin = {"schema": "towerops.pr50-composed-source.v1",
+       "captured_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+       "source_root": str(repo), "source_tree": tree, "base_commit": new_base,
+       "base_tree": new_base_tree, "frozen_contribution_tree": frozen_tree,
+       "original_base_commit": old_base, "root_source_pin_sha256": sha(owner_pin_body),
+       "contribution_paths": sorted(changes), "contribution_files_exact": 335,
+       "unowned_base_leaves_exact": 254, "source_files": files}
+pin_path = root / "source-manifest.json"
+pin_path.write_text(json.dumps(pin, indent=2) + "\n")
+delta_receipt = {"schema": "towerops.pr50-exact-receiving-delta.v1",
+                 "from_commit": old_base, "to_commit": new_base,
+                 "frozen_publication_tree": frozen_tree, "composed_tree": tree,
+                 "paths": [{"path": name, "status": "added" if name in added else "modified",
+                            "old_base": base_before.get(name), "new_base": base_after.get(name),
+                            "frozen_publication": contribution_source.get(name), "composition": current.get(name)}
+                           for name in delta],
+                 "added": 10, "modified": 1, "removed": 0,
+                 "contribution_overlap": [], "airspace_closure_changed": False}
+(root / "exact-pr50-delta.json").write_text(json.dumps(delta_receipt, indent=2) + "\n")
+patch = git("diff", "--no-ext-diff", "--binary", old_base, new_base, "--", *delta)
+(root / "exact-pr50-delta.patch").write_bytes(patch)
+receipt = {"schema": "towerops.pr50-composition-receipt.v1",
+           "source_tree": tree, "source_files": len(files), "checkout": str(repo),
+           "git_object_directory": str(repo / ".git/objects"), "detached_head": new_base,
+           "source_manifest_sha256": sha(pin_path.read_bytes()),
+           "contribution_files_exact": 335, "unowned_base_leaves_exact": 254,
+           "exact_delta_paths": delta, "exact_delta_patch_sha256": sha(patch),
+           "root_frozen_files_verified": 579, "tests_pending": True,
+           "extra_product_edits": False, "rebase_beyond_named_head": False,
+           "read_only_fetch_needed": bool(probe.returncode)}
+(root / "composition-receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
+print(json.dumps({"root": str(root), **receipt}, indent=2), flush=True)

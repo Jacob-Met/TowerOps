@@ -1,0 +1,15 @@
+Warning: you are leaving 63 commits behind, not connected to
+any of your branches:
+
+  093f88b Merge PR #48: review and select native advisory alternatives
+  952e6a9 Review native advisory alternatives and preserve adopted decision-trace review
+  8d4933f Merge pull request #46: preserve WorldState JSON drafts
+  623f03a Preserve authored WorldState JSON drafts through live renders
+ ... and 59 more.
+
+If you want to keep them by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 093f88b
+
+HEAD is now at 53aa504 Merge #50: inspect saved synthetic worlds through the native planner

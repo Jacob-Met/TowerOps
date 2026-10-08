@@ -1,0 +1,1363 @@
+{
+  "schema": "towerops.scenario-raw-draft-browser.v1",
+  "source_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "main_sha256": "f4976fa8729cd3e5507ec1f721931706c91ecdec773443687aa3e3b451f9f7e4",
+  "receiver_sha256": "d7c7a43100fa3e8e9225a63321859a38f345e3db0bc028b78f3fa26a94832b91",
+  "runtime": {
+    "node": "v26.3.0",
+    "browser": "Chrome/154.0.8037.98"
+  },
+  "source_unchanged": true,
+  "groups": [
+    {
+      "name": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "passed": true,
+      "seconds": 1.423,
+      "draft_sha256": "653cfed8ab3c02bc079e217642146d5213b0c41c878950d06039f873d9b8a757",
+      "initial_download": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "after_cancel_download": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec"
+    },
+    {
+      "name": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "passed": true,
+      "seconds": 2.441,
+      "restored_download": "462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362",
+      "loaded_callsigns": [
+        "TWR601",
+        "TWR602"
+      ],
+      "retained_draft_sha256": "cb8e6c511c09cbc0e9369bd663bcc85f8e46484d616004e87b349cb22686e25d",
+      "feedback": "Loaded scenario with 2 aircraft at version 73. Your raw JSON draft is still kept. Use Export live world to replace it.",
+      "pristine_feedback_unchanged": true
+    },
+    {
+      "name": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "passed": true,
+      "seconds": 1.955,
+      "raw_world_sha256": "3a14d9c9ef35423e832c13fc6a899ee2b064ef8531f4c207014af498436387e3",
+      "review_invalidated_for": [
+        "changed-world",
+        "same-world-new-load"
+      ]
+    },
+    {
+      "name": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "passed": true,
+      "seconds": 1.668,
+      "failed_draft_sha256": "cd3f82a5dc806bd5aef71783690c1db62f7f4726fc7974c4effbe70d8599741b",
+      "review_preserved_after_refusal": true,
+      "restored_after_export": {
+        "version": 73,
+        "observed_at": 1002,
+        "aircraft": [
+          {
+            "aircraft_id": "TWR601",
+            "x_nm": 0,
+            "y_nm": 0,
+            "altitude_ft": 11000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "TWR602",
+            "x_nm": 9,
+            "y_nm": 0,
+            "altitude_ft": 11000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "live_after_change": {
+        "version": 74,
+        "observed_at": 1002,
+        "aircraft": [
+          {
+            "aircraft_id": "TWR601",
+            "x_nm": 0,
+            "y_nm": 0,
+            "altitude_ft": 11000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "TWR602",
+            "x_nm": 9,
+            "y_nm": 0,
+            "altitude_ft": 11000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "TWR820",
+            "x_nm": 0,
+            "y_nm": -5,
+            "altitude_ft": 10000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 1,
+            "climb_ft_min": 0
+          }
+        ]
+      }
+    }
+  ],
+  "click_receipts": [
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "selector": ".state-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 25,
+          "y": 1397.515625,
+          "width": 1330,
+          "height": 44
+        },
+        "top": null
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "selector": ".scenario-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 25,
+          "y": 691.515625,
+          "width": 1330,
+          "height": 44
+        },
+        "top": "SUMMARY"
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 534.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "selector": "#world-json",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 665.671875,
+          "width": 1298,
+          "height": 170
+        },
+        "top": "world-json"
+      },
+      "after": {
+        "target": "world-json",
+        "disabled": false,
+        "receives": true,
+        "top": "world-json"
+      }
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 307.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "selector": "#choose-scenario",
+      "before": {
+        "rect": {
+          "x": 694,
+          "y": 449.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "choose-scenario"
+      },
+      "after": {
+        "target": "choose-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "choose-scenario"
+      }
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 449.703125,
+          "width": 427.328125,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "selector": "#cancel-scenario",
+      "before": {
+        "rect": {
+          "x": 911.671875,
+          "y": 449.703125,
+          "width": 427.328125,
+          "height": 40
+        },
+        "top": "cancel-scenario"
+      },
+      "after": {
+        "target": "cancel-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "cancel-scenario"
+      }
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 449.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": ".state-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 27,
+          "y": 1915.625,
+          "width": 336,
+          "height": 61
+        },
+        "top": null
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": ".scenario-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 27,
+          "y": 598.625,
+          "width": 336,
+          "height": 72
+        },
+        "top": "SMALL"
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SMALL"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 43,
+          "y": 568,
+          "width": 304,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": "#world-json",
+      "before": {
+        "rect": {
+          "x": 43,
+          "y": 804.53125,
+          "width": 304,
+          "height": 170
+        },
+        "top": "world-json"
+      },
+      "after": {
+        "target": "world-json",
+        "disabled": false,
+        "receives": true,
+        "top": "world-json"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": "#choose-scenario",
+      "before": {
+        "rect": {
+          "x": 43,
+          "y": 140,
+          "width": 304,
+          "height": 40
+        },
+        "top": "choose-scenario"
+      },
+      "after": {
+        "target": "choose-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "choose-scenario"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": "#load-scenario",
+      "before": {
+        "rect": {
+          "x": 56,
+          "y": 954.5,
+          "width": 278,
+          "height": 40
+        },
+        "top": null
+      },
+      "after": {
+        "target": "load-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "load-scenario"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 43,
+          "y": 55.703125,
+          "width": 304,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": ".state-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 25,
+          "y": 1397.515625,
+          "width": 1330,
+          "height": 44
+        },
+        "top": null
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": ".scenario-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 25,
+          "y": 691.515625,
+          "width": 1330,
+          "height": 44
+        },
+        "top": "SUMMARY"
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": "#choose-scenario",
+      "before": {
+        "rect": {
+          "x": 694,
+          "y": 534.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "choose-scenario"
+      },
+      "after": {
+        "target": "choose-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "choose-scenario"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": "#load-scenario",
+      "before": {
+        "rect": {
+          "x": 56,
+          "y": 822.765625,
+          "width": 176.0625,
+          "height": 40
+        },
+        "top": "load-scenario"
+      },
+      "after": {
+        "target": "load-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "load-scenario"
+      }
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 307.109375,
+          "width": 645,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": ".state-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 25,
+          "y": 1397.515625,
+          "width": 1330,
+          "height": 44
+        },
+        "top": null
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": ".scenario-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 25,
+          "y": 691.515625,
+          "width": 1330,
+          "height": 44
+        },
+        "top": "SUMMARY"
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 534.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": "#choose-scenario",
+      "before": {
+        "rect": {
+          "x": 694,
+          "y": 449.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "choose-scenario"
+      },
+      "after": {
+        "target": "choose-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "choose-scenario"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": "#world-json",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 1022.546875,
+          "width": 1298,
+          "height": 170
+        },
+        "top": null
+      },
+      "after": {
+        "target": "world-json",
+        "disabled": false,
+        "receives": true,
+        "top": "world-json"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": "#load-world",
+      "before": {
+        "rect": {
+          "x": 694,
+          "y": 703.546875,
+          "width": 645,
+          "height": 33
+        },
+        "top": "load-world"
+      },
+      "after": {
+        "target": "load-world",
+        "disabled": false,
+        "receives": true,
+        "top": "load-world"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 307.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": "#choose-scenario",
+      "before": {
+        "rect": {
+          "x": 694,
+          "y": 449.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "choose-scenario"
+      },
+      "after": {
+        "target": "choose-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "choose-scenario"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": "#world-json",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 1022.546875,
+          "width": 1298,
+          "height": 170
+        },
+        "top": null
+      },
+      "after": {
+        "target": "world-json",
+        "disabled": false,
+        "receives": true,
+        "top": "world-json"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": "#load-world",
+      "before": {
+        "rect": {
+          "x": 694,
+          "y": 703.546875,
+          "width": 645,
+          "height": 33
+        },
+        "top": "load-world"
+      },
+      "after": {
+        "target": "load-world",
+        "disabled": false,
+        "receives": true,
+        "top": "load-world"
+      }
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 307.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": ".state-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 25,
+          "y": 1397.515625,
+          "width": 1330,
+          "height": 44
+        },
+        "top": null
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": ".scenario-workbench > summary",
+      "before": {
+        "rect": {
+          "x": 25,
+          "y": 691.515625,
+          "width": 1330,
+          "height": 44
+        },
+        "top": "SUMMARY"
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 534.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#choose-scenario",
+      "before": {
+        "rect": {
+          "x": 694,
+          "y": 449.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": "choose-scenario"
+      },
+      "after": {
+        "target": "choose-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "choose-scenario"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#world-json",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 1022.546875,
+          "width": 1298,
+          "height": 170
+        },
+        "top": null
+      },
+      "after": {
+        "target": "world-json",
+        "disabled": false,
+        "receives": true,
+        "top": "world-json"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#load-world",
+      "before": {
+        "rect": {
+          "x": 694,
+          "y": 703.546875,
+          "width": 645,
+          "height": 33
+        },
+        "top": "load-world"
+      },
+      "after": {
+        "target": "load-world",
+        "disabled": false,
+        "receives": true,
+        "top": "load-world"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": -49.296875,
+          "width": 427.328125,
+          "height": 40
+        },
+        "top": null
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#load-scenario",
+      "before": {
+        "rect": {
+          "x": 56,
+          "y": 822.765625,
+          "width": 176.0625,
+          "height": 40
+        },
+        "top": "load-scenario"
+      },
+      "after": {
+        "target": "load-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "load-scenario"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 307.109375,
+          "width": 645,
+          "height": 40
+        },
+        "top": "save-scenario"
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#export-world",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 846.078125,
+          "width": 645,
+          "height": 33
+        },
+        "top": "export-world"
+      },
+      "after": {
+        "target": "export-world",
+        "disabled": false,
+        "receives": true,
+        "top": "export-world"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": ".control-card > summary",
+      "before": {
+        "rect": {
+          "x": 25,
+          "y": 163.921875,
+          "width": 1330,
+          "height": 44
+        },
+        "top": "SUMMARY"
+      },
+      "after": {
+        "target": "",
+        "disabled": false,
+        "receives": true,
+        "top": "SUMMARY"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#add-traffic",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 499.921875,
+          "width": 1298,
+          "height": 33
+        },
+        "top": "add-traffic"
+      },
+      "after": {
+        "target": "add-traffic",
+        "disabled": false,
+        "receives": true,
+        "top": "add-traffic"
+      }
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "selector": "#save-scenario",
+      "before": {
+        "rect": {
+          "x": 41,
+          "y": 1169.703125,
+          "width": 645,
+          "height": 40
+        },
+        "top": null
+      },
+      "after": {
+        "target": "save-scenario",
+        "disabled": false,
+        "receives": true,
+        "top": "save-scenario"
+      }
+    }
+  ],
+  "requests": [
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "path": "/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    }
+  ],
+  "errors": [],
+  "external_app_requests": [],
+  "proxy_blocks": [
+    {
+      "method": "GET",
+      "url": "http://clients2.google.com/time/1/current?cup2key=10:Avq7uBSJAuGmpoNR8HoRntMlzGaaiPZjiSjTYp0mdKE&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.gstatic.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "SOCKET_ERROR",
+      "code": "ECONNRESET"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "update.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "android.clients.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "update.googleapis.com:443"
+    }
+  ],
+  "downloads": [
+    {
+      "frameId": "88EBEB0DC5E2B76BA7AF90AB66D8575C",
+      "guid": "83008afc-4882-4b30-a684-6e98fed12109",
+      "url": "blob:http://127.0.0.1:57972/9d334aaf-b9fd-405d-ab56-fd50d3414382",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "88EBEB0DC5E2B76BA7AF90AB66D8575C",
+      "guid": "ffe84b10-8dab-454d-9443-b33215b408e9",
+      "url": "blob:http://127.0.0.1:57972/509b2206-2ace-4656-b6fb-63c2b1858d04",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "88EBEB0DC5E2B76BA7AF90AB66D8575C",
+      "guid": "a3f0c148-c6a8-4e48-b943-19b0cf363704",
+      "url": "blob:http://127.0.0.1:57972/4f8e7db8-22b5-4403-98a2-263527137756",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "88EBEB0DC5E2B76BA7AF90AB66D8575C",
+      "guid": "9aeac273-455f-4a87-8157-841a045aed59",
+      "url": "blob:http://127.0.0.1:57972/570d6d23-9c7c-4c4b-b71a-21b183abc81b",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "6972B46BA17C1B9C3940EF770E2E2D03",
+      "guid": "3f365355-5304-48b5-bcd6-e23b397ec16b",
+      "url": "blob:http://127.0.0.1:57972/9549a5bf-c26c-4518-b24d-54722022c63f",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "6972B46BA17C1B9C3940EF770E2E2D03",
+      "guid": "838aa498-a10c-4c69-8f72-32d17ac0fcfa",
+      "url": "blob:http://127.0.0.1:57972/4c09324b-88e8-486f-a9cc-f7c575b1bcfd",
+      "suggestedFilename": "towerops-scenario-v73.json"
+    },
+    {
+      "frameId": "21B9DDA711A114CA32AB0D30518E97D8",
+      "guid": "b19a2c96-5f83-49ae-a707-88c53d0e2e8f",
+      "url": "blob:http://127.0.0.1:57972/ccc5cdfa-b113-48b6-9c88-37d7d540f3f3",
+      "suggestedFilename": "towerops-scenario-v73.json"
+    },
+    {
+      "frameId": "B3C64C7EBCE2468DA5449E9801199593",
+      "guid": "a0a5f362-5d36-4ea6-9836-552400a0e5d4",
+      "url": "blob:http://127.0.0.1:57972/2ed925c1-f656-4d97-89c5-26d645f8a720",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "B3C64C7EBCE2468DA5449E9801199593",
+      "guid": "9e672840-f84e-47d7-a0d9-e5703f91461c",
+      "url": "blob:http://127.0.0.1:57972/99b94f02-6e32-43e2-a3be-7511b82b9d8d",
+      "suggestedFilename": "towerops-scenario-v81.json"
+    },
+    {
+      "frameId": "B3C64C7EBCE2468DA5449E9801199593",
+      "guid": "90fe65a7-26f3-4fc9-bec8-1c91fceb5f4f",
+      "url": "blob:http://127.0.0.1:57972/5f4ce734-2215-4502-904d-c636f9ad5835",
+      "suggestedFilename": "towerops-scenario-v81.json"
+    },
+    {
+      "frameId": "110387E1997CEAB81A937DBAB982ECB5",
+      "guid": "3d348771-8099-481e-bcbe-449e5a4c67cc",
+      "url": "blob:http://127.0.0.1:57972/dd28b8fe-1f77-42b6-8500-9ef14889b432",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "110387E1997CEAB81A937DBAB982ECB5",
+      "guid": "8be1cd7d-1d06-4da0-bca9-a4d52d387f1c",
+      "url": "blob:http://127.0.0.1:57972/7cb24761-aa69-49a0-a217-f7bc47778db6",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "110387E1997CEAB81A937DBAB982ECB5",
+      "guid": "6fa57088-aeca-4531-a026-93f85d9d30ff",
+      "url": "blob:http://127.0.0.1:57972/79bd7fd9-c6a6-4d4c-b8d0-e44ff0fc74f3",
+      "suggestedFilename": "towerops-scenario-v73.json"
+    },
+    {
+      "frameId": "110387E1997CEAB81A937DBAB982ECB5",
+      "guid": "4400d0ec-2aed-46e7-b8c8-f39264cf6cce",
+      "url": "blob:http://127.0.0.1:57972/a8208b53-8158-4631-8bc1-b586505ed9c8",
+      "suggestedFilename": "towerops-scenario-v74.json"
+    }
+  ],
+  "passed": 4,
+  "total": 4
+}

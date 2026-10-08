@@ -1,0 +1,249 @@
+[
+  {
+    "name": "clone",
+    "command": [
+      "git",
+      "clone",
+      "--shared",
+      "--no-checkout",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+    "exit_code": 0,
+    "seconds": 0.08
+  },
+  {
+    "name": "checkout-base",
+    "command": [
+      "git",
+      "checkout",
+      "--detach",
+      "093f88b29d6e1ede778f967528c7e010b7689ab1"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+    "exit_code": 0,
+    "seconds": 0.183
+  },
+  {
+    "name": "read-product-tree",
+    "command": [
+      "git",
+      "read-tree",
+      "--reset",
+      "-u",
+      "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+    "exit_code": 0,
+    "seconds": 0.075
+  },
+  {
+    "name": "materialize-full-tree",
+    "command": [
+      "git",
+      "checkout-index",
+      "--all",
+      "--force"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+    "exit_code": 0,
+    "seconds": 0.235
+  },
+  {
+    "name": "private-dependencies",
+    "command": [
+      "cp",
+      "-cR",
+      "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/web/airspace/node_modules",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace/node_modules"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+    "exit_code": 0,
+    "seconds": 0.294
+  },
+  {
+    "name": "frontend-tests",
+    "command": [
+      "npm",
+      "test",
+      "--",
+      "--reporter=json",
+      "--outputFile=/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/frontend-tests.json"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace",
+    "exit_code": 0,
+    "seconds": 1.582
+  },
+  {
+    "name": "normal-build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace",
+    "exit_code": 0,
+    "seconds": 1.531
+  },
+  {
+    "name": "native-tests",
+    "command": [
+      "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml=/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/native-tests.xml"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+    "exit_code": 0,
+    "seconds": 1.518
+  },
+  {
+    "name": "ruff",
+    "command": [
+      "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+      "check",
+      "--no-cache",
+      "."
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+    "exit_code": 0,
+    "seconds": 0.129
+  },
+  {
+    "name": "reference",
+    "command": [
+      "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+      "tools/generate_airspace_reference.py",
+      "--check"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+    "exit_code": 0,
+    "seconds": 0.075
+  },
+  {
+    "name": "author-browser",
+    "command": [
+      "node",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/author.mjs",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+    "exit_code": 0,
+    "seconds": 10.572
+  },
+  {
+    "name": "independent-browser",
+    "command": [
+      "node",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/independent.mjs",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+    "exit_code": 0,
+    "seconds": 13.274
+  },
+  {
+    "name": "pending-browser",
+    "command": [
+      "node",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/pending.mjs",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pending-browser"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+    "exit_code": 0,
+    "seconds": 2.748
+  },
+  {
+    "name": "scenario-encounter-browser",
+    "command": [
+      "node",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/scenario-encounter.mjs",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+    "exit_code": 0,
+    "seconds": 5.589
+  },
+  {
+    "name": "encounter-owner-browser",
+    "command": [
+      "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/playwright-tools/bin/python",
+      "tools/verify_encounter_browser.py",
+      "--chrome",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--out",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+    "exit_code": 0,
+    "seconds": 5.832
+  },
+  {
+    "name": "decision-trace-owner-browser",
+    "command": [
+      "node",
+      "tools/verify_decision_trace.mjs",
+      "--chrome",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--playwright",
+      "/private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/playwright-tools/lib/python3.12/site-packages/playwright/driver/package/index.mjs",
+      "--output",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+    "exit_code": 0,
+    "seconds": 6.237
+  },
+  {
+    "name": "scenario-decision-browser",
+    "command": [
+      "node",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/scenario-decision-trace.mjs",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+    "exit_code": 0,
+    "seconds": 5.212
+  },
+  {
+    "name": "pr46-draft-browser",
+    "command": [
+      "node",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/pr46-puppeteer-receiver-v3.mjs",
+      "--root",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--toolchain",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace/node_modules",
+      "--qa",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pr46-qa",
+      "--output",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pr46-draft-browser"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+    "exit_code": 0,
+    "seconds": 6.232
+  },
+  {
+    "name": "scenario-raw-draft-browser",
+    "command": [
+      "node",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/scenario-raw-draft-v4.mjs",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+    "exit_code": 0,
+    "seconds": 7.515
+  }
+]

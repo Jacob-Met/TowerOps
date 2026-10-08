@@ -1,0 +1,5 @@
+
+> towerops-airspace-lab@0.1.0 test
+> vitest run --reporter=json --outputFile=/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/qualification/unit-tests.json
+
+JSON report written to /private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/qualification/unit-tests.json

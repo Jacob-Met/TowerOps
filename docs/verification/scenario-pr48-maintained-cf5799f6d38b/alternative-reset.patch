@@ -1,0 +1,37 @@
+diff --git a/web/airspace/README.md b/web/airspace/README.md
+index eb22eaf..965280f 100644
+--- a/web/airspace/README.md
++++ b/web/airspace/README.md
+@@ -130,7 +130,7 @@ Open **Save or load a scenario** while traffic is paused and no planner or fligh
+ 
+ Use **Choose scenario file** to read a saved file. Review its aircraft count, clock, selected flight and all seven policy values, then choose **Load reviewed scenario**. Reading and reviewing do not change the simulation. **Cancel import**, malformed files and failed reads preserve the current world, proposal, approval and decision trace. If those values change during a read or review, choose the file again before loading.
+ 
+-Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Run the existing planner, approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history.
++Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Loading also clears any earlier alternatives review, even when the saved values are identical. Run the existing planner or **Review alternatives**, then use the approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history.
+ 
+ The existing **Inspect or load a WorldState** workbench continues to accept its original raw world shape. That shape contains only aircraft state and does not carry a policy. Use a scenario file when the separation envelope and clock must travel with the traffic.
+ 
+diff --git a/web/airspace/src/main.ts b/web/airspace/src/main.ts
+index c5b318f..56acc1c 100644
+--- a/web/airspace/src/main.ts
++++ b/web/airspace/src/main.ts
+@@ -39,8 +39,9 @@ function loadSavedScenario(value:ScenarioFile):void {
+  const restored=createScenario(value);
+  state=restored.world;policy=restored.policy;now=restored.now;rate=restored.time_scale;selected=restored.selected_aircraft_id;
+  running=false;lastFrame=0;trafficSeq=0;audit=new AuditLog();pythonAudit='[]';
++ optionsReview=null;optionsStatus='Saved scenario loaded. Review alternatives before choosing a proposal.';
+  setText('audit-verdict','');
+- clearPending('Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.');
++ clearPending('Saved scenario loaded. Run the planner or review alternatives before approval and readback.');
+  $<HTMLInputElement>('policy-horizontal').value=String(policy.min_horizontal_nm);
+  $<HTMLInputElement>('policy-vertical').value=String(policy.min_vertical_ft);
+  $<HTMLInputElement>('policy-horizon').value=String(policy.horizon_min);
+@@ -50,7 +51,7 @@ function loadSavedScenario(value:ScenarioFile):void {
+  setText('horizon-value',`${policy.horizon_min.toFixed(1)} MIN`);
+  setText('toggle-run','Run traffic');
+  setText('world-json-feedback',`Loaded scenario with ${state.aircraft.length} aircraft at version ${state.version}.${worldJsonEdited?' Your raw JSON draft is still kept. Use Export live world to replace it.':''}`);
+- announce('Saved scenario loaded. Traffic is paused. Previous proposals and decision trace cleared.');
++ announce('Saved scenario loaded. Traffic is paused. Previous proposals, alternatives and decision trace cleared.');
+  void render();
+ }
+ type GateState='wait'|'done'|'fail'; let gateScreen:GateState='wait',gateApproval:GateState='wait',gateAck:GateState='wait';

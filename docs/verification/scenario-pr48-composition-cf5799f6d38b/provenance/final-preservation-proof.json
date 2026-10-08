@@ -1,0 +1,31 @@
+{
+  "baseline_tree": "8c11186b1a3f6391879fb0aef14738487f09dc2a",
+  "base_commit": "53aa5048b6585aa08592d5513cfcf555a8bba018",
+  "base_tree": "fc29ac4a02c151ba66ca37c029ff74d968662d58",
+  "unchanged_baseline_source_leaves": 589,
+  "product_source_tree": "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993",
+  "unchanged_product_paths": [
+    "web/airspace/README.md",
+    "web/airspace/index.html",
+    "web/airspace/src/main.ts",
+    "web/airspace/src/scenario-file.ts",
+    "web/airspace/src/scenario-ui.ts",
+    "web/airspace/style.css",
+    "web/airspace/tests/scenario-file.test.ts"
+  ],
+  "historical_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+  "historical_tree": "464299ede19b44fdd1d0d8d8590c9a34e4896df5",
+  "unchanged_historical_evidence_paths": 328,
+  "unchanged_unrelated_current_base_paths": 254,
+  "existing_scenario_contribution_paths_preserved": 335,
+  "source_changes_during_assembly": [],
+  "new_lint_exceptions": [],
+  "old_six_path_ruff_policy_unchanged": true,
+  "peer_declared_files": {
+    "maintained": 32,
+    "alternatives": 33,
+    "inherited_raw_replay": 26,
+    "pr50_native_build": 76
+  },
+  "source_and_build_receipts_not_requalified_by_copy": true
+}

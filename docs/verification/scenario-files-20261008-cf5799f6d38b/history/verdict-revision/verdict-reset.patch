@@ -1,0 +1,12 @@
+diff --git a/web/airspace/src/main.ts b/web/airspace/src/main.ts
+index 73f72a1e2266fbbd59266172a0709c4114ce97e5..53fbb017029ecbabd8834c83a24b8a50de0bdaf1 100644
+--- a/web/airspace/src/main.ts
++++ b/web/airspace/src/main.ts
+@@ -30,6 +30,7 @@ function loadSavedScenario(value:ScenarioFile):void {
+  const restored=createScenario(value);
+  state=restored.world;policy=restored.policy;now=restored.now;rate=restored.time_scale;selected=restored.selected_aircraft_id;
+  running=false;lastFrame=0;trafficSeq=0;audit=new AuditLog();pythonAudit='[]';
++ setText('audit-verdict','');
+  clearPending('Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.');
+  $<HTMLInputElement>('policy-horizontal').value=String(policy.min_horizontal_nm);
+  $<HTMLInputElement>('policy-vertical').value=String(policy.min_vertical_ft);

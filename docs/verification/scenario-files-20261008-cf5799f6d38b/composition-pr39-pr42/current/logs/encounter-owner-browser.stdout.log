@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "forecast values, keyboard cursor and complete visible-state nonmutation",
+      "status": "passed",
+      "pair": [
+        "TWR218",
+        "TWR419"
+      ],
+      "minutes": 3.75,
+      "horizontal_nm": 2.5,
+      "vertical_ft": 0.0
+    },
+    {
+      "name": "pending real Python advisory and approval preserved while exploring",
+      "status": "passed",
+      "proposal": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+      "gates": [
+        "PASS",
+        "APPROVED",
+        "WAIT"
+      ]
+    },
+    {
+      "name": "real Python readback applies and forecast refreshes",
+      "status": "passed",
+      "world": {
+        "version": 2,
+        "observed_at": 1002.5,
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "x_nm": -5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": 1,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "x_nm": 5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": -1,
+            "vy_nm_min": 2,
+            "climb_ft_min": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "reduced look-ahead clamps the read-only cursor",
+      "status": "passed"
+    },
+    {
+      "name": "ten-minute endpoint labels stay within both chart viewports",
+      "status": "passed",
+      "labels": [
+        {
+          "chart": "horizontal",
+          "text": "10.0",
+          "x": 285.99847412109375,
+          "width": 24.001548767089844
+        },
+        {
+          "chart": "vertical",
+          "text": "10.0",
+          "x": 285.99847412109375,
+          "width": 24.001548767089844
+        }
+      ]
+    },
+    {
+      "name": "selected-flight draft and preview survive forecast interaction",
+      "status": "passed"
+    },
+    {
+      "name": "imported three-flight world and independent pair selection",
+      "status": "passed"
+    },
+    {
+      "name": "large shared horizontal/vertical motion preserves constant pair separation",
+      "status": "passed",
+      "readings": [
+        {
+          "mode": "horizontal",
+          "pair": [
+            "COMMON1",
+            "COMMON2"
+          ],
+          "minutes": 3.0,
+          "horizontal_nm": 4.0,
+          "vertical_ft": 0.0
+        },
+        {
+          "mode": "vertical",
+          "pair": [
+            "COMMON1",
+            "COMMON2"
+          ],
+          "minutes": 3.0,
+          "horizontal_nm": 0.0,
+          "vertical_ft": 2048.0
+        },
+        {
+          "mode": "vertical boundary",
+          "pair": [
+            "COMMON1",
+            "COMMON2"
+          ],
+          "minutes": 3.0,
+          "horizontal_nm": 0.0,
+          "vertical_ft": 500.0
+        }
+      ]
+    },
+    {
+      "name": "one-flight and running worlds hide stale forecasts; reset and pause restore them",
+      "status": "passed"
+    },
+    {
+      "name": "320x568 touch exploration and responsive charts",
+      "status": "passed",
+      "cursor": "230.504587155963"
+    }
+  ],
+  "failure": null,
+  "out": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/trace-r2-encounter-owner-browser"
+}

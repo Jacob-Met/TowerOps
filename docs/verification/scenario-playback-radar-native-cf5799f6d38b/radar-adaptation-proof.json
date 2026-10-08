@@ -1,0 +1,73 @@
+{
+  "original": {
+    "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/radar/browser-v1-driver2.mjs",
+    "bytes": 12632,
+    "sha256": "7dc85c569334dad1d8c50a5023390e77795587a962d49cf1e9be53de39e0982e",
+    "git_blob": "aa614261ecc7426afc2f67803d8550e21f2598d8"
+  },
+  "adapter": {
+    "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/radar/browser-production-dist.mjs",
+    "bytes": 14401,
+    "sha256": "0a5008339e17ab794c84716de7996dd4c25b3986c2192abb3f8d575f14d70309",
+    "git_blob": "160ce227b896a4fd8a6a01080870fda776ca5f66"
+  },
+  "patch": {
+    "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/radar/production-dist-adaptation.patch",
+    "bytes": 7945,
+    "sha256": "558c47af8d45317f13a131f463547f2d3156e59f618b2ae84eb2f058ffeb3c9b",
+    "git_blob": "3dc682c8fa0903459276d61903a977faee207fd5"
+  },
+  "unchanged_predicate_region": {
+    "bytes": 8767,
+    "sha256": "b0b59f24cdd51da85aeeca9326fc8cf3b201d604d9e7c5b39e8f2df38d453e38",
+    "original_and_adapter_equal": true
+  },
+  "adaptation_scope": [
+    "CLI input paths and current base/tree metadata",
+    "read-only exact production dist server instead of historical Vite/source mapping",
+    "source/build manifest admission and final build readback"
+  ],
+  "browser_executed": false,
+  "syntax": [
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--check",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/playback/receiving-browser.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/syntax-receiving-browser.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "stderr": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/syntax-receiving-browser.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--check",
+        "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/receivers/radar/browser-production-dist.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/syntax-browser-production-dist.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "stderr": {
+        "path": "/tmp/towerops-playback-radar-receiving-cf5799f6d38b-k74jreno/syntax-browser-production-dist.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1636 @@
+{
+  "schema": "towerops-root-receiving-preservation/v1",
+  "native_root": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+  "historical_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+  "historical_tree": "464299ede19b44fdd1d0d8d8590c9a34e4896df5",
+  "peer_manifests": [
+    {
+      "label": "maintained",
+      "original_manifest": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/publication-manifest.json",
+      "manifest_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/provenance/maintained-original-manifest.json",
+      "declared_files": 32,
+      "bytes": 13588,
+      "sha256": "56bd3ee78a7eb7a8ac137c8947183be363d5b8406ccc81241936bac3059a3724",
+      "git_blob": "8f0d1e63713980d44f1c65b3bd8532d3901bbb70",
+      "mode": "100644"
+    },
+    {
+      "label": "alternatives",
+      "original_manifest": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/review-manifest.json",
+      "manifest_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/provenance/alternatives-original-manifest.json",
+      "declared_files": 33,
+      "bytes": 18221,
+      "sha256": "f4a76b8b8af896a9d411d0bdfe852db0535d9d0e750541b411ef3cb614c0fe11",
+      "git_blob": "d1db47b303569bef6af7ca70fa0a71c37b6ad54d",
+      "mode": "100644"
+    },
+    {
+      "label": "inherited-raw-draft",
+      "original_manifest": "/tmp/towerops-raw-draft-pr48-replay-cf5799f6d38b-f6aomq6w/review-manifest.json",
+      "manifest_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/provenance/inherited-raw-draft-original-manifest.json",
+      "declared_files": 26,
+      "bytes": 14167,
+      "sha256": "655b20dcf5093ab9090e10d154397820f1c09c1c4789ecf06db5531ed9cc17e3",
+      "git_blob": "b35d2978e10448e880b799482d0a026da42aeb96",
+      "mode": "100644"
+    }
+  ],
+  "root_exact_files": [
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/setup-info.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/setup-info.json",
+      "bytes": 1275,
+      "sha256": "9257bac89ab25d739af082f1bb9cac6b54f696b165c044e14d764def8390c589",
+      "git_blob": "237d87c52e6dec267d174c0114993fed89737390",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/setup-receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/setup-receipt.json",
+      "bytes": 1489,
+      "sha256": "361d2b536251be0519f920d028370d1f4efeb8432c6e8635f7b2c17a0811e860",
+      "git_blob": "357fd9988edb6b13af2608c9ff8311574ede675e",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/setup-r1-observed-failure.txt",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/setup-r1-observed-failure.txt",
+      "bytes": 2558,
+      "sha256": "9b5a02e5c60b8bfb69aed574436334d8048e34a0de6c607150308912ac22ac2b",
+      "git_blob": "abeaed8fd2ecb04865bd956eaa94be232197a268",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/setup-resume-receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/setup-resume-receipt.json",
+      "bytes": 1419,
+      "sha256": "ca84980dc85bd5c3ff033305a03db5ab4a1229fce6d027d3e6091f9da600152f",
+      "git_blob": "e8a041148d62b56e3ab24bbaa493ecd8de5ffa11",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/completed-root-profile-cleanup.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/completed-root-profile-cleanup.json",
+      "bytes": 740,
+      "sha256": "dd62e546b38d5d5f22bbeb805fdde3058bd158a168d263fdf89aff001d0d8ff7",
+      "git_blob": "9f5d6f581aff49e22f4d5c410f08cbde6d7a5e26",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/initial-build-receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/initial-build-receipt.json",
+      "bytes": 535,
+      "sha256": "0f7dcef6ed01e9fef856db3b1624ad6365637a1fd432d968708ce47fcf6603cb",
+      "git_blob": "096e4577c82aca27f367f337e0ccfdc02066a68d",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-process-receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/reset-process-receipt.json",
+      "bytes": 1259,
+      "sha256": "59cad1c315b0a80f42a795b99e6e284a9d97afacaefd829816a64bf93cea5808",
+      "git_blob": "1e75db51cdbdb575145f2bc9139e1f96a62e8883",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/style-conflict-before-resolution.txt",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/style-conflict-before-resolution.txt",
+      "bytes": 20726,
+      "sha256": "e318d2d60234fbd7a99121594ac7cc7ef7d73c2821e3c7fdef0589f8e7428a2b",
+      "git_blob": "caeae4b4fffec5686aa149bc1128b4b71cd989df",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/style-resolution.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/style-resolution.json",
+      "bytes": 539,
+      "sha256": "6114187e2a4924d1de5934412cc3fb4ea909282aa7e3679b51bd0db86b52d0ba",
+      "git_blob": "41b4a66eff489e3c0233f4d1793cb28da6e6871c",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/composition-pr46.patch",
+      "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr46/scenario-on-pr46.patch",
+      "preservation": "existing-identical-blob",
+      "bytes": 43560,
+      "sha256": "59a9e0b9ad2a604b01112fb91242a667e3c08020f9984110d585a4d3504433e0",
+      "git_blob": "aeb19d39039c4fc060a1198197868a2a7ef95482",
+      "mode": "100644",
+      "existing_commit": "e8f8fe37e31067c8dbd789577544525afca5e009"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/initial-composition.patch",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/initial-composition.patch",
+      "bytes": 45661,
+      "sha256": "5a967670bd9a0d414981748359686518293937b18ee3d9ced8303c055e927a50",
+      "git_blob": "3c5afb9d18459597726ce74002aa6ac85e90c80f",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/alternative-reset.patch",
+      "path": "docs/verification/scenario-pr48-maintained-cf5799f6d38b/alternative-reset.patch",
+      "preservation": "existing-identical-blob",
+      "bytes": 3607,
+      "sha256": "be7caad58aa479eacf27b482f8e88c8c8f6e3eff4f8b6224cdde4b34a3f97fdb",
+      "git_blob": "5ba50b956e9ff9df32a985f673fb0afc644ad9e1",
+      "mode": "100644",
+      "new_companion": true
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/main.ts.pr48-composition-diff.txt",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/main.ts.pr48-composition-diff.txt",
+      "bytes": 7864,
+      "sha256": "1e57251958242ad88230290ce8e9d5f6f94b44ee24b47d873c5afd6447e9c8ee",
+      "git_blob": "4bd1e6e464194799e8137758113953bb942a5281",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/README.md.pr48-composition-diff.txt",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/README.md.pr48-composition-diff.txt",
+      "bytes": 3617,
+      "sha256": "d7ecd0a7153d70101bfab3a9c533c694d2bcf8586a2eef6018a8388ab56bf49a",
+      "git_blob": "667e12c6953c9dfd43d3768513f495e872687f15",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/index.html.pr48-composition-diff.txt",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/index.html.pr48-composition-diff.txt",
+      "bytes": 7568,
+      "sha256": "49b7945254bf74d60de9d49d777ff2fa8e1ae3abf6ff3667c9efd69e33ac21a7",
+      "git_blob": "5fd11000ee0329ab396f259461336d95ca723ece",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/initial-source-build-pin.json",
+      "path": "docs/verification/scenario-pr48-maintained-cf5799f6d38b/initial/supplied-source-build-pin.json",
+      "preservation": "existing-identical-blob",
+      "bytes": 78433,
+      "sha256": "022805ce6de15626e92fdfa6daac13349191085d7655e7cd6b35c63dc168e0e6",
+      "git_blob": "62a20a58a9a1a6341b618a6eb27868e8026aa0c1",
+      "mode": "100644",
+      "new_companion": true
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-source-build-pin.json",
+      "path": "docs/verification/scenario-pr48-maintained-cf5799f6d38b/reset/supplied-source-build-pin.json",
+      "preservation": "existing-identical-blob",
+      "bytes": 78715,
+      "sha256": "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba",
+      "git_blob": "62bc62d75e39c00b6c34cd3fcd85fba51634e652",
+      "mode": "100644",
+      "new_companion": true
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/gates-summary.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/qualification/gates-summary.json",
+      "bytes": 1518,
+      "sha256": "dd4d4b245faa5624b827d480f9a8dab2fde8a9636688b29c574a1c3cee4d6d8d",
+      "git_blob": "f548d2add35b90cda28a33d0bc9cc5ff0fde4eb1",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/process-receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/qualification/process-receipt.json",
+      "bytes": 7897,
+      "sha256": "18829ec52d332760dd8a236a4df12a4f1e52f200b074d7f0242fba87eeab0bc4",
+      "git_blob": "e2f7e7a32b574193bb05385fc07ea9d5eddc5f55",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/source-build-pin.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/qualification/source-build-pin.json",
+      "bytes": 191366,
+      "sha256": "bebb167524977177f88fb6012d72f73dabb3886a3d183b01b7cefa6502eb64f2",
+      "git_blob": "e92cd7c0d3fff09b07006836a6fbf21287557037",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/build-identity-comparison.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/qualification/build-identity-comparison.json",
+      "bytes": 375,
+      "sha256": "b514cd7a33bbd784c823489109b8548e6c00419eb9539e8a3ca28b3dd3c1c43c",
+      "git_blob": "08bc794f5371c80256c7c8d34f6c7e862a818c65",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/runtime.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/qualification/runtime.json",
+      "bytes": 435,
+      "sha256": "9eb94d983c00b013a757f04b24ff0491dbf9f77002b8058c32b65ec34bd6f249",
+      "git_blob": "e9ad0e89b8011569e380d9a1320e21be173a4223",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/receiver-pins.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/qualification/receiver-pins.json",
+      "bytes": 2607,
+      "sha256": "471ff6abfb8d7c5326f5ec99d21a19da7f9777ca053ecdefb9b053e0d274fc7d",
+      "git_blob": "9c6f15c0f62f2453b13a417d605c4408062f72a2",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/frontend-tests.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/qualification/frontend-tests.json",
+      "bytes": 69038,
+      "sha256": "5fabc28b25e519604e9758e94a3874aabff02d955851250f4d90ad0c3bf0b69b",
+      "git_blob": "e0689f1368e7de070e7f1fa88a76500c8ea6755c",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/native-tests.xml",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/qualification/native-tests.xml",
+      "bytes": 15249,
+      "sha256": "3b8772c089b8e2dad82b7de81d9df02105c9878ad0faf8baa541539132c35219",
+      "git_blob": "b3850db67d00bf64d9ea7548b3651616e15f0947",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-setup-cf5799f6d38b.py",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/towerops-root-advisory-setup-cf5799f6d38b.py.txt",
+      "bytes": 3022,
+      "sha256": "c22ac1e2a1da40332073f2db2b7352351db966f97b2c7d9550281d5d4de34a46",
+      "git_blob": "06994343e2151fc39428c352bade29377cecdd1e",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/resume-setup.py",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/resume-setup.py.txt",
+      "bytes": 2585,
+      "sha256": "2920912156a56250b8a167aeb6eebb6f787c8699a8c780b3033aa57d4c7be6ba",
+      "git_blob": "753a61c12d0c92ff9513360c42a202e4f40be91f",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/freeze-build-initial.py",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/freeze-build-initial.py.txt",
+      "bytes": 6231,
+      "sha256": "9d45e336f693b569b6ca5c32c6afe06f14911a718daeeccde9d6536a62727e97",
+      "git_blob": "9c7a81441d1dcdce2bcc2a3f0ff6c8e9aaf1c7f1",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/create-reset-successor.py",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/create-reset-successor.py.txt",
+      "bytes": 6901,
+      "sha256": "4aec04c9ecc62d9a6f86d8c2711458e0b57180befe04fdf8a737a17c15adf4d9",
+      "git_blob": "61206f2a4a139c4379c2b33837d7990117b69309",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualify-publication.py",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/qualify-publication.py.txt",
+      "bytes": 12183,
+      "sha256": "06c753410659476058fda80badcfd04a60933eed71c60c26fef4ea092f27b640",
+      "git_blob": "fbccb48aed12dc85752ec0d628b2eda43a314dc5",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/author-browser/receipt.json",
+      "bytes": 179309,
+      "sha256": "f50a4ce474fabe846d335eccb54cc09e743ec3935eccf3e9e80d49b056697b4a",
+      "git_blob": "099f6383c961c1bf8611fd69632eb05232830e0b",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/scenario-desktop.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/author-browser/scenario-desktop.png",
+      "bytes": 66907,
+      "sha256": "ee7315bea844388aeb7d8e5e3d5ddddf4059f4b83847227ead81c2f4ad74f57e",
+      "git_blob": "a50de1db049e58dc662520e72a17093e4fe31425",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/scenario-phone.png",
+      "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/current/screenshots/scenario-phone.png",
+      "preservation": "existing-identical-blob",
+      "bytes": 59061,
+      "sha256": "dfb9c9c1413f27d06ab765fadd3f94ed387bda7370a19d6460cd47a4a2d60e61",
+      "git_blob": "7d0eeba84b8966c44b37e5a2a9e3be2519dd61e5",
+      "mode": "100644",
+      "existing_commit": "e8f8fe37e31067c8dbd789577544525afca5e009"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/independent-browser/receipt.json",
+      "bytes": 22630,
+      "sha256": "a3d4673fc7d5ebbf373f17d97b79077b8a4410ce56bfe6dec048310f6308d4d5",
+      "git_blob": "095b83e94aad953ed56f0573eb4135829758e10b",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pending-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/pending-browser/receipt.json",
+      "bytes": 5341,
+      "sha256": "37352ce4757d0c5d94f8fbaae0e25176bed668b2d2f3e6f4a56303ead05b8c7c",
+      "git_blob": "9ebad06d2cc733a1f1e937e3983a9e7335194da2",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-encounter-browser/receipt.json",
+      "bytes": 174535,
+      "sha256": "1b2933e97caaa9cd3a398b7698766447e79c1049357f1b9c2ede853385c47972",
+      "git_blob": "adb387b64a7928d2af5308e484ecf893cbb90566",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/scenario-encounter-desktop.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-encounter-browser/scenario-encounter-desktop.png",
+      "bytes": 82779,
+      "sha256": "60e7b95aa93d2dbcbec8428a8be9aa2028de8b90b82b06310cf5bd7eab43008d",
+      "git_blob": "a1cd7c4af0416c123c35256329dc24cb5f16220c",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/scenario-encounter-phone.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-encounter-browser/scenario-encounter-phone.png",
+      "bytes": 75813,
+      "sha256": "d0d19c49f869fb5e8083e66d60842667eff8ed503ad519039d1912094b591883",
+      "git_blob": "9c7b93e878db992821431ffaec1fd1227bcf8553",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser/encounter-desktop.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/encounter-owner-browser/encounter-desktop.png",
+      "bytes": 88059,
+      "sha256": "51f991d5f741e2f7e60e0b81c031e3baba39e6ad2935564d6eb3c89319b4dbe8",
+      "git_blob": "6a390f355991856ba15cebdcaab5ed3214b8315e",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser/encounter-mobile.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/encounter-owner-browser/encounter-mobile.png",
+      "bytes": 75645,
+      "sha256": "4fe77c375cc82e2dd80ade3a28fd85afb0fbbb0aa167cfcca75678a4fcbc8948",
+      "git_blob": "d920fa89885746a6c985ff69daccb975e1457694",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser/encounter-ten-minute.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/encounter-owner-browser/encounter-ten-minute.png",
+      "bytes": 99655,
+      "sha256": "5ab420e6caee974424e928ef4252dba612873794e01cc71e7ce1321dea8beb74",
+      "git_blob": "59c0f85647719ce257499ccd571c12977b6ff5ad",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/encounter-owner-browser/receipt.json",
+      "bytes": 97699,
+      "sha256": "fb6aba77610916c2fcbb54b08fbb6f7a066513c414875f8a0e6d94ebd961738c",
+      "git_blob": "8a3e725f45d1db36b67da979a0b81f4dfca527c6",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/browser-receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/decision-trace-owner-browser/browser-receipt.json",
+      "bytes": 8058,
+      "sha256": "c0980fea40c92241efdc8c5f14ee806c2b12afecc019b76346480af7b95a0cc0",
+      "git_blob": "7aced74ee35391a166433cce53f3a6619a96af42",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/desktop-trace.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/decision-trace-owner-browser/desktop-trace.png",
+      "bytes": 112926,
+      "sha256": "f6e2e43af9d8989f3bbed30467b8ef59549403afbdaff36e225beab87c2923de",
+      "git_blob": "560f0a8d97bb4d62349c77a7a4424b592a704c6c",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/mobile-trace.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/decision-trace-owner-browser/mobile-trace.png",
+      "bytes": 116235,
+      "sha256": "7e9124a75a10f922143991cf540b48ad2f408707f9540c0209712ae0dcd13110",
+      "git_blob": "d448e2ffbd607a1ea2ff13fc452ba2a84b4707ae",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-decision-browser/receipt.json",
+      "bytes": 173159,
+      "sha256": "f8d882dc863383353b8ef8e2149e5c78df4f4fe0dd7096df87ddc7d2eed32f9f",
+      "git_blob": "b6e9b41573a324e4de029671a5f5ca70c4a43047",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/scenario-with-prior-trace-snapshot.png",
+      "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/current/screenshots/scenario-with-prior-trace-snapshot.png",
+      "preservation": "existing-identical-blob",
+      "bytes": 69745,
+      "sha256": "d23552046408c9905b3e130e4edec8a967968758c05b1d9401a59b4796187783",
+      "git_blob": "dee6d62661085625b746cf19a41b4976eb44fa04",
+      "mode": "100644",
+      "existing_commit": "e8f8fe37e31067c8dbd789577544525afca5e009"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pr46-draft-browser/browser-report.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/pr46-draft-browser/browser-report.json",
+      "bytes": 186963,
+      "sha256": "e5d20ff81c8b5cd925dc9e7e2950e66ca903c5dce3604ab294455190d537dfc5",
+      "git_blob": "9ed75675c263696d9c8c35f95d34616f8da1850f",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-raw-draft-browser/receipt.json",
+      "bytes": 37141,
+      "sha256": "448b18cf7d512dbbc82b43786d917dc5e073290a67e1672e57eb31aca5194837",
+      "git_blob": "98ed2278203bafd22ccba7adf2e2e04e885b7274",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/retained-raw-draft-phone.png",
+      "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr46/current/retained-raw-draft-phone.png",
+      "preservation": "existing-identical-blob",
+      "bytes": 25763,
+      "sha256": "705e2bb36141c3893e659bd5d139369ff55b9a142e81c023a79838156dd86313",
+      "git_blob": "7664d7d19b4747be9c935d21ecc71279a6f34fdb",
+      "mode": "100644",
+      "existing_commit": "e8f8fe37e31067c8dbd789577544525afca5e009"
+    }
+  ],
+  "unchanged_receivers": [
+    {
+      "native_executed_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/author.mjs",
+      "bytes": 20441,
+      "sha256": "3486cd53f70b44ec9d964d45d7e7688f2d3163cfd693af5beb951f583d65aab6",
+      "git_blob": "2f84eac00c90d80f4f0470e43b654eb3a13dedc9",
+      "mode": "100644",
+      "published_path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/author.mjs",
+      "published_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+      "url": "https://github.com/Jacob-Met/TowerOps/blob/e8f8fe37e31067c8dbd789577544525afca5e009/docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/author.mjs"
+    },
+    {
+      "native_executed_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/independent.mjs",
+      "bytes": 16174,
+      "sha256": "64bd1ffa7545148f62a6ec818dbca94e40190787505f1b786d3e66ad8d420544",
+      "git_blob": "3a9364476b1f6f1c300ba402ea3cf8ad4867dc54",
+      "mode": "100644",
+      "published_path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/independent.mjs",
+      "published_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+      "url": "https://github.com/Jacob-Met/TowerOps/blob/e8f8fe37e31067c8dbd789577544525afca5e009/docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/independent.mjs"
+    },
+    {
+      "native_executed_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/pending.mjs",
+      "bytes": 10348,
+      "sha256": "968838aba803c324b69c8b03d59c057aa7c5c80fbbafc7c1ca6d9904fb5f9aa6",
+      "git_blob": "5795363dc10827d63149c4509b5950c86efd4b0d",
+      "mode": "100644",
+      "published_path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/pending.mjs",
+      "published_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+      "url": "https://github.com/Jacob-Met/TowerOps/blob/e8f8fe37e31067c8dbd789577544525afca5e009/docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/pending.mjs"
+    },
+    {
+      "native_executed_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/pr46-puppeteer-receiver-v3.mjs",
+      "bytes": 13470,
+      "sha256": "0ef3b762c5fe83eda6b5d676da1d9a6927cb4f682b3053e71e5defe75016ac14",
+      "git_blob": "fea6cb1be4f5df66059de21e8f6dd86e9aa6e5b7",
+      "mode": "100644",
+      "published_path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr46/receivers/pr46-puppeteer-receiver-v3.mjs",
+      "published_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+      "url": "https://github.com/Jacob-Met/TowerOps/blob/e8f8fe37e31067c8dbd789577544525afca5e009/docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr46/receivers/pr46-puppeteer-receiver-v3.mjs"
+    },
+    {
+      "native_executed_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/scenario-decision-trace.mjs",
+      "bytes": 13177,
+      "sha256": "d85c43ee1fe3324533454091d027c391e6637e25f0ec68df12ce649670da87f4",
+      "git_blob": "4511537998fea1f5bf08a0eb858a2a95af3a911f",
+      "mode": "100644",
+      "published_path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/scenario-decision-trace.mjs",
+      "published_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+      "url": "https://github.com/Jacob-Met/TowerOps/blob/e8f8fe37e31067c8dbd789577544525afca5e009/docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/scenario-decision-trace.mjs"
+    },
+    {
+      "native_executed_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/scenario-encounter.mjs",
+      "bytes": 16904,
+      "sha256": "dfce8b64d2febdc004e63831a9084d47558669fa0dfa47b635d8e465dd370597",
+      "git_blob": "c79edd057921cff20b1dcc29420724fad170977e",
+      "mode": "100644",
+      "published_path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/scenario-encounter.mjs",
+      "published_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+      "url": "https://github.com/Jacob-Met/TowerOps/blob/e8f8fe37e31067c8dbd789577544525afca5e009/docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/scenario-encounter.mjs"
+    },
+    {
+      "native_executed_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/scenario-raw-draft-v4.mjs",
+      "bytes": 14743,
+      "sha256": "d7c7a43100fa3e8e9225a63321859a38f345e3db0bc028b78f3fa26a94832b91",
+      "git_blob": "0c5dfd78d3a150c9410da8543c28b56453817c0e",
+      "mode": "100644",
+      "published_path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr46/receivers/scenario-raw-draft-v4.mjs",
+      "published_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+      "url": "https://github.com/Jacob-Met/TowerOps/blob/e8f8fe37e31067c8dbd789577544525afca5e009/docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr46/receivers/scenario-raw-draft-v4.mjs"
+    }
+  ],
+  "archival_python_name_mappings": [
+    {
+      "original_native_path": "/tmp/towerops-root-advisory-setup-cf5799f6d38b.py",
+      "original_name": "towerops-root-advisory-setup-cf5799f6d38b.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/towerops-root-advisory-setup-cf5799f6d38b.py.txt",
+      "purpose": "Exact executed historical setup/qualification transcript; transport name only, not a requalified Python module.",
+      "bytes": 3022,
+      "sha256": "c22ac1e2a1da40332073f2db2b7352351db966f97b2c7d9550281d5d4de34a46",
+      "git_blob": "06994343e2151fc39428c352bade29377cecdd1e",
+      "mode": "100644"
+    },
+    {
+      "original_native_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/resume-setup.py",
+      "original_name": "resume-setup.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/resume-setup.py.txt",
+      "purpose": "Exact executed historical setup/qualification transcript; transport name only, not a requalified Python module.",
+      "bytes": 2585,
+      "sha256": "2920912156a56250b8a167aeb6eebb6f787c8699a8c780b3033aa57d4c7be6ba",
+      "git_blob": "753a61c12d0c92ff9513360c42a202e4f40be91f",
+      "mode": "100644"
+    },
+    {
+      "original_native_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/freeze-build-initial.py",
+      "original_name": "freeze-build-initial.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/freeze-build-initial.py.txt",
+      "purpose": "Exact executed historical setup/qualification transcript; transport name only, not a requalified Python module.",
+      "bytes": 6231,
+      "sha256": "9d45e336f693b569b6ca5c32c6afe06f14911a718daeeccde9d6536a62727e97",
+      "git_blob": "9c7a81441d1dcdce2bcc2a3f0ff6c8e9aaf1c7f1",
+      "mode": "100644"
+    },
+    {
+      "original_native_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/create-reset-successor.py",
+      "original_name": "create-reset-successor.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/create-reset-successor.py.txt",
+      "purpose": "Exact executed historical setup/qualification transcript; transport name only, not a requalified Python module.",
+      "bytes": 6901,
+      "sha256": "4aec04c9ecc62d9a6f86d8c2711458e0b57180befe04fdf8a737a17c15adf4d9",
+      "git_blob": "61206f2a4a139c4379c2b33837d7990117b69309",
+      "mode": "100644"
+    },
+    {
+      "original_native_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualify-publication.py",
+      "original_name": "qualify-publication.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/drivers/qualify-publication.py.txt",
+      "purpose": "Exact executed historical setup/qualification transcript; transport name only, not a requalified Python module.",
+      "bytes": 12183,
+      "sha256": "06c753410659476058fda80badcfd04a60933eed71c60c26fef4ea092f27b640",
+      "git_blob": "fbccb48aed12dc85752ec0d628b2eda43a314dc5",
+      "mode": "100644"
+    }
+  ],
+  "command_transcript_archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-command-transcripts.json",
+  "command_transcript_files": 66,
+  "browser_files": [
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/downloads/611e7f10-c3ac-4db4-93b5-9c9381f7bd60",
+      "native_relative_path": "author-browser/downloads/611e7f10-c3ac-4db4-93b5-9c9381f7bd60",
+      "bytes": 812,
+      "sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/downloads/ac746e38-a0bf-4daf-8578-9b773eba1b9d",
+      "native_relative_path": "author-browser/downloads/ac746e38-a0bf-4daf-8578-9b773eba1b9d",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/<img onerror=alert(1)>.json",
+      "native_relative_path": "author-browser/fixtures/<img onerror=alert(1)>.json",
+      "bytes": 812,
+      "sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/broken.json",
+      "native_relative_path": "author-browser/fixtures/broken.json",
+      "bytes": 5,
+      "sha256": "935aaf3a54c0648c74df48a8025f20086019843f5b9fbffe5540b9cba0edcc97",
+      "git_blob": "b3bf120ee577dd19c9a704bd31cab4006d6b5f84",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "b3bf120ee577dd19c9a704bd31cab4006d6b5f84"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/foreign-selection.json",
+      "native_relative_path": "author-browser/fixtures/foreign-selection.json",
+      "bytes": 544,
+      "sha256": "73c6d5eef522aeb1240c2be5709887f869a1936ee8281fac5f5d7cd6612f4436",
+      "git_blob": "b829937f49409bfe87f062e1fe10e7d293523cec",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "b829937f49409bfe87f062e1fe10e7d293523cec"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/invisible-policy.json",
+      "native_relative_path": "author-browser/fixtures/invisible-policy.json",
+      "bytes": 544,
+      "sha256": "9305b699ba2f6fdfb8b43f199096af3ca1c15ae0f0907a737eb017490f946f70",
+      "git_blob": "f90027f991ea54b2062f562f61de8faf4750324a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "f90027f991ea54b2062f562f61de8faf4750324a"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/oversize.json",
+      "native_relative_path": "author-browser/fixtures/oversize.json",
+      "bytes": 262145,
+      "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+      "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/unknown-field.json",
+      "native_relative_path": "author-browser/fixtures/unknown-field.json",
+      "bytes": 577,
+      "sha256": "acf08bf9ae27faaa51b347ee643beca7124cceaee1a1b0652691464ff4ec4402",
+      "git_blob": "08795830078f3c6f30da09470a4b2f1a4c6e4a37",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "08795830078f3c6f30da09470a4b2f1a4c6e4a37"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/wrong-version.json",
+      "native_relative_path": "author-browser/fixtures/wrong-version.json",
+      "bytes": 543,
+      "sha256": "39b1305010e3a6c7ccdf381e080a7e8ce2ff42ef643a53c2e6fa7a7973f1bb4e",
+      "git_blob": "4d3567191b41ea6bc4bcceecaddc2f0590198a1a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "4d3567191b41ea6bc4bcceecaddc2f0590198a1a"
+    },
+    {
+      "native_relative_path": "author-browser/receipt.json",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/author-browser/receipt.json",
+      "bytes": 179309,
+      "sha256": "f50a4ce474fabe846d335eccb54cc09e743ec3935eccf3e9e80d49b056697b4a",
+      "git_blob": "099f6383c961c1bf8611fd69632eb05232830e0b",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "author-browser/scenario-desktop.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/scenario-desktop.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/author-browser/scenario-desktop.png",
+      "bytes": 66907,
+      "sha256": "ee7315bea844388aeb7d8e5e3d5ddddf4059f4b83847227ead81c2f4ad74f57e",
+      "git_blob": "a50de1db049e58dc662520e72a17093e4fe31425",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "author-browser/scenario-phone.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/scenario-phone.png",
+      "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/current/screenshots/scenario-phone.png",
+      "preservation": "existing-identical-blob",
+      "bytes": 59061,
+      "sha256": "dfb9c9c1413f27d06ab765fadd3f94ed387bda7370a19d6460cd47a4a2d60e61",
+      "git_blob": "7d0eeba84b8966c44b37e5a2a9e3be2519dd61e5",
+      "mode": "100644",
+      "existing_commit": "e8f8fe37e31067c8dbd789577544525afca5e009"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/01938063-e9c8-4f92-9b23-3920ed794d64",
+      "native_relative_path": "independent-browser/downloads/01938063-e9c8-4f92-9b23-3920ed794d64",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/0b6b314e-e115-4f37-b618-fa16bd43eef2",
+      "native_relative_path": "independent-browser/downloads/0b6b314e-e115-4f37-b618-fa16bd43eef2",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/2368c4c0-0f97-470b-94f9-5da7d51e7a8a",
+      "native_relative_path": "independent-browser/downloads/2368c4c0-0f97-470b-94f9-5da7d51e7a8a",
+      "bytes": 831,
+      "sha256": "76087bb793bbec0e91b7359cb5a698fb4f9ab400b0fd3e7e52f37049b65eb271",
+      "git_blob": "b846729a2482e9a43bf0a8d693fbd0e7bb5a15dd",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "b846729a2482e9a43bf0a8d693fbd0e7bb5a15dd"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/24cec0c1-acea-47d7-b31e-3c7aa753855e",
+      "native_relative_path": "independent-browser/downloads/24cec0c1-acea-47d7-b31e-3c7aa753855e",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/3a6e6ffc-0fbf-49b3-abc3-ce71e860a7ca",
+      "native_relative_path": "independent-browser/downloads/3a6e6ffc-0fbf-49b3-abc3-ce71e860a7ca",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/3e407701-c862-4759-af24-d64fd79437ad",
+      "native_relative_path": "independent-browser/downloads/3e407701-c862-4759-af24-d64fd79437ad",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "git_blob": "1f9a742844e70a0e8738785926c437605a2dc0d7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1f9a742844e70a0e8738785926c437605a2dc0d7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/4e9ab7ba-2307-4eb2-a554-b7c81fc9d325",
+      "native_relative_path": "independent-browser/downloads/4e9ab7ba-2307-4eb2-a554-b7c81fc9d325",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "git_blob": "f407a9f7f59866e069ec255a10003b54f4d5a5a7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "f407a9f7f59866e069ec255a10003b54f4d5a5a7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/7c94486b-ac44-4a0d-8f90-c89f51bddbb1",
+      "native_relative_path": "independent-browser/downloads/7c94486b-ac44-4a0d-8f90-c89f51bddbb1",
+      "bytes": 834,
+      "sha256": "38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6",
+      "git_blob": "b1e348324397ee0d716775992d02c4a068a02eec",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "b1e348324397ee0d716775992d02c4a068a02eec"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/aca8dc1f-d1f0-4db0-b864-fc9be678d1c0",
+      "native_relative_path": "independent-browser/downloads/aca8dc1f-d1f0-4db0-b864-fc9be678d1c0",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "git_blob": "f407a9f7f59866e069ec255a10003b54f4d5a5a7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "f407a9f7f59866e069ec255a10003b54f4d5a5a7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/b999becc-97e0-49f1-b3a5-a7e4ad275c49",
+      "native_relative_path": "independent-browser/downloads/b999becc-97e0-49f1-b3a5-a7e4ad275c49",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/ded7335a-f311-4912-bca5-c8dc50dfee0e",
+      "native_relative_path": "independent-browser/downloads/ded7335a-f311-4912-bca5-c8dc50dfee0e",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "git_blob": "1f9a742844e70a0e8738785926c437605a2dc0d7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1f9a742844e70a0e8738785926c437605a2dc0d7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/f714483d-d47e-4ffc-8f1f-aa22b1c0785e",
+      "native_relative_path": "independent-browser/downloads/f714483d-d47e-4ffc-8f1f-aa22b1c0785e",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/fixtures/exact-numeric-world.json",
+      "native_relative_path": "independent-browser/fixtures/exact-numeric-world.json",
+      "bytes": 565,
+      "sha256": "845279e377db83d6e96885c122ffbca2be145778feb8ba19f8d7fd91c1e15995",
+      "git_blob": "c4ce7619b0555e3e6f168095111bb1f7ef3d8499",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "c4ce7619b0555e3e6f168095111bb1f7ef3d8499"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/fixtures/future-clock.json",
+      "native_relative_path": "independent-browser/fixtures/future-clock.json",
+      "bytes": 542,
+      "sha256": "329dad06c84951a96a5c2780492987091caba15ed5d78365d4bd8fb8f1fd5104",
+      "git_blob": "8b1cd3b9966b24bbd5ae1bb85956711b04a726e8",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "8b1cd3b9966b24bbd5ae1bb85956711b04a726e8"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/fixtures/stale-clock.json",
+      "native_relative_path": "independent-browser/fixtures/stale-clock.json",
+      "bytes": 546,
+      "sha256": "63e1388337100493aea1cdab95aed955dbebdf79bce83458e973a0bf0b7f59d7",
+      "git_blob": "fa2bf9eceb53cf35b7c4fdaddf23a744d98d30c1",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "fa2bf9eceb53cf35b7c4fdaddf23a744d98d30c1"
+    },
+    {
+      "native_relative_path": "independent-browser/receipt.json",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/independent-browser/receipt.json",
+      "bytes": 22630,
+      "sha256": "a3d4673fc7d5ebbf373f17d97b79077b8a4410ce56bfe6dec048310f6308d4d5",
+      "git_blob": "095b83e94aad953ed56f0573eb4135829758e10b",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pending-browser/downloads/02c4c6a4-6521-462e-827a-1e349730e5f1",
+      "native_relative_path": "pending-browser/downloads/02c4c6a4-6521-462e-827a-1e349730e5f1",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "native_relative_path": "pending-browser/receipt.json",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pending-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/pending-browser/receipt.json",
+      "bytes": 5341,
+      "sha256": "37352ce4757d0c5d94f8fbaae0e25176bed668b2d2f3e6f4a56303ead05b8c7c",
+      "git_blob": "9ebad06d2cc733a1f1e937e3983a9e7335194da2",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/downloads/3f5600a9-21a2-42cc-a73b-387b7f1026f0",
+      "native_relative_path": "scenario-encounter-browser/downloads/3f5600a9-21a2-42cc-a73b-387b7f1026f0",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/downloads/7a42c9f5-0032-4e0f-977c-30822360d474",
+      "native_relative_path": "scenario-encounter-browser/downloads/7a42c9f5-0032-4e0f-977c-30822360d474",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/downloads/7df4a54c-a8c9-4432-843b-3b93fed67882",
+      "native_relative_path": "scenario-encounter-browser/downloads/7df4a54c-a8c9-4432-843b-3b93fed67882",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/downloads/bc34d308-ed17-4291-91c4-48dc954d1f8f",
+      "native_relative_path": "scenario-encounter-browser/downloads/bc34d308-ed17-4291-91c4-48dc954d1f8f",
+      "bytes": 989,
+      "sha256": "83533bf1971c395f6d31181b8dad53fa5dd52d6607b420566946c37ed03f637a",
+      "git_blob": "1ac0d1d7a3d5f0e89643d35b3487bcee3e62f1d5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1ac0d1d7a3d5f0e89643d35b3487bcee3e62f1d5"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/initial-pair.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/initial-pair.json",
+      "bytes": 636,
+      "sha256": "060f84837e513f857872a82b26667e6239282ef36d205a4c0998e406c85b650b",
+      "git_blob": "2383b1720a47f25c279262e614c0912fc9dc624a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "2383b1720a47f25c279262e614c0912fc9dc624a"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/restored-multiple-flight.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/restored-multiple-flight.json",
+      "bytes": 638,
+      "sha256": "8a03fee1031e2ece789a205cb57d135ac3df7a7e90932022cc4bb1b9f6e19fab",
+      "git_blob": "3d9f7c3ed29acc086a49067244de33db78300376",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "3d9f7c3ed29acc086a49067244de33db78300376"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/same-identities-new-vectors.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/same-identities-new-vectors.json",
+      "bytes": 638,
+      "sha256": "8a03fee1031e2ece789a205cb57d135ac3df7a7e90932022cc4bb1b9f6e19fab",
+      "git_blob": "3d9f7c3ed29acc086a49067244de33db78300376",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "3d9f7c3ed29acc086a49067244de33db78300376"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/single-flight.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/single-flight.json",
+      "bytes": 429,
+      "sha256": "3312d4a46a5f29125b508b0a588b2885c97042c9b87425c63470cf41c2fc32c8",
+      "git_blob": "9bc6c4bb6da369e3bf5120b895b46b70d12ac5bd",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "9bc6c4bb6da369e3bf5120b895b46b70d12ac5bd"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/three-flight-short-horizon.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/three-flight-short-horizon.json",
+      "bytes": 636,
+      "sha256": "060f84837e513f857872a82b26667e6239282ef36d205a4c0998e406c85b650b",
+      "git_blob": "2383b1720a47f25c279262e614c0912fc9dc624a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "2383b1720a47f25c279262e614c0912fc9dc624a"
+    },
+    {
+      "native_relative_path": "scenario-encounter-browser/receipt.json",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-encounter-browser/receipt.json",
+      "bytes": 174535,
+      "sha256": "1b2933e97caaa9cd3a398b7698766447e79c1049357f1b9c2ede853385c47972",
+      "git_blob": "adb387b64a7928d2af5308e484ecf893cbb90566",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "scenario-encounter-browser/scenario-encounter-desktop.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/scenario-encounter-desktop.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-encounter-browser/scenario-encounter-desktop.png",
+      "bytes": 82779,
+      "sha256": "60e7b95aa93d2dbcbec8428a8be9aa2028de8b90b82b06310cf5bd7eab43008d",
+      "git_blob": "a1cd7c4af0416c123c35256329dc24cb5f16220c",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "scenario-encounter-browser/scenario-encounter-phone.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/scenario-encounter-phone.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-encounter-browser/scenario-encounter-phone.png",
+      "bytes": 75813,
+      "sha256": "d0d19c49f869fb5e8083e66d60842667eff8ed503ad519039d1912094b591883",
+      "git_blob": "9c7b93e878db992821431ffaec1fd1227bcf8553",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "encounter-owner-browser/encounter-desktop.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser/encounter-desktop.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/encounter-owner-browser/encounter-desktop.png",
+      "bytes": 88059,
+      "sha256": "51f991d5f741e2f7e60e0b81c031e3baba39e6ad2935564d6eb3c89319b4dbe8",
+      "git_blob": "6a390f355991856ba15cebdcaab5ed3214b8315e",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "encounter-owner-browser/encounter-mobile.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser/encounter-mobile.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/encounter-owner-browser/encounter-mobile.png",
+      "bytes": 75645,
+      "sha256": "4fe77c375cc82e2dd80ade3a28fd85afb0fbbb0aa167cfcca75678a4fcbc8948",
+      "git_blob": "d920fa89885746a6c985ff69daccb975e1457694",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "encounter-owner-browser/encounter-ten-minute.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser/encounter-ten-minute.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/encounter-owner-browser/encounter-ten-minute.png",
+      "bytes": 99655,
+      "sha256": "5ab420e6caee974424e928ef4252dba612873794e01cc71e7ce1321dea8beb74",
+      "git_blob": "59c0f85647719ce257499ccd571c12977b6ff5ad",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "encounter-owner-browser/receipt.json",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/encounter-owner-browser/receipt.json",
+      "bytes": 97699,
+      "sha256": "fb6aba77610916c2fcbb54b08fbb6f7a066513c414875f8a0e6d94ebd961738c",
+      "git_blob": "8a3e725f45d1db36b67da979a0b81f4dfca527c6",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "decision-trace-owner-browser/browser-receipt.json",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/browser-receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/decision-trace-owner-browser/browser-receipt.json",
+      "bytes": 8058,
+      "sha256": "c0980fea40c92241efdc8c5f14ee806c2b12afecc019b76346480af7b95a0cc0",
+      "git_blob": "7aced74ee35391a166433cce53f3a6619a96af42",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "decision-trace-owner-browser/desktop-trace.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/desktop-trace.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/decision-trace-owner-browser/desktop-trace.png",
+      "bytes": 112926,
+      "sha256": "f6e2e43af9d8989f3bbed30467b8ef59549403afbdaff36e225beab87c2923de",
+      "git_blob": "560f0a8d97bb4d62349c77a7a4424b592a704c6c",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/downloaded-native-trace.json",
+      "native_relative_path": "decision-trace-owner-browser/downloaded-native-trace.json",
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/literal-label.json",
+      "native_relative_path": "decision-trace-owner-browser/literal-label.json",
+      "bytes": 1606,
+      "sha256": "96b617cd14d543690c8c9ca968f6933037ae744d1b027942bac3c147c5a7e5ef",
+      "git_blob": "be823e0d0d4899d6e9cbba570035ee5a9feb3c65",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "be823e0d0d4899d6e9cbba570035ee5a9feb3c65"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/live-trace-after-reopen.json",
+      "native_relative_path": "decision-trace-owner-browser/live-trace-after-reopen.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/malformed.json",
+      "native_relative_path": "decision-trace-owner-browser/malformed.json",
+      "bytes": 6,
+      "sha256": "1d8fc6ceb1f94c6326d6d5483d258fcb2e179e9869325b245d105c2219bf69fd",
+      "git_blob": "500db4a86aa30072b5b264d7757986e759205514",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "500db4a86aa30072b5b264d7757986e759205514"
+    },
+    {
+      "native_relative_path": "decision-trace-owner-browser/mobile-trace.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/mobile-trace.png",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/decision-trace-owner-browser/mobile-trace.png",
+      "bytes": 116235,
+      "sha256": "7e9124a75a10f922143991cf540b48ad2f408707f9540c0209712ae0dcd13110",
+      "git_blob": "d448e2ffbd607a1ea2ff13fc452ba2a84b4707ae",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/native-demo.json",
+      "native_relative_path": "decision-trace-owner-browser/native-demo.json",
+      "bytes": 1626,
+      "sha256": "b9fbe266f313340d4ccd5898de57ecbdfe9e62dca9410f3817982b85f69a83b8",
+      "git_blob": "1dadf96ad80fbcdca8dd916a702aa5388748ca15",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1dadf96ad80fbcdca8dd916a702aa5388748ca15"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/tampered.json",
+      "native_relative_path": "decision-trace-owner-browser/tampered.json",
+      "bytes": 1577,
+      "sha256": "c8fd1bccec6806bdd1f5694507582d4f90652f2986d050d87cb087ac496ded00",
+      "git_blob": "836016614d0f723804d15e8a146e1c22d3bf46ee",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "836016614d0f723804d15e8a146e1c22d3bf46ee"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/too-large.json",
+      "native_relative_path": "decision-trace-owner-browser/too-large.json",
+      "bytes": 2097153,
+      "sha256": "e7d99e4db1392275f200e288c860f9780a935c945e2d55f98c1b68a1f9f3fb5c",
+      "git_blob": "1cacbf173b0e3d433d15cbe3849b3666dc2539cf",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1cacbf173b0e3d433d15cbe3849b3666dc2539cf"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/too-many.json",
+      "native_relative_path": "decision-trace-owner-browser/too-many.json",
+      "bytes": 20004,
+      "sha256": "7f2ba034344f0e6adba2c9f599091be027b16c9dde9861474c44ae317e45d593",
+      "git_blob": "62146c599ebfe7b139e81d4fbf96ad3449b35e0a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "62146c599ebfe7b139e81d4fbf96ad3449b35e0a"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/unapproved.json",
+      "native_relative_path": "decision-trace-owner-browser/unapproved.json",
+      "bytes": 1200,
+      "sha256": "96f57ab10b0e70349346aa79665f08e1b8e633b024b75935a8be47d6f5a5858b",
+      "git_blob": "c65ae57954318fb2548f5ef6e64c245d2c86955d",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "c65ae57954318fb2548f5ef6e64c245d2c86955d"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/wrong-order.json",
+      "native_relative_path": "decision-trace-owner-browser/wrong-order.json",
+      "bytes": 1575,
+      "sha256": "b856ca4428c37a2aadbc636826cb2bb1150ca33af13f9c3dc0f60923fdd19bc3",
+      "git_blob": "9411c18b582d128c0312237f8a4f06cf6dc9168c",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "9411c18b582d128c0312237f8a4f06cf6dc9168c"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/wrong-world.json",
+      "native_relative_path": "decision-trace-owner-browser/wrong-world.json",
+      "bytes": 1575,
+      "sha256": "43fcd543451ab967a8281b6a06e8f89f52391588cd0b1f0ad43ef637e1d26c68",
+      "git_blob": "e010324b4e9023e75c95d1aaf367caa10c15c889",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e010324b4e9023e75c95d1aaf367caa10c15c889"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/188dc1b8-9bdf-4f95-a996-92156cc7c4bd",
+      "native_relative_path": "scenario-decision-browser/downloads/188dc1b8-9bdf-4f95-a996-92156cc7c4bd",
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/2390648b-db31-47c7-9a60-86458e9b891f",
+      "native_relative_path": "scenario-decision-browser/downloads/2390648b-db31-47c7-9a60-86458e9b891f",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/464136bc-cb78-4a38-a97f-f8f96d546ccb",
+      "native_relative_path": "scenario-decision-browser/downloads/464136bc-cb78-4a38-a97f-f8f96d546ccb",
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/47788753-b5f0-441c-9a12-51ada99d3229",
+      "native_relative_path": "scenario-decision-browser/downloads/47788753-b5f0-441c-9a12-51ada99d3229",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/4dc58095-ce1e-45a8-abd3-efae8278f4fa",
+      "native_relative_path": "scenario-decision-browser/downloads/4dc58095-ce1e-45a8-abd3-efae8278f4fa",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/5c59255d-de3d-4a19-822c-65da78c6b3c9",
+      "native_relative_path": "scenario-decision-browser/downloads/5c59255d-de3d-4a19-822c-65da78c6b3c9",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/deaf9f25-a405-4c82-a54c-adb4add803c3",
+      "native_relative_path": "scenario-decision-browser/downloads/deaf9f25-a405-4c82-a54c-adb4add803c3",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/fixtures/previous-scenario-decision-trace.json",
+      "native_relative_path": "scenario-decision-browser/fixtures/previous-scenario-decision-trace.json",
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa"
+    },
+    {
+      "native_relative_path": "scenario-decision-browser/receipt.json",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-decision-browser/receipt.json",
+      "bytes": 173159,
+      "sha256": "f8d882dc863383353b8ef8e2149e5c78df4f4fe0dd7096df87ddc7d2eed32f9f",
+      "git_blob": "b6e9b41573a324e4de029671a5f5ca70c4a43047",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "scenario-decision-browser/scenario-with-prior-trace-snapshot.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/scenario-with-prior-trace-snapshot.png",
+      "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/current/screenshots/scenario-with-prior-trace-snapshot.png",
+      "preservation": "existing-identical-blob",
+      "bytes": 69745,
+      "sha256": "d23552046408c9905b3e130e4edec8a967968758c05b1d9401a59b4796187783",
+      "git_blob": "dee6d62661085625b746cf19a41b4976eb44fa04",
+      "mode": "100644",
+      "existing_commit": "e8f8fe37e31067c8dbd789577544525afca5e009"
+    },
+    {
+      "native_relative_path": "pr46-draft-browser/browser-report.json",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pr46-draft-browser/browser-report.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/pr46-draft-browser/browser-report.json",
+      "bytes": 186963,
+      "sha256": "e5d20ff81c8b5cd925dc9e7e2950e66ca903c5dce3604ab294455190d537dfc5",
+      "git_blob": "9ed75675c263696d9c8c35f95d34616f8da1850f",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/29717d2e-7102-4261-ab2a-9584b4f511e7",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/29717d2e-7102-4261-ab2a-9584b4f511e7",
+      "bytes": 813,
+      "sha256": "67657038e8896a80e57edc8881447219a1221513a6c98185dff2304aa3314732",
+      "git_blob": "505b8e0b53a50d1b893b24285881574a34804e14",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "505b8e0b53a50d1b893b24285881574a34804e14"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/3dabc376-875b-4c93-9e74-d7aa00545b31",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/3dabc376-875b-4c93-9e74-d7aa00545b31",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/400a98a2-5d1e-4b2b-a887-89ba347ebc0f",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/400a98a2-5d1e-4b2b-a887-89ba347ebc0f",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/40fea6d0-6c2e-45ee-9f5b-57463def13e8",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/40fea6d0-6c2e-45ee-9f5b-57463def13e8",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/6a60cafe-389a-41c0-ac79-da134761ebf7",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/6a60cafe-389a-41c0-ac79-da134761ebf7",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/6fc3ada3-467c-4a00-b4aa-479fe44ebfb8",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/6fc3ada3-467c-4a00-b4aa-479fe44ebfb8",
+      "bytes": 813,
+      "sha256": "462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362",
+      "git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/c71461c2-7be7-412b-97e7-42f343f8bf5e",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/c71461c2-7be7-412b-97e7-42f343f8bf5e",
+      "bytes": 1006,
+      "sha256": "927edbbba4e505874feaf2ee249c2d4476d3128fa6f06c553fbf7a404cf591b5",
+      "git_blob": "67588b655ffb5c8913f66dd0ec435ec36390cfa7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "67588b655ffb5c8913f66dd0ec435ec36390cfa7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/c768378a-cee3-4e78-9839-3799cc1cc7e4",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/c768378a-cee3-4e78-9839-3799cc1cc7e4",
+      "bytes": 813,
+      "sha256": "462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362",
+      "git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/c9ec5529-9ec0-4980-b28c-b78dd0d4252b",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/c9ec5529-9ec0-4980-b28c-b78dd0d4252b",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/d26ec875-76a8-4ec2-ad94-129bfddcd0d5",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/d26ec875-76a8-4ec2-ad94-129bfddcd0d5",
+      "bytes": 813,
+      "sha256": "67657038e8896a80e57edc8881447219a1221513a6c98185dff2304aa3314732",
+      "git_blob": "505b8e0b53a50d1b893b24285881574a34804e14",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "505b8e0b53a50d1b893b24285881574a34804e14"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/e0adbf88-5f1a-411c-8150-88cbce4e9019",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/e0adbf88-5f1a-411c-8150-88cbce4e9019",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/eebc0377-acd2-49f2-81d1-899ad3bda18a",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/eebc0377-acd2-49f2-81d1-899ad3bda18a",
+      "bytes": 813,
+      "sha256": "462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362",
+      "git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/f5d1c01e-dca7-47d7-b864-e3392dcbdb45",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/f5d1c01e-dca7-47d7-b864-e3392dcbdb45",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/f7f022fd-30f2-4374-ac42-1a8919aef4fe",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/f7f022fd-30f2-4374-ac42-1a8919aef4fe",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/fixtures/apply-target.json",
+      "native_relative_path": "scenario-raw-draft-browser/fixtures/apply-target.json",
+      "bytes": 544,
+      "sha256": "1d8caff411464bb1ee41c0efcb941817c7c61d8a073827ccd8cc006555f9b54a",
+      "git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/fixtures/failed-raw-target.json",
+      "native_relative_path": "scenario-raw-draft-browser/fixtures/failed-raw-target.json",
+      "bytes": 544,
+      "sha256": "1d8caff411464bb1ee41c0efcb941817c7c61d8a073827ccd8cc006555f9b54a",
+      "git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/fixtures/raw-load-target.json",
+      "native_relative_path": "scenario-raw-draft-browser/fixtures/raw-load-target.json",
+      "bytes": 544,
+      "sha256": "1d8caff411464bb1ee41c0efcb941817c7c61d8a073827ccd8cc006555f9b54a",
+      "git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/fixtures/review-target.json",
+      "native_relative_path": "scenario-raw-draft-browser/fixtures/review-target.json",
+      "bytes": 544,
+      "sha256": "1d8caff411464bb1ee41c0efcb941817c7c61d8a073827ccd8cc006555f9b54a",
+      "git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5"
+    },
+    {
+      "native_relative_path": "scenario-raw-draft-browser/receipt.json",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/receipt.json",
+      "path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/scenario-raw-draft-browser/receipt.json",
+      "bytes": 37141,
+      "sha256": "448b18cf7d512dbbc82b43786d917dc5e073290a67e1672e57eb31aca5194837",
+      "git_blob": "98ed2278203bafd22ccba7adf2e2e04e885b7274",
+      "mode": "100644",
+      "preservation": "copied-exact"
+    },
+    {
+      "native_relative_path": "scenario-raw-draft-browser/retained-raw-draft-phone.png",
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/retained-raw-draft-phone.png",
+      "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr46/current/retained-raw-draft-phone.png",
+      "preservation": "existing-identical-blob",
+      "bytes": 25763,
+      "sha256": "705e2bb36141c3893e659bd5d139369ff55b9a142e81c023a79838156dd86313",
+      "git_blob": "7664d7d19b4747be9c935d21ecc71279a6f34fdb",
+      "mode": "100644",
+      "existing_commit": "e8f8fe37e31067c8dbd789577544525afca5e009"
+    }
+  ],
+  "excluded": [
+    {
+      "paths": [
+        "qualification/source-manifest.json",
+        "initial-source-manifest.json",
+        "reset-source-manifest.json"
+      ],
+      "reason": "Their full source lists are preserved in corresponding source-build-pin.json files; standalone duplicate serialization omitted."
+    },
+    {
+      "paths": [
+        "publication-product-transfer.json"
+      ],
+      "reason": "Transport wrapper, not executed product or receiving source; seven exact product leaves are carried in final composition."
+    },
+    {
+      "paths": [
+        "candidate-initial/",
+        "candidate-reset/",
+        "publication-qualified/",
+        "*/profile/",
+        "*/node_modules/",
+        "*/dist/"
+      ],
+      "reason": "Source/build bytes remain pinned by manifests. Runtime bundles, dependencies, temporary profiles and complete captured worktrees are not publication artifacts."
+    }
+  ]
+}

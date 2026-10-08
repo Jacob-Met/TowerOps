@@ -1,0 +1,49 @@
+{
+  "source_tree": "0bcf1ca084c9cca0a422b76d8443a8b543d6e923",
+  "base_commit": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "tests": {
+    "frontend_passed": 182,
+    "native_passed": 91,
+    "skipped": 0
+  },
+  "browser_groups": [
+    {
+      "name": "author",
+      "count": 7,
+      "passed": 7,
+      "receipt": "author-browser/receipt.json",
+      "sha256": "27bacedeef509b044d721b16d345872a62a597b0e5296706695b4681e828c416"
+    },
+    {
+      "name": "independent",
+      "count": 6,
+      "passed": 6,
+      "receipt": "independent-browser/receipt.json",
+      "sha256": "f6a1149afab4dfe0daa1bf1f4a896d47139a18711e89cfe0adb17feecfbf3775"
+    },
+    {
+      "name": "pending",
+      "count": 1,
+      "passed": 1,
+      "receipt": "pending-browser/receipt.json",
+      "sha256": "1b0aa53a0ae7d0c62f9eecb0ef046dd7b0c4470f44732d3525c79e4b6a6819bb"
+    },
+    {
+      "name": "scenario-encounter",
+      "count": 3,
+      "passed": 3,
+      "receipt": "scenario-encounter-browser/receipt.json",
+      "sha256": "1d1227fc6f366715212dda8e8b5d8b90c953b9cac27eea3db686de176b1d8804"
+    },
+    {
+      "name": "encounter-owner",
+      "count": 10,
+      "passed": 10,
+      "receipt": "encounter-owner-browser/receipt.json",
+      "sha256": "be6715430a3b0ed3ce6dbd980473cc0ed7726ff04b63cd19847f04ae0c0c6599"
+    }
+  ],
+  "browser_total": 27,
+  "source_files_unchanged": 143,
+  "native_worker_oracle_passed": true
+}

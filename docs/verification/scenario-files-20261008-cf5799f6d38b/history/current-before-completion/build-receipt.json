@@ -1,0 +1,82 @@
+{
+  "schema": "towerops.scenario-current-native-build.v1",
+  "source_tree": "317ddf06e84c6b08f2e06ce634f5a64b264effd5",
+  "parent": "09b96e31d2867af5b7a9738406d0431cf1010090",
+  "source_files": 136,
+  "source_unchanged": true,
+  "node": "v26.3.0",
+  "python": "Python 3.12.8",
+  "pytest": "8.4.2",
+  "ruff": "ruff 0.16.10",
+  "commands": [
+    {
+      "name": "unit-tests",
+      "command": [
+        "npm",
+        "test",
+        "--",
+        "--reporter=json",
+        "--outputFile=/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/qualification-current/unit-tests.json"
+      ],
+      "cwd": "/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/candidate-current/web/airspace",
+      "exit_code": 0,
+      "seconds": 1.096
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/candidate-current/web/airspace",
+      "exit_code": 0,
+      "seconds": 1.103
+    },
+    {
+      "name": "native-tests",
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/qualification-current/native-tests.xml"
+      ],
+      "cwd": "/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/candidate-current",
+      "exit_code": 0,
+      "seconds": 1.264
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "cwd": "/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/candidate-current",
+      "exit_code": 0,
+      "seconds": 0.138
+    },
+    {
+      "name": "reference",
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "tools/generate_airspace_reference.py",
+        "--check"
+      ],
+      "cwd": "/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/candidate-current",
+      "exit_code": 0,
+      "seconds": 0.071
+    }
+  ],
+  "unit_tests": {
+    "total": 138,
+    "passed": 138,
+    "failed": 0,
+    "pending": 0
+  },
+  "source_manifest_sha256": "be525ef56c42052a56702f6735b11d06f0de63dc7a176192d66278c898c8a2ca"
+}

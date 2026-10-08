@@ -1,0 +1,55 @@
+from pathlib import Path
+import hashlib,json,datetime,shutil,subprocess
+root=Path(__file__).resolve().parent
+owner=Path("/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k")
+source=owner/"candidate"
+sha=lambda b:hashlib.sha256(b).hexdigest()
+blob=lambda b:hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
+raw=(owner/"source-manifest.json").read_bytes()
+if sha(raw)!="238311ba022629ad4cef386c0fd6afee0ee7f94126ccdcaaae7077fef606c50a":raise RuntimeError("nominated source manifest changed")
+manifest=json.loads(raw)
+for row in manifest["source_files"]:
+    body=(source/row["path"]).read_bytes()
+    if sha(body)!=row["sha256"] or len(body)!=row["bytes"]:raise RuntimeError("nominated source mismatch "+row["path"])
+(root/"source-manifest.json").write_bytes(raw)
+primary=(root/"pr46-main.ts").read_bytes()
+if blob(primary)!="d975ab8c55c01b0f6177ad736ed0c6b1fa821599":raise RuntimeError("immutable PR46 primary bytes differ")
+text=primary.decode();lines=text.splitlines()
+fragments=[
+ ("ownership flag","let worldJsonEdited=false;"),
+ ("render preservation","if(!worldJsonEdited&&document.activeElement!==editor)editor.value=JSON.stringify(state,null,2);"),
+ ("explicit export",next(line for line in lines if line.startswith("function exportWorld()"))),
+ ("successful raw load",next(line for line in lines if line.startswith("function loadWorld()"))),
+ ("authored input ownership",next(line for line in lines if line.startswith("$('world-json').addEventListener('input'"))),
+]
+received=(source/"web/airspace/src/main.ts").read_text()
+rows=[]
+for label,fragment in fragments:
+    if fragment not in text or fragment not in received:raise RuntimeError("PR46 edit was not carried verbatim: "+label)
+    rows.append({"label":label,"text":fragment,"sha256":sha(fragment.encode()),"received_verbatim":True})
+(root/"pr46-fragments.json").write_text(json.dumps({
+ "immutable_commit":"8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+ "primary_path":"web/airspace/src/main.ts","primary_git_blob":blob(primary),"primary_sha256":sha(primary),
+ "fragments":rows},indent=2)+"\n")
+dist=source/"web/airspace/dist";files=[]
+for file in sorted(dist.rglob("*")):
+    if file.is_symlink():raise RuntimeError("dist contains symlink")
+    if not file.is_file():continue
+    body=file.read_bytes();files.append({"path":str(file.relative_to(dist)),"bytes":len(body),"sha256":sha(body)})
+if not any(row["path"]=="index.html" for row in files):raise RuntimeError("production build missing")
+(root/"dist-manifest.json").write_text(json.dumps({"root":str(dist),"files":files},indent=2)+"\n")
+result={
+ "schema":"towerops.raw-draft-independent-inputs.v1","captured_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+ "source":str(source),"source_manifest_sha256":sha(raw),"nominated_composition_tree":manifest["candidate_tree"],
+ "nominated_product_source_tree":manifest["product_source_tree"],"verified_source_files":len(manifest["source_files"]),
+ "main_sha256":sha((source/"web/airspace/src/main.ts").read_bytes()),
+ "build_root":str(dist),"build_files":len(files),"build_bytes":sum(row["bytes"] for row in files),
+ "pr46_edits_received_verbatim":len(rows),"runtime":{"node":subprocess.check_output(["node","--version"],text=True).strip(),
+ "chrome":subprocess.check_output(["/Applications/Google Chrome.app/Contents/MacOS/Google Chrome","--version"],text=True).strip(),
+ "puppeteer_module":"/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/puppeteer",
+ "puppeteer_version":json.loads(Path("/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/puppeteer/package.json").read_text())["version"]},
+ "source_and_build_served_read_only":True,"source_or_dependency_copy":False,"owner_git_index_access":False,
+ "owner_build_provenance":str(owner/"qualification/build.stdout.log"),"planned_browser_controls":2,
+}
+(root/"input-receipt.json").write_text(json.dumps(result,indent=2)+"\n")
+print(json.dumps(result,indent=2))

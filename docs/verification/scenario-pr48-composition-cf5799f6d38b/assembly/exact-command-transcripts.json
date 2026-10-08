@@ -1,0 +1,145 @@
+{
+  "schema": "towerops-exact-byte-transcript-archive/v1",
+  "files": [
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-checkout-base.stderr.log",
+      "native_name": "assembly-checkout-base.stderr.log",
+      "bytes": 92,
+      "sha256": "371ca7d8f0afedfa243e5d1db133d3febef386313a41217ed36c65151616adc2",
+      "git_blob": "e69e757120557f595f6a1e7e7e144fd22e69fd62",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "HEAD is now at 53aa504 Merge #50: inspect saved synthetic worlds through the native planner\n"
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-checkout-base.stdout.log",
+      "native_name": "assembly-checkout-base.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-clone.stderr.log",
+      "native_name": "assembly-clone.stderr.log",
+      "bytes": 87,
+      "sha256": "279accfbf65aa3f6972f34eb2879da7c25e2b35c545371e4d41f073f5b8ac93a",
+      "git_blob": "4bbc9611aa71e306eb40dda11921d7312b7c0c3f",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "Cloning into '/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/publication-candidate'...\n"
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-clone.stdout.log",
+      "native_name": "assembly-clone.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-flat-materialize-frozen-tree.stderr.log",
+      "native_name": "assembly-flat-materialize-frozen-tree.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-flat-materialize-frozen-tree.stdout.log",
+      "native_name": "assembly-flat-materialize-frozen-tree.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-flat-object-reachability.stderr.log",
+      "native_name": "assembly-flat-object-reachability.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-flat-object-reachability.stdout.log",
+      "native_name": "assembly-flat-object-reachability.stdout.log",
+      "bytes": 5,
+      "sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8",
+      "git_blob": "5c62b5aa08f761597c5b88d33e6b14b247acac2d",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "tree\n"
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-materialize-frozen-tree.stderr.log",
+      "native_name": "assembly-materialize-frozen-tree.stderr.log",
+      "bytes": 77,
+      "sha256": "99bdbf21457174f63d6f39687e8735f200ff42e14886333a7a7486298a01c1ee",
+      "git_blob": "249d021276b064882a8307926958fcf2a542581a",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "fatal: failed to unpack tree object 8c11186b1a3f6391879fb0aef14738487f09dc2a\n"
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-materialize-frozen-tree.stdout.log",
+      "native_name": "assembly-materialize-frozen-tree.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-resume-materialize-frozen-tree.stderr.log",
+      "native_name": "assembly-resume-materialize-frozen-tree.stderr.log",
+      "bytes": 496,
+      "sha256": "7e29e11bc8b388b69560f07b241eacb11923cf52f53b8d13daa1c4ef85cb1887",
+      "git_blob": "0f6b5c367be317107aafbecdf4405d47762aa1d7",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "error: /private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2/.git/objects: ignoring alternate object stores, nesting too deep\nerror: unable to read sha1 file of web/airspace/src/scenario-file.ts (e499d279563c8b2e027309943caf9098c7e88776)\nerror: unable to read sha1 file of web/airspace/src/scenario-ui.ts (f0b99a3d0e97fbf54fa177397e67b6aa9ade2063)\nerror: unable to read sha1 file of web/airspace/tests/scenario-file.test.ts (450dc4c6d2e9ff0e6e118e696fc34dd47f2d6a49)\n"
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-resume-materialize-frozen-tree.stdout.log",
+      "native_name": "assembly-resume-materialize-frozen-tree.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-resume-object-reachability.stderr.log",
+      "native_name": "assembly-resume-object-reachability.stderr.log",
+      "bytes": 155,
+      "sha256": "c58543f3ea3610c3e7c394c0c954178966f19f3e4ea28cab8fc13ff9797aef50",
+      "git_blob": "dec731dcfb23d58105f07a52fce20c17c4f6842b",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "error: /private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2/.git/objects: ignoring alternate object stores, nesting too deep\n"
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-resume-object-reachability.stdout.log",
+      "native_name": "assembly-resume-object-reachability.stdout.log",
+      "bytes": 5,
+      "sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8",
+      "git_blob": "5c62b5aa08f761597c5b88d33e6b14b247acac2d",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "tree\n"
+    }
+  ]
+}

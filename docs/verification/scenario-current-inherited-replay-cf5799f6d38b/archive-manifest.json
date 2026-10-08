@@ -1,0 +1,301 @@
+{
+  "schema": "towerops-inherited-replay-archive-manifest/v1",
+  "archive": {
+    "path": "receiving-archive.json.gz",
+    "bytes": 250623,
+    "sha256": "6a4b29e2184fc692e047296ea6f47384eb4d8078f61102e3072bf15b9dedf6d6",
+    "git_blob": "262babb26c229f4a1e2ec541bf46b6a6504c52a5",
+    "mode": "100644"
+  },
+  "members": [
+    {
+      "path": "alternatives/browser-8cd/downloads/06ecc3c8-2775-4c1f-b87c-89a66eae2445",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/browser-8cd/downloads/06ecc3c8-2775-4c1f-b87c-89a66eae2445",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/browser-8cd/downloads/490ec05c-29a1-4503-84c2-ddcb29d429fd",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/browser-8cd/downloads/490ec05c-29a1-4503-84c2-ddcb29d429fd",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/browser-8cd/downloads/6758c1d0-e1b7-4f35-a2e9-4ad8b5d7939c",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/browser-8cd/downloads/6758c1d0-e1b7-4f35-a2e9-4ad8b5d7939c",
+      "bytes": 812,
+      "sha256": "e8abe6495e414188a1d0c531d14f1ff5c184d922604b4e6d8bd3b39d93b8097e",
+      "git_blob": "ef1211111a6948d32c38915b228fe2c85b102024",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/browser-8cd/downloads/7e4ab739-894d-41ab-8e29-7e28a3f2b066",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/browser-8cd/downloads/7e4ab739-894d-41ab-8e29-7e28a3f2b066",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/browser-8cd/fixtures/changed-version-scenario.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/browser-8cd/fixtures/changed-version-scenario.json",
+      "bytes": 543,
+      "sha256": "72e11258086baedf41670d94122853e53301f912649e96357401cdc77c9bf536",
+      "git_blob": "14850566b569b68c56b74bb505fc7b97d9e7edc9",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/browser-8cd/receipt.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/browser-8cd/receipt.json",
+      "bytes": 35857,
+      "sha256": "c3defb58b23a9991fa8ce9fb804e0635e6e2a02838332e4e473decce9f8b75f4",
+      "git_blob": "395558164fdef4e242d482e3f102801af27fd902",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/independent_alternative_reset.mjs",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/independent_alternative_reset.mjs",
+      "bytes": 14632,
+      "sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+      "git_blob": "ed39378886a48bac61d9b695ebbd4cc0f030c507",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/input-source-build-pin.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/input-source-build-pin.json",
+      "bytes": 339705,
+      "sha256": "2930e84cc6772fb5df913fc9e0ad5d49e2537df368a8a11cad506cdc0374334b",
+      "git_blob": "1267616a54bb49ac5b30b623d8830444a553b943",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/process-receipt.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/process-receipt.json",
+      "bytes": 2968,
+      "sha256": "119553ce735898b3573ea9bb3cde7cc4fc83e07eff09f2b238b4a429293ec36d",
+      "git_blob": "5f834c10eacbffb506589f47ed6ccb46e86ab38d",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/stderr.log",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "alternatives/stdout.log",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/stdout.log",
+      "bytes": 14292,
+      "sha256": "55b5ea0753e04cf54d82ad0b9675514663b0e759f2c6299a12609800c464e4fa",
+      "git_blob": "e3516c4340d7a39a12b5dd7cc7c7d9199e643766",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "prepare-replay.py.txt",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/prepare-replay.py.txt",
+      "bytes": 3511,
+      "sha256": "b15a47502f5eb1815fb442a5d9b669da07dec6adf668b6af798c5153f83bacac",
+      "git_blob": "1bfff1a6d39b23b87ad410e6ecd71004b225821e",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/downloads/0f0bc869-51d3-447f-9d7c-921e886ffc42",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/downloads/0f0bc869-51d3-447f-9d7c-921e886ffc42",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/downloads/19c893cd-531e-4026-9b79-f32e4fea44ac",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/downloads/19c893cd-531e-4026-9b79-f32e4fea44ac",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/downloads/3559b5ec-752c-45dc-82fe-4301cf7b49f0",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/downloads/3559b5ec-752c-45dc-82fe-4301cf7b49f0",
+      "bytes": 816,
+      "sha256": "f41d502a4767229c1db873501acf64824f55cac44da8edab72607e9d56e91de7",
+      "git_blob": "f5a14f230d17270fe0af005d729abae268cdbd90",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/downloads/4e5aa69f-b673-495a-9a59-8d39590d40bb",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/downloads/4e5aa69f-b673-495a-9a59-8d39590d40bb",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/downloads/98d6ce23-4f8e-4e7d-9a05-96f5fb77e952",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/downloads/98d6ce23-4f8e-4e7d-9a05-96f5fb77e952",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/downloads/9cbfb6d6-4ff1-4dc6-88f1-e2420febafaa",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/downloads/9cbfb6d6-4ff1-4dc6-88f1-e2420febafaa",
+      "bytes": 812,
+      "sha256": "b5ff1edbe50d016452d7a197cc57bc8e32167dfa194d9a08f051208c63e68917",
+      "git_blob": "fea1b93242fa70197ec5070ccb5161ba2c91cd6f",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/downloads/df4ed2c6-5ba8-4def-a92d-59d3d9dbfdfe",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/downloads/df4ed2c6-5ba8-4def-a92d-59d3d9dbfdfe",
+      "bytes": 812,
+      "sha256": "b5ff1edbe50d016452d7a197cc57bc8e32167dfa194d9a08f051208c63e68917",
+      "git_blob": "fea1b93242fa70197ec5070ccb5161ba2c91cd6f",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/fixtures/pending-native-read-target.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/fixtures/pending-native-read-target.json",
+      "bytes": 547,
+      "sha256": "5bbe95bd66fd0d8752c8ff7b447b1b5e9978fcf562d9163344bfe815f0c9206f",
+      "git_blob": "606db113fe17dd9b9dde9fc99d4a84e007b1f9d7",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/fixtures/three-world-target.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/fixtures/three-world-target.json",
+      "bytes": 547,
+      "sha256": "5bbe95bd66fd0d8752c8ff7b447b1b5e9978fcf562d9163344bfe815f0c9206f",
+      "git_blob": "606db113fe17dd9b9dde9fc99d4a84e007b1f9d7",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/fixtures/valid-third-world-raw.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/fixtures/valid-third-world-raw.json",
+      "bytes": 419,
+      "sha256": "0e91b1ac3025912c659927c494057a6629c29a4f7b7e4c63654960e4eadf71ed",
+      "git_blob": "65b88a139a5340aec6466d610606276230dc26c0",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/browser-8cd/receipt.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/receipt.json",
+      "bytes": 14723,
+      "sha256": "5c6e8f4202ab134bad0939db31bd3e7e34c91ed575ce94d399ed80c4ffcee4d6",
+      "git_blob": "028b2763440256ca40f2eee6fb7a4853ff13fd04",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/dist-manifest.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/dist-manifest.json",
+      "bytes": 2620,
+      "sha256": "8a6e87671cd2b10be729b11b6d4025a2d7e1f6a1777ebeb1b56c1b7787f0c06a",
+      "git_blob": "ac0e3dcef2be578b22a498c244fc791bf49792b5",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/independent_raw_draft.mjs",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/independent_raw_draft.mjs",
+      "bytes": 17300,
+      "sha256": "8ab4f56d0f8e0a62f80b72f799268d9e1ee43012dd5e336f6bf5033930db1997",
+      "git_blob": "3a9982ad0f687942cf8249a8f3fc0744a86ce6ac",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/input-receipt.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/input-receipt.json",
+      "bytes": 761,
+      "sha256": "c95d7c38e93aadb963b9b387e3b42d53600f9ec5a45af80c7a86d76629dd2cd2",
+      "git_blob": "eb584c50f5077a76ddfdd170f5ee6466a466b049",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/process-receipt.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/process-receipt.json",
+      "bytes": 2865,
+      "sha256": "80c2579a2f34c71a3e7e716ed0197954821c3b0c03c8a1ee745393e2bcd72c14",
+      "git_blob": "0e617b03aba68b0a9258e047043b296b0170c1ac",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/source-manifest.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/source-manifest.json",
+      "bytes": 335849,
+      "sha256": "885c00a4b6d4196cbb8b3f5fbb1b7aa9bd1b64956cf3b7d81e8691c1b9071705",
+      "git_blob": "478f7379ac6d741b707426ada0da27b06eb116cc",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/stderr.log",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "raw-draft/stdout.log",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/stdout.log",
+      "bytes": 4903,
+      "sha256": "64d344052cd578b06cf94f366be1549b65457e3cf1bc228052f633880bbc0ceb",
+      "git_blob": "5c18e309b6dda63c5f3c5bdcfdaa44c197482697",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "root-source-build-pin.json",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/root-source-build-pin.json",
+      "bytes": 339621,
+      "sha256": "c7a2fd2cee35e79b69fb74a520b15de0b2d697756ea60ac9b2ad68cbd86a2301",
+      "git_blob": "6fe6690b376938de6f9f5dde0b0dce474d200884",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "run-replay.py.txt",
+      "source_path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/run-replay.py.txt",
+      "bytes": 5249,
+      "sha256": "02ff5e90a887a5dc26f496d161328455de9771dc095f8ba6ea4e0a2a8c7a711a",
+      "git_blob": "9067bd5a830ad02d2cca8c81471e9ba8b8c6fbe1",
+      "mode": "100644",
+      "encoding": "utf8"
+    }
+  ],
+  "utf8_preserves_original_byte_encoding_and_newlines": true
+}

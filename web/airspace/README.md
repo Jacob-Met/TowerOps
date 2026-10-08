@@ -133,3 +133,39 @@ The fitted range includes at least 2 NM of margin (10% for wider traffic), round
 If admitted finite values overflow during look-ahead projection or cannot represent usable view bounds, the drawing and range readout say **RADAR VIEW UNAVAILABLE**. This leaves the world and planner policy unchanged; the drawing does not assert that traffic is clear. A canvas too small for its plot displays an enlarge-the-radar message. Grid iteration is bounded even for extreme coordinates.
 
 Focused geometry tests: `npm test -- radar-geometry.test.ts`. The radar changes do not alter selection, raw JSON draft preservation, proposal/approval state, simulation controls or the audit trail.
+
+## Save and reopen a scenario
+
+Open **Save or load a scenario** while traffic is paused and no planner or flight edit is active. **Save scenario file** downloads the current aircraft, complete separation policy, simulation clock, time scale and selected flight as one local JSON file.
+
+Use **Choose scenario file** to read a saved file. Review its aircraft count, clock, selected flight and all seven policy values, then choose **Load reviewed scenario**. Reading and reviewing do not change the simulation. **Cancel import**, malformed files and failed reads preserve the current world, proposal, approval and decision trace. If those values change during a read or review, choose the file again before loading.
+
+Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Loading also clears any earlier alternatives review, even when the saved values are identical. Run the existing planner or **Review alternatives**, then use the approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history.
+
+The existing **Inspect or load a WorldState** workbench continues to accept its original raw world shape. That shape contains only aircraft state and does not carry a policy. Use a scenario file when the separation envelope and clock must travel with the traffic.
+
+An authored raw WorldState JSON draft stays separate from the live simulation during scenario saving, file review, cancellation and loading. Loading a scenario keeps that unfinished text and labels it as a retained draft. Use **Export live world** to replace it with the restored scenario's aircraft; **Save scenario file** always downloads the actual live world and settings. A successful raw **Load into simulation** changes the live world and cancels any pending scenario review. A rejected raw load keeps both the draft and the scenario review available.
+
+### Scenario format v1
+
+The top-level fields are `format: "towerops.airspace-scenario"`, `version: 1`, `world`, `policy`, `now`, `time_scale` and `selected_aircraft_id`. Unknown or missing fields are rejected, including nested world, aircraft and policy fields.
+
+| Value | Supported file values |
+| --- | --- |
+| World | Existing WorldState fields; 1–60 aircraft, unique uppercase callsigns, finite numeric fields and a nonnegative safe integer version |
+| Horizontal separation | 3–10 NM in 0.5 NM steps |
+| Vertical separation | 500–2,500 FT in 100 FT steps |
+| Look-ahead | 2–10 MIN in 0.5 MIN steps |
+| Recorded sample step | Current built-in value, 0.5 MIN |
+| Maximum state age | Current built-in value, 10 SEC |
+| Speed limit | Current built-in value, 6 NM/MIN |
+| Climb limit | Current built-in value, 3,000 FT/MIN |
+| Clock | Finite `now` in seconds, separate from `world.observed_at`; the existing gate still evaluates freshness |
+| Time scale | 0.5–3 in 0.5 steps |
+| Selected flight | An exact callsign in the saved world |
+
+The four built-in policy parameters are included for reproducibility. Version 1 refuses changes to them because the current lab has no controls to represent those changes. Editable parameters use the same ranges and steps as the existing controls.
+
+Files are bounded to 256 KiB of UTF-8 JSON. Finite aircraft values, including signed zero, retain their numeric identity through save and load. The file is read as data and never supplies executable code or a network destination. No file is uploaded or automatically saved to browser storage. Browser download behavior still controls where the requested file is placed.
+
+The scenario-file tests run with the existing `npm test` command. Native receiving scripts and exact before/after evidence are recorded in the accompanying source qualification packet.

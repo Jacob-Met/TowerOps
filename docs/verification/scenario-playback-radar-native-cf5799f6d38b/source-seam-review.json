@@ -1,0 +1,88 @@
+{
+  "schema": "towerops-scenario-playback-radar-independent-source-review/v1",
+  "base_commit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+  "base_tree": "aa483f5d708f4f6f6ab510168884eaf4d25cf9e1",
+  "reviewed_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+  "reviewed_leaves": 1017,
+  "prior_scenario_tree": "3c5ec99fb14fa87cd8487e32608ed52b2d9893c3",
+  "primary_source_preservation": {
+    "all450_unrelated_main_mode_type_blob_entries_exact": true,
+    "all560_historical_scenario_mode_type_blob_entries_exact": true,
+    "five_prior_product_entries_exact": [
+      "web/airspace/index.html",
+      "web/airspace/src/scenario-file.ts",
+      "web/airspace/src/scenario-ui.ts",
+      "web/airspace/style.css",
+      "web/airspace/tests/scenario-file.test.ts"
+    ],
+    "root_source_pin_matches_actual_git_tree": true
+  },
+  "playback_handlers_verbatim": [
+    {
+      "prefix": "function pauseTraffic()",
+      "line_bytes": 120,
+      "sha256": "330ed84cc70e1c879cd8d526789e1c20dd2439716616e850a46cdc7407f0942d",
+      "exact": true
+    },
+    {
+      "prefix": "function addTraffic()",
+      "line_bytes": 438,
+      "sha256": "36fc5e387fdd69d7f65f477439e6e8e9caa8272cfc4f542c67d0c6b63dae691a",
+      "exact": true
+    },
+    {
+      "prefix": "function addCustomFlight()",
+      "line_bytes": 907,
+      "sha256": "6de12e77b2bf47ccfafaef247fb84ef3a09a1b89c659b2fa36715ecaa2679bb8",
+      "exact": true
+    },
+    {
+      "prefix": "function removeSelected()",
+      "line_bytes": 1041,
+      "sha256": "4350b0def105b9510a12fb71f1b7b3cfd488eea972d74eabb4c2dde67c51e3d5",
+      "exact": true
+    },
+    {
+      "prefix": "function loadWorld()",
+      "line_bytes": 895,
+      "sha256": "0f330d88dd8dd9a14ef261a116c52da98a1821c0e28a504f9d25020e6a271ef4",
+      "exact": true
+    },
+    {
+      "prefix": "async function runPlanner()",
+      "line_bytes": 923,
+      "sha256": "6b48830604e75ee5c1a59c39119f41eb30575a5f69d55ef6184ec91244d84e33",
+      "exact": true
+    },
+    {
+      "prefix": "function resetWorld()",
+      "line_bytes": 881,
+      "sha256": "c91a5a8d448f3eaf8c4d66adaeb5df6d8257a76722335c57002b28c77f3c0bf5",
+      "exact": true
+    },
+    {
+      "prefix": "function frame(",
+      "line_bytes": 465,
+      "sha256": "1e1052a0a579b7f41ee8732f288a17ae7d2b29912ad2ee442571b8db19583ca5",
+      "exact": true
+    }
+  ],
+  "radar_import_and_range_literals_verbatim": true,
+  "readme_current_main_prefix": {
+    "bytes": 10600,
+    "sha256": "7e7d509289e988611415d963eab10e5f3267561b2c2369595c4c98fc2cd7c434",
+    "exact": true
+  },
+  "shared_seam_review": [
+    "The explicit scenario Load restores world/policy/clock/rate/selection, pauses traffic, resets frame timing, labels Run traffic and calls render. The current render refits radar and refreshes the encounter explorer from that restored state.",
+    "The owner pauseTraffic helper, automatic-pause call sites, native planner and Reset restoration are byte-exact lines from current 687 main.",
+    "The existing frame integrator and its rate use are byte-exact. Scenario refresh is additive in the run-toggle and time-scale handlers.",
+    "The complete radar README section remains the unchanged current-main prefix; scenario guidance is appended.",
+    "Native owner playback passes 4 desktop and 4 narrow cases on this exact build. Owner radar 19 passes with unchanged predicate bytes and a declared production-dist environment adapter."
+  ],
+  "findings": [],
+  "limits": [
+    "This review covers the shared source composition and actual owner browser behavior. It does not relabel the separately failing Vitest fixture run as a pass.",
+    "Playback intentionally controls RAF scheduling; radar records and forwards native Canvas calls. Neither receiving run is a public deployment qualification."
+  ]
+}

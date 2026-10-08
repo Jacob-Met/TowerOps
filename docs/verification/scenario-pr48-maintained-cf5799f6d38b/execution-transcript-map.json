@@ -1,0 +1,16 @@
+{
+  "schema": "historical-executed-driver-transport-v1",
+  "files": [
+    {
+      "source_path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/receive_existing.py",
+      "original_path": "receive_existing.py",
+      "published_path": "docs/verification/scenario-pr48-maintained-cf5799f6d38b/receive_existing.py.txt",
+      "bytes": 6825,
+      "sha256": "b17896ab3ece6807b215e5e300354caab8fcdcbca97de400a201ed31cf7f00c1",
+      "git_blob": "a132e116e35b55fb575ca800c5cf81ef4cde51f1",
+      "mode": "100644",
+      "not_requalified_python_module": true
+    }
+  ],
+  "reason": "Exact executed outer custody driver retained as a historical transcript; direct replay uses the maintained repository receiver. Raw SIM117 and BLE001 packaging diagnostics are retained."
+}

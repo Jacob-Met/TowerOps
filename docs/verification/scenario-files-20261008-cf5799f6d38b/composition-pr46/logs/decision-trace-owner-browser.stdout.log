@@ -1,0 +1,12 @@
+PASS actual planner approval readback, native review and exact download
+PASS saved file reopened while another world-bound approval remains pending
+PASS hash-valid decision issue: unapproved.json
+PASS hash-valid decision issue: wrong-world.json
+PASS hash-valid decision issue: wrong-order.json
+PASS tampered hash chain
+PASS malformed and excessive event files return short errors without state adoption
+PASS file byte limit refuses before a native request
+PASS native labels stay literal and mobile review fits
+PASS demo document compatibility and later native apply retain the live audit
+PASS missing optional replay source preserves planning and an explicit retry succeeds
+{"passed":true,"controls":11,"output":"/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/decision-trace-owner-browser"}

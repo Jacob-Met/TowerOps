@@ -1,0 +1,9 @@
+# Exact historical receiving bytes remain immutable; see PUBLICATION-LINT.md.
+# The 8d4933 base has no Ruff config. All settings retain Ruff 0.16.10 defaults.
+[lint.extend-per-file-ignores]
+"composition-pr39-pr42/receivers/run-ci-browser-python.py" = ["I001"]
+"composition-pr39-pr42/receivers/run-ci-capture.py" = ["I001", "S102"]
+"independent-review/bootstrap-current-r2.py" = ["I001", "F401", "PLW1510"]
+"independent-review/bootstrap-current.py" = ["I001", "F401", "PLW1510"]
+"independent-review/bootstrap-r2.py" = ["I001", "F401", "PLW1510"]
+"independent-review/bootstrap.py" = ["I001", "F401", "PLW1510"]

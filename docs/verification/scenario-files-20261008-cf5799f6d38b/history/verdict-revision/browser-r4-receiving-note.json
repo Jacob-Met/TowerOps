@@ -1,0 +1,7 @@
+{
+  "own_failed_profile": "/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/browser-r4/profile",
+  "terminated_own_browser_pids": [],
+  "preserved_script_sha256": "85ede6292b5e228c96a09b210432627ecd01880d619fabee71687a531fa5130f",
+  "revised_script_sha256": "3486cd53f70b44ec9d964d45d7e7688f2d3163cfd693af5beb951f583d65aab6",
+  "change": "Record reset/error events on the receiving-only denying CONNECT socket; all product predicates unchanged."
+}

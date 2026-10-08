@@ -1,0 +1,270 @@
+{
+  "source_root": "/private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2",
+  "node": "v26.3.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "controls": [
+    {
+      "name": "actual planner approval readback, native review and exact download",
+      "passed": true,
+      "detail": {
+        "events": 4,
+        "visible_chain_verdict": "HASH CHAIN VALID - 4 EVENTS",
+        "downloaded_sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+        "native_cli": {
+          "ok": true,
+          "chain_valid": true,
+          "advisories": 1,
+          "actuated": 1,
+          "rejects": 0,
+          "issues": []
+        }
+      }
+    },
+    {
+      "name": "saved file reopened while another world-bound approval remains pending",
+      "passed": true,
+      "detail": {
+        "opened_events": 4,
+        "retained_live_trace": "[]",
+        "pending_readback_preserved": true
+      }
+    },
+    {
+      "name": "hash-valid decision issue: unapproved.json",
+      "passed": true,
+      "detail": {
+        "issues": [
+          "d7af68a35f2b: ack recorded without any approval",
+          "d7af68a35f2b: actuation without approval"
+        ]
+      }
+    },
+    {
+      "name": "hash-valid decision issue: wrong-world.json",
+      "passed": true,
+      "detail": {
+        "issues": [
+          "d7af68a35f2b: actuation before_world_hash does not match screened world_hash"
+        ]
+      }
+    },
+    {
+      "name": "hash-valid decision issue: wrong-order.json",
+      "passed": true,
+      "detail": {
+        "issues": [
+          "d7af68a35f2b: ack recorded before approval"
+        ]
+      }
+    },
+    {
+      "name": "tampered hash chain",
+      "passed": true,
+      "detail": [
+        "audit chain integrity check failed"
+      ]
+    },
+    {
+      "name": "malformed and excessive event files return short errors without state adoption",
+      "passed": true,
+      "detail": [
+        "Decision trace has malformed event data and could not be reviewed.",
+        "Decision trace exceeds the 5,000 event limit."
+      ]
+    },
+    {
+      "name": "file byte limit refuses before a native request",
+      "passed": true,
+      "detail": {
+        "native_requests_started": 0
+      }
+    },
+    {
+      "name": "native labels stay literal and mobile review fits",
+      "passed": true,
+      "detail": {
+        "literal_text": true,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    },
+    {
+      "name": "demo document compatibility and later native apply retain the live audit",
+      "passed": true,
+      "detail": {
+        "new_live_events": 4,
+        "imported_history_adopted": false,
+        "visible_chain_verdict": "HASH CHAIN VALID - 4 EVENTS"
+      }
+    },
+    {
+      "name": "missing optional replay source preserves planning and an explicit retry succeeds",
+      "passed": true,
+      "detail": {
+        "real_workers": 1,
+        "planner_available": true,
+        "retry_report": "empty trace"
+      }
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "requests_failed": [
+    {
+      "page": "missing-replay-source",
+      "url": "http://127.0.0.1:60733/python/audit_replay.py",
+      "error": "net::ERR_FAILED"
+    }
+  ],
+  "served_files": [
+    {
+      "path": "assets/index-DT0sfup_.js",
+      "bytes": 56061,
+      "sha256": "e43d0650ee5693680d1e9e3cdf41e4afec34b84f4539802d9f29fb83e428087a"
+    },
+    {
+      "path": "assets/index-_-jBUDYi.css",
+      "bytes": 19281,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "path": "assets/python-worker-CvN6OBkC.js",
+      "bytes": 3631,
+      "sha256": "ee3a0389239a60e88ac2c91d7ed5a1ee6ad7d281996481969dea74138c04b096"
+    },
+    {
+      "path": "captures/airspace-desktop.png",
+      "bytes": 391153,
+      "sha256": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7"
+    },
+    {
+      "path": "captures/airspace-mobile.png",
+      "bytes": 190636,
+      "sha256": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 15199,
+      "sha256": "43c59cb37d7cd2cebd7c2c39f269a8b1f81dad097c6b06caa2d3bbe12c1be0b6"
+    },
+    {
+      "path": "python/audit_replay.py",
+      "bytes": 7927,
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+    },
+    {
+      "path": "python/decision_trace.py",
+      "bytes": 2099,
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+    },
+    {
+      "path": "python/pyodide-lock.json",
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "python/pyodide.asm.js",
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "python/pyodide.asm.wasm",
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "python/pyodide.mjs",
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "python/python_stdlib.zip",
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "python/towerops.py",
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "audit_replay.py",
+      "bytes": 7927,
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+    },
+    {
+      "path": "decision_trace.py",
+      "bytes": 2099,
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+    },
+    {
+      "path": "towerops.py",
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "bytes": 4294,
+      "sha256": "155dc539f71439b9d8849c20a498e74a797d9d7912ca911d6a5e60ff688c8358"
+    },
+    {
+      "path": "web/airspace/src/python.ts",
+      "bytes": 1163,
+      "sha256": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c"
+    },
+    {
+      "path": "web/airspace/src/audit.ts",
+      "bytes": 2397,
+      "sha256": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075"
+    },
+    {
+      "path": "web/airspace/src/core.ts",
+      "bytes": 5158,
+      "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "bytes": 24774,
+      "sha256": "553dcea434b0c1181f7a4cc3bd48fcd8ceeba5ed1ad589aab3003db5faf268c3"
+    },
+    {
+      "path": "web/airspace/src/decision-trace.ts",
+      "bytes": 8484,
+      "sha256": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce"
+    },
+    {
+      "path": "web/airspace/src/decision-trace.css",
+      "bytes": 1564,
+      "sha256": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e"
+    },
+    {
+      "path": "web/airspace/index.html",
+      "bytes": 15097,
+      "sha256": "fdcdda03383d3f2e476d61d96e72d161319ac957ae328a59696034dacc5643e6"
+    },
+    {
+      "path": "web/airspace/package-lock.json",
+      "bytes": 40499,
+      "sha256": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655"
+    },
+    {
+      "path": "tools/verify_decision_trace.mjs",
+      "bytes": 18183,
+      "sha256": "27affb1f6f54029582506967e5587676dcad37054c2cab8bcfe7be6d86fad9e8"
+    }
+  ],
+  "browser": "154.0.8037.98",
+  "url": "http://127.0.0.1:60733/",
+  "python": "Python 3.12.8",
+  "passed": true
+}

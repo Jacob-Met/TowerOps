@@ -1,0 +1,11 @@
+{
+  "repo": "Jacob-Met/TowerOps",
+  "head": "9c6bef26bfef04f1eca264dec533e47e0f270aa8",
+  "tree": "d5d9827824e0d6f79fc54e5565698dc5d5a783ce",
+  "run_id": 37779096644,
+  "job_id": 113317356889,
+  "decoded_log_bytes": 37216,
+  "decoded_log_sha256": "ff5739d8d795e1a03e9b6d45e2d691451c530cb4025a7e87941b3b26a8ba9782",
+  "utf8_bom_preserved": true,
+  "raw_metadata_path": "../hosted-pr47-metadata.json"
+}
