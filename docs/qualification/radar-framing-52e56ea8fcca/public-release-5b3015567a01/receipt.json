@@ -1,0 +1,410 @@
+{
+  "schema": "towerops-radar-public-release-summary/1",
+  "release": {
+    "commit": "5b3015567a01017245c5f715c1bce65e20a06138",
+    "tree": "89a7769301291fb66605eb0a4e45cc9ce285861a",
+    "pages_run": {
+      "id": 37804950753,
+      "head_sha": "5b3015567a01017245c5f715c1bce65e20a06138",
+      "event": "push",
+      "head_branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37804950753",
+      "created_at": "2026-10-08T15:57:19Z",
+      "updated_at": "2026-10-08T15:58:52Z"
+    },
+    "build_job": {
+      "id": 113406670574,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37804950753
+    },
+    "deploy_job": {
+      "id": 113407257636,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37804950753
+    },
+    "source_binding_verified": true,
+    "source_binding_path": "/Users/me/workspace/towerops-radar-52e56ea8fcca/public-receiving/release-source-binding-5b3015567a01-native.json",
+    "native_qualification_path": "/Users/me/workspace/towerops-radar-52e56ea8fcca/evidence/playback-mock-repair-v1-native/result.json",
+    "native_browser_path": "/Users/me/workspace/towerops-radar-52e56ea8fcca/evidence/candidate-v1-browser-driver2/result.json",
+    "native_browser_receipt_role": "Historical author browser receipt is used only for its unchanged Python resource hashes. The release receives its own direct-public browser checks.",
+    "pin_path": "/Users/me/workspace/towerops-radar-52e56ea8fcca/public-receiving/release-pin-5b3015567a01.json",
+    "source_binding_sha256": "b0f773ae458740e4d348d245faebb503bf97757a1c925c11915ecea2ddfbd374",
+    "native_qualification_sha256": "1208f5d558746000b1bc762bffcaf1399dc7e0e0747fda92c3e4a11f69969730",
+    "native_browser_receipt_sha256": "ff2f1330fa757f53298d602a6b072d499a17b1e067a042a7daf6a500b8036be5",
+    "recorded_at": "2026-10-08T16:02:10.702Z"
+  },
+  "before": {
+    "source_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+    "pages_run": 37783250887,
+    "started_at": "2026-10-08T15:08:15.887Z",
+    "finished_at": "2026-10-08T15:08:19.444Z",
+    "direct_browser": true,
+    "reproduced": true,
+    "near_px": 63.4666666666667,
+    "translated_px": 0.9472636815920623
+  },
+  "after": {
+    "started_at": "2026-10-08T16:02:48.547Z",
+    "finished_at": "2026-10-08T16:02:57.116Z",
+    "browser": "Chrome/154.0.8037.98",
+    "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+    "boundary": "Direct public HTTPS navigation and real keyboard/pointer input in a new native Mac Chrome profile. No local mirror or response substitution. The narrow viewport is desktop emulation, not physical-phone acceptance.",
+    "checks": [
+      {
+        "name": "actual public product and Python bytes match the exact qualified release",
+        "passed": true,
+        "details": [
+          {
+            "path": "assets/index-CLwLT_75.js",
+            "exact": true
+          },
+          {
+            "path": "assets/index-BHHse_Io.css",
+            "exact": true
+          },
+          {
+            "path": "assets/python-worker-D9QUacUJ.js",
+            "exact": true
+          },
+          {
+            "path": "index.html",
+            "exact": true
+          },
+          {
+            "path": "python/pyodide.mjs",
+            "exact": true
+          },
+          {
+            "path": "python/python_stdlib.zip",
+            "exact": true
+          },
+          {
+            "path": "python/pyodide.asm.wasm",
+            "exact": true
+          },
+          {
+            "path": "python/pyodide-lock.json",
+            "exact": true
+          },
+          {
+            "path": "python/pyodide.asm.js",
+            "exact": true
+          },
+          {
+            "path": "python/towerops.py",
+            "exact": true
+          }
+        ]
+      },
+      {
+        "name": "Chrome itself loaded the pinned public index, app and stylesheet",
+        "passed": true,
+        "details": [
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+            "status": 200,
+            "bytes": 15485,
+            "sha256": "ea6f785d08a05249dcdcb648f7d8a9fa24c1cbe05a21b618a2aeba151b38ee2e",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-BHHse_Io.css",
+            "status": 200,
+            "bytes": 20856,
+            "sha256": "15c8901b2335cfbe0fa49187ebaa7a30cfbe959bfa5be22fa2727d2e840af009",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-CLwLT_75.js",
+            "status": 200,
+            "bytes": 57665,
+            "sha256": "b6d32ffc38b4e2c405d62393adc67d632eda3f681c2648c823e1f39f312a09d1",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+            "status": 200,
+            "bytes": 4419,
+            "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+            "status": 200,
+            "bytes": 13931,
+            "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+            "status": 200,
+            "bytes": 112205,
+            "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+            "status": 200,
+            "bytes": 1255688,
+            "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+            "status": 200,
+            "bytes": 2360737,
+            "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+            "status": 200,
+            "bytes": 10105545,
+            "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+            "status": 200,
+            "bytes": 19462,
+            "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+            "exact": true
+          }
+        ]
+      },
+      {
+        "name": "public near and translated imports preserve coordinates and screen scale",
+        "passed": true,
+        "details": {
+          "near_px": 60.799999999999955,
+          "translated_px": 60.799999999999955
+        }
+      },
+      {
+        "name": "public north ticks are absolute and increase upward",
+        "passed": true,
+        "details": [
+          {
+            "method": "fillText",
+            "args": [
+              "985",
+              57,
+              483,
+              54
+            ],
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "990",
+              57,
+              407,
+              54
+            ],
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "995",
+              57,
+              331,
+              54
+            ],
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "1000",
+              57,
+              255,
+              54
+            ],
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "1005",
+              57,
+              179,
+              54
+            ],
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "1010",
+              57,
+              103,
+              54
+            ],
+            "textAlign": "right"
+          },
+          {
+            "method": "fillText",
+            "args": [
+              "1015",
+              57,
+              27,
+              54
+            ],
+            "textAlign": "right"
+          }
+        ]
+      },
+      {
+        "name": "public pointer selection and390px rendering retain the inactive raw draft",
+        "passed": true,
+        "details": {
+          "separation_px": 30.133333333333326,
+          "canvas": {
+            "width": 318,
+            "height": 320
+          }
+        }
+      },
+      {
+        "name": "public export/reset still restores the canonical crossing",
+        "passed": true
+      },
+      {
+        "name": "public CPython proposal retains the exact displayed world",
+        "passed": true
+      },
+      {
+        "name": "public native readback applies one revision and a valid four-event audit",
+        "passed": true,
+        "details": "4 EVENTS / VALID"
+      },
+      {
+        "name": "public admitted projection overflow is explicit and leaves the input intact",
+        "passed": true
+      },
+      {
+        "name": "all observed pinned browser response bodies match",
+        "passed": true,
+        "details": [
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+            "status": 200,
+            "bytes": 15485,
+            "sha256": "ea6f785d08a05249dcdcb648f7d8a9fa24c1cbe05a21b618a2aeba151b38ee2e",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-BHHse_Io.css",
+            "status": 200,
+            "bytes": 20856,
+            "sha256": "15c8901b2335cfbe0fa49187ebaa7a30cfbe959bfa5be22fa2727d2e840af009",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-CLwLT_75.js",
+            "status": 200,
+            "bytes": 57665,
+            "sha256": "b6d32ffc38b4e2c405d62393adc67d632eda3f681c2648c823e1f39f312a09d1",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+            "status": 200,
+            "bytes": 4419,
+            "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+            "status": 200,
+            "bytes": 13931,
+            "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+            "status": 200,
+            "bytes": 112205,
+            "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+            "status": 200,
+            "bytes": 1255688,
+            "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+            "status": 200,
+            "bytes": 2360737,
+            "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+            "status": 200,
+            "bytes": 10105545,
+            "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+            "exact": true
+          },
+          {
+            "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+            "status": 200,
+            "bytes": 19462,
+            "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+            "exact": true
+          }
+        ]
+      },
+      {
+        "name": "public page has no script or request failures",
+        "passed": true,
+        "details": {
+          "page_errors": [],
+          "request_failures": []
+        }
+      }
+    ],
+    "near_px": 60.799999999999955,
+    "translated_px": 60.799999999999955,
+    "canvas": {
+      "width": 847.625,
+      "height": 520
+    },
+    "narrow_px": 30.133333333333326,
+    "narrow_canvas": {
+      "width": 318,
+      "height": 320
+    },
+    "narrow_document_width": 390,
+    "range": "AUTO FIT +/- 15 NM",
+    "readback_audit": "4 EVENTS / VALID",
+    "exact_http_assets": 10,
+    "exact_observed_browser_responses": 10,
+    "page_errors": [],
+    "request_failures": []
+  },
+  "archive": {
+    "path": "native-receiving.json.gz",
+    "bytes": 231414,
+    "sha256": "b2c7ed7cabeb0a4bcd697c0e958f4625e4bc4f01eeb4a28fa4a5d95358c21526",
+    "git_blob": "729cb85186000782d5b6e3daabd047d7c198238d",
+    "members": 19
+  },
+  "limits": [
+    "The before result is the observed historical 093f88b deployment; it is not relabeled as the immediately preceding playback release.",
+    "The after result is direct public HTTPS native Chrome execution, with every expected bundle and Python resource byte bound to the qualified actual composition.",
+    "The 390px viewport is desktop browser emulation; physical phone, Safari and subjective human review remain unclaimed.",
+    "Existing aircraft metadata label crowding remains; the repair frames traffic and projections without adding pan/zoom or changing world state."
+  ]
+}

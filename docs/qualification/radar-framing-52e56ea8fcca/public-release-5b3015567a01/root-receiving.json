@@ -1,0 +1,64 @@
+{
+  "schema": "towerops-radar-public-root-receiving/1",
+  "repository": "Jacob-Met/TowerOps",
+  "release": {
+    "commit": "5b3015567a01017245c5f715c1bce65e20a06138",
+    "tree": "89a7769301291fb66605eb0a4e45cc9ce285861a",
+    "run": 37804950753,
+    "buildJob": 113406670574,
+    "deployJob": 113407257636,
+    "allCompletedSuccessfully": true
+  },
+  "nativePublicReceiving": {
+    "started": "2026-10-08T16:02:48.547Z",
+    "finished": "2026-10-08T16:02:57.116Z",
+    "checks": 11,
+    "passed": 11,
+    "actualHttpAssets": 10,
+    "actualBrowserResponses": 10,
+    "pageErrors": 0,
+    "requestFailures": 0,
+    "nearPx": 60.799999999999955,
+    "translatedPx": 60.799999999999955,
+    "narrowPx": 30.133333333333326
+  },
+  "transfer": {
+    "manifestSHA256": "4d204925684ca922c5d389c2acb2674bc77e0b1fcdc1c098bff7a5dbf8764e63",
+    "textPayloadSHA256": "9f1653078e15414dc0a815857fc25f27ee48b6ee872ba16225b1a230ee336dc0",
+    "allTwoTextFilesBytesSHA256GitBlobVerified": true,
+    "orderedBase64Parts": 6,
+    "allPartLengthsAndSHA256Verified": true,
+    "archiveBytes": 231414,
+    "archiveSHA256": "b2c7ed7cabeb0a4bcd697c0e958f4625e4bc4f01eeb4a28fa4a5d95358c21526",
+    "archiveGitBlob": "729cb85186000782d5b6e3daabd047d7c198238d"
+  },
+  "archiveReceiving": {
+    "members": 19,
+    "allMemberBytesSHA256GitBlobVerified": true,
+    "method": "Root independently read and decompressed the exact native gzip; all 19 decoded bodies matched member lengths, SHA256 and Git object IDs.",
+    "rootWrapperNegative": "The first output wrapper attempted JSON parsing through the RDC process footer and failed after the native member verification completed. Root then parsed only the original JSON result line; no product or artifact bytes changed."
+  },
+  "rootReview": {
+    "directDriverRead": true,
+    "canvasObserverCallsOriginalMethods": true,
+    "noNetworkResponseSubstitution": true,
+    "actualBeforeAfterAndNarrowImagesInspected": true,
+    "visualFinding": "Historical translated tracks coincide near the upper-right; accepted release places both tracks near the center with absolute north labels increasing upward. Narrow viewport retains selection and framing; aircraft metadata crowding remains."
+  },
+  "history": {
+    "beforeCommit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+    "beforePagesRun": 37783250887,
+    "nearPx": 63.4666666666667,
+    "translatedPx": 0.9472636815920623,
+    "failedIntermediateCommit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+    "failedIntermediateRun": 37799166962,
+    "compatibilityRepairPR": 55
+  },
+  "limits": [
+    "The before result is the observed historical 093f88b deployment; it is not relabeled as the immediately preceding playback release.",
+    "The after result is direct public HTTPS native Chrome execution, with every expected bundle and Python resource byte bound to the qualified actual composition.",
+    "The 390px viewport is desktop browser emulation; physical phone, Safari and subjective human review remain unclaimed.",
+    "Existing aircraft metadata label crowding remains; the repair frames traffic and projections without adding pan/zoom or changing world state."
+  ],
+  "evidenceOnly": true
+}
