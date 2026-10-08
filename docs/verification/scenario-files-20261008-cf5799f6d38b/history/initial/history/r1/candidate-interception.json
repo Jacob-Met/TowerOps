@@ -1,0 +1,56 @@
+{
+  "observed": {
+    "python": "Loading real TowerOps Python… (first run only)",
+    "proposal": "No proposal yet. The planner only returns a setpoint if it clears the separation policy.",
+    "run_disabled": true,
+    "approve_disabled": true
+  },
+  "clientLogs": [
+    "worker-created http://127.0.0.1:65156/TowerOps/airspace/assets/python-worker-Dt6KeInE.js"
+  ],
+  "requests": [
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "3f8f6caa2ca2b7a60a4adc4a7be98ecc2d8eef264599c49ccec2e0db0da3c053"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/assets/index-AAJY_5y0.css",
+      "status": 200,
+      "sha256": "79d338fcb0216bd3fbe1c353fd5ebae187f31ba0551389829c8da1bb3a4f9c4a"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/assets/index-DL7pjmuN.js",
+      "status": 200,
+      "sha256": "1a2127e5fd304828c1fc3d3f5b8a181d8c64a8a365a4083fa561a319270b6094"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/assets/python-worker-Dt6KeInE.js",
+      "status": 200,
+      "sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    }
+  ],
+  "external": []
+}

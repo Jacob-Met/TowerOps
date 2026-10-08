@@ -1,0 +1,40 @@
+{
+  "format": "towerops.airspace-scenario",
+  "version": 1,
+  "world": {
+    "version": 1,
+    "observed_at": 1000,
+    "aircraft": [
+      {
+        "aircraft_id": "TWR218",
+        "x_nm": -5,
+        "y_nm": 0,
+        "altitude_ft": 10000,
+        "vx_nm_min": 1,
+        "vy_nm_min": 0,
+        "climb_ft_min": 0
+      },
+      {
+        "aircraft_id": "TWR419",
+        "x_nm": 5,
+        "y_nm": 0,
+        "altitude_ft": 10000,
+        "vx_nm_min": -1,
+        "vy_nm_min": 0,
+        "climb_ft_min": 0
+      }
+    ]
+  },
+  "policy": {
+    "min_horizontal_nm": 5,
+    "min_vertical_ft": 1000,
+    "horizon_min": 5,
+    "sample_step_min": 0.5,
+    "max_state_age_sec": 10,
+    "max_speed_nm_min": 6,
+    "max_climb_ft_min": 3000
+  },
+  "now": 1000,
+  "time_scale": 1,
+  "selected_aircraft_id": "TWR218"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "scenario-decision-browser",
+  "command": [
+    "node",
+    "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/receivers/scenario-decision-trace.mjs",
+    "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2",
+    "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/trace-r2-scenario-decision-browser"
+  ],
+  "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2",
+  "exit_code": 0,
+  "seconds": 8.627,
+  "source_tree": "8ac56fee8a2f65503f8cd118c11d4379a521cfcf"
+}

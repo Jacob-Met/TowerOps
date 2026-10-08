@@ -1,0 +1,103 @@
+from pathlib import Path
+import hashlib
+import json
+import os
+import subprocess
+import time
+
+root = Path("/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj")
+repo = root / "candidate-initial"
+base = "093f88b29d6e1ede778f967528c7e010b7689ab1"
+env = {**os.environ, "GIT_OPTIONAL_LOCKS": "0", "PYTHONDONTWRITEBYTECODE": "1",
+       "NODE_PATH": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules"}
+def git(*args):
+    return subprocess.check_output(["git", *args], cwd=repo, env=env)
+path = "web/airspace/style.css"
+original = git("show", "8d4933f33a0f5e0673fa9d00002e8b29302a1c53:" + path)
+scenario = git("show", "efd5d1d99edc0595111e15836c18a9b178abb4c3:" + path)
+advisory = git("show", base + ":" + path)
+assert scenario.startswith(original) and advisory.startswith(original)
+(root / "style-conflict-before-resolution.txt").write_bytes((repo / path).read_bytes())
+combined = advisory + scenario[len(original):]
+(repo / path).write_bytes(combined)
+git("add", "--", path)
+(root / "style-resolution.json").write_text(json.dumps({
+    "rule": "Preserve the complete PR48 stylesheet, then append the exact scenario suffix from the frozen PR46 source.",
+    "base_sha256": hashlib.sha256(original).hexdigest(),
+    "pr48_sha256": hashlib.sha256(advisory).hexdigest(),
+    "scenario_suffix_sha256": hashlib.sha256(scenario[len(original):]).hexdigest(),
+    "combined_sha256": hashlib.sha256(combined).hexdigest(),
+    "scenario_suffix_bytes": len(scenario) - len(original),
+    "pr48_suffix_bytes": len(advisory) - len(original)}, indent=2) + "\n")
+products = set(json.loads((root / "setup-info.json").read_bytes())["owned_product_paths"])
+def tree_entries(tree):
+    out = {}
+    for item in git("ls-tree", "-rz", "--full-tree", tree).split(b"\0"):
+        if not item:
+            continue
+        info, raw_path = item.split(b"\t", 1)
+        mode, kind, blob = info.decode().split()
+        out[raw_path.decode()] = {"mode": mode, "type": kind, "git_blob": blob}
+    return out
+current_tree = git("write-tree").decode().strip()
+before, after = tree_entries(base), tree_entries(current_tree)
+for name, entry in before.items():
+    if name not in products:
+        assert after[name] == entry, name
+assert set(after) == set(before) | products
+files = []
+for name, entry in sorted(after.items()):
+    data = (repo / name).read_bytes()
+    assert hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest() == entry["git_blob"], name
+    files.append({"path": name, **entry, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
+manifest = {"schema": "towerops.pr48-scenario-source.v1", "source_root": str(repo),
+            "source_tree": current_tree, "base_commit": base,
+            "base_tree": git("rev-parse", base + "^{tree}").decode().strip(),
+            "source_files": files, "owned_product_paths": sorted(products),
+            "unowned_base_leaves_exact": len(before) - len(products & set(before)),
+            "stage": "Initial composition, before independent alternative-reset receiving."}
+manifest_path = root / "initial-source-manifest.json"
+manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
+(root / "initial-composition.patch").write_bytes(git("diff", "--binary", base, current_tree, "--", *sorted(products)))
+for name in ("web/airspace/src/main.ts", "web/airspace/README.md", "web/airspace/index.html"):
+    (root / (Path(name).name + ".pr48-composition-diff.txt")).write_bytes(
+        git("diff", "--no-ext-diff", "--unified=5", "efd5d1d99edc0595111e15836c18a9b178abb4c3", current_tree, "--", name))
+dependencies = Path("/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/web/airspace/node_modules")
+assert dependencies.is_dir()
+lock = "web/airspace/package-lock.json"
+assert (repo / lock).read_bytes() == (dependencies.parent / "package-lock.json").read_bytes()
+link = repo / "web/airspace/node_modules"
+assert not link.exists()
+link.symlink_to(dependencies, target_is_directory=True)
+print(json.dumps({"source_tree": current_tree, "files": len(files),
+                  "unowned_preserved": manifest["unowned_base_leaves_exact"],
+                  "manifest": str(manifest_path), "manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest()}), flush=True)
+command = ["npm", "run", "build", "--", "--configLoader", "native"]
+start = time.monotonic()
+with (root / "initial-build.stdout.log").open("xb") as stdout, (root / "initial-build.stderr.log").open("xb") as stderr:
+    result = subprocess.run(command, cwd=repo / "web/airspace", env=env, stdout=stdout, stderr=stderr, timeout=300)
+receipt = {"command": command, "cwd": str(repo / "web/airspace"), "exit_code": result.returncode,
+           "seconds": round(time.monotonic()-start, 3), "source_tree": current_tree,
+           "dependency_source": str(dependencies),
+           "loader_choice": "Native configuration loading avoids a generated bundled-config cache in the shared dependency directory."}
+(root / "initial-build-receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
+print(json.dumps(receipt), flush=True)
+if result.returncode:
+    print((root / "initial-build.stderr.log").read_text(errors="replace")[-4000:], flush=True)
+    print((root / "initial-build.stdout.log").read_text(errors="replace")[-4000:], flush=True)
+    raise SystemExit(result.returncode)
+build_root = repo / "web/airspace/dist"
+build_files = []
+for file in sorted(build_root.rglob("*")):
+    if file.is_file():
+        data = file.read_bytes()
+        build_files.append({"path": str(file.relative_to(build_root)), "bytes": len(data),
+                            "sha256": hashlib.sha256(data).hexdigest()})
+for entry in files:
+    assert hashlib.sha256((repo / entry["path"]).read_bytes()).hexdigest() == entry["sha256"], entry["path"]
+assert git("write-tree").decode().strip() == current_tree
+pin = {**manifest, "build_root": str(build_root), "build_files": build_files}
+pin_path = root / "initial-source-build-pin.json"
+pin_path.write_text(json.dumps(pin, indent=2) + "\n")
+print(json.dumps({"pin": str(pin_path), "pin_sha256": hashlib.sha256(pin_path.read_bytes()).hexdigest(),
+                  "source_tree": current_tree, "source_files": len(files), "build_files": len(build_files)}), flush=True)

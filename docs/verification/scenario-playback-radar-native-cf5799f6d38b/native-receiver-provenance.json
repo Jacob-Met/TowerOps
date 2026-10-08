@@ -1,0 +1,38 @@
+{
+  "schema": "towerops-owner-receiving-provenance/v1",
+  "base_commit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+  "source_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+  "playback": {
+    "pr": 44,
+    "merged_commit": "7865ffeda311b711b13f2d04fedeeef5c432017e",
+    "archive_path": "docs/qualification/playback-55e3-20261008/native-093-0893/receiving-text.json.gz",
+    "archive_sha256": "ebbcfa95201660c59a7c5421ddd4adb17ed7c86d9bba1bcbeb3633279c788554",
+    "member": "receiving-browser.mjs",
+    "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+    "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49",
+    "adapter": false
+  },
+  "radar": {
+    "pr": 53,
+    "merged_commit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+    "archive_path": "docs/qualification/radar-framing-52e56ea8fcca/native-receiving.json.gz",
+    "archive_sha256": "1540c789c3a071d42409e36cd98df4b849a9aa47f7382914e2cd4a7f45a437c9",
+    "member": "browser-v1-driver2.mjs",
+    "original_sha256": "7dc85c569334dad1d8c50a5023390e77795587a962d49cf1e9be53de39e0982e",
+    "original_git_blob": "aa614261ecc7426afc2f67803d8550e21f2598d8",
+    "adapter_sha256": "0a5008339e17ab794c84716de7996dd4c25b3986c2192abb3f8d575f14d70309",
+    "predicate_region_bytes": 8767,
+    "predicate_region_sha256": "b0b59f24cdd51da85aeeca9326fc8cf3b201d604d9e7c5b39e8f2df38d453e38",
+    "predicate_region_unchanged": true
+  },
+  "runtime": {
+    "node": "26.3.0",
+    "chrome": "154.0.8037.98",
+    "puppeteer": "25.12.0",
+    "device": "Mac.lan",
+    "fresh_disposable_profiles": true,
+    "dependency_installations": 0
+  },
+  "no_product_source_edits": true,
+  "public_pages_not_executed": true
+}

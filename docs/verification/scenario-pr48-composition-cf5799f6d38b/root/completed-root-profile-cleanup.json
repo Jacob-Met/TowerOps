@@ -1,0 +1,21 @@
+{
+  "reason": "Reclaim only three completed root-authored synthetic browser profiles.",
+  "qualification": "Prior root-wire process 98920 was observed exit0; source and all receiving receipts/screenshots are retained.",
+  "active_profile_processes": [],
+  "deleted": [
+    {
+      "path": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/author-browser/profile",
+      "prior_disk_kib": "22028"
+    },
+    {
+      "path": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/independent-browser/profile",
+      "prior_disk_kib": "29528"
+    },
+    {
+      "path": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/pending-browser/profile",
+      "prior_disk_kib": "18760"
+    }
+  ],
+  "free_bytes_before": 826335232,
+  "free_bytes_after": 898375680
+}

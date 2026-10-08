@@ -1,0 +1,193 @@
+{
+  "schema": "towerops.root.audit-wire-qualified.v1",
+  "root": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43",
+  "source_tree": "9ed528ac4281d4ec098b4717d909a08869057d40",
+  "base_commit": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+  "source_files": 139,
+  "source_unchanged": true,
+  "unit_tests": {
+    "numTotalTests": 159,
+    "numPassedTests": 159,
+    "numFailedTests": 0,
+    "numPendingTests": 0
+  },
+  "browsers": [
+    {
+      "name": "author",
+      "passed": 7,
+      "total": 7,
+      "source_tree": "9ed528ac4281d4ec098b4717d909a08869057d40"
+    },
+    {
+      "name": "independent",
+      "passed": 6,
+      "total": 6,
+      "source_tree": "9ed528ac4281d4ec098b4717d909a08869057d40"
+    },
+    {
+      "name": "pending",
+      "passed": 1,
+      "total": 1,
+      "source_tree": "9ed528ac4281d4ec098b4717d909a08869057d40"
+    }
+  ],
+  "commands": [
+    {
+      "name": "clone-private",
+      "command": [
+        "git",
+        "clone",
+        "--shared",
+        "--no-checkout",
+        "--quiet",
+        "/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/candidate-current-r2",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43",
+      "exit_code": 0,
+      "seconds": 0.039
+    },
+    {
+      "name": "fetch-public-base",
+      "command": [
+        "git",
+        "fetch",
+        "--no-tags",
+        "https://github.com/Jacob-Met/TowerOps.git",
+        "5ae808749c8624d9e267d23997beaa3ae5220dbc"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+      "exit_code": 0,
+      "seconds": 0.889
+    },
+    {
+      "name": "checkout-base",
+      "command": [
+        "git",
+        "checkout",
+        "--detach",
+        "5ae808749c8624d9e267d23997beaa3ae5220dbc"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+      "exit_code": 0,
+      "seconds": 0.112
+    },
+    {
+      "name": "stage-feature",
+      "command": [
+        "git",
+        "add",
+        "--",
+        "web/airspace/src/scenario-file.ts",
+        "web/airspace/src/scenario-ui.ts",
+        "web/airspace/src/main.ts",
+        "web/airspace/index.html",
+        "web/airspace/style.css",
+        "web/airspace/tests/scenario-file.test.ts",
+        "web/airspace/README.md"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+      "exit_code": 0,
+      "seconds": 0.028
+    },
+    {
+      "name": "unit-tests",
+      "command": [
+        "npm",
+        "test",
+        "--",
+        "--reporter=json",
+        "--outputFile=/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/qualification/unit-tests.json"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate/web/airspace",
+      "exit_code": 0,
+      "seconds": 1.311
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate/web/airspace",
+      "exit_code": 0,
+      "seconds": 1.295
+    },
+    {
+      "name": "native-tests",
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/qualification/native-tests.xml"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+      "exit_code": 0,
+      "seconds": 1.234
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+      "exit_code": 0,
+      "seconds": 0.128
+    },
+    {
+      "name": "reference",
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "tools/generate_airspace_reference.py",
+        "--check"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+      "exit_code": 0,
+      "seconds": 0.048
+    },
+    {
+      "name": "author-browser",
+      "command": [
+        "node",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/author.mjs",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/author-browser"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43",
+      "exit_code": 0,
+      "seconds": 10.797
+    },
+    {
+      "name": "independent-browser",
+      "command": [
+        "node",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/independent.mjs",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/independent-browser"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43",
+      "exit_code": 0,
+      "seconds": 13.083
+    },
+    {
+      "name": "pending-browser",
+      "command": [
+        "node",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/pending.mjs",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/candidate",
+        "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/pending-browser"
+      ],
+      "cwd": "/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43",
+      "exit_code": 0,
+      "seconds": 2.913
+    }
+  ],
+  "native_tests": "See exact JUnit and stdout; actual Python source is unchanged but public wire interoperability is included in the composed frontend gate."
+}

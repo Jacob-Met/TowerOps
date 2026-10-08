@@ -1,0 +1,9 @@
+{
+  "rule": "Preserve the complete PR48 stylesheet, then append the exact scenario suffix from the frozen PR46 source.",
+  "base_sha256": "60ac7716411dbca61f354dd876beb5cc752f8ded864299c25c625885cf0085cc",
+  "pr48_sha256": "9abb24f39088be588aff941dc1a456cb9cdf27fbb085d1514b68900b934dbe8f",
+  "scenario_suffix_sha256": "52eea13c07a42dcf2d1bf55ce922623dad739bec391e3f14b760f83aa75c144c",
+  "combined_sha256": "efe5faa57342fb4ba3215e0fc60bf59f780e9469ca9f123758c7b9923550829c",
+  "scenario_suffix_bytes": 1058,
+  "pr48_suffix_bytes": 2550
+}

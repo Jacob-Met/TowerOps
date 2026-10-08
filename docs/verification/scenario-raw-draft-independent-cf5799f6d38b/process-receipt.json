@@ -1,0 +1,18 @@
+{
+  "schema": "towerops.raw-draft-independent-process.v1",
+  "started_utc": "2026-10-08T13:24:40.675739+00:00",
+  "ended_utc": "2026-10-08T13:24:45.286114+00:00",
+  "seconds": 4.610217374982312,
+  "command": [
+    "node",
+    "/private/tmp/towerops-raw-draft-review-cf5799f6d38b-zsv38ev0/independent_raw_draft.mjs",
+    "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+    "/private/tmp/towerops-raw-draft-review-cf5799f6d38b-zsv38ev0/browser-r1"
+  ],
+  "cwd": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/@wonderwhy-er/desktop-commander/dist",
+  "exit_code": 0,
+  "receiver_sha256": "8ab4f56d0f8e0a62f80b72f799268d9e1ee43012dd5e336f6bf5033930db1997",
+  "node_path": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules",
+  "source_or_build_edits": false,
+  "new_browser_groups": 2
+}

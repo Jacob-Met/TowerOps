@@ -1,0 +1,64 @@
+{
+  "base_commit": "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+  "base_tree": "918931cb2034049be9e7717012b3b3309a63b4c3",
+  "published_original_head": "9c6bef26bfef04f1eca264dec533e47e0f270aa8",
+  "published_original_tree": "d5d9827824e0d6f79fc54e5565698dc5d5a783ce",
+  "original_packet_files": 223,
+  "historical_evidence_copied_exact": 216,
+  "commands": [
+    {
+      "name": "clone",
+      "command": [
+        "git",
+        "clone",
+        "--shared",
+        "--no-checkout",
+        "--quiet",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2",
+        "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k",
+      "exit_code": 0
+    },
+    {
+      "name": "fetch",
+      "command": [
+        "git",
+        "-c",
+        "credential.helper=",
+        "fetch",
+        "--no-tags",
+        "https://github.com/Jacob-Met/TowerOps.git",
+        "8d4933f33a0f5e0673fa9d00002e8b29302a1c53"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 0
+    },
+    {
+      "name": "checkout",
+      "command": [
+        "git",
+        "checkout",
+        "--detach",
+        "8d4933f33a0f5e0673fa9d00002e8b29302a1c53"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 0
+    },
+    {
+      "name": "apply",
+      "command": [
+        "git",
+        "apply",
+        "--3way",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/scenario-on-decision-trace.patch"
+      ],
+      "cwd": "/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate",
+      "exit_code": 1
+    }
+  ],
+  "conflicts": [
+    "web/airspace/README.md",
+    "web/airspace/src/main.ts"
+  ]
+}

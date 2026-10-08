@@ -1,0 +1,25 @@
+{
+  "schema": "towerops.independent-runtime.v1",
+  "observed_utc": "2026-10-08T10:57:13.684442+00:00",
+  "device": "0e3d582f-e25b-44b2-8418-9639fc4e4e33",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "node": "v26.3.0",
+  "npm": "11.16.0",
+  "chrome": "Google Chrome 154.0.8037.98",
+  "glue_python": "3.12.8 (main, Dec  3 2024, 18:42:41) [Clang 16.0.0 (clang-1600.0.26.4)]",
+  "glue_python_executable": "/private/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+  "packages": {
+    "vite": "8.3.3",
+    "vitest": "4.1.11",
+    "typescript": "5.7.3",
+    "pyodide": "0.27.7",
+    "puppeteer": "25.12.0"
+  },
+  "dependency_path": "/private/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/source/web/airspace/node_modules",
+  "dependency_files_modified": false,
+  "browser_source": "private independently built source",
+  "python_invocation": "bundled real Pyodide worker calling towerops.py AdvisoryPlanner and ControlRoom.apply",
+  "application_requests_observed_passively": true,
+  "local_deny_proxy": true,
+  "accounts_or_production_data_used": false
+}

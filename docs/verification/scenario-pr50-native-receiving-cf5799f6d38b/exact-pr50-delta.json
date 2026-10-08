@@ -1,0 +1,198 @@
+{
+  "schema": "towerops.pr50-exact-receiving-delta.v1",
+  "from_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "to_commit": "53aa5048b6585aa08592d5513cfcf555a8bba018",
+  "frozen_publication_tree": "cde965df1dc4a18a94443c386e48686dd6280073",
+  "composed_tree": "8c11186b1a3f6391879fb0aef14738487f09dc2a",
+  "paths": [
+    {
+      "path": "PLAN_WORLD.md",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "4b73b0ff02748528ed698118e034c79ef517f9be"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "4b73b0ff02748528ed698118e034c79ef517f9be"
+      }
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "old_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "31d4c6b1c2e5c84e0fc532be81278097ddd2b95f"
+      },
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "d51c0341cd2b85169dbe62d62f178bdfc544f2e7"
+      },
+      "frozen_publication": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "31d4c6b1c2e5c84e0fc532be81278097ddd2b95f"
+      },
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "d51c0341cd2b85169dbe62d62f178bdfc544f2e7"
+      }
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/README.md",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "d6504759b94bf71424572ce724e8f1af9ecd0437"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "d6504759b94bf71424572ce724e8f1af9ecd0437"
+      }
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/author-evidence.zip",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "31f4abefe6164d7537f4999943f06379c404826d"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "31f4abefe6164d7537f4999943f06379c404826d"
+      }
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/independent/README.md",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "aa9fb7bda801e4bc7cc878949d2600df79cbf871"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "aa9fb7bda801e4bc7cc878949d2600df79cbf871"
+      }
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/independent/raw-evidence.zip",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "37bc865002b7543dbb32faa40f8f3a1b68beb5b9"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "37bc865002b7543dbb32faa40f8f3a1b68beb5b9"
+      }
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/independent/receiving.json",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "357dbc9d363205d145f17416fa664ccd86ba59cb"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "357dbc9d363205d145f17416fa664ccd86ba59cb"
+      }
+    },
+    {
+      "path": "docs/receiving/world-plan-e82707f2bc62/source-receipt.json",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "47e739bf8f07adffc53e398d892cbfcd06158038"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "47e739bf8f07adffc53e398d892cbfcd06158038"
+      }
+    },
+    {
+      "path": "plan_world.py",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "8e826a10cc2f9425de26727dce07851497174bba"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "8e826a10cc2f9425de26727dce07851497174bba"
+      }
+    },
+    {
+      "path": "tests/test_plan_world.py",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "8ea1e3f8ea138f9b5b8b42fdadba2bc147c0db6f"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "8ea1e3f8ea138f9b5b8b42fdadba2bc147c0db6f"
+      }
+    },
+    {
+      "path": "tests/test_plan_world_receiving.py",
+      "status": "added",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "2cab5b89008adf3ef0ba4200f2a073330d77fe1d"
+      },
+      "frozen_publication": null,
+      "composition": {
+        "mode": "100644",
+        "type": "blob",
+        "git_blob": "2cab5b89008adf3ef0ba4200f2a073330d77fe1d"
+      }
+    }
+  ],
+  "added": 10,
+  "modified": 1,
+  "removed": 0,
+  "contribution_overlap": [],
+  "airspace_closure_changed": false
+}

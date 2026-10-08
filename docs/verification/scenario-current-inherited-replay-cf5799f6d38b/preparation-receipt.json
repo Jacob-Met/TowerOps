@@ -1,0 +1,37 @@
+{
+  "root": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua",
+  "source_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+  "source": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate",
+  "dist": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/web/airspace/dist",
+  "source_count": 1017,
+  "build_count": 16,
+  "all_source_bytes_modes_blobs_and_build_bytes_exact": true,
+  "receiver_copies": {
+    "alternatives": {
+      "root": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives",
+      "receiver": {
+        "source_path": "docs/verification/scenario-alternatives-independent-cf5799f6d38b/independent_alternative_reset.mjs",
+        "native_original": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/docs/verification/scenario-alternatives-independent-cf5799f6d38b/independent_alternative_reset.mjs",
+        "copy": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/independent_alternative_reset.mjs",
+        "bytes": 14632,
+        "sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+        "git_blob": "ed39378886a48bac61d9b695ebbd4cc0f030c507",
+        "mode": "100644"
+      }
+    },
+    "raw-draft": {
+      "root": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft",
+      "receiver": {
+        "source_path": "docs/verification/scenario-raw-draft-pr48-replay-cf5799f6d38b/independent_raw_draft.mjs",
+        "native_original": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate/docs/verification/scenario-raw-draft-pr48-replay-cf5799f6d38b/independent_raw_draft.mjs",
+        "copy": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/independent_raw_draft.mjs",
+        "bytes": 17300,
+        "sha256": "8ab4f56d0f8e0a62f80b72f799268d9e1ee43012dd5e336f6bf5033930db1997",
+        "git_blob": "3a9982ad0f687942cf8249a8f3fc0744a86ce6ac",
+        "mode": "100644"
+      }
+    }
+  },
+  "prepared_utc": "2026-10-08T15:58:40.842788+00:00",
+  "source_or_build_edits": false
+}

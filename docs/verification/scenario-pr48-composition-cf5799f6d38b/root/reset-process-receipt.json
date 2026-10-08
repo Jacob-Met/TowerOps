@@ -1,0 +1,55 @@
+[
+  {
+    "name": "reset-clone",
+    "command": [
+      "git",
+      "clone",
+      "--shared",
+      "--no-checkout",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+    "exit_code": 0,
+    "seconds": 0.075
+  },
+  {
+    "name": "reset-checkout",
+    "command": [
+      "git",
+      "checkout",
+      "--detach",
+      "093f88b29d6e1ede778f967528c7e010b7689ab1"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset",
+    "exit_code": 0,
+    "seconds": 0.133
+  },
+  {
+    "name": "reset-read-initial-tree",
+    "command": [
+      "git",
+      "read-tree",
+      "--reset",
+      "-u",
+      "f4bc1ce05953dde6a33cea8588033fea9e18c5c4"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset",
+    "exit_code": 0,
+    "seconds": 0.077
+  },
+  {
+    "name": "reset-build",
+    "command": [
+      "npm",
+      "run",
+      "build",
+      "--",
+      "--configLoader",
+      "native"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset/web/airspace",
+    "exit_code": 0,
+    "seconds": 1.267
+  }
+]

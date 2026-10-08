@@ -1,0 +1,314 @@
+I001 [*] Import block is un-sorted or un-formatted
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/run-ci-browser-python.py:2:1
+  |
+1 |   """Run the unchanged CI worker oracle with the installed Chrome executable."""
+2 | / import hashlib, json, runpy, sys
+3 | | from pathlib import Path
+4 | | from playwright.sync_api import BrowserType
+  | |___________________________________________^
+5 |   source=Path(sys.argv[1]).resolve()
+6 |   chrome=sys.argv[2]
+  |
+help: Organize imports
+   |
+1  | """Run the unchanged CI worker oracle with the installed Chrome executable."""
+   - import hashlib, json, runpy, sys
+2  + import hashlib
+3  + import json
+4  + import runpy
+5  + import sys
+6  | from pathlib import Path
+7  +
+8  | from playwright.sync_api import BrowserType
+9  +
+10 | source=Path(sys.argv[1]).resolve()
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/run-ci-capture.py:2:1
+  |
+1 |   """Run existing capture predicates with output isolated from frozen source."""
+2 | / import hashlib,json,sys
+3 | | from pathlib import Path
+  | |________________________^
+4 |   source=Path(sys.argv[1]).resolve();chrome=sys.argv[2];output=Path(sys.argv[3]).resolve()
+5 |   entry=source/"tools/capture_airspace.py";raw=entry.read_text()
+  |
+help: Organize imports
+  |
+1 | """Run existing capture predicates with output isolated from frozen source."""
+  - import hashlib,json,sys
+2 + import hashlib
+3 + import json
+4 + import sys
+5 | from pathlib import Path
+6 +
+7 | source=Path(sys.argv[1]).resolve();chrome=sys.argv[2];output=Path(sys.argv[3]).resolve()
+  |
+
+S102 Use of `exec` detected
+  --> docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/run-ci-capture.py:11:1
+   |
+ 9 | print(json.dumps({"entry":str(entry),"entry_sha256":hashlib.sha256(entry.read_bytes()).hexdigest(),"override":"capture output director…
+10 | sys.argv=[str(entry),"--chrome",chrome]
+11 | exec(compile(changed,str(entry),"exec"),{"__name__":"__main__","__file__":str(entry)})
+   | ^^^^
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current-r2.py:1:1
+  |
+1 | / from pathlib import Path
+2 | | import hashlib,json,subprocess,difflib,os
+  | |_________________________________________^
+3 |   root=Path(__file__).resolve().parent
+4 |   owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Organize imports
+  |
+1 + import difflib
+2 + import hashlib
+3 + import json
+4 + import os
+5 + import subprocess
+6 | from pathlib import Path
+  - import hashlib,json,subprocess,difflib,os
+7 +
+8 | root=Path(__file__).resolve().parent
+  |
+
+F401 [*] `difflib` imported but unused
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current-r2.py:2:32
+  |
+1 | from pathlib import Path
+2 | import hashlib,json,subprocess,difflib,os
+  |                                ^^^^^^^
+3 | root=Path(__file__).resolve().parent
+4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Remove unused import
+  |
+1 | from pathlib import Path
+  - import hashlib,json,subprocess,difflib,os
+2 + import hashlib,json,subprocess
+3 | root=Path(__file__).resolve().parent
+  |
+
+F401 [*] `os` imported but unused
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current-r2.py:2:40
+  |
+1 | from pathlib import Path
+2 | import hashlib,json,subprocess,difflib,os
+  |                                        ^^
+3 | root=Path(__file__).resolve().parent
+4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Remove unused import
+  |
+1 | from pathlib import Path
+  - import hashlib,json,subprocess,difflib,os
+2 + import hashlib,json,subprocess
+3 | root=Path(__file__).resolve().parent
+  |
+
+PLW1510 `subprocess.run` without explicit `check` argument
+  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current-r2.py:39:12
+   |
+37 | (root/"source-manifest-current-r2.json").write_bytes(raw)
+38 | with (root/"build-current-r2.stdout.log").open("xb") as out,(root/"build-current-r2.stderr.log").open("xb") as err:
+39 |     result=subprocess.run(["npm","run","build"],cwd=target/"web/airspace",stdout=out,stderr=err,timeout=120)
+   |            ^^^^^^^^^^^^^^
+40 | report={"source_tree":tree,"parent":parent,"source_files":len(manifest["files"]),"feature_files":len(feature),"unowned_files_preserved…
+41 |         "source_unchanged_after_build":all(hashlib.sha256((target/r["path"]).read_bytes()).hexdigest()==r["sha256"] for r in manifest[…
+   |
+help: Add explicit `check=False`
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current.py:1:1
+  |
+1 | / from pathlib import Path
+2 | | import hashlib,json,subprocess,difflib,os
+  | |_________________________________________^
+3 |   root=Path(__file__).resolve().parent
+4 |   owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Organize imports
+  |
+1 + import difflib
+2 + import hashlib
+3 + import json
+4 + import os
+5 + import subprocess
+6 | from pathlib import Path
+  - import hashlib,json,subprocess,difflib,os
+7 +
+8 | root=Path(__file__).resolve().parent
+  |
+
+F401 [*] `difflib` imported but unused
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current.py:2:32
+  |
+1 | from pathlib import Path
+2 | import hashlib,json,subprocess,difflib,os
+  |                                ^^^^^^^
+3 | root=Path(__file__).resolve().parent
+4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Remove unused import
+  |
+1 | from pathlib import Path
+  - import hashlib,json,subprocess,difflib,os
+2 + import hashlib,json,subprocess
+3 | root=Path(__file__).resolve().parent
+  |
+
+F401 [*] `os` imported but unused
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current.py:2:40
+  |
+1 | from pathlib import Path
+2 | import hashlib,json,subprocess,difflib,os
+  |                                        ^^
+3 | root=Path(__file__).resolve().parent
+4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Remove unused import
+  |
+1 | from pathlib import Path
+  - import hashlib,json,subprocess,difflib,os
+2 + import hashlib,json,subprocess
+3 | root=Path(__file__).resolve().parent
+  |
+
+PLW1510 `subprocess.run` without explicit `check` argument
+  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current.py:37:12
+   |
+35 | (root/"source-manifest-current.json").write_bytes(raw)
+36 | with (root/"build-current.stdout.log").open("xb") as out,(root/"build-current.stderr.log").open("xb") as err:
+37 |     result=subprocess.run(["npm","run","build"],cwd=target/"web/airspace",stdout=out,stderr=err,timeout=120)
+   |            ^^^^^^^^^^^^^^
+38 | report={"source_tree":tree,"parent":parent,"source_files":len(manifest["files"]),"feature_files":len(feature),"unowned_files_preserved…
+39 |         "source_unchanged_after_build":all(hashlib.sha256((target/r["path"]).read_bytes()).hexdigest()==r["sha256"] for r in manifest[…
+   |
+help: Add explicit `check=False`
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-r2.py:1:1
+  |
+1 | / from pathlib import Path
+2 | | import hashlib,json,subprocess,difflib,os
+  | |_________________________________________^
+3 |   root=Path(__file__).resolve().parent
+4 |   owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Organize imports
+  |
+1 + import difflib
+2 + import hashlib
+3 + import json
+4 + import os
+5 + import subprocess
+6 | from pathlib import Path
+  - import hashlib,json,subprocess,difflib,os
+7 +
+8 | root=Path(__file__).resolve().parent
+  |
+
+F401 [*] `os` imported but unused
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-r2.py:2:40
+  |
+1 | from pathlib import Path
+2 | import hashlib,json,subprocess,difflib,os
+  |                                        ^^
+3 | root=Path(__file__).resolve().parent
+4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Remove unused import: `os`
+  |
+1 | from pathlib import Path
+  - import hashlib,json,subprocess,difflib,os
+2 + import hashlib,json,subprocess,difflib
+3 | root=Path(__file__).resolve().parent
+  |
+
+PLW1510 `subprocess.run` without explicit `check` argument
+  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-r2.py:25:12
+   |
+23 | (root/"r2-source.delta").write_text(delta)
+24 | with (root/"build-r2.stdout.log").open("xb") as out,(root/"build-r2.stderr.log").open("xb") as err:
+25 |     result=subprocess.run(["npm","run","build"],cwd=target/"web/airspace",stdout=out,stderr=err,timeout=120)
+   |            ^^^^^^^^^^^^^^
+26 | report={"source_tree":manifest["source_tree"],"source_files":len(manifest["files"]),"changed_paths":changed,"build_returncode":result.…
+27 |         "source_unchanged_after_build":all(hashlib.sha256((target/r["path"]).read_bytes()).hexdigest()==r["sha256"] for r in manifest[…
+   |
+help: Add explicit `check=False`
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap.py:1:1
+  |
+1 | / from pathlib import Path
+2 | | import hashlib,json,os,shutil,subprocess,datetime
+  | |_________________________________________________^
+3 |   root=Path(__file__).resolve().parent
+4 |   owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Organize imports
+  |
+1 + import datetime
+2 + import hashlib
+3 + import json
+4 + import os
+5 + import shutil
+6 + import subprocess
+7 | from pathlib import Path
+  - import hashlib,json,os,shutil,subprocess,datetime
+8 +
+9 | root=Path(__file__).resolve().parent
+  |
+
+F401 [*] `os` imported but unused
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap.py:2:21
+  |
+1 | from pathlib import Path
+2 | import hashlib,json,os,shutil,subprocess,datetime
+  |                     ^^
+3 | root=Path(__file__).resolve().parent
+4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Remove unused import
+  |
+1 | from pathlib import Path
+  - import hashlib,json,os,shutil,subprocess,datetime
+2 + import hashlib,json,subprocess,datetime
+3 | root=Path(__file__).resolve().parent
+  |
+
+F401 [*] `shutil` imported but unused
+ --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap.py:2:24
+  |
+1 | from pathlib import Path
+2 | import hashlib,json,os,shutil,subprocess,datetime
+  |                        ^^^^^^
+3 | root=Path(__file__).resolve().parent
+4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+  |
+help: Remove unused import
+  |
+1 | from pathlib import Path
+  - import hashlib,json,os,shutil,subprocess,datetime
+2 + import hashlib,json,subprocess,datetime
+3 | root=Path(__file__).resolve().parent
+  |
+
+PLW1510 `subprocess.run` without explicit `check` argument
+  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap.py:38:9
+   |
+36 |         "started_at_utc":datetime.datetime.now(datetime.timezone.utc).isoformat()}
+37 | with (root/"build.stdout.log").open("xb") as out,(root/"build.stderr.log").open("xb") as err:
+38 |     run=subprocess.run(["npm","run","build"],cwd=source/"web/airspace",stdout=out,stderr=err,timeout=120)
+   |         ^^^^^^^^^^^^^^
+39 | report["build_returncode"]=run.returncode
+40 | report["tracked_source_unchanged_after_build"]=all(hashlib.sha256((source/x["path"]).read_bytes()).hexdigest()==x["sha256"] for x in r…
+   |
+help: Add explicit `check=False`
+
+Found 18 errors.
+[*] 13 fixable with the `--fix` option.

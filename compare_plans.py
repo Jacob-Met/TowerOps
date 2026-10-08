@@ -7,10 +7,10 @@ import hashlib
 import json
 import math
 import os
-from pathlib import Path
 import re
 import stat
 import sys
+from pathlib import Path
 from typing import Any
 
 from plan_world import MAX_ABS_NUMBER, MAX_VERSION, MIN_POLICY_VALUE, parse_world
@@ -295,8 +295,10 @@ def render_text(result: dict[str, Any], left_name: str, right_name: str) -> str:
     counts = result["counts"]
     lines.extend([
         "",
-        f"Saved alternatives: {counts['retained']} retained; "
-        f"{counts['left_only']} left only; {counts['right_only']} right only.",
+        (
+            f"Saved alternatives: {counts['retained']} retained; "
+            f"{counts['left_only']} left only; {counts['right_only']} right only."
+        ),
         f"Retained alternatives with a different menu rank: {counts['rank_changed']}.",
         "Ranks are original 1-based menu positions, not a new recommendation.",
         "L/R show the left/right rank; '-' means absent. Units: vx/vy NM/min, climb ft/min.",

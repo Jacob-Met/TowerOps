@@ -1,0 +1,30 @@
+{
+  "schema": "towerops.scenario-alternatives-final-integrity.v1",
+  "utc": "2026-10-08T14:22:46.823411+00:00",
+  "receiver_sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+  "original_negative_files_unchanged": 16,
+  "phases": [
+    {
+      "phase": "initial",
+      "source_tree": "f4bc1ce05953dde6a33cea8588033fea9e18c5c4",
+      "source_files": 251,
+      "build_files": 16,
+      "passed": 1,
+      "total": 2,
+      "input_manifest_sha256": "022805ce6de15626e92fdfa6daac13349191085d7655e7cd6b35c63dc168e0e6",
+      "browser_receipt_sha256": "1303827a92ad39b226bb65cde592442924e936463ad3636f127391ae8ec3fb1e"
+    },
+    {
+      "phase": "reset",
+      "source_tree": "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993",
+      "source_files": 251,
+      "build_files": 16,
+      "passed": 2,
+      "total": 2,
+      "input_manifest_sha256": "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba",
+      "browser_receipt_sha256": "178791aaccba6520b324c20f88d2f2b55530b8bd52a961454f2358daa075acf3"
+    }
+  ],
+  "product_edits_by_reviewer": false,
+  "additional_browser_predicates": 0
+}

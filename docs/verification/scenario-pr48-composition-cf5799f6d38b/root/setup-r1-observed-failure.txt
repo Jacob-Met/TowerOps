@@ -1,0 +1,25 @@
+Process started with PID 4274 (shell: /bin/zsh)
+Initial output:
+{"root": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj", "free_bytes": 136101888}
+{"name": "qualified-object", "command": ["git", "cat-file", "-t", "efd5d1d99edc0595111e15836c18a9b178abb4c3"], "cwd": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate", "exit_code": 0, "seconds": 0.028}
+{"name": "frozen-pr46-product-patch", "command": ["git", "diff", "--binary", "8d4933f33a0f5e0673fa9d00002e8b29302a1c53", "efd5d1d99edc0595111e15836c18a9b178abb4c3", "--", "web/airspace/README.md", "web/airspace/index.html", "web/airspace/style.css", "web/airspace/src/main.ts", "web/airspace/src/scenario-file.ts", "web/airspace/src/scenario-ui.ts", "web/airspace/tests/scenario-file.test.ts"], "cwd": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate", "exit_code": 0, "seconds": 0.041}
+{"name": "clone", "command": ["git", "clone", "--shared", "--no-checkout", "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate", "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial"], "cwd": null, "exit_code": 0, "seconds": 0.07}
+{"name": "has-pr48-base", "command": ["git", "cat-file", "-e", "093f88b29d6e1ede778f967528c7e010b7689ab1"], "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial", "exit_code": 1, "seconds": 0.03}
+Traceback (most recent call last):
+  File "/tmp/towerops-root-advisory-setup-cf5799f6d38b.py", line 45, in <module>
+    run("read-only-fetch", ["git", "fetch", "--no-tags", "https://github.com/Jacob-Met/TowerOps.git", base], repo)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/towerops-root-advisory-setup-cf5799f6d38b.py", line 27, in run
+    (root / (name + ".stdout.log")).write_bytes(result.stdout)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py", line 641, in write_bytes
+    with self.open(mode='wb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: '/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/read-only-fetch.stdout.log'
+
+✅ Process 4274 has finished execution
+
+[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]

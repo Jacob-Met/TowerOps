@@ -1,0 +1,49 @@
+from pathlib import Path
+import datetime,hashlib,json,shutil,tempfile
+sha=lambda body:hashlib.sha256(body).hexdigest()
+original=Path("/tmp/towerops-raw-draft-review-cf5799f6d38b-zsv38ev0")
+original_manifest=(original/"review-manifest.json").read_bytes()
+if sha(original_manifest)!="88c1ce851d3d24d04b7caba363d44be820a8f42e5024c9380d28d780317baeec":raise RuntimeError("original raw-draft publication changed")
+for row in json.loads(original_manifest)["files"]:
+    body=Path(row["source_path"]).read_bytes()
+    if len(body)!=row["bytes"] or sha(body)!=row["sha256"]:raise RuntimeError("original raw-draft artifact changed")
+alternatives=Path("/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy")
+alternative_manifest=(alternatives/"review-manifest.json").read_bytes()
+if sha(alternative_manifest)!="f4a76b8b8af896a9d411d0bdfe852db0535d9d0e750541b411ef3cb614c0fe11":raise RuntimeError("sealed alternatives packet changed")
+for row in json.loads(alternative_manifest)["files"]:
+    body=Path(row["source_path"]).read_bytes()
+    if len(body)!=row["bytes"] or sha(body)!=row["sha256"]:raise RuntimeError("alternatives artifact changed")
+primary=Path("/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-source-build-pin.json")
+pin_bytes=primary.read_bytes()
+if sha(pin_bytes)!="90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba":raise RuntimeError("current source/build pin changed")
+pin=json.loads(pin_bytes)
+receiver=(original/"independent_raw_draft.mjs").read_bytes()
+if sha(receiver)!="8ab4f56d0f8e0a62f80b72f799268d9e1ee43012dd5e336f6bf5033930db1997":raise RuntimeError("original raw-draft receiver changed")
+root=Path(tempfile.mkdtemp(prefix="towerops-raw-draft-pr48-replay-cf5799f6d38b-",dir="/tmp"))
+(root/"independent_raw_draft.mjs").write_bytes(receiver)
+(root/"source-manifest.json").write_bytes(pin_bytes)
+build={"root":pin["build_root"],"files":pin["build_files"]}
+(root/"dist-manifest.json").write_text(json.dumps(build,indent=2)+"\n")
+input_receipt={
+"schema":"towerops.raw-draft-inherited-replay-inputs.v1",
+"captured_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+"source":pin["source_root"],"nominated_composition_tree":pin["source_tree"],
+"nominated_product_source_tree":None,
+"product_source_tree_note":"No separate product-only tree was nominated; the exact 251-file source composition is identified above.",
+"source_manifest_sha256":sha(pin_bytes),"source_manifest_primary":str(primary),
+"source_files":len(pin["source_files"]),"build_files":len(pin["build_files"]),
+"build_root":pin["build_root"],"receiver_sha256":sha(receiver),
+"predicate_authorship":"Byte-identical reuse of the earlier independently authored efd5 two-group raw-draft receiver; this is a new source replay, not two newly authored predicates.",
+"original_source_tree":"efd5d1d99edc0595111e15836c18a9b178abb4c3",
+"original_publication_manifest":str(original/"review-manifest.json"),
+"original_publication_manifest_sha256":sha(original_manifest),"original_artifacts_rechecked":28,
+"separate_alternatives_publication_manifest":str(alternatives/"review-manifest.json"),
+"separate_alternatives_manifest_sha256":sha(alternative_manifest),"alternatives_artifacts_rechecked":33,
+"product_source_or_dependencies_copied":False,"existing_build_used_read_only":True,
+"free_bytes_at_preparation":shutil.disk_usage(root).free,
+}
+(root/"input-receipt.json").write_text(json.dumps(input_receipt,indent=2)+"\n")
+print(json.dumps({"root":str(root),"receiver_sha256":sha(receiver),"source_tree":pin["source_tree"],
+"source_files":len(pin["source_files"]),"build_files":len(pin["build_files"]),
+"original28_unchanged":True,"alternatives33_unchanged":True,
+"free_bytes":input_receipt["free_bytes_at_preparation"]},indent=2))

@@ -1,0 +1,187 @@
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import time
+from datetime import datetime, timezone
+import xml.etree.ElementTree as ET
+
+ROOT = Path("/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh")
+SOURCE = ROOT / "composed"
+QUAL = ROOT / "qualification"
+UPSTREAM = Path("/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified")
+DEPENDENCIES = ROOT / "dependencies"
+EXPECTED_TREE = "8c11186b1a3f6391879fb0aef14738487f09dc2a"
+PYTHON_SOURCE = Path("/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv")
+RUFF_SOURCE = Path("/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff")
+PROCESSES = []
+ENV = os.environ.copy()
+for env_key in ("PYTHONPATH", "PYTHONHOME", "PYTHONSTARTUP", "PYTHONOPTIMIZE", "TOWEROPS_RECEIVING_OUTPUT"):
+    ENV.pop(env_key, None)
+ENV.update(PYTHONDONTWRITEBYTECODE="1", GIT_OPTIONAL_LOCKS="0")
+
+
+def utc():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def save(name, value):
+    destination = QUAL / name
+    with destination.open("x", encoding="utf-8") as handle:
+        json.dump(value, handle, indent=2)
+        handle.write("\n")
+
+
+def command(name, argv, cwd=SOURCE, timeout=600, check=True):
+    started = utc()
+    tick = time.monotonic()
+    out_path = QUAL / f"{name}.stdout.log"
+    err_path = QUAL / f"{name}.stderr.log"
+    with out_path.open("xb") as stdout, err_path.open("xb") as stderr:
+        try:
+            result = subprocess.run(argv, cwd=cwd, env=ENV, stdout=stdout, stderr=stderr, timeout=timeout, check=False)
+            code = result.returncode
+        except subprocess.TimeoutExpired:
+            code = 124
+    row = {"name": name, "argv": [str(arg) for arg in argv], "cwd": str(cwd), "started_utc": started,
+           "finished_utc": utc(), "duration_seconds": round(time.monotonic() - tick, 3),
+           "returncode": code, "stdout": str(out_path), "stderr": str(err_path)}
+    PROCESSES.append(row)
+    print(json.dumps(row), flush=True)
+    if check and code:
+        raise RuntimeError(f"{name} failed with exit {code}; original logs retained")
+    return out_path.read_text(errors="replace")
+
+
+def check_source(name):
+    manifest = json.loads((ROOT / "source-manifest.json").read_text())
+    failures = []
+    for row in manifest["source_files"]:
+        path = SOURCE / row["path"]
+        data = path.read_bytes()
+        git_blob = hashlib.sha1(f"blob {len(data)}\0".encode() + data).hexdigest()
+        mode = "100755" if path.stat().st_mode & 0o111 else "100644"
+        if (len(data), sha(data), git_blob, mode) != (row["bytes"], row["sha256"], row["git_blob"], row["mode"]):
+            failures.append(row["path"])
+    tree = command(name + "-tree", ["git", "write-tree"]).strip()
+    result = {"captured_utc": utc(), "source_root": str(SOURCE), "source_tree": tree,
+              "expected_tree": EXPECTED_TREE, "source_files": len(manifest["source_files"]),
+              "mismatched_paths": failures, "all_source_bytes_modes_and_blobs_match": not failures and tree == EXPECTED_TREE}
+    save(name + ".json", result)
+    if failures or tree != EXPECTED_TREE:
+        raise RuntimeError("Frozen composition changed")
+    return result
+
+
+def main():
+    QUAL.mkdir(exist_ok=True)
+    DEPENDENCIES.mkdir()
+    (DEPENDENCIES / "bin").mkdir()
+    free = shutil.disk_usage(ROOT).free
+    save("capacity-before.json", {"captured_utc": utc(), "free_bytes": free})
+    if free < 1024 ** 3:
+        raise RuntimeError("Insufficient capacity before private dependency copies")
+    check_source("source-before")
+    local_lock = SOURCE / "web/airspace/package-lock.json"
+    frozen_lock = UPSTREAM / "web/airspace/package-lock.json"
+    if local_lock.read_bytes() != frozen_lock.read_bytes():
+        raise RuntimeError("Application lock does not match qualified root")
+    node_source = UPSTREAM / "web/airspace/node_modules"
+    node_target = SOURCE / "web/airspace/node_modules"
+    py_target = DEPENDENCIES / "python"
+    ruff_target = DEPENDENCIES / "bin/ruff"
+    if node_target.exists() or node_target.is_symlink():
+        raise RuntimeError("Private node destination already exists")
+    command("copy-private-node-dependencies", ["/bin/cp", "-cR", str(node_source), str(node_target)], ROOT)
+    command("copy-private-python-environment", ["/bin/cp", "-cR", str(PYTHON_SOURCE), str(py_target)], ROOT)
+    command("copy-private-ruff", ["/bin/cp", "-c", str(RUFF_SOURCE), str(ruff_target)], ROOT)
+    if node_target.is_symlink() or py_target.is_symlink() or ruff_target.is_symlink():
+        raise RuntimeError("Dependency destination must be private")
+    if ruff_target.read_bytes() != RUFF_SOURCE.read_bytes():
+        raise RuntimeError("Ruff copy differs")
+    python = py_target / "bin/python3"
+    ENV["TOWEROPS_PYTHON"] = str(python)
+    ENV["TOWEROPS_RECEIVING_OUTPUT"] = str(QUAL / "plan-world-native-receiving")
+    runtime_python = json.loads(command("runtime-python", [str(python), "-c",
+        "import sys,json,pytest,platform;print(json.dumps({'executable':sys.executable,'prefix':sys.prefix,'base_prefix':sys.base_prefix,'version':platform.python_version(),'pytest':pytest.__version__,'pytest_file':pytest.__file__}))"]))
+    node_version = command("runtime-node", ["node", "--version"]).strip()
+    npm_version = command("runtime-npm", ["npm", "--version"]).strip()
+    ruff_version = command("runtime-ruff", [str(ruff_target), "--version"]).strip()
+    packages = {}
+    for package in ("typescript", "vite", "vitest", "pyodide"):
+        f = node_target / package / "package.json"
+        data = f.read_bytes()
+        packages[package] = {"version": json.loads(data)["version"], "package_json_sha256": sha(data)}
+    runtime = {
+        "captured_utc": utc(), "node": node_version, "npm": npm_version,
+        "python": runtime_python, "ruff": ruff_version, "packages": packages,
+        "dependency_copy_method": "macOS cp -cR (private copy-on-write copies, source read-only)",
+        "node_dependencies": {"source": str(node_source), "destination": str(node_target)},
+        "python_environment": {"source": str(PYTHON_SOURCE), "destination": str(py_target), "base_interpreter_shared": True},
+        "ruff_binary": {"source": str(RUFF_SOURCE), "destination": str(ruff_target), "sha256": sha(ruff_target.read_bytes())},
+        "package_lock_sha256": sha(local_lock.read_bytes()),
+        "environment_overrides": {key: ENV[key] for key in ("PYTHONDONTWRITEBYTECODE", "GIT_OPTIONAL_LOCKS", "TOWEROPS_PYTHON", "TOWEROPS_RECEIVING_OUTPUT")},
+        "cleared_environment_keys": ["PYTHONPATH", "PYTHONHOME", "PYTHONSTARTUP", "PYTHONOPTIMIZE"],
+        "hosted_ci_runtime_parity_claimed": False,
+        "dependency_install_performed": False
+    }
+    save("runtime.json", runtime)
+    command("native-pytest", [str(python), "-m", "pytest", "-q", "-p", "no:cacheprovider", f"--junitxml={QUAL / 'native-tests.xml'}"], check=False)
+    command("ruff", [str(ruff_target), "check", "--no-cache", "."], check=False)
+    command("reference", [str(python), "tools/generate_airspace_reference.py", "--check"], check=False)
+    command("production-build", ["npm", "run", "build"], SOURCE / "web/airspace", check=False)
+    root_pin = json.loads((ROOT / "root-qualified-source-build-pin.json").read_text())
+    expected_build = {row["path"]: row for row in root_pin["build_files"]}
+    dist = SOURCE / "web/airspace/dist"
+    actual_build = {}
+    if dist.exists():
+        for path in sorted(dist.rglob("*")):
+            if path.is_file():
+                data = path.read_bytes()
+                relative = path.relative_to(dist).as_posix()
+                actual_build[relative] = {"path": relative, "bytes": len(data), "sha256": sha(data)}
+    matching = sorted(path for path in set(actual_build) & set(expected_build)
+                      if (actual_build[path]["bytes"], actual_build[path]["sha256"]) ==
+                      (expected_build[path]["bytes"], expected_build[path]["sha256"]))
+    build = {"captured_utc": utc(), "source_tree": EXPECTED_TREE, "build_root": str(dist),
+             "expected_root_pin_sha256": sha((ROOT / "root-qualified-source-build-pin.json").read_bytes()),
+             "expected_file_count": len(expected_build), "actual_file_count": len(actual_build),
+             "matching_files": matching, "missing_paths": sorted(set(expected_build) - set(actual_build)),
+             "extra_paths": sorted(set(actual_build) - set(expected_build)),
+             "changed_paths": sorted((set(actual_build) & set(expected_build)) - set(matching)),
+             "all_16_files_byte_identical": len(matching) == len(expected_build) == len(actual_build) == 16,
+             "build_files": list(actual_build.values())}
+    save("build-identity-comparison.json", build)
+    check_source("source-after")
+    junit = ET.parse(QUAL / "native-tests.xml").getroot()
+    cases = list(junit.iter("testcase"))
+    skipped = [{"classname": case.attrib.get("classname"), "name": case.attrib.get("name"),
+                "reason": case.find("skipped").attrib.get("message")} for case in cases if case.find("skipped") is not None]
+    failures = [{"classname": case.attrib.get("classname"), "name": case.attrib.get("name")} for case in cases
+                if case.find("failure") is not None or case.find("error") is not None]
+    gates = [row for row in PROCESSES if row["name"] in ("native-pytest", "ruff", "reference", "production-build")]
+    success = all(row["returncode"] == 0 for row in gates) and build["all_16_files_byte_identical"] and not failures
+    summary = {"captured_utc": utc(), "source_tree": EXPECTED_TREE, "native_test_cases": len(cases),
+               "native_passed": len(cases) - len(skipped) - len(failures), "native_skips": skipped,
+               "native_failures": failures, "gates": gates, "all_four_gate_exit_codes_zero": all(row["returncode"] == 0 for row in gates),
+               "build_files_byte_identical": build["all_16_files_byte_identical"], "qualified": success,
+               "source_files_before_after_exact": 589, "frontend_and_browser_rerun_performed": False,
+               "product_edits": False, "free_bytes_after": shutil.disk_usage(ROOT).free}
+    save("gates-summary.json", summary)
+    print(json.dumps(summary), flush=True)
+    if not success:
+        raise RuntimeError("Native/build qualification failed; evidence retained")
+
+
+try:
+    main()
+finally:
+    save("receiving-processes.json", {"schema": "towerops.pr50-native-build-processes.v1", "processes": PROCESSES})

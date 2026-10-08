@@ -1,0 +1,80 @@
+{
+  "observed": {
+    "python": "Live CPython · towerops.py · AdvisoryPlanner",
+    "proposal": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+    "run_disabled": true,
+    "approve_disabled": false
+  },
+  "clientLogs": [
+    "worker-created http://127.0.0.1:65257/TowerOps/airspace/assets/python-worker-Dt6KeInE.js"
+  ],
+  "requests": [
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "4802752378cdd5b0ee903f16641f45f2c2d2baea4cd48bb4fe6e8f96f7811d2e"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/assets/index-DQHL8flo.js",
+      "status": 200,
+      "sha256": "4faba04b36916cdd2ce2e25c03ee13bb2fcb81c40c64ea64676166f3b3528f82"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/assets/index-DNkt_xJY.css",
+      "status": 200,
+      "sha256": "3bbea4e27973bc9b03ed7d90cedd69760f22f23b14b24045e7c9f63d7c529a62"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/assets/python-worker-Dt6KeInE.js",
+      "status": 200,
+      "sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "group": "",
+      "path": "/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "sha256": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e"
+    }
+  ],
+  "external": []
+}

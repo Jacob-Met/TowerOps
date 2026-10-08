@@ -1,0 +1,17 @@
+{
+  "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+  "observed": {
+    "status": "Scenario file prepared. Check your browser downloads.",
+    "saveDisabled": false,
+    "reviewHidden": true,
+    "rawFeedback": "Live world exported. Edit tracks, then load your changes.",
+    "worldJson": "{\n  \"version\": 73,\n  \"observed_at\": 1002,\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR601\",\n      \"x_nm\": 0,\n      \"y_nm\": 0,\n      \"altitude_ft\": 11000,\n      \"vx_nm_min\": 0,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR602\",\n      \"x_nm\": 9,\n      \"y_nm\": 0,\n      \"altitude_ft\": 11000,\n      \"vx_nm_min\": 0,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    }\n  ]\n}",
+    "availability": "Files stay on your device. Loading starts a fresh decision trace.",
+    "run": "Run traffic",
+    "active": "",
+    "register": [
+      "TWR601",
+      "TWR602"
+    ]
+  }
+}

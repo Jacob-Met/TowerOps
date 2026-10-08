@@ -1,0 +1,36 @@
+{
+  "schema": "towerops.scenario-alternatives-static-scope.v1",
+  "primary_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "primary_repository": "Jacob-Met/TowerOps",
+  "primary_files": [
+    {
+      "path": "web/airspace/src/main.ts",
+      "git_blob": "e29d9ea54665e0c93e2baa66e45fa08e12b52203"
+    },
+    {
+      "path": "web/airspace/src/advisory-options.ts",
+      "git_blob": "18d9a51c359007a39ed76352ce245f8a70c1f6c7"
+    },
+    {
+      "path": "web/airspace/src/advisory-review.ts",
+      "git_blob": "5e31db5369be3294a0404667614520f58ab6dfe9"
+    }
+  ],
+  "scenario_contract_source_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "scenario_contract_path": "web/airspace/README.md",
+  "expected_lifecycle": "An explicit saved-scenario Load starts a new decision with the previous selected proposal and approval cleared. Previously reviewed alternatives should no longer be selectable until a new native Review alternatives request completes.",
+  "component_contract_preserved": "The low-level alternatives binding intentionally accepts a new object with identical state, policy and now values. This control does not require changing that value-based contract.",
+  "static_observations": [
+    "optionsSnapshotKey canonicalizes state, policy and now only.",
+    "clearPending does not assign optionsReview or optionsStatus.",
+    "render retires optionsReview only when optionsAreCurrent reports a changed value snapshot.",
+    "AdvisoryReviewPanel redraws when currentHash changes; clearing the selected proposal re-enables its row if the prior review remains current."
+  ],
+  "scope_limit": "This is a fresh-decision lifecycle question. A value-identical alternative may remain mathematically valid; old approval reuse or an unsafe native separation result is not claimed.",
+  "planned_groups": 2,
+  "first_group": "Actual native alternatives, select and approve, choose the identical real saved scenario, explicit Load, record any old action and proposal revival; passing successor must allow a new native review and selection that requires new approval.",
+  "second_group": "Change only the saved world's version before explicit Load, verifying that the existing value-snapshot invalidation remains functional.",
+  "product_edits": false,
+  "browser_executed": false,
+  "awaiting_root_composed_source_pin": true
+}

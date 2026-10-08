@@ -1,0 +1,314 @@
+{
+  "schema": "towerops.independent-review-publication.v1",
+  "created_utc": "2026-10-08T10:57:13.896472+00:00",
+  "final_source_tree": "d6b4a1ec5757144f848e1d6ce851a766a7413f2c",
+  "relative_destination": "independent-review",
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/REVIEW.md",
+      "bytes": 8442,
+      "sha256": "364d9284ef39acf67bebbc45b6e38b93c62e83e229acd6d0097fb47c10b9d2a2",
+      "git_blob": "541c31ed2b971b0a9f8498878188e7562fc95a02",
+      "mode": "100644"
+    },
+    {
+      "path": "bootstrap-current-r2-receipt.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/bootstrap-current-r2-receipt.json",
+      "bytes": 614,
+      "sha256": "934fd698edb48a2f9b627e5bcabee2cc2606eef488d2003d8a44c19e4fb51386",
+      "git_blob": "766216b0b4c686b56ade802865d17999cdffb595",
+      "mode": "100644"
+    },
+    {
+      "path": "bootstrap-current-r2.py",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/bootstrap-current-r2.py",
+      "bytes": 3393,
+      "sha256": "0f301a6496d3b9fb813e5d289cabb47dc2aa199e031bc01853511c38c9320d42",
+      "git_blob": "e30da0ff2ac613b56e66d533fba459438381bf9a",
+      "mode": "100644"
+    },
+    {
+      "path": "bootstrap-current-receipt.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/bootstrap-current-receipt.json",
+      "bytes": 574,
+      "sha256": "80b4eaaa15e7f23fbd42f5db988598f2959c3f41aea4e96989d6052078f7f163",
+      "git_blob": "e155cd15a0d401e2d7e533082f8a420ea5d6bc6b",
+      "mode": "100644"
+    },
+    {
+      "path": "bootstrap-current.py",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/bootstrap-current.py",
+      "bytes": 3292,
+      "sha256": "4dc1ef0d14b42bce0a77c246fa93335d3b75a9d95cd55a4cfcc0be74e0944e08",
+      "git_blob": "3355ab840e4dce505ec148c05c98d182c96d10c0",
+      "mode": "100644"
+    },
+    {
+      "path": "bootstrap-r2-receipt.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/bootstrap-r2-receipt.json",
+      "bytes": 208,
+      "sha256": "fdd1ae70cde4aca0ff1125bc22ffa7fbd0b13f45dd054c25e00756fd0ab95eb4",
+      "git_blob": "216c76f80bb8af40212eec5ff855d53aaa926624",
+      "mode": "100644"
+    },
+    {
+      "path": "bootstrap-r2.py",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/bootstrap-r2.py",
+      "bytes": 2355,
+      "sha256": "4d2e0630aba457f08d3559d0e9aedad3fe39388065bab58e82f0c06b6731c6bd",
+      "git_blob": "c752c40e54a4942f84fe1f5b06dd20cc0b6d8d3a",
+      "mode": "100644"
+    },
+    {
+      "path": "bootstrap-receipt.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/bootstrap-receipt.json",
+      "bytes": 547,
+      "sha256": "edea3566b1f471b158c9a56ffb9f012a750c46e512d10f3c48a55517fbebd843",
+      "git_blob": "2b0239930edce9324fe53411e4254056b98d913c",
+      "mode": "100644"
+    },
+    {
+      "path": "bootstrap.py",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/bootstrap.py",
+      "bytes": 2387,
+      "sha256": "976bdadc76b0a718842294957d54feadbe27f77ef4447b9a2af3152bd627a38b",
+      "git_blob": "2a72e4d269c21212444e72ecc27537e747293283",
+      "mode": "100644"
+    },
+    {
+      "path": "final-source-readback.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-publication/final-source-readback.json",
+      "bytes": 5342,
+      "sha256": "b1aa36c9552a7074ae5279cab4902ce2ac66add9d7b93d4530ae9f0b264bf0cd",
+      "git_blob": "9699024a0062e83fc3049cc02953fc764cefde8e",
+      "mode": "100644"
+    },
+    {
+      "path": "pending-verification.mjs",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/pending-verification.mjs",
+      "bytes": 10348,
+      "sha256": "968838aba803c324b69c8b03d59c057aa7c5c80fbbafc7c1ca6d9904fb5f9aa6",
+      "git_blob": "5795363dc10827d63149c4509b5950c86efd4b0d",
+      "mode": "100644"
+    },
+    {
+      "path": "process-output.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-publication/process-output.json",
+      "bytes": 22325,
+      "sha256": "cabbe9cb85b9b5ce4b30e060b707567fdacadc1c17c2a251376bf476b59644d9",
+      "git_blob": "9686054bfb6a9d7ec6f8bd1d4d3a10c9d9c07896",
+      "mode": "100644"
+    },
+    {
+      "path": "receipts/browser-current-r2-v2b.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/browser-current-r2-v2b/receipt.json",
+      "bytes": 22567,
+      "sha256": "eeead90de09a7ae6dea82b9dcec09b6131945c421a3c3afe50ae337df976e7e3",
+      "git_blob": "32bef1d56324dd32fc201d0cca63325fcfae59c6",
+      "mode": "100644"
+    },
+    {
+      "path": "receipts/browser-current-v2b.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/browser-current-v2b/receipt.json",
+      "bytes": 22712,
+      "sha256": "74d5cec03deee996a63dff5ae7cc4574643e9aaa0f19642f91549d19b1a99fa3",
+      "git_blob": "f934981ca5aa860ad369fc2e44fab980742a1c89",
+      "mode": "100644"
+    },
+    {
+      "path": "receipts/browser-r2-v2b.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/browser-r2-v2b/receipt.json",
+      "bytes": 22909,
+      "sha256": "a12eb94b6b1ff53bedc641325fbf28ac91a868d64fa0ef9a84fd868afb0fb412",
+      "git_blob": "49d57bd18c8b3ab3de692bfb6db863b67cb01dc0",
+      "mode": "100644"
+    },
+    {
+      "path": "receipts/browser-v1.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/browser-v1/receipt.json",
+      "bytes": 24496,
+      "sha256": "da6b177d2dc715f3f79268309f69e2696f59be7b0a5c9cdbbc7480278d30126d",
+      "git_blob": "4f738768cfc4f9a035472ce754cd70e04680f42d",
+      "mode": "100644"
+    },
+    {
+      "path": "receipts/browser-v2.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/browser-v2/receipt.json",
+      "bytes": 24138,
+      "sha256": "d1d7e07ad103408be1703dd9b00855dd02bec1c8c83abf3fb35081053bb1348e",
+      "git_blob": "610355cdefa8231aadaad1b97540162ba72b7fb5",
+      "mode": "100644"
+    },
+    {
+      "path": "receipts/pending-current-r2.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/pending-current-r2/receipt.json",
+      "bytes": 5362,
+      "sha256": "d55e6e6c559ba71d250d25e2b63c4c3291731f218688b6710f31d495dcac6422",
+      "git_blob": "8ea4a74c7d24a935e80061774d600cc8f7340cc4",
+      "mode": "100644"
+    },
+    {
+      "path": "receipts/pending-current.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/pending-current/receipt.json",
+      "bytes": 6975,
+      "sha256": "b76a649176ebb3d2ecfc68bd1395179449d0bdfe48a9f9cc8f86cf1e819e9ffd",
+      "git_blob": "028f2ddd90336868986be3c3ba46d18fe604ccff",
+      "mode": "100644"
+    },
+    {
+      "path": "receipts/pending-r2.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/pending-r2/receipt.json",
+      "bytes": 6896,
+      "sha256": "9fa1eb8a8d01ba256f32964f5408d58ee479cf7a8fa76e0f6bd195a1aba18e60",
+      "git_blob": "c8353c6042ca1f79e00f4072cb82678bf0dc5610",
+      "mode": "100644"
+    },
+    {
+      "path": "review-v2.mjs",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-v2.mjs",
+      "bytes": 16070,
+      "sha256": "c95b495c89d64925e3141798e87170d0f455c7e5dd8cd0fb4eed4eaf94dc1d2f",
+      "git_blob": "b71b10f822d91d9ee8a5fcb7db97146424789c70",
+      "mode": "100644"
+    },
+    {
+      "path": "review-v2b.mjs",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-v2b.mjs",
+      "bytes": 16174,
+      "sha256": "64bd1ffa7545148f62a6ec818dbca94e40190787505f1b786d3e66ad8d420544",
+      "git_blob": "3a9364476b1f6f1c300ba402ea3cf8ad4867dc54",
+      "mode": "100644"
+    },
+    {
+      "path": "review.mjs",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review.mjs",
+      "bytes": 15213,
+      "sha256": "511aa57914805865b8d90bf780a322c76c6edc0a7e612a6cf38008fa157b7ccf",
+      "git_blob": "5a2417a5fce2b1358e4e30215fe68785e7b1aaed",
+      "mode": "100644"
+    },
+    {
+      "path": "runtime-receipt.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-publication/runtime-receipt.json",
+      "bytes": 1069,
+      "sha256": "b75627c166ef70fdc647d57de19e6d64daa0035da467dc965086c892abf7ea20",
+      "git_blob": "11f13825afc06be560597a721f6710a31bb90a93",
+      "mode": "100644"
+    },
+    {
+      "path": "screenshots/browser-v1-clock_freshness_reaches_actual_python_gate.png",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/browser-v1/clock_freshness_reaches_actual_python_gate.png",
+      "bytes": 399719,
+      "sha256": "d4b687c845bb85dd756ddc784e5a0c75c1d5b1ad629d982d1754f4b7aa21dd4c",
+      "git_blob": "6ee3cc13aa78e0f919ace5211f6c404ab4c43535",
+      "mode": "100644"
+    },
+    {
+      "path": "screenshots/browser-v1-new_scenario_discards_prior_audit_verification_result.png",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/browser-v1/new_scenario_discards_prior_audit_verification_result.png",
+      "bytes": 462139,
+      "sha256": "b1cb9aa99835a261aad94d2e169bd8cb865a637799125eb64e095e980f8916b4",
+      "git_blob": "56e9994f9a3b52985335e7fdff78d793e8731d45",
+      "mode": "100644"
+    },
+    {
+      "path": "screenshots/browser-v2-new_scenario_discards_prior_audit_verification_result.png",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/browser-v2/new_scenario_discards_prior_audit_verification_result.png",
+      "bytes": 462139,
+      "sha256": "b1cb9aa99835a261aad94d2e169bd8cb865a637799125eb64e095e980f8916b4",
+      "git_blob": "56e9994f9a3b52985335e7fdff78d793e8731d45",
+      "mode": "100644"
+    },
+    {
+      "path": "screenshots/pending-current-pending_old_trace_verification_cannot_repaint_loaded_scenario.png",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/pending-current/pending_old_trace_verification_cannot_repaint_loaded_scenario.png",
+      "bytes": 462164,
+      "sha256": "497c84f189eb780c91b6fc7305582abb7bd20ada681a63e719b10a4fa59f5ecd",
+      "git_blob": "3453121f24784d809e66ed2e48f7e740c2b53202",
+      "mode": "100644"
+    },
+    {
+      "path": "screenshots/pending-r2-pending_old_trace_verification_cannot_repaint_loaded_scenario.png",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/pending-r2/pending_old_trace_verification_cannot_repaint_loaded_scenario.png",
+      "bytes": 462164,
+      "sha256": "497c84f189eb780c91b6fc7305582abb7bd20ada681a63e719b10a4fa59f5ecd",
+      "git_blob": "3453121f24784d809e66ed2e48f7e740c2b53202",
+      "mode": "100644"
+    },
+    {
+      "path": "source-manifest-current-r2.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/source-manifest-current-r2.json",
+      "bytes": 37047,
+      "sha256": "50b09d63b2bec39ae6556e35e1347dd169558cffe7b16e8531c4d5fdbf76e1ef",
+      "git_blob": "a51b728060288237ad9148ed80f6da0e8e2d5fb6",
+      "mode": "100644"
+    },
+    {
+      "path": "source-manifest-current.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/source-manifest-current.json",
+      "bytes": 36941,
+      "sha256": "be525ef56c42052a56702f6735b11d06f0de63dc7a176192d66278c898c8a2ca",
+      "git_blob": "46385a371fd892f323a45896a70cf925809303cc",
+      "mode": "100644"
+    },
+    {
+      "path": "source-manifest-r2.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/source-manifest-r2.json",
+      "bytes": 26274,
+      "sha256": "a0fc7af66738686f1eeb4e099b95e4b17a8da2fdbd9738a16a7a74ddd8d2eed1",
+      "git_blob": "fcee2bae8df277b237a1a29a1cfdfbd2971f9bbb",
+      "mode": "100644"
+    },
+    {
+      "path": "source-manifest.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/source-manifest.json",
+      "bytes": 25794,
+      "sha256": "6bd45f0fb10763c300ea86ab64028b4cd03f3a5708ffabe1fb0622cfd8b41bbd",
+      "git_blob": "cec6da4bd311cd486efd6b4050bcd94a9b5f8c95",
+      "mode": "100644"
+    },
+    {
+      "path": "source-patches/current_parent.patch",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-publication/source-patches/current_parent.patch",
+      "bytes": 43015,
+      "sha256": "89124abbafd4ca04f7bd290db1c4a8ce1638a6833c55958755dcb8d938cb7641",
+      "git_blob": "627f4d1688cedaa5b39cfabdf5ff299331446f0d",
+      "mode": "100644"
+    },
+    {
+      "path": "source-patches/final.patch",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-publication/source-patches/final.patch",
+      "bytes": 43234,
+      "sha256": "41d514c2cd6d2d25c50bb8310085e4b628343e3e41b01264ea88780923ba0422",
+      "git_blob": "a7247a6ac6722680a28a3c609c76d5ba01ac8b5a",
+      "mode": "100644"
+    },
+    {
+      "path": "source-patches/original.patch",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-publication/source-patches/original.patch",
+      "bytes": 42984,
+      "sha256": "c7e86848cd4866db3c1c91b019223e7c2716765addaa904ae7c1c784ae6ee75f",
+      "git_blob": "0f9e4094e1da8a0615b860047a3e3fb77723cebe",
+      "mode": "100644"
+    },
+    {
+      "path": "source-patches/synchronous_clear.patch",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-publication/source-patches/synchronous_clear.patch",
+      "bytes": 43015,
+      "sha256": "89124abbafd4ca04f7bd290db1c4a8ce1638a6833c55958755dcb8d938cb7641",
+      "git_blob": "627f4d1688cedaa5b39cfabdf5ff299331446f0d",
+      "mode": "100644"
+    },
+    {
+      "path": "test-files.json",
+      "source_path": "/private/tmp/towerops-scenario-review-cf5799f6d38b-7j1qf5jk/review-publication/test-files.json",
+      "bytes": 81108,
+      "sha256": "d90f68f96722e58596726cfdbf5cb4498cb911bfc15d1bc73aeb0eb9353082f4",
+      "git_blob": "b07a69c5c23acb30d445d131aafc755c982532b3",
+      "mode": "100644"
+    }
+  ],
+  "file_count": 38,
+  "total_bytes": 2872145
+}

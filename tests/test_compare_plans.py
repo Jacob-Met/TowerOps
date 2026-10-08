@@ -2,17 +2,20 @@
 
 from __future__ import annotations
 
+import base64
 import copy
-from dataclasses import replace
 import hashlib
 import json
 import math
 import os
-from pathlib import Path
+import stat
 import subprocess
 import sys
 import tempfile
 import unittest
+import zlib
+from dataclasses import replace
+from pathlib import Path
 from unittest.mock import patch
 
 from compare_plans import MAX_REPORT_BYTES, POLICY_FIELDS, compare_reports, render_text
@@ -41,7 +44,7 @@ def world() -> dict:
 
 
 def report(*, policy: SafetyPolicy | None = None, value: dict | None = None,
-           now: float | int | None = None) -> dict:
+           now: float | None = None) -> dict:
     return review_world(encoded(world() if value is None else value), now, policy)
 
 
@@ -372,7 +375,7 @@ class ComparePlansCLI(unittest.TestCase):
     def invoke(self, *arguments, **kwargs):
         return subprocess.run(
             [sys.executable, "-B", str(CLI), *(str(value) for value in arguments)],
-            stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+            stdin=subprocess.DEVNULL, capture_output=True,
             timeout=10, check=False, **kwargs,
         )
 
@@ -381,7 +384,10 @@ class ComparePlansCLI(unittest.TestCase):
         self.assertEqual(text.returncode, 0, text.stderr)
         self.assertEqual(text.stderr, b"")
         self.assertIn(b"TowerOps saved policy comparison", text.stdout)
-        self.assertIn(b"min_horizontal_nm (NM): 5.0 -> 6.0", text.stdout)
+        native_policy = json.loads(self.before[self.right_path])["policy"]["min_horizontal_nm"]
+        self.assertIs(type(native_policy), int)
+        self.assertEqual(native_policy, 6)
+        self.assertIn(b"min_horizontal_nm (NM): 5.0 -> 6\n", text.stdout)
         result = self.invoke(self.left_path, self.right_path, "--json")
         self.assertEqual(result.returncode, 0, result.stderr)
         document = json.loads(result.stdout)
@@ -481,6 +487,102 @@ class ComparePlansCLI(unittest.TestCase):
         self.assertIn(b"cannot write comparison", result.stderr)
         self.assertNotIn(b"Traceback", result.stderr)
 
+
+def test_frozen_independent_receiving(tmp_path, capsys):
+    """Run immutable producer-grounded controls through ordinary pytest."""
+    packet = ROOT / "docs/qualification/plan-compare-ultra-1b3276062063/independent"
+    frozen_hashes = {
+        "independent_compare.py": "8b143a918ad29210226831c8247f69bb106862301993651992aa562eea9bba44",
+        "producer_fixture_builder.py": "68181c1eecda7c89baafc6e320dbbef84fed732fde5ba2adcf2cbb0f6f3fadbc",
+        "fixtures.json.zlib.b64": "fff05a419792411a8176658991a7db7a8ddde9f44976620b09aa67e95db335dd",
+        "PRE_CANDIDATE.json": "4b69bf7aa1e3e63de6b04f4a50cd159c06cadf91dc172a7eafb3a7d9040c15c7",
+        "CLOUD_API_RECEIVING.json": "667a3954198b808e73873ede3154c1b7b2824d553568b1cb51b4c9ba276beb76",
+        "CLOUD_METADATA_PROBE_FAILURE.log": "ad703f9006abd72e512e96aee9af2898965172195b76a39a01ce36b472321cd0",
+        "MAC_API_UNOBSERVED.json": "684e3ed871df0da94bc50c32fce6a0c8d6478ae7d7cb1af6c394893d0791a43d",
+        "REVIEW.md": "cba143d251f54b201cba044d76f0249cf3a39f12d7cff3d7a025c1105635cf00",
+    }
+    for name, expected in frozen_hashes.items():
+        raw = (packet / name).read_bytes()
+        assert hashlib.sha256(raw).hexdigest() == expected, name
+
+    work = tmp_path / "independent-receiving"
+    assert not work.exists()
+    command = [
+        sys.executable, "-B", str(packet / "independent_compare.py"),
+        "--source", str(CLI), "--fixtures", str(packet / "fixtures.json.zlib.b64"),
+        "--work", str(work),
+    ]
+    failure = None
+    try:
+        process = subprocess.run(
+            command, stdin=subprocess.DEVNULL, capture_output=True,
+            timeout=180, check=False,
+        )
+    except subprocess.TimeoutExpired as error:
+        stdout, stderr = error.stdout or b"", error.stderr or b""
+        failure = "Independent receiving exceeded its 180-second process bound."
+        exit_code = None
+    else:
+        stdout, stderr = process.stdout, process.stderr
+        exit_code = process.returncode
+
+    def archived(name, data):
+        return {
+            "path": name, "bytes": len(data),
+            "sha256": hashlib.sha256(data).hexdigest(),
+            "base64": base64.b64encode(data).decode("ascii"),
+        }
+
+    files = [archived("harness.stdout", stdout), archived("harness.stderr", stderr)]
+    receipt_bytes = None
+    if work.exists():
+        for path in sorted(work.iterdir()):
+            if not stat.S_ISREG(path.lstat().st_mode):
+                continue
+            if path.name != "RECEIVING.json" and path.suffix not in {".stdout", ".stderr"}:
+                continue
+            data = path.read_bytes()
+            files.append(archived(path.name, data))
+            if path.name == "RECEIVING.json":
+                receipt_bytes = data
+    archive = json.dumps(
+        {"format": "towerops.independent-raw-output.v1", "files": files},
+        ensure_ascii=True, sort_keys=True, separators=(",", ":"),
+    ).encode("utf-8")
+    compressed = zlib.compress(archive, level=9)
+    envelope = {
+        "format": "towerops.independent-log-archive.v1",
+        "encoding": "base64(zlib(JSON UTF-8))",
+        "archive_bytes": len(archive),
+        "archive_sha256": hashlib.sha256(archive).hexdigest(),
+        "compressed_bytes": len(compressed),
+        "compressed_sha256": hashlib.sha256(compressed).hexdigest(),
+        "base64": base64.b64encode(compressed).decode("ascii"),
+    }
+    with capsys.disabled():
+        print("\nTOWEROPS_INDEPENDENT_RECEIVING_JSON_BEGIN")
+        if receipt_bytes is None:
+            print(json.dumps({"receipt_unavailable": True, "exit": exit_code}))
+        else:
+            print(receipt_bytes.decode("utf-8"), end="")
+        print("TOWEROPS_INDEPENDENT_RECEIVING_JSON_END")
+        print("TOWEROPS_INDEPENDENT_RAW_ARCHIVE_BEGIN")
+        print(json.dumps(envelope, sort_keys=True))
+        print("TOWEROPS_INDEPENDENT_RAW_ARCHIVE_END", flush=True)
+
+    assert failure is None, failure
+    assert exit_code == 0, stderr.decode("utf-8", "replace")
+    assert receipt_bytes is not None
+    receipt = json.loads(receipt_bytes)
+    assert receipt["format"] == "towerops.independent-comparison-receiving.v1"
+    assert receipt["passed"] is True
+    assert receipt["source_unchanged"] is True
+    assert receipt["source_sha256"] == hashlib.sha256(CLI.read_bytes()).hexdigest()
+    assert receipt["api"]["case_count"] == 27
+    assert receipt["api"]["passed"] is True
+    assert receipt["cli"]["case_count"] == 22
+    assert receipt["cli"]["process_count"] == 22
+    assert receipt["cli"]["passed"] is True
 
 if __name__ == "__main__":
     unittest.main()

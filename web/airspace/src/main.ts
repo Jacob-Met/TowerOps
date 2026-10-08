@@ -3,6 +3,8 @@ import { createEncounterExplorer } from './encounter-view';
 import reference from '../tests/python-reference.json';
 import { Aircraft,DEFAULT_POLICY,SafetyPolicy,WorldState,conflictPairs,projected } from './core';
 import { createAircraft,conflictWindows,parseWorldState } from './world-tools';
+import { ScenarioFile, createScenario } from './scenario-file';
+import { connectScenarioFiles } from './scenario-ui';
 import { TrackEditInput,TrackEditPreview,TrackEditSession,applyTrackEdit,beginTrackEdit,previewTrackEdit } from './track-edit';
 import { Advisory } from './planner';
 import { towerPython } from './python';
@@ -27,6 +29,31 @@ let optionsReview:AdvisoryOptionsReview|null=null,optionsStatus='Review native a
 const optionsPanel=new AdvisoryReviewPanel($('advisory-review'),chooseAdvisoryOption);
 const decisionTrace=initializeDecisionTrace({getCurrentTrace:()=>pythonAudit,reviewTrace:reviewDecisionTrace});
 const flightFields=['flight-id','flight-x','flight-y','flight-level','flight-bearing','flight-speed','flight-climb'];
+const scenarioFiles=connectScenarioFiles({
+ capture:()=>({world:state,policy,now,time_scale:rate,selected_aircraft_id:selected}),
+ context:()=>[state,policy,now,rate,selected,pending,approval,audit.events,pythonAudit,busy,trackEdit,running],
+ available:()=>!busy&&!trackEdit&&!running,
+ load:loadSavedScenario,
+});
+function loadSavedScenario(value:ScenarioFile):void {
+ const restored=createScenario(value);
+ state=restored.world;policy=restored.policy;now=restored.now;rate=restored.time_scale;selected=restored.selected_aircraft_id;
+ running=false;lastFrame=0;trafficSeq=0;audit=new AuditLog();pythonAudit='[]';
+ optionsReview=null;optionsStatus='Saved scenario loaded. Review alternatives before choosing a proposal.';
+ setText('audit-verdict','');
+ clearPending('Saved scenario loaded. Run the planner or review alternatives before approval and readback.');
+ $<HTMLInputElement>('policy-horizontal').value=String(policy.min_horizontal_nm);
+ $<HTMLInputElement>('policy-vertical').value=String(policy.min_vertical_ft);
+ $<HTMLInputElement>('policy-horizon').value=String(policy.horizon_min);
+ $<HTMLInputElement>('speed-range').value=String(rate);
+ setText('horizontal-value',`${policy.min_horizontal_nm.toFixed(1)} NM`);
+ setText('vertical-value',`${policy.min_vertical_ft.toLocaleString()} FT`);
+ setText('horizon-value',`${policy.horizon_min.toFixed(1)} MIN`);
+ setText('toggle-run','Run traffic');
+ setText('world-json-feedback',`Loaded scenario with ${state.aircraft.length} aircraft at version ${state.version}.${worldJsonEdited?' Your raw JSON draft is still kept. Use Export live world to replace it.':''}`);
+ announce('Saved scenario loaded. Traffic is paused. Previous proposals, alternatives and decision trace cleared.');
+ void render();
+}
 type GateState='wait'|'done'|'fail'; let gateScreen:GateState='wait',gateApproval:GateState='wait',gateAck:GateState='wait';
 function setText(id:string,value:string){$(id).textContent=value;}
 function gate(id:string,status:'wait'|'done'|'fail',label:string){const node=$(id);node.className=`gate-step ${status}`;const i=node.querySelector('i');if(i)i.textContent=label;}
@@ -41,6 +68,7 @@ function drawLists(pairs:Array<[string,string]>){
 let proposalMessage='No proposal yet. The planner only returns a setpoint if it clears the separation policy.';
 async function render():Promise<void>{
  decisionTrace.setBusy(busy);
+ scenarioFiles.refresh();
  const pairs=conflictPairs(state,policy);drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);drawLists(pairs);
  encounterExplorer.update(state,policy,running);
  const badge=$('world-badge');badge.className=`badge ${pairs.length?'alert':'safe'}`;badge.textContent=pairs.length?'ACTION':'CLEAR';
@@ -180,9 +208,16 @@ async function reviewDecisionTrace(raw:string):Promise<DecisionTraceReport>{
 async function acceptReadback(){if(busy||!pending||!approval)return;const a=pending,applyNow=now+0.5,ack:Ack={advisory_hash:a.advisory_hash,status:'accepted',acknowledged_at:now+0.4};try{busy=true;await render();const result=await towerPython({op:'apply',state,advisory:a,approval,ack,now:applyNow,policy,audit_json:pythonAudit});pythonAudit=result.audit_json;audit.events=result.events as AuditEvent[];if(result.error)throw new GateRejected(result.error);if(!result.valid)throw new Error('Python audit chain verification failed');state=result.state;setText('python-status','Live CPython · ControlRoom.apply · audit verified');now=applyNow;pending=null;approval=null;gateScreen='done';gateApproval='done';gateAck='done';const n=conflictPairs(state,policy).length;proposalMessage=n?`Actuation is simulated; ${n} conflict pair(s) remain. Run another bounded pass.`:'Simulated setpoint applied. No projected conflict remains in the policy window.';}catch(err){proposalMessage=`GATE REJECTED: ${err instanceof GateRejected?err.reason:String(err)}. No state transition was applied.`;pending=null;approval=null;gateScreen='fail';gateAck='fail';}finally{busy=false;}await render();}
 function resetWorld(){pauseTraffic();rate=1;policy={...DEFAULT_POLICY};$<HTMLInputElement>('policy-horizontal').value=String(policy.min_horizontal_nm);$<HTMLInputElement>('policy-vertical').value=String(policy.min_vertical_ft);$<HTMLInputElement>('policy-horizon').value=String(policy.horizon_min);setText('horizontal-value',`${policy.min_horizontal_nm.toFixed(1)} NM`);setText('vertical-value',`${policy.min_vertical_ft.toLocaleString()} FT`);setText('horizon-value',`${policy.horizon_min.toFixed(1)} MIN`);state=copy(fixture.state);now=fixture.now;selected='TWR419';trafficSeq=0;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';gateScreen='wait';gateApproval='wait';gateAck='wait';proposalMessage='Reset to the crossing scenario from demo.py. Run the bounded planner to propose a safe vector.';$<HTMLInputElement>('speed-range').value=String(rate);void render();}
 function frame(t:number){if(!lastFrame)lastFrame=t;const elapsed=Math.min(0.08,Math.max(0,(t-lastFrame)/1000));lastFrame=t;if(running){const minutes=elapsed*rate;now+=minutes*60;state={version:state.version+1,observed_at:now,aircraft:state.aircraft.map(a=>projected(a,minutes))};drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);setText('sim-clock',`T+${Math.floor(now-fixture.now)} SEC`);if(t%250<20)void render();}requestAnimationFrame(frame);}
-$('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');encounterExplorer.update(state,policy,running);});
+$('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';scenarioFiles.refresh();if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');encounterExplorer.update(state,policy,running);});
 $('reset-world').addEventListener('click',resetWorld);$('add-traffic').addEventListener('click',addTraffic);$('perturb-track').addEventListener('click',perturbTrack);$('run-planner').addEventListener('click',()=>void runPlanner());$('approve').addEventListener('click',approvePlan);$('readback').addEventListener('click',()=>void acceptReadback());
-$('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>void audit.verify().then(ok=>setText('audit-verdict',ok?`HASH CHAIN VALID - ${audit.events.length} EVENTS`:'HASH CHAIN INVALID')));$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);});
+$('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>{
+ const checkedAudit=audit,checkedEvents=checkedAudit.events,checkedCount=checkedEvents.length;
+ void checkedAudit.verify().then(ok=>{
+  if(audit!==checkedAudit||audit.events!==checkedEvents||checkedEvents.length!==checkedCount)return;
+  setText('audit-verdict',ok?`HASH CHAIN VALID - ${checkedCount} EVENTS`:'HASH CHAIN INVALID');
+ });
+});
+$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);scenarioFiles.refresh();});
 $('world-json').addEventListener('input',()=>{if(!worldJsonEdited){worldJsonEdited=true;setText('world-json-feedback','Draft kept. Load it into the simulation, or export the live world to replace it.');}});
 $('edit-selected-track').addEventListener('click',startTrackEdit);$('preview-track-edit').addEventListener('click',previewSelectedTrack);$('apply-track-edit').addEventListener('click',applySelectedTrack);$('cancel-track-edit').addEventListener('click',cancelSelectedTrack);
 $('review-options').addEventListener('click',()=>void reviewAdvisoryOptions());

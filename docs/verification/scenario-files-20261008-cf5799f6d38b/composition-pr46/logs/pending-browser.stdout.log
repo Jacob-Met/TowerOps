@@ -1,0 +1,1 @@
+{"name":"pending_old_trace_verification_cannot_repaint_loaded_scenario","old_verdict":"HASH CHAIN VALID - 4 EVENTS","after_apply_verdict":"","after_old_verification_completed":"","real_digest_calls":4,"real_digest_completions":4,"source_edits":false,"hash_values_altered":false,"passed":true,"elapsed_ms":2319}

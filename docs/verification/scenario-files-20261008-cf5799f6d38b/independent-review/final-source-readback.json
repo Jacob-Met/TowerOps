@@ -1,0 +1,147 @@
+{
+  "schema": "towerops.independent-source-readback.v1",
+  "observed_utc": "2026-10-08T10:57:13.680479+00:00",
+  "sets": [
+    {
+      "label": "original",
+      "parent": "d99d238f7da62d74852e07fc90da406f87c2d371",
+      "tree": "9d4d1320fcd59b7a635adb6439ca512650e2df71",
+      "manifest_sha256": "6bd45f0fb10763c300ea86ab64028b4cd03f3a5708ffabe1fb0622cfd8b41bbd",
+      "files_checked_in_owner_and_private_receiver": 99,
+      "unowned_parent_entries_preserved": 92
+    },
+    {
+      "label": "synchronous_clear",
+      "parent": "d99d238f7da62d74852e07fc90da406f87c2d371",
+      "tree": "91131fb20fd40fd7281201f3626638cffac3f532",
+      "manifest_sha256": "a0fc7af66738686f1eeb4e099b95e4b17a8da2fdbd9738a16a7a74ddd8d2eed1",
+      "files_checked_in_owner_and_private_receiver": 99,
+      "unowned_parent_entries_preserved": 92
+    },
+    {
+      "label": "current_parent",
+      "parent": "09b96e31d2867af5b7a9738406d0431cf1010090",
+      "tree": "317ddf06e84c6b08f2e06ce634f5a64b264effd5",
+      "manifest_sha256": "be525ef56c42052a56702f6735b11d06f0de63dc7a176192d66278c898c8a2ca",
+      "files_checked_in_owner_and_private_receiver": 136,
+      "unowned_parent_entries_preserved": 129
+    },
+    {
+      "label": "final",
+      "parent": "09b96e31d2867af5b7a9738406d0431cf1010090",
+      "tree": "d6b4a1ec5757144f848e1d6ce851a766a7413f2c",
+      "manifest_sha256": "50b09d63b2bec39ae6556e35e1347dd169558cffe7b16e8531c4d5fdbf76e1ef",
+      "files_checked_in_owner_and_private_receiver": 136,
+      "unowned_parent_entries_preserved": 129
+    }
+  ],
+  "runs": [
+    {
+      "run": "browser-v1",
+      "source_tree": "9d4d1320fcd59b7a635adb6439ca512650e2df71",
+      "groups": 6,
+      "passed": 4,
+      "failed": 2,
+      "observed_process_exit_code": 1,
+      "page_errors": 0,
+      "external_app_requests": 0,
+      "receipt_sha256": "da6b177d2dc715f3f79268309f69e2696f59be7b0a5c9cdbbc7480278d30126d",
+      "receipt_completed_utc": "2026-10-08T10:07:10.393441+00:00"
+    },
+    {
+      "run": "browser-v2",
+      "source_tree": "9d4d1320fcd59b7a635adb6439ca512650e2df71",
+      "groups": 6,
+      "passed": 5,
+      "failed": 1,
+      "observed_process_exit_code": 1,
+      "page_errors": 0,
+      "external_app_requests": 0,
+      "receipt_sha256": "d1d7e07ad103408be1703dd9b00855dd02bec1c8c83abf3fb35081053bb1348e",
+      "receipt_completed_utc": "2026-10-08T10:12:44.461263+00:00"
+    },
+    {
+      "run": "browser-r2-v2b",
+      "source_tree": "91131fb20fd40fd7281201f3626638cffac3f532",
+      "groups": 6,
+      "passed": 6,
+      "failed": 0,
+      "observed_process_exit_code": 0,
+      "page_errors": 0,
+      "external_app_requests": 0,
+      "receipt_sha256": "a12eb94b6b1ff53bedc641325fbf28ac91a868d64fa0ef9a84fd868afb0fb412",
+      "receipt_completed_utc": "2026-10-08T10:34:41.755656+00:00"
+    },
+    {
+      "run": "browser-current-v2b",
+      "source_tree": "317ddf06e84c6b08f2e06ce634f5a64b264effd5",
+      "groups": 6,
+      "passed": 6,
+      "failed": 0,
+      "observed_process_exit_code": 0,
+      "page_errors": 0,
+      "external_app_requests": 0,
+      "receipt_sha256": "74d5cec03deee996a63dff5ae7cc4574643e9aaa0f19642f91549d19b1a99fa3",
+      "receipt_completed_utc": "2026-10-08T10:42:37.954288+00:00"
+    },
+    {
+      "run": "browser-current-r2-v2b",
+      "source_tree": "d6b4a1ec5757144f848e1d6ce851a766a7413f2c",
+      "groups": 6,
+      "passed": 6,
+      "failed": 0,
+      "observed_process_exit_code": 0,
+      "page_errors": 0,
+      "external_app_requests": 0,
+      "receipt_sha256": "eeead90de09a7ae6dea82b9dcec09b6131945c421a3c3afe50ae337df976e7e3",
+      "receipt_completed_utc": "2026-10-08T10:45:40.605601+00:00"
+    },
+    {
+      "run": "pending-r2",
+      "source_tree": "91131fb20fd40fd7281201f3626638cffac3f532",
+      "groups": 1,
+      "passed": 0,
+      "failed": 1,
+      "observed_process_exit_code": 1,
+      "page_errors": 0,
+      "external_app_requests": 0,
+      "receipt_sha256": "9fa1eb8a8d01ba256f32964f5408d58ee479cf7a8fa76e0f6bd195a1aba18e60",
+      "receipt_completed_utc": "2026-10-08T10:37:36.325666+00:00"
+    },
+    {
+      "run": "pending-current",
+      "source_tree": "317ddf06e84c6b08f2e06ce634f5a64b264effd5",
+      "groups": 1,
+      "passed": 0,
+      "failed": 1,
+      "observed_process_exit_code": 1,
+      "page_errors": 0,
+      "external_app_requests": 0,
+      "receipt_sha256": "b76a649176ebb3d2ecfc68bd1395179449d0bdfe48a9f9cc8f86cf1e819e9ffd",
+      "receipt_completed_utc": "2026-10-08T10:42:32.806308+00:00"
+    },
+    {
+      "run": "pending-current-r2",
+      "source_tree": "d6b4a1ec5757144f848e1d6ce851a766a7413f2c",
+      "groups": 1,
+      "passed": 1,
+      "failed": 0,
+      "observed_process_exit_code": 0,
+      "page_errors": 0,
+      "external_app_requests": 0,
+      "receipt_sha256": "d55e6e6c559ba71d250d25e2b63c4c3291731f218688b6710f31d495dcac6422",
+      "receipt_completed_utc": "2026-10-08T10:45:30.789046+00:00"
+    },
+    {
+      "run": "browser-r2-v2",
+      "source_tree": "91131fb20fd40fd7281201f3626638cffac3f532",
+      "groups": 0,
+      "observed_process_exit_code": 1,
+      "disposition": "receiver proxy ECONNRESET before first completed group; no product result"
+    }
+  ],
+  "final_unique_independent_groups": 7,
+  "final_passed": 7,
+  "product_source_edits": false,
+  "installed_or_serving_claim": false
+}

@@ -1,0 +1,500 @@
+﻿2026-10-08T12:45:00.6849734Z Current runner version: '2.337.0'
+2026-10-08T12:45:00.6875481Z ##[group]Runner Image Provisioner
+2026-10-08T12:45:00.6876383Z Hosted Compute Agent
+2026-10-08T12:45:00.6877289Z Version: 20260901.588
+2026-10-08T12:45:00.6877955Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-08T12:45:00.6878674Z Build Date: 2026-09-01T19:56:44Z
+2026-10-08T12:45:00.6879468Z Worker ID: {84563b43-0a1b-432a-8c78-dc7b980e1e71}
+2026-10-08T12:45:00.6880211Z Azure Region: westus3
+2026-10-08T12:45:00.6880818Z ##[endgroup]
+2026-10-08T12:45:00.6882524Z ##[group]Operating System
+2026-10-08T12:45:00.6883156Z Ubuntu
+2026-10-08T12:45:00.6883806Z 24.04.5
+2026-10-08T12:45:00.6884319Z LTS
+2026-10-08T12:45:00.6884868Z ##[endgroup]
+2026-10-08T12:45:00.6885440Z ##[group]Runner Image
+2026-10-08T12:45:00.6886035Z Image: ubuntu-24.04
+2026-10-08T12:45:00.6886649Z Version: 20260927.320.1
+2026-10-08T12:45:00.6888307Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T12:45:00.6889954Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-10-08T12:45:00.6890926Z ##[endgroup]
+2026-10-08T12:45:00.6892125Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T12:45:00.6894049Z Contents: read
+2026-10-08T12:45:00.6894758Z Metadata: read
+2026-10-08T12:45:00.6895691Z ##[endgroup]
+2026-10-08T12:45:00.6898293Z Secret source: Actions
+2026-10-08T12:45:00.6899301Z Cache mode: write
+2026-10-08T12:45:00.6900336Z Prepare workflow directory
+2026-10-08T12:45:00.7310033Z Prepare all required actions
+2026-10-08T12:45:00.7359671Z Getting action download info
+2026-10-08T12:45:01.0233184Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-08T12:45:01.1256492Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-08T12:45:01.3489409Z Complete job name: lint
+2026-10-08T12:45:01.4297683Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-08T12:45:01.4298884Z with:
+2026-10-08T12:45:01.4299354Z   repository: Jacob-Met/TowerOps
+2026-10-08T12:45:01.4303106Z   token: ***
+2026-10-08T12:45:01.4303553Z   ssh-strict: true
+2026-10-08T12:45:01.4304000Z   ssh-user: git
+2026-10-08T12:45:01.4304451Z   persist-credentials: true
+2026-10-08T12:45:01.4304950Z   clean: true
+2026-10-08T12:45:01.4305411Z   sparse-checkout-cone-mode: true
+2026-10-08T12:45:01.4305938Z   fetch-depth: 1
+2026-10-08T12:45:01.4306376Z   fetch-tags: false
+2026-10-08T12:45:01.4306816Z   show-progress: true
+2026-10-08T12:45:01.4307467Z   lfs: false
+2026-10-08T12:45:01.4307882Z   submodules: false
+2026-10-08T12:45:01.4308331Z   set-safe-directory: true
+2026-10-08T12:45:01.4308849Z   allow-unsafe-pr-checkout: false
+2026-10-08T12:45:01.4309636Z ##[endgroup]
+2026-10-08T12:45:01.5352037Z Syncing repository: Jacob-Met/TowerOps
+2026-10-08T12:45:01.5354919Z ##[group]Getting Git version info
+2026-10-08T12:45:01.5355931Z Working directory is '/home/runner/work/TowerOps/TowerOps'
+2026-10-08T12:45:01.5357583Z [command]/usr/bin/git version
+2026-10-08T12:45:01.5419054Z git version 2.55.0
+2026-10-08T12:45:01.5450560Z ##[endgroup]
+2026-10-08T12:45:01.5467323Z Temporarily overriding HOME='/home/runner/work/_temp/a2a6544e-891d-45e1-a9f0-45903b15ee94' before making global git config changes
+2026-10-08T12:45:01.5469631Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T12:45:01.5473806Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TowerOps/TowerOps
+2026-10-08T12:45:01.5531330Z Deleting the contents of '/home/runner/work/TowerOps/TowerOps'
+2026-10-08T12:45:01.5534175Z ##[group]Determining repository object format
+2026-10-08T12:45:01.5535899Z ##[endgroup]
+2026-10-08T12:45:01.5536832Z ##[group]Initializing the repository
+2026-10-08T12:45:01.5541338Z [command]/usr/bin/git init /home/runner/work/TowerOps/TowerOps
+2026-10-08T12:45:01.5702660Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T12:45:01.5706598Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T12:45:01.5708579Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T12:45:01.5709864Z hint: call:
+2026-10-08T12:45:01.5710507Z hint:
+2026-10-08T12:45:01.5711316Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T12:45:01.5712331Z hint:
+2026-10-08T12:45:01.5713292Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T12:45:01.5715650Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T12:45:01.5717240Z hint:
+2026-10-08T12:45:01.5717951Z hint: 	git branch -m <name>
+2026-10-08T12:45:01.5718714Z hint:
+2026-10-08T12:45:01.5719780Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T12:45:01.5721552Z Initialized empty Git repository in /home/runner/work/TowerOps/TowerOps/.git/
+2026-10-08T12:45:01.5727735Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/TowerOps
+2026-10-08T12:45:01.5788181Z ##[endgroup]
+2026-10-08T12:45:01.5789542Z ##[group]Disabling automatic garbage collection
+2026-10-08T12:45:01.5791181Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T12:45:01.5831606Z ##[endgroup]
+2026-10-08T12:45:01.5833014Z ##[group]Setting up auth
+2026-10-08T12:45:01.5833862Z Removing SSH command configuration
+2026-10-08T12:45:01.5838501Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T12:45:01.5878507Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T12:45:01.6259265Z Removing HTTP extra header
+2026-10-08T12:45:01.6262435Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T12:45:01.6301762Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T12:45:01.6533515Z Removing includeIf entries pointing to credentials config files
+2026-10-08T12:45:01.6538857Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T12:45:01.6578143Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T12:45:01.6823042Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T12:45:01.6864814Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TowerOps/TowerOps/.git.path /home/runner/work/_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config
+2026-10-08T12:45:01.6900182Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TowerOps/TowerOps/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config
+2026-10-08T12:45:01.6939024Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config
+2026-10-08T12:45:01.6976843Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config
+2026-10-08T12:45:01.7010505Z ##[endgroup]
+2026-10-08T12:45:01.7011852Z ##[group]Fetching the repository
+2026-10-08T12:45:01.7019494Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9c6bef26bfef04f1eca264dec533e47e0f270aa8:refs/remotes/origin/feat/scenario-files-cf5799f6d38b
+2026-10-08T12:45:03.1807241Z From https://github.com/Jacob-Met/TowerOps
+2026-10-08T12:45:03.1809905Z  * [new ref]         9c6bef26bfef04f1eca264dec533e47e0f270aa8 -> origin/feat/scenario-files-cf5799f6d38b
+2026-10-08T12:45:03.1816756Z [command]/usr/bin/git branch --list --remote origin/feat/scenario-files-cf5799f6d38b
+2026-10-08T12:45:03.1849353Z   origin/feat/scenario-files-cf5799f6d38b
+2026-10-08T12:45:03.1860616Z [command]/usr/bin/git rev-parse refs/remotes/origin/feat/scenario-files-cf5799f6d38b
+2026-10-08T12:45:03.1891869Z 9c6bef26bfef04f1eca264dec533e47e0f270aa8
+2026-10-08T12:45:03.1900697Z ##[endgroup]
+2026-10-08T12:45:03.1901839Z ##[group]Determining the checkout info
+2026-10-08T12:45:03.1903325Z ##[endgroup]
+2026-10-08T12:45:03.1904066Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T12:45:03.1965030Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T12:45:03.2003869Z ##[group]Checking out the ref
+2026-10-08T12:45:03.2010652Z [command]/usr/bin/git checkout --progress --force -B feat/scenario-files-cf5799f6d38b refs/remotes/origin/feat/scenario-files-cf5799f6d38b
+2026-10-08T12:45:03.2616612Z Switched to a new branch 'feat/scenario-files-cf5799f6d38b'
+2026-10-08T12:45:03.2623792Z branch 'feat/scenario-files-cf5799f6d38b' set up to track 'origin/feat/scenario-files-cf5799f6d38b'.
+2026-10-08T12:45:03.2635487Z ##[endgroup]
+2026-10-08T12:45:03.2689650Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T12:45:03.2722599Z 9c6bef26bfef04f1eca264dec533e47e0f270aa8
+2026-10-08T12:45:03.3103053Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-08T12:45:03.3104335Z with:
+2026-10-08T12:45:03.3104831Z   python-version: 3.12
+2026-10-08T12:45:03.3105432Z   check-latest: false
+2026-10-08T12:45:03.3114243Z   token: ***
+2026-10-08T12:45:03.3114802Z   update-environment: true
+2026-10-08T12:45:03.3115476Z   allow-prereleases: false
+2026-10-08T12:45:03.3116128Z   freethreaded: false
+2026-10-08T12:45:03.3116698Z ##[endgroup]
+2026-10-08T12:45:03.4306595Z ##[group]Installed versions
+2026-10-08T12:45:03.4380327Z Successfully set up CPython (3.12.14)
+2026-10-08T12:45:03.4381833Z ##[endgroup]
+2026-10-08T12:45:03.4584129Z ##[group]Run python -m pip install -q "ruff==0.16.10"
+2026-10-08T12:45:03.4585906Z [36;1mpython -m pip install -q "ruff==0.16.10"[0m
+2026-10-08T12:45:03.4973962Z shell: /usr/bin/bash -e {0}
+2026-10-08T12:45:03.4975096Z env:
+2026-10-08T12:45:03.4976263Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-08T12:45:03.4978832Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-08T12:45:03.4981053Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-08T12:45:03.4983045Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-08T12:45:03.4985071Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-08T12:45:03.4987537Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-08T12:45:03.4988695Z ##[endgroup]
+2026-10-08T12:45:05.1906114Z ##[group]Run python -m ruff check .
+2026-10-08T12:45:05.1906545Z [36;1mpython -m ruff check .[0m
+2026-10-08T12:45:05.1973815Z shell: /usr/bin/bash -e {0}
+2026-10-08T12:45:05.1974128Z env:
+2026-10-08T12:45:05.1974460Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-08T12:45:05.1974975Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-08T12:45:05.1975488Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-08T12:45:05.1975944Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-08T12:45:05.1976388Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-08T12:45:05.1976841Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-08T12:45:05.1977535Z ##[endgroup]
+2026-10-08T12:45:05.2412109Z I001 [*] Import block is un-sorted or un-formatted
+2026-10-08T12:45:05.2413246Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/run-ci-browser-python.py:2:1
+2026-10-08T12:45:05.2414844Z   |
+2026-10-08T12:45:05.2415566Z 1 |   """Run the unchanged CI worker oracle with the installed Chrome executable."""
+2026-10-08T12:45:05.2416841Z 2 | / import hashlib, json, runpy, sys
+2026-10-08T12:45:05.2417703Z 3 | | from pathlib import Path
+2026-10-08T12:45:05.2418298Z 4 | | from playwright.sync_api import BrowserType
+2026-10-08T12:45:05.2418940Z   | |___________________________________________^
+2026-10-08T12:45:05.2419545Z 5 |   source=Path(sys.argv[1]).resolve()
+2026-10-08T12:45:05.2420102Z 6 |   chrome=sys.argv[2]
+2026-10-08T12:45:05.2420564Z   |
+2026-10-08T12:45:05.2420971Z help: Organize imports
+2026-10-08T12:45:05.2421418Z    |
+2026-10-08T12:45:05.2422078Z 1  | """Run the unchanged CI worker oracle with the installed Chrome executable."""
+2026-10-08T12:45:05.2422918Z    - import hashlib, json, runpy, sys
+2026-10-08T12:45:05.2423497Z 2  + import hashlib
+2026-10-08T12:45:05.2423957Z 3  + import json
+2026-10-08T12:45:05.2424377Z 4  + import runpy
+2026-10-08T12:45:05.2424851Z 5  + import sys
+2026-10-08T12:45:05.2425340Z 6  | from pathlib import Path
+2026-10-08T12:45:05.2425811Z 7  +
+2026-10-08T12:45:05.2426353Z 8  | from playwright.sync_api import BrowserType
+2026-10-08T12:45:05.2426924Z 9  +
+2026-10-08T12:45:05.2427592Z 10 | source=Path(sys.argv[1]).resolve()
+2026-10-08T12:45:05.2428118Z    |
+2026-10-08T12:45:05.2428337Z 
+2026-10-08T12:45:05.2428598Z I001 [*] Import block is un-sorted or un-formatted
+2026-10-08T12:45:05.2429416Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/run-ci-capture.py:2:1
+2026-10-08T12:45:05.2430028Z   |
+2026-10-08T12:45:05.2430463Z 1 |   """Run existing capture predicates with output isolated from frozen source."""
+2026-10-08T12:45:05.2430970Z 2 | / import hashlib,json,sys
+2026-10-08T12:45:05.2431393Z 3 | | from pathlib import Path
+2026-10-08T12:45:05.2432139Z   | |________________________^
+2026-10-08T12:45:05.2432903Z 4 |   source=Path(sys.argv[1]).resolve();chrome=sys.argv[2];output=Path(sys.argv[3]).resolve()
+2026-10-08T12:45:05.2433847Z 5 |   entry=source/"tools/capture_airspace.py";raw=entry.read_text()
+2026-10-08T12:45:05.2434257Z   |
+2026-10-08T12:45:05.2434509Z help: Organize imports
+2026-10-08T12:45:05.2434769Z   |
+2026-10-08T12:45:05.2435138Z 1 | """Run existing capture predicates with output isolated from frozen source."""
+2026-10-08T12:45:05.2435600Z   - import hashlib,json,sys
+2026-10-08T12:45:05.2435890Z 2 + import hashlib
+2026-10-08T12:45:05.2436141Z 3 + import json
+2026-10-08T12:45:05.2436381Z 4 + import sys
+2026-10-08T12:45:05.2436644Z 5 | from pathlib import Path
+2026-10-08T12:45:05.2436917Z 6 +
+2026-10-08T12:45:05.2437631Z 7 | source=Path(sys.argv[1]).resolve();chrome=sys.argv[2];output=Path(sys.argv[3]).resolve()
+2026-10-08T12:45:05.2438273Z   |
+2026-10-08T12:45:05.2438398Z 
+2026-10-08T12:45:05.2438528Z S102 Use of `exec` detected
+2026-10-08T12:45:05.2439115Z   --> docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/run-ci-capture.py:11:1
+2026-10-08T12:45:05.2439932Z    |
+2026-10-08T12:45:05.2440952Z  9 | print(json.dumps({"entry":str(entry),"entry_sha256":hashlib.sha256(entry.read_bytes()).hexdigest(),"override":"capture output director…
+2026-10-08T12:45:05.2441638Z 10 | sys.argv=[str(entry),"--chrome",chrome]
+2026-10-08T12:45:05.2442124Z 11 | exec(compile(changed,str(entry),"exec"),{"__name__":"__main__","__file__":str(entry)})
+2026-10-08T12:45:05.2442574Z    | ^^^^
+2026-10-08T12:45:05.2442712Z 
+2026-10-08T12:45:05.2442877Z I001 [*] Import block is un-sorted or un-formatted
+2026-10-08T12:45:05.2443492Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current-r2.py:1:1
+2026-10-08T12:45:05.2444046Z   |
+2026-10-08T12:45:05.2444293Z 1 | / from pathlib import Path
+2026-10-08T12:45:05.2444633Z 2 | | import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2444991Z   | |_________________________________________^
+2026-10-08T12:45:05.2445327Z 3 |   root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2445752Z 4 |   owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2446151Z   |
+2026-10-08T12:45:05.2446394Z help: Organize imports
+2026-10-08T12:45:05.2446815Z   |
+2026-10-08T12:45:05.2447338Z 1 + import difflib
+2026-10-08T12:45:05.2447621Z 2 + import hashlib
+2026-10-08T12:45:05.2447909Z 3 + import json
+2026-10-08T12:45:05.2448153Z 4 + import os
+2026-10-08T12:45:05.2448403Z 5 + import subprocess
+2026-10-08T12:45:05.2448684Z 6 | from pathlib import Path
+2026-10-08T12:45:05.2449017Z   - import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2449372Z 7 +
+2026-10-08T12:45:05.2449626Z 8 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2449939Z   |
+2026-10-08T12:45:05.2450060Z 
+2026-10-08T12:45:05.2450200Z F401 [*] `difflib` imported but unused
+2026-10-08T12:45:05.2450786Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current-r2.py:2:32
+2026-10-08T12:45:05.2451342Z   |
+2026-10-08T12:45:05.2451580Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2451935Z 2 | import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2452283Z   |                                ^^^^^^^
+2026-10-08T12:45:05.2452623Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2453034Z 4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2453413Z   |
+2026-10-08T12:45:05.2453650Z help: Remove unused import
+2026-10-08T12:45:05.2453916Z   |
+2026-10-08T12:45:05.2454152Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2454475Z   - import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2454830Z 2 + import hashlib,json,subprocess
+2026-10-08T12:45:05.2455152Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2455447Z   |
+2026-10-08T12:45:05.2455573Z 
+2026-10-08T12:45:05.2455694Z F401 [*] `os` imported but unused
+2026-10-08T12:45:05.2456256Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current-r2.py:2:40
+2026-10-08T12:45:05.2456800Z   |
+2026-10-08T12:45:05.2457318Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2457656Z 2 | import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2458002Z   |                                        ^^
+2026-10-08T12:45:05.2458338Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2458744Z 4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2459129Z   |
+2026-10-08T12:45:05.2459374Z help: Remove unused import
+2026-10-08T12:45:05.2459654Z   |
+2026-10-08T12:45:05.2459897Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2460224Z   - import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2460578Z 2 + import hashlib,json,subprocess
+2026-10-08T12:45:05.2460895Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2461194Z   |
+2026-10-08T12:45:05.2461319Z 
+2026-10-08T12:45:05.2461513Z PLW1510 `subprocess.run` without explicit `check` argument
+2026-10-08T12:45:05.2462166Z   --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current-r2.py:39:12
+2026-10-08T12:45:05.2462956Z    |
+2026-10-08T12:45:05.2463287Z 37 | (root/"source-manifest-current-r2.json").write_bytes(raw)
+2026-10-08T12:45:05.2463948Z 38 | with (root/"build-current-r2.stdout.log").open("xb") as out,(root/"build-current-r2.stderr.log").open("xb") as err:
+2026-10-08T12:45:05.2464731Z 39 |     result=subprocess.run(["npm","run","build"],cwd=target/"web/airspace",stdout=out,stderr=err,timeout=120)
+2026-10-08T12:45:05.2465276Z    |            ^^^^^^^^^^^^^^
+2026-10-08T12:45:05.2466015Z 40 | report={"source_tree":tree,"parent":parent,"source_files":len(manifest["files"]),"feature_files":len(feature),"unowned_files_preserved…
+2026-10-08T12:45:05.2467352Z 41 |         "source_unchanged_after_build":all(hashlib.sha256((target/r["path"]).read_bytes()).hexdigest()==r["sha256"] for r in manifest[…
+2026-10-08T12:45:05.2467976Z    |
+2026-10-08T12:45:05.2468235Z help: Add explicit `check=False`
+2026-10-08T12:45:05.2468436Z 
+2026-10-08T12:45:05.2468610Z I001 [*] Import block is un-sorted or un-formatted
+2026-10-08T12:45:05.2469261Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current.py:1:1
+2026-10-08T12:45:05.2469955Z   |
+2026-10-08T12:45:05.2470207Z 1 | / from pathlib import Path
+2026-10-08T12:45:05.2470554Z 2 | | import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2470938Z   | |_________________________________________^
+2026-10-08T12:45:05.2471289Z 3 |   root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2471722Z 4 |   owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2472109Z   |
+2026-10-08T12:45:05.2472349Z help: Organize imports
+2026-10-08T12:45:05.2472608Z   |
+2026-10-08T12:45:05.2472836Z 1 + import difflib
+2026-10-08T12:45:05.2473090Z 2 + import hashlib
+2026-10-08T12:45:05.2473337Z 3 + import json
+2026-10-08T12:45:05.2473577Z 4 + import os
+2026-10-08T12:45:05.2473827Z 5 + import subprocess
+2026-10-08T12:45:05.2474154Z 6 | from pathlib import Path
+2026-10-08T12:45:05.2474507Z   - import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2474838Z 7 +
+2026-10-08T12:45:05.2475097Z 8 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2475400Z   |
+2026-10-08T12:45:05.2475537Z 
+2026-10-08T12:45:05.2475683Z F401 [*] `difflib` imported but unused
+2026-10-08T12:45:05.2476294Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current.py:2:32
+2026-10-08T12:45:05.2476834Z   |
+2026-10-08T12:45:05.2477349Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2477695Z 2 | import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2478052Z   |                                ^^^^^^^
+2026-10-08T12:45:05.2478384Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2478810Z 4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2479188Z   |
+2026-10-08T12:45:05.2479439Z help: Remove unused import
+2026-10-08T12:45:05.2479712Z   |
+2026-10-08T12:45:05.2479956Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2480304Z   - import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2480681Z 2 + import hashlib,json,subprocess
+2026-10-08T12:45:05.2481014Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2481321Z   |
+2026-10-08T12:45:05.2481450Z 
+2026-10-08T12:45:05.2481582Z F401 [*] `os` imported but unused
+2026-10-08T12:45:05.2482162Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current.py:2:40
+2026-10-08T12:45:05.2482702Z   |
+2026-10-08T12:45:05.2482946Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2483288Z 2 | import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2483643Z   |                                        ^^
+2026-10-08T12:45:05.2483979Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2484397Z 4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2484777Z   |
+2026-10-08T12:45:05.2485016Z help: Remove unused import
+2026-10-08T12:45:05.2485278Z   |
+2026-10-08T12:45:05.2485521Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2485993Z   - import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2486372Z 2 + import hashlib,json,subprocess
+2026-10-08T12:45:05.2486709Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2487278Z   |
+2026-10-08T12:45:05.2487409Z 
+2026-10-08T12:45:05.2487621Z PLW1510 `subprocess.run` without explicit `check` argument
+2026-10-08T12:45:05.2488287Z   --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current.py:37:12
+2026-10-08T12:45:05.2488830Z    |
+2026-10-08T12:45:05.2489147Z 35 | (root/"source-manifest-current.json").write_bytes(raw)
+2026-10-08T12:45:05.2489793Z 36 | with (root/"build-current.stdout.log").open("xb") as out,(root/"build-current.stderr.log").open("xb") as err:
+2026-10-08T12:45:05.2490590Z 37 |     result=subprocess.run(["npm","run","build"],cwd=target/"web/airspace",stdout=out,stderr=err,timeout=120)
+2026-10-08T12:45:05.2491124Z    |            ^^^^^^^^^^^^^^
+2026-10-08T12:45:05.2491862Z 38 | report={"source_tree":tree,"parent":parent,"source_files":len(manifest["files"]),"feature_files":len(feature),"unowned_files_preserved…
+2026-10-08T12:45:05.2492884Z 39 |         "source_unchanged_after_build":all(hashlib.sha256((target/r["path"]).read_bytes()).hexdigest()==r["sha256"] for r in manifest[…
+2026-10-08T12:45:05.2493622Z    |
+2026-10-08T12:45:05.2493877Z help: Add explicit `check=False`
+2026-10-08T12:45:05.2494072Z 
+2026-10-08T12:45:05.2494238Z I001 [*] Import block is un-sorted or un-formatted
+2026-10-08T12:45:05.2494841Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-r2.py:1:1
+2026-10-08T12:45:05.2495355Z   |
+2026-10-08T12:45:05.2495607Z 1 | / from pathlib import Path
+2026-10-08T12:45:05.2495954Z 2 | | import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2496324Z   | |_________________________________________^
+2026-10-08T12:45:05.2496669Z 3 |   root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2497339Z 4 |   owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2497737Z   |
+2026-10-08T12:45:05.2497988Z help: Organize imports
+2026-10-08T12:45:05.2498258Z   |
+2026-10-08T12:45:05.2498487Z 1 + import difflib
+2026-10-08T12:45:05.2498773Z 2 + import hashlib
+2026-10-08T12:45:05.2499029Z 3 + import json
+2026-10-08T12:45:05.2499272Z 4 + import os
+2026-10-08T12:45:05.2499524Z 5 + import subprocess
+2026-10-08T12:45:05.2499805Z 6 | from pathlib import Path
+2026-10-08T12:45:05.2500150Z   - import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2500481Z 7 +
+2026-10-08T12:45:05.2500749Z 8 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2501047Z   |
+2026-10-08T12:45:05.2501165Z 
+2026-10-08T12:45:05.2501310Z F401 [*] `os` imported but unused
+2026-10-08T12:45:05.2501869Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-r2.py:2:40
+2026-10-08T12:45:05.2502393Z   |
+2026-10-08T12:45:05.2502640Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2502979Z 2 | import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2503357Z   |                                        ^^
+2026-10-08T12:45:05.2503695Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2504128Z 4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2504515Z   |
+2026-10-08T12:45:05.2504769Z help: Remove unused import: `os`
+2026-10-08T12:45:05.2505052Z   |
+2026-10-08T12:45:05.2505297Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2505638Z   - import hashlib,json,subprocess,difflib,os
+2026-10-08T12:45:05.2506019Z 2 + import hashlib,json,subprocess,difflib
+2026-10-08T12:45:05.2506378Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2506671Z   |
+2026-10-08T12:45:05.2506795Z 
+2026-10-08T12:45:05.2507214Z PLW1510 `subprocess.run` without explicit `check` argument
+2026-10-08T12:45:05.2507881Z   --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-r2.py:25:12
+2026-10-08T12:45:05.2508408Z    |
+2026-10-08T12:45:05.2508685Z 23 | (root/"r2-source.delta").write_text(delta)
+2026-10-08T12:45:05.2509389Z 24 | with (root/"build-r2.stdout.log").open("xb") as out,(root/"build-r2.stderr.log").open("xb") as err:
+2026-10-08T12:45:05.2510147Z 25 |     result=subprocess.run(["npm","run","build"],cwd=target/"web/airspace",stdout=out,stderr=err,timeout=120)
+2026-10-08T12:45:05.2510697Z    |            ^^^^^^^^^^^^^^
+2026-10-08T12:45:05.2511414Z 26 | report={"source_tree":manifest["source_tree"],"source_files":len(manifest["files"]),"changed_paths":changed,"build_returncode":result.…
+2026-10-08T12:45:05.2512429Z 27 |         "source_unchanged_after_build":all(hashlib.sha256((target/r["path"]).read_bytes()).hexdigest()==r["sha256"] for r in manifest[…
+2026-10-08T12:45:05.2513031Z    |
+2026-10-08T12:45:05.2513283Z help: Add explicit `check=False`
+2026-10-08T12:45:05.2513478Z 
+2026-10-08T12:45:05.2513654Z I001 [*] Import block is un-sorted or un-formatted
+2026-10-08T12:45:05.2514236Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap.py:1:1
+2026-10-08T12:45:05.2514746Z   |
+2026-10-08T12:45:05.2515003Z 1 | / from pathlib import Path
+2026-10-08T12:45:05.2515375Z 2 | | import hashlib,json,os,shutil,subprocess,datetime
+2026-10-08T12:45:05.2515922Z   | |_________________________________________________^
+2026-10-08T12:45:05.2516285Z 3 |   root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2516719Z 4 |   owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2517381Z   |
+2026-10-08T12:45:05.2517633Z help: Organize imports
+2026-10-08T12:45:05.2517898Z   |
+2026-10-08T12:45:05.2518129Z 1 + import datetime
+2026-10-08T12:45:05.2518383Z 2 + import hashlib
+2026-10-08T12:45:05.2518634Z 3 + import json
+2026-10-08T12:45:05.2518879Z 4 + import os
+2026-10-08T12:45:05.2519122Z 5 + import shutil
+2026-10-08T12:45:05.2519381Z 6 + import subprocess
+2026-10-08T12:45:05.2519661Z 7 | from pathlib import Path
+2026-10-08T12:45:05.2520031Z   - import hashlib,json,os,shutil,subprocess,datetime
+2026-10-08T12:45:05.2520385Z 8 +
+2026-10-08T12:45:05.2520637Z 9 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2520949Z   |
+2026-10-08T12:45:05.2521070Z 
+2026-10-08T12:45:05.2521202Z F401 [*] `os` imported but unused
+2026-10-08T12:45:05.2521743Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap.py:2:21
+2026-10-08T12:45:05.2522251Z   |
+2026-10-08T12:45:05.2522495Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2522851Z 2 | import hashlib,json,os,shutil,subprocess,datetime
+2026-10-08T12:45:05.2523221Z   |                     ^^
+2026-10-08T12:45:05.2523530Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2523949Z 4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2524326Z   |
+2026-10-08T12:45:05.2524565Z help: Remove unused import
+2026-10-08T12:45:05.2524829Z   |
+2026-10-08T12:45:05.2525071Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2525430Z   - import hashlib,json,os,shutil,subprocess,datetime
+2026-10-08T12:45:05.2525832Z 2 + import hashlib,json,subprocess,datetime
+2026-10-08T12:45:05.2526201Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2526505Z   |
+2026-10-08T12:45:05.2526633Z 
+2026-10-08T12:45:05.2526774Z F401 [*] `shutil` imported but unused
+2026-10-08T12:45:05.2527543Z  --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap.py:2:24
+2026-10-08T12:45:05.2528056Z   |
+2026-10-08T12:45:05.2528300Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2528657Z 2 | import hashlib,json,os,shutil,subprocess,datetime
+2026-10-08T12:45:05.2529025Z   |                        ^^^^^^
+2026-10-08T12:45:05.2529335Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2529750Z 4 | owner=Path("/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv")
+2026-10-08T12:45:05.2530133Z   |
+2026-10-08T12:45:05.2530379Z help: Remove unused import
+2026-10-08T12:45:05.2530668Z   |
+2026-10-08T12:45:05.2530908Z 1 | from pathlib import Path
+2026-10-08T12:45:05.2531266Z   - import hashlib,json,os,shutil,subprocess,datetime
+2026-10-08T12:45:05.2531672Z 2 + import hashlib,json,subprocess,datetime
+2026-10-08T12:45:05.2532180Z 3 | root=Path(__file__).resolve().parent
+2026-10-08T12:45:05.2532490Z   |
+2026-10-08T12:45:05.2532617Z 
+2026-10-08T12:45:05.2532822Z PLW1510 `subprocess.run` without explicit `check` argument
+2026-10-08T12:45:05.2533435Z   --> docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap.py:38:9
+2026-10-08T12:45:05.2533943Z    |
+2026-10-08T12:45:05.2534343Z 36 |         "started_at_utc":datetime.datetime.now(datetime.timezone.utc).isoformat()}
+2026-10-08T12:45:05.2534995Z 37 | with (root/"build.stdout.log").open("xb") as out,(root/"build.stderr.log").open("xb") as err:
+2026-10-08T12:45:05.2535707Z 38 |     run=subprocess.run(["npm","run","build"],cwd=source/"web/airspace",stdout=out,stderr=err,timeout=120)
+2026-10-08T12:45:05.2536230Z    |         ^^^^^^^^^^^^^^
+2026-10-08T12:45:05.2536549Z 39 | report["build_returncode"]=run.returncode
+2026-10-08T12:45:05.2537603Z 40 | report["tracked_source_unchanged_after_build"]=all(hashlib.sha256((source/x["path"]).read_bytes()).hexdigest()==x["sha256"] for x in r…
+2026-10-08T12:45:05.2538232Z    |
+2026-10-08T12:45:05.2538489Z help: Add explicit `check=False`
+2026-10-08T12:45:05.2538846Z 
+2026-10-08T12:45:05.2538963Z Found 18 errors.
+2026-10-08T12:45:05.2539247Z [*] 13 fixable with the `--fix` option.
+2026-10-08T12:45:05.2550372Z ##[error]Process completed with exit code 1.
+2026-10-08T12:45:05.2709908Z Post job cleanup.
+2026-10-08T12:45:05.3547251Z [command]/usr/bin/git version
+2026-10-08T12:45:05.3606783Z git version 2.55.0
+2026-10-08T12:45:05.3654412Z Temporarily overriding HOME='/home/runner/work/_temp/f1a8ab02-6329-442b-bf5d-c349d08fe1e6' before making global git config changes
+2026-10-08T12:45:05.3656444Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T12:45:05.3661121Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TowerOps/TowerOps
+2026-10-08T12:45:05.3701992Z Removing SSH command configuration
+2026-10-08T12:45:05.3710368Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T12:45:05.3753639Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T12:45:05.4064827Z Removing HTTP extra header
+2026-10-08T12:45:05.4071156Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T12:45:05.4139886Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T12:45:05.4481378Z Removing includeIf entries pointing to credentials config files
+2026-10-08T12:45:05.4484184Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T12:45:05.4531634Z includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git.path
+2026-10-08T12:45:05.4549776Z includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git/worktrees/*.path
+2026-10-08T12:45:05.4563045Z includeif.gitdir:/github/workspace/.git.path
+2026-10-08T12:45:05.4564296Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T12:45:05.4568073Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git.path
+2026-10-08T12:45:05.4590774Z /home/runner/work/_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config
+2026-10-08T12:45:05.4618807Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-21c566b2\-e5f5\-4620\-9be1\-47498c5285a2\.config
+2026-10-08T12:45:05.4681444Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git/worktrees/*.path
+2026-10-08T12:45:05.4733206Z /home/runner/work/_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config
+2026-10-08T12:45:05.4759168Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-21c566b2\-e5f5\-4620\-9be1\-47498c5285a2\.config
+2026-10-08T12:45:05.4838419Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-08T12:45:05.4870186Z /github/runner_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config
+2026-10-08T12:45:05.4879361Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-21c566b2\-e5f5\-4620\-9be1\-47498c5285a2\.config
+2026-10-08T12:45:05.4930952Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T12:45:05.4967601Z /github/runner_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config
+2026-10-08T12:45:05.4975977Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-21c566b2\-e5f5\-4620\-9be1\-47498c5285a2\.config
+2026-10-08T12:45:05.5026501Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T12:45:05.5306028Z Removing credentials config '/home/runner/work/_temp/git-credentials-21c566b2-e5f5-4620-9be1-47498c5285a2.config'
+2026-10-08T12:45:05.5496246Z Cleaning up orphan processes

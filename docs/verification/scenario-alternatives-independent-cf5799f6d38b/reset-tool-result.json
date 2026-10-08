@@ -1,0 +1,13 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[Reading 23 new lines (total: 23 lines)]\n\n{\n  \"schema\": \"towerops.scenario-alternatives-independent-process.v1\",\n  \"phase\": \"scenario-reset-successor\",\n  \"started_utc\": \"2026-10-08T14:15:11.422735+00:00\",\n  \"ended_utc\": \"2026-10-08T14:15:15.949505+00:00\",\n  \"seconds\": 4.526629958068952,\n  \"command\": [\n    \"node\",\n    \"/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/independent_alternative_reset.mjs\",\n    \"/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-source-build-pin.json\",\n    \"/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/reset-browser\"\n  ],\n  \"exit_code\": 0,\n  \"receiver_sha256\": \"f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c\",\n  \"root_input_manifest\": \"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-source-build-pin.json\",\n  \"root_input_manifest_sha256\": \"90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba\",\n  \"free_before_bytes\": 6953168896,\n  \"free_after_bytes\": 6928887808,\n  \"node_path\": \"/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules\",\n  \"source_or_build_edits\": false,\n  \"browser_groups\": 2\n}\n\n✅ Process completed with exit code 0 (runtime: 4.58s)"
+    },
+    {
+      "type": "text",
+      "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+    }
+  ],
+  "isError": false
+}

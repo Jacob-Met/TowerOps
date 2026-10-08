@@ -1,0 +1,1029 @@
+{
+  "schema": "towerops-exact-byte-browser-archive/v1",
+  "note": "All actual downloads and generated fixtures are retained by exact Git blob. UTF-8 content is encoded without newline conversion; repeat-byte explicitly represents the two large uniform negative fixtures.",
+  "files": [
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/downloads/611e7f10-c3ac-4db4-93b5-9c9381f7bd60",
+      "native_relative_path": "author-browser/downloads/611e7f10-c3ac-4db4-93b5-9c9381f7bd60",
+      "bytes": 812,
+      "sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/downloads/ac746e38-a0bf-4daf-8578-9b773eba1b9d",
+      "native_relative_path": "author-browser/downloads/ac746e38-a0bf-4daf-8578-9b773eba1b9d",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/<img onerror=alert(1)>.json",
+      "native_relative_path": "author-browser/fixtures/<img onerror=alert(1)>.json",
+      "bytes": 812,
+      "sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/broken.json",
+      "native_relative_path": "author-browser/fixtures/broken.json",
+      "bytes": 5,
+      "sha256": "935aaf3a54c0648c74df48a8025f20086019843f5b9fbffe5540b9cba0edcc97",
+      "git_blob": "b3bf120ee577dd19c9a704bd31cab4006d6b5f84",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "b3bf120ee577dd19c9a704bd31cab4006d6b5f84"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/foreign-selection.json",
+      "native_relative_path": "author-browser/fixtures/foreign-selection.json",
+      "bytes": 544,
+      "sha256": "73c6d5eef522aeb1240c2be5709887f869a1936ee8281fac5f5d7cd6612f4436",
+      "git_blob": "b829937f49409bfe87f062e1fe10e7d293523cec",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "b829937f49409bfe87f062e1fe10e7d293523cec"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/invisible-policy.json",
+      "native_relative_path": "author-browser/fixtures/invisible-policy.json",
+      "bytes": 544,
+      "sha256": "9305b699ba2f6fdfb8b43f199096af3ca1c15ae0f0907a737eb017490f946f70",
+      "git_blob": "f90027f991ea54b2062f562f61de8faf4750324a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "f90027f991ea54b2062f562f61de8faf4750324a"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/oversize.json",
+      "native_relative_path": "author-browser/fixtures/oversize.json",
+      "bytes": 262145,
+      "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+      "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/unknown-field.json",
+      "native_relative_path": "author-browser/fixtures/unknown-field.json",
+      "bytes": 577,
+      "sha256": "acf08bf9ae27faaa51b347ee643beca7124cceaee1a1b0652691464ff4ec4402",
+      "git_blob": "08795830078f3c6f30da09470a4b2f1a4c6e4a37",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "08795830078f3c6f30da09470a4b2f1a4c6e4a37"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser/fixtures/wrong-version.json",
+      "native_relative_path": "author-browser/fixtures/wrong-version.json",
+      "bytes": 543,
+      "sha256": "39b1305010e3a6c7ccdf381e080a7e8ce2ff42ef643a53c2e6fa7a7973f1bb4e",
+      "git_blob": "4d3567191b41ea6bc4bcceecaddc2f0590198a1a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "4d3567191b41ea6bc4bcceecaddc2f0590198a1a"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/01938063-e9c8-4f92-9b23-3920ed794d64",
+      "native_relative_path": "independent-browser/downloads/01938063-e9c8-4f92-9b23-3920ed794d64",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/0b6b314e-e115-4f37-b618-fa16bd43eef2",
+      "native_relative_path": "independent-browser/downloads/0b6b314e-e115-4f37-b618-fa16bd43eef2",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/2368c4c0-0f97-470b-94f9-5da7d51e7a8a",
+      "native_relative_path": "independent-browser/downloads/2368c4c0-0f97-470b-94f9-5da7d51e7a8a",
+      "bytes": 831,
+      "sha256": "76087bb793bbec0e91b7359cb5a698fb4f9ab400b0fd3e7e52f37049b65eb271",
+      "git_blob": "b846729a2482e9a43bf0a8d693fbd0e7bb5a15dd",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "b846729a2482e9a43bf0a8d693fbd0e7bb5a15dd"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/24cec0c1-acea-47d7-b31e-3c7aa753855e",
+      "native_relative_path": "independent-browser/downloads/24cec0c1-acea-47d7-b31e-3c7aa753855e",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/3a6e6ffc-0fbf-49b3-abc3-ce71e860a7ca",
+      "native_relative_path": "independent-browser/downloads/3a6e6ffc-0fbf-49b3-abc3-ce71e860a7ca",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/3e407701-c862-4759-af24-d64fd79437ad",
+      "native_relative_path": "independent-browser/downloads/3e407701-c862-4759-af24-d64fd79437ad",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "git_blob": "1f9a742844e70a0e8738785926c437605a2dc0d7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1f9a742844e70a0e8738785926c437605a2dc0d7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/4e9ab7ba-2307-4eb2-a554-b7c81fc9d325",
+      "native_relative_path": "independent-browser/downloads/4e9ab7ba-2307-4eb2-a554-b7c81fc9d325",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "git_blob": "f407a9f7f59866e069ec255a10003b54f4d5a5a7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "f407a9f7f59866e069ec255a10003b54f4d5a5a7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/7c94486b-ac44-4a0d-8f90-c89f51bddbb1",
+      "native_relative_path": "independent-browser/downloads/7c94486b-ac44-4a0d-8f90-c89f51bddbb1",
+      "bytes": 834,
+      "sha256": "38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6",
+      "git_blob": "b1e348324397ee0d716775992d02c4a068a02eec",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "b1e348324397ee0d716775992d02c4a068a02eec"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/aca8dc1f-d1f0-4db0-b864-fc9be678d1c0",
+      "native_relative_path": "independent-browser/downloads/aca8dc1f-d1f0-4db0-b864-fc9be678d1c0",
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "git_blob": "f407a9f7f59866e069ec255a10003b54f4d5a5a7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "f407a9f7f59866e069ec255a10003b54f4d5a5a7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/b999becc-97e0-49f1-b3a5-a7e4ad275c49",
+      "native_relative_path": "independent-browser/downloads/b999becc-97e0-49f1-b3a5-a7e4ad275c49",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/ded7335a-f311-4912-bca5-c8dc50dfee0e",
+      "native_relative_path": "independent-browser/downloads/ded7335a-f311-4912-bca5-c8dc50dfee0e",
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "git_blob": "1f9a742844e70a0e8738785926c437605a2dc0d7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1f9a742844e70a0e8738785926c437605a2dc0d7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/downloads/f714483d-d47e-4ffc-8f1f-aa22b1c0785e",
+      "native_relative_path": "independent-browser/downloads/f714483d-d47e-4ffc-8f1f-aa22b1c0785e",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/fixtures/exact-numeric-world.json",
+      "native_relative_path": "independent-browser/fixtures/exact-numeric-world.json",
+      "bytes": 565,
+      "sha256": "845279e377db83d6e96885c122ffbca2be145778feb8ba19f8d7fd91c1e15995",
+      "git_blob": "c4ce7619b0555e3e6f168095111bb1f7ef3d8499",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "c4ce7619b0555e3e6f168095111bb1f7ef3d8499"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/fixtures/future-clock.json",
+      "native_relative_path": "independent-browser/fixtures/future-clock.json",
+      "bytes": 542,
+      "sha256": "329dad06c84951a96a5c2780492987091caba15ed5d78365d4bd8fb8f1fd5104",
+      "git_blob": "8b1cd3b9966b24bbd5ae1bb85956711b04a726e8",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "8b1cd3b9966b24bbd5ae1bb85956711b04a726e8"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/independent-browser/fixtures/stale-clock.json",
+      "native_relative_path": "independent-browser/fixtures/stale-clock.json",
+      "bytes": 546,
+      "sha256": "63e1388337100493aea1cdab95aed955dbebdf79bce83458e973a0bf0b7f59d7",
+      "git_blob": "fa2bf9eceb53cf35b7c4fdaddf23a744d98d30c1",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "fa2bf9eceb53cf35b7c4fdaddf23a744d98d30c1"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pending-browser/downloads/02c4c6a4-6521-462e-827a-1e349730e5f1",
+      "native_relative_path": "pending-browser/downloads/02c4c6a4-6521-462e-827a-1e349730e5f1",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/downloads/3f5600a9-21a2-42cc-a73b-387b7f1026f0",
+      "native_relative_path": "scenario-encounter-browser/downloads/3f5600a9-21a2-42cc-a73b-387b7f1026f0",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/downloads/7a42c9f5-0032-4e0f-977c-30822360d474",
+      "native_relative_path": "scenario-encounter-browser/downloads/7a42c9f5-0032-4e0f-977c-30822360d474",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/downloads/7df4a54c-a8c9-4432-843b-3b93fed67882",
+      "native_relative_path": "scenario-encounter-browser/downloads/7df4a54c-a8c9-4432-843b-3b93fed67882",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/downloads/bc34d308-ed17-4291-91c4-48dc954d1f8f",
+      "native_relative_path": "scenario-encounter-browser/downloads/bc34d308-ed17-4291-91c4-48dc954d1f8f",
+      "bytes": 989,
+      "sha256": "83533bf1971c395f6d31181b8dad53fa5dd52d6607b420566946c37ed03f637a",
+      "git_blob": "1ac0d1d7a3d5f0e89643d35b3487bcee3e62f1d5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1ac0d1d7a3d5f0e89643d35b3487bcee3e62f1d5"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/initial-pair.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/initial-pair.json",
+      "bytes": 636,
+      "sha256": "060f84837e513f857872a82b26667e6239282ef36d205a4c0998e406c85b650b",
+      "git_blob": "2383b1720a47f25c279262e614c0912fc9dc624a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "2383b1720a47f25c279262e614c0912fc9dc624a"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/restored-multiple-flight.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/restored-multiple-flight.json",
+      "bytes": 638,
+      "sha256": "8a03fee1031e2ece789a205cb57d135ac3df7a7e90932022cc4bb1b9f6e19fab",
+      "git_blob": "3d9f7c3ed29acc086a49067244de33db78300376",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "3d9f7c3ed29acc086a49067244de33db78300376"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/same-identities-new-vectors.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/same-identities-new-vectors.json",
+      "bytes": 638,
+      "sha256": "8a03fee1031e2ece789a205cb57d135ac3df7a7e90932022cc4bb1b9f6e19fab",
+      "git_blob": "3d9f7c3ed29acc086a49067244de33db78300376",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "3d9f7c3ed29acc086a49067244de33db78300376"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/single-flight.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/single-flight.json",
+      "bytes": 429,
+      "sha256": "3312d4a46a5f29125b508b0a588b2885c97042c9b87425c63470cf41c2fc32c8",
+      "git_blob": "9bc6c4bb6da369e3bf5120b895b46b70d12ac5bd",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "9bc6c4bb6da369e3bf5120b895b46b70d12ac5bd"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser/fixtures/three-flight-short-horizon.json",
+      "native_relative_path": "scenario-encounter-browser/fixtures/three-flight-short-horizon.json",
+      "bytes": 636,
+      "sha256": "060f84837e513f857872a82b26667e6239282ef36d205a4c0998e406c85b650b",
+      "git_blob": "2383b1720a47f25c279262e614c0912fc9dc624a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "2383b1720a47f25c279262e614c0912fc9dc624a"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/downloaded-native-trace.json",
+      "native_relative_path": "decision-trace-owner-browser/downloaded-native-trace.json",
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/literal-label.json",
+      "native_relative_path": "decision-trace-owner-browser/literal-label.json",
+      "bytes": 1606,
+      "sha256": "96b617cd14d543690c8c9ca968f6933037ae744d1b027942bac3c147c5a7e5ef",
+      "git_blob": "be823e0d0d4899d6e9cbba570035ee5a9feb3c65",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "be823e0d0d4899d6e9cbba570035ee5a9feb3c65"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/live-trace-after-reopen.json",
+      "native_relative_path": "decision-trace-owner-browser/live-trace-after-reopen.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/malformed.json",
+      "native_relative_path": "decision-trace-owner-browser/malformed.json",
+      "bytes": 6,
+      "sha256": "1d8fc6ceb1f94c6326d6d5483d258fcb2e179e9869325b245d105c2219bf69fd",
+      "git_blob": "500db4a86aa30072b5b264d7757986e759205514",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "500db4a86aa30072b5b264d7757986e759205514"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/native-demo.json",
+      "native_relative_path": "decision-trace-owner-browser/native-demo.json",
+      "bytes": 1626,
+      "sha256": "b9fbe266f313340d4ccd5898de57ecbdfe9e62dca9410f3817982b85f69a83b8",
+      "git_blob": "1dadf96ad80fbcdca8dd916a702aa5388748ca15",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1dadf96ad80fbcdca8dd916a702aa5388748ca15"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/tampered.json",
+      "native_relative_path": "decision-trace-owner-browser/tampered.json",
+      "bytes": 1577,
+      "sha256": "c8fd1bccec6806bdd1f5694507582d4f90652f2986d050d87cb087ac496ded00",
+      "git_blob": "836016614d0f723804d15e8a146e1c22d3bf46ee",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "836016614d0f723804d15e8a146e1c22d3bf46ee"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/too-large.json",
+      "native_relative_path": "decision-trace-owner-browser/too-large.json",
+      "bytes": 2097153,
+      "sha256": "e7d99e4db1392275f200e288c860f9780a935c945e2d55f98c1b68a1f9f3fb5c",
+      "git_blob": "1cacbf173b0e3d433d15cbe3849b3666dc2539cf",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "1cacbf173b0e3d433d15cbe3849b3666dc2539cf"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/too-many.json",
+      "native_relative_path": "decision-trace-owner-browser/too-many.json",
+      "bytes": 20004,
+      "sha256": "7f2ba034344f0e6adba2c9f599091be027b16c9dde9861474c44ae317e45d593",
+      "git_blob": "62146c599ebfe7b139e81d4fbf96ad3449b35e0a",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "62146c599ebfe7b139e81d4fbf96ad3449b35e0a"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/unapproved.json",
+      "native_relative_path": "decision-trace-owner-browser/unapproved.json",
+      "bytes": 1200,
+      "sha256": "96f57ab10b0e70349346aa79665f08e1b8e633b024b75935a8be47d6f5a5858b",
+      "git_blob": "c65ae57954318fb2548f5ef6e64c245d2c86955d",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "c65ae57954318fb2548f5ef6e64c245d2c86955d"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/wrong-order.json",
+      "native_relative_path": "decision-trace-owner-browser/wrong-order.json",
+      "bytes": 1575,
+      "sha256": "b856ca4428c37a2aadbc636826cb2bb1150ca33af13f9c3dc0f60923fdd19bc3",
+      "git_blob": "9411c18b582d128c0312237f8a4f06cf6dc9168c",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "9411c18b582d128c0312237f8a4f06cf6dc9168c"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser/wrong-world.json",
+      "native_relative_path": "decision-trace-owner-browser/wrong-world.json",
+      "bytes": 1575,
+      "sha256": "43fcd543451ab967a8281b6a06e8f89f52391588cd0b1f0ad43ef637e1d26c68",
+      "git_blob": "e010324b4e9023e75c95d1aaf367caa10c15c889",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e010324b4e9023e75c95d1aaf367caa10c15c889"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/188dc1b8-9bdf-4f95-a996-92156cc7c4bd",
+      "native_relative_path": "scenario-decision-browser/downloads/188dc1b8-9bdf-4f95-a996-92156cc7c4bd",
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/2390648b-db31-47c7-9a60-86458e9b891f",
+      "native_relative_path": "scenario-decision-browser/downloads/2390648b-db31-47c7-9a60-86458e9b891f",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/464136bc-cb78-4a38-a97f-f8f96d546ccb",
+      "native_relative_path": "scenario-decision-browser/downloads/464136bc-cb78-4a38-a97f-f8f96d546ccb",
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/47788753-b5f0-441c-9a12-51ada99d3229",
+      "native_relative_path": "scenario-decision-browser/downloads/47788753-b5f0-441c-9a12-51ada99d3229",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/4dc58095-ce1e-45a8-abd3-efae8278f4fa",
+      "native_relative_path": "scenario-decision-browser/downloads/4dc58095-ce1e-45a8-abd3-efae8278f4fa",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/5c59255d-de3d-4a19-822c-65da78c6b3c9",
+      "native_relative_path": "scenario-decision-browser/downloads/5c59255d-de3d-4a19-822c-65da78c6b3c9",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/downloads/deaf9f25-a405-4c82-a54c-adb4add803c3",
+      "native_relative_path": "scenario-decision-browser/downloads/deaf9f25-a405-4c82-a54c-adb4add803c3",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser/fixtures/previous-scenario-decision-trace.json",
+      "native_relative_path": "scenario-decision-browser/fixtures/previous-scenario-decision-trace.json",
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/29717d2e-7102-4261-ab2a-9584b4f511e7",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/29717d2e-7102-4261-ab2a-9584b4f511e7",
+      "bytes": 813,
+      "sha256": "67657038e8896a80e57edc8881447219a1221513a6c98185dff2304aa3314732",
+      "git_blob": "505b8e0b53a50d1b893b24285881574a34804e14",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "505b8e0b53a50d1b893b24285881574a34804e14"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/3dabc376-875b-4c93-9e74-d7aa00545b31",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/3dabc376-875b-4c93-9e74-d7aa00545b31",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/400a98a2-5d1e-4b2b-a887-89ba347ebc0f",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/400a98a2-5d1e-4b2b-a887-89ba347ebc0f",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/40fea6d0-6c2e-45ee-9f5b-57463def13e8",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/40fea6d0-6c2e-45ee-9f5b-57463def13e8",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/6a60cafe-389a-41c0-ac79-da134761ebf7",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/6a60cafe-389a-41c0-ac79-da134761ebf7",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/6fc3ada3-467c-4a00-b4aa-479fe44ebfb8",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/6fc3ada3-467c-4a00-b4aa-479fe44ebfb8",
+      "bytes": 813,
+      "sha256": "462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362",
+      "git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/c71461c2-7be7-412b-97e7-42f343f8bf5e",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/c71461c2-7be7-412b-97e7-42f343f8bf5e",
+      "bytes": 1006,
+      "sha256": "927edbbba4e505874feaf2ee249c2d4476d3128fa6f06c553fbf7a404cf591b5",
+      "git_blob": "67588b655ffb5c8913f66dd0ec435ec36390cfa7",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "67588b655ffb5c8913f66dd0ec435ec36390cfa7"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/c768378a-cee3-4e78-9839-3799cc1cc7e4",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/c768378a-cee3-4e78-9839-3799cc1cc7e4",
+      "bytes": 813,
+      "sha256": "462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362",
+      "git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/c9ec5529-9ec0-4980-b28c-b78dd0d4252b",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/c9ec5529-9ec0-4980-b28c-b78dd0d4252b",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/d26ec875-76a8-4ec2-ad94-129bfddcd0d5",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/d26ec875-76a8-4ec2-ad94-129bfddcd0d5",
+      "bytes": 813,
+      "sha256": "67657038e8896a80e57edc8881447219a1221513a6c98185dff2304aa3314732",
+      "git_blob": "505b8e0b53a50d1b893b24285881574a34804e14",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "505b8e0b53a50d1b893b24285881574a34804e14"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/e0adbf88-5f1a-411c-8150-88cbce4e9019",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/e0adbf88-5f1a-411c-8150-88cbce4e9019",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/eebc0377-acd2-49f2-81d1-899ad3bda18a",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/eebc0377-acd2-49f2-81d1-899ad3bda18a",
+      "bytes": 813,
+      "sha256": "462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362",
+      "git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/f5d1c01e-dca7-47d7-b864-e3392dcbdb45",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/f5d1c01e-dca7-47d7-b864-e3392dcbdb45",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/downloads/f7f022fd-30f2-4374-ac42-1a8919aef4fe",
+      "native_relative_path": "scenario-raw-draft-browser/downloads/f7f022fd-30f2-4374-ac42-1a8919aef4fe",
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/fixtures/apply-target.json",
+      "native_relative_path": "scenario-raw-draft-browser/fixtures/apply-target.json",
+      "bytes": 544,
+      "sha256": "1d8caff411464bb1ee41c0efcb941817c7c61d8a073827ccd8cc006555f9b54a",
+      "git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/fixtures/failed-raw-target.json",
+      "native_relative_path": "scenario-raw-draft-browser/fixtures/failed-raw-target.json",
+      "bytes": 544,
+      "sha256": "1d8caff411464bb1ee41c0efcb941817c7c61d8a073827ccd8cc006555f9b54a",
+      "git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/fixtures/raw-load-target.json",
+      "native_relative_path": "scenario-raw-draft-browser/fixtures/raw-load-target.json",
+      "bytes": 544,
+      "sha256": "1d8caff411464bb1ee41c0efcb941817c7c61d8a073827ccd8cc006555f9b54a",
+      "git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-raw-draft-browser/fixtures/review-target.json",
+      "native_relative_path": "scenario-raw-draft-browser/fixtures/review-target.json",
+      "bytes": 544,
+      "sha256": "1d8caff411464bb1ee41c0efcb941817c7c61d8a073827ccd8cc006555f9b54a",
+      "git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5",
+      "mode": "100644",
+      "preservation": "exact-blob-archive",
+      "archive": "docs/verification/scenario-pr48-composition-cf5799f6d38b/root/exact-browser-artifacts.json",
+      "archive_git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5"
+    }
+  ],
+  "blobs": [
+    {
+      "bytes": 812,
+      "sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 7,\n    \"observed_at\": 1002,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR101\",\n        \"x_nm\": 0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 0,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR202\",\n        \"x_nm\": 7,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 0,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 9,\n    \"min_vertical_ft\": 1500,\n    \"horizon_min\": 8,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 2.5,\n  \"selected_aircraft_id\": \"TWR202\"\n}\n"
+    },
+    {
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "bytes": 5,
+      "sha256": "935aaf3a54c0648c74df48a8025f20086019843f5b9fbffe5540b9cba0edcc97",
+      "git_blob": "b3bf120ee577dd19c9a704bd31cab4006d6b5f84",
+      "encoding": "utf-8",
+      "content": "{oops"
+    },
+    {
+      "bytes": 544,
+      "sha256": "73c6d5eef522aeb1240c2be5709887f869a1936ee8281fac5f5d7cd6612f4436",
+      "git_blob": "b829937f49409bfe87f062e1fe10e7d293523cec",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":7,\"observed_at\":1002,\"aircraft\":[{\"aircraft_id\":\"TWR101\",\"x_nm\":0,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR202\",\"x_nm\":7,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":9,\"min_vertical_ft\":1500,\"horizon_min\":8,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1002,\"time_scale\":2.5,\"selected_aircraft_id\":\"FOREIGN\"}"
+    },
+    {
+      "bytes": 544,
+      "sha256": "9305b699ba2f6fdfb8b43f199096af3ca1c15ae0f0907a737eb017490f946f70",
+      "git_blob": "f90027f991ea54b2062f562f61de8faf4750324a",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":7,\"observed_at\":1002,\"aircraft\":[{\"aircraft_id\":\"TWR101\",\"x_nm\":0,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR202\",\"x_nm\":7,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":9,\"min_vertical_ft\":1500,\"horizon_min\":8,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":60,\"max_climb_ft_min\":3000},\"now\":1002,\"time_scale\":2.5,\"selected_aircraft_id\":\"TWR202\"}"
+    },
+    {
+      "bytes": 262145,
+      "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+      "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+      "encoding": "repeat-byte",
+      "byte": 32,
+      "count": 262145
+    },
+    {
+      "bytes": 577,
+      "sha256": "acf08bf9ae27faaa51b347ee643beca7124cceaee1a1b0652691464ff4ec4402",
+      "git_blob": "08795830078f3c6f30da09470a4b2f1a4c6e4a37",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":7,\"observed_at\":1002,\"aircraft\":[{\"aircraft_id\":\"TWR101\",\"x_nm\":0,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR202\",\"x_nm\":7,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":9,\"min_vertical_ft\":1500,\"horizon_min\":8,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1002,\"time_scale\":2.5,\"selected_aircraft_id\":\"TWR202\",\"approval\":{\"decision\":\"approve\"}}"
+    },
+    {
+      "bytes": 543,
+      "sha256": "39b1305010e3a6c7ccdf381e080a7e8ce2ff42ef643a53c2e6fa7a7973f1bb4e",
+      "git_blob": "4d3567191b41ea6bc4bcceecaddc2f0590198a1a",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":2,\"world\":{\"version\":7,\"observed_at\":1002,\"aircraft\":[{\"aircraft_id\":\"TWR101\",\"x_nm\":0,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR202\",\"x_nm\":7,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":9,\"min_vertical_ft\":1500,\"horizon_min\":8,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1002,\"time_scale\":2.5,\"selected_aircraft_id\":\"TWR202\"}"
+    },
+    {
+      "bytes": 831,
+      "sha256": "76087bb793bbec0e91b7359cb5a698fb4f9ab400b0fd3e7e52f37049b65eb271",
+      "git_blob": "b846729a2482e9a43bf0a8d693fbd0e7bb5a15dd",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 42,\n    \"observed_at\": 2507.75,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "bytes": 811,
+      "sha256": "e8ad13ed3e7b7bbf406157b88c78f2b3e7b44eeb19d31d31750bfe54b1a1514d",
+      "git_blob": "1f9a742844e70a0e8738785926c437605a2dc0d7",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 995,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "bytes": 815,
+      "sha256": "4e145a841ecaceb201eb3ab1e915964b2afb6566d1fa10d97650d560ee255671",
+      "git_blob": "f407a9f7f59866e069ec255a10003b54f4d5a5a7",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 1,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR218\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR419\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1012.75,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"TWR419\"\n}\n"
+    },
+    {
+      "bytes": 834,
+      "sha256": "38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6",
+      "git_blob": "b1e348324397ee0d716775992d02c4a068a02eec",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 41,\n    \"observed_at\": 2500.25,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"REVIEWB\",\n        \"x_nm\": 6.75,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9500,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0.1,\n        \"climb_ft_min\": 250\n      },\n      {\n        \"aircraft_id\": \"REVIEWA\",\n        \"x_nm\": -0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 9000,\n        \"vx_nm_min\": -0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": -0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3.5,\n    \"min_vertical_ft\": 600,\n    \"horizon_min\": 8.5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 2507.75,\n  \"time_scale\": 0.5,\n  \"selected_aircraft_id\": \"REVIEWB\"\n}\n"
+    },
+    {
+      "bytes": 565,
+      "sha256": "845279e377db83d6e96885c122ffbca2be145778feb8ba19f8d7fd91c1e15995",
+      "git_blob": "c4ce7619b0555e3e6f168095111bb1f7ef3d8499",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":41,\"observed_at\":2500.25,\"aircraft\":[{\"aircraft_id\":\"REVIEWB\",\"x_nm\":6.75,\"y_nm\":0,\"altitude_ft\":9500,\"vx_nm_min\":-1,\"vy_nm_min\":0.1,\"climb_ft_min\":250},{\"aircraft_id\":\"REVIEWA\",\"x_nm\":-0,\"y_nm\":0,\"altitude_ft\":9000,\"vx_nm_min\":-0,\"vy_nm_min\":1,\"climb_ft_min\":-0}]},\"policy\":{\"min_horizontal_nm\":3.5,\"min_vertical_ft\":600,\"horizon_min\":8.5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":2507.75,\"time_scale\":0.5,\"selected_aircraft_id\":\"REVIEWB\"}"
+    },
+    {
+      "bytes": 542,
+      "sha256": "329dad06c84951a96a5c2780492987091caba15ed5d78365d4bd8fb8f1fd5104",
+      "git_blob": "8b1cd3b9966b24bbd5ae1bb85956711b04a726e8",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":995,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "bytes": 546,
+      "sha256": "63e1388337100493aea1cdab95aed955dbebdf79bce83458e973a0bf0b7f59d7",
+      "git_blob": "fa2bf9eceb53cf35b7c4fdaddf23a744d98d30c1",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":1,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"TWR218\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR419\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1012.75,\"time_scale\":1,\"selected_aircraft_id\":\"TWR419\"}"
+    },
+    {
+      "bytes": 989,
+      "sha256": "83533bf1971c395f6d31181b8dad53fa5dd52d6607b420566946c37ed03f637a",
+      "git_blob": "1ac0d1d7a3d5f0e89643d35b3487bcee3e62f1d5",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 73,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"A1\",\n        \"x_nm\": 0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 3,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"B2\",\n        \"x_nm\": 10,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -3,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"C3\",\n        \"x_nm\": 0,\n        \"y_nm\": 20,\n        \"altitude_ft\": 11000,\n        \"vx_nm_min\": 0,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 3,\n    \"min_vertical_ft\": 500,\n    \"horizon_min\": 2,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1000,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"C3\"\n}\n"
+    },
+    {
+      "bytes": 636,
+      "sha256": "060f84837e513f857872a82b26667e6239282ef36d205a4c0998e406c85b650b",
+      "git_blob": "2383b1720a47f25c279262e614c0912fc9dc624a",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":73,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"A1\",\"x_nm\":0,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":3,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"B2\",\"x_nm\":10,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-3,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"C3\",\"x_nm\":0,\"y_nm\":20,\"altitude_ft\":11000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":3,\"min_vertical_ft\":500,\"horizon_min\":2,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1000,\"time_scale\":1,\"selected_aircraft_id\":\"C3\"}"
+    },
+    {
+      "bytes": 638,
+      "sha256": "8a03fee1031e2ece789a205cb57d135ac3df7a7e90932022cc4bb1b9f6e19fab",
+      "git_blob": "3d9f7c3ed29acc086a49067244de33db78300376",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":74,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"C3\",\"x_nm\":12,\"y_nm\":4,\"altitude_ft\":13000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":-250},{\"aircraft_id\":\"A1\",\"x_nm\":0,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":3,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"B2\",\"x_nm\":-7,\"y_nm\":2,\"altitude_ft\":9000,\"vx_nm_min\":-3,\"vy_nm_min\":2,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":6,\"min_vertical_ft\":500,\"horizon_min\":8,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1000,\"time_scale\":1,\"selected_aircraft_id\":\"A1\"}"
+    },
+    {
+      "bytes": 429,
+      "sha256": "3312d4a46a5f29125b508b0a588b2885c97042c9b87425c63470cf41c2fc32c8",
+      "git_blob": "9bc6c4bb6da369e3bf5120b895b46b70d12ac5bd",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":75,\"observed_at\":1000,\"aircraft\":[{\"aircraft_id\":\"C3\",\"x_nm\":12,\"y_nm\":4,\"altitude_ft\":13000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":-250}]},\"policy\":{\"min_horizontal_nm\":6,\"min_vertical_ft\":500,\"horizon_min\":8,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1000,\"time_scale\":1,\"selected_aircraft_id\":\"C3\"}"
+    },
+    {
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "encoding": "utf-8",
+      "content": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\", \"event_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\", \"event_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\"}, \"prev_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\", \"event_hash\": \"04ad4e3453871c1ba209ef53cfffb58f8b8b3544ce5ea7d549f84c39a04171d5\"}]"
+    },
+    {
+      "bytes": 1606,
+      "sha256": "96b617cd14d543690c8c9ca968f6933037ae744d1b027942bac3c147c5a7e5ef",
+      "git_blob": "be823e0d0d4899d6e9cbba570035ee5a9feb3c65",
+      "encoding": "utf-8",
+      "content": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"<img src=x onerror=\\\"window.__traceInjected=true\\\">\"}, \"prev_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\", \"event_hash\": \"3aabd025195a2d79b9cec2bd826a2bf389d0abe1d41ccc71de0f734c411d2fce\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"3aabd025195a2d79b9cec2bd826a2bf389d0abe1d41ccc71de0f734c411d2fce\", \"event_hash\": \"fad7db29e42bf513b3b3e1b0bad5da976afb4b3c04f74c2e658c5c0401f5696a\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\"}, \"prev_hash\": \"fad7db29e42bf513b3b3e1b0bad5da976afb4b3c04f74c2e658c5c0401f5696a\", \"event_hash\": \"36e43469823c70e2d73559f3423ac59c76ec9fc7c2c87c705d2bd6d0de601c70\"}]"
+    },
+    {
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "encoding": "utf-8",
+      "content": "[]"
+    },
+    {
+      "bytes": 6,
+      "sha256": "1d8fc6ceb1f94c6326d6d5483d258fcb2e179e9869325b245d105c2219bf69fd",
+      "git_blob": "500db4a86aa30072b5b264d7757986e759205514",
+      "encoding": "utf-8",
+      "content": "[null]"
+    },
+    {
+      "bytes": 1626,
+      "sha256": "b9fbe266f313340d4ccd5898de57ecbdfe9e62dca9410f3817982b85f69a83b8",
+      "git_blob": "1dadf96ad80fbcdca8dd916a702aa5388748ca15",
+      "encoding": "utf-8",
+      "content": "{\"audit_events\": [{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\", \"event_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\", \"event_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\"}, \"prev_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\", \"event_hash\": \"04ad4e3453871c1ba209ef53cfffb58f8b8b3544ce5ea7d549f84c39a04171d5\"}], \"scenario\": \"saved native demo\"}"
+    },
+    {
+      "bytes": 1577,
+      "sha256": "c8fd1bccec6806bdd1f5694507582d4f90652f2986d050d87cb087ac496ded00",
+      "git_blob": "836016614d0f723804d15e8a146e1c22d3bf46ee",
+      "encoding": "utf-8",
+      "content": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"changed without rehash\"}, \"prev_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\", \"event_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\", \"event_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\"}, \"prev_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\", \"event_hash\": \"04ad4e3453871c1ba209ef53cfffb58f8b8b3544ce5ea7d549f84c39a04171d5\"}]"
+    },
+    {
+      "bytes": 2097153,
+      "sha256": "e7d99e4db1392275f200e288c860f9780a935c945e2d55f98c1b68a1f9f3fb5c",
+      "git_blob": "1cacbf173b0e3d433d15cbe3849b3666dc2539cf",
+      "encoding": "repeat-byte",
+      "byte": 32,
+      "count": 2097153
+    },
+    {
+      "bytes": 20004,
+      "sha256": "7f2ba034344f0e6adba2c9f599091be027b16c9dde9861474c44ae317e45d593",
+      "git_blob": "62146c599ebfe7b139e81d4fbf96ad3449b35e0a",
+      "encoding": "utf-8",
+      "content": "[{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]"
+    },
+    {
+      "bytes": 1200,
+      "sha256": "96f57ab10b0e70349346aa79665f08e1b8e633b024b75935a8be47d6f5a5858b",
+      "git_blob": "c65ae57954318fb2548f5ef6e64c245d2c86955d",
+      "encoding": "utf-8",
+      "content": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\"}, {\"seq\": 1, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\", \"event_hash\": \"9c6c50fe9c714cf76961ce1f2aa4f923929f4337749153353ded49c535406153\"}, {\"seq\": 2, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\"}, \"prev_hash\": \"9c6c50fe9c714cf76961ce1f2aa4f923929f4337749153353ded49c535406153\", \"event_hash\": \"cd88a601124608ad7a4524cc11b67a401a010e37393fbec9a5403cb41366112c\"}]"
+    },
+    {
+      "bytes": 1575,
+      "sha256": "b856ca4428c37a2aadbc636826cb2bb1150ca33af13f9c3dc0f60923fdd19bc3",
+      "git_blob": "9411c18b582d128c0312237f8a4f06cf6dc9168c",
+      "encoding": "utf-8",
+      "content": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\"}, {\"seq\": 1, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\", \"event_hash\": \"9c6c50fe9c714cf76961ce1f2aa4f923929f4337749153353ded49c535406153\"}, {\"seq\": 2, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"9c6c50fe9c714cf76961ce1f2aa4f923929f4337749153353ded49c535406153\", \"event_hash\": \"b3a35f85803be83ce2143d4cd3a6e89135a4a1f48c8d3a12a1f454e9c25e5b36\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\"}, \"prev_hash\": \"b3a35f85803be83ce2143d4cd3a6e89135a4a1f48c8d3a12a1f454e9c25e5b36\", \"event_hash\": \"c147bd7c82dee1f6a04e73de8985e6e91c03f9cc0ff1ccc725a92fdfbff8d5bf\"}]"
+    },
+    {
+      "bytes": 1575,
+      "sha256": "43fcd543451ab967a8281b6a06e8f89f52391588cd0b1f0ad43ef637e1d26c68",
+      "git_blob": "e010324b4e9023e75c95d1aaf367caa10c15c889",
+      "encoding": "utf-8",
+      "content": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\", \"event_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\", \"event_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"before_world_hash\": \"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\", \"after_world_hash\": \"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\"}, \"prev_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\", \"event_hash\": \"d5ff2113387774d1870092f12847120b0a9f7644aba4b07a43ebb52fae96923a\"}]"
+    },
+    {
+      "bytes": 813,
+      "sha256": "67657038e8896a80e57edc8881447219a1221513a6c98185dff2304aa3314732",
+      "git_blob": "505b8e0b53a50d1b893b24285881574a34804e14",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 81,\n    \"observed_at\": 1000,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"RAW701\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"RAW702\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1000,\n  \"time_scale\": 1,\n  \"selected_aircraft_id\": \"RAW701\"\n}\n"
+    },
+    {
+      "bytes": 813,
+      "sha256": "462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362",
+      "git_blob": "39f9ff114c558827d945406f03b7b4ac4340ceaa",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 73,\n    \"observed_at\": 1002,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR601\",\n        \"x_nm\": 0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 11000,\n        \"vx_nm_min\": 0,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR602\",\n        \"x_nm\": 9,\n        \"y_nm\": 0,\n        \"altitude_ft\": 11000,\n        \"vx_nm_min\": 0,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 7,\n    \"min_vertical_ft\": 1800,\n    \"horizon_min\": 9,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 2.5,\n  \"selected_aircraft_id\": \"TWR602\"\n}\n"
+    },
+    {
+      "bytes": 1006,
+      "sha256": "927edbbba4e505874feaf2ee249c2d4476d3128fa6f06c553fbf7a404cf591b5",
+      "git_blob": "67588b655ffb5c8913f66dd0ec435ec36390cfa7",
+      "encoding": "utf-8",
+      "content": "{\n  \"format\": \"towerops.airspace-scenario\",\n  \"version\": 1,\n  \"world\": {\n    \"version\": 74,\n    \"observed_at\": 1002,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"TWR601\",\n        \"x_nm\": 0,\n        \"y_nm\": 0,\n        \"altitude_ft\": 11000,\n        \"vx_nm_min\": 0,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR602\",\n        \"x_nm\": 9,\n        \"y_nm\": 0,\n        \"altitude_ft\": 11000,\n        \"vx_nm_min\": 0,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"TWR820\",\n        \"x_nm\": 0,\n        \"y_nm\": -5,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 0,\n        \"vy_nm_min\": 1,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 7,\n    \"min_vertical_ft\": 1800,\n    \"horizon_min\": 9,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"now\": 1002,\n  \"time_scale\": 2.5,\n  \"selected_aircraft_id\": \"TWR820\"\n}\n"
+    },
+    {
+      "bytes": 544,
+      "sha256": "1d8caff411464bb1ee41c0efcb941817c7c61d8a073827ccd8cc006555f9b54a",
+      "git_blob": "e250a0a2a998f6e34af7c7d40be2f88ff9debac5",
+      "encoding": "utf-8",
+      "content": "{\"format\":\"towerops.airspace-scenario\",\"version\":1,\"world\":{\"version\":73,\"observed_at\":1002,\"aircraft\":[{\"aircraft_id\":\"TWR601\",\"x_nm\":0,\"y_nm\":0,\"altitude_ft\":11000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR602\",\"x_nm\":9,\"y_nm\":0,\"altitude_ft\":11000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"policy\":{\"min_horizontal_nm\":7,\"min_vertical_ft\":1800,\"horizon_min\":9,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"now\":1002,\"time_scale\":2.5,\"selected_aircraft_id\":\"TWR602\"}"
+    }
+  ]
+}

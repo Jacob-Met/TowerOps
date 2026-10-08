@@ -1,0 +1,24 @@
+{
+  "api_test_class_ast_equal": true,
+  "files": [
+    {
+      "bytes": 17386,
+      "diff": "--- a/compare_plans.py\n+++ b/compare_plans.py\n@@ -7,10 +7,10 @@\n import json\n import math\n import os\n-from pathlib import Path\n import re\n import stat\n import sys\n+from pathlib import Path\n from typing import Any\n \n from plan_world import MAX_ABS_NUMBER, MAX_VERSION, MIN_POLICY_VALUE, parse_world\n@@ -295,8 +295,10 @@\n     counts = result[\"counts\"]\n     lines.extend([\n         \"\",\n-        f\"Saved alternatives: {counts['retained']} retained; \"\n-        f\"{counts['left_only']} left only; {counts['right_only']} right only.\",\n+        (\n+            f\"Saved alternatives: {counts['retained']} retained; \"\n+            f\"{counts['left_only']} left only; {counts['right_only']} right only.\"\n+        ),\n         f\"Retained alternatives with a different menu rank: {counts['rank_changed']}.\",\n         \"Ranks are original 1-based menu positions, not a new recommendation.\",\n         \"L/R show the left/right rank; '-' means absent. Units: vx/vy NM/min, climb ft/min.\",\n",
+      "git_blob": "536b29c8a322b77aecf8a9551977ca9c092b02f4",
+      "path": "compare_plans.py",
+      "previous_sha256": "6130e332cea63f42e34aaf86fe50c72ac6c6212372368409914ba3e6c554ba75",
+      "sha256": "2042f344a71cdbcebbe97ad7e31fdcdb359be3282a8e4427b728cc1afe6d76c0"
+    },
+    {
+      "bytes": 24622,
+      "diff": "--- a/tests/test_compare_plans.py\n+++ b/tests/test_compare_plans.py\n@@ -3,16 +3,16 @@\n from __future__ import annotations\n \n import copy\n-from dataclasses import replace\n import hashlib\n import json\n import math\n import os\n-from pathlib import Path\n import subprocess\n import sys\n import tempfile\n import unittest\n+from dataclasses import replace\n+from pathlib import Path\n from unittest.mock import patch\n \n from compare_plans import MAX_REPORT_BYTES, POLICY_FIELDS, compare_reports, render_text\n@@ -41,7 +41,7 @@\n \n \n def report(*, policy: SafetyPolicy | None = None, value: dict | None = None,\n-           now: float | int | None = None) -> dict:\n+           now: float | None = None) -> dict:\n     return review_world(encoded(world() if value is None else value), now, policy)\n \n \n@@ -372,7 +372,7 @@\n     def invoke(self, *arguments, **kwargs):\n         return subprocess.run(\n             [sys.executable, \"-B\", str(CLI), *(str(value) for value in arguments)],\n-            stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE,\n+            stdin=subprocess.DEVNULL, capture_output=True,\n             timeout=10, check=False, **kwargs,\n         )\n \n@@ -381,7 +381,10 @@\n         self.assertEqual(text.returncode, 0, text.stderr)\n         self.assertEqual(text.stderr, b\"\")\n         self.assertIn(b\"TowerOps saved policy comparison\", text.stdout)\n-        self.assertIn(b\"min_horizontal_nm (NM): 5.0 -> 6.0\", text.stdout)\n+        native_policy = json.loads(self.before[self.right_path])[\"policy\"][\"min_horizontal_nm\"]\n+        self.assertIs(type(native_policy), int)\n+        self.assertEqual(native_policy, 6)\n+        self.assertIn(b\"min_horizontal_nm (NM): 5.0 -> 6\\n\", text.stdout)\n         result = self.invoke(self.left_path, self.right_path, \"--json\")\n         self.assertEqual(result.returncode, 0, result.stderr)\n         document = json.loads(result.stdout)\n",
+      "git_blob": "e208e0af85d28dd6f701d396d42248029bd3922b",
+      "path": "tests/test_compare_plans.py",
+      "previous_sha256": "48fda1c2ff39ee9599f2b947b4b9b6870eb53916e4b79d6198e27986f836464c",
+      "sha256": "ca234b1f2c4045acefcec181afacbf143d4a95ea4081ff29bdfe0dc6da584468"
+    }
+  ],
+  "format": "towerops-plan-compare-style-and-oracle.v1",
+  "product_import_multiset_equal": true,
+  "product_nonimport_ast_equal": true
+}

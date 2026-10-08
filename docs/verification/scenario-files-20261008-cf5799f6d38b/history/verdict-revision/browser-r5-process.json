@@ -1,0 +1,13 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[Reading 9 new lines (total: 9 lines)]\n\n{\"name\":\"download and reviewed import reproduce the saved policy\",\"passed\":true,\"milliseconds\":1299,\"download_sha256\":\"105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced\",\"conflicts_before\":1,\"changed_policy_conflicts\":0,\"restored_conflicts\":1}\n{\"name\":\"cancel preserves approvals; confirmed import starts an empty native Python trace\",\"passed\":true,\"milliseconds\":2315,\"python_roundtrips\":2,\"audit_restored_from_file\":false,\"deterministic_new_trace\":true}\n{\"name\":\"a changed simulation invalidates the reviewed replacement\",\"passed\":true,\"milliseconds\":1086,\"invalidated_by\":[\"policy\",\"time scale\",\"flight editor\",\"running traffic\"],\"paused_controls_available\":true}\n{\"name\":\"canceled and superseded asynchronous file reads cannot publish a replacement\",\"passed\":true,\"milliseconds\":1030,\"fault\":\"delayed File.text only; production source unchanged\",\"canceled\":true,\"newest_wins\":true,\"changed_context_refused\":true}\n{\"name\":\"invalid files preserve the current world, proposal, approval and trace\",\"passed\":true,\"milliseconds\":2167,\"refused_files\":[\"broken.json\",\"wrong-version.json\",\"unknown-field.json\",\"invisible-policy.json\",\"oversize.json\",\"foreign-selection.json\"],\"messages\":[\"NOT LOADED: The selected file is not valid JSON.\",\"NOT LOADED: Choose a TowerOps Airspace scenario file with format version 1. Raw WorldState JSON uses the existing workbench below.\",\"NOT LOADED: Scenario needs exactly these fields: format, version, world, policy, now, time_scale, selected_aircraft_id.\",\"NOT LOADED: max_speed_nm_min is not configurable in scenario format v1; expected 6.\",\"NOT LOADED: Scenario files must be at most 256 KiB.\",\"NOT LOADED: selected_aircraft_id must identify an aircraft in this world.\"],\"unreadable_file_preserved\":true}\n{\"name\":\"legacy WorldState and selected-flight preview/apply remain usable\",\"passed\":true,\"milliseconds\":896,\"legacy_raw_world\":true,\"versioned_selected_edit\":true,\"other_aircraft_preserved\":true}\n{\"name\":\"phone review supports literal filenames, keyboard apply and bounded layout\",\"passed\":true,\"milliseconds\":1011,\"phone_width\":390,\"no_horizontal_overflow\":true,\"literal_filename\":true,\"keyboard_confirmed\":true}\n{\"passed\":7,\"total\":7,\"errors\":[],\"external\":[],\"out\":\"/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/browser-r5\"}\n\n✅ Process completed with exit code 0 (runtime: 10.55s)"
+    },
+    {
+      "type": "text",
+      "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+    }
+  ],
+  "isError": false
+}

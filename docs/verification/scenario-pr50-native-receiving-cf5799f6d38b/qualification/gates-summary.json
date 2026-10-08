@@ -1,0 +1,88 @@
+{
+  "captured_utc": "2026-10-08T14:55:50.231458+00:00",
+  "source_tree": "8c11186b1a3f6391879fb0aef14738487f09dc2a",
+  "native_test_cases": 146,
+  "native_passed": 145,
+  "native_skips": [
+    {
+      "classname": "tests.test_plan_world.WorldPlanProcessReceiving",
+      "name": "test_output_io_failure_does_not_claim_a_successful_review",
+      "reason": "requires the native full-output device"
+    }
+  ],
+  "native_failures": [],
+  "gates": [
+    {
+      "name": "native-pytest",
+      "argv": [
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/native-tests.xml"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:45.107589+00:00",
+      "finished_utc": "2026-10-08T14:55:48.512603+00:00",
+      "duration_seconds": 3.405,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/native-pytest.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/native-pytest.stderr.log"
+    },
+    {
+      "name": "ruff",
+      "argv": [
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/bin/ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:48.512842+00:00",
+      "finished_utc": "2026-10-08T14:55:48.533614+00:00",
+      "duration_seconds": 0.021,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/ruff.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/ruff.stderr.log"
+    },
+    {
+      "name": "reference",
+      "argv": [
+        "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/dependencies/python/bin/python3",
+        "tools/generate_airspace_reference.py",
+        "--check"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+      "started_utc": "2026-10-08T14:55:48.533897+00:00",
+      "finished_utc": "2026-10-08T14:55:48.603833+00:00",
+      "duration_seconds": 0.07,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/reference.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/reference.stderr.log"
+    },
+    {
+      "name": "production-build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed/web/airspace",
+      "started_utc": "2026-10-08T14:55:48.604036+00:00",
+      "finished_utc": "2026-10-08T14:55:50.160769+00:00",
+      "duration_seconds": 1.557,
+      "returncode": 0,
+      "stdout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/production-build.stdout.log",
+      "stderr": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/production-build.stderr.log"
+    }
+  ],
+  "all_four_gate_exit_codes_zero": true,
+  "build_files_byte_identical": true,
+  "qualified": true,
+  "source_files_before_after_exact": 589,
+  "frontend_and_browser_rerun_performed": false,
+  "product_edits": false,
+  "free_bytes_after": 5390413824
+}

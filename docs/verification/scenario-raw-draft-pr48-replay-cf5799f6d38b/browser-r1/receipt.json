@@ -1,0 +1,433 @@
+{
+  "schema": "towerops.raw-draft-independent-browser.v1",
+  "captured_utc": "2026-10-08T14:26:32.657Z",
+  "source_tree": "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993",
+  "product_source_tree": null,
+  "source_manifest_sha256": "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba",
+  "source": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset",
+  "receiver_sha256": "8ab4f56d0f8e0a62f80b72f799268d9e1ee43012dd5e336f6bf5033930db1997",
+  "runtime": {
+    "node": "v26.3.0",
+    "browser": "Chrome/154.0.8037.98",
+    "puppeteer": "25.12.0"
+  },
+  "before": {
+    "source_files": 251,
+    "build_files": 16,
+    "main_sha256": "b235ec353d2556f45ede80b6ee6bb958a48efac993e6900834d668e5e460460f"
+  },
+  "after": {
+    "source_files": 251,
+    "build_files": 16,
+    "main_sha256": "b235ec353d2556f45ede80b6ee6bb958a48efac993e6900834d668e5e460460f"
+  },
+  "integrity_error": null,
+  "read_only_owner_source_and_build": true,
+  "groups": [
+    {
+      "name": "valid raw world authored after review remains separate; explicit Export preserves a pending review",
+      "passed": true,
+      "seconds": 1.262,
+      "independent_order": "Choose B, author valid C, Save A, Apply B, review A, Export B, Apply A",
+      "raw_draft_sha256": "0e91b1ac3025912c659927c494057a6629c29a4f7b7e4c63654960e4eadf71ed",
+      "raw_draft_world": {
+        "version": 101,
+        "observed_at": 1004,
+        "aircraft": [
+          {
+            "aircraft_id": "DRAFT701",
+            "x_nm": -7,
+            "y_nm": 2,
+            "altitude_ft": 13000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "DRAFT702",
+            "x_nm": 18,
+            "y_nm": 2,
+            "altitude_ft": 13000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "initial": {
+        "format": "towerops.airspace-scenario",
+        "version": 1,
+        "world": {
+          "version": 1,
+          "observed_at": 1000,
+          "aircraft": [
+            {
+              "aircraft_id": "TWR218",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "TWR419",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "now": 1002,
+        "time_scale": 1,
+        "selected_aircraft_id": "TWR419"
+      },
+      "target": {
+        "format": "towerops.airspace-scenario",
+        "version": 1,
+        "world": {
+          "version": 73,
+          "observed_at": 1002,
+          "aircraft": [
+            {
+              "aircraft_id": "FILE601",
+              "x_nm": 0,
+              "y_nm": 0,
+              "altitude_ft": 11000,
+              "vx_nm_min": 0,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FILE602",
+              "x_nm": 9,
+              "y_nm": 0,
+              "altitude_ft": 11000,
+              "vx_nm_min": 0,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 7,
+          "min_vertical_ft": 1800,
+          "horizon_min": 9,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "now": 1002,
+        "time_scale": 2.5,
+        "selected_aircraft_id": "FILE602"
+      },
+      "download_sha256": {
+        "initial": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+        "still_initial": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+        "target": "f41d502a4767229c1db873501acf64824f55cac44da8edab72607e9d56e91de7",
+        "restored_initial": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec"
+      },
+      "review_after_draft": {
+        "visible": true,
+        "apply_enabled": true,
+        "status": "Review the saved scenario. The current simulation is unchanged.",
+        "summary": "three-world-target.json: 2 aircraft, world version 73. Clock 1002 s; 2.5× time scale; selected FILE602."
+      },
+      "review_after_export": {
+        "visible": true,
+        "apply_enabled": true,
+        "status": "Review the saved scenario. The current simulation is unchanged.",
+        "summary": "ddd6f29a-6ea4-40b9-b6bf-c1be18566300: 2 aircraft, world version 1. Clock 1002 s; 1× time scale; selected TWR419."
+      },
+      "retained_feedback": "Loaded scenario with 2 aircraft at version 73. Your raw JSON draft is still kept. Use Export live world to replace it.",
+      "pristine_feedback": "Loaded scenario with 2 aircraft at version 1.",
+      "raw_world_never_implicitly_loaded": true
+    },
+    {
+      "name": "same-value successful raw Load invalidates an in-flight genuine File.text completion",
+      "passed": true,
+      "seconds": 1.063,
+      "independent_order": "Begin genuine B read, hold its resolved text, type same-value A, Load A, release B completion, Save A",
+      "genuine_native_read": {
+        "file": {
+          "name": "pending-native-read-target.json",
+          "size": 547,
+          "type": "application/json",
+          "lastModified": 1791469592289
+        },
+        "sha256": "5bbe95bd66fd0d8752c8ff7b447b1b5e9978fcf562d9163344bfe815f0c9206f",
+        "same_as_uploaded_file": true
+      },
+      "initial": {
+        "format": "towerops.airspace-scenario",
+        "version": 1,
+        "world": {
+          "version": 1,
+          "observed_at": 1000,
+          "aircraft": [
+            {
+              "aircraft_id": "TWR218",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "TWR419",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "now": 1000,
+        "time_scale": 1,
+        "selected_aircraft_id": "TWR218"
+      },
+      "raw_text_sha256": "024e84e61a122d074b2a205102aacd240c602476ec873b2c8cb7a468e2beb36a",
+      "before_raw_load": {
+        "visible": false,
+        "apply_enabled": false,
+        "status": "Reading the selected scenario…",
+        "summary": ""
+      },
+      "after_typing": {
+        "visible": false,
+        "apply_enabled": false,
+        "status": "Reading the selected scenario…",
+        "summary": ""
+      },
+      "after_raw_load": {
+        "visible": false,
+        "apply_enabled": false,
+        "status": "The simulation changed. Choose the file again to review its replacement.",
+        "summary": ""
+      },
+      "after_native_completion": {
+        "visible": false,
+        "apply_enabled": false,
+        "status": "The simulation changed. Choose the file again to review its replacement.",
+        "summary": ""
+      },
+      "download_sha256": {
+        "initial": "b5ff1edbe50d016452d7a197cc57bc8e32167dfa194d9a08f051208c63e68917",
+        "final": "b5ff1edbe50d016452d7a197cc57bc8e32167dfa194d9a08f051208c63e68917"
+      },
+      "same_value_world_preserved": true,
+      "stale_review_not_reopened": true,
+      "timing_instrumentation": "Original File.prototype.text executes and resolves actual uploaded bytes; only delivery of its successful result is held, then restored."
+    }
+  ],
+  "requests": [
+    {
+      "group": "valid raw world authored after review remains separate; explicit Export preserves a pending review",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "9e1489302c1dc8d1d4bd832eb6ac41d3ce8bcf48e8da872ff35ab0bc209cac43"
+    },
+    {
+      "group": "valid raw world authored after review remains separate; explicit Export preserves a pending review",
+      "path": "/TowerOps/airspace/assets/index-TucxfM67.css",
+      "status": 200,
+      "sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d"
+    },
+    {
+      "group": "valid raw world authored after review remains separate; explicit Export preserves a pending review",
+      "path": "/TowerOps/airspace/assets/index-7rg_PNXs.js",
+      "status": 200,
+      "sha256": "c064291c51cc99dca25690be29c76c45239c9cd4ce04a35cf60253a9ac355e47"
+    },
+    {
+      "group": "valid raw world authored after review remains separate; explicit Export preserves a pending review",
+      "path": "/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "group": "same-value successful raw Load invalidates an in-flight genuine File.text completion",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "9e1489302c1dc8d1d4bd832eb6ac41d3ce8bcf48e8da872ff35ab0bc209cac43"
+    },
+    {
+      "group": "same-value successful raw Load invalidates an in-flight genuine File.text completion",
+      "path": "/TowerOps/airspace/assets/index-TucxfM67.css",
+      "status": 200,
+      "sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d"
+    },
+    {
+      "group": "same-value successful raw Load invalidates an in-flight genuine File.text completion",
+      "path": "/TowerOps/airspace/assets/index-7rg_PNXs.js",
+      "status": 200,
+      "sha256": "c064291c51cc99dca25690be29c76c45239c9cd4ce04a35cf60253a9ac355e47"
+    }
+  ],
+  "errors": [],
+  "external_app_requests": [],
+  "proxy_blocks": [
+    {
+      "method": "GET",
+      "url": "http://clients2.google.com/time/1/current?cup2key=10:yENdJAbb3MOVZdj0xurcjqTmT6-l269MuSnt3_Nnze8&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.gstatic.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "update.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "update.googleapis.com:443"
+    }
+  ],
+  "downloads": [
+    {
+      "frameId": "407D1A347F5CF9F95248AED5D8913E4B",
+      "guid": "ddd6f29a-6ea4-40b9-b6bf-c1be18566300",
+      "url": "blob:http://127.0.0.1:52235/a47257d6-e7c6-40d6-b057-aa1966410e59",
+      "suggestedFilename": "towerops-scenario-v1.json",
+      "receiving_label": "first live scenario A"
+    },
+    {
+      "frameId": "407D1A347F5CF9F95248AED5D8913E4B",
+      "guid": "c1b735b4-40f1-4176-be04-274d3647e9bd",
+      "url": "blob:http://127.0.0.1:52235/cc0930f3-6783-4a45-908b-c8ef55de35c9",
+      "suggestedFilename": "towerops-scenario-v1.json",
+      "receiving_label": "live A after valid C authored during B review"
+    },
+    {
+      "frameId": "407D1A347F5CF9F95248AED5D8913E4B",
+      "guid": "60993f5b-5173-4ec7-8327-78456b6ddd18",
+      "url": "blob:http://127.0.0.1:52235/d72798fd-e28b-416c-ac02-81ff70832fec",
+      "suggestedFilename": "towerops-scenario-v73.json",
+      "receiving_label": "live B after Apply with C kept"
+    },
+    {
+      "frameId": "407D1A347F5CF9F95248AED5D8913E4B",
+      "guid": "e1ad905f-4349-4727-bb8c-60510445f835",
+      "url": "blob:http://127.0.0.1:52235/4764f626-a910-4959-ad8c-1b10e9db1737",
+      "suggestedFilename": "towerops-scenario-v1.json",
+      "receiving_label": "live A after pending review survives Export"
+    },
+    {
+      "frameId": "F3502298332D588D612DE71FDC3AB011",
+      "guid": "087b1a5b-b0a9-4f18-9fe5-af4cd6237897",
+      "url": "blob:http://127.0.0.1:52235/775bd531-4d05-4ee8-ab64-db74b2579131",
+      "suggestedFilename": "towerops-scenario-v1.json",
+      "receiving_label": "second control original live scenario"
+    },
+    {
+      "frameId": "F3502298332D588D612DE71FDC3AB011",
+      "guid": "dd3d8356-2422-4f2b-94c4-8843b150b89e",
+      "url": "blob:http://127.0.0.1:52235/3bb94f42-1a1a-4d38-b79b-8368a9db2291",
+      "suggestedFilename": "towerops-scenario-v1.json",
+      "receiving_label": "normalized same-value raw-load basis A"
+    },
+    {
+      "frameId": "F3502298332D588D612DE71FDC3AB011",
+      "guid": "ca290edd-0812-4b34-accf-870fd3e9b041",
+      "url": "blob:http://127.0.0.1:52235/cfe6edb0-41b2-4f1a-834e-3c104b25fd6e",
+      "suggestedFilename": "towerops-scenario-v1.json",
+      "receiving_label": "same live A after stale native completion"
+    }
+  ],
+  "passed": 2,
+  "total": 2
+}

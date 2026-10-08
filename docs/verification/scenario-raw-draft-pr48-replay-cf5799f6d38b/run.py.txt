@@ -1,0 +1,44 @@
+from pathlib import Path
+import datetime
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+import time
+
+root = Path(__file__).resolve().parent
+source = "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset"
+receiver = root / "independent_raw_draft.mjs"
+receiver_hash = hashlib.sha256(receiver.read_bytes()).hexdigest()
+if receiver_hash != "8ab4f56d0f8e0a62f80b72f799268d9e1ee43012dd5e336f6bf5033930db1997":
+    raise RuntimeError("inherited raw-draft receiver changed")
+free_before = shutil.disk_usage(root).free
+if free_before < 32 * 1024 * 1024:
+    raise RuntimeError(f"receiving storage unavailable before browser: {free_before} bytes")
+command = ["node", str(receiver), source, str(root / "browser-r1")]
+env = os.environ.copy()
+env["NODE_PATH"] = "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules"
+started = datetime.datetime.now(datetime.timezone.utc).isoformat()
+tick = time.monotonic()
+with (root / "browser-r1.stdout.log").open("xb") as stdout:
+    with (root / "browser-r1.stderr.log").open("xb") as stderr:
+        result = subprocess.run(command, env=env, stdout=stdout, stderr=stderr, timeout=150, check=False)
+receipt = {
+    "schema": "towerops.raw-draft-inherited-replay-process.v1",
+    "started_utc": started,
+    "ended_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    "seconds": time.monotonic() - tick,
+    "command": command,
+    "exit_code": result.returncode,
+    "receiver_sha256": receiver_hash,
+    "node_path": env["NODE_PATH"],
+    "free_before_bytes": free_before,
+    "free_after_bytes": shutil.disk_usage(root).free,
+    "newly_authored_browser_groups": 0,
+    "inherited_browser_groups": 2,
+    "source_or_build_edits": False,
+}
+(root / "process-receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
+print(json.dumps(receipt, indent=2))
+raise SystemExit(result.returncode)

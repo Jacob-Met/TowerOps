@@ -1,0 +1,439 @@
+{
+  "schema": "towerops.scenario-raw-draft-browser.v1",
+  "source_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "main_sha256": "f4976fa8729cd3e5507ec1f721931706c91ecdec773443687aa3e3b451f9f7e4",
+  "receiver_sha256": "29a3a9a70637d8a7b439cea560cec1a925308109cbd951c5747602a69520951a",
+  "runtime": {
+    "node": "v26.3.0",
+    "browser": "Chrome/154.0.8037.98"
+  },
+  "source_unchanged": true,
+  "groups": [
+    {
+      "name": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "passed": true,
+      "seconds": 1.183,
+      "draft_sha256": "653cfed8ab3c02bc079e217642146d5213b0c41c878950d06039f873d9b8a757",
+      "initial_download": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "after_cancel_download": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec"
+    },
+    {
+      "name": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "passed": true,
+      "seconds": 1.839,
+      "restored_download": "462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362",
+      "loaded_callsigns": [
+        "TWR601",
+        "TWR602"
+      ],
+      "retained_draft_sha256": "cb8e6c511c09cbc0e9369bd663bcc85f8e46484d616004e87b349cb22686e25d",
+      "feedback": "Loaded scenario with 2 aircraft at version 73. Your raw JSON draft is still kept. Use Export live world to replace it.",
+      "pristine_feedback_unchanged": true
+    },
+    {
+      "name": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "passed": true,
+      "seconds": 1.134,
+      "raw_world_sha256": "3a14d9c9ef35423e832c13fc6a899ee2b064ef8531f4c207014af498436387e3",
+      "review_invalidated_for": [
+        "changed-world",
+        "same-world-new-load"
+      ]
+    },
+    {
+      "name": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "passed": false,
+      "seconds": 16.829,
+      "error": "Error: Timed out: download starts",
+      "stack": "Error: Timed out: download starts\n    at until (file:///private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-raw-draft-v2.mjs:34:99)\n    at async save (file:///private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-raw-draft-v2.mjs:53:70)\n    at async file:///private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-raw-draft-v2.mjs:129:67\n    at async group (file:///private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-raw-draft-v2.mjs:69:19)\n    at async file:///private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-raw-draft-v2.mjs:119:2"
+    }
+  ],
+  "requests": [
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    },
+    {
+      "group": "saved scenario reads the live world and preserves a separate draft through review and cancel",
+      "path": "/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "Apply restores actual world and policy, keeps the authored draft and explains its ownership",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "successful raw Load invalidates reviewed scenario even for an identical world value",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "527db017af53e260f8e41bfe1bd7ccb5602dc6b04e062cec178ee13bd385904d"
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "path": "/TowerOps/airspace/assets/index-_-jBUDYi.css",
+      "status": 200,
+      "sha256": "623d3ef3d039e4e2f3df70e19d64bf3c41670be1befbc24f71ad1d86df0d5a8c"
+    },
+    {
+      "group": "failed raw Load retains review; explicit Export restores live synchronization after scenario Apply",
+      "path": "/TowerOps/airspace/assets/index-BYuQWrUl.js",
+      "status": 200,
+      "sha256": "aee2e9c1669a4f13d9f39fd9e1f5438812b7634563175a035122f39428e08797"
+    }
+  ],
+  "errors": [],
+  "external_app_requests": [],
+  "proxy_blocks": [
+    {
+      "method": "GET",
+      "url": "http://clients2.google.com/time/1/current?cup2key=10:So3DUTIEX8GRJ1ppEMupPO0TsF7HQpW6q6_TG_oqEDw&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.gstatic.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "update.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "android.clients.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    }
+  ],
+  "downloads": [
+    {
+      "frameId": "74BB3E77ED08B8242195FE00882A287B",
+      "guid": "4d6bc556-e53f-45d9-8410-e253f542e8c9",
+      "url": "blob:http://127.0.0.1:55860/16d004c6-13fe-4028-921b-9ffadd3eeac4",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "74BB3E77ED08B8242195FE00882A287B",
+      "guid": "a937db76-6b01-4c99-b210-2dec6c96906e",
+      "url": "blob:http://127.0.0.1:55860/1963544a-9eae-4ce8-8108-5a809b09ecfa",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "74BB3E77ED08B8242195FE00882A287B",
+      "guid": "f56b3068-6f54-4c3c-a017-5eb954da9f41",
+      "url": "blob:http://127.0.0.1:55860/40d02259-c571-4b4b-a6f7-321ecdcfe43b",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "74BB3E77ED08B8242195FE00882A287B",
+      "guid": "52fed2fd-5699-4e4e-ab05-de54f111f03e",
+      "url": "blob:http://127.0.0.1:55860/64671fdf-19db-4ebe-adfd-513cc2c7428a",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "6BD2C85706AB69A8FBC7345401093E3F",
+      "guid": "8f48fff8-3e7c-4213-94df-c5ebfd46194d",
+      "url": "blob:http://127.0.0.1:55860/0658b8be-cf5d-4fdb-87b0-71b69c69bd0b",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "6BD2C85706AB69A8FBC7345401093E3F",
+      "guid": "94e8237a-5a76-4859-a1ee-9c30a2840cc8",
+      "url": "blob:http://127.0.0.1:55860/04760e11-397d-46f1-ab12-2e4fdf9f5b13",
+      "suggestedFilename": "towerops-scenario-v73.json"
+    },
+    {
+      "frameId": "C1FB4F887D634023A5D0CD979D4CC4F1",
+      "guid": "cb8aa223-05ef-41ef-8af9-d302d482b47b",
+      "url": "blob:http://127.0.0.1:55860/2ca6261d-a7f0-436b-bb7b-c5c992a0bfe0",
+      "suggestedFilename": "towerops-scenario-v73.json"
+    },
+    {
+      "frameId": "9AF365F8A7E96105B3F1CB74245E61CB",
+      "guid": "b9922eba-d66f-4eb8-8027-8390b5f24ac8",
+      "url": "blob:http://127.0.0.1:55860/5d7ac88e-85ab-4737-8910-d7b23cf813e3",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "9AF365F8A7E96105B3F1CB74245E61CB",
+      "guid": "bcc44251-be4d-46ff-af37-351c89d48b9b",
+      "url": "blob:http://127.0.0.1:55860/5de1dee9-b5bb-444a-a2e9-4b78afe31d7f",
+      "suggestedFilename": "towerops-scenario-v81.json"
+    },
+    {
+      "frameId": "9AF365F8A7E96105B3F1CB74245E61CB",
+      "guid": "dd95cdc1-ff0a-4285-9f97-7f7aeb43ec44",
+      "url": "blob:http://127.0.0.1:55860/5dc6b132-925b-4d13-b7fe-c76c45f2bdb8",
+      "suggestedFilename": "towerops-scenario-v81.json"
+    },
+    {
+      "frameId": "580F5ADE6469C6DC318CAE22BE7BA44B",
+      "guid": "2ab70f50-30b7-43f4-9e7b-41ce98102238",
+      "url": "blob:http://127.0.0.1:55860/e02f5639-c956-4c6a-afac-3bb26af5a6ac",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "580F5ADE6469C6DC318CAE22BE7BA44B",
+      "guid": "077c3cea-7fc9-4878-b148-30dae410ba5b",
+      "url": "blob:http://127.0.0.1:55860/d35bcff0-56e7-4874-9ebf-c7cd439701b0",
+      "suggestedFilename": "towerops-scenario-v1.json"
+    },
+    {
+      "frameId": "580F5ADE6469C6DC318CAE22BE7BA44B",
+      "guid": "166b8650-120e-4743-84c6-122c9cf6d37a",
+      "url": "blob:http://127.0.0.1:55860/e9cfcda2-e1ad-4441-a9f6-87c6cf8bd198",
+      "suggestedFilename": "towerops-scenario-v73.json"
+    }
+  ],
+  "passed": 3,
+  "total": 4
+}

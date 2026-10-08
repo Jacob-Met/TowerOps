@@ -1,0 +1,13 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[Reading 17 new lines (total: 17 lines)]\n\nnode:events:487\n      throw er; // Unhandled 'error' event\n      ^\n\nError: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\nEmitted 'error' event on Socket instance at:\n    at emitErrorNT (node:internal/streams/destroy:170:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\n  errno: -54,\n  code: 'ECONNRESET',\n  syscall: 'read'\n}\n\nNode.js v26.3.0\n\n✅ Process completed with exit code 1 (runtime: 0.66s)"
+    },
+    {
+      "type": "text",
+      "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+    }
+  ],
+  "isError": false
+}

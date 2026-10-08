@@ -1,0 +1,54 @@
+from pathlib import Path
+import datetime
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+import time
+
+root = Path("/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy")
+primary = Path("/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-source-build-pin.json")
+expected = "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba"
+body = primary.read_bytes()
+if hashlib.sha256(body).hexdigest() != expected:
+    raise RuntimeError("root nominated source/build manifest changed")
+receiver = root / "independent_alternative_reset.mjs"
+receiver_hash = hashlib.sha256(receiver.read_bytes()).hexdigest()
+if receiver_hash != "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c":
+    raise RuntimeError("independent receiver changed before successor run")
+free_before = shutil.disk_usage(root).free
+if free_before < 32 * 1024 * 1024:
+    raise RuntimeError(f"receiving capacity unavailable before Chrome: {free_before} bytes")
+snapshot = root / "reset-source-build-pin.json"
+with snapshot.open("xb") as handle:
+    handle.write(body)
+output = root / "reset-browser"
+command = ["node", str(receiver), str(snapshot), str(output)]
+env = os.environ.copy()
+env["NODE_PATH"] = "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules"
+started = datetime.datetime.now(datetime.timezone.utc).isoformat()
+tick = time.monotonic()
+with (root / "reset.stdout.log").open("xb") as stdout:
+    with (root / "reset.stderr.log").open("xb") as stderr:
+        result = subprocess.run(command, env=env, stdout=stdout, stderr=stderr, timeout=300, check=False)
+receipt = {
+    "schema": "towerops.scenario-alternatives-independent-process.v1",
+    "phase": "scenario-reset-successor",
+    "started_utc": started,
+    "ended_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    "seconds": time.monotonic() - tick,
+    "command": command,
+    "exit_code": result.returncode,
+    "receiver_sha256": receiver_hash,
+    "root_input_manifest": str(primary),
+    "root_input_manifest_sha256": expected,
+    "free_before_bytes": free_before,
+    "free_after_bytes": shutil.disk_usage(root).free,
+    "node_path": env["NODE_PATH"],
+    "source_or_build_edits": False,
+    "browser_groups": 2,
+}
+(root / "reset-process-receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
+print(json.dumps(receipt, indent=2))
+raise SystemExit(result.returncode)

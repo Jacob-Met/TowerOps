@@ -1,0 +1,144 @@
+{
+  "commands": [
+    {
+      "name": "private-dependencies",
+      "command": [
+        "cp",
+        "-cR",
+        "/private/tmp/towerops-scenarios-cf5799f6d38b-ycfa66pv/source/web/airspace/node_modules",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate/web/airspace/node_modules"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 0.188
+    },
+    {
+      "name": "runtime",
+      "command": [
+        "node",
+        "--version"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 0.047
+    },
+    {
+      "name": "python-runtime",
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "--version"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 0.012
+    },
+    {
+      "name": "ruff-runtime",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "--version"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 0.093
+    },
+    {
+      "name": "unit-tests",
+      "command": [
+        "npm",
+        "test",
+        "--",
+        "--reporter=json",
+        "--outputFile=/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/qualification/unit-tests.json"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate/web/airspace",
+      "exit_code": 0,
+      "seconds": 1.107
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate/web/airspace",
+      "exit_code": 0,
+      "seconds": 1.222
+    },
+    {
+      "name": "native-tests",
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/qualification/native-tests.xml"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 1.163
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 0.076
+    },
+    {
+      "name": "reference",
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "tools/generate_airspace_reference.py",
+        "--check"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 0.081
+    },
+    {
+      "name": "author-browser",
+      "command": [
+        "node",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/receivers/author.mjs",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/author-browser"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa",
+      "exit_code": 0,
+      "seconds": 10.643
+    },
+    {
+      "name": "independent-browser",
+      "command": [
+        "node",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/receivers/independent.mjs",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/independent-browser"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa",
+      "exit_code": 0,
+      "seconds": 12.693
+    },
+    {
+      "name": "pending-browser",
+      "command": [
+        "node",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/receivers/pending.mjs",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/pending-browser"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa",
+      "exit_code": 0,
+      "seconds": 2.655
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "observed_at": 10.0,
+  "aircraft": [
+    {
+      "aircraft_id": "L",
+      "x_nm": 1,
+      "y_nm": 0,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 2,
+      "climb_ft_min": 0.0
+    },
+    {
+      "aircraft_id": "l",
+      "x_nm": 1.0,
+      "y_nm": -0.0,
+      "altitude_ft": 12000.0,
+      "vx_nm_min": 0.0,
+      "vy_nm_min": -2.0,
+      "climb_ft_min": -0.0
+    }
+  ]
+}

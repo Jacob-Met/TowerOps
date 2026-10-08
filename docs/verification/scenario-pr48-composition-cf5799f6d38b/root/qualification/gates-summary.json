@@ -1,0 +1,44 @@
+{
+  "source_tree": "cde965df1dc4a18a94443c386e48686dd6280073",
+  "product_source_tree": "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993",
+  "source_files_unchanged": 579,
+  "build_files_unchanged": 16,
+  "build_identity": {
+    "prior_pin_sha256": "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba",
+    "prior_build": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset/web/airspace/dist",
+    "normal_build": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace/dist",
+    "file_count": 16,
+    "byte_identical": true,
+    "differences": []
+  },
+  "frontend": {
+    "numTotalTests": 201,
+    "numPassedTests": 201,
+    "numFailedTests": 0,
+    "numPendingTests": 0
+  },
+  "native": {
+    "tests": 120,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "commands_passed": 19,
+  "commands_failed": [],
+  "root_browser_scope": "53 unchanged existing controls; independent raw-draft and alternative-reset receiving and maintained PR48 receiving are separate peer packets.",
+  "runtime": {
+    "node": "v26.3.0",
+    "python": "Python 3.12.8",
+    "pytest": "8.4.2",
+    "ruff": "ruff 0.16.10",
+    "chrome": "Google Chrome 154.0.8037.98",
+    "packages": {
+      "typescript": "5.7.3",
+      "vite": "8.3.3",
+      "vitest": "4.1.11",
+      "pyodide": "0.27.7"
+    },
+    "private_dependency_copy": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace/node_modules",
+    "hosted_ci_runtime_parity_claimed": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[Reading 21 new lines (total: 21 lines)]\n\n{\n  \"schema\": \"towerops.raw-draft-inherited-replay-process.v1\",\n  \"started_utc\": \"2026-10-08T14:26:29.470289+00:00\",\n  \"ended_utc\": \"2026-10-08T14:26:32.692889+00:00\",\n  \"seconds\": 3.2224676669575274,\n  \"command\": [\n    \"node\",\n    \"/private/tmp/towerops-raw-draft-pr48-replay-cf5799f6d38b-f6aomq6w/independent_raw_draft.mjs\",\n    \"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset\",\n    \"/private/tmp/towerops-raw-draft-pr48-replay-cf5799f6d38b-f6aomq6w/browser-r1\"\n  ],\n  \"exit_code\": 0,\n  \"receiver_sha256\": \"8ab4f56d0f8e0a62f80b72f799268d9e1ee43012dd5e336f6bf5033930db1997\",\n  \"node_path\": \"/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules\",\n  \"free_before_bytes\": 9849053184,\n  \"free_after_bytes\": 9844084736,\n  \"newly_authored_browser_groups\": 0,\n  \"inherited_browser_groups\": 2,\n  \"source_or_build_edits\": false\n}\n\n✅ Process completed with exit code 0 (runtime: 3.32s)"
+    },
+    {
+      "type": "text",
+      "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+    }
+  ],
+  "isError": false
+}

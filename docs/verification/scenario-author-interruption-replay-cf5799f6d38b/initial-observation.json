@@ -1,0 +1,689 @@
+{
+  "observed_at_utc": "2026-10-08T16:12:01Z",
+  "source_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+  "source_pin_sha256": "c7a2fd2cee35e79b69fb74a520b15de0b2d697756ea60ac9b2ad68cbd86a2301",
+  "source_files_unchanged": 1017,
+  "build_files_unchanged": 16,
+  "prior_outer_exit": "not observed; expired RDC PID is not exit evidence",
+  "originals": {
+    "author.mjs": {
+      "path": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/scenario-receiving/author.mjs",
+      "bytes": 20441,
+      "sha256": "3486cd53f70b44ec9d964d45d7e7688f2d3163cfd693af5beb951f583d65aab6",
+      "git_blob": "2f84eac00c90d80f4f0470e43b654eb3a13dedc9",
+      "mtime_ns": 1791475031888512287
+    },
+    "author.stdout.log": {
+      "path": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/scenario-receiving/author.stdout.log",
+      "bytes": 259,
+      "sha256": "202b4cdb7142708943369b2f7ca5be7aea12c3a51dfa3033ef5e23dbebcbb01e",
+      "git_blob": "f80bafc8ec1f67d38670cfe19c74f198ed1489b6",
+      "mtime_ns": 1791475035332168988
+    },
+    "author.stderr.log": {
+      "path": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/scenario-receiving/author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtime_ns": 1791475032038065690
+    }
+  },
+  "inventory": [
+    {
+      "path": "author-browser",
+      "directory": true,
+      "symlink": false,
+      "bytes": 160,
+      "mtime_ns": 1791475032297882000
+    },
+    {
+      "path": "author.mjs",
+      "directory": false,
+      "symlink": false,
+      "bytes": 20441,
+      "mtime_ns": 1791475031888512287
+    },
+    {
+      "path": "author.stderr.log",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032038065690
+    },
+    {
+      "path": "author.stdout.log",
+      "directory": false,
+      "symlink": false,
+      "bytes": 259,
+      "mtime_ns": 1791475035332168988
+    },
+    {
+      "path": "author-browser/downloads",
+      "directory": true,
+      "symlink": false,
+      "bytes": 96,
+      "mtime_ns": 1791475034937124402
+    },
+    {
+      "path": "author-browser/fixtures",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032203437553
+    },
+    {
+      "path": "author-browser/profile",
+      "directory": true,
+      "symlink": false,
+      "bytes": 1152,
+      "mtime_ns": 1791475051042660762
+    },
+    {
+      "path": "author-browser/downloads/c8eb971a-f938-4862-b947-d4390892079a",
+      "directory": false,
+      "symlink": false,
+      "bytes": 812,
+      "mtime_ns": 1791475034908563721
+    },
+    {
+      "path": "author-browser/profile/ActorSafetyLists",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032665907720
+    },
+    {
+      "path": "author-browser/profile/AmountExtractionHeuristicRegexes",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032922426532
+    },
+    {
+      "path": "author-browser/profile/CaptchaProviders",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032929457209
+    },
+    {
+      "path": "author-browser/profile/CertificateRevocation",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032835293472
+    },
+    {
+      "path": "author-browser/profile/ChromeFeatureState",
+      "directory": false,
+      "symlink": false,
+      "bytes": 458,
+      "mtime_ns": 1791475032492297437
+    },
+    {
+      "path": "author-browser/profile/Consent To Send Stats",
+      "directory": false,
+      "symlink": false,
+      "bytes": 36,
+      "mtime_ns": 1791475032468025258
+    },
+    {
+      "path": "author-browser/profile/Crowd Deny",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032914272639
+    },
+    {
+      "path": "author-browser/profile/Default",
+      "directory": true,
+      "symlink": false,
+      "bytes": 1600,
+      "mtime_ns": 1791475037408106622
+    },
+    {
+      "path": "author-browser/profile/DevToolsActivePort",
+      "directory": false,
+      "symlink": false,
+      "bytes": 60,
+      "mtime_ns": 1791475032573345244
+    },
+    {
+      "path": "author-browser/profile/FileTypePolicies",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032809288863
+    },
+    {
+      "path": "author-browser/profile/GPUPersistentCache",
+      "directory": true,
+      "symlink": false,
+      "bytes": 96,
+      "mtime_ns": 1791475032486570061
+    },
+    {
+      "path": "author-browser/profile/Last Version",
+      "directory": false,
+      "symlink": false,
+      "bytes": 13,
+      "mtime_ns": 1791475032490709509
+    },
+    {
+      "path": "author-browser/profile/Local State",
+      "directory": false,
+      "symlink": false,
+      "bytes": 534,
+      "mtime_ns": 1791475032485395594
+    },
+    {
+      "path": "author-browser/profile/MEIPreload",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032839313376
+    },
+    {
+      "path": "author-browser/profile/NativeMessagingHosts",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032473344214
+    },
+    {
+      "path": "author-browser/profile/OnDeviceHeadSuggestModel",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032646588244
+    },
+    {
+      "path": "author-browser/profile/OptimizationGuideModelsManifest",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032490468007
+    },
+    {
+      "path": "author-browser/profile/OriginTrials",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032823442301
+    },
+    {
+      "path": "author-browser/profile/PKIMetadata",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032840046340
+    },
+    {
+      "path": "author-browser/profile/PrivacySandboxAttestationsPreloaded",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032580654548
+    },
+    {
+      "path": "author-browser/profile/RecoveryImproved",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032626054592
+    },
+    {
+      "path": "author-browser/profile/SSLErrorAssistant",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032690519902
+    },
+    {
+      "path": "author-browser/profile/Safe Browsing",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032580056836
+    },
+    {
+      "path": "author-browser/profile/SafetyTips",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032864515604
+    },
+    {
+      "path": "author-browser/profile/Subresource Filter",
+      "directory": true,
+      "symlink": false,
+      "bytes": 96,
+      "mtime_ns": 1791475032735946029
+    },
+    {
+      "path": "author-browser/profile/TrustTokenKeyCommitments",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032670164168
+    },
+    {
+      "path": "author-browser/profile/Variations",
+      "directory": false,
+      "symlink": false,
+      "bytes": 86,
+      "mtime_ns": 1791475032466228619
+    },
+    {
+      "path": "author-browser/profile/VariationsSafeSeedV2",
+      "directory": false,
+      "symlink": false,
+      "bytes": 19,
+      "mtime_ns": 1791475032468101092
+    },
+    {
+      "path": "author-browser/profile/VariationsSeedV2",
+      "directory": false,
+      "symlink": false,
+      "bytes": 19,
+      "mtime_ns": 1791475032468084883
+    },
+    {
+      "path": "author-browser/profile/WasmTtsEngine",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032928869830
+    },
+    {
+      "path": "author-browser/profile/WidevineCdm",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032629971038
+    },
+    {
+      "path": "author-browser/profile/ZxcvbnData",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032922773535
+    },
+    {
+      "path": "author-browser/profile/component_crx_cache",
+      "directory": true,
+      "symlink": false,
+      "bytes": 64,
+      "mtime_ns": 1791475032485197718
+    },
+    {
+      "path": "author-browser/profile/segmentation_platform",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475032495418085
+    },
+    {
+      "path": "author-browser/profile/Default/Account Web Data",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475033038175554
+    },
+    {
+      "path": "author-browser/profile/Default/Account Web Data-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 512,
+      "mtime_ns": 1791475033068085109
+    },
+    {
+      "path": "author-browser/profile/Default/Affiliation Database",
+      "directory": false,
+      "symlink": false,
+      "bytes": 32768,
+      "mtime_ns": 1791475032922550950
+    },
+    {
+      "path": "author-browser/profile/Default/Affiliation Database-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032922750576
+    },
+    {
+      "path": "author-browser/profile/Default/Cache",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475032534331206
+    },
+    {
+      "path": "author-browser/profile/Default/ClientCertificates",
+      "directory": true,
+      "symlink": false,
+      "bytes": 160,
+      "mtime_ns": 1791475033139710596
+    },
+    {
+      "path": "author-browser/profile/Default/Code Cache",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475032529255585
+    },
+    {
+      "path": "author-browser/profile/Default/Cookies",
+      "directory": false,
+      "symlink": false,
+      "bytes": 4096,
+      "mtime_ns": 1791475033020699967
+    },
+    {
+      "path": "author-browser/profile/Default/Cookies-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475033020666467
+    },
+    {
+      "path": "author-browser/profile/Default/Device Bound Sessions",
+      "directory": false,
+      "symlink": false,
+      "bytes": 4096,
+      "mtime_ns": 1791475032930183465
+    },
+    {
+      "path": "author-browser/profile/Default/Device Bound Sessions-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032937763979
+    },
+    {
+      "path": "author-browser/profile/Default/Extension Rules",
+      "directory": true,
+      "symlink": false,
+      "bytes": 224,
+      "mtime_ns": 1791475032962679038
+    },
+    {
+      "path": "author-browser/profile/Default/Extension Scripts",
+      "directory": true,
+      "symlink": false,
+      "bytes": 160,
+      "mtime_ns": 1791475033092020827
+    },
+    {
+      "path": "author-browser/profile/Default/Extension State",
+      "directory": true,
+      "symlink": false,
+      "bytes": 256,
+      "mtime_ns": 1791475033175514325
+    },
+    {
+      "path": "author-browser/profile/Default/GPUCache",
+      "directory": true,
+      "symlink": false,
+      "bytes": 96,
+      "mtime_ns": 1791475033084159561
+    },
+    {
+      "path": "author-browser/profile/Default/History",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032920570268
+    },
+    {
+      "path": "author-browser/profile/Default/History-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032921778236
+    },
+    {
+      "path": "author-browser/profile/Default/Local Storage",
+      "directory": true,
+      "symlink": false,
+      "bytes": 96,
+      "mtime_ns": 1791475033139678554
+    },
+    {
+      "path": "author-browser/profile/Default/Login Data",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032989853739
+    },
+    {
+      "path": "author-browser/profile/Default/Login Data For Account",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032983166981
+    },
+    {
+      "path": "author-browser/profile/Default/Login Data For Account-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032983501067
+    },
+    {
+      "path": "author-browser/profile/Default/Login Data-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032996935916
+    },
+    {
+      "path": "author-browser/profile/Default/PersistentOriginTrials",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475032715948882
+    },
+    {
+      "path": "author-browser/profile/Default/README",
+      "directory": false,
+      "symlink": false,
+      "bytes": 180,
+      "mtime_ns": 1791475032492016602
+    },
+    {
+      "path": "author-browser/profile/Default/Reporting and NEL",
+      "directory": false,
+      "symlink": false,
+      "bytes": 4096,
+      "mtime_ns": 1791475032929514376
+    },
+    {
+      "path": "author-browser/profile/Default/Reporting and NEL-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032930023797
+    },
+    {
+      "path": "author-browser/profile/Default/Segmentation Platform",
+      "directory": true,
+      "symlink": false,
+      "bytes": 160,
+      "mtime_ns": 1791475032997598629
+    },
+    {
+      "path": "author-browser/profile/Default/ServerCertificate",
+      "directory": false,
+      "symlink": false,
+      "bytes": 20480,
+      "mtime_ns": 1791475032700249932
+    },
+    {
+      "path": "author-browser/profile/Default/ServerCertificate-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032721225796
+    },
+    {
+      "path": "author-browser/profile/Default/Session Storage",
+      "directory": true,
+      "symlink": false,
+      "bytes": 224,
+      "mtime_ns": 1791475033210709926
+    },
+    {
+      "path": "author-browser/profile/Default/Sessions",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475037835358409
+    },
+    {
+      "path": "author-browser/profile/Default/Shared Dictionary",
+      "directory": true,
+      "symlink": false,
+      "bytes": 160,
+      "mtime_ns": 1791475032835726850
+    },
+    {
+      "path": "author-browser/profile/Default/Site Characteristics Database",
+      "directory": true,
+      "symlink": false,
+      "bytes": 224,
+      "mtime_ns": 1791475032929942755
+    },
+    {
+      "path": "author-browser/profile/Default/Sync Data",
+      "directory": true,
+      "symlink": false,
+      "bytes": 96,
+      "mtime_ns": 1791475032523938921
+    },
+    {
+      "path": "author-browser/profile/Default/Top Sites",
+      "directory": false,
+      "symlink": false,
+      "bytes": 4096,
+      "mtime_ns": 1791475033080111447
+    },
+    {
+      "path": "author-browser/profile/Default/Top Sites-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475033084273520
+    },
+    {
+      "path": "author-browser/profile/Default/Trust Tokens",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032929836670
+    },
+    {
+      "path": "author-browser/profile/Default/Trust Tokens-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032930058255
+    },
+    {
+      "path": "author-browser/profile/Default/Web Data",
+      "directory": false,
+      "symlink": false,
+      "bytes": 2048,
+      "mtime_ns": 1791475033001362991
+    },
+    {
+      "path": "author-browser/profile/Default/Web Data-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475033001929786
+    },
+    {
+      "path": "author-browser/profile/Default/chrome_cart_db",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475032626373053
+    },
+    {
+      "path": "author-browser/profile/Default/commerce_subscription_db",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475032567933996
+    },
+    {
+      "path": "author-browser/profile/Default/declarative_performance_observer.db",
+      "directory": false,
+      "symlink": false,
+      "bytes": 28672,
+      "mtime_ns": 1791475032921459733
+    },
+    {
+      "path": "author-browser/profile/Default/declarative_performance_observer.db-journal",
+      "directory": false,
+      "symlink": false,
+      "bytes": 0,
+      "mtime_ns": 1791475032923121954
+    },
+    {
+      "path": "author-browser/profile/Default/discount_infos_db",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475032572808532
+    },
+    {
+      "path": "author-browser/profile/Default/discounts_db",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475032561117904
+    },
+    {
+      "path": "author-browser/profile/Default/parcel_tracking_db",
+      "directory": true,
+      "symlink": false,
+      "bytes": 128,
+      "mtime_ns": 1791475032574664712
+    },
+    {
+      "path": "author-browser/profile/Default/shared_proto_db",
+      "directory": true,
+      "symlink": false,
+      "bytes": 160,
+      "mtime_ns": 1791475033103481787
+    }
+  ],
+  "owned_processes": [],
+  "devtools_read_only": {
+    "port_file": [
+      "55198",
+      "/devtools/browser/50fce209-3c12-46ab-887d-a015e160eae7"
+    ],
+    "read_error": {
+      "type": "URLError",
+      "message": "<urlopen error [Errno 61] Connection refused>"
+    }
+  },
+  "history_read_only": [
+    {
+      "read_error": "OperationalError: no such table: urls"
+    }
+  ],
+  "downloads": [
+    {
+      "source_path": "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/scenario-receiving/author-browser/downloads/c8eb971a-f938-4862-b947-d4390892079a",
+      "copy": "original-download-c8eb971a-f938-4862-b947-d4390892079a.json",
+      "bytes": 812,
+      "sha256": "105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced",
+      "git_blob": "05c244bdb58aeb31ea0cfffc65b87a86fb4a23a8"
+    }
+  ],
+  "disk_free_bytes": 2708172800
+}

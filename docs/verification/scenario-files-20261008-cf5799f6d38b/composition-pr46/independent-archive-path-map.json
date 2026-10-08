@@ -1,0 +1,41 @@
+{
+  "schema": "towerops.independent-receiving-archive-paths.v1",
+  "source_manifest": {
+    "path": "/tmp/towerops-raw-draft-review-cf5799f6d38b-zsv38ev0/review-manifest.json",
+    "sha256": "88c1ce851d3d24d04b7caba363d44be820a8f42e5024c9380d28d780317baeec",
+    "files": 28
+  },
+  "mappings": [
+    {
+      "native_path": "/tmp/towerops-raw-draft-review-cf5799f6d38b-zsv38ev0/prepare.py",
+      "declared_path": "docs/verification/scenario-raw-draft-independent-cf5799f6d38b/prepare.py",
+      "publication_path": "docs/verification/scenario-raw-draft-independent-cf5799f6d38b/prepare.py.txt",
+      "bytes": 3904,
+      "sha256": "9e4443356b2050b658b36234db0be26915c01954a2c1456f03a6fe4f96a8af89",
+      "git_blob": "fcc1ba217df5fc1539c3180652b433a2c0711a80",
+      "mode": "100644",
+      "retained_findings": [
+        "I001",
+        "F401"
+      ]
+    },
+    {
+      "native_path": "/tmp/towerops-raw-draft-review-cf5799f6d38b-zsv38ev0/run.py",
+      "declared_path": "docs/verification/scenario-raw-draft-independent-cf5799f6d38b/run.py",
+      "publication_path": "docs/verification/scenario-raw-draft-independent-cf5799f6d38b/run.py.txt",
+      "bytes": 1220,
+      "sha256": "bc3d90d4615f8ad1073aae7ef40b5957cd81552b29665c0fb050bf0d19911259",
+      "git_blob": "a57d1b33bac75966d509fe1c0301549e13faf77f",
+      "mode": "100644",
+      "retained_findings": [
+        "I001",
+        "PLW1510"
+      ]
+    }
+  ],
+  "other_26_paths_unchanged": true,
+  "source_bytes_and_modes_unchanged": true,
+  "reason": "These two newly contributed files are immutable executed setup/command transcripts, archived as text before their first publication. The original native paths and exact source manifest remain authoritative; there is no new lint exemption or change to any application, receiver predicate, or historical published file.",
+  "not_requalified_python_modules": true,
+  "publication_kind": "Transport names for historical executed setup/command drivers."
+}

@@ -1,0 +1,186 @@
+from pathlib import Path
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+import time
+import xml.etree.ElementTree as ET
+
+root = Path("/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj")
+source = root / "candidate-reset"
+repo = root / "publication-qualified"
+out = root / "qualification"
+out.mkdir()
+source_pin = json.loads((root / "reset-source-build-pin.json").read_bytes())
+product_tree = "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993"
+base = "093f88b29d6e1ede778f967528c7e010b7689ab1"
+historical_tree = "464299ede19b44fdd1d0d8d8590c9a34e4896df5"
+historical_repo = Path("/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate")
+native = "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3"
+playwright_python = "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/playwright-tools/bin/python"
+chrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+ruff = "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff"
+env = {**os.environ, "GIT_OPTIONAL_LOCKS": "0", "PYTHONDONTWRITEBYTECODE": "1",
+       "NODE_PATH": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules", "TOWEROPS_PYTHON": native}
+records = []
+def run(name, command, cwd, required=False):
+    start = time.monotonic()
+    with (out / (name + ".stdout.log")).open("xb") as stdout, (out / (name + ".stderr.log")).open("xb") as stderr:
+        try:
+            result = subprocess.run(command, cwd=cwd, env=env, stdout=stdout, stderr=stderr, timeout=300)
+            code = result.returncode
+        except subprocess.TimeoutExpired:
+            code = 124
+    receipt = {"name": name, "command": command, "cwd": str(cwd), "exit_code": code,
+               "seconds": round(time.monotonic()-start, 3)}
+    records.append(receipt)
+    (out / "process-receipt.json").write_text(json.dumps(records, indent=2) + "\n")
+    print(json.dumps(receipt), flush=True)
+    if code:
+        print((out / (name + ".stderr.log")).read_text(errors="replace")[-3000:], flush=True)
+        print((out / (name + ".stdout.log")).read_text(errors="replace")[-3000:], flush=True)
+        if required:
+            raise SystemExit(code)
+    return code
+def git(*args):
+    return subprocess.check_output(["git", *args], cwd=repo, env=env)
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+def blob(data):
+    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
+def entries(tree):
+    result = {}
+    for row in git("ls-tree", "-rz", "--full-tree", tree).split(b"\0"):
+        if row:
+            meta, path = row.split(b"\t", 1)
+            mode, kind, digest = meta.decode().split()
+            result[path.decode()] = {"mode": mode, "type": kind, "git_blob": digest}
+    return result
+
+assert not repo.exists()
+run("clone", ["git", "clone", "--shared", "--no-checkout", str(source), str(repo)], root, True)
+alternates = repo / ".git/objects/info/alternates"
+with alternates.open("a") as stream:
+    stream.write(str((historical_repo / ".git/objects").resolve()) + "\n")
+run("checkout-base", ["git", "checkout", "--detach", base], repo, True)
+run("read-product-tree", ["git", "read-tree", "--reset", "-u", product_tree], repo, True)
+history = entries(historical_tree)
+prefixes = ("docs/verification/scenario-files-20261008-cf5799f6d38b/",
+            "docs/verification/scenario-raw-draft-independent-cf5799f6d38b/")
+retained = {p: e for p, e in history.items() if p.startswith(prefixes)}
+assert len(retained) == 328
+index_data = b"".join((e["mode"] + " " + e["git_blob"] + "\t" + p + "\n").encode()
+                      for p, e in sorted(retained.items()))
+subprocess.run(["git", "update-index", "--index-info"], input=index_data, cwd=repo, env=env, check=True)
+run("materialize-full-tree", ["git", "checkout-index", "--all", "--force"], repo, True)
+tree = git("write-tree").decode().strip()
+current = entries(tree)
+assert len(current) == 579
+for entry in source_pin["source_files"]:
+    assert current[entry["path"]]["git_blob"] == entry["git_blob"], entry["path"]
+    assert current[entry["path"]]["mode"] == entry["mode"], entry["path"]
+for path, entry in retained.items():
+    assert current[path] == entry, path
+files = []
+for path, entry in sorted(current.items()):
+    data = (repo / path).read_bytes()
+    assert blob(data) == entry["git_blob"], path
+    files.append({"path": path, **entry, "bytes": len(data), "sha256": sha(data)})
+manifest = {"schema": "towerops.pr48-full-publication-source.v1", "source_root": str(repo),
+            "source_tree": tree, "product_source_tree": product_tree, "base_commit": base,
+            "base_tree": "4a87643d57cabf81e570b21c119f00b43f79448e",
+            "source_files": files, "product_and_base_files_exact": 251,
+            "historical_scenario_evidence_exact": 328, "unowned_base_leaves_exact": 244}
+(out / "source-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+products = source_pin["owned_product_paths"]
+product_transfer = {"schema": "towerops.pr48-product-transfer.v1", "source_tree": tree,
+                    "product_source_tree": product_tree,
+                    "files": [{**next(e for e in files if e["path"] == p),
+                               "content": (repo / p).read_bytes().decode("utf8")} for p in products]}
+(root / "publication-product-transfer.json").write_text(json.dumps(product_transfer, ensure_ascii=True) + "\n")
+env["REVIEW_SOURCE_TREE"] = tree
+print(json.dumps({"full_tree": tree, "source_leaves": len(files),
+                  "source_manifest_sha256": sha((out / "source-manifest.json").read_bytes()),
+                  "product_transfer": str(root / "publication-product-transfer.json"),
+                  "product_transfer_sha256": sha((root / "publication-product-transfer.json").read_bytes())}), flush=True)
+
+dependencies = Path("/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/web/airspace/node_modules").resolve()
+assert (repo / "web/airspace/package-lock.json").read_bytes() == (dependencies.parent / "package-lock.json").read_bytes()
+run("private-dependencies", ["cp", "-cR", str(dependencies), str(repo / "web/airspace/node_modules")], root, True)
+versions = {name: json.loads((repo / "web/airspace/node_modules" / name / "package.json").read_bytes())["version"]
+            for name in ("typescript", "vite", "vitest", "pyodide")}
+runtime = {"node": subprocess.check_output(["node", "--version"], text=True).strip(),
+           "python": subprocess.check_output([native, "--version"], text=True).strip(),
+           "pytest": subprocess.check_output([native, "-c", "import pytest;print(pytest.__version__)"], text=True).strip(),
+           "ruff": subprocess.check_output([ruff, "--version"], text=True).strip(),
+           "chrome": subprocess.check_output([chrome, "--version"], text=True).strip(),
+           "packages": versions, "private_dependency_copy": str(repo / "web/airspace/node_modules"),
+           "hosted_ci_runtime_parity_claimed": False}
+(out / "runtime.json").write_text(json.dumps(runtime, indent=2) + "\n")
+run("frontend-tests", ["npm", "test", "--", "--reporter=json", "--outputFile=" + str(out / "frontend-tests.json")], repo / "web/airspace")
+run("normal-build", ["npm", "run", "build"], repo / "web/airspace", True)
+build_root = repo / "web/airspace/dist"
+build_files = [{"path": str(p.relative_to(build_root)), "bytes": p.stat().st_size, "sha256": sha(p.read_bytes())}
+               for p in sorted(build_root.rglob("*")) if p.is_file()]
+prior_build = {e["path"]: e for e in source_pin["build_files"]}
+this_build = {e["path"]: e for e in build_files}
+build_comparison = {"prior_pin_sha256": sha((root / "reset-source-build-pin.json").read_bytes()),
+                    "prior_build": source_pin["build_root"], "normal_build": str(build_root),
+                    "file_count": len(build_files), "byte_identical": prior_build == this_build,
+                    "differences": [p for p in sorted(set(prior_build) | set(this_build)) if prior_build.get(p) != this_build.get(p)]}
+(out / "build-identity-comparison.json").write_text(json.dumps(build_comparison, indent=2) + "\n")
+pin = {**manifest, "build_root": str(build_root), "build_files": build_files}
+(out / "source-build-pin.json").write_text(json.dumps(pin, indent=2) + "\n")
+print(json.dumps(build_comparison), flush=True)
+run("native-tests", [native, "-m", "pytest", "-q", "-p", "no:cacheprovider", "--junitxml=" + str(out / "native-tests.xml")], repo)
+run("ruff", [ruff, "check", "--no-cache", "."], repo)
+run("reference", [native, "tools/generate_airspace_reference.py", "--check"], repo)
+
+receivers = root / "receivers"
+receivers.mkdir()
+prior = Path("/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers")
+receiver_pins = []
+for name in ("author.mjs", "independent.mjs", "pending.mjs", "scenario-encounter.mjs",
+             "scenario-decision-trace.mjs", "pr46-puppeteer-receiver-v3.mjs", "scenario-raw-draft-v4.mjs"):
+    data = (prior / name).read_bytes()
+    (receivers / name).write_bytes(data)
+    receiver_pins.append({"name": name, "prior": str(prior / name), "current": str(receivers / name),
+                          "bytes": len(data), "sha256": sha(data), "bytes_unchanged": True})
+(out / "receiver-pins.json").write_text(json.dumps(receiver_pins, indent=2) + "\n")
+for name in ("author", "independent", "pending", "scenario-encounter"):
+    run(name + "-browser", ["node", str(receivers / (name + ".mjs")), str(repo), str(root / (name + "-browser"))], root)
+run("encounter-owner-browser", [playwright_python, "tools/verify_encounter_browser.py", "--chrome", chrome,
+                              "--out", str(root / "encounter-owner-browser")], repo)
+playwright_module = subprocess.check_output([playwright_python, "-c",
+    "from pathlib import Path;import playwright;print(Path(playwright.__file__).parent/'driver/package/index.mjs')"], text=True).strip()
+run("decision-trace-owner-browser", ["node", "tools/verify_decision_trace.mjs", "--chrome", chrome,
+                                   "--playwright", playwright_module, "--output", str(root / "decision-trace-owner-browser")], repo)
+run("scenario-decision-browser", ["node", str(receivers / "scenario-decision-trace.mjs"), str(repo),
+                                str(root / "scenario-decision-browser")], root)
+run("pr46-draft-browser", ["node", str(receivers / "pr46-puppeteer-receiver-v3.mjs"), "--root", str(repo),
+                         "--browser", chrome, "--toolchain", str(repo / "web/airspace/node_modules"),
+                         "--qa", str(root / "pr46-qa"), "--output", str(root / "pr46-draft-browser")], repo)
+run("scenario-raw-draft-browser", ["node", str(receivers / "scenario-raw-draft-v4.mjs"), str(repo),
+                                str(root / "scenario-raw-draft-browser")], root)
+for entry in files:
+    assert sha((repo / entry["path"]).read_bytes()) == entry["sha256"], entry["path"]
+assert git("write-tree").decode().strip() == tree
+for entry in build_files:
+    assert sha((build_root / entry["path"]).read_bytes()) == entry["sha256"], entry["path"]
+unit = json.loads((out / "frontend-tests.json").read_bytes())
+native_xml = ET.parse(out / "native-tests.xml")
+suites = list(native_xml.iter("testsuite"))
+summary = {"source_tree": tree, "product_source_tree": product_tree,
+           "source_files_unchanged": len(files), "build_files_unchanged": len(build_files),
+           "build_identity": build_comparison,
+           "frontend": {k: unit.get(k) for k in ("numTotalTests", "numPassedTests", "numFailedTests", "numPendingTests")},
+           "native": {k: sum(int(s.attrib.get(k, 0)) for s in suites) for k in ("tests", "failures", "errors", "skipped")},
+           "commands_passed": sum(e["exit_code"] == 0 for e in records),
+           "commands_failed": [e["name"] for e in records if e["exit_code"]],
+           "root_browser_scope": "53 unchanged existing controls; independent raw-draft and alternative-reset receiving and maintained PR48 receiving are separate peer packets.",
+           "runtime": runtime}
+(out / "gates-summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+print(json.dumps(summary), flush=True)
+if summary["commands_failed"]:
+    raise SystemExit(1)

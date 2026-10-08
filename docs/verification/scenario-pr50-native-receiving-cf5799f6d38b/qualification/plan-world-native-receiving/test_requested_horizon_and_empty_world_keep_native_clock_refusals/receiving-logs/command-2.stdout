@@ -1,0 +1,26 @@
+{
+  "format": "towerops.world-plan.v1",
+  "simulation_only": true,
+  "proposal_only": true,
+  "input_sha256": "195064a9c209187dc1aa42110fc1c5cf3f9865ff757c3674839ad79bd0fdabeb",
+  "world": {
+    "version": 0,
+    "observed_at": 100.0,
+    "aircraft": []
+  },
+  "world_hash": "210b93a14190297a3e1dac96cde6e95b2f04d5c4d07ab4add4f31ed7c79568d9",
+  "reviewed_at": 100.0,
+  "policy": {
+    "min_horizontal_nm": 5.0,
+    "min_vertical_ft": 1000.0,
+    "horizon_min": 5.0,
+    "sample_step_min": 0.5,
+    "max_state_age_sec": 10.0,
+    "max_speed_nm_min": 6.0,
+    "max_climb_ft_min": 3000.0
+  },
+  "status": "no_conflict",
+  "conflicting_aircraft": [],
+  "candidate_count": 0,
+  "advisories": []
+}

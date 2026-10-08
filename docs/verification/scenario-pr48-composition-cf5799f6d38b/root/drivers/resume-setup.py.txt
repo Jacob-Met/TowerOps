@@ -1,0 +1,45 @@
+from pathlib import Path
+import hashlib
+import json
+import os
+import subprocess
+import time
+
+root = Path("/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj")
+repo = root / "candidate-initial"
+base = "093f88b29d6e1ede778f967528c7e010b7689ab1"
+products = ["web/airspace/README.md", "web/airspace/index.html", "web/airspace/style.css",
+            "web/airspace/src/main.ts", "web/airspace/src/scenario-file.ts",
+            "web/airspace/src/scenario-ui.ts", "web/airspace/tests/scenario-file.test.ts"]
+env = {**os.environ, "GIT_OPTIONAL_LOCKS": "0", "PYTHONDONTWRITEBYTECODE": "1"}
+records = []
+def run(name, args, check=True):
+    start = time.monotonic()
+    result = subprocess.run(args, cwd=repo, env=env, capture_output=True, timeout=120)
+    (root / (name + ".stdout.log")).write_bytes(result.stdout)
+    (root / (name + ".stderr.log")).write_bytes(result.stderr)
+    row = {"name": name, "command": args, "cwd": str(repo), "exit_code": result.returncode,
+           "seconds": round(time.monotonic() - start, 3)}
+    records.append(row)
+    (root / "setup-resume-receipt.json").write_text(json.dumps(records, indent=2) + "\n")
+    print(json.dumps(row), flush=True)
+    if result.returncode:
+        print(result.stderr.decode("utf8", "replace")[-5000:], flush=True)
+        if check:
+            raise SystemExit(result.returncode)
+    return result
+tree = run("received-pr48-tree", ["git", "rev-parse", base + "^{tree}"]).stdout.decode().strip()
+assert tree == "4a87643d57cabf81e570b21c119f00b43f79448e", tree
+run("checkout", ["git", "checkout", "--detach", base])
+before = run("base-full-tree", ["git", "ls-tree", "-r", "--full-tree", base]).stdout
+run("apply-frozen-product-patch", ["git", "apply", "--3way", "--index", str(root / "composition-pr46.patch")], False)
+status = run("status", ["git", "status", "--short"]).stdout.decode()
+info = {"root": str(root), "candidate": str(repo), "base_commit": base, "base_tree": tree,
+        "source_checkpoint_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+        "owned_product_paths": products,
+        "patch_sha256": hashlib.sha256((root / "composition-pr46.patch").read_bytes()).hexdigest(),
+        "base_full_tree_sha256": hashlib.sha256(before).hexdigest(), "status": status,
+        "first_fetch_exit_not_recorded": True,
+        "receiving_note": "The first setup reached ENOSPC while recording fetch output; its process result is not reconstructed. This resume directly verifies the received commit/tree."}
+(root / "setup-info.json").write_text(json.dumps(info, indent=2) + "\n")
+print(json.dumps(info), flush=True)

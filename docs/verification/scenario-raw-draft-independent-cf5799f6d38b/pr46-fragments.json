@@ -1,0 +1,38 @@
+{
+  "immutable_commit": "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+  "primary_path": "web/airspace/src/main.ts",
+  "primary_git_blob": "d975ab8c55c01b0f6177ad736ed0c6b1fa821599",
+  "primary_sha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa",
+  "fragments": [
+    {
+      "label": "ownership flag",
+      "text": "let worldJsonEdited=false;",
+      "sha256": "8a7c405d1c527badc59ebc54c1aa2d89655577a6c16ef8326fe9ec2ad63d3eb2",
+      "received_verbatim": true
+    },
+    {
+      "label": "render preservation",
+      "text": "if(!worldJsonEdited&&document.activeElement!==editor)editor.value=JSON.stringify(state,null,2);",
+      "sha256": "e7fc0c4e883465bb6ff83da4be9c3de533f55402e6888ab973a45f8e7280fa27",
+      "received_verbatim": true
+    },
+    {
+      "label": "explicit export",
+      "text": "function exportWorld(){const editor=$<HTMLTextAreaElement>('world-json');editor.value=JSON.stringify(state,null,2);worldJsonEdited=false;setText('world-json-feedback','Live world exported. Edit tracks, then load your changes.');}",
+      "sha256": "e9ed64cfca0be35d3a16473781d79ba75e289f31a3b67f008a416cef851b0923",
+      "received_verbatim": true
+    },
+    {
+      "label": "successful raw load",
+      "text": "function loadWorld(){try{const next=parseWorldState(JSON.parse($<HTMLTextAreaElement>('world-json').value));worldJsonEdited=false;running=false;state=next;now=next.observed_at;selected=next.aircraft[0]!.aircraft_id;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';clearPending('Visitor WorldState loaded. The solver runs on this exact input.');setText('world-json-feedback',`Loaded ${state.aircraft.length} aircraft at version ${state.version}.`);void render();}catch(err){setText('world-json-feedback',`NOT LOADED: ${err instanceof Error?err.message:String(err)}`);}}function perturbTrack(){running=false;clearPending('Track changed. The safety policy is being recomputed from the new vector.');state={version:state.version+1,observed_at:now,aircraft:state.aircraft.map(a=>a.aircraft_id===selected?{...a,vx_nm_min:a.vx_nm_min+0.4,vy_nm_min:a.vy_nm_min+0.3}:a)};void render();}",
+      "sha256": "436651b758606247530d055c90e941b4bd1a7f22df04bc442721300413058f39",
+      "received_verbatim": true
+    },
+    {
+      "label": "authored input ownership",
+      "text": "$('world-json').addEventListener('input',()=>{if(!worldJsonEdited){worldJsonEdited=true;setText('world-json-feedback','Draft kept. Load it into the simulation, or export the live world to replace it.');}});",
+      "sha256": "5e4f5e204a271fb8a7f54b91ca86a14d621306ab8e305b24c36eeb71bc6e9f74",
+      "received_verbatim": true
+    }
+  ]
+}

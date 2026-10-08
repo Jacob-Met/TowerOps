@@ -1,0 +1,201 @@
+{
+  "schema": "towerops.scenario-pr46-publication-lint.v1",
+  "qualified_candidate_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "qualified_product_source_tree": "77fee12e647a82dea99506ccef13e967c28aad92",
+  "command": [
+    "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff",
+    "check",
+    "."
+  ],
+  "environment": {
+    "RUFF_NO_CACHE": "true"
+  },
+  "ruff_version": "ruff 0.16.10",
+  "exit_code": 0,
+  "findings": [],
+  "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "linter_inputs": {
+    "count": 35,
+    "sha256": "a51e1d98cad9ec52a8068ba255f297cfe1c3f2d6bafa55b0dfb2d1ca60b631b0",
+    "files": [
+      {
+        "path": "audit_replay.py",
+        "mode": "100644",
+        "git_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540"
+      },
+      {
+        "path": "browser_acceptance.py",
+        "mode": "100644",
+        "git_blob": "638d032972880f4d688cdcb877df855f5977532c"
+      },
+      {
+        "path": "decision_trace.py",
+        "mode": "100644",
+        "git_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d"
+      },
+      {
+        "path": "demo.py",
+        "mode": "100644",
+        "git_blob": "c8d99a8b5b7152f048afc65e8d620e8370df07ed"
+      },
+      {
+        "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/.ruff.toml",
+        "mode": "100644",
+        "git_blob": "b55dd7d2eb4ecb67ee23426a5b35a46e74ae5694"
+      },
+      {
+        "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/run-ci-browser-python.py",
+        "mode": "100644",
+        "git_blob": "a53c9c76f896a6bfd5cac39ab8df08b2084a88c0"
+      },
+      {
+        "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/composition-pr39-pr42/receivers/run-ci-capture.py",
+        "mode": "100644",
+        "git_blob": "61408f39694ef6b34691221942fb6e858601d54c"
+      },
+      {
+        "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current-r2.py",
+        "mode": "100644",
+        "git_blob": "e30da0ff2ac613b56e66d533fba459438381bf9a"
+      },
+      {
+        "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-current.py",
+        "mode": "100644",
+        "git_blob": "3355ab840e4dce505ec148c05c98d182c96d10c0"
+      },
+      {
+        "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap-r2.py",
+        "mode": "100644",
+        "git_blob": "c752c40e54a4942f84fe1f5b06dd20cc0b6d8d3a"
+      },
+      {
+        "path": "docs/verification/scenario-files-20261008-cf5799f6d38b/independent-review/bootstrap.py",
+        "mode": "100644",
+        "git_blob": "2a72e4d269c21212444e72ecc27537e747293283"
+      },
+      {
+        "path": "explorer.py",
+        "mode": "100755",
+        "git_blob": "d19e5bf1bd2991b076d7166fc2280b7f1d312d9a"
+      },
+      {
+        "path": "presentation/build_assets.py",
+        "mode": "100644",
+        "git_blob": "c4698f2812d2d1cd77514830c7b17f5a6a34e32a"
+      },
+      {
+        "path": "presentation/build_pack.py",
+        "mode": "100644",
+        "git_blob": "d27a7c7695f59de5afdae5594dc01f441157b3a1"
+      },
+      {
+        "path": "presentation/check_claims.py",
+        "mode": "100644",
+        "git_blob": "14c7a8d55bbf1573c7f0675d493957a376ad2e22"
+      },
+      {
+        "path": "scenarios.py",
+        "mode": "100644",
+        "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b"
+      },
+      {
+        "path": "strands_adapter.py",
+        "mode": "100644",
+        "git_blob": "01bc26d2d3d34dcac6787ab7b57a15c2f5837cb8"
+      },
+      {
+        "path": "test_explorer.py",
+        "mode": "100644",
+        "git_blob": "51f7de9067a733d11649684d799417d66c84c36d"
+      },
+      {
+        "path": "tests/__init__.py",
+        "mode": "100644",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "tests/conftest.py",
+        "mode": "100644",
+        "git_blob": "b9e42910cce31f47992b2d9f88786d1120033545"
+      },
+      {
+        "path": "tests/test_advisory_numeric_candidate.py",
+        "mode": "100644",
+        "git_blob": "f10dfdd31816ea27f10d2bc6268b1d82a6aa7ed1"
+      },
+      {
+        "path": "tests/test_audit_chain.py",
+        "mode": "100644",
+        "git_blob": "f9d7cec517e978a45aac15b7e6f3d70a10a7ac42"
+      },
+      {
+        "path": "tests/test_audit_replay.py",
+        "mode": "100644",
+        "git_blob": "7dec0d4ae0b54283a6c64ac7f92a9c9e2d65e0dd"
+      },
+      {
+        "path": "tests/test_decision_trace.py",
+        "mode": "100644",
+        "git_blob": "55e6cd3cceeb93cb3dc41d73c6c46fdfad6a39dc"
+      },
+      {
+        "path": "tests/test_determinism.py",
+        "mode": "100644",
+        "git_blob": "72ba4f4dec9114a992e36a9f55494d2054085055"
+      },
+      {
+        "path": "tests/test_failclosed.py",
+        "mode": "100644",
+        "git_blob": "dfaf0a4692064a2f26a1479ef8215bb25012843f"
+      },
+      {
+        "path": "tests/test_nonfinite_failclosed.py",
+        "mode": "100644",
+        "git_blob": "4cd1ce635d3a128949bd08312094999c8c839bdf"
+      },
+      {
+        "path": "tests/test_planner.py",
+        "mode": "100644",
+        "git_blob": "4e6fcdb19ac438b36c3b2b5150989a96db45daef"
+      },
+      {
+        "path": "tests/test_planner_target.py",
+        "mode": "100644",
+        "git_blob": "3c8aca58614e23be196edce07b6a3fbd7ed1e285"
+      },
+      {
+        "path": "tests/test_state_validation.py",
+        "mode": "100644",
+        "git_blob": "2303369196e06965c2dc943430d8484af8a89357"
+      },
+      {
+        "path": "tools/capture_airspace.py",
+        "mode": "100644",
+        "git_blob": "4c0f078d45eb99151fcd28c6688c039480542df9"
+      },
+      {
+        "path": "tools/generate_airspace_reference.py",
+        "mode": "100644",
+        "git_blob": "8be5631d8a36630933c0d782a33cf9d162c78ce7"
+      },
+      {
+        "path": "tools/verify_browser_python.py",
+        "mode": "100644",
+        "git_blob": "9072976649f1d7e78689cd38487d6e5222feb28d"
+      },
+      {
+        "path": "tools/verify_encounter_browser.py",
+        "mode": "100644",
+        "git_blob": "bfef37643d4d7bfe84ba84eaaa21a6f5f425dc96"
+      },
+      {
+        "path": "towerops.py",
+        "mode": "100644",
+        "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1"
+      }
+    ]
+  },
+  "scope": "Complete current-base composition, all 216 original historical evidence files, exact nested policy, and this additive PR46 receiving companion.",
+  "identity": "The external frozen publication-manifest.json identifies the final tree. That exact tree is rerun after adding this JSON receipt and raw output; linter input hashes and output must remain identical."
+}

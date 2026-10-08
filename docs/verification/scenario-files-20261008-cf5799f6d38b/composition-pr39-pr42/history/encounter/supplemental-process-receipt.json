@@ -1,0 +1,42 @@
+{
+  "commands": [
+    {
+      "name": "scenario-encounter-browser",
+      "command": [
+        "node",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/receivers/scenario-encounter.mjs",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/scenario-encounter-browser"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 10.295
+    },
+    {
+      "name": "encounter-owner-browser",
+      "command": [
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/playwright-tools/bin/python",
+        "tools/verify_encounter_browser.py",
+        "--chrome",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--out",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/encounter-owner-browser"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 6.037
+    },
+    {
+      "name": "ci-browser-python",
+      "command": [
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/playwright-tools/bin/python",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/receivers/run-ci-browser-python.py",
+        "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+      ],
+      "cwd": "/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate",
+      "exit_code": 0,
+      "seconds": 3.376
+    }
+  ]
+}

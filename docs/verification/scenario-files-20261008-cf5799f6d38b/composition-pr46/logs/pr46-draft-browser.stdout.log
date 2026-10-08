@@ -1,0 +1,10 @@
+FAIL untouched editor follows the live world: CDP timeout Page.navigate
+FAIL paused flight selection preserves an authored valid JSON draft: CDP timeout Page.navigate
+FAIL loading after a focus-changing render applies the exact authored world: CDP timeout Page.navigate
+FAIL resizing preserves an unfinished invalid JSON draft: CDP timeout Page.navigate
+FAIL moving traffic preserves the blurred draft while the simulation continues: CDP timeout Page.navigate
+FAIL a rejected load keeps invalid text through a later render: CDP timeout Page.navigate
+FAIL explicit Export live world replaces the draft and restores live synchronization: CDP timeout Page.navigate
+FAIL valid direct load normalizes successfully and restores live synchronization: CDP timeout Page.navigate
+PASS all observed browser paths are free from JavaScript exceptions
+{"status":"failed","passed":1,"failed":8,"pageErrors":0,"sourceChanged":[],"cleanup":{"status":"passed","profileRemoved":true},"report":"/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/pr46-draft-browser/browser-report.json"}

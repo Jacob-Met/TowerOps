@@ -1,0 +1,703 @@
+{
+  "schema": "towerops.pr50-native-build-review-publication.v1",
+  "captured_utc": "2026-10-08T15:04:22.500729+00:00",
+  "source_root": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+  "source_tree": "8c11186b1a3f6391879fb0aef14738487f09dc2a",
+  "base_commit": "53aa5048b6585aa08592d5513cfcf555a8bba018",
+  "base_tree": "fc29ac4a02c151ba66ca37c029ff74d968662d58",
+  "publication_prefix": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b",
+  "source_manifest_sha256": "95cd7172d2f0bf2d2d1d651d58e69dbcd25067df95c33321db1fc84f2c8cc935",
+  "file_count": 76,
+  "total_bytes": 691001,
+  "manifest_is_declared_file": false,
+  "path_aliases": {
+    "compose.py": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/compose.py.txt",
+    "receive-native-build.py": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/receive-native-build.py.txt"
+  },
+  "files": [
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/README.md",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/README.md",
+      "native_relative_path": "README.md",
+      "bytes": 6974,
+      "sha256": "1ed6cd1c90b5252d34a857042bfa16d9573805fef73e1f32cf3827c7e9263bed",
+      "git_blob": "826d9606fa476197001ba6721564cae33f2e0352",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/compose.py.txt",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/compose.py",
+      "native_relative_path": "compose.py",
+      "bytes": 8839,
+      "sha256": "83db544e7c409529c382fce370ecbef79b991d4b8c92d0cd24aab7a85ffe22ab",
+      "git_blob": "5b6a9a0a540cfd2b7a39b4d9304d06181a6759aa",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/receive-native-build.py.txt",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/receive-native-build.py",
+      "native_relative_path": "receive-native-build.py",
+      "bytes": 10599,
+      "sha256": "6d1ee0f95832ed8cf9c96edb81e72988c2b690fa1cd461cf88ab2a59fa2c709c",
+      "git_blob": "af64a228b141d75d88b0dc16c5213ffebb2cfef2",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/source-manifest.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/source-manifest.json",
+      "native_relative_path": "source-manifest.json",
+      "bytes": 228077,
+      "sha256": "95cd7172d2f0bf2d2d1d651d58e69dbcd25067df95c33321db1fc84f2c8cc935",
+      "git_blob": "ba7973c21cc6fcf5c343a4b37fdae0c5d2511d3f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/root-qualified-source-build-pin.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/root-qualified-source-build-pin.json",
+      "native_relative_path": "root-qualified-source-build-pin.json",
+      "bytes": 191366,
+      "sha256": "bebb167524977177f88fb6012d72f73dabb3886a3d183b01b7cefa6502eb64f2",
+      "git_blob": "e92cd7c0d3fff09b07006836a6fbf21287557037",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/composition-receipt.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composition-receipt.json",
+      "native_relative_path": "composition-receipt.json",
+      "bytes": 1377,
+      "sha256": "0f52fb8862cc225769f9166bb0161e902a76dae04a96a4e9caf3dbafdd6a49d0",
+      "git_blob": "8e97b87bfc696ba2de44ee4cff297bf7fe117100",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/exact-pr50-delta.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/exact-pr50-delta.json",
+      "native_relative_path": "exact-pr50-delta.json",
+      "bytes": 5533,
+      "sha256": "7d501aab15b9753c636c26efb131e66c272a15575a70f15acee6f8d3660a5b5a",
+      "git_blob": "0b82f636ac6019d576d0d7996726e40406ee4309",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/build-identity-comparison.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/build-identity-comparison.json",
+      "native_relative_path": "qualification/build-identity-comparison.json",
+      "bytes": 3550,
+      "sha256": "2df00b89ff7cc895bedd6e6ed0a008a29020880fabe25298e4189e98c7f19349",
+      "git_blob": "39c233b9bac466bea17f4bdb24d0a7fa5a21f1da",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/capacity-before.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/capacity-before.json",
+      "native_relative_path": "qualification/capacity-before.json",
+      "bytes": 85,
+      "sha256": "31edd8314aa5254453cadc9ad8987a4061ac22e66072e264f0a17431cdbd5b6d",
+      "git_blob": "fce79ed8aa3cf994f3452ff45f6727bfe061a498",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/checkout-named-head.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/checkout-named-head.stderr.log",
+      "native_relative_path": "qualification/checkout-named-head.stderr.log",
+      "bytes": 623,
+      "sha256": "da94fc53f40e9aa5d17cf4454160188d95517604367daae44c44fdc351dd4d5a",
+      "git_blob": "6cc5e0758efa5bdce647d3b77e2fda4a9deab253",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/checkout-named-head.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/checkout-named-head.stdout.log",
+      "native_relative_path": "qualification/checkout-named-head.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/clone.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/clone.stderr.log",
+      "native_relative_path": "qualification/clone.stderr.log",
+      "bytes": 84,
+      "sha256": "907b765521d59e4628fece41d18a39a0930db1a1402c26e3f014b395d3731149",
+      "git_blob": "06a244d85cf7a0a2b20c562e350f75f9cc30f00c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/clone.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/clone.stdout.log",
+      "native_relative_path": "qualification/clone.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/composition-processes.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/composition-processes.json",
+      "native_relative_path": "qualification/composition-processes.json",
+      "bytes": 1938,
+      "sha256": "a0426c07ea0cc5d6d4989584dea40e50302536974f0afc83922c1d5c405d2cb9",
+      "git_blob": "9d9cf40fda65992583df14b8b5bc4b1773b614fb",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/copy-private-node-dependencies.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-node-dependencies.stderr.log",
+      "native_relative_path": "qualification/copy-private-node-dependencies.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/copy-private-node-dependencies.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-node-dependencies.stdout.log",
+      "native_relative_path": "qualification/copy-private-node-dependencies.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/copy-private-python-environment.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-python-environment.stderr.log",
+      "native_relative_path": "qualification/copy-private-python-environment.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/copy-private-python-environment.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-python-environment.stdout.log",
+      "native_relative_path": "qualification/copy-private-python-environment.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/copy-private-ruff.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-ruff.stderr.log",
+      "native_relative_path": "qualification/copy-private-ruff.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/copy-private-ruff.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/copy-private-ruff.stdout.log",
+      "native_relative_path": "qualification/copy-private-ruff.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/fetch-named-head.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/fetch-named-head.stderr.log",
+      "native_relative_path": "qualification/fetch-named-head.stderr.log",
+      "bytes": 119,
+      "sha256": "e82d9535a84c3f60bf5e3e6834ddee57a9bb63c35854a28104fe9a9a8ba876ff",
+      "git_blob": "8a3416e8370f816aeaa01aac88da07507987b2f6",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/fetch-named-head.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/fetch-named-head.stdout.log",
+      "native_relative_path": "qualification/fetch-named-head.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/final-integrity.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/final-integrity.json",
+      "native_relative_path": "qualification/final-integrity.json",
+      "bytes": 316,
+      "sha256": "b2934a6837bcab7b5702ff518b1acd4a958dec4814fa95cc51857352b12bf54d",
+      "git_blob": "ba5152e12b7098dac48b61500e68a9437d74915e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/gates-summary.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/gates-summary.json",
+      "native_relative_path": "qualification/gates-summary.json",
+      "bytes": 3442,
+      "sha256": "3983b80ba021a219936fa82a983163bba6d497ad65554f4a2795650b78f15975",
+      "git_blob": "1101f2faa19a1c63ba78f323dc5da24ea07b6cdc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/known-head-object-probe.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/known-head-object-probe.stderr.log",
+      "native_relative_path": "qualification/known-head-object-probe.stderr.log",
+      "bytes": 81,
+      "sha256": "2881735d17d12d30d0dc6ce9c3faec0b25ab57ee68aca01608f16c80248f6227",
+      "git_blob": "f46deea24f1565103d710cac9eeb0c47018d3ec9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/known-head-object-probe.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/known-head-object-probe.stdout.log",
+      "native_relative_path": "qualification/known-head-object-probe.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/materialize.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/materialize.stderr.log",
+      "native_relative_path": "qualification/materialize.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/materialize.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/materialize.stdout.log",
+      "native_relative_path": "qualification/materialize.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/native-pytest.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/native-pytest.stderr.log",
+      "native_relative_path": "qualification/native-pytest.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/native-pytest.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/native-pytest.stdout.log",
+      "native_relative_path": "qualification/native-pytest.stdout.log",
+      "bytes": 377,
+      "sha256": "9d148b2589cdf1c3a73948e48e68d04d646a6895b1b745c24006ec711bfd9eda",
+      "git_blob": "eb33a0fcbd6da49ec6696b91e205d45bd613e720",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/native-tests.xml",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/native-tests.xml",
+      "native_relative_path": "qualification/native-tests.xml",
+      "bytes": 19383,
+      "sha256": "592166048a43e12c419b55cd7fe3bb7e181d0667fd760e7d9c37da733fd83890",
+      "git_blob": "bbeedfb264d22879751fb706886cdf64965afe03",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/overlay-frozen-contribution.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/overlay-frozen-contribution.stderr.log",
+      "native_relative_path": "qualification/overlay-frozen-contribution.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/overlay-frozen-contribution.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/overlay-frozen-contribution.stdout.log",
+      "native_relative_path": "qualification/overlay-frozen-contribution.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/coincident-world.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/coincident-world.json",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/coincident-world.json",
+      "bytes": 417,
+      "sha256": "36dcf81a47c504059e258255f856189efae2f9fb87ac51e69b3510ed2d97dfd5",
+      "git_blob": "358840dbbad9227d7ef13cfea0b7e8d7b73324ed",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/receiving-logs/command-1.stdout",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/receiving-logs/command-1.stdout",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/receiving-logs/command-1.stdout",
+      "bytes": 1113,
+      "sha256": "5b7cd9abc5595bac3fcd8d009a08f3dcf9794c452e6031c52a944e5550a3ce18",
+      "git_blob": "79384c1dc79ddb49bd44234c0d1fd55806f5d66f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/receiving-logs/commands.jsonl",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/receiving-logs/commands.jsonl",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/receiving-logs/commands.jsonl",
+      "bytes": 607,
+      "sha256": "d293984b2a516f79c69d4b349ecc08e430b96ff5adfba773bc6d03b549247dcd",
+      "git_blob": "2328b64f85806d3a1b1b713ec576ccbe21da538c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/receiving-logs/source-hashes.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/receiving-logs/source-hashes.json",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_conflicting_world_with_no_admitted_option_is_a_completed_review/receiving-logs/source-hashes.json",
+      "bytes": 977,
+      "sha256": "11795bc11d969626d253d111168b4c36e372ba3065f19434fbbfd7131c9ef599",
+      "git_blob": "d479e046e0a0d91854ac4fa74cece770f9d1aa4d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/-",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/-",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/-",
+      "bytes": 873,
+      "sha256": "2c8f41416122613af31e53910bfbcf79148d5e66d5c8a030819e3f85909f008b",
+      "git_blob": "206fa9d5fd6140c98ca1e12ef45bf77f50b8a03b",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/paired-world-compact.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/paired-world-compact.json",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/paired-world-compact.json",
+      "bytes": 488,
+      "sha256": "6a5b58bfa3207023c6d0ef033da71430faa7f10779834f0caab79aafd7574c69",
+      "git_blob": "fc65ccac2f8c974322e4f43971eb817688fe7e00",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/command-1.stdout",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/command-1.stdout",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/command-1.stdout",
+      "bytes": 59091,
+      "sha256": "7d19c2221fb9298daf330c27605bdc5c4a81472be034cf6f27f7f93d23748b0c",
+      "git_blob": "b61156069bf6bef2debc2dc65140073945576b7a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/command-2.stdout",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/command-2.stdout",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/command-2.stdout",
+      "bytes": 59091,
+      "sha256": "7d19c2221fb9298daf330c27605bdc5c4a81472be034cf6f27f7f93d23748b0c",
+      "git_blob": "b61156069bf6bef2debc2dc65140073945576b7a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/command-3.stdout",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/command-3.stdout",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/command-3.stdout",
+      "bytes": 59091,
+      "sha256": "3cb187414d01d8bf83fa9ff76f628aa25d43e041730c6293dc6f22cd3faeb83c",
+      "git_blob": "18c4a075d24a05af2eb0640d08cb9391fe5423b4",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/commands.jsonl",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/commands.jsonl",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/commands.jsonl",
+      "bytes": 1798,
+      "sha256": "ddaf2fea4a062796bfa9f0dc0d203b9423a3fa16c49d7e10c061cf1978cfad28",
+      "git_blob": "544143e444a85627612e7992a6c25350cc37b60c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/source-hashes.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/source-hashes.json",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_custom_world_file_stdin_exact_native_menu_and_approval_boundary/receiving-logs/source-hashes.json",
+      "bytes": 977,
+      "sha256": "11795bc11d969626d253d111168b4c36e372ba3065f19434fbbfd7131c9ef599",
+      "git_blob": "d479e046e0a0d91854ac4fa74cece770f9d1aa4d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/empty-world.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/empty-world.json",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/empty-world.json",
+      "bytes": 61,
+      "sha256": "195064a9c209187dc1aa42110fc1c5cf3f9865ff757c3674839ad79bd0fdabeb",
+      "git_blob": "9028775ea14aa687e4354858d304cf91906c9a74",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/receiving-logs/command-1.stdout",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/receiving-logs/command-1.stdout",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/receiving-logs/command-1.stdout",
+      "bytes": 692,
+      "sha256": "b8b29ef206ca799f3f0212ce931593e578adcba1cbd8c7141aba986feaa75833",
+      "git_blob": "15dfbb3b1a93696c8c837ca0219f6593f4722392",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/receiving-logs/commands.jsonl",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/receiving-logs/commands.jsonl",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/receiving-logs/commands.jsonl",
+      "bytes": 1804,
+      "sha256": "aef8d8b212e37d83a9fb504046a14c661ba69528844d659a33511c0f46dbe7a4",
+      "git_blob": "239861d04a5e383c11d79570cfcdb67df62c29af",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/receiving-logs/source-hashes.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/receiving-logs/source-hashes.json",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_generated_report_is_not_raw_input_and_closed_pipe_failure_is_clean/receiving-logs/source-hashes.json",
+      "bytes": 977,
+      "sha256": "11795bc11d969626d253d111168b4c36e372ba3065f19434fbbfd7131c9ef599",
+      "git_blob": "d479e046e0a0d91854ac4fa74cece770f9d1aa4d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/empty-world.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/empty-world.json",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/empty-world.json",
+      "bytes": 61,
+      "sha256": "195064a9c209187dc1aa42110fc1c5cf3f9865ff757c3674839ad79bd0fdabeb",
+      "git_blob": "9028775ea14aa687e4354858d304cf91906c9a74",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/paired-world.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/paired-world.json",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/paired-world.json",
+      "bytes": 873,
+      "sha256": "2c8f41416122613af31e53910bfbcf79148d5e66d5c8a030819e3f85909f008b",
+      "git_blob": "206fa9d5fd6140c98ca1e12ef45bf77f50b8a03b",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/command-1.stdout",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/command-1.stdout",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/command-1.stdout",
+      "bytes": 1469,
+      "sha256": "6b86d0b28ba780f0561ebb9619f353e3a2d07f9696407a9c383fd3859e059d5b",
+      "git_blob": "a3c2cb11cfd56bf34f2a118030b10fcb44f77f54",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/command-2.stdout",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/command-2.stdout",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/command-2.stdout",
+      "bytes": 692,
+      "sha256": "b8b29ef206ca799f3f0212ce931593e578adcba1cbd8c7141aba986feaa75833",
+      "git_blob": "15dfbb3b1a93696c8c837ca0219f6593f4722392",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/commands.jsonl",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/commands.jsonl",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/commands.jsonl",
+      "bytes": 2574,
+      "sha256": "30617be4072edc46c403975c97d910931310d59e8bc4995be1327c7eb2f82d4e",
+      "git_blob": "b8f83b9bcb84f2ef59d55c2b0edf2571bd4234f3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/source-hashes.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/source-hashes.json",
+      "native_relative_path": "qualification/plan-world-native-receiving/test_requested_horizon_and_empty_world_keep_native_clock_refusals/receiving-logs/source-hashes.json",
+      "bytes": 977,
+      "sha256": "11795bc11d969626d253d111168b4c36e372ba3065f19434fbbfd7131c9ef599",
+      "git_blob": "d479e046e0a0d91854ac4fa74cece770f9d1aa4d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/production-build.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/production-build.stderr.log",
+      "native_relative_path": "qualification/production-build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/production-build.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/production-build.stdout.log",
+      "native_relative_path": "qualification/production-build.stdout.log",
+      "bytes": 508,
+      "sha256": "baa45f73d3811bb4f9ae0d50e72eae4fc42079172d08a56a494614dc573adcba",
+      "git_blob": "686e53ef3887a83d83b31b7d48bcd99bf228da89",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/receiving-processes.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/receiving-processes.json",
+      "native_relative_path": "qualification/receiving-processes.json",
+      "bytes": 8922,
+      "sha256": "297eb8a63d21e176ae7647374bd37e154dac54ec30a89aa1aa9e24bde5cd818b",
+      "git_blob": "2776e9a1ff2a31b6df8baa47c337e87e90c1b0dc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/reference.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/reference.stderr.log",
+      "native_relative_path": "qualification/reference.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/reference.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/reference.stdout.log",
+      "native_relative_path": "qualification/reference.stdout.log",
+      "bytes": 45,
+      "sha256": "5b26499a084f0c377720453183a584f88665ffc32a507203715308791c9993f5",
+      "git_blob": "8cb320156de80ec059465564894403795f83ea4c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/ruff.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/ruff.stderr.log",
+      "native_relative_path": "qualification/ruff.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/ruff.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/ruff.stdout.log",
+      "native_relative_path": "qualification/ruff.stdout.log",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "git_blob": "1f5f344d054fae10f39140fb7199c99321d9190a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/runtime-node.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-node.stderr.log",
+      "native_relative_path": "qualification/runtime-node.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/runtime-node.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-node.stdout.log",
+      "native_relative_path": "qualification/runtime-node.stdout.log",
+      "bytes": 8,
+      "sha256": "08f6347c6bc47b1f68fb3e5b85f789b6baabb1c94d2006983a485d4501048459",
+      "git_blob": "84a2f4a292f93d472e6f486879ec9ae2c24149a1",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/runtime-npm.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-npm.stderr.log",
+      "native_relative_path": "qualification/runtime-npm.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/runtime-npm.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-npm.stdout.log",
+      "native_relative_path": "qualification/runtime-npm.stdout.log",
+      "bytes": 8,
+      "sha256": "041fb0a6f23ccf0102a18d4591e1bfa36eebc17d27d348727a5eee18806d1c3c",
+      "git_blob": "61894ec863b7097c0763ca131a628de00146242e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/runtime-python.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-python.stderr.log",
+      "native_relative_path": "qualification/runtime-python.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/runtime-python.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-python.stdout.log",
+      "native_relative_path": "qualification/runtime-python.stdout.log",
+      "bytes": 476,
+      "sha256": "184ad403266ad69fe7d11eb1259f46e48acec1a5e5f4dbfe18205c7d63ab96fb",
+      "git_blob": "8a68652fa8f9755e545a4e9508a17674bb23e02f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/runtime-ruff.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-ruff.stderr.log",
+      "native_relative_path": "qualification/runtime-ruff.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/runtime-ruff.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime-ruff.stdout.log",
+      "native_relative_path": "qualification/runtime-ruff.stdout.log",
+      "bytes": 13,
+      "sha256": "69b1c258a98757c0f0f474d1a74c08f610db7bfb1d8ef5aca35520ca1a0238f2",
+      "git_blob": "3f74109c07f45ef4642e7d98dd6aca39c6cc6376",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/runtime.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/runtime.json",
+      "native_relative_path": "qualification/runtime.json",
+      "bytes": 2734,
+      "sha256": "54dea2d6c57e0597f9f6c708b73fec47807e72d4d9889c64489304bdc91b5ac7",
+      "git_blob": "6db11be91b8b55ac23d869fee4c4d80fef177f24",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/source-after-tree.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-after-tree.stderr.log",
+      "native_relative_path": "qualification/source-after-tree.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/source-after-tree.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-after-tree.stdout.log",
+      "native_relative_path": "qualification/source-after-tree.stdout.log",
+      "bytes": 41,
+      "sha256": "75b52a10be6bd9b5fa99aeb9d3cc0eb16f2132bb9713316d1d239a0f612a55b1",
+      "git_blob": "46afe3002c78453e870f543fcecbf3be18fe50ce",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/source-after.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-after.json",
+      "native_relative_path": "qualification/source-after.json",
+      "bytes": 360,
+      "sha256": "ee65e1c3a7e0daf7a0c15523418f72a304055155301669a9478a7c5787865f6d",
+      "git_blob": "f12acc5c94a864a1b766c9c3a1715653da7c471b",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/source-before-tree.stderr.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-before-tree.stderr.log",
+      "native_relative_path": "qualification/source-before-tree.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/source-before-tree.stdout.log",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-before-tree.stdout.log",
+      "native_relative_path": "qualification/source-before-tree.stdout.log",
+      "bytes": 41,
+      "sha256": "75b52a10be6bd9b5fa99aeb9d3cc0eb16f2132bb9713316d1d239a0f612a55b1",
+      "git_blob": "46afe3002c78453e870f543fcecbf3be18fe50ce",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/scenario-pr50-native-receiving-cf5799f6d38b/qualification/source-before.json",
+      "source_path": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/qualification/source-before.json",
+      "native_relative_path": "qualification/source-before.json",
+      "bytes": 360,
+      "sha256": "e0b8ab2903e199652a9923b746f60a57e242f3e559aef2ebdfbf4d805ddc7f84",
+      "git_blob": "a6de57f78a66aabd019abe83228400a95e62ab53",
+      "mode": "100644"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/publication/restore-receiving.mjs",
+    "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/publication/raw-receiving.json.gz",
+    "/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/archive-roundtrip"
+  ],
+  "exit_code": 0,
+  "seconds": 0.078,
+  "members_checked": 25,
+  "all_bytes_sha256_git_blobs_exact": true,
+  "stdout": "{\"archive_schema\":\"towerops.receiving-byte-archive.v1\",\"restored\":25,\"out\":\"/tmp/towerops-author-hang-diagnosis-cf5799f6d38b-by4v2xcb/archive-roundtrip\"}\n",
+  "stderr": ""
+}

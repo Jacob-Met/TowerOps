@@ -1,0 +1,315 @@
+﻿2026-10-08T16:56:04.9932189Z Current runner version: '2.337.0'
+2026-10-08T16:56:04.9952244Z ##[group]Runner Image Provisioner
+2026-10-08T16:56:04.9952819Z Hosted Compute Agent
+2026-10-08T16:56:04.9953257Z Version: 20261002.596
+2026-10-08T16:56:04.9953725Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T16:56:04.9954151Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T16:56:04.9954636Z Worker ID: {4d80dca8-1a71-4fc1-bcca-26fe3b02b763}
+2026-10-08T16:56:04.9955088Z Region: centralus
+2026-10-08T16:56:04.9955518Z Cloud: Azure
+2026-10-08T16:56:04.9955891Z ##[endgroup]
+2026-10-08T16:56:04.9956771Z ##[group]Operating System
+2026-10-08T16:56:04.9957205Z Ubuntu
+2026-10-08T16:56:04.9957525Z 24.04.5
+2026-10-08T16:56:04.9957867Z LTS
+2026-10-08T16:56:04.9958231Z ##[endgroup]
+2026-10-08T16:56:04.9958572Z ##[group]Runner Image
+2026-10-08T16:56:04.9958970Z Image: ubuntu-24.04
+2026-10-08T16:56:04.9959324Z Version: 20261004.327.1
+2026-10-08T16:56:04.9960203Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T16:56:04.9961213Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T16:56:04.9961810Z ##[endgroup]
+2026-10-08T16:56:04.9962505Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T16:56:04.9963905Z Contents: read
+2026-10-08T16:56:04.9964609Z Metadata: read
+2026-10-08T16:56:04.9965006Z ##[endgroup]
+2026-10-08T16:56:04.9966477Z Secret source: Actions
+2026-10-08T16:56:04.9967199Z Cache mode: write
+2026-10-08T16:56:04.9967775Z Prepare workflow directory
+2026-10-08T16:56:05.0371913Z Prepare all required actions
+2026-10-08T16:56:05.0406546Z Getting action download info
+2026-10-08T16:56:05.2526726Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-08T16:56:05.6259893Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-08T16:56:05.8317679Z Complete job name: lint
+2026-10-08T16:56:05.9072780Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-08T16:56:05.9073330Z with:
+2026-10-08T16:56:05.9073587Z   repository: Jacob-Met/TowerOps
+2026-10-08T16:56:05.9075768Z   token: ***
+2026-10-08T16:56:05.9076013Z   ssh-strict: true
+2026-10-08T16:56:05.9076260Z   ssh-user: git
+2026-10-08T16:56:05.9076514Z   persist-credentials: true
+2026-10-08T16:56:05.9076790Z   clean: true
+2026-10-08T16:56:05.9077045Z   sparse-checkout-cone-mode: true
+2026-10-08T16:56:05.9077337Z   fetch-depth: 1
+2026-10-08T16:56:05.9077583Z   fetch-tags: false
+2026-10-08T16:56:05.9077831Z   show-progress: true
+2026-10-08T16:56:05.9078084Z   lfs: false
+2026-10-08T16:56:05.9078320Z   submodules: false
+2026-10-08T16:56:05.9078573Z   set-safe-directory: true
+2026-10-08T16:56:05.9078859Z   allow-unsafe-pr-checkout: false
+2026-10-08T16:56:05.9079215Z ##[endgroup]
+2026-10-08T16:56:05.9774073Z Syncing repository: Jacob-Met/TowerOps
+2026-10-08T16:56:05.9775309Z ##[group]Getting Git version info
+2026-10-08T16:56:05.9775888Z Working directory is '/home/runner/work/TowerOps/TowerOps'
+2026-10-08T16:56:05.9776775Z [command]/usr/bin/git version
+2026-10-08T16:56:05.9867685Z git version 2.55.0
+2026-10-08T16:56:05.9892125Z ##[endgroup]
+2026-10-08T16:56:05.9901229Z Temporarily overriding HOME='/home/runner/work/_temp/60a9f0a8-6fd0-4c45-9f25-53809872b0cc' before making global git config changes
+2026-10-08T16:56:05.9902499Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T16:56:05.9906547Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TowerOps/TowerOps
+2026-10-08T16:56:06.0220225Z Deleting the contents of '/home/runner/work/TowerOps/TowerOps'
+2026-10-08T16:56:06.0236031Z ##[group]Determining repository object format
+2026-10-08T16:56:06.0241829Z ##[endgroup]
+2026-10-08T16:56:06.0242660Z ##[group]Initializing the repository
+2026-10-08T16:56:06.0243672Z [command]/usr/bin/git init /home/runner/work/TowerOps/TowerOps
+2026-10-08T16:56:06.0620799Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T16:56:06.0621543Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T16:56:06.0622164Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T16:56:06.0622656Z hint: call:
+2026-10-08T16:56:06.0622874Z hint:
+2026-10-08T16:56:06.0623175Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T16:56:06.0623602Z hint:
+2026-10-08T16:56:06.0623919Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T16:56:06.0624511Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T16:56:06.0625012Z hint:
+2026-10-08T16:56:06.0625355Z hint: 	git branch -m <name>
+2026-10-08T16:56:06.0625753Z hint:
+2026-10-08T16:56:06.0626284Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T16:56:06.0631147Z Initialized empty Git repository in /home/runner/work/TowerOps/TowerOps/.git/
+2026-10-08T16:56:06.0640333Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/TowerOps
+2026-10-08T16:56:06.0901029Z ##[endgroup]
+2026-10-08T16:56:06.0901565Z ##[group]Disabling automatic garbage collection
+2026-10-08T16:56:06.0904052Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T16:56:06.0998809Z ##[endgroup]
+2026-10-08T16:56:06.1000127Z ##[group]Setting up auth
+2026-10-08T16:56:06.1000938Z Removing SSH command configuration
+2026-10-08T16:56:06.1004791Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T16:56:06.1041367Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T16:56:06.1322386Z Removing HTTP extra header
+2026-10-08T16:56:06.1327363Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T16:56:06.1358614Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T16:56:06.1539204Z Removing includeIf entries pointing to credentials config files
+2026-10-08T16:56:06.1544302Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T16:56:06.1575516Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T16:56:06.1774788Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T16:56:06.1896153Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TowerOps/TowerOps/.git.path /home/runner/work/_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config
+2026-10-08T16:56:06.2134324Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TowerOps/TowerOps/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config
+2026-10-08T16:56:06.2212390Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config
+2026-10-08T16:56:06.2404604Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config
+2026-10-08T16:56:06.2501938Z ##[endgroup]
+2026-10-08T16:56:06.2502599Z ##[group]Fetching the repository
+2026-10-08T16:56:06.2508653Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1a71f19dfbc1eb89c05baecd2e2f49bc6e6e0613:refs/remotes/origin/ultra/1b3276062063-towerops-plan-compare
+2026-10-08T16:56:07.5852920Z From https://github.com/Jacob-Met/TowerOps
+2026-10-08T16:56:07.5855016Z  * [new ref]         1a71f19dfbc1eb89c05baecd2e2f49bc6e6e0613 -> origin/ultra/1b3276062063-towerops-plan-compare
+2026-10-08T16:56:07.5859929Z [command]/usr/bin/git branch --list --remote origin/ultra/1b3276062063-towerops-plan-compare
+2026-10-08T16:56:07.5887218Z   origin/ultra/1b3276062063-towerops-plan-compare
+2026-10-08T16:56:07.5893402Z [command]/usr/bin/git rev-parse refs/remotes/origin/ultra/1b3276062063-towerops-plan-compare
+2026-10-08T16:56:07.5916972Z 1a71f19dfbc1eb89c05baecd2e2f49bc6e6e0613
+2026-10-08T16:56:07.5920544Z ##[endgroup]
+2026-10-08T16:56:07.5921861Z ##[group]Determining the checkout info
+2026-10-08T16:56:07.5923278Z ##[endgroup]
+2026-10-08T16:56:07.5924149Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T16:56:07.6306938Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T16:56:07.6706404Z ##[group]Checking out the ref
+2026-10-08T16:56:07.6710639Z [command]/usr/bin/git checkout --progress --force -B ultra/1b3276062063-towerops-plan-compare refs/remotes/origin/ultra/1b3276062063-towerops-plan-compare
+2026-10-08T16:56:07.7311013Z Switched to a new branch 'ultra/1b3276062063-towerops-plan-compare'
+2026-10-08T16:56:07.7328869Z branch 'ultra/1b3276062063-towerops-plan-compare' set up to track 'origin/ultra/1b3276062063-towerops-plan-compare'.
+2026-10-08T16:56:07.7338711Z ##[endgroup]
+2026-10-08T16:56:07.7379339Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T16:56:07.7405337Z 1a71f19dfbc1eb89c05baecd2e2f49bc6e6e0613
+2026-10-08T16:56:07.7956025Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-08T16:56:07.7957095Z with:
+2026-10-08T16:56:07.7957635Z   python-version: 3.12
+2026-10-08T16:56:07.7958236Z   check-latest: false
+2026-10-08T16:56:07.7963866Z   token: ***
+2026-10-08T16:56:07.7964423Z   update-environment: true
+2026-10-08T16:56:07.7965073Z   allow-prereleases: false
+2026-10-08T16:56:07.7965714Z   freethreaded: false
+2026-10-08T16:56:07.7966308Z ##[endgroup]
+2026-10-08T16:56:07.8789192Z ##[group]Installed versions
+2026-10-08T16:56:07.8957279Z Successfully set up CPython (3.12.15)
+2026-10-08T16:56:07.8959155Z ##[endgroup]
+2026-10-08T16:56:07.9219061Z ##[group]Run python -m pip install -q "ruff==0.16.10"
+2026-10-08T16:56:07.9220169Z [36;1mpython -m pip install -q "ruff==0.16.10"[0m
+2026-10-08T16:56:07.9433712Z shell: /usr/bin/bash -e {0}
+2026-10-08T16:56:07.9434470Z env:
+2026-10-08T16:56:07.9435166Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T16:56:07.9436316Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T16:56:07.9437422Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T16:56:07.9499730Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T16:56:07.9501705Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T16:56:07.9503293Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T16:56:07.9504515Z ##[endgroup]
+2026-10-08T16:56:10.3313774Z ##[group]Run python -m ruff check .
+2026-10-08T16:56:10.3314035Z [36;1mpython -m ruff check .[0m
+2026-10-08T16:56:10.3371669Z shell: /usr/bin/bash -e {0}
+2026-10-08T16:56:10.3371862Z env:
+2026-10-08T16:56:10.3372054Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T16:56:10.3372323Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T16:56:10.3372589Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T16:56:10.3372831Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T16:56:10.3373069Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T16:56:10.3373316Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T16:56:10.3373534Z ##[endgroup]
+2026-10-08T16:56:10.3693231Z I001 [*] Import block is un-sorted or un-formatted
+2026-10-08T16:56:10.3696344Z   --> compare_plans.py:3:1
+2026-10-08T16:56:10.3696879Z    |
+2026-10-08T16:56:10.3697370Z  1 |   """Compare already recorded TowerOps policy experiments without planning again."""
+2026-10-08T16:56:10.3698239Z  2 |
+2026-10-08T16:56:10.3698532Z  3 | / from __future__ import annotations
+2026-10-08T16:56:10.3698834Z  4 | |
+2026-10-08T16:56:10.3699049Z  5 | | import argparse
+2026-10-08T16:56:10.3699432Z  6 | | import hashlib
+2026-10-08T16:56:10.3699690Z  7 | | import json
+2026-10-08T16:56:10.3699929Z  8 | | import math
+2026-10-08T16:56:10.3700185Z  9 | | import os
+2026-10-08T16:56:10.3700443Z 10 | | from pathlib import Path
+2026-10-08T16:56:10.3700874Z 11 | | import re
+2026-10-08T16:56:10.3701152Z 12 | | import stat
+2026-10-08T16:56:10.3701401Z 13 | | import sys
+2026-10-08T16:56:10.3701680Z 14 | | from typing import Any
+2026-10-08T16:56:10.3701934Z 15 | |
+2026-10-08T16:56:10.3702323Z 16 | | from plan_world import MAX_ABS_NUMBER, MAX_VERSION, MIN_POLICY_VALUE, parse_world
+2026-10-08T16:56:10.3702742Z 17 | | from towerops import Advisory, canonical_bytes
+2026-10-08T16:56:10.3702980Z    | |______________________________________________^
+2026-10-08T16:56:10.3703167Z 18 |
+2026-10-08T16:56:10.3703320Z 19 |   MAX_REPORT_BYTES = 4 * 1024 * 1024
+2026-10-08T16:56:10.3703491Z    |
+2026-10-08T16:56:10.3703629Z help: Organize imports
+2026-10-08T16:56:10.3703777Z    |
+2026-10-08T16:56:10.3703908Z 9  | import os
+2026-10-08T16:56:10.3704078Z    - from pathlib import Path
+2026-10-08T16:56:10.3704244Z 10 | import re
+2026-10-08T16:56:10.3704421Z 11 | import stat
+2026-10-08T16:56:10.3704564Z 12 | import sys
+2026-10-08T16:56:10.3704720Z 13 + from pathlib import Path
+2026-10-08T16:56:10.3704892Z 14 | from typing import Any
+2026-10-08T16:56:10.3705050Z    |
+2026-10-08T16:56:10.3705125Z 
+2026-10-08T16:56:10.3705264Z ISC004 Unparenthesized implicit string concatenation in collection
+2026-10-08T16:56:10.3705509Z    --> compare_plans.py:298:9
+2026-10-08T16:56:10.3705669Z     |
+2026-10-08T16:56:10.3705835Z 296 |       lines.extend([
+2026-10-08T16:56:10.3705992Z 297 |           "",
+2026-10-08T16:56:10.3706202Z 298 | /         f"Saved alternatives: {counts['retained']} retained; "
+2026-10-08T16:56:10.3706512Z 299 | |         f"{counts['left_only']} left only; {counts['right_only']} right only.",
+2026-10-08T16:56:10.3706817Z     | |______________________________________________________________________________^
+2026-10-08T16:56:10.3707140Z 300 |           f"Retained alternatives with a different menu rank: {counts['rank_changed']}.",
+2026-10-08T16:56:10.3707486Z 301 |           "Ranks are original 1-based menu positions, not a new recommendation.",
+2026-10-08T16:56:10.3707730Z     |
+2026-10-08T16:56:10.3707880Z help: Did you forget a comma?
+2026-10-08T16:56:10.3708097Z help: Wrap implicitly concatenated strings in parentheses
+2026-10-08T16:56:10.3708248Z 
+2026-10-08T16:56:10.3708345Z I001 [*] Import block is un-sorted or un-formatted
+2026-10-08T16:56:10.3708555Z   --> tests/test_compare_plans.py:3:1
+2026-10-08T16:56:10.3708728Z    |
+2026-10-08T16:56:10.3708950Z  1 |   """Native saved-output comparison, admission and real-process receiving."""
+2026-10-08T16:56:10.3709348Z  2 |
+2026-10-08T16:56:10.3709503Z  3 | / from __future__ import annotations
+2026-10-08T16:56:10.3709676Z  4 | |
+2026-10-08T16:56:10.3709826Z  5 | | import copy
+2026-10-08T16:56:10.3710032Z  6 | | from dataclasses import replace
+2026-10-08T16:56:10.3710211Z  7 | | import hashlib
+2026-10-08T16:56:10.3710364Z  8 | | import json
+2026-10-08T16:56:10.3710509Z  9 | | import math
+2026-10-08T16:56:10.3710653Z 10 | | import os
+2026-10-08T16:56:10.3710995Z 11 | | from pathlib import Path
+2026-10-08T16:56:10.3711244Z 12 | | import subprocess
+2026-10-08T16:56:10.3711478Z 13 | | import sys
+2026-10-08T16:56:10.3711658Z 14 | | import tempfile
+2026-10-08T16:56:10.3711889Z 15 | | import unittest
+2026-10-08T16:56:10.3712145Z 16 | | from unittest.mock import patch
+2026-10-08T16:56:10.3712408Z 17 | |
+2026-10-08T16:56:10.3712672Z 18 | | from compare_plans import MAX_REPORT_BYTES, POLICY_FIELDS, compare_reports, render_text
+2026-10-08T16:56:10.3712966Z 19 | | from plan_world import review_world
+2026-10-08T16:56:10.3713187Z 20 | | from towerops import Advisory, SafetyPolicy
+2026-10-08T16:56:10.3713500Z    | |___________________________________________^
+2026-10-08T16:56:10.3713672Z 21 |
+2026-10-08T16:56:10.3713832Z 22 |   ROOT = Path(__file__).resolve().parents[1]
+2026-10-08T16:56:10.3714011Z    |
+2026-10-08T16:56:10.3714151Z help: Organize imports
+2026-10-08T16:56:10.3714296Z    |
+2026-10-08T16:56:10.3714427Z 5  | import copy
+2026-10-08T16:56:10.3714586Z    - from dataclasses import replace
+2026-10-08T16:56:10.3714765Z 6  | import hashlib
+2026-10-08T16:56:10.3714913Z 7  | import json
+2026-10-08T16:56:10.3715057Z 8  | import math
+2026-10-08T16:56:10.3715196Z 9  | import os
+2026-10-08T16:56:10.3715353Z    - from pathlib import Path
+2026-10-08T16:56:10.3715524Z 10 | import subprocess
+2026-10-08T16:56:10.3715675Z 11 | import sys
+2026-10-08T16:56:10.3715821Z 12 | import tempfile
+2026-10-08T16:56:10.3715972Z 13 | import unittest
+2026-10-08T16:56:10.3716136Z 14 + from dataclasses import replace
+2026-10-08T16:56:10.3716325Z 15 + from pathlib import Path
+2026-10-08T16:56:10.3716509Z 16 | from unittest.mock import patch
+2026-10-08T16:56:10.3716677Z    |
+2026-10-08T16:56:10.3716748Z 
+2026-10-08T16:56:10.3716847Z PYI041 [*] Use `float` instead of `int | float`
+2026-10-08T16:56:10.3717060Z   --> tests/test_compare_plans.py:44:17
+2026-10-08T16:56:10.3717232Z    |
+2026-10-08T16:56:10.3717450Z 43 | def report(*, policy: SafetyPolicy | None = None, value: dict | None = None,
+2026-10-08T16:56:10.3717726Z 44 |            now: float | int | None = None) -> dict:
+2026-10-08T16:56:10.3717928Z    |                 ^^^^^^^^^^^^^^^^^^
+2026-10-08T16:56:10.3718190Z 45 |     return review_world(encoded(world() if value is None else value), now, policy)
+2026-10-08T16:56:10.3718434Z    |
+2026-10-08T16:56:10.3718580Z help: Remove redundant type
+2026-10-08T16:56:10.3718737Z    |
+2026-10-08T16:56:10.3718949Z 43 | def report(*, policy: SafetyPolicy | None = None, value: dict | None = None,
+2026-10-08T16:56:10.3719224Z    -            now: float | int | None = None) -> dict:
+2026-10-08T16:56:10.3719446Z 44 +            now: float | None = None) -> dict:
+2026-10-08T16:56:10.3719719Z 45 |     return review_world(encoded(world() if value is None else value), now, policy)
+2026-10-08T16:56:10.3719960Z    |
+2026-10-08T16:56:10.3720034Z 
+2026-10-08T16:56:10.3720190Z UP022 Prefer `capture_output` over sending `stdout` and `stderr` to `PIPE`
+2026-10-08T16:56:10.3720467Z    --> tests/test_compare_plans.py:373:16
+2026-10-08T16:56:10.3720659Z     |
+2026-10-08T16:56:10.3720980Z 372 |       def invoke(self, *arguments, **kwargs):
+2026-10-08T16:56:10.3721193Z 373 |           return subprocess.run(
+2026-10-08T16:56:10.3721373Z     |  ________________^
+2026-10-08T16:56:10.3721619Z 374 | |             [sys.executable, "-B", str(CLI), *(str(value) for value in arguments)],
+2026-10-08T16:56:10.3721967Z 375 | |             stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+2026-10-08T16:56:10.3722256Z 376 | |             timeout=10, check=False, **kwargs,
+2026-10-08T16:56:10.3722547Z 377 | |         )
+2026-10-08T16:56:10.3722690Z     | |_________^
+2026-10-08T16:56:10.3722826Z 378 |
+2026-10-08T16:56:10.3723053Z 379 |       def test_actual_native_producer_reports_reach_text_and_complete_json(self):
+2026-10-08T16:56:10.3723297Z     |
+2026-10-08T16:56:10.3723470Z help: Replace with `capture_output` keyword argument
+2026-10-08T16:56:10.3723609Z 
+2026-10-08T16:56:10.3723678Z Found 5 errors.
+2026-10-08T16:56:10.3723957Z [*] 3 fixable with the `--fix` option (2 hidden fixes can be enabled with the `--unsafe-fixes` option).
+2026-10-08T16:56:10.3733129Z ##[error]Process completed with exit code 1.
+2026-10-08T16:56:10.3834205Z Post job cleanup.
+2026-10-08T16:56:10.4401887Z [command]/usr/bin/git version
+2026-10-08T16:56:10.4429757Z git version 2.55.0
+2026-10-08T16:56:10.4475933Z Temporarily overriding HOME='/home/runner/work/_temp/3b8bf5b3-b659-4b03-a9dd-c0c241e62adc' before making global git config changes
+2026-10-08T16:56:10.4476758Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T16:56:10.4480355Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TowerOps/TowerOps
+2026-10-08T16:56:10.4512538Z Removing SSH command configuration
+2026-10-08T16:56:10.4518166Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T16:56:10.4550369Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T16:56:10.4764640Z Removing HTTP extra header
+2026-10-08T16:56:10.4771983Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T16:56:10.4832502Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T16:56:10.5042882Z Removing includeIf entries pointing to credentials config files
+2026-10-08T16:56:10.5048276Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T16:56:10.5077529Z includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git.path
+2026-10-08T16:56:10.5078101Z includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git/worktrees/*.path
+2026-10-08T16:56:10.5078557Z includeif.gitdir:/github/workspace/.git.path
+2026-10-08T16:56:10.5078947Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T16:56:10.5085008Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git.path
+2026-10-08T16:56:10.5107923Z /home/runner/work/_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config
+2026-10-08T16:56:10.5115442Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-8653fd02\-4ebf\-4c19\-b9a9\-62a9a5e709c1\.config
+2026-10-08T16:56:10.5148556Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git/worktrees/*.path
+2026-10-08T16:56:10.5171394Z /home/runner/work/_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config
+2026-10-08T16:56:10.5177564Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TowerOps/TowerOps/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-8653fd02\-4ebf\-4c19\-b9a9\-62a9a5e709c1\.config
+2026-10-08T16:56:10.5213772Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-08T16:56:10.5236036Z /github/runner_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config
+2026-10-08T16:56:10.5241594Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-8653fd02\-4ebf\-4c19\-b9a9\-62a9a5e709c1\.config
+2026-10-08T16:56:10.5270484Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T16:56:10.5295105Z /github/runner_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config
+2026-10-08T16:56:10.5308918Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-8653fd02\-4ebf\-4c19\-b9a9\-62a9a5e709c1\.config
+2026-10-08T16:56:10.5339250Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T16:56:10.5534341Z Removing credentials config '/home/runner/work/_temp/git-credentials-8653fd02-4ebf-4c19-b9a9-62a9a5e709c1.config'
+2026-10-08T16:56:10.5669807Z Cleaning up orphan processes

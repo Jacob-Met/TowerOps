@@ -1,0 +1,76 @@
+{
+  "schema": "towerops-hosted-7865-attempt1-independent-receiving/v1",
+  "repository": "Jacob-Met/TowerOps",
+  "reviewer": "/root/memory_capability",
+  "review_date": "2026-10-08",
+  "accepted_as_precise_failed_artifact_admission": true,
+  "original_receiving_result": {
+    "kind": "Independent receipt of one failed hosted artifact admission; no rerun",
+    "local_manifest_sha256": "86f8a6d42cc9e947adf83f82ca11e2e82ef620210b99d799d5534dda0c4710ca",
+    "native_manifest_sha256": "667e836ebc47e64ec5050cf633e7228e89b10e22722868585e8cb6a14a806a01",
+    "archive_sha256": "d95d1a77a45d46ffd9f5713ec29de0f584d2a987d9772c144631a1f8d758a201",
+    "archive_members_equal_raw": 8,
+    "native_source_entries_exact": 60,
+    "native_build_files_exact": 16,
+    "process_sha256": "da249b7fb5ef3c5f80a05630ba078a246c2f2ec79e4ddf074a94c8d44ded2ab4",
+    "report_sha256": "785ceb2aaedcc7744d2d210359676fca4638ae3428b27529f2eed77c3b7679c5",
+    "log_sha256": "8a6099ac8836de0bc176e5d82bb70336a6f443ad0fff1fe17f27000e5728218f",
+    "input_sha256": "92dc59d6c2c50731ed3b8380537bb9ac20fd02f72320b635130dc531d1a1d95a",
+    "merge_commit": "7865ffeda311b711b13f2d04fedeeef5c432017e",
+    "artifact_id": 11560420141,
+    "artifact_archive_sha256": "516bbc7a96dc242c023bf2d7cb221e5e5ecab8fe79d6c93e2a0167cf204642a5",
+    "response": {
+      "path": "airspace/index.html",
+      "url": "http://jacobmetoyer.com/TowerOps/airspace/",
+      "expected_bytes": 15485,
+      "expected_sha256": "5552cd180541440bffe40b13257ad985f9c86a848bbffcad7e4a41d094daae60",
+      "requested_at": "2026-10-08T16:02:05.664Z",
+      "redirects": [],
+      "responses": [
+        {
+          "url": "http://jacobmetoyer.com/TowerOps/airspace/",
+          "status": 200,
+          "returned_url": "http://jacobmetoyer.com/TowerOps/airspace/",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "15485",
+            "etag": "\"6ac7bdb4-3c7d\"",
+            "last-modified": "Thu, 08 Oct 2026 15:58:44 GMT",
+            "cache-control": "max-age=600",
+            "age": "0",
+            "x-github-request-id": "3358:1A9038:D2527:DBC2C:6AC7BE7D",
+            "location": null
+          }
+        }
+      ],
+      "status": 200,
+      "returned_url": "http://jacobmetoyer.com/TowerOps/airspace/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "15485",
+        "etag": "\"6ac7bdb4-3c7d\"",
+        "last-modified": "Thu, 08 Oct 2026 15:58:44 GMT",
+        "cache-control": "max-age=600",
+        "age": "0",
+        "x-github-request-id": "3358:1A9038:D2527:DBC2C:6AC7BE7D",
+        "location": null
+      },
+      "bytes": 15485,
+      "sha256": "ea6f785d08a05249dcdcb648f7d8a9fa24c1cbe05a21b618a2aeba151b38ee2e"
+    },
+    "exit_code": 1,
+    "timed_out": false,
+    "receiver_input_source_build_unchanged": true,
+    "browser_started": false,
+    "case_count": 0,
+    "screenshots": 0,
+    "interpretation": "The first received HTML has equal length but a different SHA256 from the selected artifact. Admission correctly stopped before Chrome. The served release was not identified, and no hosted playback success or product regression is established. The response body itself is not retained in this eight-file packet; its streaming hash is recorded by the frozen native receiver.",
+    "accepted_as_precise_negative_evidence": true
+  },
+  "provider_root": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/hosted-7865-attempt1",
+  "preservation": "The eight exact raw files and their gzip/base64 archive were independently matched by length, SHA256 and Git blob. Process/report/log/input references, prior native60 source pins and16 build pins were checked. No rerun or second network request occurred.",
+  "boundary": "The one request returned HTTP200 with no redirect. Equal15485-byte length did not satisfy the expected selected-artifact SHA256. Admission stopped in verifyServedFiles before Chrome launch. There are zero browser cases, screenshots or runtime playback observations from this attempt.",
+  "original_release_identity_cut": "At the initial receiving cut, the document's release was not identified. The later offline document match is an additive result in hosted-newer-document-identity.json; the original failed-attempt evidence is unchanged.",
+  "raw_body_limit": "The raw HTTP body is not a member of the eight-file packet. The frozen native receiver recorded its streaming hash, byte length, response metadata and failed equality assertion.",
+  "follow_up": "The parent assigned current playback/radar public receiving to the separate estate52e56/PR55 owner. No repeated site or browser receiving was undertaken here."
+}

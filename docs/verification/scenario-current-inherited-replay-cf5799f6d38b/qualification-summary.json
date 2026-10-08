@@ -1,0 +1,187 @@
+{
+  "schema": "towerops-current-inherited-independent-replay/v1",
+  "source_tree": "8cd8023a2f676b2faa17d5d5120e3ae3e4fd54f4",
+  "base_commit": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+  "started_utc": "2026-10-08T15:59:44.105989+00:00",
+  "before": {
+    "source_files": 1017,
+    "build_files": 16,
+    "all_source_bytes_modes_git_blobs_and_build_bytes_exact": true
+  },
+  "newly_authored_browser_controls": 0,
+  "inherited_browser_controls": 4,
+  "runs": [
+    {
+      "name": "alternatives",
+      "command": [
+        "/opt/homebrew/bin/node",
+        "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/independent_alternative_reset.mjs",
+        "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/input-source-build-pin.json",
+        "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/browser-8cd"
+      ],
+      "node_path": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 4.892,
+      "receiver_before": {
+        "bytes": 14632,
+        "sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+        "git_blob": "ed39378886a48bac61d9b695ebbd4cc0f030c507",
+        "mode": "100644"
+      },
+      "receiver_after": {
+        "bytes": 14632,
+        "sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+        "git_blob": "ed39378886a48bac61d9b695ebbd4cc0f030c507",
+        "mode": "100644"
+      },
+      "stdout": {
+        "path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/stdout.log",
+        "bytes": 14292,
+        "sha256": "55b5ea0753e04cf54d82ad0b9675514663b0e759f2c6299a12609800c464e4fa",
+        "git_blob": "e3516c4340d7a39a12b5dd7cc7c7d9199e643766",
+        "mode": "100644"
+      },
+      "stderr": {
+        "path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644"
+      },
+      "free_bytes_before": 929214464,
+      "newly_authored_controls": 0,
+      "inherited_controls": 2,
+      "receipt": {
+        "path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/browser-8cd/receipt.json",
+        "bytes": 35857,
+        "sha256": "c3defb58b23a9991fa8ce9fb804e0635e6e2a02838332e4e473decce9f8b75f4",
+        "git_blob": "395558164fdef4e242d482e3f102801af27fd902",
+        "mode": "100644"
+      },
+      "passed": 2,
+      "total": 2,
+      "groups": [
+        {
+          "name": "explicit same-value scenario Load retires previous native alternatives and approval",
+          "passed": true,
+          "error": null
+        },
+        {
+          "name": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "page_errors": [],
+      "external_app_requests": [],
+      "runtime": {
+        "node": "v26.3.0",
+        "browser": "Chrome/154.0.8037.98",
+        "puppeteer": "25.12.0"
+      },
+      "integrity_error": null,
+      "native_assets_received": true,
+      "receiver_unchanged": true,
+      "source_build_after": {
+        "source_files": 1017,
+        "build_files": 16,
+        "all_source_bytes_modes_git_blobs_and_build_bytes_exact": true
+      },
+      "completed_own_disposable_profile": {
+        "path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/alternatives/browser-8cd/profile",
+        "removed_only_after_browser_process_completed": true
+      },
+      "free_bytes_after": 924749824
+    },
+    {
+      "name": "raw-draft",
+      "command": [
+        "/opt/homebrew/bin/node",
+        "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/independent_raw_draft.mjs",
+        "/tmp/towerops-root-current-cf5799f6d38b-dgopydr1/candidate",
+        "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd"
+      ],
+      "node_path": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 3.167,
+      "receiver_before": {
+        "bytes": 17300,
+        "sha256": "8ab4f56d0f8e0a62f80b72f799268d9e1ee43012dd5e336f6bf5033930db1997",
+        "git_blob": "3a9982ad0f687942cf8249a8f3fc0744a86ce6ac",
+        "mode": "100644"
+      },
+      "receiver_after": {
+        "bytes": 17300,
+        "sha256": "8ab4f56d0f8e0a62f80b72f799268d9e1ee43012dd5e336f6bf5033930db1997",
+        "git_blob": "3a9982ad0f687942cf8249a8f3fc0744a86ce6ac",
+        "mode": "100644"
+      },
+      "stdout": {
+        "path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/stdout.log",
+        "bytes": 4903,
+        "sha256": "64d344052cd578b06cf94f366be1549b65457e3cf1bc228052f633880bbc0ceb",
+        "git_blob": "5c18e309b6dda63c5f3c5bdcfdaa44c197482697",
+        "mode": "100644"
+      },
+      "stderr": {
+        "path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644"
+      },
+      "free_bytes_before": 924729344,
+      "newly_authored_controls": 0,
+      "inherited_controls": 2,
+      "receipt": {
+        "path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/receipt.json",
+        "bytes": 14723,
+        "sha256": "5c6e8f4202ab134bad0939db31bd3e7e34c91ed575ce94d399ed80c4ffcee4d6",
+        "git_blob": "028b2763440256ca40f2eee6fb7a4853ff13fd04",
+        "mode": "100644"
+      },
+      "passed": 2,
+      "total": 2,
+      "groups": [
+        {
+          "name": "valid raw world authored after review remains separate; explicit Export preserves a pending review",
+          "passed": true,
+          "error": null
+        },
+        {
+          "name": "same-value successful raw Load invalidates an in-flight genuine File.text completion",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "page_errors": [],
+      "external_app_requests": [],
+      "runtime": {
+        "node": "v26.3.0",
+        "browser": "Chrome/154.0.8037.98",
+        "puppeteer": "25.12.0"
+      },
+      "integrity_error": null,
+      "receiver_unchanged": true,
+      "source_build_after": {
+        "source_files": 1017,
+        "build_files": 16,
+        "all_source_bytes_modes_git_blobs_and_build_bytes_exact": true
+      },
+      "completed_own_disposable_profile": {
+        "path": "/tmp/towerops-current-inherited-replay-cf5799f6d38b-ijrxnqua/raw-draft/browser-8cd/profile",
+        "removed_only_after_browser_process_completed": true
+      },
+      "free_bytes_after": 923013120
+    }
+  ],
+  "after": {
+    "source_files": 1017,
+    "build_files": 16,
+    "all_source_bytes_modes_git_blobs_and_build_bytes_exact": true
+  },
+  "finished_utc": "2026-10-08T15:59:52.629971+00:00",
+  "passed": true
+}

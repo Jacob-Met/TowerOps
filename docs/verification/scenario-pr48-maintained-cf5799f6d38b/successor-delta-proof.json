@@ -1,0 +1,30 @@
+{
+  "initial_tree": "f4bc1ce05953dde6a33cea8588033fea9e18c5c4",
+  "successor_tree": "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993",
+  "changed_paths": [
+    "web/airspace/README.md",
+    "web/airspace/src/main.ts"
+  ],
+  "unchanged_source_leaves": 249,
+  "successor_pin": {
+    "path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-source-build-pin.json",
+    "bytes": 78715,
+    "sha256": "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba",
+    "git_blob": "62bc62d75e39c00b6c34cd3fcd85fba51634e652",
+    "mode": "100644"
+  },
+  "patch": {
+    "path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/alternative-reset.patch",
+    "bytes": 3607,
+    "sha256": "be7caad58aa479eacf27b482f8e88c8c8f6e3eff4f8b6224cdde4b34a3f97fdb",
+    "git_blob": "5ba50b956e9ff9df32a985f673fb0afc644ad9e1",
+    "mode": "100644"
+  },
+  "initial_seal": {
+    "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial-seal.json",
+    "bytes": 3470,
+    "sha256": "b033d6cb7cfb759f7dcbf8e10e12040434b04419c57cf486a0f804d371963c11",
+    "git_blob": "289010e2ae2689476ed5f85132699d06ee248612",
+    "mode": "100644"
+  }
+}

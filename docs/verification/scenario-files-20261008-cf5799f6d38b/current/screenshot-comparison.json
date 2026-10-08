@@ -1,0 +1,18 @@
+{
+  "previous_source_tree": "317ddf06e84c6b08f2e06ce634f5a64b264effd5",
+  "current_source_tree": "d6b4a1ec5757144f848e1d6ce851a766a7413f2c",
+  "screenshots": [
+    {
+      "filename": "scenario-phone.png",
+      "bytes": 59089,
+      "sha256": "036d0b46cf1bf366dc4b889d98973870e133e4a4c531b7c4aa830ff9d9328d81",
+      "identical_to_visually_reviewed_previous": true
+    },
+    {
+      "filename": "scenario-desktop.png",
+      "bytes": 66918,
+      "sha256": "30cd3daf859f3bd9812506351a00ddea9a17b379220d4cb4bfc480f5b5a82afa",
+      "identical_to_visually_reviewed_previous": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+
+> towerops-airspace-lab@0.1.0 test
+> vitest run --reporter=json --outputFile=/tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/qualification/unit-tests.json
+
+JSON report written to /tmp/towerops-root-wire-cf5799f6d38b-mkqcno43/qualification/unit-tests.json
