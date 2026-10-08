@@ -84,7 +84,7 @@
   },
   "evidence": [
     {
-      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/original-driver.py",
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/original-driver.py.txt",
       "git_blob": "f57bff3abdd73a5253a39ef598f2416466aabaa7",
       "sha256": "3e5af0b3dfff7199e47668d48fd2fe266ab06f24855b1437313909877d397582",
       "bytes": 34624
@@ -127,10 +127,17 @@
     },
     {
       "path": "docs/receiving/traffic-csv-ae0a1ea0b247/README.md",
-      "git_blob": "5b88e2b8bf4501013bc5594c441f352173e527f7",
-      "sha256": "668bea546237c31778ced720d5145f6692c280b23992ed0e3c1edda93bbc4108",
-      "bytes": 2621
+      "git_blob": "daf2491b17103676f1530cc1b0ef116b2ae9c087",
+      "sha256": "e973b8b7e117cb9916640728c6632e8570b9c1bed10027177bb2e9cab3412cd0",
+      "bytes": 3270
+    },
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/packaging-correction.json",
+      "git_blob": "f4c9533515cd0557a8a69e1e9fc89aa833d2da56",
+      "sha256": "2ded4cfb92ca0c7fedad1ed606112e97b8960886c94413a859b8f2506d39a790",
+      "bytes": 1119
     }
   ],
-  "qualification": "Actual execution was on execution_base. Receiving is a source-identity comparison against the later playback merge; it is not a repeated execution claim. Hosted CI and integration results are recorded separately in the native PR."
+  "qualification": "Actual execution was on execution_base. Receiving is a source-identity comparison against the later playback merge; it is not a repeated execution claim. Hosted CI and integration results are recorded separately in the native PR.",
+  "packaging_correction": "Historical receiver bytes are preserved as original-driver.py.txt; the initial whole-repository lint failure and evidence-only rename are recorded in packaging-correction.json. No product/test/workflow/lint configuration changes."
 }
