@@ -1,4 +1,5 @@
-import html from '../index.html?raw';
+import { readFileSync } from 'node:fs';
+import { setImmediate } from 'node:timers/promises';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { WorldState } from '../src/core';
 import reference from './python-reference.json';
@@ -14,23 +15,17 @@ class ElementStub {
   id = ''; value = ''; textContent = ''; className = '';
   disabled = false; hidden = false; readOnly = false;
   children: unknown[] = [];
-  attributes = new Map<string, string>();
-  get options() { return this.children as ElementStub[]; }
-  setAttribute(name: string, value: string) { this.attributes.set(name, value); }
   listeners = new Map<string, Listener[]>();
   icon: ElementStub | null = null;
   get valueAsNumber() { return this.value.trim() === '' ? NaN : Number(this.value); }
   append(...nodes: unknown[]) { this.children.push(...nodes); }
   replaceChildren(...nodes: unknown[]) { this.children = nodes; }
-  querySelector(selector: string) { return selector === 'i' ? (this.icon ??= new ElementStub()) : selector.startsWith('#') ? node(selector.slice(1)) : null; }
+  querySelector(selector: string) { return selector === 'i' ? (this.icon ??= new ElementStub()) : null; }
   toggleAttribute(name: string, value: boolean) { if (name === 'disabled') this.disabled = value; return value; }
   addEventListener(kind: string, listener: Listener) { this.listeners.set(kind, [...(this.listeners.get(kind) ?? []), listener]); }
 }
 
 const fixture = reference.scenarios[0]!;
-function drainTasks(): Promise<void> {
-  return new Promise<void>(resolve => globalThis.setTimeout(resolve, 0));
-}
 let elements: Map<string, ElementStub>;
 let frames: FrameRequestCallback[];
 const node = (id: string) => {
@@ -42,12 +37,12 @@ async function dispatch(id: string, kind = 'click') {
   const element = node(id);
   expect(element.disabled, `${id} must be an enabled native control`).toBe(false);
   for (const listener of element.listeners.get(kind) ?? []) await listener({ currentTarget: element, target: element });
-  await drainTasks();
+  await setImmediate();
 }
 async function tick(time: number) {
   expect(frames).toHaveLength(1);
   frames.shift()!(time);
-  await drainTasks();
+  await setImmediate();
 }
 async function advance(start = 1000) { await tick(start); await tick(start + 80); }
 async function setRate(value: number) { node('speed-range').value = String(value); await dispatch('speed-range', 'input'); }
@@ -60,6 +55,7 @@ function world(): WorldState {
 beforeEach(async () => {
   vi.resetModules(); draw.mockReset(); python.mockReset();
   elements = new Map(); frames = [];
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   for (const match of html.matchAll(/<[a-z][\w-]*\b([^>]*\bid="[^"]+"[^>]*)>([^<]*)/gi)) {
     const attributes = new Map([...match[1]!.matchAll(/([\w-]+)(?:="([^"]*)")?/g)].map(item => [item[1]!, item[2] ?? '']));
     const element = new ElementStub();
@@ -67,11 +63,11 @@ beforeEach(async () => {
     element.textContent = match[2]!; element.disabled = attributes.has('disabled');
     elements.set(element.id, element);
   }
-  vi.stubGlobal('document', { activeElement: null, getElementById: node, createElement: () => new ElementStub(), createElementNS: () => new ElementStub() });
+  vi.stubGlobal('document', { activeElement: null, getElementById: node, createElement: () => new ElementStub() });
   vi.stubGlobal('window', { addEventListener: vi.fn() });
   vi.stubGlobal('requestAnimationFrame', (callback: FrameRequestCallback) => frames.push(callback));
   await import('../src/main');
-  await drainTasks();
+  await setImmediate();
 });
 afterEach(() => { vi.unstubAllGlobals(); });
 
@@ -119,8 +115,6 @@ describe('traffic playback controls', () => {
     const before = world(); await dispatch('add-custom-flight');
     expect(node('builder-feedback').textContent).toMatch(/^NOT ADDED:/);
     expect(node('toggle-run').textContent).toBe('Run traffic');
-    expect(node('encounter-first').disabled).toBe(false);
-    expect(node('encounter-content').hidden).toBe(false);
     await tick(1160); expect(world()).toEqual(before);
   });
 
@@ -130,7 +124,6 @@ describe('traffic playback controls', () => {
     await dispatch('remove-selected');
     expect(node('builder-feedback').textContent).toBe('Keep at least one aircraft in the world.');
     expect(node('toggle-run').textContent).toBe('Run traffic');
-    expect(node('encounter-message').textContent).toBe('Add a second flight to compare an encounter.');
     await tick(1160); expect(world()).toEqual(before);
   });
 
@@ -152,7 +145,7 @@ describe('traffic playback controls', () => {
     expect(node('toggle-run').disabled).toBe(true);
     expect(node('toggle-run').textContent).toBe('Run traffic');
     await tick(1160); expect(world()).toEqual(before);
-    rejectPlan(new Error('Controlled unavailable planner')); await drainTasks();
+    rejectPlan(new Error('Controlled unavailable planner')); await setImmediate();
     expect(node('toggle-run').disabled).toBe(false);
     expect(node('toggle-run').textContent).toBe('Run traffic');
     expect(world()).toEqual(before);

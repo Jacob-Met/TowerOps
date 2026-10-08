@@ -1,4 +1,5 @@
-import html from '../index.html?raw';
+import { readFileSync } from 'node:fs';
+import { setImmediate } from 'node:timers/promises';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { WorldState } from '../src/core';
 import reference from './python-reference.json';
@@ -28,9 +29,6 @@ class ElementStub {
 }
 
 const fixture = reference.scenarios[0]!;
-function drainTasks(): Promise<void> {
-  return new Promise<void>(resolve => globalThis.setTimeout(resolve, 0));
-}
 let elements: Map<string, ElementStub>;
 let frames: FrameRequestCallback[];
 const node = (id: string) => {
@@ -42,12 +40,12 @@ async function dispatch(id: string, kind = 'click') {
   const element = node(id);
   expect(element.disabled, `${id} must be an enabled native control`).toBe(false);
   for (const listener of element.listeners.get(kind) ?? []) await listener({ currentTarget: element, target: element });
-  await drainTasks();
+  await setImmediate();
 }
 async function tick(time: number) {
   expect(frames).toHaveLength(1);
   frames.shift()!(time);
-  await drainTasks();
+  await setImmediate();
 }
 async function advance(start = 1000) { await tick(start); await tick(start + 80); }
 async function setRate(value: number) { node('speed-range').value = String(value); await dispatch('speed-range', 'input'); }
@@ -60,6 +58,7 @@ function world(): WorldState {
 beforeEach(async () => {
   vi.resetModules(); draw.mockReset(); python.mockReset();
   elements = new Map(); frames = [];
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   for (const match of html.matchAll(/<[a-z][\w-]*\b([^>]*\bid="[^"]+"[^>]*)>([^<]*)/gi)) {
     const attributes = new Map([...match[1]!.matchAll(/([\w-]+)(?:="([^"]*)")?/g)].map(item => [item[1]!, item[2] ?? '']));
     const element = new ElementStub();
@@ -71,7 +70,7 @@ beforeEach(async () => {
   vi.stubGlobal('window', { addEventListener: vi.fn() });
   vi.stubGlobal('requestAnimationFrame', (callback: FrameRequestCallback) => frames.push(callback));
   await import('../src/main');
-  await drainTasks();
+  await setImmediate();
 });
 afterEach(() => { vi.unstubAllGlobals(); });
 
@@ -152,7 +151,7 @@ describe('traffic playback controls', () => {
     expect(node('toggle-run').disabled).toBe(true);
     expect(node('toggle-run').textContent).toBe('Run traffic');
     await tick(1160); expect(world()).toEqual(before);
-    rejectPlan(new Error('Controlled unavailable planner')); await drainTasks();
+    rejectPlan(new Error('Controlled unavailable planner')); await setImmediate();
     expect(node('toggle-run').disabled).toBe(false);
     expect(node('toggle-run').textContent).toBe('Run traffic');
     expect(world()).toEqual(before);

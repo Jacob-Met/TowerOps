@@ -1,0 +1,171 @@
+{
+  "at": "2026-10-08T12:07:11.589Z",
+  "reviewer": "7a9310dad255/root",
+  "owner": "estate-e3a41d2b3368/local_recovery",
+  "owner_claim": "https://github.com/Jacob-Met/TowerOps/issues/37#issuecomment-6058749962",
+  "baseline": "09b96e31d2867af5b7a9738406d0431cf1010090",
+  "candidate": "0f6e453cee36bbfcece6c0c80e90a38bc39cd0bd",
+  "candidate_tree": "a07a0d044cd38073e6dec49d745244e3461732aa",
+  "baseline_main_sha256": "e712557df83d2159d8c496393e982de28dc7258be1beeefb7d3d4da0664b8d9f",
+  "candidate_main_sha256": "c9c07a4a1ce29e6a29e918ecbe26a75bd3816cc77741231a4167c99b408f43f5",
+  "unchanged_inherited_paths": 132,
+  "new_paths": [
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/README.md",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/baseline-browser-calibrated.log",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/baseline-browser-calibrated/fast-wide-policy-policy.png",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/baseline-browser-calibrated/fast-wide-policy-speed.png",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/baseline-browser-calibrated/receipt.json",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/baseline-browser-calibrated/slow-narrow-policy-policy.png",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/baseline-browser-calibrated/slow-narrow-policy-speed.png",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/baseline-build.log",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/baseline-calibrated-command.json",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/candidate-browser.log",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/candidate-browser/fast-wide-policy-policy.png",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/candidate-browser/fast-wide-policy-speed.png",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/candidate-browser/receipt.json",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/candidate-browser/slow-narrow-policy-policy.png",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/candidate-browser/slow-narrow-policy-speed.png",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/candidate-build.log",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/candidate-command.json",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/candidate-tests.log",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/initial-harness-attempt/browser-harness.cjs",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/initial-harness-attempt/command.json",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/initial-harness-attempt/receipt.json",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/initial-harness-attempt/run.log",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/native-build.mjs",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/native-vitest.config.mjs",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/receipt.json",
+    "docs/receipts/reset-controls-e3a41d2b3368-20261008/source-pins.json",
+    "tools/verify_airspace_reset.cjs"
+  ],
+  "mechanical_inverse_restores_entire_baseline": true,
+  "findings": [
+    "Reset assigns rate=1 before rendering; unchanged frame progression multiplies elapsed time by this same variable.",
+    "Reset derives slider values and adjacent policy readouts from its newly assigned DEFAULT_POLICY. Speed slider derives from rate, and unchanged render derives its readout from rate.",
+    "All other main.ts bytes, including planner, audit, pause boundaries and raw draft behavior, remain exact.",
+    "Actual native browser input and Add traffic then Reset restore exact fresh-page ranges/readouts/WorldState/paused button/clock at three authored control settings, including390px.",
+    "Root visually inspected phone-reset-controls.png: rate1.0x and policy5.0NM/1,000FT/5.0MIN are readable alongside their ranges."
+  ],
+  "builds": [
+    {
+      "label": "baseline",
+      "sha256": "efdeaaaba58310c49f4a8c59d37da27fbabb815b58abc05aa37350edd053ec82",
+      "steps": [
+        {
+          "name": "prepare-python",
+          "command": [
+            "/usr/bin/node",
+            "prepare-python.mjs"
+          ],
+          "cwd": "/tmp/hamon-7a9310dad255-tower-reset-owner-root/baseline-source/web/airspace",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "typecheck",
+          "command": [
+            "/usr/bin/node",
+            "/home/jacob/towerops-current-main-31366547c1f5/repository/web/airspace/node_modules/typescript/bin/tsc",
+            "--noEmit"
+          ],
+          "cwd": "/tmp/hamon-7a9310dad255-tower-reset-owner-root/baseline-source/web/airspace",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "vite",
+          "command": [
+            "/usr/bin/node",
+            "/tmp/hamon-7a9310dad255-tower-reset-owner-root/build-isolated.mjs",
+            "vite",
+            "baseline"
+          ],
+          "cwd": "/tmp/hamon-7a9310dad255-tower-reset-owner-root/baseline-source/web/airspace",
+          "status": 0,
+          "signal": null
+        }
+      ],
+      "assets": 13,
+      "all_assets_unchanged": true
+    },
+    {
+      "label": "candidate",
+      "sha256": "69dd1d957c6f3fe52f2bcba20a6f25bc45ebd2ea6d61fd8ee28588b6b2feb92f",
+      "steps": [
+        {
+          "name": "prepare-python",
+          "command": [
+            "/usr/bin/node",
+            "prepare-python.mjs"
+          ],
+          "cwd": "/tmp/hamon-7a9310dad255-tower-reset-owner-root/candidate-source/web/airspace",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "typecheck",
+          "command": [
+            "/usr/bin/node",
+            "/home/jacob/towerops-current-main-31366547c1f5/repository/web/airspace/node_modules/typescript/bin/tsc",
+            "--noEmit"
+          ],
+          "cwd": "/tmp/hamon-7a9310dad255-tower-reset-owner-root/candidate-source/web/airspace",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "vite",
+          "command": [
+            "/usr/bin/node",
+            "/tmp/hamon-7a9310dad255-tower-reset-owner-root/build-isolated.mjs",
+            "vite",
+            "candidate"
+          ],
+          "cwd": "/tmp/hamon-7a9310dad255-tower-reset-owner-root/candidate-source/web/airspace",
+          "status": 0,
+          "signal": null
+        }
+      ],
+      "assets": 13,
+      "all_assets_unchanged": true
+    }
+  ],
+  "browser": [
+    {
+      "label": "baseline",
+      "sha256": "95ccbc0d7d08e7e066bd56590aeb7b7b239df22367446c7c69508b5af53f0a8c",
+      "passed": 1,
+      "total": 4,
+      "browser": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/153.0.8010.47",
+        "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+        "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "jsVersion": "15.3.76.12"
+      },
+      "served_assets_bound_to_build": true,
+      "exceptions": 0,
+      "external": 0
+    },
+    {
+      "label": "candidate",
+      "sha256": "0fc5e81f4d56fd42d1e7305b79a41e139fa3251a6b94daaf7fa2e0c892fd4bc0",
+      "passed": 4,
+      "total": 4,
+      "browser": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/153.0.8010.47",
+        "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+        "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "jsVersion": "15.3.76.12"
+      },
+      "served_assets_bound_to_build": true,
+      "exceptions": 0,
+      "external": 0
+    }
+  ],
+  "contract_sha256": "2ddcd4b7427861848f0be7c7464f22c368360277dee5cdbd76cef90e64ca7893",
+  "driver_sha256": "30da922521710cbfd1702d41a4f67f104f24936725db20dfaaaa01cd2c62dbbd",
+  "qualification_boundary": "Exact existing owner candidate0f6 on09b; this does not receive later current9d70/9a2468, unpublished raw draft/scenario composition or55e broader playback controls. No timed frame-performance measurement is claimed.",
+  "setup_failure_preserved": "ENOSPC created an empty build helper; its exit0 performed no work and is not counted. Pinned sources and frozen driver were moved with303-entry exact verification to separate/tmp; only root-owned original copies were removed after successful verification."
+}

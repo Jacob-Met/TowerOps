@@ -1,0 +1,11 @@
+{
+  "archive": "/home/jacob/hamon-7a9310dad255-tower-bd1/receiving-current9d70.tar.gz",
+  "bytes": 167395,
+  "sha256": "3dfa3cd467e84362b3034e888b89b4c61cd2e76998c3845c7b499f4f84bbac25",
+  "git_blob": "4ad6e655c19e098755538811c35974329923865d",
+  "members": 68,
+  "uncompressed_bytes": 1061632,
+  "all_members_verified": true,
+  "source_acceptance_sha256": "bcea221f2f922fd7288d4a14b15cc60d87d6253a1cb8ae191969ad0614db8e34",
+  "manifest_sha256": "0803b9f11542984be207f510f572d1da18586e6a904376c18d5dad35621b1a8c"
+}

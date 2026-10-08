@@ -1,0 +1,41 @@
+{
+  "schema": "towerops.bd1-independent-acceptance.v1",
+  "result": "accepted for the exact captured owner implementation composed with current main9d70",
+  "owner": "chatgpt-astra-bd1abdb2f886-20261008/estate_production",
+  "reviewer": "7a9310dad255/memory",
+  "source_parent": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "source_tree": "27158d13dd400ef87357f7c4da00b4355e4ad1e6",
+  "native_head": "8f1f8082a1fd1e630fa2bc520dbf6d1da1674420",
+  "source_manifest_sha256": "7fc71407415c13050a2a7a76c0a25ec39c7a210d7ddf9155ed12dba3ebf8ec2f",
+  "original_owner_main_sha256": "fc72167eaa9f9d3ab1457bf6d4a9d4af464b3891d0d29a7249cb250e8ee3e794",
+  "composed_main_sha256": "35d95fa3e931ffef4f11562358f59a7a6128bbb1a7cbad36946a2c490551f6eb",
+  "reverse_owner_change_restores_current_main_blob": "77e1496b83c3f0a92ab1eea15e6b702013dd9e60",
+  "reverse_current_main_change_restores_owner_main": true,
+  "unchanged_current_parent_leaves": 138,
+  "source_files": 141,
+  "owner_test_sha256": "4d8196cdda7ab4509fdf0eba577966dbc03f62b9286d7ac93e84b5175253d7d2",
+  "baseline_receipt_sha256": "fd0a0ccee35a98503123d9fd428359ccb7655670eaabf3b5c313b30bb2a12936",
+  "candidate_receipt_sha256": "7a139a265e7fcfd3c631ea4b25467340d878f2b8890cacd211486af7f813bd37",
+  "semantic_groups": 7,
+  "baseline_passed": 4,
+  "baseline_failed": 3,
+  "candidate_passed": 7,
+  "transport_original_sha256": "c6934f7207a38569908773cb264be34e7dacbb761fa0290ec88ae657d1a620fe",
+  "transport_current_sha256": "f9adbf76945f82966c6f4632156f849326861cb11bfe3dde75c961bba53ce30c",
+  "transport_change": "Browser executable path only; all semantic source identical",
+  "configuration_adaptation": "Installed Node22 cannot load native .ts and was compiled without type stripping. The existing two-line JavaScript Vite config was loaded through a byte-exact own .mjs copy. Original source/config/dependency inputs stayed exact. Both preceding zero-case build failures retained.",
+  "ownership_boundaries": [
+    "No owner checkout or branch edit",
+    "Concurrent owner README/test changes remain distinct from captured receiving source",
+    "Earlier independently authored 7a repair remains a superseded proposal, not an application contribution",
+    "No main integration or deployment inferred",
+    "No additional scenario/Reset behavior claimed for this source; original extended historical receiving remains separately pinned"
+  ],
+  "source_review": [
+    "The dirty flag gates only automatic editor assignment while preserving the existing focused-editor guard",
+    "Input sets the flag and explains the explicit replacement actions",
+    "Successful raw Load clears the flag after JSON parse and native validation",
+    "Explicit Export replaces editor text and restores live following",
+    "Reset, encounter, policy, planner, audit and track-edit production statements are unchanged"
+  ]
+}

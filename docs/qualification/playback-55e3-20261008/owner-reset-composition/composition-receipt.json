@@ -1,0 +1,38 @@
+{
+  "schema": "towerops.playback.owner-reset-composition.v1",
+  "created_at": "2026-10-08T12:54:54.093331+00:00",
+  "source_owner": "estate-e3a41d2b3368/local_recovery",
+  "owner_claim": "https://github.com/Jacob-Met/TowerOps/issues/37#issuecomment-6058749962",
+  "composition_claim": "https://github.com/Jacob-Met/TowerOps/issues/37#issuecomment-6060293741",
+  "captured_native_owner_commit": "0f6e453cee36bbfcece6c0c80e90a38bc39cd0bd",
+  "captured_native_owner_tree": "a07a0d044cd38073e6dec49d745244e3461732aa",
+  "native_owner_commit_publicly_fetchable": false,
+  "receiving_archive": {
+    "public_commit": "a704b2c9f957a5f65169fa7eeb5e98f34c5a9d2c",
+    "path": "docs/verification/reset-owner-receiving-7a9310dad255/receiving-evidence.tar.gz",
+    "git_blob": "fb9d475af556fb81f8336a4da21914d8f1b6e4bd",
+    "sha256": "771d293ad387a2e6518bf1a0295a12177812a61b6c0f614277c2ac360f9d45fe",
+    "members": 77,
+    "export_manifest_entries_verified": 76,
+    "owner_overlay_entries_verified": 28
+  },
+  "baseline_main_sha256": "347cca82b84ea49c55efd468db995820d55d32249543aa69cc744797c4f3fc80",
+  "playback_candidate_main_sha256": "aec0e5398939e3b99cfe1e4b0cbe9ba5a63cb0df0de095a98f45aa035a4c11f9",
+  "owner_main_sha256": "c9c07a4a1ce29e6a29e918ecbe26a75bd3816cc77741231a4167c99b408f43f5",
+  "composed_main_sha256": "c4eefbe7b3fa6b259933e893ca625b279fb079905632ec31597295f61b5ee91e",
+  "only_reset_function_changed_from_playback_candidate": true,
+  "owner_reset_body_exact_except_shared_pause_and_consolidated_button_label": true,
+  "adopted_changes": [
+    "same retained Reset rate assignment",
+    "policy slider values derived from reset DEFAULT_POLICY",
+    "three adjacent policy readouts refreshed",
+    "speed slider derived from reset rate"
+  ],
+  "preserved": [
+    "native encounter/decision-trace modules",
+    "all other current main source",
+    "existing validation and world mutation ordering",
+    "bd1 draft and cf5799 scenario ownership"
+  ],
+  "qualification": "Source composition only at this freeze. Historical owner receiving remains bound to its original09b native source; current full build/Vitest/browser/CI acceptance follows separately."
+}
