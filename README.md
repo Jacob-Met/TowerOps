@@ -37,3 +37,9 @@ py -3 tools/capture_airspace.py
 ```
 
 The app uses synthetic or visitor-provided state only. It is a research simulation, not operational air-traffic-control software or aviation assurance. Approval/readback controls are fixtures, not real authority.
+## Explain one saved encounter
+
+`python3 inspect_encounter.py world.json EAST WEST --at-min 1.5` reports the
+selected pair's native analytical separation windows, their overlap, closest
+horizontal point and exact cursor separation without running the planner or
+changing the saved world. See [INSPECT_ENCOUNTER.md](INSPECT_ENCOUNTER.md).
