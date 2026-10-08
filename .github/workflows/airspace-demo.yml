@@ -2,9 +2,9 @@ name: TowerOps Airspace Lab
 on:
   push:
     branches: [main]
-    paths: [towerops.py, scenarios.py, tools/generate_airspace_reference.py, web/airspace/**, .github/workflows/airspace-demo.yml]
+    paths: [towerops.py, audit_replay.py, decision_trace.py, scenarios.py, tools/generate_airspace_reference.py, tools/verify_decision_trace.mjs, web/airspace/**, .github/workflows/airspace-demo.yml]
   pull_request:
-    paths: [towerops.py, scenarios.py, tools/generate_airspace_reference.py, web/airspace/**, .github/workflows/airspace-demo.yml]
+    paths: [towerops.py, audit_replay.py, decision_trace.py, scenarios.py, tools/generate_airspace_reference.py, tools/verify_decision_trace.mjs, web/airspace/**, .github/workflows/airspace-demo.yml]
   workflow_dispatch:
 permissions:
   contents: read
@@ -32,6 +32,10 @@ jobs:
       - run: python -m playwright install --with-deps chromium
       - run: PYTHONPATH=. python tools/verify_browser_python.py
       - run: python tools/capture_airspace.py --chrome ""
+      - name: Verify saved decision traces
+        run: |
+          TOWEROPS_PLAYWRIGHT_JS="$(python -c 'from pathlib import Path; import playwright; print(Path(playwright.__file__).parent / "driver" / "package" / "index.mjs")')"
+          node tools/verify_decision_trace.mjs --playwright "$TOWEROPS_PLAYWRIGHT_JS" --output "$RUNNER_TEMP/towerops-decision-trace-browser"
       - run: |
           mkdir -p site/airspace
           cp -R web/airspace/dist/. site/airspace/
