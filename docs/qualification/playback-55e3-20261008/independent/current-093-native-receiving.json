@@ -1,0 +1,514 @@
+{
+  "schema": "towerops.independent-current093-native-receiving.v1",
+  "reviewed_at_utc": "2026-10-08T14:36:11.975539+00:00",
+  "result": "accepted_current_native_build_playback_and_scoped_visual_evidence",
+  "native_base_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "native_base_tree": "4a87643d57cabf81e570b21c119f00b43f79448e",
+  "candidate_main": {
+    "bytes": 26601,
+    "sha256": "0893cae0bedbe7e7516b92c0f55eb01a0d6c09289dac3ed14d6f4da153b3b0dd",
+    "git_blob": "3c29b72c944df2c38a5a5fc6104aea6809bdca55"
+  },
+  "unchanged_playback_test": {
+    "bytes": 9072,
+    "sha256": "fbe02527200a428fae18c6d45b09ef942b9dcfd411d7e8a8bf11c30d5e74a845",
+    "git_blob": "de7a02cd88f69bf8192516cb1acf7aa6eb276853"
+  },
+  "driver": {
+    "bytes": 25299,
+    "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+    "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49"
+  },
+  "provider_packet": {
+    "publication_prefix": "docs/qualification/playback-55e3-20261008/native-093-0893/",
+    "receiving_manifest": {
+      "bytes": 10100,
+      "sha256": "6c769589a8361b5ea66cf8f6ea2f4026c2e40f74e91b5e117200a9c049a6506e",
+      "git_blob": "e3a42fbc2a98e6da77171f743f09f7c6750450ef"
+    },
+    "image_manifest": {
+      "bytes": 1799,
+      "sha256": "d7844981f99452fdf6e912260cc3cf1e0c4937625fd0d5fabcbc2aaac96a51d4",
+      "git_blob": "706e5987b7605d21fddfc3d998265658771db10d"
+    },
+    "exact_text_archive": {
+      "bytes": 143946,
+      "sha256": "ebbcfa95201660c59a7c5421ddd4adb17ed7c86d9bba1bcbeb3633279c788554",
+      "git_blob": "36a49c3744a990258678933eaafa8aa07d5e22e9"
+    },
+    "verified_raw_files": 18,
+    "verified_raw_bytes": 532728,
+    "archive_members_equal_originals": true,
+    "verified_png_files": 3,
+    "verified_png_bytes": 1147066
+  },
+  "source_and_build_custody": {
+    "native_manifest": {
+      "bytes": 33268,
+      "sha256": "4a695377d3d974fe2643b550442ee5459eaf162af1fe972e97e883abc3cfb106",
+      "git_blob": "aaad4132ae0dd02d4d0baf6102d39953747651fb"
+    },
+    "candidate_manifest": {
+      "bytes": 31285,
+      "sha256": "bd65ceeabbf436b1ba620fbaa1202242dc95dca144e5f2ed189788e45c01202d",
+      "git_blob": "285140afc6b9dc559b80c547df6a789c93cc020e"
+    },
+    "native_stage_build": {
+      "bytes": 62632,
+      "sha256": "2b0566e401ce560443a9158251b20c6978d311db56da294aac25468a9804af44",
+      "git_blob": "31a63c670288051fb7645dede13dcc1a137ef172"
+    },
+    "native_browser_processes": {
+      "bytes": 18229,
+      "sha256": "779505295f37a824f346f37a527a08890d36c69e358dd24b47c1588dc73b00f1",
+      "git_blob": "f7145b6545810212677fd715fd104faba5f8ef82"
+    },
+    "source_counts": [
+      59,
+      60
+    ],
+    "both_build_output_counts": 16,
+    "installed_dependency_lock_unchanged": true,
+    "dependency_versions": {
+      "pyodide": "0.27.7",
+      "typescript": "5.7.3",
+      "vite": "8.3.3",
+      "vitest": "4.1.11"
+    },
+    "fresh_dependency_install_claimed": false
+  },
+  "native_commands": [
+    {
+      "name": "baseline-build",
+      "exit_code": 0,
+      "log": {
+        "path": "evidence/baseline-build.log",
+        "bytes": 508,
+        "sha256": "4b655efcdf381280d53e01e122d94995a46d5470699700c40a3c221d1d709489",
+        "git_blob": "b8b080351d0aaeb23cdbd741bde7ba33637f5618"
+      }
+    },
+    {
+      "name": "candidate-vitest-full",
+      "exit_code": 0,
+      "log": {
+        "path": "evidence/candidate-vitest-full.log",
+        "bytes": 1761,
+        "sha256": "e4d4ee18228b51e842e3cd544a9f6ee1d385971aa30a55391555e53e036f5267",
+        "git_blob": "3c518cce3fec7735da01159e63297290e69154c8"
+      }
+    },
+    {
+      "name": "candidate-build",
+      "exit_code": 0,
+      "log": {
+        "path": "evidence/candidate-build.log",
+        "bytes": 507,
+        "sha256": "f331173aa710d162b2acadb584f856a9e786b41045dfaa3b972e58448fb1d071",
+        "git_blob": "e5310461f3d0a26a5ceb9944c59c22f197b41e59"
+      }
+    }
+  ],
+  "native_tests": {
+    "passed": 147,
+    "total": 147,
+    "files": 11,
+    "includes_unchanged_playback_cases": 14,
+    "scope": "Full current Vitest suite on candidate; this does not assert baseline test execution."
+  },
+  "runs": [
+    {
+      "name": "baseline-desktop",
+      "report": {
+        "path": "evidence/baseline-desktop.json",
+        "bytes": 117680,
+        "sha256": "28830fc954c89c53b9278bd452d38d9e328ae3710e4e9fa8a66dafc092a50ed7",
+        "git_blob": "cff1afa66724852562a97dc1fe9fd7143e90300b"
+      },
+      "source_files": 59,
+      "build_files": 16,
+      "exact_source_and_build_before_after": true,
+      "browser": "Chrome/154.0.8037.98",
+      "page_exceptions": 0,
+      "viewport_width": 1280,
+      "scroll_width": 1280,
+      "cases": [
+        {
+          "name": "reset-3x",
+          "result": "exact_known_baseline_defect",
+          "failed_checks": [
+            "reset rate readout",
+            "reset horizontal policy readout",
+            "reset vertical policy readout",
+            "reset horizon policy readout",
+            "reset default engine rate: clock",
+            "reset default engine rate: TWR218 east",
+            "reset default engine rate: TWR419 east"
+          ],
+          "trusted_event_count": 49,
+          "reset_readout": "3.0x",
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "6.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,500 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "6.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "resumed_simulated_seconds": 14.4,
+          "resumed_east_deltas_nm": [
+            0.24,
+            -0.24
+          ]
+        },
+        {
+          "name": "reset-0.5x",
+          "result": "exact_known_baseline_defect",
+          "failed_checks": [
+            "reset rate readout",
+            "reset horizontal policy readout",
+            "reset vertical policy readout",
+            "reset horizon policy readout",
+            "reset default engine rate: clock",
+            "reset default engine rate: TWR218 east",
+            "reset default engine rate: TWR419 east"
+          ],
+          "trusted_event_count": 44,
+          "reset_readout": "0.5x",
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "6.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,500 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "6.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "resumed_simulated_seconds": 2.4,
+          "resumed_east_deltas_nm": [
+            0.04,
+            -0.04
+          ]
+        },
+        {
+          "name": "automatic-pause-policy-2x",
+          "result": "exact_known_baseline_defect",
+          "failed_checks": [
+            "automatic pause action label"
+          ],
+          "trusted_event_count": 21,
+          "paused_label": "Pause traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "paused_world_held": true,
+          "resumed_simulated_seconds": 9.6
+        },
+        {
+          "name": "automatic-pause-refused-flight-2x",
+          "result": "exact_known_baseline_defect",
+          "failed_checks": [
+            "automatic pause action label",
+            "paused encounter forecast",
+            "paused encounter source"
+          ],
+          "trusted_event_count": 17,
+          "paused_label": "Pause traffic",
+          "paused_encounter": {
+            "hidden": true,
+            "time_disabled": true,
+            "message": "Pause traffic to explore a stable forecast.",
+            "source": "WORLD 1 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "paused_world_held": true,
+          "resumed_simulated_seconds": 9.6
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "evidence/baseline-desktop.png",
+          "bytes": 444253,
+          "sha256": "5a53dfb10321f7f4e0cfc58c5bb02dde3c82186578447552192226675fccd8e1",
+          "git_blob": "ccb4016485a3d3e3c73f7242e56739c67b591cd6",
+          "dimensions": [
+            1280,
+            2385
+          ],
+          "step": "reset-3x/after-reset-paused"
+        }
+      ]
+    },
+    {
+      "name": "candidate-desktop",
+      "report": {
+        "path": "evidence/candidate-desktop.json",
+        "bytes": 110557,
+        "sha256": "1cc0fa9d768f651e686c5cbf47554041adcfc68f0ead3c1ad57f002d77d26586",
+        "git_blob": "d5fd9e96ed6a20cf74c576de6aa292c7b074e0e8"
+      },
+      "source_files": 60,
+      "build_files": 16,
+      "exact_source_and_build_before_after": true,
+      "browser": "Chrome/154.0.8037.98",
+      "page_exceptions": 0,
+      "viewport_width": 1280,
+      "scroll_width": 1280,
+      "cases": [
+        {
+          "name": "reset-3x",
+          "result": "pass",
+          "failed_checks": [],
+          "trusted_event_count": 49,
+          "reset_readout": "1.0x",
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "resumed_simulated_seconds": 4.8,
+          "resumed_east_deltas_nm": [
+            0.08,
+            -0.08
+          ]
+        },
+        {
+          "name": "reset-0.5x",
+          "result": "pass",
+          "failed_checks": [],
+          "trusted_event_count": 44,
+          "reset_readout": "1.0x",
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "resumed_simulated_seconds": 4.8,
+          "resumed_east_deltas_nm": [
+            0.08,
+            -0.08
+          ]
+        },
+        {
+          "name": "automatic-pause-policy-2x",
+          "result": "pass",
+          "failed_checks": [],
+          "trusted_event_count": 21,
+          "paused_label": "Run traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "paused_world_held": true,
+          "resumed_simulated_seconds": 9.6
+        },
+        {
+          "name": "automatic-pause-refused-flight-2x",
+          "result": "pass",
+          "failed_checks": [],
+          "trusted_event_count": 17,
+          "paused_label": "Run traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "paused_world_held": true,
+          "resumed_simulated_seconds": 9.6
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "evidence/candidate-desktop.png",
+          "bytes": 442715,
+          "sha256": "6d4936a3886cb0bd19fd00d4f0d4259c00a0f4b941c6cd5424e4879214fe628a",
+          "git_blob": "6f88dacace2322251ae382176068b8edbb15f5a5",
+          "dimensions": [
+            1280,
+            2385
+          ],
+          "step": "reset-3x/after-reset-paused"
+        }
+      ]
+    },
+    {
+      "name": "candidate-mobile",
+      "report": {
+        "path": "evidence/candidate-mobile.json",
+        "bytes": 110494,
+        "sha256": "bd0fbbb2f2024a9ad9ca5cd89fdef3f9b499f8e04199b97286992a48ff443553",
+        "git_blob": "55667c5340ede8a436f305a6dd294cfce77413aa"
+      },
+      "source_files": 60,
+      "build_files": 16,
+      "exact_source_and_build_before_after": true,
+      "browser": "Chrome/154.0.8037.98",
+      "page_exceptions": 0,
+      "viewport_width": 390,
+      "scroll_width": 390,
+      "cases": [
+        {
+          "name": "reset-3x",
+          "result": "pass",
+          "failed_checks": [],
+          "trusted_event_count": 49,
+          "reset_readout": "1.0x",
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "resumed_simulated_seconds": 4.8,
+          "resumed_east_deltas_nm": [
+            0.08,
+            -0.08
+          ]
+        },
+        {
+          "name": "reset-0.5x",
+          "result": "pass",
+          "failed_checks": [],
+          "trusted_event_count": 44,
+          "reset_readout": "1.0x",
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "resumed_simulated_seconds": 4.8,
+          "resumed_east_deltas_nm": [
+            0.08,
+            -0.08
+          ]
+        },
+        {
+          "name": "automatic-pause-policy-2x",
+          "result": "pass",
+          "failed_checks": [],
+          "trusted_event_count": 21,
+          "paused_label": "Run traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "paused_world_held": true,
+          "resumed_simulated_seconds": 9.6
+        },
+        {
+          "name": "automatic-pause-refused-flight-2x",
+          "result": "pass",
+          "failed_checks": [],
+          "trusted_event_count": 17,
+          "paused_label": "Run traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "paused_world_held": true,
+          "resumed_simulated_seconds": 9.6
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "evidence/candidate-mobile.png",
+          "bytes": 260098,
+          "sha256": "738e3d24d0096006dbf9ee42998e2862d619fddc07f029ed9bfa351af07aa4f8",
+          "git_blob": "124d8243164cbcd752cba476a49f7d23da928a60",
+          "dimensions": [
+            390,
+            3018
+          ],
+          "step": "reset-3x/after-reset-paused"
+        }
+      ]
+    }
+  ],
+  "independent_method": "Read-only hash and archive-member verification; compare raw Mac source/build maps against the previously received current manifests; check process-to-log/report/image pins; recalculate clock, version, every aircraft position and unchanged velocity from the actual reference fixture and raw exported WorldStates; verify exact failure sets, readouts, pause stability, trusted native events and layout bounds. No product rerun or source mutation.",
+  "visual_review": {
+    "performed": true,
+    "method": "Viewed all three original PNG files through view_image at original resolution after hash verification.",
+    "observed": "Current baseline visibly retains 3.0x and chosen 6.0 NM / 1,500 FT / 6.0 MIN readouts after Reset. Candidate desktop and 390px mobile show Run traffic, 1.0x and default 5.0 NM / 1,000 FT / 5.0 MIN with the new Review alternatives button present. Scoped controls and adjacent readouts are legible and contained.",
+    "limits": "Screenshots represent the reset-3x paused step, not every test state. The mobile canvas has preexisting dense/overlapping plot labels outside this playback control review; no general whole-page accessibility or perfect-layout claim. Mobile is a desktop Chrome viewport, not a physical phone."
+  },
+  "limits": [
+    "Actual built app and native input/WorldState Export were used; RAF timestamps are controlled. No planner, advisory selection, approval/readback or Pyodide browser execution is claimed.",
+    "The browser cases do not type a WorldState draft. Native Export intentionally replaces editor content and clears its draft flag; draft persistence remains the separate owner scope.",
+    "This acceptance names current093/0893 and unchanged f116. Prior C4, 803, original DOM-setup/TypeScript failures and the failed native input/ENOSPC/transport attempts retain their separate source cuts and original status.",
+    "These checks receive existing native results; they add no new product test count, deployment, operational airspace claim or current-head assumption."
+  ],
+  "proposed_repo_path": "docs/qualification/playback-55e3-20261008/independent/current-093-native-receiving.json"
+}

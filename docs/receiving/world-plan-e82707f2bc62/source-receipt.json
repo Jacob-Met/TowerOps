@@ -1,0 +1,202 @@
+{
+  "repository": "Jacob-Met/TowerOps",
+  "issue": 49,
+  "baseline_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "baseline_tree": "4a87643d57cabf81e570b21c119f00b43f79448e",
+  "owned_source": {
+    "plan_world.py": {
+      "bytes": 8119,
+      "sha256": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e",
+      "git_blob": "8e826a10cc2f9425de26727dce07851497174bba"
+    },
+    "tests/test_plan_world.py": {
+      "bytes": 16361,
+      "sha256": "4217c6de94844cdbcd135ee2ae21305b665176bc0d99a32900acb51219c54ca4",
+      "git_blob": "8ea1e3f8ea138f9b5b8b42fdadba2bc147c0db6f"
+    },
+    "PLAN_WORLD.md": {
+      "bytes": 7722,
+      "sha256": "e081823cb1b43aa458a25590d63785ee7b12b26d67bae53e70d20ad43505d3e7",
+      "git_blob": "4b73b0ff02748528ed698118e034c79ef517f9be"
+    },
+    "README.md": {
+      "bytes": 2018,
+      "sha256": "df98fe98a91697c1272a0832d46a41a3524e6acba96917a099a3719afe2841b0",
+      "git_blob": "d51c0341cd2b85169dbe62d62f178bdfc544f2e7"
+    }
+  },
+  "unchanged_native_source": {
+    "towerops.py": {
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "bytes": 19462
+    },
+    "advisory_options.py": {
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "bytes": 2380
+    },
+    "scenarios.py": {
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "bytes": 5989
+    },
+    "explorer.py": {
+      "sha256": "c16106e27f44f9dd247bcbc6ae677dc74db5340ffc8d2df9fd6df655fc9cb340",
+      "git_blob": "d19e5bf1bd2991b076d7166fc2280b7f1d312d9a",
+      "bytes": 5475
+    }
+  },
+  "opportunity": {
+    "baseline_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+    "world_sha256": "8cf4647288ab34b257b99d4dffbfad39736e95320f0def1038894ee5a35f3f35",
+    "source_sha256": {
+      "explorer.py": "c16106e27f44f9dd247bcbc6ae677dc74db5340ffc8d2df9fd6df655fc9cb340",
+      "scenarios.py": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+      "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    "native_library": {
+      "conflict": true,
+      "candidate_count": 74,
+      "admitted_count": 66,
+      "first_option_equals_original_planner": true,
+      "world_hash": "ae8ce380ecdddcef10cedfcdd46fcd601d9b6bdef5d33f90c4f531c2a5ed7150",
+      "first_advisory_hash": "b11d27112f7a48316f518c9d496a0d49a3970da94ce3bb41802cf94506456228"
+    },
+    "existing_cli": {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/dev/shm/e827-source-tower-plan/baseline/explorer.py",
+        "run",
+        "/dev/shm/e827-source-tower-plan/evidence/original-world.json"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: explorer.py run [-h] [--without-approval] [--without-ack]\n                       {approved,missing_approval,missing_ack,late_ack,stale_state,stale_binding,wrong_ack,expired}\nexplorer.py run: error: argument scenario: invalid choice: '/dev/shm/e827-source-tower-plan/evidence/original-world.json' (choose from approved, missing_approval, missing_ack, late_ack, stale_state, stale_binding, wrong_ack, expired)\n"
+    },
+    "input_unchanged": true
+  },
+  "author_receiving": {
+    "python": "3.12.14",
+    "framework": "unittest plus actual subprocesses",
+    "tests": 22,
+    "passed": 22,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "source_unchanged": true,
+    "receipt": {
+      "bytes": 2133,
+      "sha256": "ee8a4566d2243598a929b1660b0c81d1e531065fb25b426213cfa570472877e1",
+      "git_blob": "9351cf4272f27b8787a33ea1cd8fea4300151357"
+    },
+    "executed_source_freeze": {
+      "bytes": 1659,
+      "sha256": "93b006d59cf8f470d37568032985f54c9c5194e51788e765a470bf4c4c277f4b",
+      "git_blob": "84b725759d31aba831a1ffde1995a2e9832b0f8b"
+    },
+    "executed_production_blob": "3efe3d7e817b8c3757eb1453b8cfa5237bbf1f1e",
+    "executed_author_test_blob": "65255ee4352c04bdc163b18e1255567e87c808a8"
+  },
+  "prior_failed_receiving": {
+    "tests": 22,
+    "passed": 21,
+    "failures": 1,
+    "errors": 0,
+    "skips": 0,
+    "reason": "The original test incorrectly expected the public API now=None default-clock sentinel to be invalid. The receiving successor exempts only that default sentinel and adds an explicit --now null command-line refusal. Production source is unchanged.",
+    "original_test": {
+      "bytes": 16222,
+      "sha256": "e7355f1e647ea082e28b5e75061da61aa961248e5bd396e94bec4579a6c73198",
+      "git_blob": "d0f62c9a110e999dc2cc554d2eb1dd5db346bf9a"
+    },
+    "original_log": {
+      "bytes": 4339,
+      "sha256": "e85fae0233a5ae37aef66c082a701ceeba6527a44a0fd6fc87b676519456a140",
+      "git_blob": "08c1c6f2194d70f44f0e0f9afa5480fe49800457"
+    }
+  },
+  "local_limits": [
+    "Only the focused author suite ran locally. Existing whole-repository pytest, exact Ruff, adapter import and Airspace Lab gates remain hosted acceptance requirements.",
+    "A normal isolated installation attempt for pytest8.3.5/Ruff0.16.10 hit ENOSPC while downloading the Ruff wheel. It was stopped; no alternate validation gate was substituted.",
+    "This receiving exercises the actual native planner on synthetic data. It makes no browser, live feed, operational authority, actuation, deployment or exhaustive floating-point-accuracy claim.",
+    "Independent receiving is supplied in a separate source-bound packet. Final annotation/lint successor and current-parent composition still require the existing hosted gates; no local semantic rerun is claimed."
+  ],
+  "lint_successor": {
+    "changes": [
+      {
+        "path": "plan_world.py",
+        "before": {
+          "sha256": "6c001f4b39658a3a89fba3f458bcae46fe9577425274f16d17082cd83a40265e",
+          "git_blob": "3efe3d7e817b8c3757eb1453b8cfa5237bbf1f1e",
+          "bytes": 8125
+        },
+        "after": {
+          "sha256": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e",
+          "git_blob": "8e826a10cc2f9425de26727dce07851497174bba",
+          "bytes": 8119
+        },
+        "nonannotation_AST_identical": true
+      },
+      {
+        "path": "tests/test_plan_world.py",
+        "before": {
+          "sha256": "6a2041673b6105bfe5a52086932db2d28cf0a951be768e4b939df87eeffb952f",
+          "git_blob": "65255ee4352c04bdc163b18e1255567e87c808a8",
+          "bytes": 16367
+        },
+        "after": {
+          "sha256": "4217c6de94844cdbcd135ee2ae21305b665176bc0d99a32900acb51219c54ca4",
+          "git_blob": "8ea1e3f8ea138f9b5b8b42fdadba2bc147c0db6f",
+          "bytes": 16361
+        },
+        "nonannotation_AST_identical": true
+      }
+    ],
+    "replayed_locally": false,
+    "reason": "Only the two parameter annotations change to satisfy the exact existing Ruff gate; all executable AST and fixtures/assertions remain identical. Final hosted gates qualify the successor.",
+    "exact_Ruff_receipt": {
+      "argv": [
+        "/workspace/scratch/e82707f2bc62/capturesuite-numeric/tools-runtime/bin/ruff",
+        "check",
+        "--no-cache",
+        "/dev/shm/e827-source-tower-plan/candidate/plan_world.py",
+        "/dev/shm/e827-source-tower-plan/candidate/tests/test_plan_world.py",
+        "/workspace/scratch/e82707f2bc62/towerops-plan-independent/lint-successor/test_plan_world_receiving.py"
+      ],
+      "version": "0.16.10 (exact retained executable verified by root)",
+      "returncode": 0,
+      "source_sha256": {
+        "/dev/shm/e827-source-tower-plan/candidate/plan_world.py": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e",
+        "/dev/shm/e827-source-tower-plan/candidate/tests/test_plan_world.py": "4217c6de94844cdbcd135ee2ae21305b665176bc0d99a32900acb51219c54ca4",
+        "/workspace/scratch/e82707f2bc62/towerops-plan-independent/lint-successor/test_plan_world_receiving.py": "9735fb2605e232cd079685aca0f016c6995f8cb4043a1b864ac63dd34bcad4ed"
+      },
+      "source_unchanged": true
+    }
+  },
+  "bounded_additional_controls": [
+    {
+      "receipt": {
+        "bytes": 4555,
+        "sha256": "02c12f8508cf00e2b0d280cfe8ebff83cd8a2dad56fab64ac2ab6c4c6de2fe39",
+        "git_blob": "e04616d5752c8c7313a3000186617b21fda8d350"
+      },
+      "exit": 2,
+      "stdout_bytes": 0,
+      "traceback": false,
+      "source_blob": "3efe3d7e817b8c3757eb1453b8cfa5237bbf1f1e"
+    },
+    {
+      "receipt": {
+        "bytes": 4636,
+        "sha256": "02d83a04841b4abd31cc5636c76088521174d68461bc6f22d37d8f57a29c37e5",
+        "git_blob": "9d4008689e2a9eadd3332d1d938f6335b87e8eab"
+      },
+      "exit": 2,
+      "stdout_bytes": 0,
+      "traceback": false,
+      "source_blob": "3efe3d7e817b8c3757eb1453b8cfa5237bbf1f1e"
+    }
+  ]
+}
