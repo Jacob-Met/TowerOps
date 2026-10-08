@@ -15,15 +15,33 @@ async function digest(text:string):Promise<string> {
 }
 export class AuditLog {
   events:AuditEvent[]=[];
+  private appendTail:Promise<void>=Promise.resolve();
+
+  // Capture caller-owned data at invocation, then serialize the hash/publication
+  // boundary. Only committed events determine the next sequence and previous hash.
   async append(kind:string,payload:Record<string,unknown>):Promise<string> {
-    const prev=this.events.at(-1)?.event_hash??ZERO_HASH;
-    const body={seq:this.events.length,kind,payload,prev_hash:prev};
-    const canonical=canonicalJson(body);
-    const event_hash=await digest(prev+'\n'+canonical);
-    this.events.push({...body,event_hash});
-    const source=receivedBodies.get(this.events);
-    if(Array.isArray(source)&&source.length===body.seq)source.push(canonical);
-    return event_hash;
+    const snapshot=structuredClone(payload);
+    canonicalJson(snapshot);
+    const events=this.events;
+    const operation=this.appendTail.then(async()=>{
+      if(this.events!==events)throw new Error('Audit history changed before append');
+      const prev=events.at(-1)?.event_hash??ZERO_HASH;
+      const body={seq:events.length,kind,payload:snapshot,prev_hash:prev};
+      const canonical=canonicalJson(body);
+      const event_hash=await digest(prev+'\n'+canonical);
+      // A reset or imported-history replacement must not receive an event that
+      // was hashed against a different collection. Direct event tampering still
+      // remains detectable by verify(); it is never repaired here.
+      if(this.events!==events||events.length!==body.seq||(events.at(-1)?.event_hash??ZERO_HASH)!==prev)
+        throw new Error('Audit history changed during append');
+      events.push({...body,event_hash});
+      const source=receivedBodies.get(events);
+      if(Array.isArray(source)&&source.length===body.seq)source.push(canonical);
+      return event_hash;
+    });
+    // A failed append consumes no sequence and cannot poison subsequent work.
+    this.appendTail=operation.then(()=>undefined,()=>undefined);
+    return operation;
   }
   async verify():Promise<boolean> {
     const events=this.events;
