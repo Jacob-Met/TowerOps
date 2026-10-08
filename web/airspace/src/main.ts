@@ -1,4 +1,5 @@
 import '../style.css';
+import { createEncounterExplorer } from './encounter-view';
 import reference from '../tests/python-reference.json';
 import { Aircraft,DEFAULT_POLICY,SafetyPolicy,WorldState,conflictPairs,projected } from './core';
 import { createAircraft,conflictWindows,parseWorldState } from './world-tools';
@@ -14,6 +15,7 @@ type Scenario={name:string;state:WorldState;now:number};
 const fixture=(reference as unknown as {scenarios:Scenario[]}).scenarios[0]!;
 const $=<T extends HTMLElement>(id:string)=>document.getElementById(id) as T;
 const copy=(s:WorldState):WorldState=>JSON.parse(JSON.stringify(s)) as WorldState;
+const encounterExplorer=createEncounterExplorer($('encounter-explorer'));
 let policy:SafetyPolicy={...DEFAULT_POLICY};
 let state=copy(fixture.state),now=fixture.now,selected='TWR419',running=false,pending:Advisory|null=null,approval:Approval|null=null,audit=new AuditLog();
 let rate=1,lastFrame=0,trafficSeq=0,busy=false,pythonAudit='[]';
@@ -35,6 +37,7 @@ let proposalMessage='No proposal yet. The planner only returns a setpoint if it 
 async function render():Promise<void>{
  decisionTrace.setBusy(busy);
  const pairs=conflictPairs(state,policy);drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);drawLists(pairs);
+ encounterExplorer.update(state,policy,running);
  const badge=$('world-badge');badge.className=`badge ${pairs.length?'alert':'safe'}`;badge.textContent=pairs.length?'ACTION':'CLEAR';
  setText('world-title',pairs.length?`${pairs.length} conflict pair${pairs.length===1?'':'s'} inside policy envelope`:'No projected conflict');
  setText('world-note',pairs.length?'Horizontal and vertical unsafe-time intervals overlap inside the active policy horizon.':'No simultaneous horizontal and vertical intrusion inside the active policy horizon.');
@@ -138,7 +141,7 @@ async function reviewDecisionTrace(raw:string):Promise<DecisionTraceReport>{
 async function acceptReadback(){if(busy||!pending||!approval)return;const a=pending,applyNow=now+0.5,ack:Ack={advisory_hash:a.advisory_hash,status:'accepted',acknowledged_at:now+0.4};try{busy=true;await render();const result=await towerPython({op:'apply',state,advisory:a,approval,ack,now:applyNow,policy,audit_json:pythonAudit});pythonAudit=result.audit_json;audit.events=result.events as AuditEvent[];if(result.error)throw new GateRejected(result.error);if(!result.valid)throw new Error('Python audit chain verification failed');state=result.state;setText('python-status','Live CPython · ControlRoom.apply · audit verified');now=applyNow;pending=null;approval=null;gateScreen='done';gateApproval='done';gateAck='done';const n=conflictPairs(state,policy).length;proposalMessage=n?`Actuation is simulated; ${n} conflict pair(s) remain. Run another bounded pass.`:'Simulated setpoint applied. No projected conflict remains in the policy window.';}catch(err){proposalMessage=`GATE REJECTED: ${err instanceof GateRejected?err.reason:String(err)}. No state transition was applied.`;pending=null;approval=null;gateScreen='fail';gateAck='fail';}finally{busy=false;}await render();}
 function resetWorld(){running=false;policy={...DEFAULT_POLICY};$<HTMLInputElement>('policy-horizontal').value='5';$<HTMLInputElement>('policy-vertical').value='1000';$<HTMLInputElement>('policy-horizon').value='5';state=copy(fixture.state);now=fixture.now;selected='TWR419';trafficSeq=0;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';gateScreen='wait';gateApproval='wait';gateAck='wait';proposalMessage='Reset to the crossing scenario from demo.py. Run the bounded planner to propose a safe vector.';$<HTMLInputElement>('speed-range').value='1';$('toggle-run').textContent='Run traffic';void render();}
 function frame(t:number){if(!lastFrame)lastFrame=t;const elapsed=Math.min(0.08,Math.max(0,(t-lastFrame)/1000));lastFrame=t;if(running){const minutes=elapsed*rate;now+=minutes*60;state={version:state.version+1,observed_at:now,aircraft:state.aircraft.map(a=>projected(a,minutes))};drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);setText('sim-clock',`T+${Math.floor(now-fixture.now)} SEC`);if(t%250<20)void render();}requestAnimationFrame(frame);}
-$('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');});
+$('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');encounterExplorer.update(state,policy,running);});
 $('reset-world').addEventListener('click',resetWorld);$('add-traffic').addEventListener('click',addTraffic);$('perturb-track').addEventListener('click',perturbTrack);$('run-planner').addEventListener('click',()=>void runPlanner());$('approve').addEventListener('click',approvePlan);$('readback').addEventListener('click',()=>void acceptReadback());
 $('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>void audit.verify().then(ok=>setText('audit-verdict',ok?`HASH CHAIN VALID - ${audit.events.length} EVENTS`:'HASH CHAIN INVALID')));$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);});
 $('edit-selected-track').addEventListener('click',startTrackEdit);$('preview-track-edit').addEventListener('click',previewSelectedTrack);$('apply-track-edit').addEventListener('click',applySelectedTrack);$('cancel-track-edit').addEventListener('click',cancelSelectedTrack);
