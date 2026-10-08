@@ -1,0 +1,203 @@
+{
+  "format": "towerops-independent-receiving-receipt-v1",
+  "reviewer": "/root/product_execution",
+  "session": "066deeadcc8b",
+  "accepted": true,
+  "native_parent": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "native_candidate_source_archive_sha256": "45b1a56c6754f66b73a8bd9ed38f9169f7f3c599314312625341c5b6c97f656a",
+  "source_only_publication_parent": "473d36f8135ced7c4000fefd8fc91c0128d3c106",
+  "source_only_publication_tree": "49061dc44cf45da6b405483a84c08c79fc2e756f",
+  "native_product_change_requested": false,
+  "application_execution_complete": true,
+  "later_parent_native_rerun": false,
+  "independent_criteria_frozen_before_candidate_inspection": true,
+  "criteria_predate_author_implementation": false,
+  "source_scope": [
+    "world_plan_html.py",
+    "plan_world.py",
+    "tests/test_world_plan_html.py",
+    "WORLD_PLAN_HTML.md",
+    "README.md"
+  ],
+  "outcome": {
+    "format": "towerops-independent-cold-verification-v1",
+    "product_execution": false,
+    "browser_execution": false,
+    "archive_members": 382,
+    "source": {
+      "baseline_files": 33,
+      "candidate_files": 36,
+      "unowned_candidate_files": 31,
+      "unchanged_nonmain_definitions": 7,
+      "canonical_explorer_mode": "100755",
+      "native_explorer_projection_mode": "100644"
+    },
+    "baseline_cli": {
+      "checks": 64,
+      "processes": 16
+    },
+    "candidate_cli": {
+      "checks": 84,
+      "processes": 21
+    },
+    "unchanged_native_json_outputs": 7,
+    "browser": {
+      "views": 9,
+      "checks": 6122,
+      "exact_positive_downloads": 9,
+      "separate_control_downloads": 2,
+      "rendered_alternative_appearances": 400,
+      "world_data_cells": 119,
+      "component_value_cells": 2400,
+      "negative_controls_rejected": [
+        "drop-last-alternative",
+        "wrong-json-download"
+      ],
+      "preserved_first_observer_failures": 17,
+      "mobile_alternative_checks": 9,
+      "visually_reviewed_pngs": 4
+    },
+    "source_only_current_parent": {
+      "commit": "473d36f8135ced7c4000fefd8fc91c0128d3c106",
+      "tree": "49061dc44cf45da6b405483a84c08c79fc2e756f",
+      "closure_unchanged_except_readme": 32,
+      "scope_unchanged_except_readme": 4,
+      "native_rerun": false
+    }
+  },
+  "native_projection_exception": {
+    "path": "explorer.py",
+    "observed_native_mode": "100644",
+    "canonical_mode_to_preserve": "100755",
+    "bytes_unchanged": true
+  },
+  "retained_history": [
+    "First6116-check browser run with17observer-binding failures, original drivers and exact successor patch",
+    "Purpose-built write path-validation timeout followed by observed absence and exclusive ordinary write",
+    "Current-composition helper refused known native/canonical executable-mode difference; exact exception corrected",
+    "Initial archive guard refused before archive creation because current proof was pending"
+  ],
+  "no_claims": [
+    "No flight actuation, operational aviation assurance or whole-world conflict resolution",
+    "No planner reranking or new screening",
+    "No latest-parent native rerun",
+    "No physical printer/PDF output"
+  ],
+  "frozen_at": 1791490269.2177436,
+  "files": {
+    "README.md": {
+      "bytes": 7778,
+      "sha256": "eb05a006046d3ae6ff17a8f2664c7d2684f5699f2f42a8f88c0201cb27369688",
+      "git_blob": "7d19b0cfb2bdc36b5511c7d7372fe1a0a5e1315e",
+      "mode": "100644"
+    },
+    "archive-freeze.json": {
+      "bytes": 356,
+      "sha256": "bf1de665971a23279c4a4bd54612d2e14b6ddc228a7421f64ca46fd64e84ccb6",
+      "git_blob": "2a775b4f7fbfac0e49115b6b14c8a836398fad7e",
+      "mode": "100644"
+    },
+    "cold-replay-commands.json": {
+      "bytes": 2135,
+      "sha256": "a9d6be8eaa4209c46a010f94a268b7288f1cfc124d4b77db3da3444afb11ad37",
+      "git_blob": "7ee6c8952946b2066d2513a006937a52ff01eb5a",
+      "mode": "100644"
+    },
+    "native-manifest.json": {
+      "bytes": 94019,
+      "sha256": "03e42cd634b6fd52eb50eacf2e1fcd55d5225e93944fd5178decd61d3dc33e5a",
+      "git_blob": "30c35d3401f913d9308840b4bf886f26e23046e9",
+      "mode": "100644"
+    },
+    "native-peer.tar.xz": {
+      "bytes": 908628,
+      "sha256": "e868b0055987f58504d62ab28501c83633754a4cc69e551c44f2e26de5082172",
+      "git_blob": "89d5821c4d26654edfef7a4841029fcb72d4ec0d",
+      "mode": "100644"
+    },
+    "negative-controls.json": {
+      "bytes": 308,
+      "sha256": "45a302a1e58cf28b0f281065907999d1f572b947929db864c39352a86d367557",
+      "git_blob": "9e9c5c9e5e008b3f4fd087cbc96fe9f3d7c09e56",
+      "mode": "100644"
+    },
+    "negative-optimized.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    "negative-optimized.stdout": {
+      "bytes": 308,
+      "sha256": "45a302a1e58cf28b0f281065907999d1f572b947929db864c39352a86d367557",
+      "git_blob": "9e9c5c9e5e008b3f4fd087cbc96fe9f3d7c09e56",
+      "mode": "100644"
+    },
+    "negative.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    "negative.stdout": {
+      "bytes": 308,
+      "sha256": "45a302a1e58cf28b0f281065907999d1f572b947929db864c39352a86d367557",
+      "git_blob": "9e9c5c9e5e008b3f4fd087cbc96fe9f3d7c09e56",
+      "mode": "100644"
+    },
+    "normal.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    "normal.stdout": {
+      "bytes": 1261,
+      "sha256": "156c9f9ddd0ad190b984ab53d2f13d95f10a649486c3b31ae24f043bb6f053a8",
+      "git_blob": "28146efab0960e96f9eb0846048926879b2afe18",
+      "mode": "100644"
+    },
+    "optimized.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    "optimized.stdout": {
+      "bytes": 1261,
+      "sha256": "156c9f9ddd0ad190b984ab53d2f13d95f10a649486c3b31ae24f043bb6f053a8",
+      "git_blob": "28146efab0960e96f9eb0846048926879b2afe18",
+      "mode": "100644"
+    },
+    "verification-attempt-1.json": {
+      "bytes": 285,
+      "sha256": "383c176f68109b01f889b89b204de3efb361a8b17fb3dfa4e442c69d2962cf2d",
+      "git_blob": "7c8d4759dc0191bc0d660e15320878ce5f62fe96",
+      "mode": "100644"
+    },
+    "verification-attempt-1.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    "verification-attempt-1.stdout": {
+      "bytes": 1261,
+      "sha256": "156c9f9ddd0ad190b984ab53d2f13d95f10a649486c3b31ae24f043bb6f053a8",
+      "git_blob": "28146efab0960e96f9eb0846048926879b2afe18",
+      "mode": "100644"
+    },
+    "verification.json": {
+      "bytes": 1261,
+      "sha256": "156c9f9ddd0ad190b984ab53d2f13d95f10a649486c3b31ae24f043bb6f053a8",
+      "git_blob": "28146efab0960e96f9eb0846048926879b2afe18",
+      "mode": "100644"
+    },
+    "verify-peer.py": {
+      "bytes": 12926,
+      "sha256": "52d77824af6d5aa2a71246502459ff6910edc35160885653e3d2e0c687cb9783",
+      "git_blob": "a2e78e86801202e5e006cec760d5f6808cf4adf4",
+      "mode": "100644"
+    }
+  }
+}

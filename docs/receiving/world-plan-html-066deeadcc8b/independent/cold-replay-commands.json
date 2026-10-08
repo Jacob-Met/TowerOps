@@ -1,0 +1,62 @@
+[
+  {
+    "label": "normal",
+    "argv": [
+      "/usr/bin/python3",
+      "-B",
+      "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen/verify-peer.py",
+      "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen"
+    ],
+    "returncode": 0,
+    "start": 1791490209.225491,
+    "end": 1791490211.5803123,
+    "stdout_sha256": "156c9f9ddd0ad190b984ab53d2f13d95f10a649486c3b31ae24f043bb6f053a8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "optimized",
+    "argv": [
+      "/usr/bin/python3",
+      "-B",
+      "-O",
+      "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen/verify-peer.py",
+      "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen"
+    ],
+    "returncode": 0,
+    "start": 1791490211.580402,
+    "end": 1791490218.8358552,
+    "stdout_sha256": "156c9f9ddd0ad190b984ab53d2f13d95f10a649486c3b31ae24f043bb6f053a8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "negative",
+    "argv": [
+      "/usr/bin/python3",
+      "-B",
+      "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen/verify-peer.py",
+      "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen",
+      "--negative-controls"
+    ],
+    "returncode": 0,
+    "start": 1791490218.8359032,
+    "end": 1791490222.9738986,
+    "stdout_sha256": "45a302a1e58cf28b0f281065907999d1f572b947929db864c39352a86d367557",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "negative-optimized",
+    "argv": [
+      "/usr/bin/python3",
+      "-B",
+      "-O",
+      "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen/verify-peer.py",
+      "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen",
+      "--negative-controls"
+    ],
+    "returncode": 0,
+    "start": 1791490222.9739296,
+    "end": 1791490232.096309,
+    "stdout_sha256": "45a302a1e58cf28b0f281065907999d1f572b947929db864c39352a86d367557",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

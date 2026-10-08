@@ -18,6 +18,12 @@ experiments for the same exact native world and review clock, showing policy
 changes and complete advisory membership/order without planning again.
 See [COMPARE_PLANS.md](COMPARE_PLANS.md) for exact identities, file limits and JSON output.
 
+## Compare native alternatives in an offline document
+
+Use `python3 plan_world.py world.json --html > review.html` to inspect every
+individually screened alternative beside the current flight, with complete
+policy/world provenance and an exact JSON download. See [WORLD_PLAN_HTML.md](WORLD_PLAN_HTML.md).
+
 ## Verify
 
 From the repository root:
