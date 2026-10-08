@@ -17,7 +17,15 @@ export function canonicalJson(value:unknown,key=''):string {
   if(typeof value==='number') {
     if(!Number.isFinite(value)) throw new Error('TowerOps state must be finite');
     if(Object.is(value,-0)) return INTEGER_KEYS.has(key)?'0':'-0.0';
-    if(Number.isInteger(value)&&!INTEGER_KEYS.has(key)) return `${value}.0`;
+    if(!INTEGER_KEYS.has(key)) {
+      // Python json uses float repr: scientific outside [1e-4, 1e16),
+      // with an explicit sign and at least two exponent digits.
+      const [mantissa,exponentText]=value.toExponential().split('e');
+      const exponent=Number(exponentText);
+      if(exponent < -4 || exponent >= 16)
+        return `${mantissa}e${exponent<0?'-':'+'}${Math.abs(exponent).toString().padStart(2,'0')}`;
+      if(Number.isInteger(value)) return `${value}.0`;
+    }
     return JSON.stringify(value);
   }
   if(Array.isArray(value)) return `[${value.map(v=>canonicalJson(v,key)).join(',')}]`;
