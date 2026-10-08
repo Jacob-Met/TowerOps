@@ -1,0 +1,182 @@
+{
+  "runtime": "Node 24.19.0; Vitest 4.1.11; TypeScript 5.7.3",
+  "tests": 25,
+  "passed": 4,
+  "failed": 21,
+  "success": false,
+  "suites": [
+    {
+      "name": "/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts",
+      "status": "failed",
+      "tests": [
+        {
+          "name": "numeric admission does not depend on another aircraft rejects NaN in set_vx_nm_min through the screening gate",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:45:5\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects NaN in set_vy_nm_min through the screening gate",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:45:5\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects NaN in set_climb_ft_min through the screening gate",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:45:5\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vx_nm_min'=true",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:51:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vx_nm_min'='1'",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:51:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vx_nm_min'=null",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:51:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vy_nm_min'=true",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:51:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vy_nm_min'='1'",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:51:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_vy_nm_min'=null",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:51:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_climb_ft_min'=true",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:51:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_climb_ft_min'='1'",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:51:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects coercible command 'set_climb_ft_min'=null",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:51:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'x_nm'=false",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:58:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'x_nm'='0'",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:58:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'x_nm'=null",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:58:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'y_nm'=false",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:58:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'y_nm'='0'",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:58:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'y_nm'=null",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:58:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'altitude_ft'=false",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:58:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'altitude_ft'='0'",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:58:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft rejects a retained nonnumeric position 'altitude_ft'=null",
+          "status": "failed",
+          "failures": [
+            "AssertionError: expected true to be false // Object.is equality\n    at expectUnsafe (/dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:32:47)\n    at /dev/shm/hamon-8304-towerops-ts/web/airspace/tests/advisory-numeric.test.ts:58:7\n    at file:///workspace/scratch/72ac1419fd11/production/towerops/web/airspace/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+          ]
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft preserves finite approved rates (0, 0, 0), including the exact bounds",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft preserves finite approved rates (6, 0, 3000), including the exact bounds",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft preserves finite approved rates (0, -6, -3000), including the exact bounds",
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "name": "numeric admission does not depend on another aircraft still rejects an unknown target with finite rates",
+          "status": "passed",
+          "failures": []
+        }
+      ]
+    }
+  ]
+}

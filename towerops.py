@@ -241,6 +241,11 @@ class SafetyPolicy:
     def advisory_safe(self, state: WorldState, advisory: Advisory) -> bool:
         if advisory.world_hash != state.world_hash:
             return False
+        # A singleton has no pairwise checks to reject unknown candidate fields.
+        if not all(_finite_number(value) for value in (
+            advisory.set_vx_nm_min, advisory.set_vy_nm_min, advisory.set_climb_ft_min,
+        )):
+            return False
         if math.hypot(advisory.set_vx_nm_min, advisory.set_vy_nm_min) > self.max_speed_nm_min:
             return False
         if abs(advisory.set_climb_ft_min) > self.max_climb_ft_min:
@@ -248,6 +253,8 @@ class SafetyPolicy:
         try:
             target = state.get(advisory.aircraft_id)
         except KeyError:
+            return False
+        if not all(_finite_number(value) for value in (target.x_nm, target.y_nm, target.altitude_ft)):
             return False
         candidate = replace(target, vx_nm_min=advisory.set_vx_nm_min, vy_nm_min=advisory.set_vy_nm_min, climb_ft_min=advisory.set_climb_ft_min)
         return all(not self._pair_conflict(candidate, other) for other in state.aircraft if other.aircraft_id != candidate.aircraft_id)

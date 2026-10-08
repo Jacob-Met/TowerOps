@@ -1,0 +1,643 @@
+{
+  "source": "/workspace/scratch/8304a40f6f50/integration-review-towerops/base",
+  "cases": [
+    {
+      "name": "finite_single_target",
+      "request": {
+        "op": "apply",
+        "state": {
+          "version": 1,
+          "observed_at": 1000.0,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": 1.0,
+              "vy_nm_min": 0.0,
+              "climb_ft_min": 0.0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5.0,
+          "min_vertical_ft": 1000.0,
+          "horizon_min": 5.0,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10.0,
+          "max_speed_nm_min": 6.0,
+          "max_climb_ft_min": 3000.0
+        },
+        "now": 1002.5,
+        "advisory": {
+          "aircraft_id": "SOLO",
+          "world_hash": "3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7",
+          "set_vx_nm_min": 0.5,
+          "set_vy_nm_min": 0.25,
+          "set_climb_ft_min": 50.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic receiving boundary",
+          "advisory_hash": "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95"
+        },
+        "approval": {
+          "advisory_hash": "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "audit_json": "[]"
+      },
+      "valid": true,
+      "numeric_wire": false,
+      "expected": {
+        "state": {
+          "version": 2,
+          "observed_at": 1002.5,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": 0.5,
+              "vy_nm_min": 0.25,
+              "climb_ft_min": 50.0
+            }
+          ]
+        },
+        "events": [
+          {
+            "seq": 0,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7",
+              "advisory_hashes": [
+                "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95"
+              ]
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "55fce9e11541bdc87b5f6c6fdef8e69bee310321037a25a6b3a36c7114d33b6b"
+          },
+          {
+            "seq": 1,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "synthetic-controller"
+            },
+            "prev_hash": "55fce9e11541bdc87b5f6c6fdef8e69bee310321037a25a6b3a36c7114d33b6b",
+            "event_hash": "88d383ef6ea0a664c19dc6e76c127c4f7d0f6d29560e48382ee384a871c1a47e"
+          },
+          {
+            "seq": 2,
+            "kind": "ack",
+            "payload": {
+              "advisory_hash": "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95",
+              "status": "accepted",
+              "acknowledged_at": 1002.4
+            },
+            "prev_hash": "88d383ef6ea0a664c19dc6e76c127c4f7d0f6d29560e48382ee384a871c1a47e",
+            "event_hash": "1b0800dc4d859d4792826aa1daa09bc9dc3673c40676fb3ff38f5d131151e0a7"
+          },
+          {
+            "seq": 3,
+            "kind": "simulated_actuation",
+            "payload": {
+              "advisory_hash": "b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95",
+              "before_world_hash": "3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7",
+              "after_world_hash": "f68fe0ba8401b1b174fc20c0e6ee2a5644b0a974d5c7f76b754394d6158c7242"
+            },
+            "prev_hash": "1b0800dc4d859d4792826aa1daa09bc9dc3673c40676fb3ff38f5d131151e0a7",
+            "event_hash": "10338d148f67e82c1030fa8447dacae91dc5ffc108b5fdd363a755c049242681"
+          }
+        ],
+        "valid": true,
+        "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7\", \"advisory_hashes\": [\"b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"55fce9e11541bdc87b5f6c6fdef8e69bee310321037a25a6b3a36c7114d33b6b\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"55fce9e11541bdc87b5f6c6fdef8e69bee310321037a25a6b3a36c7114d33b6b\", \"event_hash\": \"88d383ef6ea0a664c19dc6e76c127c4f7d0f6d29560e48382ee384a871c1a47e\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"88d383ef6ea0a664c19dc6e76c127c4f7d0f6d29560e48382ee384a871c1a47e\", \"event_hash\": \"1b0800dc4d859d4792826aa1daa09bc9dc3673c40676fb3ff38f5d131151e0a7\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"b3a9e67b24c39f16cbd60cdf3c3a989931cd9e2bec34f14c71b062b38310bf95\", \"before_world_hash\": \"3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7\", \"after_world_hash\": \"f68fe0ba8401b1b174fc20c0e6ee2a5644b0a974d5c7f76b754394d6158c7242\"}, \"prev_hash\": \"1b0800dc4d859d4792826aa1daa09bc9dc3673c40676fb3ff38f5d131151e0a7\", \"event_hash\": \"10338d148f67e82c1030fa8447dacae91dc5ffc108b5fdd363a755c049242681\"}]"
+      }
+    },
+    {
+      "name": "finite_replacement_recovers_old_velocity",
+      "request": {
+        "op": "apply",
+        "state": {
+          "version": 1,
+          "observed_at": 1000.0,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": "NaN",
+              "vy_nm_min": "Infinity",
+              "climb_ft_min": "-Infinity"
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5.0,
+          "min_vertical_ft": 1000.0,
+          "horizon_min": 5.0,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10.0,
+          "max_speed_nm_min": 6.0,
+          "max_climb_ft_min": 3000.0
+        },
+        "now": 1002.5,
+        "advisory": {
+          "aircraft_id": "SOLO",
+          "world_hash": "3373a2bc4a89c3b97cb42b61de3d15a45a2f3f4356b7b67c4a6a6a1b195da71f",
+          "set_vx_nm_min": 0.5,
+          "set_vy_nm_min": 0.25,
+          "set_climb_ft_min": 50.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic receiving boundary",
+          "advisory_hash": "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b"
+        },
+        "approval": {
+          "advisory_hash": "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "audit_json": "[]"
+      },
+      "valid": true,
+      "numeric_wire": false,
+      "expected": {
+        "state": {
+          "version": 2,
+          "observed_at": 1002.5,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": 0.5,
+              "vy_nm_min": 0.25,
+              "climb_ft_min": 50.0
+            }
+          ]
+        },
+        "events": [
+          {
+            "seq": 0,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "3373a2bc4a89c3b97cb42b61de3d15a45a2f3f4356b7b67c4a6a6a1b195da71f",
+              "advisory_hashes": [
+                "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b"
+              ]
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "a92e106ed2e7a14df9a32177286b80864ea4b8e404a0b6e2c1f3f614eef15bd3"
+          },
+          {
+            "seq": 1,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "synthetic-controller"
+            },
+            "prev_hash": "a92e106ed2e7a14df9a32177286b80864ea4b8e404a0b6e2c1f3f614eef15bd3",
+            "event_hash": "2013b3d12bc9af27d245ebf552a1c9773f50951371edc20c9a98b53a18037d4a"
+          },
+          {
+            "seq": 2,
+            "kind": "ack",
+            "payload": {
+              "advisory_hash": "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b",
+              "status": "accepted",
+              "acknowledged_at": 1002.4
+            },
+            "prev_hash": "2013b3d12bc9af27d245ebf552a1c9773f50951371edc20c9a98b53a18037d4a",
+            "event_hash": "6a419aec4451f30aa451b1e84c49a11e046983d6c508c87a1bad51fd3f9871ed"
+          },
+          {
+            "seq": 3,
+            "kind": "simulated_actuation",
+            "payload": {
+              "advisory_hash": "5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b",
+              "before_world_hash": "3373a2bc4a89c3b97cb42b61de3d15a45a2f3f4356b7b67c4a6a6a1b195da71f",
+              "after_world_hash": "f68fe0ba8401b1b174fc20c0e6ee2a5644b0a974d5c7f76b754394d6158c7242"
+            },
+            "prev_hash": "6a419aec4451f30aa451b1e84c49a11e046983d6c508c87a1bad51fd3f9871ed",
+            "event_hash": "acd86dfd222528082896bc2a98b6916323bb2660143b73dac532d6845902b8e4"
+          }
+        ],
+        "valid": true,
+        "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"3373a2bc4a89c3b97cb42b61de3d15a45a2f3f4356b7b67c4a6a6a1b195da71f\", \"advisory_hashes\": [\"5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"a92e106ed2e7a14df9a32177286b80864ea4b8e404a0b6e2c1f3f614eef15bd3\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"a92e106ed2e7a14df9a32177286b80864ea4b8e404a0b6e2c1f3f614eef15bd3\", \"event_hash\": \"2013b3d12bc9af27d245ebf552a1c9773f50951371edc20c9a98b53a18037d4a\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"2013b3d12bc9af27d245ebf552a1c9773f50951371edc20c9a98b53a18037d4a\", \"event_hash\": \"6a419aec4451f30aa451b1e84c49a11e046983d6c508c87a1bad51fd3f9871ed\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"5d3dead3a076786303df0f2b0fc0c74e6a940ed3cf4c9df18786e25cee0e4c4b\", \"before_world_hash\": \"3373a2bc4a89c3b97cb42b61de3d15a45a2f3f4356b7b67c4a6a6a1b195da71f\", \"after_world_hash\": \"f68fe0ba8401b1b174fc20c0e6ee2a5644b0a974d5c7f76b754394d6158c7242\"}, \"prev_hash\": \"6a419aec4451f30aa451b1e84c49a11e046983d6c508c87a1bad51fd3f9871ed\", \"event_hash\": \"acd86dfd222528082896bc2a98b6916323bb2660143b73dac532d6845902b8e4\"}]"
+      }
+    },
+    {
+      "name": "nan_command_vx",
+      "request": {
+        "op": "apply",
+        "state": {
+          "version": 1,
+          "observed_at": 1000.0,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": 1.0,
+              "vy_nm_min": 0.0,
+              "climb_ft_min": 0.0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5.0,
+          "min_vertical_ft": 1000.0,
+          "horizon_min": 5.0,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10.0,
+          "max_speed_nm_min": 6.0,
+          "max_climb_ft_min": 3000.0
+        },
+        "now": 1002.5,
+        "advisory": {
+          "aircraft_id": "SOLO",
+          "world_hash": "3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7",
+          "set_vx_nm_min": "NaN",
+          "set_vy_nm_min": 0.25,
+          "set_climb_ft_min": 50.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic receiving boundary",
+          "advisory_hash": "a80022be09849aa4ea4a1b2c563fe8fc2c58ea16bc5bb79b3eb5babece57f174"
+        },
+        "approval": {
+          "advisory_hash": "a80022be09849aa4ea4a1b2c563fe8fc2c58ea16bc5bb79b3eb5babece57f174",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "a80022be09849aa4ea4a1b2c563fe8fc2c58ea16bc5bb79b3eb5babece57f174",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "audit_json": "[]"
+      },
+      "valid": false,
+      "numeric_wire": false
+    },
+    {
+      "name": "infinite_command_vy",
+      "request": {
+        "op": "apply",
+        "state": {
+          "version": 1,
+          "observed_at": 1000.0,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": 1.0,
+              "vy_nm_min": 0.0,
+              "climb_ft_min": 0.0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5.0,
+          "min_vertical_ft": 1000.0,
+          "horizon_min": 5.0,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10.0,
+          "max_speed_nm_min": 6.0,
+          "max_climb_ft_min": 3000.0
+        },
+        "now": 1002.5,
+        "advisory": {
+          "aircraft_id": "SOLO",
+          "world_hash": "3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7",
+          "set_vx_nm_min": 0.5,
+          "set_vy_nm_min": "Infinity",
+          "set_climb_ft_min": 50.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic receiving boundary",
+          "advisory_hash": "0dcc9b35662b8dfa8abdd11e4dabffa449d3d7fd641eabc99caf3692390ed76b"
+        },
+        "approval": {
+          "advisory_hash": "0dcc9b35662b8dfa8abdd11e4dabffa449d3d7fd641eabc99caf3692390ed76b",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "0dcc9b35662b8dfa8abdd11e4dabffa449d3d7fd641eabc99caf3692390ed76b",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "audit_json": "[]"
+      },
+      "valid": false,
+      "numeric_wire": false
+    },
+    {
+      "name": "nan_command_climb",
+      "request": {
+        "op": "apply",
+        "state": {
+          "version": 1,
+          "observed_at": 1000.0,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": 1.0,
+              "vy_nm_min": 0.0,
+              "climb_ft_min": 0.0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5.0,
+          "min_vertical_ft": 1000.0,
+          "horizon_min": 5.0,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10.0,
+          "max_speed_nm_min": 6.0,
+          "max_climb_ft_min": 3000.0
+        },
+        "now": 1002.5,
+        "advisory": {
+          "aircraft_id": "SOLO",
+          "world_hash": "3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7",
+          "set_vx_nm_min": 0.5,
+          "set_vy_nm_min": 0.25,
+          "set_climb_ft_min": "NaN",
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic receiving boundary",
+          "advisory_hash": "6b5d9c7b40df017f0ff1d793ace335bf84b5e06444c5d0e2b496a3f6fafca2b8"
+        },
+        "approval": {
+          "advisory_hash": "6b5d9c7b40df017f0ff1d793ace335bf84b5e06444c5d0e2b496a3f6fafca2b8",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "6b5d9c7b40df017f0ff1d793ace335bf84b5e06444c5d0e2b496a3f6fafca2b8",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "audit_json": "[]"
+      },
+      "valid": false,
+      "numeric_wire": false
+    },
+    {
+      "name": "retained_nan_x",
+      "request": {
+        "op": "apply",
+        "state": {
+          "version": 1,
+          "observed_at": 1000.0,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": "NaN",
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": 1.0,
+              "vy_nm_min": 0.0,
+              "climb_ft_min": 0.0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5.0,
+          "min_vertical_ft": 1000.0,
+          "horizon_min": 5.0,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10.0,
+          "max_speed_nm_min": 6.0,
+          "max_climb_ft_min": 3000.0
+        },
+        "now": 1002.5,
+        "advisory": {
+          "aircraft_id": "SOLO",
+          "world_hash": "1eb3c3f369866cee059dc37cb5efa0155c27a5c265adb23d23099bebdb5f126f",
+          "set_vx_nm_min": 0.5,
+          "set_vy_nm_min": 0.25,
+          "set_climb_ft_min": 50.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic receiving boundary",
+          "advisory_hash": "8cafdc366cfd088a55f0702b5e533855ff2051de202fcb2a1d11e7b12d48f10e"
+        },
+        "approval": {
+          "advisory_hash": "8cafdc366cfd088a55f0702b5e533855ff2051de202fcb2a1d11e7b12d48f10e",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "8cafdc366cfd088a55f0702b5e533855ff2051de202fcb2a1d11e7b12d48f10e",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "audit_json": "[]"
+      },
+      "valid": false,
+      "numeric_wire": false
+    },
+    {
+      "name": "retained_infinite_y",
+      "request": {
+        "op": "apply",
+        "state": {
+          "version": 1,
+          "observed_at": 1000.0,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": "Infinity",
+              "altitude_ft": 10000.0,
+              "vx_nm_min": 1.0,
+              "vy_nm_min": 0.0,
+              "climb_ft_min": 0.0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5.0,
+          "min_vertical_ft": 1000.0,
+          "horizon_min": 5.0,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10.0,
+          "max_speed_nm_min": 6.0,
+          "max_climb_ft_min": 3000.0
+        },
+        "now": 1002.5,
+        "advisory": {
+          "aircraft_id": "SOLO",
+          "world_hash": "2d48a2eb5be8d3f937569dcd7dd1c8cf98d8701ce2e51c663b8db4d0dba865c4",
+          "set_vx_nm_min": 0.5,
+          "set_vy_nm_min": 0.25,
+          "set_climb_ft_min": 50.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic receiving boundary",
+          "advisory_hash": "0544acae9c954fcdf499499353098e214306e2d62987298be97b52ad5d49e89d"
+        },
+        "approval": {
+          "advisory_hash": "0544acae9c954fcdf499499353098e214306e2d62987298be97b52ad5d49e89d",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "0544acae9c954fcdf499499353098e214306e2d62987298be97b52ad5d49e89d",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "audit_json": "[]"
+      },
+      "valid": false,
+      "numeric_wire": false
+    },
+    {
+      "name": "retained_nan_altitude",
+      "request": {
+        "op": "apply",
+        "state": {
+          "version": 1,
+          "observed_at": 1000.0,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": 0.0,
+              "altitude_ft": "NaN",
+              "vx_nm_min": 1.0,
+              "vy_nm_min": 0.0,
+              "climb_ft_min": 0.0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5.0,
+          "min_vertical_ft": 1000.0,
+          "horizon_min": 5.0,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10.0,
+          "max_speed_nm_min": 6.0,
+          "max_climb_ft_min": 3000.0
+        },
+        "now": 1002.5,
+        "advisory": {
+          "aircraft_id": "SOLO",
+          "world_hash": "3db14c480b42282a92643980160685409915d8710e7d2cca8bdfa0d2874060c4",
+          "set_vx_nm_min": 0.5,
+          "set_vy_nm_min": 0.25,
+          "set_climb_ft_min": 50.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic receiving boundary",
+          "advisory_hash": "cefa948f57cd7dcdbb28863b87faddc746c66920181d4982854393b92278bb59"
+        },
+        "approval": {
+          "advisory_hash": "cefa948f57cd7dcdbb28863b87faddc746c66920181d4982854393b92278bb59",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "cefa948f57cd7dcdbb28863b87faddc746c66920181d4982854393b92278bb59",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "audit_json": "[]"
+      },
+      "valid": false,
+      "numeric_wire": false
+    },
+    {
+      "name": "js_nan_serializes_as_null",
+      "request": {
+        "op": "apply",
+        "state": {
+          "version": 1,
+          "observed_at": 1000.0,
+          "aircraft": [
+            {
+              "aircraft_id": "SOLO",
+              "x_nm": 0.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": 1.0,
+              "vy_nm_min": 0.0,
+              "climb_ft_min": 0.0
+            }
+          ]
+        },
+        "policy": {
+          "min_horizontal_nm": 5.0,
+          "min_vertical_ft": 1000.0,
+          "horizon_min": 5.0,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10.0,
+          "max_speed_nm_min": 6.0,
+          "max_climb_ft_min": 3000.0
+        },
+        "now": 1002.5,
+        "advisory": {
+          "aircraft_id": "SOLO",
+          "world_hash": "3d842a76e3e79286c2ee04e047a6681088c44a8d2c07b1c8915497963d6ea7a7",
+          "set_vx_nm_min": "NaN",
+          "set_vy_nm_min": 0.25,
+          "set_climb_ft_min": 50.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic receiving boundary",
+          "advisory_hash": "a80022be09849aa4ea4a1b2c563fe8fc2c58ea16bc5bb79b3eb5babece57f174"
+        },
+        "approval": {
+          "advisory_hash": "a80022be09849aa4ea4a1b2c563fe8fc2c58ea16bc5bb79b3eb5babece57f174",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "a80022be09849aa4ea4a1b2c563fe8fc2c58ea16bc5bb79b3eb5babece57f174",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "audit_json": "[]"
+      },
+      "valid": false,
+      "numeric_wire": true
+    }
+  ]
+}

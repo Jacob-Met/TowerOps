@@ -1,0 +1,121 @@
+{
+  "source_base": "d99d238f7da62d74852e07fc90da406f87c2d371",
+  "source_pins": [
+    {
+      "path": "web/airspace/src/planner.ts",
+      "git_blob": "82082fa50cbec1a0d30d377bb4cd3e1a67416d5e",
+      "sha256": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74"
+    },
+    {
+      "path": "web/airspace/tests/advisory-numeric.test.ts",
+      "git_blob": "7da0bf284bd167429cab0a3cff27bfad49c87a18",
+      "sha256": "4c36af766b9b30160b069d6ce31580741387989680be0118a8ac6f5c5fe8fd19"
+    },
+    {
+      "path": "towerops.py",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "path": "web/airspace/src/core.ts",
+      "git_blob": "34f5d7aa640f16fd45fce6e46a0232ccfe2fd759",
+      "role": "unchanged inherited source"
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "git_blob": "ca8698b11d0f7b810f84e00dea538b09079f7b08",
+      "role": "unchanged inherited source"
+    }
+  ],
+  "steps": [
+    {
+      "command": [
+        "node",
+        "prepare-python.mjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/vite/bin/vite.js",
+        "build",
+        "--configLoader",
+        "native"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "build_artifact_count": 11,
+  "build_exactly_equal": true,
+  "qualified_build_manifest_sha256": "a908f7db7c2a9135179d67289b8dc123645bfd41bb8218f0e6fd68cdf77ab4d8",
+  "qualified_browser_receipt_sha256": "6fd458781dddb605cd7ccd7d8dd17583c4ae7dc116a2767c43fa44a6bfdb0fe4",
+  "build_log_sha256": "867b5b932bb1db287010d0aecbe55ae1fa1c60c93a69a60ca6c403cf0f20f7cb",
+  "files": [
+    {
+      "path": "assets/index-DNkt_xJY.css",
+      "bytes": 13947,
+      "sha256": "3bbea4e27973bc9b03ed7d90cedd69760f22f23b14b24045e7c9f63d7c529a62"
+    },
+    {
+      "path": "assets/index-DQHL8flo.js",
+      "bytes": 36240,
+      "sha256": "4faba04b36916cdd2ce2e25c03ee13bb2fcb81c40c64ea64676166f3b3528f82"
+    },
+    {
+      "path": "assets/python-worker-Dt6KeInE.js",
+      "bytes": 2215,
+      "sha256": "c8d1b770c7af524abccd33059af629306853b6db36134509829a3bd9a29565fc"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 10070,
+      "sha256": "4802752378cdd5b0ee903f16641f45f2c2d2baea4cd48bb4fe6e8f96f7811d2e"
+    },
+    {
+      "path": "python/pyodide-lock.json",
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "python/pyodide.asm.js",
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "python/pyodide.asm.wasm",
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "python/pyodide.mjs",
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "python/python_stdlib.zip",
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "python/towerops.py",
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    }
+  ],
+  "browser_rerun": false,
+  "reason": "All eleven final served artifacts are byte-identical to the real-browser-qualified build. Type-only main.ts Advisory import is erased; unused TypeScript gate/planner functions are tree-shaken. Live planning and actuation use the unchanged Python worker and frozen native Python candidate."
+}

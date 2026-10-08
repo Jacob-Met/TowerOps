@@ -1,0 +1,16 @@
+[
+  {"id":"finite_diagonal_boundary", "advisory":{"set_vx_nm_min":3.6,"set_vy_nm_min":4.8,"set_climb_ft_min":3000.0}, "expected_python":"accept", "expected_ts":"accept"},
+  {"id":"finite_distant_peer", "peer":"far", "expected_python":"accept", "expected_ts":"accept"},
+  {"id":"nan_command_singleton", "advisory":{"set_vy_nm_min":"__NaN__"}, "expected_python":"reject", "expected_ts":"reject"},
+  {"id":"boolean_command_singleton", "advisory":{"set_vx_nm_min":true}, "expected_python":"reject", "expected_ts":"reject"},
+  {"id":"null_climb_singleton", "advisory":{"set_climb_ft_min":null}, "expected_python":"reject", "expected_ts":"reject"},
+  {"id":"string_retained_altitude_singleton", "target":{"altitude_ft":"10000"}, "expected_python":"reject", "expected_ts":"reject"},
+  {"id":"boolean_retained_y_singleton", "target":{"y_nm":false}, "expected_python":"reject", "expected_ts":"reject"},
+  {"id":"nan_retained_x_singleton", "target":{"x_nm":"__NaN__"}, "expected_python":"reject", "expected_ts":"hash-error"},
+  {"id":"replace_nonfinite_motion_safe_peer", "target":{"vx_nm_min":"__NaN__","vy_nm_min":"__Infinity__","climb_ft_min":"__-Infinity__"}, "peer":"far", "expected_python":"accept", "expected_ts":"hash-error"},
+  {"id":"replace_nonfinite_motion_conflicting_peer", "target":{"vx_nm_min":"__NaN__","vy_nm_min":"__Infinity__","climb_ft_min":"__-Infinity__"}, "peer":"near", "expected_python":"reject", "expected_ts":"hash-error"},
+  {"id":"replace_nonnumeric_motion_safe_peer", "target":{"vx_nm_min":true,"vy_nm_min":"0","climb_ft_min":null}, "peer":"far", "expected_python":"accept", "expected_ts":"accept"},
+  {"id":"replace_nonnumeric_motion_conflicting_peer", "target":{"vx_nm_min":true,"vy_nm_min":"0","climb_ft_min":null}, "peer":"near", "expected_python":"reject", "expected_ts":"reject"},
+  {"id":"invalid_untouched_peer", "peer":"far", "peer_changes":{"altitude_ft":"10000"}, "expected_python":"reject", "expected_ts":"reject"},
+  {"id":"nan_command_distant_peer", "advisory":{"set_vy_nm_min":"__NaN__"}, "peer":"far", "expected_python":"reject", "expected_ts":"reject"}
+]
