@@ -1,0 +1,57 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> towerops-airspace-lab@0.1.0 test
+> vitest run --run tests/python-audit-interop.test.ts
+
+
+ RUN  v4.1.11 /workspace/scratch/68094585a1c2/production/towerops/web/airspace
+
+ ❯ tests/python-audit-interop.test.ts (3 tests | 2 failed) 245ms
+     × keeps a valid approval/readback chain at clock 0.8 valid 77ms
+     × keeps a valid approval/readback chain at clock 0.6 valid 71ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/python-audit-interop.test.ts > real Python Worker audit received by the browser verifier > keeps a valid approval/readback chain at clock 0.8 valid
+AssertionError: [{"seq": 0, "kind": "screen_pass", "payload": {"world_hash": "a5ce9d30cea79dbdee8244704fb0945f261ce21d3481ac9a47473b5e734d8a8a", "advisory_hashes": ["5f48a20fba90ed86a2459fa3c16ad128c97ede8459c40e6ae9bd6384900b70a2"]}, "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000", "event_hash": "8479a3dffc73bdc75c06f5450dc0167ef7c80b63acdf8b6e8666b8d7aec1ba0f"}, {"seq": 1, "kind": "approval", "payload": {"advisory_hash": "5f48a20fba90ed86a2459fa3c16ad128c97ede8459c40e6ae9bd6384900b70a2", "decision": "approve", "approved_at": 1, "approver": "synthetic-controller"}, "prev_hash": "8479a3dffc73bdc75c06f5450dc0167ef7c80b63acdf8b6e8666b8d7aec1ba0f", "event_hash": "c8e252764afc69c1f7f9f8eeb7624e6635097f0eb064414f4eb4b34315080e5c"}, {"seq": 2, "kind": "ack", "payload": {"advisory_hash": "5f48a20fba90ed86a2459fa3c16ad128c97ede8459c40e6ae9bd6384900b70a2", "status": "accepted", "acknowledged_at": 1.2000000000000002}, "prev_hash": "c8e252764afc69c1f7f9f8eeb7624e6635097f0eb064414f4eb4b34315080e5c", "event_hash": "8cb9fd9e02bc6fbfd872b36bd2a2aa2d189399662a6f826e0c9ada38ce2895e7"}, {"seq": 3, "kind": "simulated_actuation", "payload": {"advisory_hash": "5f48a20fba90ed86a2459fa3c16ad128c97ede8459c40e6ae9bd6384900b70a2", "before_world_hash": "a5ce9d30cea79dbdee8244704fb0945f261ce21d3481ac9a47473b5e734d8a8a", "after_world_hash": "d85e7ac456892d3e5e17128d6f9e7fdcd6bacc3d98a2d00ff02f86b79f7cbdde"}, "prev_hash": "8cb9fd9e02bc6fbfd872b36bd2a2aa2d189399662a6f826e0c9ada38ce2895e7", "event_hash": "5a97764b9b105ebd876739d33eab4b0eb6a9c12ab6c7d516d719a9667f82d9c3"}]: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/python-audit-interop.test.ts:58:53
+     56|     const audit = new AuditLog();
+     57|     audit.events = result.events;
+     58|     expect(await audit.verify(), result.audit_json).toBe(true);
+       |                                                     ^
+     59|   });
+     60| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/python-audit-interop.test.ts > real Python Worker audit received by the browser verifier > keeps a valid approval/readback chain at clock 0.6 valid
+AssertionError: [{"seq": 0, "kind": "screen_pass", "payload": {"world_hash": "0ab57a6b2a65324e8980b119f52cdce3dcd474d19ceac3bcb4e455e38e84d85d", "advisory_hashes": ["5a1e259d9865c29e2b8803d17cb63db09112abbb7f75958dc883cd008e8791fa"]}, "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000", "event_hash": "b59422e712c248a5b980101457da03a23660663090fb3f7f84007937cae5df44"}, {"seq": 1, "kind": "approval", "payload": {"advisory_hash": "5a1e259d9865c29e2b8803d17cb63db09112abbb7f75958dc883cd008e8791fa", "decision": "approve", "approved_at": 0.8, "approver": "synthetic-controller"}, "prev_hash": "b59422e712c248a5b980101457da03a23660663090fb3f7f84007937cae5df44", "event_hash": "dc8ff80880678b64d9e96d10becd1dfa87fcbe7a40cadd74c3cd5884a621b511"}, {"seq": 2, "kind": "ack", "payload": {"advisory_hash": "5a1e259d9865c29e2b8803d17cb63db09112abbb7f75958dc883cd008e8791fa", "status": "accepted", "acknowledged_at": 1}, "prev_hash": "dc8ff80880678b64d9e96d10becd1dfa87fcbe7a40cadd74c3cd5884a621b511", "event_hash": "5b4e4eaec7c6ed8896d9ad4ba256a2d51be23087222ee8647eeb73e184249f22"}, {"seq": 3, "kind": "simulated_actuation", "payload": {"advisory_hash": "5a1e259d9865c29e2b8803d17cb63db09112abbb7f75958dc883cd008e8791fa", "before_world_hash": "0ab57a6b2a65324e8980b119f52cdce3dcd474d19ceac3bcb4e455e38e84d85d", "after_world_hash": "2663765569b4a8157c0919264121bdb2cbbece040200930f683b1d1e513ff069"}, "prev_hash": "5b4e4eaec7c6ed8896d9ad4ba256a2d51be23087222ee8647eeb73e184249f22", "event_hash": "16060a17f13f5760df682e4d1d8e91c0363e8faef409626c258cbde46e832934"}]: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/python-audit-interop.test.ts:58:53
+     56|     const audit = new AuditLog();
+     57|     audit.events = result.events;
+     58|     expect(await audit.verify(), result.audit_json).toBe(true);
+       |                                                     ^
+     59|   });
+     60| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 1 passed (3)
+   Start at  17:25:14
+   Duration  652ms (transform 121ms, setup 0ms, import 155ms, tests 245ms, environment 0ms)

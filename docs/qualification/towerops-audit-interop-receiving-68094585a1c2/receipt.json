@@ -1,0 +1,106 @@
+{
+  "schema": "towerops.audit-interop.receiving.v1",
+  "created_at": "2026-10-08T08:36:09.299371+00:00",
+  "repository": "Jacob-Met/TowerOps",
+  "base_commit": "e522e53246986327b7903f3c404abf8a04ab5f1d",
+  "candidate_bridge": {
+    "path": "web/airspace/src/python-worker.ts",
+    "sha256": "54882f2f3f4b351f17fec31f6f75cc21e9446da6486ab911ac69a3d0e7bb52db",
+    "git_blob": "ab9e4e0bfa21edd3603294ac3bfc77e048022180",
+    "bytes": 3116
+  },
+  "baseline_bridge_sha256": "24f7c0fc48a5ff8c75ef236bff1b50f0353950938303f6c7a21ad5235573ac7f",
+  "native_producer_sha256": "8abe33edea5a7bdcdf6e6f81d31168c485f5a29229aa8d14c3310ae08728745e",
+  "scope": "Independent interoperability qualification; no reviewer implementation changes.",
+  "results": {
+    "baseline_normal": {
+      "passed": 3,
+      "failed": 4,
+      "skipped": 0
+    },
+    "baseline_optimized": {
+      "passed": 3,
+      "failed": 4,
+      "skipped": 0
+    },
+    "candidate_normal": {
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0
+    },
+    "candidate_optimized": {
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "baseline_failures": [
+    "integer timestamp browser/native parity",
+    "integer approval with refused readback audit parity",
+    "continued successful integer apply audit parity",
+    "refusal after successful integer apply audit parity"
+  ],
+  "independent_controls": [
+    "approval-only, ack-only, both, and zero integral timestamp combinations",
+    "10 invalid-type timestamp refusals: bool/string/null/list/object across approval and acknowledgement",
+    "missing, early, and late readback after integer approval",
+    "two successful applications preserving the exact native audit_json carrier and prior four-event prefix",
+    "fractional timestamps and supplementary-plane Unicode in a signed payload",
+    "five payload/sequence/link/claimed-hash/order mutations rejected by actual Python and TypeScript verification",
+    "refusal after successful integer application without a second simulated actuation"
+  ],
+  "source_review_resolution": "An earlier active draft unconditionally called float(v). Reviewer raised boolean/string/null admission risk; author narrowed conversion to type(v) is int before the executable probe. No executed defect is claimed for that unfrozen draft. All retained executions use the guarded candidate pin.",
+  "execution": {
+    "node": "v24.19.0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "typescript": "5.7.3",
+    "browser_consumer": "actual pinned core.ts and audit.ts, compiled in memory by the existing TypeScript compiler; only local module import resolution supplied",
+    "python_consumer": "actual pinned towerops.py plus the exact Python embedded in frozen baseline/candidate python-worker.ts",
+    "fixture": "Independent synthetic single-aircraft world and advisory built with native dataclasses; actual ControlRoom gate/application decides results. No reimplementation of canonicalization, audit verification, or gates."
+  },
+  "limits": [
+    "No browser/Pyodide loading, Worker lifecycle, live UI, or deployed-state claim.",
+    "Existing scientific-notation/extreme-float serialization differences were outside this bounded worker timestamp review.",
+    "Python continuation uses the existing raw audit_json string carrier; reserializing browser event numbers into a fresh Python audit stream is a different contract.",
+    "Standalone Node harness is evidence tooling; no product, dependency, authority, or receipt-schema changes made by reviewer."
+  ],
+  "setup_history": [
+    "Shared overlay ENOSPC prevented initial private-directory materialization. Original frozen packets were preserved; only reviewer-owned reproducible Python/test caches were removed.",
+    "Root explicitly assigned private /dev/shm/hamon-68094585a1c2/memory-review; all remaining files and temporary paths stay there.",
+    "Node Playwright package exists, but its advertised Chromium executable and local cached browser executables were absent; none was installed or started."
+  ],
+  "files": {
+    "native_bridge.py": {
+      "bytes": 2755,
+      "sha256": "a377f2270df59655f25952bb6e03fc9aeff3a1dc785650439f6ef4cc1373020d"
+    },
+    "review_audit_interop.mjs": {
+      "bytes": 8268,
+      "sha256": "08df6bde69fafa45abc30715b2c48bb65e9f9fdd6633265bf2b97265e187172a"
+    },
+    "source-pins.json": {
+      "bytes": 1673,
+      "sha256": "fa917e817321da224d26536f03d6a01011c9ce0ef40f3ebf51e15948897832f8"
+    },
+    "initial-refusal-probe.json": {
+      "bytes": 4460,
+      "sha256": "c936f056208f97ad1fd9e9c824ab3d66dbee9b6b546965cbf44fbd3910f4467c"
+    },
+    "baseline-normal.log": {
+      "bytes": 4880,
+      "sha256": "e98b50a422d8990ff0cd325253d55c8d4e94a0f687cc72fafc743bd822401448"
+    },
+    "baseline-optimized.log": {
+      "bytes": 4884,
+      "sha256": "9be2cff58fd96d1581f3ae4127668673a187be677bb480b6a41feb5a6cdf5acf"
+    },
+    "candidate-normal.log": {
+      "bytes": 2137,
+      "sha256": "eb15d4fef345531cadc7b4fdeec100ca9f1e8d3f9f2894cd32ca32b66bc81b34"
+    },
+    "candidate-optimized.log": {
+      "bytes": 2141,
+      "sha256": "a8c714e2870a6986f446e6be3689234aa5371b56890a170533b49a953d016c98"
+    }
+  }
+}
