@@ -1,0 +1,31 @@
+{
+  "source": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+  "tree": "356e66716c8953a3c2aac8a23790ce6eeaba20d0",
+  "browser": "153.0.8010.0",
+  "python_status": "Live CPython \u00b7 towerops.py \u00b7 AdvisoryPlanner",
+  "proposal": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+  "buttons": [
+    "Run planner",
+    "Approve",
+    "Accept readback + apply",
+    "Run traffic",
+    "Reset",
+    "+ Inject crossing traffic",
+    "Inject this track",
+    "Remove selected",
+    "Edit TWR419",
+    "Preview edit",
+    "Apply scenario edit",
+    "Cancel edit",
+    "Perturb selected track",
+    "Export live world",
+    "Load into simulation",
+    "TWR218",
+    "TWR419",
+    "Verify chain"
+  ],
+  "audit_unchanged": "",
+  "external_requests": [],
+  "page_errors": [],
+  "served_native_sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+}

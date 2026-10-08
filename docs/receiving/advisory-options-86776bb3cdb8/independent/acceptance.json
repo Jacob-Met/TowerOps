@@ -1,0 +1,47 @@
+{
+  "observed_at": "2026-10-08T11:52:51.181898+00:00",
+  "decision": "accepted",
+  "source": "45aaacbbaff9c71bf07fc1bc23b50ba56ef11615",
+  "tree": "1d582c4c29d61bfd03349639dac65af990bbbac7",
+  "primary_main": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "primary_tree": "e50e0f2c6302be0b5a1d90fed7fffa2a197bd321",
+  "baseline_source": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+  "baseline_native_options": 68,
+  "original_exposed_options": 1,
+  "browser_flows_passed": 3,
+  "browser_process_exit_code": 0,
+  "source_readback_exit_code": 0,
+  "observed_process_session": 64633,
+  "selected_native_rank": 41,
+  "selected_advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+  "native_refusals": [
+    "ack_invalid",
+    "world_hash_mismatch"
+  ],
+  "native_audit_chains_verified": 3,
+  "preserved_parent_leaves": 134,
+  "complete_parent_leaves": 140,
+  "complete_source_leaves": 146,
+  "page_or_http_errors": [],
+  "unexpected_network": [],
+  "browser_receipt_sha256": "a8ad87d787aeb655dd7d660bcbc494eec3591df7ae08847d407a8af9cc17e312",
+  "source_receipt_sha256": "70fa2878b822ca99cbfc9f91bfc8f5f43c05f54688e3605639ef158007fcdb25",
+  "worker_transcript_sha256": "0ab541f7fcd867e0ed8012fc035623151fff284b9e88d6205361dee853dc2b1a",
+  "review_sha256": "c8b5cd7788e8a7cbe80cdf4351e4b767c6bd79380bf83ef7d718ac3c99a2b8b3",
+  "commands": {
+    "native_beforeimage": "/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python -B establish-native-options.py",
+    "source_readback": "/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python -B source-readback.py --repo /dev/shm/86776bb3cdb8-product-tower-options/repo --source 45aaacbbaff9c71bf07fc1bc23b50ba56ef11615",
+    "browser": "/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python -B receive-browser.py --repo /dev/shm/86776bb3cdb8-product-tower-options/repo --source 45aaacbbaff9c71bf07fc1bc23b50ba56ef11615 --chrome /workspace/scratch/86776bb3cdb8/product-delivery/browser-runtime/chromium"
+  },
+  "scope": "Read-only frozen source and native authored simulation receiving. No production edits, hosted-CI claim, deployment or real-world actuation.",
+  "driver_repairs": [
+    "Open collapsed exact-proposal details before reading rendered text.",
+    "Declare UTF-8 on the receiver-owned Python-source HTTP responses for exact CDP byte recording."
+  ],
+  "author_source_build_receipt_sha256": "83e2a779cbd3d6c0a130bb8787a386fc8b7ca33f39fb1c751f96152d96c5d230",
+  "author_source_build_agreement": {
+    "complete_source_leaves": 146,
+    "exact_build_leaves": 14,
+    "independently_hashed_source_inputs": 23
+  }
+}

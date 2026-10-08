@@ -1,0 +1,63 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> advisory_options.py:7:1
+   |
+ 5 |   advisory, its world, its approval and its readback at application time.
+ 6 |   """
+ 7 | / from __future__ import annotations
+ 8 | |
+ 9 | | from dataclasses import dataclass
+10 | |
+11 | | from towerops import Advisory, AdvisoryPlanner, ControlRoom, GateRejected, SafetyPolicy, WorldState
+   | |___________________________________________________________________________________________________^
+help: Organize imports
+   |
+10 |
+   - from towerops import Advisory, AdvisoryPlanner, ControlRoom, GateRejected, SafetyPolicy, WorldState
+11 + from towerops import (
+12 +     Advisory,
+13 +     AdvisoryPlanner,
+14 +     ControlRoom,
+15 +     GateRejected,
+16 +     SafetyPolicy,
+17 +     WorldState,
+18 + )
+19 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> tests/test_advisory_options.py:2:1
+  |
+1 |   """A selected alternative still goes through the original native gate."""
+2 | / from dataclasses import replace
+3 | | import math
+4 | |
+5 | | import pytest
+6 | |
+7 | | from advisory_options import review_advisory_options
+8 | | from towerops import Ack, AdvisoryPlanner, Aircraft, Approval, ControlRoom, GateRejected, canonical_bytes
+  | |_________________________________________________________________________________________________________^
+help: Organize imports
+   |
+1  | """A selected alternative still goes through the original native gate."""
+2  + import math
+3  | from dataclasses import replace
+   - import math
+4  |
+5  | import pytest
+6  |
+7  | from advisory_options import review_advisory_options
+   - from towerops import Ack, AdvisoryPlanner, Aircraft, Approval, ControlRoom, GateRejected, canonical_bytes
+8  + from towerops import (
+9  +     Ack,
+10 +     AdvisoryPlanner,
+11 +     Aircraft,
+12 +     Approval,
+13 +     ControlRoom,
+14 +     GateRejected,
+15 +     canonical_bytes,
+16 + )
+17 |
+   |
+
+Found 2 errors.
+[*] 2 fixable with the `--fix` option.

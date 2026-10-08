@@ -1,0 +1,3342 @@
+[
+  {
+    "case": "chosen_native_option_applies",
+    "requests": [
+      {
+        "original": {
+          "id": 1,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "plan",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "now": 4350.25,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            }
+          }
+        },
+        "sent": {
+          "id": 1,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "plan",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "now": 4350.25,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            }
+          }
+        },
+        "injected": null
+      },
+      {
+        "original": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "options",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "now": 4350.25,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            }
+          }
+        },
+        "sent": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "options",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "now": 4350.25,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            }
+          }
+        },
+        "injected": null
+      },
+      {
+        "original": {
+          "id": 3,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "sent": {
+          "id": 3,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "injected": null
+      }
+    ],
+    "responses": [
+      {
+        "id": 1,
+        "result": {
+          "advisory": {
+            "aircraft_id": "RX-B",
+            "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+            "set_vx_nm_min": -1.25,
+            "set_vy_nm_min": 2,
+            "set_climb_ft_min": 0,
+            "issued_at": 4350.25,
+            "expires_at": 4358.25,
+            "rationale": "synthetic projected-separation recovery",
+            "advisory_hash": "15e3f7df4c60ec3782ab2266ccb4df2bff06390287f9dd7c884d3f21ffd50f15"
+          }
+        }
+      },
+      {
+        "id": 2,
+        "result": {
+          "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+          "reviewed_at": 4350.25,
+          "candidate_count": 74,
+          "advisories": [
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "15e3f7df4c60ec3782ab2266ccb4df2bff06390287f9dd7c884d3f21ffd50f15"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "b855fa354fc3f2fe3f56ee95060ef326edd9d17ab9fb98a809b42ad563094967"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "eff34c0dc3fd1a936d41d7fb7fac8e8b023feed3025d9d56e0e727208a909a53"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2ada4e5541cf96b90352628ab344b5790e99f96fc889cf2f0f4286dc3ca38de8"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "4f10c059f92af43d4975337b02d40464107009939b79a4be70b2b2c78a8d4e4b"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "a3a481a257972bfd2b7b14091003731ce17db2da747c503b2d54aea8f2ed4f70"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "bdaca423c71e1127d0585d2bb71c0422708318015e11b2efd75593a834e941f1"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "7551baa6a12894350f0ce005eeaa43d0405a589dac67c7130cecaf85a035a112"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "927665215642f310847367d2674855f26bbc182102501fa1394b0c7190a65d5b"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "03e40b9673726b94b547282b5972aa9ae04724736b75a16129a03ebdef8690d4"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "746ca0eb62bfc05caecd1b33d9d30363a538719358fa996517902690a454b7ac"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "35402312f4a63b305d7e88d3b18439c690ca8fee41edece38f0e7d653d54a416"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2e4ff7cad65c4e2eeb9df2997f668e7690633ab2450230de0876f3d751b792fb"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d535f1e24a0f1ba0b1608b76447735bb3405982fa964853fede860aad8a2d391"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "38d1e9e876befb049382079f75c4ffdab85ccee348eb2646815a14f66156bc6c"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "6e73d4c7a158594105e85de6daf95b01ff8b581d7c4f17e2ea870c9c859a68d4"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -0.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "0ccf37e0b3ba1562f0e1c528ffdd857766dec8e9c34d5b2557d3aff37f778393"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 0.75,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "794012ac507ff6890e5df9250ee071587873cf0a4e67495a1112565e95123f69"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "196acf0ae38516af9325849efa3fd3daed80de4b0c409ed94b5135b62f151850"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "18bdfcdd89f8fcd4da17b9f0413df8c8b590013e9c6f7bbe75de48c8110c7fee"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "6b9949145c249a64ebf6949c7a765bb52343239e7807093b469a8a27742f2a5d"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "4896bd45e28f12ee163e136268aed634a7d7a6d4e49e1e8ffbc60cbd2a72c37d"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "4d5e56147bd4f4bcc76af9c965378b74d99071576f1317381f1e0e7ded0efe79"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "55a669096b654d9212edff63b6b9ae65afd4a8cad4fe8c08a12728fc77d84eab"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "f95d6af35726c6c3a7befd9d1a25b78c1cee8a3432a2375ab436f27cd580eb60"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "3b36c569ff74bd492fffc4069d57cf9d8452dd1d292a6b9de21dfd38f8792c0a"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "065e11a801299d15acd63cce63b738212a70586441b3b93221cd9b46fe44458c"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "79226ff12647c0d7f7bcf5a846f08d67c7f90fdf35d73e5b5c35646e029ffac1"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "eb5dd6b2b4a8f578c19523939e434646dcf1d37401ea0a47343f37d66f2de1ec"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "fdb888d31bd1aa89cb0af34dcba44329f862954a23255eb428289c1ce2a3b302"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "13240fda985897c2213b1c57b303db71a65feae49a9104660a8a68d9d6df02cf"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "3186367df450830fd532ff27f44e08ae7cd710da3fbdbcb3a518c975e84979af"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2d6d97a85ac8936795efde88e825760e0a2e42b2275cc3f24353afeb8fbe6ec5"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "22ee26bc2398f55fdf8e9657b7ee7d6ca3dce9bf0eb3cbabf709d5216f35b15d"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d9641ed1f21cebecd463cf008fbe8490f36ffa4d8a3c31975c1cfafefc760e52"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "dbccfdc8a66160ae2e0bb967f4a8fde2f5e15dffb53e19ab9212d5326c4dc1f8"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "7eab660b9b653f359dd737bce67e2388a7d8e73bea182b56b4ccd45cb27a6728"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "c55d79276e57f17b49a2b41618f68a3e996d415a1929a566f3d84a532affdef4"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "e1f4e28db61b33795cf3028674afd3d192d8cba1f8ed55b530a96dc17e67cd37"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1e250c665d41676388875def805bd0a6bdbd7ca30bb3af8e777f36e747df9428"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "e02683a4257abc1ef8c3d1505230adbfc747fab73158bd2523d08bd17ef57804"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "8a2b955a9f8eabbb68349e003dec39ea388df6608f8be81613d9a41071ba8075"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d2bc6df299b1e669c66a98d9a44d02bf5c59056241c919bdc43d0e137349e078"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "257f162f99472e574bc4c269a756efd07e24336b762850d942ad3baf5b443474"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2fba01831d859f5c1c3db61c70fad575941b484a69c63f6f8042cf2f770812c9"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "84888fd928a079607f60b573195411f9d934ef71f3d90a4ec39a64b8c6d036f9"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "259f2d6253207c47a1c4da5fab66b448b8dde0dfa627bc7a233b226de64cb490"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "949b753968d2c2d03eb33bb4f1c1ced7928b7b9303fabad6d4ac0b2f93292b32"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "04875b048b3c7a5e3870284178708ea797d0ece38a204ffec2d27fe085704a13"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 0.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "9d552663fb58e16ff5d418f7468e350e9d53020f98b8782fa09713f62642aad8"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -0.75,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2605395d9876d8072702f679dd2fbcbe0f352efd069f183828895c51a8a5f970"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "246393e226996537ac7b687c092dbedcc47315eaca8656fc7c9cabec1a798c2f"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "a528267b9df7ae07f8a20b290aecfbaf35e8e9963832d44c8b28af319d3ba08d"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "c59c1924e210b8ffac14190ed96e2d81cfc66059afe51bdc14880257c4d47d52"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "c00fb6483c0ca2a461f3299ad2448c510760ff57fe90a93718bad3a42d5402f9"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "b4b8e222bc07e5e9e6450f0c33b69500606c613aebc25b2f1cbc6d527b379cc4"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "81a67a918abc80476563852761f83418d77bbf5899473ed50431908bae0e35b3"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "02a29791a5c3edee33ee0ea2ea9d8d05401388c6df5070d160759acbb8a28818"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "53d7218cf834d611af308635b3250864ead94ba304fd6630a907b2a392b845f2"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "7e9cfc611e91024e1b3a0bc6f29b74d8300d90d5e98ac87c5ad3a0a981026b74"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "ec0f032bc528a52635cbe10ab5fb7deaa1813c0115f32bbc466d9d878c4b8ed6"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "fdf5036a5aad38c4c670594db6154efca898909e3b84767cfcb2b9a8be619baf"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "5f42472e65634539409bb424ff38efe1cba39bcae4ec8944618245f4fc7f17ce"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "3c4d27f1b256b4338511363255826592b33e3c4aa959036f2c2978d98699f2d7"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "59f125fe371e5b02aa9690382ebc5a90a7c13102e312b368f18cf78c961392d4"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1baccfb4eaf9d55c59af8187441a6bb936554ef520b7e6ec22b0f5e71a18b5f6"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "ae2ce24ce30af3fa56abcbd9d378e2a19220da6c3079918a734ae77dcf64d686"
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "result": {
+          "state": {
+            "version": 8,
+            "observed_at": 4350.75,
+            "aircraft": [
+              {
+                "aircraft_id": "RX-A",
+                "x_nm": -6.25,
+                "y_nm": 0,
+                "altitude_ft": 12300,
+                "vx_nm_min": 1.25,
+                "vy_nm_min": 2.9341736485763756,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "RX-B",
+                "x_nm": 6.25,
+                "y_nm": 0,
+                "altitude_ft": 12300,
+                "vx_nm_min": -1.25,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "RX-Z",
+                "x_nm": 30,
+                "y_nm": 32,
+                "altitude_ft": 22000,
+                "vx_nm_min": 0,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "valid": true,
+          "events": [
+            {
+              "seq": 0,
+              "kind": "screen_pass",
+              "payload": {
+                "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+                "advisory_hashes": [
+                  "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+                ]
+              },
+              "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+              "event_hash": "5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a"
+            },
+            {
+              "seq": 1,
+              "kind": "approval",
+              "payload": {
+                "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+                "decision": "approve",
+                "approved_at": 4350.45,
+                "approver": "synthetic-controller"
+              },
+              "prev_hash": "5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a",
+              "event_hash": "a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7"
+            },
+            {
+              "seq": 2,
+              "kind": "ack",
+              "payload": {
+                "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+                "status": "accepted",
+                "acknowledged_at": 4350.65
+              },
+              "prev_hash": "a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7",
+              "event_hash": "559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109"
+            },
+            {
+              "seq": 3,
+              "kind": "simulated_actuation",
+              "payload": {
+                "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+                "before_world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+                "after_world_hash": "8dce02029bf475e5b6c681db201f041752452ac610e4d09696d9e3babe81d067"
+              },
+              "prev_hash": "559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109",
+              "event_hash": "47bc2de8aeab392e9dfaa118aa6c6b67eecad23a73f1ae6b7843d6c7f9fe0ba5"
+            }
+          ],
+          "audit_canonical": [
+            "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"],\"world_hash\":\"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+            "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"approved_at\":4350.45,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\",\"seq\":1}",
+            "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":4350.65,\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"status\":\"accepted\"},\"prev_hash\":\"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\",\"seq\":2}",
+            "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"after_world_hash\":\"8dce02029bf475e5b6c681db201f041752452ac610e4d09696d9e3babe81d067\",\"before_world_hash\":\"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\"},\"prev_hash\":\"559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109\",\"seq\":3}"
+          ],
+          "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\", \"advisory_hashes\": [\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\", \"decision\": \"approve\", \"approved_at\": 4350.45, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\", \"event_hash\": \"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\", \"status\": \"accepted\", \"acknowledged_at\": 4350.65}, \"prev_hash\": \"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\", \"event_hash\": \"559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\", \"before_world_hash\": \"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\", \"after_world_hash\": \"8dce02029bf475e5b6c681db201f041752452ac610e4d09696d9e3babe81d067\"}, \"prev_hash\": \"559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109\", \"event_hash\": \"47bc2de8aeab392e9dfaa118aa6c6b67eecad23a73f1ae6b7843d6c7f9fe0ba5\"}]"
+        }
+      }
+    ],
+    "fault": null,
+    "otherHash": null
+  },
+  {
+    "case": "cross-option-ack",
+    "requests": [
+      {
+        "original": {
+          "id": 1,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "options",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "now": 4350.25,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            }
+          }
+        },
+        "sent": {
+          "id": 1,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "options",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "now": 4350.25,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            }
+          }
+        },
+        "injected": null
+      },
+      {
+        "original": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "sent": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "15e3f7df4c60ec3782ab2266ccb4df2bff06390287f9dd7c884d3f21ffd50f15",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "injected": "cross-option-ack"
+      }
+    ],
+    "responses": [
+      {
+        "id": 1,
+        "result": {
+          "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+          "reviewed_at": 4350.25,
+          "candidate_count": 74,
+          "advisories": [
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "15e3f7df4c60ec3782ab2266ccb4df2bff06390287f9dd7c884d3f21ffd50f15"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "b855fa354fc3f2fe3f56ee95060ef326edd9d17ab9fb98a809b42ad563094967"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "eff34c0dc3fd1a936d41d7fb7fac8e8b023feed3025d9d56e0e727208a909a53"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2ada4e5541cf96b90352628ab344b5790e99f96fc889cf2f0f4286dc3ca38de8"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "4f10c059f92af43d4975337b02d40464107009939b79a4be70b2b2c78a8d4e4b"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "a3a481a257972bfd2b7b14091003731ce17db2da747c503b2d54aea8f2ed4f70"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "bdaca423c71e1127d0585d2bb71c0422708318015e11b2efd75593a834e941f1"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "7551baa6a12894350f0ce005eeaa43d0405a589dac67c7130cecaf85a035a112"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "927665215642f310847367d2674855f26bbc182102501fa1394b0c7190a65d5b"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "03e40b9673726b94b547282b5972aa9ae04724736b75a16129a03ebdef8690d4"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "746ca0eb62bfc05caecd1b33d9d30363a538719358fa996517902690a454b7ac"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "35402312f4a63b305d7e88d3b18439c690ca8fee41edece38f0e7d653d54a416"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2e4ff7cad65c4e2eeb9df2997f668e7690633ab2450230de0876f3d751b792fb"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d535f1e24a0f1ba0b1608b76447735bb3405982fa964853fede860aad8a2d391"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "38d1e9e876befb049382079f75c4ffdab85ccee348eb2646815a14f66156bc6c"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "6e73d4c7a158594105e85de6daf95b01ff8b581d7c4f17e2ea870c9c859a68d4"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -0.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "0ccf37e0b3ba1562f0e1c528ffdd857766dec8e9c34d5b2557d3aff37f778393"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 0.75,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "794012ac507ff6890e5df9250ee071587873cf0a4e67495a1112565e95123f69"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "196acf0ae38516af9325849efa3fd3daed80de4b0c409ed94b5135b62f151850"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "18bdfcdd89f8fcd4da17b9f0413df8c8b590013e9c6f7bbe75de48c8110c7fee"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "6b9949145c249a64ebf6949c7a765bb52343239e7807093b469a8a27742f2a5d"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "4896bd45e28f12ee163e136268aed634a7d7a6d4e49e1e8ffbc60cbd2a72c37d"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "4d5e56147bd4f4bcc76af9c965378b74d99071576f1317381f1e0e7ded0efe79"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "55a669096b654d9212edff63b6b9ae65afd4a8cad4fe8c08a12728fc77d84eab"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "f95d6af35726c6c3a7befd9d1a25b78c1cee8a3432a2375ab436f27cd580eb60"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "3b36c569ff74bd492fffc4069d57cf9d8452dd1d292a6b9de21dfd38f8792c0a"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "065e11a801299d15acd63cce63b738212a70586441b3b93221cd9b46fe44458c"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "79226ff12647c0d7f7bcf5a846f08d67c7f90fdf35d73e5b5c35646e029ffac1"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "eb5dd6b2b4a8f578c19523939e434646dcf1d37401ea0a47343f37d66f2de1ec"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "fdb888d31bd1aa89cb0af34dcba44329f862954a23255eb428289c1ce2a3b302"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "13240fda985897c2213b1c57b303db71a65feae49a9104660a8a68d9d6df02cf"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "3186367df450830fd532ff27f44e08ae7cd710da3fbdbcb3a518c975e84979af"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2d6d97a85ac8936795efde88e825760e0a2e42b2275cc3f24353afeb8fbe6ec5"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "22ee26bc2398f55fdf8e9657b7ee7d6ca3dce9bf0eb3cbabf709d5216f35b15d"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d9641ed1f21cebecd463cf008fbe8490f36ffa4d8a3c31975c1cfafefc760e52"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "dbccfdc8a66160ae2e0bb967f4a8fde2f5e15dffb53e19ab9212d5326c4dc1f8"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "7eab660b9b653f359dd737bce67e2388a7d8e73bea182b56b4ccd45cb27a6728"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "c55d79276e57f17b49a2b41618f68a3e996d415a1929a566f3d84a532affdef4"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "e1f4e28db61b33795cf3028674afd3d192d8cba1f8ed55b530a96dc17e67cd37"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1e250c665d41676388875def805bd0a6bdbd7ca30bb3af8e777f36e747df9428"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "e02683a4257abc1ef8c3d1505230adbfc747fab73158bd2523d08bd17ef57804"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "8a2b955a9f8eabbb68349e003dec39ea388df6608f8be81613d9a41071ba8075"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d2bc6df299b1e669c66a98d9a44d02bf5c59056241c919bdc43d0e137349e078"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "257f162f99472e574bc4c269a756efd07e24336b762850d942ad3baf5b443474"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2fba01831d859f5c1c3db61c70fad575941b484a69c63f6f8042cf2f770812c9"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "84888fd928a079607f60b573195411f9d934ef71f3d90a4ec39a64b8c6d036f9"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "259f2d6253207c47a1c4da5fab66b448b8dde0dfa627bc7a233b226de64cb490"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "949b753968d2c2d03eb33bb4f1c1ced7928b7b9303fabad6d4ac0b2f93292b32"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "04875b048b3c7a5e3870284178708ea797d0ece38a204ffec2d27fe085704a13"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 0.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "9d552663fb58e16ff5d418f7468e350e9d53020f98b8782fa09713f62642aad8"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -0.75,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2605395d9876d8072702f679dd2fbcbe0f352efd069f183828895c51a8a5f970"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "246393e226996537ac7b687c092dbedcc47315eaca8656fc7c9cabec1a798c2f"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "a528267b9df7ae07f8a20b290aecfbaf35e8e9963832d44c8b28af319d3ba08d"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "c59c1924e210b8ffac14190ed96e2d81cfc66059afe51bdc14880257c4d47d52"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "c00fb6483c0ca2a461f3299ad2448c510760ff57fe90a93718bad3a42d5402f9"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "b4b8e222bc07e5e9e6450f0c33b69500606c613aebc25b2f1cbc6d527b379cc4"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "81a67a918abc80476563852761f83418d77bbf5899473ed50431908bae0e35b3"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "02a29791a5c3edee33ee0ea2ea9d8d05401388c6df5070d160759acbb8a28818"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "53d7218cf834d611af308635b3250864ead94ba304fd6630a907b2a392b845f2"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "7e9cfc611e91024e1b3a0bc6f29b74d8300d90d5e98ac87c5ad3a0a981026b74"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "ec0f032bc528a52635cbe10ab5fb7deaa1813c0115f32bbc466d9d878c4b8ed6"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "fdf5036a5aad38c4c670594db6154efca898909e3b84767cfcb2b9a8be619baf"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "5f42472e65634539409bb424ff38efe1cba39bcae4ec8944618245f4fc7f17ce"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "3c4d27f1b256b4338511363255826592b33e3c4aa959036f2c2978d98699f2d7"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "59f125fe371e5b02aa9690382ebc5a90a7c13102e312b368f18cf78c961392d4"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1baccfb4eaf9d55c59af8187441a6bb936554ef520b7e6ec22b0f5e71a18b5f6"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "ae2ce24ce30af3fa56abcbd9d378e2a19220da6c3079918a734ae77dcf64d686"
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "result": {
+          "error": "ack_invalid",
+          "events": [
+            {
+              "seq": 0,
+              "kind": "screen_pass",
+              "payload": {
+                "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+                "advisory_hashes": [
+                  "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+                ]
+              },
+              "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+              "event_hash": "5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a"
+            },
+            {
+              "seq": 1,
+              "kind": "approval",
+              "payload": {
+                "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+                "decision": "approve",
+                "approved_at": 4350.45,
+                "approver": "synthetic-controller"
+              },
+              "prev_hash": "5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a",
+              "event_hash": "a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7"
+            },
+            {
+              "seq": 2,
+              "kind": "reject",
+              "payload": {
+                "reason": "ack_invalid",
+                "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+              },
+              "prev_hash": "a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7",
+              "event_hash": "0d88574ccee84f2d2050644744075603cc6549c49249c079ad1280e89a96ff08"
+            }
+          ],
+          "audit_canonical": [
+            "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"],\"world_hash\":\"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+            "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"approved_at\":4350.45,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\",\"seq\":1}",
+            "{\"kind\":\"reject\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"reason\":\"ack_invalid\"},\"prev_hash\":\"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\",\"seq\":2}"
+          ],
+          "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\", \"advisory_hashes\": [\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\", \"decision\": \"approve\", \"approved_at\": 4350.45, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\", \"event_hash\": \"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\"}, {\"seq\": 2, \"kind\": \"reject\", \"payload\": {\"reason\": \"ack_invalid\", \"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"}, \"prev_hash\": \"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\", \"event_hash\": \"0d88574ccee84f2d2050644744075603cc6549c49249c079ad1280e89a96ff08\"}]"
+        }
+      }
+    ],
+    "fault": null,
+    "otherHash": "15e3f7df4c60ec3782ab2266ccb4df2bff06390287f9dd7c884d3f21ffd50f15"
+  },
+  {
+    "case": "different-world",
+    "requests": [
+      {
+        "original": {
+          "id": 1,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "options",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "now": 4350.25,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            }
+          }
+        },
+        "sent": {
+          "id": 1,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "options",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "now": 4350.25,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            }
+          }
+        },
+        "injected": null
+      },
+      {
+        "original": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "sent": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 8,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "injected": "different-world"
+      }
+    ],
+    "responses": [
+      {
+        "id": 1,
+        "result": {
+          "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+          "reviewed_at": 4350.25,
+          "candidate_count": 74,
+          "advisories": [
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "15e3f7df4c60ec3782ab2266ccb4df2bff06390287f9dd7c884d3f21ffd50f15"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "b855fa354fc3f2fe3f56ee95060ef326edd9d17ab9fb98a809b42ad563094967"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "eff34c0dc3fd1a936d41d7fb7fac8e8b023feed3025d9d56e0e727208a909a53"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2ada4e5541cf96b90352628ab344b5790e99f96fc889cf2f0f4286dc3ca38de8"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "4f10c059f92af43d4975337b02d40464107009939b79a4be70b2b2c78a8d4e4b"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "a3a481a257972bfd2b7b14091003731ce17db2da747c503b2d54aea8f2ed4f70"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "bdaca423c71e1127d0585d2bb71c0422708318015e11b2efd75593a834e941f1"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "7551baa6a12894350f0ce005eeaa43d0405a589dac67c7130cecaf85a035a112"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "927665215642f310847367d2674855f26bbc182102501fa1394b0c7190a65d5b"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "03e40b9673726b94b547282b5972aa9ae04724736b75a16129a03ebdef8690d4"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "746ca0eb62bfc05caecd1b33d9d30363a538719358fa996517902690a454b7ac"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "35402312f4a63b305d7e88d3b18439c690ca8fee41edece38f0e7d653d54a416"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2e4ff7cad65c4e2eeb9df2997f668e7690633ab2450230de0876f3d751b792fb"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d535f1e24a0f1ba0b1608b76447735bb3405982fa964853fede860aad8a2d391"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "38d1e9e876befb049382079f75c4ffdab85ccee348eb2646815a14f66156bc6c"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "6e73d4c7a158594105e85de6daf95b01ff8b581d7c4f17e2ea870c9c859a68d4"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -0.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "0ccf37e0b3ba1562f0e1c528ffdd857766dec8e9c34d5b2557d3aff37f778393"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 0.75,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "794012ac507ff6890e5df9250ee071587873cf0a4e67495a1112565e95123f69"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "196acf0ae38516af9325849efa3fd3daed80de4b0c409ed94b5135b62f151850"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "18bdfcdd89f8fcd4da17b9f0413df8c8b590013e9c6f7bbe75de48c8110c7fee"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "6b9949145c249a64ebf6949c7a765bb52343239e7807093b469a8a27742f2a5d"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "4896bd45e28f12ee163e136268aed634a7d7a6d4e49e1e8ffbc60cbd2a72c37d"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "4d5e56147bd4f4bcc76af9c965378b74d99071576f1317381f1e0e7ded0efe79"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "55a669096b654d9212edff63b6b9ae65afd4a8cad4fe8c08a12728fc77d84eab"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "f95d6af35726c6c3a7befd9d1a25b78c1cee8a3432a2375ab436f27cd580eb60"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "3b36c569ff74bd492fffc4069d57cf9d8452dd1d292a6b9de21dfd38f8792c0a"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "065e11a801299d15acd63cce63b738212a70586441b3b93221cd9b46fe44458c"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "79226ff12647c0d7f7bcf5a846f08d67c7f90fdf35d73e5b5c35646e029ffac1"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "eb5dd6b2b4a8f578c19523939e434646dcf1d37401ea0a47343f37d66f2de1ec"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "fdb888d31bd1aa89cb0af34dcba44329f862954a23255eb428289c1ce2a3b302"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "13240fda985897c2213b1c57b303db71a65feae49a9104660a8a68d9d6df02cf"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "3186367df450830fd532ff27f44e08ae7cd710da3fbdbcb3a518c975e84979af"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2d6d97a85ac8936795efde88e825760e0a2e42b2275cc3f24353afeb8fbe6ec5"
+            },
+            {
+              "aircraft_id": "RX-B",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "22ee26bc2398f55fdf8e9657b7ee7d6ca3dce9bf0eb3cbabf709d5216f35b15d"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d9641ed1f21cebecd463cf008fbe8490f36ffa4d8a3c31975c1cfafefc760e52"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "dbccfdc8a66160ae2e0bb967f4a8fde2f5e15dffb53e19ab9212d5326c4dc1f8"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "7eab660b9b653f359dd737bce67e2388a7d8e73bea182b56b4ccd45cb27a6728"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "c55d79276e57f17b49a2b41618f68a3e996d415a1929a566f3d84a532affdef4"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "e1f4e28db61b33795cf3028674afd3d192d8cba1f8ed55b530a96dc17e67cd37"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -5.868347297152751,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1e250c665d41676388875def805bd0a6bdbd7ca30bb3af8e777f36e747df9428"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "e02683a4257abc1ef8c3d1505230adbfc747fab73158bd2523d08bd17ef57804"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "8a2b955a9f8eabbb68349e003dec39ea388df6608f8be81613d9a41071ba8075"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -1.4670868242881878,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d2bc6df299b1e669c66a98d9a44d02bf5c59056241c919bdc43d0e137349e078"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "257f162f99472e574bc4c269a756efd07e24336b762850d942ad3baf5b443474"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2fba01831d859f5c1c3db61c70fad575941b484a69c63f6f8042cf2f770812c9"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "84888fd928a079607f60b573195411f9d934ef71f3d90a4ec39a64b8c6d036f9"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "259f2d6253207c47a1c4da5fab66b448b8dde0dfa627bc7a233b226de64cb490"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "949b753968d2c2d03eb33bb4f1c1ced7928b7b9303fabad6d4ac0b2f93292b32"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": -3000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "04875b048b3c7a5e3870284178708ea797d0ece38a204ffec2d27fe085704a13"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 0.25,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "9d552663fb58e16ff5d418f7468e350e9d53020f98b8782fa09713f62642aad8"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": -0.75,
+              "set_vy_nm_min": 0,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "2605395d9876d8072702f679dd2fbcbe0f352efd069f183828895c51a8a5f970"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "246393e226996537ac7b687c092dbedcc47315eaca8656fc7c9cabec1a798c2f"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "a528267b9df7ae07f8a20b290aecfbaf35e8e9963832d44c8b28af319d3ba08d"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "c59c1924e210b8ffac14190ed96e2d81cfc66059afe51bdc14880257c4d47d52"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "c00fb6483c0ca2a461f3299ad2448c510760ff57fe90a93718bad3a42d5402f9"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "b4b8e222bc07e5e9e6450f0c33b69500606c613aebc25b2f1cbc6d527b379cc4"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "81a67a918abc80476563852761f83418d77bbf5899473ed50431908bae0e35b3"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "02a29791a5c3edee33ee0ea2ea9d8d05401388c6df5070d160759acbb8a28818"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -2,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "53d7218cf834d611af308635b3250864ead94ba304fd6630a907b2a392b845f2"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "7e9cfc611e91024e1b3a0bc6f29b74d8300d90d5e98ac87c5ad3a0a981026b74"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "ec0f032bc528a52635cbe10ab5fb7deaa1813c0115f32bbc466d9d878c4b8ed6"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "fdf5036a5aad38c4c670594db6154efca898909e3b84767cfcb2b9a8be619baf"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "5f42472e65634539409bb424ff38efe1cba39bcae4ec8944618245f4fc7f17ce"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "3c4d27f1b256b4338511363255826592b33e3c4aa959036f2c2978d98699f2d7"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -1000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "59f125fe371e5b02aa9690382ebc5a90a7c13102e312b368f18cf78c961392d4"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": 2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1baccfb4eaf9d55c59af8187441a6bb936554ef520b7e6ec22b0f5e71a18b5f6"
+            },
+            {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": -3,
+              "set_climb_ft_min": -2000,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "ae2ce24ce30af3fa56abcbd9d378e2a19220da6c3079918a734ae77dcf64d686"
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "result": {
+          "error": "world_hash_mismatch",
+          "events": [
+            {
+              "seq": 0,
+              "kind": "reject",
+              "payload": {
+                "reason": "world_hash_mismatch",
+                "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+              },
+              "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+              "event_hash": "ac93c267899c9428e530f6d861ce93c4a929b1e02b74d5cf83e56e1ac400dafe"
+            }
+          ],
+          "audit_canonical": [
+            "{\"kind\":\"reject\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"reason\":\"world_hash_mismatch\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}"
+          ],
+          "audit_json": "[{\"seq\": 0, \"kind\": \"reject\", \"payload\": {\"reason\": \"world_hash_mismatch\", \"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"ac93c267899c9428e530f6d861ce93c4a929b1e02b74d5cf83e56e1ac400dafe\"}]"
+        }
+      }
+    ],
+    "fault": null,
+    "otherHash": "15e3f7df4c60ec3782ab2266ccb4df2bff06390287f9dd7c884d3f21ffd50f15"
+  }
+]

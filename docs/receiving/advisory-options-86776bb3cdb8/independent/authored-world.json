@@ -1,0 +1,33 @@
+{
+  "version": 7,
+  "observed_at": 4350.25,
+  "aircraft": [
+    {
+      "aircraft_id": "RX-A",
+      "x_nm": -6.25,
+      "y_nm": 0.0,
+      "altitude_ft": 12300.0,
+      "vx_nm_min": 1.25,
+      "vy_nm_min": 0.0,
+      "climb_ft_min": 0.0
+    },
+    {
+      "aircraft_id": "RX-B",
+      "x_nm": 6.25,
+      "y_nm": 0.0,
+      "altitude_ft": 12300.0,
+      "vx_nm_min": -1.25,
+      "vy_nm_min": 0.0,
+      "climb_ft_min": 0.0
+    },
+    {
+      "aircraft_id": "RX-Z",
+      "x_nm": 30.0,
+      "y_nm": 32.0,
+      "altitude_ft": 22000.0,
+      "vx_nm_min": 0.0,
+      "vy_nm_min": 0.0,
+      "climb_ft_min": 0.0
+    }
+  ]
+}

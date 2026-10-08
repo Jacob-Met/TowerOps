@@ -1,0 +1,264 @@
+"""One real combined options/trace journey and its optional-loader control."""
+from __future__ import annotations
+
+import argparse
+import functools
+import hashlib
+import importlib.util
+import json
+import os
+import subprocess
+import sys
+import threading
+from datetime import datetime, timezone
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+
+from playwright.sync_api import expect, sync_playwright
+
+sys.dont_write_bytecode = True
+OUT = Path(__file__).resolve().parent
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def live(page):
+    # Same paused-state fields used by the adopted trace receiving driver.
+    return page.evaluate("""() => ({
+      world: document.getElementById('world-json').value,
+      policy: ['policy-horizontal','policy-vertical','policy-horizon'].map(id => document.getElementById(id).value),
+      proposal: document.getElementById('proposal-output').textContent,
+      gates: ['gate-screen','gate-approval','gate-ack'].map(id => document.getElementById(id).textContent),
+      audit: document.getElementById('audit-events').textContent,
+      audit_status: document.getElementById('audit-status').textContent,
+      clock: document.getElementById('sim-clock').textContent,
+      selected: document.getElementById('edit-selected-track').textContent,
+      readback_disabled: document.getElementById('readback').disabled
+    })""")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--repo', type=Path, required=True)
+    parser.add_argument('--source', required=True)
+    parser.add_argument('--tree', required=True)
+    parser.add_argument('--chrome', type=Path, required=True)
+    args = parser.parse_args()
+    repo, dist = args.repo.resolve(), args.repo.resolve() / 'web/airspace/dist'
+    git = lambda *values: subprocess.check_output(['git', '-C', str(repo), *values])
+    assert git('rev-parse', 'HEAD').decode().strip() == args.source
+    assert git('rev-parse', args.source + '^{tree}').decode().strip() == args.tree
+    tracked = []
+    for row in git('ls-tree', '-rz', args.source).split(b'\0'):
+        if not row:
+            continue
+        meta, name = row.split(b'\t', 1)
+        name = name.decode()
+        if (name in ('towerops.py', 'advisory_options.py', 'audit_replay.py', 'decision_trace.py',
+                     'web/airspace/index.html', 'web/airspace/style.css', 'web/airspace/prepare-python.mjs',
+                     'web/airspace/package.json', 'web/airspace/package-lock.json',
+                     'tools/check_advisory_options_browser.py', 'tools/verify_decision_trace.mjs')
+                or name.startswith('web/airspace/src/')):
+            data = (repo / name).read_bytes()
+            blob = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+            assert blob == meta.decode().split()[2], name
+            tracked.append({'path': name, 'blob': blob, 'sha256': digest(data)})
+    built = [{'path': str(p.relative_to(dist)), 'bytes': p.stat().st_size, 'sha256': digest(p.read_bytes())}
+             for p in sorted(dist.rglob('*')) if p.is_file()]
+    assert built
+    build_receipt_bytes = (repo.parent / 'receipts/source-and-build.json').read_bytes()
+    assert digest(build_receipt_bytes) == '5943a144bc7eb184c554ed89128c98f9838bf2d78b51a04609cc5757fe8b7de9'
+    build_receipt = json.loads(build_receipt_bytes)
+    assert build_receipt['source'] == args.source and build_receipt['tree'] == args.tree
+    assert build_receipt['build_exit_code'] == 0 and build_receipt['build_files'] == built
+    native_names = ('towerops.py', 'advisory_options.py', 'audit_replay.py', 'decision_trace.py')
+    for name in native_names:
+        assert (dist / 'python' / name).read_bytes() == (repo / name).read_bytes(), name
+
+    # Reuse the accepted transparent Worker observer and exchange extraction.
+    helper_path = repo / 'tools/check_advisory_options_browser.py'
+    spec = importlib.util.spec_from_file_location('accepted_option_browser_helpers', helper_path)
+    helpers = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(helpers)
+    receipt = {'source': args.source, 'tree': args.tree, 'observed_at': datetime.now(timezone.utc).isoformat(),
+               'driver_sha256': digest(Path(__file__).read_bytes()), 'source_files': tracked, 'build_files': built,
+               'product_build_receipt_sha256': digest(build_receipt_bytes),
+               'passed': False, 'cases': [], 'page_errors': [], 'unexpected_network': [], 'loaded_native_sources': {}}
+    io = {}
+
+    class Quiet(SimpleHTTPRequestHandler):
+        def log_message(self, *unused):
+            pass
+
+        def guess_type(self, filename):
+            # Preserve the exact UTF-8 source-byte observation established by
+            # the independent option receiver (avoid CDP legacy text decoding).
+            return 'text/plain; charset=utf-8' if filename.endswith('.py') else super().guess_type(filename)
+
+    server = ThreadingHTTPServer(('127.0.0.1', 0), functools.partial(Quiet, directory=str(dist)))
+    server.daemon_threads = True
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    origin = f'http://127.0.0.1:{server.server_port}/'
+    browser = None
+    try:
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(executable_path=str(args.chrome), headless=True,
+                args=['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--disk-cache-size=1'])
+            receipt['browser'] = browser.version
+
+            def open_context(label, fail_helper=False):
+                context = browser.new_context(viewport={'width': 1440, 'height': 1100}, accept_downloads=True)
+                context.add_init_script(helpers.OBSERVE_WORKER)
+
+                def local_only(route):
+                    if route.request.url.startswith(origin):
+                        route.continue_()
+                    else:
+                        receipt['unexpected_network'].append(route.request.url)
+                        route.abort()
+
+                context.route('**/*', local_only)
+                failures = []
+                if fail_helper:
+                    def refuse(route):
+                        failures.append(route.request.url)
+                        route.fulfill(status=503, content_type='text/plain', body='authored helper-download failure')
+                    context.route('**/python/advisory_options.py', refuse)
+
+                def observe_response(response):
+                    name = response.url.rsplit('/', 1)[-1]
+                    if response.status == 200 and name in native_names:
+                        receipt['loaded_native_sources'][label + '/' + name] = digest(response.body())
+
+                context.on('response', observe_response)
+                page = context.new_page()
+                page.on('pageerror', lambda error: receipt['page_errors'].append({'case': label, 'error': str(error)}))
+                page.goto(origin, wait_until='networkidle')
+                page.evaluate("document.querySelectorAll('details.depth').forEach(node => node.open = true)")
+                return context, page, failures
+
+            context, page, _ = open_context('combined')
+            page.locator('#run-planner').click()
+            expect(page.locator('#proposal-state')).to_have_text('PROPOSAL READY', timeout=90000)
+            _, original_plan = helpers.last_exchange(page, 'plan')
+            page.locator('#approve').click()
+            expect(page.locator('#readback')).to_be_enabled()
+            before_review = live(page)
+            page.locator('#review-options').click()
+            expect(page.locator('#advisory-options-count')).to_contain_text('ADMITTED', timeout=90000)
+            options_request, response = helpers.last_exchange(page, 'options')
+            options = response['result']['advisories']
+            assert len(options) > 1 and options[0] == original_plan['result']['advisory']
+            assert live(page) == before_review
+            selected = options[1]
+            selected_hash = selected['advisory_hash']
+            assert selected_hash != options[0]['advisory_hash']
+            row = page.locator(f'li[data-advisory-hash="{selected_hash}"]')
+            assert json.loads(row.locator('pre').text_content()) == selected
+            row.locator('button').click()
+            expect(page.locator('#readback')).to_be_disabled()
+            expect(page.locator('#gate-approval i')).to_have_text('WAIT')
+            expect(page.locator('#gate-ack i')).to_have_text('WAIT')
+            page.locator('#approve').click()
+            page.locator('#readback').click()
+            expect(page.locator('#gate-ack i')).to_have_text('ACCEPTED', timeout=90000)
+            expect(page.locator('#audit-status')).to_have_text('4 EVENTS / VALID')
+            expect(page.locator('#review-current-trace')).to_be_enabled()
+            apply_request, apply_response = helpers.last_exchange(page, 'apply')
+            applied = apply_response['result']
+            assert apply_request['advisory'] == selected
+            assert apply_request['approval']['advisory_hash'] == selected_hash
+            assert apply_request['ack']['advisory_hash'] == selected_hash
+            assert applied['valid'] and 'error' not in applied
+            assert applied['state']['version'] == options_request['state']['version'] + 1
+            target = next(a for a in applied['state']['aircraft'] if a['aircraft_id'] == selected['aircraft_id'])
+            assert [target[k] for k in ('vx_nm_min', 'vy_nm_min', 'climb_ft_min')] == [selected[k] for k in ('set_vx_nm_min', 'set_vy_nm_min', 'set_climb_ft_min')]
+            assert [e['kind'] for e in applied['events']] == ['screen_pass', 'approval', 'ack', 'simulated_actuation']
+            assert applied['events'][-1]['payload']['advisory_hash'] == selected_hash
+            assert len(applied['audit_canonical']) == 4
+            page.locator('#verify-audit').click()
+            expect(page.locator('#audit-verdict')).to_have_text('HASH CHAIN VALID - 4 EVENTS')
+            before_trace = live(page)
+            page.locator('#review-current-trace').click()
+            expect(page.locator('#decision-trace-result')).to_have_attribute('data-verdict', 'valid', timeout=90000)
+            expect(page.locator('#decision-trace-feedback')).to_contain_text('Review complete')
+            trace_request, trace_response = helpers.last_exchange(page, 'review_trace')
+            report = trace_response['result']
+            assert sorted(trace_request) == ['op', 'trace_json']
+            assert trace_request['trace_json'] == applied['audit_json']
+            assert report['chain_valid'] and report['ok'] and report['event_count'] == 4
+            assert len(report['advisories']) == 1 and report['advisories'][0]['advisory_hash'] == selected_hash
+            assert [report['advisories'][0][k] for k in ('screen_seq', 'approval_seq', 'ack_seq')] == [0, 1, 2]
+            assert report['advisories'][0]['actuations'][0]['seq'] == 3
+            assert live(page) == before_trace
+            with page.expect_download() as download:
+                page.locator('#download-current-trace').click()
+            downloaded = OUT / 'selected-option-native-trace.json'
+            download.value.save_as(downloaded)
+            assert downloaded.read_text() == applied['audit_json']
+            page.locator('#open-trace-file').set_input_files(downloaded)
+            expect(page.locator('#review-opened-trace')).to_be_enabled()
+            page.locator('#review-opened-trace').click()
+            expect(page.locator('#decision-trace-result')).to_have_attribute('data-verdict', 'valid', timeout=90000)
+            expect(page.locator('#decision-trace-feedback')).to_contain_text('Review complete')
+            reopened_request, reopened_response = helpers.last_exchange(page, 'review_trace')
+            assert reopened_request['trace_json'] == applied['audit_json']
+            assert reopened_response['result'] == report and live(page) == before_trace
+            io['combined'] = page.evaluate('window.__towerIO')
+            receipt['cases'].append({'name': 'nondefault native option through fresh approval, apply and adopted trace review/download/reopen',
+                'native_option_count': len(options), 'selected': selected, 'original_hash': options[0]['advisory_hash'],
+                'apply_request': apply_request, 'apply_response': apply_response, 'trace_report': report,
+                'trace_bytes_preserved': True, 'live_state_preserved_during_trace_review': True})
+            context.close()
+            print('PASS combined native option and adopted trace journey', flush=True)
+
+            context, page, refused = open_context('missing-alternatives', fail_helper=True)
+            before = live(page)
+            page.locator('#review-options').click()
+            expect(page.locator('#advisory-options-status')).to_contain_text('source could not load', timeout=90000)
+            expect(page.locator('#advisory-options-count')).to_have_text('NO CURRENT REVIEW')
+            expect(page.locator('#approve')).to_be_disabled()
+            _, failed = helpers.last_exchange(page, 'options')
+            assert 'source could not load' in failed['error'] and len(refused) == 1
+            assert live(page) == before
+            page.locator('#run-planner').click()
+            expect(page.locator('#proposal-state')).to_have_text('PROPOSAL READY', timeout=90000)
+            plan_request, plan_response = helpers.last_exchange(page, 'plan')
+            assert plan_response['result'] == original_plan['result']
+            assert live(page)['world'] == before['world']
+            io['missing-alternatives'] = page.evaluate('window.__towerIO')
+            receipt['cases'].append({'name': 'optional alternatives download failure preserves original native planner',
+                'authored_http_status': 503, 'refused_requests': refused, 'options_error': failed,
+                'plan_request': plan_request, 'plan_response': plan_response, 'original_plan_identity_preserved': True})
+            context.close()
+            print('PASS optional-helper failure retains original native planner', flush=True)
+            browser.close()
+            browser = None
+        assert not receipt['page_errors'] and not receipt['unexpected_network']
+        for name in native_names:
+            assert receipt['loaded_native_sources']['combined/' + name] == digest((repo / name).read_bytes()), name
+        for entry in tracked:
+            assert digest((repo / entry['path']).read_bytes()) == entry['sha256'], entry['path']
+        for entry in built:
+            assert digest((dist / entry['path']).read_bytes()) == entry['sha256'], entry['path']
+        receipt['source_and_build_unchanged'] = True
+        receipt['passed'] = True
+    except BaseException as error:
+        receipt['error'] = repr(error)
+        raise
+    finally:
+        if browser:
+            browser.close()
+        server.shutdown()
+        server.server_close()
+        (OUT / 'worker-transcript.json').write_text(json.dumps(io, indent=2) + '\n')
+        receipt['worker_transcript_sha256'] = digest((OUT / 'worker-transcript.json').read_bytes())
+        (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
+        print(json.dumps({'passed': receipt['passed'], 'source': args.source, 'cases': len(receipt['cases']),
+                          'receipt_sha256': digest((OUT / 'receipt.json').read_bytes())}), flush=True)
+
+
+if __name__ == '__main__':
+    main()

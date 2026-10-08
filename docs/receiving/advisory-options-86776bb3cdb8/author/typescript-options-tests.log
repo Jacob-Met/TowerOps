@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /dev/shm/86776bb3cdb8-product-tower-options/repo/web/airspace
+
+
+ Test Files  1 passed (1)
+      Tests  13 passed (13)
+   Start at  20:36:47
+   Duration  284ms (transform 73ms, setup 0ms, import 95ms, tests 10ms, environment 0ms)
+

@@ -1,0 +1,9 @@
+{
+  "source": "45aaacbbaff9c71bf07fc1bc23b50ba56ef11615",
+  "browser": "153.0.8010.0",
+  "flows_passed": 3,
+  "native_options": 68,
+  "selected_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+  "selected_aircraft": "RX-A",
+  "receipt_sha256": "a8ad87d787aeb655dd7d660bcbc494eec3591df7ae08847d407a8af9cc17e312"
+}

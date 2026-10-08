@@ -1,0 +1,1054 @@
+{
+  "observed_at": "2026-10-08T11:50:44.538725+00:00",
+  "source": "45aaacbbaff9c71bf07fc1bc23b50ba56ef11615",
+  "tree": "1d582c4c29d61bfd03349639dac65af990bbbac7",
+  "browser": "153.0.8010.0",
+  "chrome": "/workspace/scratch/86776bb3cdb8/product-delivery/browser-runtime/chromium",
+  "driver_sha256": "574041c1b0dd98432a94300ada92029aa41aaa0d89ff376e19f73bb5f50f9b3b",
+  "source_files": [
+    {
+      "path": "advisory_options.py",
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "path": "towerops.py",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "path": "web/airspace/index.html",
+      "sha256": "4b6d71d287fd6947d69b13b25ed164c58197af9cbb2ad0d8726e764973107468"
+    },
+    {
+      "path": "web/airspace/package-lock.json",
+      "sha256": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655"
+    },
+    {
+      "path": "web/airspace/package.json",
+      "sha256": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd"
+    },
+    {
+      "path": "web/airspace/prepare-python.mjs",
+      "sha256": "3eee6944c302c0126dd86077c02d93f298073d31169bfad963b26986808c3024"
+    },
+    {
+      "path": "web/airspace/src/actuation.ts",
+      "sha256": "a6a3186003cbd7fdcba6e7bc0847c9abfa4ba5174d3c98ce2da651941360dcfb"
+    },
+    {
+      "path": "web/airspace/src/advisory-options.ts",
+      "sha256": "4b001ebf546e10761906c19e09af5ef19967e45d994c1b090d376cad695ea976"
+    },
+    {
+      "path": "web/airspace/src/advisory-review.ts",
+      "sha256": "45c170f976ffc886db49aef120361cbabc99884f63b3f017fc7a0c7b9923ed3e"
+    },
+    {
+      "path": "web/airspace/src/audit.ts",
+      "sha256": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075"
+    },
+    {
+      "path": "web/airspace/src/core.ts",
+      "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac"
+    },
+    {
+      "path": "web/airspace/src/draw.ts",
+      "sha256": "75ed074644787c22d5c067e96b4dab852401a367b3d2ad5211f30913238319dc"
+    },
+    {
+      "path": "web/airspace/src/encounter-view.ts",
+      "sha256": "329ac5994841291b3922702f035fac4d03766ae522eb52b807954f4d5ad508c4"
+    },
+    {
+      "path": "web/airspace/src/encounter.ts",
+      "sha256": "efd010d007c8b63830d09fdda9bf8724316803937e373f44fd7f504ff1355883"
+    },
+    {
+      "path": "web/airspace/src/gate.ts",
+      "sha256": "3f135cabba46d9b6316475424841e543b5f7488a70d85cba25be5cd8cf5e8c8a"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "sha256": "007dcd1c7178c49fa90f0063736cf154b40ad2d9ba9d60b54bfa87255a27c18f"
+    },
+    {
+      "path": "web/airspace/src/maneuvers.ts",
+      "sha256": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d"
+    },
+    {
+      "path": "web/airspace/src/planner.ts",
+      "sha256": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74"
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "sha256": "ab654f97801cc8467920eb4d5ba6f5ef0c30730f76d5a24d2ab8c12ca92c49b2"
+    },
+    {
+      "path": "web/airspace/src/python.ts",
+      "sha256": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c"
+    },
+    {
+      "path": "web/airspace/src/track-edit.ts",
+      "sha256": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046"
+    },
+    {
+      "path": "web/airspace/src/world-tools.ts",
+      "sha256": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115"
+    },
+    {
+      "path": "web/airspace/style.css",
+      "sha256": "9abb24f39088be588aff941dc1a456cb9cdf27fbb085d1514b68900b934dbe8f"
+    }
+  ],
+  "build_files": [
+    {
+      "path": "assets/index-Cyn-BfSg.css",
+      "bytes": 19317,
+      "sha256": "88b626f830ca511679cd73b2de34332db8025470810ea376e535db5dee002654"
+    },
+    {
+      "path": "assets/index-FoCyeV2V.js",
+      "bytes": 50167,
+      "sha256": "210514de8f0b74f4ebe1f28b2c3b99f531fbae90bc63308b847d9471a051c685"
+    },
+    {
+      "path": "assets/python-worker-DoXIO29w.js",
+      "bytes": 3822,
+      "sha256": "3c842c46cc1b14748cef182d8aa93a81a7fe36b73cc2d53925d8b475bbd49a55"
+    },
+    {
+      "path": "captures/airspace-desktop.png",
+      "bytes": 391153,
+      "sha256": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7"
+    },
+    {
+      "path": "captures/airspace-mobile.png",
+      "bytes": 190636,
+      "sha256": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 14139,
+      "sha256": "b2d9bc1c8558719eae789b6f1730a74ea50f9017e6cc1e83ae864507d933233a"
+    },
+    {
+      "path": "python/advisory_options.py",
+      "bytes": 2380,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "path": "python/pyodide-lock.json",
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "python/pyodide.asm.js",
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "python/pyodide.asm.wasm",
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "python/pyodide.mjs",
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "python/python_stdlib.zip",
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "python/towerops.py",
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    }
+  ],
+  "native_sources_loaded": {
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+  },
+  "native_source_headers": {
+    "towerops.py": {
+      "content-length": "19462",
+      "date": "Thu, 08 Oct 2026 11:50:43 GMT",
+      "content-type": "text/x-python; charset=utf-8",
+      "last-modified": "Thu, 08 Oct 2026 11:47:13 GMT",
+      "server": "SimpleHTTP/0.6 Python/3.12.14"
+    },
+    "advisory_options.py": {
+      "content-length": "2380",
+      "date": "Thu, 08 Oct 2026 11:50:43 GMT",
+      "content-type": "text/x-python; charset=utf-8",
+      "last-modified": "Thu, 08 Oct 2026 11:47:13 GMT",
+      "server": "SimpleHTTP/0.6 Python/3.12.14"
+    }
+  },
+  "cases": [
+    {
+      "case": "chosen_native_option_applies",
+      "selected": {
+        "aircraft_id": "RX-A",
+        "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+        "set_vx_nm_min": 1.25,
+        "set_vy_nm_min": 2.9341736485763756,
+        "set_climb_ft_min": 0,
+        "issued_at": 4350.25,
+        "expires_at": 4358.25,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+      },
+      "native_option_count": 68,
+      "displayed_equals_requested": true,
+      "apply_request": {
+        "original": {
+          "id": 3,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "sent": {
+          "id": 3,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "injected": null
+      },
+      "native_result": {
+        "state": {
+          "version": 8,
+          "observed_at": 4350.75,
+          "aircraft": [
+            {
+              "aircraft_id": "RX-A",
+              "x_nm": -6.25,
+              "y_nm": 0,
+              "altitude_ft": 12300,
+              "vx_nm_min": 1.25,
+              "vy_nm_min": 2.9341736485763756,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "RX-B",
+              "x_nm": 6.25,
+              "y_nm": 0,
+              "altitude_ft": 12300,
+              "vx_nm_min": -1.25,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "RX-Z",
+              "x_nm": 30,
+              "y_nm": 32,
+              "altitude_ft": 22000,
+              "vx_nm_min": 0,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "valid": true,
+        "events": [
+          {
+            "seq": 0,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "advisory_hashes": [
+                "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+              ]
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a"
+          },
+          {
+            "seq": 1,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "prev_hash": "5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a",
+            "event_hash": "a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7"
+          },
+          {
+            "seq": 2,
+            "kind": "ack",
+            "payload": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "prev_hash": "a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7",
+            "event_hash": "559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109"
+          },
+          {
+            "seq": 3,
+            "kind": "simulated_actuation",
+            "payload": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "before_world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "after_world_hash": "8dce02029bf475e5b6c681db201f041752452ac610e4d09696d9e3babe81d067"
+            },
+            "prev_hash": "559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109",
+            "event_hash": "47bc2de8aeab392e9dfaa118aa6c6b67eecad23a73f1ae6b7843d6c7f9fe0ba5"
+          }
+        ],
+        "audit_canonical": [
+          "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"],\"world_hash\":\"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+          "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"approved_at\":4350.45,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\",\"seq\":1}",
+          "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":4350.65,\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"status\":\"accepted\"},\"prev_hash\":\"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\",\"seq\":2}",
+          "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"after_world_hash\":\"8dce02029bf475e5b6c681db201f041752452ac610e4d09696d9e3babe81d067\",\"before_world_hash\":\"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\"},\"prev_hash\":\"559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109\",\"seq\":3}"
+        ],
+        "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\", \"advisory_hashes\": [\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\", \"decision\": \"approve\", \"approved_at\": 4350.45, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\", \"event_hash\": \"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\", \"status\": \"accepted\", \"acknowledged_at\": 4350.65}, \"prev_hash\": \"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\", \"event_hash\": \"559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\", \"before_world_hash\": \"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\", \"after_world_hash\": \"8dce02029bf475e5b6c681db201f041752452ac610e4d09696d9e3babe81d067\"}, \"prev_hash\": \"559fef2b92b55496d9c9d9fc5747d10cf3082af483a3e14f81ea447a3c406109\", \"event_hash\": \"47bc2de8aeab392e9dfaa118aa6c6b67eecad23a73f1ae6b7843d6c7f9fe0ba5\"}]"
+      },
+      "original_native_audit_verify": true,
+      "world_before": {
+        "version": 7,
+        "observed_at": 4350.25,
+        "aircraft": [
+          {
+            "aircraft_id": "RX-A",
+            "x_nm": -6.25,
+            "y_nm": 0.0,
+            "altitude_ft": 12300.0,
+            "vx_nm_min": 1.25,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "RX-B",
+            "x_nm": 6.25,
+            "y_nm": 0.0,
+            "altitude_ft": 12300.0,
+            "vx_nm_min": -1.25,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "RX-Z",
+            "x_nm": 30.0,
+            "y_nm": 32.0,
+            "altitude_ft": 22000.0,
+            "vx_nm_min": 0.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "world_after": {
+        "version": 8,
+        "observed_at": 4350.75,
+        "aircraft": [
+          {
+            "aircraft_id": "RX-A",
+            "x_nm": -6.25,
+            "y_nm": 0,
+            "altitude_ft": 12300,
+            "vx_nm_min": 1.25,
+            "vy_nm_min": 2.9341736485763756,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "RX-B",
+            "x_nm": 6.25,
+            "y_nm": 0,
+            "altitude_ft": 12300,
+            "vx_nm_min": -1.25,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "RX-Z",
+            "x_nm": 30,
+            "y_nm": 32,
+            "altitude_ft": 22000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "stale_selection_control": null
+    },
+    {
+      "case": "cross-option-ack",
+      "selected": {
+        "aircraft_id": "RX-A",
+        "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+        "set_vx_nm_min": 1.25,
+        "set_vy_nm_min": 2.9341736485763756,
+        "set_climb_ft_min": 0,
+        "issued_at": 4350.25,
+        "expires_at": 4358.25,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+      },
+      "native_option_count": 68,
+      "displayed_equals_requested": true,
+      "apply_request": {
+        "original": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "sent": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "15e3f7df4c60ec3782ab2266ccb4df2bff06390287f9dd7c884d3f21ffd50f15",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "injected": "cross-option-ack"
+      },
+      "native_result": {
+        "error": "ack_invalid",
+        "events": [
+          {
+            "seq": 0,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "advisory_hashes": [
+                "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+              ]
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a"
+          },
+          {
+            "seq": 1,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "prev_hash": "5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a",
+            "event_hash": "a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7"
+          },
+          {
+            "seq": 2,
+            "kind": "reject",
+            "payload": {
+              "reason": "ack_invalid",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "prev_hash": "a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7",
+            "event_hash": "0d88574ccee84f2d2050644744075603cc6549c49249c079ad1280e89a96ff08"
+          }
+        ],
+        "audit_canonical": [
+          "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"],\"world_hash\":\"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+          "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"approved_at\":4350.45,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\",\"seq\":1}",
+          "{\"kind\":\"reject\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"reason\":\"ack_invalid\"},\"prev_hash\":\"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\",\"seq\":2}"
+        ],
+        "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9\", \"advisory_hashes\": [\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\", \"decision\": \"approve\", \"approved_at\": 4350.45, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"5779107cb2baa484215230f4ac38dab5397a065c1950c78d381bba473758930a\", \"event_hash\": \"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\"}, {\"seq\": 2, \"kind\": \"reject\", \"payload\": {\"reason\": \"ack_invalid\", \"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"}, \"prev_hash\": \"a0ee8d6b9a7dd0b989e2adc5583f07d8d0fc4bf8c188f83ac6447196b7fcacc7\", \"event_hash\": \"0d88574ccee84f2d2050644744075603cc6549c49249c079ad1280e89a96ff08\"}]"
+      },
+      "original_native_audit_verify": true,
+      "world_before": {
+        "version": 7,
+        "observed_at": 4350.25,
+        "aircraft": [
+          {
+            "aircraft_id": "RX-A",
+            "x_nm": -6.25,
+            "y_nm": 0.0,
+            "altitude_ft": 12300.0,
+            "vx_nm_min": 1.25,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "RX-B",
+            "x_nm": 6.25,
+            "y_nm": 0.0,
+            "altitude_ft": 12300.0,
+            "vx_nm_min": -1.25,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "RX-Z",
+            "x_nm": 30.0,
+            "y_nm": 32.0,
+            "altitude_ft": 22000.0,
+            "vx_nm_min": 0.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "world_after": {
+        "version": 7,
+        "observed_at": 4350.25,
+        "aircraft": [
+          {
+            "aircraft_id": "RX-A",
+            "x_nm": -6.25,
+            "y_nm": 0,
+            "altitude_ft": 12300,
+            "vx_nm_min": 1.25,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "RX-B",
+            "x_nm": 6.25,
+            "y_nm": 0,
+            "altitude_ft": 12300,
+            "vx_nm_min": -1.25,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "RX-Z",
+            "x_nm": 30,
+            "y_nm": 32,
+            "altitude_ft": 22000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "stale_selection_control": "changed world clears reviewed choices and approval before any further apply"
+    },
+    {
+      "case": "different-world",
+      "selected": {
+        "aircraft_id": "RX-A",
+        "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+        "set_vx_nm_min": 1.25,
+        "set_vy_nm_min": 2.9341736485763756,
+        "set_climb_ft_min": 0,
+        "issued_at": 4350.25,
+        "expires_at": 4358.25,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+      },
+      "native_option_count": 68,
+      "displayed_equals_requested": true,
+      "apply_request": {
+        "original": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 7,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "sent": {
+          "id": 2,
+          "base": "http://127.0.0.1:44595/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "version": 8,
+              "observed_at": 4350.25,
+              "aircraft": [
+                {
+                  "aircraft_id": "RX-A",
+                  "x_nm": -6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": 1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-B",
+                  "x_nm": 6.25,
+                  "y_nm": 0,
+                  "altitude_ft": 12300,
+                  "vx_nm_min": -1.25,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "RX-Z",
+                  "x_nm": 30,
+                  "y_nm": 32,
+                  "altitude_ft": 22000,
+                  "vx_nm_min": 0,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "advisory": {
+              "aircraft_id": "RX-A",
+              "world_hash": "d9bbc2b32380803035805c3377524909c3e8b7d3d5130276b2f80d776be329c9",
+              "set_vx_nm_min": 1.25,
+              "set_vy_nm_min": 2.9341736485763756,
+              "set_climb_ft_min": 0,
+              "issued_at": 4350.25,
+              "expires_at": 4358.25,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "approval": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "decision": "approve",
+              "approved_at": 4350.45,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7",
+              "status": "accepted",
+              "acknowledged_at": 4350.65
+            },
+            "now": 4350.75,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "injected": "different-world"
+      },
+      "native_result": {
+        "error": "world_hash_mismatch",
+        "events": [
+          {
+            "seq": 0,
+            "kind": "reject",
+            "payload": {
+              "reason": "world_hash_mismatch",
+              "advisory_hash": "1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7"
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "ac93c267899c9428e530f6d861ce93c4a929b1e02b74d5cf83e56e1ac400dafe"
+          }
+        ],
+        "audit_canonical": [
+          "{\"kind\":\"reject\",\"payload\":{\"advisory_hash\":\"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\",\"reason\":\"world_hash_mismatch\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}"
+        ],
+        "audit_json": "[{\"seq\": 0, \"kind\": \"reject\", \"payload\": {\"reason\": \"world_hash_mismatch\", \"advisory_hash\": \"1cf5e15d2b2c10fd8fca8a303ed90ee06bc653b46afd0b1348e2ed83040578d7\"}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"ac93c267899c9428e530f6d861ce93c4a929b1e02b74d5cf83e56e1ac400dafe\"}]"
+      },
+      "original_native_audit_verify": true,
+      "world_before": {
+        "version": 7,
+        "observed_at": 4350.25,
+        "aircraft": [
+          {
+            "aircraft_id": "RX-A",
+            "x_nm": -6.25,
+            "y_nm": 0.0,
+            "altitude_ft": 12300.0,
+            "vx_nm_min": 1.25,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "RX-B",
+            "x_nm": 6.25,
+            "y_nm": 0.0,
+            "altitude_ft": 12300.0,
+            "vx_nm_min": -1.25,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "RX-Z",
+            "x_nm": 30.0,
+            "y_nm": 32.0,
+            "altitude_ft": 22000.0,
+            "vx_nm_min": 0.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "world_after": {
+        "version": 7,
+        "observed_at": 4350.25,
+        "aircraft": [
+          {
+            "aircraft_id": "RX-A",
+            "x_nm": -6.25,
+            "y_nm": 0,
+            "altitude_ft": 12300,
+            "vx_nm_min": 1.25,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "RX-B",
+            "x_nm": 6.25,
+            "y_nm": 0,
+            "altitude_ft": 12300,
+            "vx_nm_min": -1.25,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "RX-Z",
+            "x_nm": 30,
+            "y_nm": 32,
+            "altitude_ft": 22000,
+            "vx_nm_min": 0,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "stale_selection_control": null
+    }
+  ],
+  "page_or_http_errors": [],
+  "unexpected_network": [],
+  "worker_transcript_sha256": "0ab541f7fcd867e0ed8012fc035623151fff284b9e88d6205361dee853dc2b1a",
+  "scope": "Three real Chromium/Pyodide flows on synthetic authored state. Worker responses remain native and unmodified; two clearly identified outgoing request faults exercise native refusal. No deployment or real-world actuation."
+}

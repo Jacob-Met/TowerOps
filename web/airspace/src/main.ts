@@ -10,6 +10,8 @@ import { AuditLog } from './audit';
 import { Ack,Approval,GateRejected } from './gate';
 import { AuditEvent } from './audit';
 import { drawAirspace,viewRange } from './draw';
+import { AdvisoryOptionsReview,optionsAreCurrent,optionsSnapshotKey,receiveAdvisoryOptions,selectAdvisoryOption } from './advisory-options';
+import { AdvisoryReviewPanel } from './advisory-review';
 import { DecisionTraceReport,initializeDecisionTrace } from './decision-trace';
 type Scenario={name:string;state:WorldState;now:number};
 const fixture=(reference as unknown as {scenarios:Scenario[]}).scenarios[0]!;
@@ -20,6 +22,8 @@ let policy:SafetyPolicy={...DEFAULT_POLICY};
 let state=copy(fixture.state),now=fixture.now,selected='TWR419',running=false,pending:Advisory|null=null,approval:Approval|null=null,audit=new AuditLog();
 let rate=1,lastFrame=0,trafficSeq=0,busy=false,pythonAudit='[]';
 let trackEdit:TrackEditSession|null=null,trackPreview:TrackEditPreview|null=null,injectDraft:Record<string,string>|null=null;
+let optionsReview:AdvisoryOptionsReview|null=null,optionsStatus='Review native alternatives for the current world.';
+const optionsPanel=new AdvisoryReviewPanel($('advisory-review'),chooseAdvisoryOption);
 const decisionTrace=initializeDecisionTrace({getCurrentTrace:()=>pythonAudit,reviewTrace:reviewDecisionTrace});
 const flightFields=['flight-id','flight-x','flight-y','flight-level','flight-bearing','flight-speed','flight-climb'];
 type GateState='wait'|'done'|'fail'; let gateScreen:GateState='wait',gateApproval:GateState='wait',gateAck:GateState='wait';
@@ -51,8 +55,41 @@ async function render():Promise<void>{
  $<HTMLInputElement>('flight-id').readOnly=!!trackEdit;for(const id of ['add-custom-flight','remove-selected','edit-selected-track'])$(id).hidden=!!trackEdit;
  $('track-edit-controls').hidden=!trackEdit;$('track-edit-preview').hidden=!trackEdit;
  $('preview-track-edit').toggleAttribute('disabled',busy||!trackEdit);$('apply-track-edit').toggleAttribute('disabled',busy||!trackEdit||!trackPreview);$('cancel-track-edit').toggleAttribute('disabled',busy||!trackEdit);
+ $('review-options').toggleAttribute('disabled',busy||!!trackEdit);
+ if(optionsReview&&!optionsAreCurrent(optionsReview,state,policy,now)){optionsReview=null;optionsStatus='The world, clock or policy changed. Review alternatives again before choosing a proposal.';}
+ optionsPanel.update(optionsReview,optionsStatus,pending?.advisory_hash??null,busy||!!trackEdit);
  const valid=await audit.verify();setText('audit-status',`${audit.events.length} EVENT${audit.events.length===1?'':'S'} / ${valid?'VALID':'BROKEN'}`);
  const list=$('audit-events');list.replaceChildren();for(const e of audit.events){const li=document.createElement('li');li.textContent=`${String(e.seq).padStart(2,'0')}  ${e.kind}  ${JSON.stringify(e.payload).slice(0,120)}  ${e.event_hash.slice(0,12)}`;list.append(li);}
+}
+
+async function reviewAdvisoryOptions():Promise<void>{
+ if(busy||trackEdit)return;
+ running=false;$('toggle-run').textContent='Run traffic';
+ const snapshot=copy(state),snapshotPolicy={...policy},requestedAt=now,requestedKey=optionsSnapshotKey(snapshot,snapshotPolicy,requestedAt);
+ busy=true;optionsReview=null;optionsStatus='Checking each native planner candidate against this snapshot…';optionsPanel.open();
+ await render();$('advisory-review-title').focus();
+ try{
+  const result=await towerPython({op:'options',state:snapshot,now:requestedAt,policy:snapshotPolicy});
+  optionsReview=receiveAdvisoryOptions(result,requestedKey,state,policy,now);
+  optionsStatus=optionsReview.advisories.length
+   ? `Each option passed the native screen individually for world ${optionsReview.world_hash.slice(0,10)}. Choose one, then approve and accept its readback.`
+   : conflictPairs(state,policy).length?'No alternative passed the native screen in the bounded candidate menu. The current world and proposal are unchanged.':'No projected conflict. No advisory is needed for this snapshot.';
+  setText('python-status','Live CPython · native candidate review · ControlRoom.screen_batch');
+ }catch(err){optionsReview=null;optionsStatus=`Review unavailable: ${err instanceof Error?err.message:String(err)}`;}
+ finally{busy=false;await render();}
+}
+
+function chooseAdvisoryOption(hash:string):void{
+ if(busy||trackEdit||!optionsReview)return;
+ try{
+  const proposal=selectAdvisoryOption(optionsReview,hash,state,policy,now);
+  if(pending?.advisory_hash===proposal.advisory_hash)return;
+  running=false;$('toggle-run').textContent='Run traffic';pending=proposal;approval=null;
+  gateScreen='done';gateApproval='wait';gateAck='wait';
+  proposalMessage='Review this native alternative, then approve and acknowledge its exact proposal.';
+  optionsStatus=`Selected ${proposal.aircraft_id}, proposal ${proposal.advisory_hash.slice(0,12)}. Approval and readback are required for this selection.`;
+  announce(optionsStatus);void render();$('approve').focus();
+ }catch(err){optionsStatus=err instanceof Error?err.message:String(err);void render();}
 }
 
 function clearPending(message:string){pending=null;approval=null;proposalMessage=message;gateScreen='wait';gateApproval='wait';gateAck='wait';}
@@ -145,6 +182,8 @@ $('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('to
 $('reset-world').addEventListener('click',resetWorld);$('add-traffic').addEventListener('click',addTraffic);$('perturb-track').addEventListener('click',perturbTrack);$('run-planner').addEventListener('click',()=>void runPlanner());$('approve').addEventListener('click',approvePlan);$('readback').addEventListener('click',()=>void acceptReadback());
 $('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>void audit.verify().then(ok=>setText('audit-verdict',ok?`HASH CHAIN VALID - ${audit.events.length} EVENTS`:'HASH CHAIN INVALID')));$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);});
 $('edit-selected-track').addEventListener('click',startTrackEdit);$('preview-track-edit').addEventListener('click',previewSelectedTrack);$('apply-track-edit').addEventListener('click',applySelectedTrack);$('cancel-track-edit').addEventListener('click',cancelSelectedTrack);
+$('review-options').addEventListener('click',()=>void reviewAdvisoryOptions());
+$('close-options').addEventListener('click',()=>{$('advisory-review').hidden=true;$('review-options').focus();});
 for(const id of flightFields.filter(id=>id!=='flight-id'))$(id).addEventListener('input',invalidateTrackPreview);
 function announce(message:string){setText('announcer',message);}
 window.addEventListener('resize',()=>void render());void render();requestAnimationFrame(frame);

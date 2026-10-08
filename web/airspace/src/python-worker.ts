@@ -1,5 +1,15 @@
 // Lazy, off-main-thread CPython. All solver/gate decisions come from towerops.py.
 let runtime:Promise<any>|null=null;
+let alternativesModule:Promise<void>|null=null;
+async function loadAlternatives(py:any,base:string):Promise<void>{
+ if(!alternativesModule)alternativesModule=(async()=>{
+  const response=await fetch(base+'python/advisory_options.py');
+  if(!response.ok)throw new Error('TowerOps alternatives source could not load');
+  py.FS.writeFile('advisory_options.py',await response.text());
+  await py.runPythonAsync('import advisory_options');
+ })().catch(e=>{alternativesModule=null;throw e;});
+ return alternativesModule;
+}
 async function python(base:string){
  if(!runtime)runtime=(async()=>{
   const url=base+'python/pyodide.mjs';
@@ -31,6 +41,15 @@ def browser_request(raw):
     s = q['state']
     state = WorldState(s['version'], float(s['observed_at']), tuple(Aircraft(**{k: (v if k == 'aircraft_id' else float(v)) for k,v in a.items()}) for a in s['aircraft']))
     policy = SafetyPolicy(**{k: float(v) for k,v in q['policy'].items()})
+    if q['op'] == 'options':
+        from advisory_options import review_advisory_options
+        review = review_advisory_options(state, float(q['now']), policy)
+        return json.dumps({
+            'world_hash': review.world_hash,
+            'reviewed_at': review.reviewed_at,
+            'candidate_count': review.candidate_count,
+            'advisories': [dict(asdict(a), advisory_hash=a.advisory_hash) for a in review.advisories],
+        })
     if q['op'] == 'plan':
         plans = AdvisoryPlanner(policy).plan(state, float(q['now']))
         a = plans[0] if plans else None
@@ -73,6 +92,6 @@ async function loadReplaySources(py:any,base:string):Promise<void>{
 }
 self.onmessage=async(event)=>{
  const {id,base,request}=event.data;
- try{const py=await python(base);if(request?.op==='review_trace')await loadReplaySources(py,base);py.globals.set('browser_payload',JSON.stringify(request));const result=JSON.parse(await py.runPythonAsync('browser_request(browser_payload)'));self.postMessage({id,result});}
+ try{const py=await python(base);if(request?.op==='review_trace')await loadReplaySources(py,base);if(request.op==='options')await loadAlternatives(py,base);py.globals.set('browser_payload',JSON.stringify(request));const result=JSON.parse(await py.runPythonAsync('browser_request(browser_payload)'));self.postMessage({id,result});}
  catch(e){self.postMessage({id,error:String(e)});}
 };
