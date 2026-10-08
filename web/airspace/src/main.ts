@@ -1,5 +1,6 @@
 import '../style.css';
 import { createEncounterExplorer } from './encounter-view';
+import { createFlightRegister } from './flight-register';
 import reference from '../tests/python-reference.json';
 import { Aircraft,DEFAULT_POLICY,SafetyPolicy,WorldState,conflictPairs,projected } from './core';
 import { createAircraft,conflictWindows,parseWorldState } from './world-tools';
@@ -26,6 +27,10 @@ let rate=1,lastFrame=0,trafficSeq=0,busy=false,pythonAudit='[]';
 let worldJsonEdited=false;
 let trackEdit:TrackEditSession|null=null,trackPreview:TrackEditPreview|null=null,injectDraft:Record<string,string>|null=null;
 let optionsReview:AdvisoryOptionsReview|null=null,optionsStatus='Review native alternatives for the current world.';
+const flightRegister=createFlightRegister($('flight-register'),id=>{
+ if(busy||trackEdit||!state.aircraft.some(a=>a.aircraft_id===id))return;
+ selected=id;void render();
+});
 const optionsPanel=new AdvisoryReviewPanel($('advisory-review'),chooseAdvisoryOption);
 const decisionTrace=initializeDecisionTrace({getCurrentTrace:()=>pythonAudit,reviewTrace:reviewDecisionTrace});
 const flightFields=['flight-id','flight-x','flight-y','flight-level','flight-bearing','flight-speed','flight-climb'];
@@ -58,8 +63,7 @@ type GateState='wait'|'done'|'fail'; let gateScreen:GateState='wait',gateApprova
 function setText(id:string,value:string){$(id).textContent=value;}
 function gate(id:string,status:'wait'|'done'|'fail',label:string){const node=$(id);node.className=`gate-step ${status}`;const i=node.querySelector('i');if(i)i.textContent=label;}
 function drawLists(pairs:Array<[string,string]>){
- const flights=$('flight-list');flights.replaceChildren();
- for(const a of state.aircraft){const row=document.createElement('div');row.className=`flight-row ${selected===a.aircraft_id?'selected':''}`;const b=document.createElement('button');b.textContent=a.aircraft_id;b.disabled=busy||!!trackEdit;b.onclick=()=>{selected=a.aircraft_id;render();};const meta=document.createElement('span');meta.className='flight-meta';meta.textContent=`${Math.round(a.altitude_ft/100)} FL / ${a.vx_nm_min.toFixed(1)}, ${a.vy_nm_min.toFixed(1)} NM/M`;row.append(b,meta);flights.append(row);}
+ flightRegister.update(state.aircraft,selected,busy||!!trackEdit);
  const watch=$('conflict-list');watch.replaceChildren();
  for(const [a,b] of pairs){const row=document.createElement('div');row.className='conflict-row';const label=document.createElement('span');label.textContent=`${a} / ${b}`;const meta=document.createElement('span');meta.className='conflict-meta';meta.textContent='HORIZONTAL + VERTICAL';row.append(label,meta);watch.append(row);}
  if(!pairs.length){const p=document.createElement('p');p.className='fine-print';p.textContent='No pair enters both unsafe intervals inside the policy horizon.';watch.append(p);}

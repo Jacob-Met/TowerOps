@@ -1,0 +1,50 @@
+{
+  "schema": "towerops.flight-register-native-build.v1",
+  "parent": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "steps": [
+    {
+      "name": "prepare-python",
+      "exit_code": 0,
+      "seconds": 2.863,
+      "argv": [
+        "/usr/bin/node",
+        "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-flight-register/source/web/airspace/prepare-python.mjs"
+      ],
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "vite-build",
+      "exit_code": 0,
+      "seconds": 6.219,
+      "argv": [
+        "/usr/bin/node",
+        "--input-type=module",
+        "-e",
+        "import {build} from \"file:///home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/node_modules/vite/dist/node/index.js\";await build({\"root\": \"/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-flight-register/source/web/airspace\", \"configFile\": false, \"base\": \"./\", \"cacheDir\": \"/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-flight-register/cache/build-candidate\", \"build\": {\"outDir\": \"/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-flight-register/evidence/build-candidate/dist\", \"emptyOutDir\": false}});"
+      ],
+      "stdout": "vite v8.3.3 building client environment for production...\ntransforming...\n\u2713 27 modules transformed.\nrendering chunks...\ncomputing gzip size...\n../../../evidence/build-candidate/dist/assets/python-worker-D9QUacUJ.js   4.41 kB\n../../../evidence/build-candidate/dist/index.html                        18.22 kB \u2502 gzip:  5.87 kB\n../../../evidence/build-candidate/dist/assets/index-BJS8taTO.css         23.72 kB \u2502 gzip:  5.29 kB\n../../../evidence/build-candidate/dist/assets/index-CwHRNpeH.js          67.95 kB \u2502 gzip: 21.56 kB\n\n\u2713 built in 2.38s\n",
+      "stderr": ""
+    }
+  ],
+  "runtime_changed": [],
+  "borrowed_changed": [],
+  "build_files": {
+    "index.html": "076de63d59025c12e28c5091d2c80a33e34b5f101aa1d4d97837eceda528971f",
+    "favicon.svg": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+    "captures/airspace-mobile.png": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43",
+    "captures/airspace-desktop.png": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7",
+    "python/decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "python/towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "python/audit_replay.py": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+    "python/advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "python/pyodide.mjs": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+    "python/python_stdlib.zip": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+    "python/pyodide.asm.js": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+    "python/pyodide.asm.wasm": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+    "python/pyodide-lock.json": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+    "assets/index-CwHRNpeH.js": "21b90fa243066dfebbf3a3e756ff010fb177442c1f706a45405acf6f4848cfba",
+    "assets/index-BJS8taTO.css": "37cdd7e718e2b1fbeec895fd0f5a7a5140bec574b12cefd15b6c30f13510d5d8",
+    "assets/python-worker-D9QUacUJ.js": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804"
+  }
+}

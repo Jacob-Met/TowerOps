@@ -1,0 +1,27 @@
+{
+  "schema": "towerops.flight-register-source-preservation.v1",
+  "parent": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "parent_tree": "03fec48eb2a60ff34084051d55ce4c5b446c7bb1",
+  "existing_modified_paths": [
+    "web/airspace/README.md",
+    "web/airspace/index.html",
+    "web/airspace/src/main.ts",
+    "web/airspace/tests/playback-controls.test.ts"
+  ],
+  "main_exact_three_spans": true,
+  "html_exact_register_span": true,
+  "playback_assertion_body_byte_preserved": true,
+  "readme_full_parent_prefix_retained": true,
+  "unrelated_current_bytes_unchanged": true,
+  "native_runtime_pin_unchanged": true,
+  "scope_issue": "https://github.com/Jacob-Met/TowerOps/issues/63",
+  "qualified_runtime_pins": {
+    "web/airspace/src/flight-register-model.ts": "e1c24207d07ef4cd25f0fd8efaaadee9e38b0149d1e52fbdebfc7b9a935d2293",
+    "web/airspace/src/flight-register.ts": "47aff47e99481815e3f953b7de677d08e9e3ba726626eb009edf20e707e57b85",
+    "web/airspace/src/flight-register.css": "4625f8479265071b574eef008b8593b925e469ac14decd5912f2a6ec0965e2f4",
+    "web/airspace/tests/flight-register.test.ts": "a752f7720583f24fe81693fd6d7bce58d7515a499aec7709d2927da15ea2a818",
+    "web/airspace/src/main.ts": "7d5a85d7618c76863acaee66a7d88d20094832c0f68522c684b55415b2f06418",
+    "web/airspace/index.html": "305fb3c9af8e81e7b02bc72b073ee8ffd656c5716c88ce521889ab086f08aaae"
+  },
+  "playback_fixture_after_sha256": "c69f35222123571677fb6b446020dadf4a5e903dbc90f8ffb827b17e0b5e7450"
+}

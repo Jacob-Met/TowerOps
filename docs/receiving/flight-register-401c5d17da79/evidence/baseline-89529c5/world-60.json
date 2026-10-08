@@ -1,0 +1,546 @@
+{
+  "version": 29,
+  "observed_at": 1060,
+  "aircraft": [
+    {
+      "aircraft_id": "NTH_00",
+      "x_nm": 0,
+      "y_nm": 0,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_17",
+      "x_nm": 136,
+      "y_nm": 28,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_34",
+      "x_nm": 272,
+      "y_nm": 14,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_51",
+      "x_nm": 408,
+      "y_nm": 0,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_08",
+      "x_nm": 64,
+      "y_nm": 28,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_25",
+      "x_nm": 200,
+      "y_nm": 14,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_42",
+      "x_nm": 336,
+      "y_nm": 0,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_59",
+      "x_nm": 472,
+      "y_nm": 28,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_16",
+      "x_nm": 128,
+      "y_nm": 14,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_33",
+      "x_nm": 264,
+      "y_nm": 0,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_50",
+      "x_nm": 400,
+      "y_nm": 28,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_07",
+      "x_nm": 56,
+      "y_nm": 14,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_24",
+      "x_nm": 192,
+      "y_nm": 0,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_41",
+      "x_nm": 328,
+      "y_nm": 28,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_58",
+      "x_nm": 464,
+      "y_nm": 14,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_15",
+      "x_nm": 120,
+      "y_nm": 0,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_32",
+      "x_nm": 256,
+      "y_nm": 28,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_49",
+      "x_nm": 392,
+      "y_nm": 14,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_06",
+      "x_nm": 48,
+      "y_nm": 0,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_23",
+      "x_nm": 184,
+      "y_nm": 28,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_40",
+      "x_nm": 320,
+      "y_nm": 14,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_57",
+      "x_nm": 456,
+      "y_nm": 0,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_14",
+      "x_nm": 112,
+      "y_nm": 28,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_31",
+      "x_nm": 248,
+      "y_nm": 14,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_48",
+      "x_nm": 384,
+      "y_nm": 0,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_05",
+      "x_nm": 40,
+      "y_nm": 28,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_22",
+      "x_nm": 176,
+      "y_nm": 14,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_39",
+      "x_nm": 312,
+      "y_nm": 0,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_56",
+      "x_nm": 448,
+      "y_nm": 28,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_13",
+      "x_nm": 104,
+      "y_nm": 14,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_30",
+      "x_nm": 240,
+      "y_nm": 0,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_47",
+      "x_nm": 376,
+      "y_nm": 28,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_04",
+      "x_nm": 32,
+      "y_nm": 14,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_21",
+      "x_nm": 168,
+      "y_nm": 0,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_38",
+      "x_nm": 304,
+      "y_nm": 28,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_55",
+      "x_nm": 440,
+      "y_nm": 14,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_12",
+      "x_nm": 96,
+      "y_nm": 0,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_29",
+      "x_nm": 232,
+      "y_nm": 28,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_46",
+      "x_nm": 368,
+      "y_nm": 14,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_03",
+      "x_nm": 24,
+      "y_nm": 0,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_20",
+      "x_nm": 160,
+      "y_nm": 28,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_37",
+      "x_nm": 296,
+      "y_nm": 14,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_54",
+      "x_nm": 432,
+      "y_nm": 0,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_11",
+      "x_nm": 88,
+      "y_nm": 28,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_28",
+      "x_nm": 224,
+      "y_nm": 14,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_45",
+      "x_nm": 360,
+      "y_nm": 0,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_02",
+      "x_nm": 16,
+      "y_nm": 28,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_19",
+      "x_nm": 152,
+      "y_nm": 14,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_36",
+      "x_nm": 288,
+      "y_nm": 0,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_53",
+      "x_nm": 424,
+      "y_nm": 28,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_10",
+      "x_nm": 80,
+      "y_nm": 14,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_27",
+      "x_nm": 216,
+      "y_nm": 0,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_44",
+      "x_nm": 352,
+      "y_nm": 28,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_01",
+      "x_nm": 8,
+      "y_nm": 14,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_18",
+      "x_nm": 144,
+      "y_nm": 0,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_35",
+      "x_nm": 280,
+      "y_nm": 28,
+      "altitude_ft": 10000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_52",
+      "x_nm": 416,
+      "y_nm": 14,
+      "altitude_ft": 12000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "NTH_09",
+      "x_nm": 72,
+      "y_nm": 0,
+      "altitude_ft": 14000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": -60
+    },
+    {
+      "aircraft_id": "STH_26",
+      "x_nm": 208,
+      "y_nm": 28,
+      "altitude_ft": 11000,
+      "vx_nm_min": 0.2,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 60
+    },
+    {
+      "aircraft_id": "EST_43",
+      "x_nm": 344,
+      "y_nm": 14,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0.1,
+      "vy_nm_min": 0.2,
+      "climb_ft_min": 0
+    }
+  ]
+}
