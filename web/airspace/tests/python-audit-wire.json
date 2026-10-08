@@ -1,0 +1,288 @@
+{
+  "source_commit": "e522e53246986327b7903f3c404abf8a04ab5f1d",
+  "source": "Actual Chromium/Pyodide planner, approval and readback replies; canonical bodies from the original Python AuditLog input.",
+  "cases": [
+    {
+      "name": "ordinary_control",
+      "observed_at": 1000,
+      "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"3e2c6e308c9131b3d246ee00b61afaecdacc5f6dab26846ed885493a37c2f3d7\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429\", \"decision\": \"approve\", \"approved_at\": 1000.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"3e2c6e308c9131b3d246ee00b61afaecdacc5f6dab26846ed885493a37c2f3d7\", \"event_hash\": \"febace4196e387aeda3ce4678dd43c8a0726cdbacae2e9af3f303d1cd01d2ef4\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429\", \"status\": \"accepted\", \"acknowledged_at\": 1000.4}, \"prev_hash\": \"febace4196e387aeda3ce4678dd43c8a0726cdbacae2e9af3f303d1cd01d2ef4\", \"event_hash\": \"25697f39be80f9578a4f433668e6a1e072d997b87e5f415d0ef3c054333b3f50\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"6fa96b28904b86ff2db09fd2dc8d48358dbe67c0e8931e28319a64331c62fa77\"}, \"prev_hash\": \"25697f39be80f9578a4f433668e6a1e072d997b87e5f415d0ef3c054333b3f50\", \"event_hash\": \"98d93ab01f35782dbee41da93358212e1f4530d12dba10ee7a6cc4e286fa1199\"}]",
+      "events": [
+        {
+          "seq": 0,
+          "kind": "screen_pass",
+          "payload": {
+            "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+            "advisory_hashes": [
+              "10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429"
+            ]
+          },
+          "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "event_hash": "3e2c6e308c9131b3d246ee00b61afaecdacc5f6dab26846ed885493a37c2f3d7"
+        },
+        {
+          "seq": 1,
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429",
+            "decision": "approve",
+            "approved_at": 1000.2,
+            "approver": "synthetic-controller"
+          },
+          "prev_hash": "3e2c6e308c9131b3d246ee00b61afaecdacc5f6dab26846ed885493a37c2f3d7",
+          "event_hash": "febace4196e387aeda3ce4678dd43c8a0726cdbacae2e9af3f303d1cd01d2ef4"
+        },
+        {
+          "seq": 2,
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429",
+            "status": "accepted",
+            "acknowledged_at": 1000.4
+          },
+          "prev_hash": "febace4196e387aeda3ce4678dd43c8a0726cdbacae2e9af3f303d1cd01d2ef4",
+          "event_hash": "25697f39be80f9578a4f433668e6a1e072d997b87e5f415d0ef3c054333b3f50"
+        },
+        {
+          "seq": 3,
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429",
+            "before_world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+            "after_world_hash": "6fa96b28904b86ff2db09fd2dc8d48358dbe67c0e8931e28319a64331c62fa77"
+          },
+          "prev_hash": "25697f39be80f9578a4f433668e6a1e072d997b87e5f415d0ef3c054333b3f50",
+          "event_hash": "98d93ab01f35782dbee41da93358212e1f4530d12dba10ee7a6cc4e286fa1199"
+        }
+      ],
+      "audit_canonical": [
+        "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429\"],\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+        "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429\",\"approved_at\":1000.2,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"3e2c6e308c9131b3d246ee00b61afaecdacc5f6dab26846ed885493a37c2f3d7\",\"seq\":1}",
+        "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":1000.4,\"advisory_hash\":\"10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429\",\"status\":\"accepted\"},\"prev_hash\":\"febace4196e387aeda3ce4678dd43c8a0726cdbacae2e9af3f303d1cd01d2ef4\",\"seq\":2}",
+        "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"10ae92486ced8f0e3e0dceb1f245868409d459d05dcd5d7974b93c31617f0429\",\"after_world_hash\":\"6fa96b28904b86ff2db09fd2dc8d48358dbe67c0e8931e28319a64331c62fa77\",\"before_world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"25697f39be80f9578a4f433668e6a1e072d997b87e5f415d0ef3c054333b3f50\",\"seq\":3}"
+      ]
+    },
+    {
+      "name": "integral_approval",
+      "observed_at": 1000.8,
+      "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"32cdeaac0c2fe56a1cf59a369a3bb4e5657e766070b6b9ac1a6fe7e2c59864f9\", \"advisory_hashes\": [\"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\", \"decision\": \"approve\", \"approved_at\": 1001, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf\", \"event_hash\": \"ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\", \"status\": \"accepted\", \"acknowledged_at\": 1001.1999999999999}, \"prev_hash\": \"ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1\", \"event_hash\": \"674d6c2214a82cb9be380555977f86fb71b665861eb1f75e3a5ec4ba2977b882\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\", \"before_world_hash\": \"32cdeaac0c2fe56a1cf59a369a3bb4e5657e766070b6b9ac1a6fe7e2c59864f9\", \"after_world_hash\": \"39e03924830aa986db779f8669f83d7888b1be09137b4216691fd33343044ad5\"}, \"prev_hash\": \"674d6c2214a82cb9be380555977f86fb71b665861eb1f75e3a5ec4ba2977b882\", \"event_hash\": \"36affb7f63a0163c86591a70c013671770c077784857758d6a736639e9855fe2\"}]",
+      "events": [
+        {
+          "seq": 0,
+          "kind": "screen_pass",
+          "payload": {
+            "world_hash": "32cdeaac0c2fe56a1cf59a369a3bb4e5657e766070b6b9ac1a6fe7e2c59864f9",
+            "advisory_hashes": [
+              "fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6"
+            ]
+          },
+          "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "event_hash": "7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf"
+        },
+        {
+          "seq": 1,
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6",
+            "decision": "approve",
+            "approved_at": 1001,
+            "approver": "synthetic-controller"
+          },
+          "prev_hash": "7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf",
+          "event_hash": "ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1"
+        },
+        {
+          "seq": 2,
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6",
+            "status": "accepted",
+            "acknowledged_at": 1001.1999999999999
+          },
+          "prev_hash": "ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1",
+          "event_hash": "674d6c2214a82cb9be380555977f86fb71b665861eb1f75e3a5ec4ba2977b882"
+        },
+        {
+          "seq": 3,
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6",
+            "before_world_hash": "32cdeaac0c2fe56a1cf59a369a3bb4e5657e766070b6b9ac1a6fe7e2c59864f9",
+            "after_world_hash": "39e03924830aa986db779f8669f83d7888b1be09137b4216691fd33343044ad5"
+          },
+          "prev_hash": "674d6c2214a82cb9be380555977f86fb71b665861eb1f75e3a5ec4ba2977b882",
+          "event_hash": "36affb7f63a0163c86591a70c013671770c077784857758d6a736639e9855fe2"
+        }
+      ],
+      "audit_canonical": [
+        "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\"],\"world_hash\":\"32cdeaac0c2fe56a1cf59a369a3bb4e5657e766070b6b9ac1a6fe7e2c59864f9\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+        "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\",\"approved_at\":1001,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf\",\"seq\":1}",
+        "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":1001.1999999999999,\"advisory_hash\":\"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\",\"status\":\"accepted\"},\"prev_hash\":\"ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1\",\"seq\":2}",
+        "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\",\"after_world_hash\":\"39e03924830aa986db779f8669f83d7888b1be09137b4216691fd33343044ad5\",\"before_world_hash\":\"32cdeaac0c2fe56a1cf59a369a3bb4e5657e766070b6b9ac1a6fe7e2c59864f9\"},\"prev_hash\":\"674d6c2214a82cb9be380555977f86fb71b665861eb1f75e3a5ec4ba2977b882\",\"seq\":3}"
+      ]
+    },
+    {
+      "name": "exponent_timestamp",
+      "observed_at": -0.19999999000000002,
+      "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"36ea8fa1ecff9908bfbf710786fdfbbd6f145a42051dc4079e219ed54389ba6e\", \"advisory_hashes\": [\"d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"5e2f8ba59263f8b951d3366012500502a8be24d5de910589c3d8ee8424946ed6\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851\", \"decision\": \"approve\", \"approved_at\": 9.999999994736442e-09, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"5e2f8ba59263f8b951d3366012500502a8be24d5de910589c3d8ee8424946ed6\", \"event_hash\": \"dd6bf18db07ea87dc16cdfc2c228c91c3b9dd08e149ec8cf5d6291b7abc92451\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851\", \"status\": \"accepted\", \"acknowledged_at\": 0.20000001}, \"prev_hash\": \"dd6bf18db07ea87dc16cdfc2c228c91c3b9dd08e149ec8cf5d6291b7abc92451\", \"event_hash\": \"2998e52f3e53d5981aff98e36b77c953f71314b9a629202d9503811d5b4f299e\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851\", \"before_world_hash\": \"36ea8fa1ecff9908bfbf710786fdfbbd6f145a42051dc4079e219ed54389ba6e\", \"after_world_hash\": \"e74b7aec48eeb17107dd9d4985f55c8f909a2d6da4eb905df9a04e933ac47f85\"}, \"prev_hash\": \"2998e52f3e53d5981aff98e36b77c953f71314b9a629202d9503811d5b4f299e\", \"event_hash\": \"2c55037b0292f3997c9e6c38adf9282994fbe39dad485d9553182b5fc015bd6b\"}]",
+      "events": [
+        {
+          "seq": 0,
+          "kind": "screen_pass",
+          "payload": {
+            "world_hash": "36ea8fa1ecff9908bfbf710786fdfbbd6f145a42051dc4079e219ed54389ba6e",
+            "advisory_hashes": [
+              "d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851"
+            ]
+          },
+          "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "event_hash": "5e2f8ba59263f8b951d3366012500502a8be24d5de910589c3d8ee8424946ed6"
+        },
+        {
+          "seq": 1,
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851",
+            "decision": "approve",
+            "approved_at": 9.999999994736442e-09,
+            "approver": "synthetic-controller"
+          },
+          "prev_hash": "5e2f8ba59263f8b951d3366012500502a8be24d5de910589c3d8ee8424946ed6",
+          "event_hash": "dd6bf18db07ea87dc16cdfc2c228c91c3b9dd08e149ec8cf5d6291b7abc92451"
+        },
+        {
+          "seq": 2,
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851",
+            "status": "accepted",
+            "acknowledged_at": 0.20000001
+          },
+          "prev_hash": "dd6bf18db07ea87dc16cdfc2c228c91c3b9dd08e149ec8cf5d6291b7abc92451",
+          "event_hash": "2998e52f3e53d5981aff98e36b77c953f71314b9a629202d9503811d5b4f299e"
+        },
+        {
+          "seq": 3,
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851",
+            "before_world_hash": "36ea8fa1ecff9908bfbf710786fdfbbd6f145a42051dc4079e219ed54389ba6e",
+            "after_world_hash": "e74b7aec48eeb17107dd9d4985f55c8f909a2d6da4eb905df9a04e933ac47f85"
+          },
+          "prev_hash": "2998e52f3e53d5981aff98e36b77c953f71314b9a629202d9503811d5b4f299e",
+          "event_hash": "2c55037b0292f3997c9e6c38adf9282994fbe39dad485d9553182b5fc015bd6b"
+        }
+      ],
+      "audit_canonical": [
+        "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851\"],\"world_hash\":\"36ea8fa1ecff9908bfbf710786fdfbbd6f145a42051dc4079e219ed54389ba6e\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+        "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851\",\"approved_at\":9.999999994736442e-09,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"5e2f8ba59263f8b951d3366012500502a8be24d5de910589c3d8ee8424946ed6\",\"seq\":1}",
+        "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":0.20000001,\"advisory_hash\":\"d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851\",\"status\":\"accepted\"},\"prev_hash\":\"dd6bf18db07ea87dc16cdfc2c228c91c3b9dd08e149ec8cf5d6291b7abc92451\",\"seq\":2}",
+        "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"d5e223f38a7750f03c72d28d5e70f73f1b799d5273116968415ae69e700fe851\",\"after_world_hash\":\"e74b7aec48eeb17107dd9d4985f55c8f909a2d6da4eb905df9a04e933ac47f85\",\"before_world_hash\":\"36ea8fa1ecff9908bfbf710786fdfbbd6f145a42051dc4079e219ed54389ba6e\"},\"prev_hash\":\"2998e52f3e53d5981aff98e36b77c953f71314b9a629202d9503811d5b4f299e\",\"seq\":3}"
+      ]
+    },
+    {
+      "name": "large_timestamp",
+      "observed_at": 10000000000000000,
+      "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"ec641971d0981579bf7992a908727dabcfc99e612119f636f42a8b1e2094f93c\", \"advisory_hashes\": [\"cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"5948695ca7b31a21326cb5e60816fcf20af0bdd43c6a84515682994f9c24b258\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6\", \"decision\": \"approve\", \"approved_at\": 10000000000000000, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"5948695ca7b31a21326cb5e60816fcf20af0bdd43c6a84515682994f9c24b258\", \"event_hash\": \"1a9e16e4b26a4bf95764faec28374d1ebf750abbb0f11576183894a123089e66\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6\", \"status\": \"accepted\", \"acknowledged_at\": 10000000000000000}, \"prev_hash\": \"1a9e16e4b26a4bf95764faec28374d1ebf750abbb0f11576183894a123089e66\", \"event_hash\": \"1187a9b64cdbb9f2f84103ad76c9591ab97b793133c5981b5ff73fd114a3cf90\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6\", \"before_world_hash\": \"ec641971d0981579bf7992a908727dabcfc99e612119f636f42a8b1e2094f93c\", \"after_world_hash\": \"c9d6b642352dc6a2909001f7b0083c08eac9876b194b0af2e4b684b8c7a0683f\"}, \"prev_hash\": \"1187a9b64cdbb9f2f84103ad76c9591ab97b793133c5981b5ff73fd114a3cf90\", \"event_hash\": \"f1247152b126176630bf3fd32c829123b6e99319931551b260551b92e6ebfbf7\"}]",
+      "events": [
+        {
+          "seq": 0,
+          "kind": "screen_pass",
+          "payload": {
+            "world_hash": "ec641971d0981579bf7992a908727dabcfc99e612119f636f42a8b1e2094f93c",
+            "advisory_hashes": [
+              "cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6"
+            ]
+          },
+          "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "event_hash": "5948695ca7b31a21326cb5e60816fcf20af0bdd43c6a84515682994f9c24b258"
+        },
+        {
+          "seq": 1,
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6",
+            "decision": "approve",
+            "approved_at": 10000000000000000,
+            "approver": "synthetic-controller"
+          },
+          "prev_hash": "5948695ca7b31a21326cb5e60816fcf20af0bdd43c6a84515682994f9c24b258",
+          "event_hash": "1a9e16e4b26a4bf95764faec28374d1ebf750abbb0f11576183894a123089e66"
+        },
+        {
+          "seq": 2,
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6",
+            "status": "accepted",
+            "acknowledged_at": 10000000000000000
+          },
+          "prev_hash": "1a9e16e4b26a4bf95764faec28374d1ebf750abbb0f11576183894a123089e66",
+          "event_hash": "1187a9b64cdbb9f2f84103ad76c9591ab97b793133c5981b5ff73fd114a3cf90"
+        },
+        {
+          "seq": 3,
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6",
+            "before_world_hash": "ec641971d0981579bf7992a908727dabcfc99e612119f636f42a8b1e2094f93c",
+            "after_world_hash": "c9d6b642352dc6a2909001f7b0083c08eac9876b194b0af2e4b684b8c7a0683f"
+          },
+          "prev_hash": "1187a9b64cdbb9f2f84103ad76c9591ab97b793133c5981b5ff73fd114a3cf90",
+          "event_hash": "f1247152b126176630bf3fd32c829123b6e99319931551b260551b92e6ebfbf7"
+        }
+      ],
+      "audit_canonical": [
+        "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6\"],\"world_hash\":\"ec641971d0981579bf7992a908727dabcfc99e612119f636f42a8b1e2094f93c\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+        "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6\",\"approved_at\":10000000000000000,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"5948695ca7b31a21326cb5e60816fcf20af0bdd43c6a84515682994f9c24b258\",\"seq\":1}",
+        "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":10000000000000000,\"advisory_hash\":\"cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6\",\"status\":\"accepted\"},\"prev_hash\":\"1a9e16e4b26a4bf95764faec28374d1ebf750abbb0f11576183894a123089e66\",\"seq\":2}",
+        "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"cbf920135ee1670d5cfded3f41efa1a2ef9f03f0b41bc839c615518f2ffc9cb6\",\"after_world_hash\":\"c9d6b642352dc6a2909001f7b0083c08eac9876b194b0af2e4b684b8c7a0683f\",\"before_world_hash\":\"ec641971d0981579bf7992a908727dabcfc99e612119f636f42a8b1e2094f93c\"},\"prev_hash\":\"1187a9b64cdbb9f2f84103ad76c9591ab97b793133c5981b5ff73fd114a3cf90\",\"seq\":3}"
+      ]
+    },
+    {
+      "name": "denied_ack_integral",
+      "observed_at": 1000.8,
+      "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"32cdeaac0c2fe56a1cf59a369a3bb4e5657e766070b6b9ac1a6fe7e2c59864f9\", \"advisory_hashes\": [\"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\", \"decision\": \"approve\", \"approved_at\": 1001, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf\", \"event_hash\": \"ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1\"}, {\"seq\": 2, \"kind\": \"reject\", \"payload\": {\"reason\": \"ack_missing\", \"advisory_hash\": \"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\"}, \"prev_hash\": \"ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1\", \"event_hash\": \"539738048ff22913f0aa3d800963e6a08bd67a62d3003d71519803c170aa4779\"}]",
+      "events": [
+        {
+          "seq": 0,
+          "kind": "screen_pass",
+          "payload": {
+            "world_hash": "32cdeaac0c2fe56a1cf59a369a3bb4e5657e766070b6b9ac1a6fe7e2c59864f9",
+            "advisory_hashes": [
+              "fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6"
+            ]
+          },
+          "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "event_hash": "7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf"
+        },
+        {
+          "seq": 1,
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6",
+            "decision": "approve",
+            "approved_at": 1001,
+            "approver": "synthetic-controller"
+          },
+          "prev_hash": "7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf",
+          "event_hash": "ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1"
+        },
+        {
+          "seq": 2,
+          "kind": "reject",
+          "payload": {
+            "reason": "ack_missing",
+            "advisory_hash": "fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6"
+          },
+          "prev_hash": "ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1",
+          "event_hash": "539738048ff22913f0aa3d800963e6a08bd67a62d3003d71519803c170aa4779"
+        }
+      ],
+      "audit_canonical": [
+        "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\"],\"world_hash\":\"32cdeaac0c2fe56a1cf59a369a3bb4e5657e766070b6b9ac1a6fe7e2c59864f9\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+        "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\",\"approved_at\":1001,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"7d6404ce93bb3aef4848816a5badd821773831bb0012da9b606de9d6c3bdcaaf\",\"seq\":1}",
+        "{\"kind\":\"reject\",\"payload\":{\"advisory_hash\":\"fb8c132d1c45a37164d76c729fa11acede748dc24548c10b017ed797bcecefa6\",\"reason\":\"ack_missing\"},\"prev_hash\":\"ad3a68abcfda016a4bf6478dfc3d48c9e62e6ec5cf94b4761a75f3210bff17b1\",\"seq\":2}"
+      ]
+    }
+  ]
+}
