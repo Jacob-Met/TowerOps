@@ -1,0 +1,66 @@
+{
+  "prior_candidate_source_manifest_sha256": "1a7e82d2fffbce9670f02bf39ff5c7944960bc34e5de6a5512fc62131c046d40",
+  "qualification_scope": "Same private playback candidate with the actual current audit dependency, over the received Git tree. No full-repository, native worker or browser claim.",
+  "schema": "independent-towerops-playback-current-native-source.v1",
+  "source_before": {
+    "README.md": {
+      "bytes": 2467,
+      "git_blob": "ba599a0d74a6ea586ea53bdc7cb4ee5eb0671be8",
+      "origin": "/dev/shm/hamon-memory-capability-55e3e26c5905/towerops-playback-review/candidate/README.md",
+      "sha256": "ad1502b77c1854b182d1b676eba510ca81155a8cdc8276d746142a700f19ea17",
+      "upstream_blob": "ba599a0d74a6ea586ea53bdc7cb4ee5eb0671be8"
+    },
+    "index.html": {
+      "bytes": 9968,
+      "git_blob": "a473918c4694202460d6f2c208163bb276751f6d",
+      "origin": "/dev/shm/hamon-memory-capability-55e3e26c5905/towerops-playback-review/candidate/index.html",
+      "sha256": "aada9ddb9f7ca77b954026402000e33ec3209e9de953d2173db1e27efa1e3d0b",
+      "upstream_blob": "a473918c4694202460d6f2c208163bb276751f6d"
+    },
+    "package.json": {
+      "bytes": 357,
+      "git_blob": "836291c282e63943575c82dfaeaf653d278b48a1",
+      "origin": "/dev/shm/hamon-memory-capability-55e3e26c5905/towerops-playback-review/candidate/package.json",
+      "sha256": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd",
+      "upstream_blob": "836291c282e63943575c82dfaeaf653d278b48a1"
+    },
+    "src/audit.ts": {
+      "bytes": 2397,
+      "git_blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b",
+      "origin": "/dev/shm/estate-55e3e26c5905/towerops-native-5ae8087/repo/web/airspace/src/audit.ts",
+      "sha256": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075",
+      "upstream_blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b"
+    },
+    "src/core.ts": {
+      "bytes": 5158,
+      "git_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+      "origin": "/dev/shm/hamon-memory-capability-55e3e26c5905/towerops-playback-review/candidate/src/core.ts",
+      "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+      "upstream_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7"
+    },
+    "src/main.ts": {
+      "bytes": 21936,
+      "git_blob": "33d4da8949fddb634a04459045268308a1f45859",
+      "origin": "/dev/shm/hamon-memory-capability-55e3e26c5905/towerops-playback-review/candidate/src/main.ts",
+      "sha256": "c5867cb7c293eb3f5f104b5f3a0e5d2c94a5b8bb42be833bd2f7df42085ac312",
+      "upstream_blob": "2aabfdba1292f6db0890b2fb0b9bc8cf9e027636"
+    },
+    "src/world-tools.ts": {
+      "bytes": 4263,
+      "git_blob": "8e308d78c19389a6881aace8d22412e93557f066",
+      "origin": "/dev/shm/hamon-memory-capability-55e3e26c5905/towerops-playback-review/candidate/src/world-tools.ts",
+      "sha256": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+      "upstream_blob": "8e308d78c19389a6881aace8d22412e93557f066"
+    },
+    "tests/python-reference.json": {
+      "bytes": 14868,
+      "git_blob": "65b017ab362097b161ec1f7c103b55a3c42941f1",
+      "origin": "/dev/shm/hamon-memory-capability-55e3e26c5905/towerops-playback-review/candidate/tests/python-reference.json",
+      "sha256": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+      "upstream_blob": "65b017ab362097b161ec1f7c103b55a3c42941f1"
+    }
+  },
+  "upstream_commit": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+  "upstream_tree": "356e66716c8953a3c2aac8a23790ce6eeaba20d0",
+  "historical_provider_manifest_sha256": "302278bb3cd1877319d9ce1c60742c428d35bda5144e57fc0ddd6aa75dd96633"
+}

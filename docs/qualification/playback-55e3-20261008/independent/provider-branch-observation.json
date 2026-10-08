@@ -1,0 +1,14 @@
+{
+  "name": "main",
+  "commit": "09b96e31d2867af5b7a9738406d0431cf1010090",
+  "tree": {
+    "sha": "4d22827647c0b2e37d11921aa5273f7a358bcdde",
+    "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/trees/4d22827647c0b2e37d11921aa5273f7a358bcdde"
+  },
+  "parents": [
+    "728387a51fba7be34cf8344fe4f5cd9c7b12b6ad",
+    "3db6854bbdc085b436117a57d96d322ac7a845b8"
+  ],
+  "message": "Merge pull request #36 from Jacob-Met/fix/8304-numeric-admission\n\nReject malformed advisory commands and retained flight coordinates. Preserve the concurrently integrated audit-hash correction and both author lineages.\n\nQualified exact combined receiving tree4d22827647c0b2e37d11921aa5273f7a358bcdde: native91, TypeScript70, lint, adapter, real browser/Pyodide gates, and focused malformed-candidate browser receiving all pass.",
+  "html_url": "https://github.com/Jacob-Met/TowerOps/commit/09b96e31d2867af5b7a9738406d0431cf1010090"
+}

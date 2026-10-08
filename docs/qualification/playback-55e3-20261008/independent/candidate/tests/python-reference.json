@@ -1,0 +1,453 @@
+{
+  "policy": {
+    "horizon_min": 5.0,
+    "max_climb_ft_min": 3000.0,
+    "max_speed_nm_min": 6.0,
+    "max_state_age_sec": 10.0,
+    "min_horizontal_nm": 5.0,
+    "min_vertical_ft": 1000.0,
+    "sample_step_min": 0.5
+  },
+  "scenarios": [
+    {
+      "advisory": {
+        "aircraft_id": "TWR419",
+        "expires_at": 1010.0,
+        "issued_at": 1002.0,
+        "rationale": "synthetic projected-separation recovery",
+        "set_climb_ft_min": 0.0,
+        "set_vx_nm_min": -1.0,
+        "set_vy_nm_min": 2.0,
+        "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a"
+      },
+      "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+      "after_conflict": false,
+      "after_state": {
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": -5.0,
+            "y_nm": 0.0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 2.0,
+            "x_nm": 5.0,
+            "y_nm": 0.0
+          }
+        ],
+        "observed_at": 1002.5,
+        "version": 2
+      },
+      "after_world_hash": "3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35",
+      "audit_events": [
+        {
+          "event_hash": "1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e",
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+            ],
+            "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a"
+          },
+          "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "seq": 0
+        },
+        {
+          "event_hash": "9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085",
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+            "approved_at": 1002.2,
+            "approver": "synthetic-controller",
+            "decision": "approve"
+          },
+          "prev_hash": "1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e",
+          "seq": 1
+        },
+        {
+          "event_hash": "72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9",
+          "kind": "ack",
+          "payload": {
+            "acknowledged_at": 1002.4,
+            "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+            "status": "accepted"
+          },
+          "prev_hash": "9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085",
+          "seq": 2
+        },
+        {
+          "event_hash": "04ad4e3453871c1ba209ef53cfffb58f8b8b3544ce5ea7d549f84c39a04171d5",
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+            "after_world_hash": "3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35",
+            "before_world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a"
+          },
+          "prev_hash": "72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9",
+          "seq": 3
+        }
+      ],
+      "audit_valid": true,
+      "before_conflict": true,
+      "conflict_pairs": [
+        [
+          "TWR218",
+          "TWR419"
+        ]
+      ],
+      "conflicting_aircraft": [
+        "TWR218",
+        "TWR419"
+      ],
+      "missing_ack": {
+        "events": [
+          {
+            "event_hash": "1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e",
+            "kind": "screen_pass",
+            "payload": {
+              "advisory_hashes": [
+                "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+              ],
+              "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a"
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "seq": 0
+          },
+          {
+            "event_hash": "9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085",
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "approved_at": 1002.2,
+              "approver": "synthetic-controller",
+              "decision": "approve"
+            },
+            "prev_hash": "1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e",
+            "seq": 1
+          },
+          {
+            "event_hash": "a857d8403223d03f85462815a859a767650ba5fcb43d20668fab610a059c8cf3",
+            "kind": "reject",
+            "payload": {
+              "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "reason": "ack_missing"
+            },
+            "prev_hash": "9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085",
+            "seq": 2
+          }
+        ],
+        "reason": "ack_missing",
+        "state_unchanged": true
+      },
+      "name": "demo_crossing",
+      "now": 1002.0,
+      "state": {
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": -5.0,
+            "y_nm": 0.0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": 5.0,
+            "y_nm": 0.0
+          }
+        ],
+        "observed_at": 1000.0,
+        "version": 1
+      },
+      "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a"
+    },
+    {
+      "advisory": null,
+      "advisory_hash": null,
+      "after_conflict": null,
+      "after_state": null,
+      "after_world_hash": null,
+      "audit_events": [],
+      "audit_valid": true,
+      "before_conflict": false,
+      "conflict_pairs": [],
+      "conflicting_aircraft": [],
+      "missing_ack": null,
+      "name": "clear_same_track",
+      "now": 2002.0,
+      "state": {
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": -10.0,
+            "y_nm": 0.0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": 10.0,
+            "y_nm": 0.0
+          }
+        ],
+        "observed_at": 2000.0,
+        "version": 2
+      },
+      "world_hash": "61bbdc4ef60483651fdc0653e9156eaeb832c874b29876dc2dbe209543ab5545"
+    },
+    {
+      "advisory": null,
+      "advisory_hash": null,
+      "after_conflict": null,
+      "after_state": null,
+      "after_world_hash": null,
+      "audit_events": [],
+      "audit_valid": true,
+      "before_conflict": false,
+      "conflict_pairs": [],
+      "conflicting_aircraft": [],
+      "missing_ack": null,
+      "name": "vertical_separation",
+      "now": 3002.0,
+      "state": {
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": -5.0,
+            "y_nm": 0.0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "altitude_ft": 12000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": 5.0,
+            "y_nm": 0.0
+          }
+        ],
+        "observed_at": 3000.0,
+        "version": 3
+      },
+      "world_hash": "dfd57db50834cad929e8f8c6f8bf7a652650b2458f01322b42051ef757a8061b"
+    },
+    {
+      "advisory": {
+        "aircraft_id": "TWR820",
+        "expires_at": 4010.0,
+        "issued_at": 4002.0,
+        "rationale": "synthetic projected-separation recovery",
+        "set_climb_ft_min": 0.0,
+        "set_vx_nm_min": 0.0,
+        "set_vy_nm_min": 2.0,
+        "world_hash": "07eab3e250cf72f73c92a60a8ee1031c32b42f07398579ff0633aef8d76c882b"
+      },
+      "advisory_hash": "c2cdab3da41ee801c3b980ac9e1ae4f3e697d10e4d220532fbe2ff22c7a41b55",
+      "after_conflict": true,
+      "after_state": {
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": -5.0,
+            "y_nm": 0.0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": 5.0,
+            "y_nm": 0.0
+          },
+          {
+            "aircraft_id": "TWR820",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": 0.0,
+            "vy_nm_min": 2.0,
+            "x_nm": 0.0,
+            "y_nm": 8.0
+          }
+        ],
+        "observed_at": 4002.5,
+        "version": 5
+      },
+      "after_world_hash": "569439e1e26f87a8efe993021a73b27458281acfbf9a0d185a66dda3a1fa4e0a",
+      "audit_events": [
+        {
+          "event_hash": "7fe7875c35da0a48aa2360106ddc48d8cd01a313bd84ba20cbaf41a902ebf4bb",
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "c2cdab3da41ee801c3b980ac9e1ae4f3e697d10e4d220532fbe2ff22c7a41b55"
+            ],
+            "world_hash": "07eab3e250cf72f73c92a60a8ee1031c32b42f07398579ff0633aef8d76c882b"
+          },
+          "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "seq": 0
+        },
+        {
+          "event_hash": "63f4cb54c083237df49bf7d4e13bf226f578c4ff9d66b359807ed04fcfecca74",
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "c2cdab3da41ee801c3b980ac9e1ae4f3e697d10e4d220532fbe2ff22c7a41b55",
+            "approved_at": 4002.2,
+            "approver": "synthetic-controller",
+            "decision": "approve"
+          },
+          "prev_hash": "7fe7875c35da0a48aa2360106ddc48d8cd01a313bd84ba20cbaf41a902ebf4bb",
+          "seq": 1
+        },
+        {
+          "event_hash": "8e98109351816794d0555d31a66fb6c0500fd9a0e17d9fee5dba03f733320e2c",
+          "kind": "ack",
+          "payload": {
+            "acknowledged_at": 4002.4,
+            "advisory_hash": "c2cdab3da41ee801c3b980ac9e1ae4f3e697d10e4d220532fbe2ff22c7a41b55",
+            "status": "accepted"
+          },
+          "prev_hash": "63f4cb54c083237df49bf7d4e13bf226f578c4ff9d66b359807ed04fcfecca74",
+          "seq": 2
+        },
+        {
+          "event_hash": "1a25ad01bdb54c4e8b7e2586a147095d301c9ba579242ee95238b91a915322b9",
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "c2cdab3da41ee801c3b980ac9e1ae4f3e697d10e4d220532fbe2ff22c7a41b55",
+            "after_world_hash": "569439e1e26f87a8efe993021a73b27458281acfbf9a0d185a66dda3a1fa4e0a",
+            "before_world_hash": "07eab3e250cf72f73c92a60a8ee1031c32b42f07398579ff0633aef8d76c882b"
+          },
+          "prev_hash": "8e98109351816794d0555d31a66fb6c0500fd9a0e17d9fee5dba03f733320e2c",
+          "seq": 3
+        }
+      ],
+      "audit_valid": true,
+      "before_conflict": true,
+      "conflict_pairs": [
+        [
+          "TWR218",
+          "TWR419"
+        ],
+        [
+          "TWR218",
+          "TWR820"
+        ],
+        [
+          "TWR419",
+          "TWR820"
+        ]
+      ],
+      "conflicting_aircraft": [
+        "TWR218",
+        "TWR419",
+        "TWR820"
+      ],
+      "missing_ack": {
+        "events": [
+          {
+            "event_hash": "7fe7875c35da0a48aa2360106ddc48d8cd01a313bd84ba20cbaf41a902ebf4bb",
+            "kind": "screen_pass",
+            "payload": {
+              "advisory_hashes": [
+                "c2cdab3da41ee801c3b980ac9e1ae4f3e697d10e4d220532fbe2ff22c7a41b55"
+              ],
+              "world_hash": "07eab3e250cf72f73c92a60a8ee1031c32b42f07398579ff0633aef8d76c882b"
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "seq": 0
+          },
+          {
+            "event_hash": "63f4cb54c083237df49bf7d4e13bf226f578c4ff9d66b359807ed04fcfecca74",
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "c2cdab3da41ee801c3b980ac9e1ae4f3e697d10e4d220532fbe2ff22c7a41b55",
+              "approved_at": 4002.2,
+              "approver": "synthetic-controller",
+              "decision": "approve"
+            },
+            "prev_hash": "7fe7875c35da0a48aa2360106ddc48d8cd01a313bd84ba20cbaf41a902ebf4bb",
+            "seq": 1
+          },
+          {
+            "event_hash": "fc0181a40c9ef6dc5bf988711552b3e53d9dc992ae6f4c1bf26a71201c3bca2b",
+            "kind": "reject",
+            "payload": {
+              "advisory_hash": "c2cdab3da41ee801c3b980ac9e1ae4f3e697d10e4d220532fbe2ff22c7a41b55",
+              "reason": "ack_missing"
+            },
+            "prev_hash": "63f4cb54c083237df49bf7d4e13bf226f578c4ff9d66b359807ed04fcfecca74",
+            "seq": 2
+          }
+        ],
+        "reason": "ack_missing",
+        "state_unchanged": true
+      },
+      "name": "three_way_traffic",
+      "now": 4002.0,
+      "state": {
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": -5.0,
+            "y_nm": 0.0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "x_nm": 5.0,
+            "y_nm": 0.0
+          },
+          {
+            "aircraft_id": "TWR820",
+            "altitude_ft": 10000.0,
+            "climb_ft_min": 0.0,
+            "vx_nm_min": 0.0,
+            "vy_nm_min": -1.6,
+            "x_nm": 0.0,
+            "y_nm": 8.0
+          }
+        ],
+        "observed_at": 4000.0,
+        "version": 4
+      },
+      "world_hash": "07eab3e250cf72f73c92a60a8ee1031c32b42f07398579ff0633aef8d76c882b"
+    }
+  ],
+  "source": "TowerOps Python SafetyPolicy, AdvisoryPlanner, ControlRoom; generated from real runs"
+}

@@ -1,0 +1,16 @@
+{
+  "admitted_failure_name_example": [
+    "reset visible controls",
+    "reset default engine rate: world version"
+  ],
+  "capture": "before-driver.mjs",
+  "execution": "No browser, product, or new test execution in this review; the finding follows directly from the predicate source.",
+  "finding": "--expect-broken accepts unrelated reset regressions because its whitelist permits every reset default engine rate: check and groups all four reset control fields into one permitted failure.",
+  "known_defect_boundary": "Prior internal rate persists through Reset. World version, aircraft identity, velocity, reset run label, slider=1 and reset clock are not known baseline failures.",
+  "origin": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/receiving-browser.mjs",
+  "original_driver_bytes": 20397,
+  "original_driver_sha256": "6d55047158fbcfc6c19e7198422cc025e98f884fd78e151e8e9fa964bb0853a6",
+  "requested_correction": "Bind expected baseline acceptance to the actual retained-rate observations and require unrelated native invariants to pass.",
+  "schema": "independent-browser-driver-static-finding.v1",
+  "status": "Sent to /root/estate_production and /root before native execution."
+}

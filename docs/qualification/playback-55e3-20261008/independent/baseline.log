@@ -1,0 +1,102 @@
+PASS native_rate_input_changes_actual_world_progression
+PASS manual_pause_and_resume_preserve_world_and_discard_paused_wall_time
+FAIL reset_restores_unit_progression_from_3_paused: Expected values to be strictly deep-equal:
++ actual - expected
+... Skipped lines
+
+  {
+    aircraft: [
+      {
+        aircraft_id: 'TWR218',
+        altitude_ft: 10000,
+...
+        vy_nm_min: 0,
++       x_nm: -4.88,
+-       x_nm: -4.96,
+        y_nm: 0
+      },
+      {
+        aircraft_id: 'TWR419',
+        altitude_ft: 10000,
+...
+        vy_nm_min: 0,
++       x_nm: 4.88,
+-       x_nm: 4.96,
+        y_nm: 0
+      }
+    ],
++   observed_at: 1009.2,
+-   observed_at: 1004.4,
+    version: 3
+  }
+
+FAIL reset_restores_unit_progression_from_0.5_running: Expected values to be strictly deep-equal:
++ actual - expected
+... Skipped lines
+
+  {
+    aircraft: [
+      {
+        aircraft_id: 'TWR218',
+        altitude_ft: 10000,
+...
+        vy_nm_min: 0,
++       x_nm: -4.98,
+-       x_nm: -4.96,
+        y_nm: 0
+      },
+      {
+        aircraft_id: 'TWR419',
+        altitude_ft: 10000,
+...
+        vy_nm_min: 0,
++       x_nm: 4.98,
+-       x_nm: 4.96,
+        y_nm: 0
+      }
+    ],
++   observed_at: 1003.2,
+-   observed_at: 1004.4,
+    version: 3
+  }
+
+FAIL add_traffic_automatic_pause_updates_control_and_preserves_rate: automatic pause leaves the control describing actual state
++ actual - expected
+
++ 'Pause traffic'
+- 'Run traffic'
+
+FAIL perturb_track_automatic_pause_updates_control_and_preserves_rate: automatic pause leaves the control describing actual state
++ actual - expected
+
++ 'Pause traffic'
+- 'Run traffic'
+
+FAIL policy_change_automatic_pause_updates_control_and_preserves_rate: automatic pause leaves the control describing actual state
++ actual - expected
+
++ 'Pause traffic'
+- 'Run traffic'
+
+FAIL planner_pending_and_rejected_bridge_keep_pause_control_truthful: planner pauses before the controlled promise resolves
++ actual - expected
+
++ 'Pause traffic'
+- 'Run traffic'
+
+FAIL last_aircraft_removal_refusal_still_reports_paused_state: early return must not skip pause-control synchronization
++ actual - expected
+
++ 'Pause traffic'
+- 'Run traffic'
+
+FAIL duplicate_flight_refusal_still_reports_paused_state: caught refusal must not skip pause-control synchronization
++ actual - expected
+
++ 'Pause traffic'
+- 'Run traffic'
+
+{"passed":2,"failed":8,"sources_unchanged":true,"report":"/workspace/scratch/55e3e26c5905/towerops-playback-independent/baseline-report.json"}
+(node:13) ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13) ExperimentalWarning: VM Modules is an experimental feature and might change at any time

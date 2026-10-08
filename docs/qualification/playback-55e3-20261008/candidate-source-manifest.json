@@ -1,0 +1,91 @@
+{
+  "repository": "Jacob-Met/TowerOps",
+  "commit": "09b96e31d2867af5b7a9738406d0431cf1010090",
+  "tree": "4d22827647c0b2e37d11921aa5273f7a358bcdde",
+  "captured_at": "2026-10-08T10:27:27.718Z",
+  "tree_truncated": false,
+  "files": [
+    {
+      "path": "web/airspace/README.md",
+      "git_blob": "ba599a0d74a6ea586ea53bdc7cb4ee5eb0671be8",
+      "sha256": "ad1502b77c1854b182d1b676eba510ca81155a8cdc8276d746142a700f19ea17",
+      "bytes": 2467,
+      "source_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/ba599a0d74a6ea586ea53bdc7cb4ee5eb0671be8",
+      "base_git_blob": "ba599a0d74a6ea586ea53bdc7cb4ee5eb0671be8"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "git_blob": "33d4da8949fddb634a04459045268308a1f45859",
+      "sha256": "c5867cb7c293eb3f5f104b5f3a0e5d2c94a5b8bb42be833bd2f7df42085ac312",
+      "bytes": 21936,
+      "source_url": null,
+      "base_git_blob": "2aabfdba1292f6db0890b2fb0b9bc8cf9e027636"
+    },
+    {
+      "path": "web/airspace/src/core.ts",
+      "git_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+      "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+      "bytes": 5158,
+      "source_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+      "base_git_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7"
+    },
+    {
+      "path": "web/airspace/index.html",
+      "git_blob": "a473918c4694202460d6f2c208163bb276751f6d",
+      "sha256": "aada9ddb9f7ca77b954026402000e33ec3209e9de953d2173db1e27efa1e3d0b",
+      "bytes": 9968,
+      "source_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/a473918c4694202460d6f2c208163bb276751f6d",
+      "base_git_blob": "a473918c4694202460d6f2c208163bb276751f6d"
+    },
+    {
+      "path": "web/airspace/package.json",
+      "git_blob": "836291c282e63943575c82dfaeaf653d278b48a1",
+      "sha256": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd",
+      "bytes": 357,
+      "source_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/836291c282e63943575c82dfaeaf653d278b48a1",
+      "base_git_blob": "836291c282e63943575c82dfaeaf653d278b48a1"
+    },
+    {
+      "path": "web/airspace/tests/python-reference.json",
+      "git_blob": "65b017ab362097b161ec1f7c103b55a3c42941f1",
+      "sha256": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+      "bytes": 14868,
+      "source_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/65b017ab362097b161ec1f7c103b55a3c42941f1",
+      "base_git_blob": "65b017ab362097b161ec1f7c103b55a3c42941f1"
+    },
+    {
+      "path": "web/airspace/src/world-tools.ts",
+      "git_blob": "8e308d78c19389a6881aace8d22412e93557f066",
+      "sha256": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+      "bytes": 4263,
+      "source_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/8e308d78c19389a6881aace8d22412e93557f066",
+      "base_git_blob": "8e308d78c19389a6881aace8d22412e93557f066"
+    },
+    {
+      "path": "web/airspace/src/audit.ts",
+      "git_blob": "79aa87510d5cffab4b90777a773c9d7505f3e80d",
+      "sha256": "a3ec4bb0c29fcfa52475ab50772b44fc17746722ad9c7ac9d94ea2908705d787",
+      "bytes": 1193,
+      "source_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/79aa87510d5cffab4b90777a773c9d7505f3e80d",
+      "base_git_blob": "79aa87510d5cffab4b90777a773c9d7505f3e80d"
+    },
+    {
+      "path": "web/airspace/tests/playback-controls.test.ts",
+      "git_blob": "d81db6b3176d3f0231b7f89606ce1d37b527c557",
+      "base_git_blob": null,
+      "sha256": "f34433a5699025d4533860ce000d3ce7dcabf874144639800e4ffe7dfa4a4077",
+      "bytes": 8602,
+      "source_url": null
+    }
+  ],
+  "prior_tree_endpoint": {
+    "sha": "728387a51fba7be34cf8344fe4f5cd9c7b12b6ad",
+    "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/trees/728387a51fba7be34cf8344fe4f5cd9c7b12b6ad",
+    "interpretation": "Preserved observation only. Current commit/tree are the explicit branch response pair."
+  },
+  "kind": "isolated_candidate_against_frozen_main",
+  "base_commit": "09b96e31d2867af5b7a9738406d0431cf1010090",
+  "base_tree": "4d22827647c0b2e37d11921aa5273f7a358bcdde",
+  "published": false,
+  "native_vitest_status": "pending native runner; syntax erasure only"
+}
