@@ -11,7 +11,14 @@ async function python(base:string){
   await py.runPythonAsync(`
 import json
 from dataclasses import asdict
-from towerops import Aircraft, WorldState, SafetyPolicy, AdvisoryPlanner, Advisory, Approval, Ack, ControlRoom, GateRejected
+from towerops import Aircraft, WorldState, SafetyPolicy, AdvisoryPlanner, Advisory, Approval, Ack, ControlRoom, GateRejected, canonical_bytes
+
+def browser_audit(room):
+    return {
+        'events': room.audit.events,
+        'audit_canonical': [canonical_bytes({k: v for k, v in event.items() if k != 'event_hash'}).decode('utf-8') for event in room.audit.events],
+        'audit_json': json.dumps(room.audit.events),
+    }
 
 def browser_request(raw):
     q = json.loads(raw)
@@ -37,9 +44,9 @@ def browser_request(raw):
     ack = Ack(**{k: (float(v) if k == 'acknowledged_at' and type(v) is int else v) for k,v in q['ack'].items()}) if q.get('ack') else None
     try:
         after = room.apply(state, a, approval, ack, float(q['now']))
-        return json.dumps({'state': after.to_dict(), 'events': room.audit.events, 'valid': room.audit.verify(room.audit.events), 'audit_json': json.dumps(room.audit.events)})
+        return json.dumps({'state': after.to_dict(), 'valid': room.audit.verify(room.audit.events), **browser_audit(room)})
     except GateRejected as e:
-        return json.dumps({'error': e.reason, 'events': room.audit.events, 'audit_json': json.dumps(room.audit.events)})
+        return json.dumps({'error': e.reason, **browser_audit(room)})
 `);
   return py;
  })().catch(e=>{runtime=null;throw e;});
