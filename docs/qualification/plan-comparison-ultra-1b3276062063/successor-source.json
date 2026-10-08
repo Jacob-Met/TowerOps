@@ -1,0 +1,90 @@
+{
+  "format": "towerops-plan-comparison-successor-source.v1",
+  "owner": "ultra-1b3276062063-source",
+  "initial_commit": "1a71f19dfbc1eb89c05baecd2e2f49bc6e6e0613",
+  "initial_tree": "6735fb90acd7286acbf4ec5270ed4bb623ba68a6",
+  "composition_main": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "composition_main_tree": "03fec48eb2a60ff34084051d55ce4c5b446c7bb1",
+  "product_files": [
+    {
+      "bytes": 17386,
+      "git_blob": "536b29c8a322b77aecf8a9551977ca9c092b02f4",
+      "path": "compare_plans.py",
+      "sha256": "2042f344a71cdbcebbe97ad7e31fdcdb359be3282a8e4427b728cc1afe6d76c0"
+    },
+    {
+      "bytes": 29233,
+      "git_blob": "9f4a461ae6316c8b1eb682fadfaf7ddba07b9a76",
+      "path": "tests/test_compare_plans.py",
+      "sha256": "afc292cb6773215efd8a37fb42035bfeb79891a17805425c8607eea29711abd5"
+    },
+    {
+      "bytes": 9264,
+      "git_blob": "9132bf573f9829faae00b8cad20f98d21b047b5e",
+      "path": "COMPARE_PLANS.md",
+      "sha256": "0e68968187947e2dbbd7878f294e0c08365d182f08c45ef53736fbbaaa5cebcc"
+    },
+    {
+      "bytes": 2339,
+      "git_blob": "d3b0baed596bacdcfd406db3da90c6fd5d78bd11",
+      "path": "README.md",
+      "sha256": "b14fd2da7427b5dd0fea8b381fdeaebfbe959c2dfff441a9f642e7dd0cc9f7db"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "towerops.py",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "mode": "100644"
+    },
+    {
+      "path": "advisory_options.py",
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "mode": "100644"
+    },
+    {
+      "path": "plan_world.py",
+      "git_blob": "8e826a10cc2f9425de26727dce07851497174bba",
+      "mode": "100644"
+    },
+    {
+      "path": "scenarios.py",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": "100644"
+    },
+    {
+      "path": "explorer.py",
+      "git_blob": "d19e5bf1bd2991b076d7166fc2280b7f1d312d9a",
+      "mode": "100755"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "4791e16741c2ee136585d8f4d99f918535a3a017",
+      "mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "d51c0341cd2b85169dbe62d62f178bdfc544f2e7",
+      "mode": "100644"
+    }
+  ],
+  "behavior_change_from_initial": false,
+  "source_change": "Only import ordering and parentheses around previously adjacent f-strings in compare_plans.py.",
+  "tests_change": "Preserve the actual native producer CLI integer policy representation in the text oracle; resolve Ruff import, annotation and capture_output style findings. One additional pytest-discovered wrapper verifies all eight immutable independent packet hashes, propagates its actual receiving outcomes, and exposes exact receipt/output evidence in the existing job log.",
+  "predecessor_and_successor_product_nonimport_ast_equal": true,
+  "predecessor_and_successor_product_import_multiset_equal": true,
+  "all_16_api_test_method_class_ast_equal": true,
+  "static_review": {
+    "path": "docs/qualification/plan-comparison-ultra-1b3276062063/independent-static/REVIEW.md",
+    "git_blob": "af3646513f16705fd6f3825440d157cbda168a2a",
+    "sha256": "df4a46990e771cb46df66fc3755c34b38be242e23462242c0c60fb5118f501fa"
+  },
+  "receiving_status_at_preparation": "Corrected full hosted test/Ruff gates and independent actual CLI receiving still pending; no Mac file receiving or installed/hub changes.",
+  "independent_packet": {
+    "directory": "docs/qualification/plan-compare-ultra-1b3276062063/independent/",
+    "packet_git_blob": "fdaa8d9c4d3772f8c012fcde9412338cb491fd31",
+    "packet_sha256": "6b58ab9c3a57069d59d41edd92dc34c2d8efd8f074dfea05733e32a5c55b5cf2",
+    "api_cases": 27,
+    "cli_processes": 22
+  }
+}

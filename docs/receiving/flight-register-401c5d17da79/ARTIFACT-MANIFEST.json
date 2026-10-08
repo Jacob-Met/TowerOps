@@ -1,0 +1,118 @@
+{
+  "schema": "towerops.flight-register-artifacts.v1",
+  "parent": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "files": {
+    "README.md": {
+      "sha256": "3dd7c402ae9dd6972102a53947a38634d63c28fab151476c77631e5d2a35e522",
+      "bytes": 4598
+    },
+    "evidence/author-unit-v1/receipt.json": {
+      "sha256": "c0735915b4dfa3d49cde54ca9eee2224dc89a2c11b8f91b102691b2e73249f16",
+      "bytes": 2201
+    },
+    "evidence/author-unit-v1/vitest.json": {
+      "sha256": "7dcefeca166f06f006e99d7e2d246dc959f6082e991fab2b5b1ebeb0db89b0f1",
+      "bytes": 81581
+    },
+    "evidence/author-unit-v2/receipt.json": {
+      "sha256": "0d9f4d052b7e26da7d7135a79dac16af5071ce768de15e68cd4f056f49cccd0c",
+      "bytes": 2739
+    },
+    "evidence/author-unit-v2/vitest.json": {
+      "sha256": "1f28dc0c47dea068cba0a221150287571069344d891454b0cd8f87e00730a008",
+      "bytes": 80558
+    },
+    "evidence/baseline-89529c5/receipt.json": {
+      "sha256": "258bf289063c765e767a9c58479f7f5f4233d843cfa870835d1e144594680199",
+      "bytes": 13907
+    },
+    "evidence/baseline-89529c5/world-60.json": {
+      "sha256": "4c698c7220f656db0e0c5f1a0257566b315ea78630c073945db67d23861f17eb",
+      "bytes": 10908
+    },
+    "evidence/baseline-playback-fixture/receipt.json": {
+      "sha256": "fe69219691de17ce08b9dab8024f18487ea153f71b1ab625eeec84aa245667c1",
+      "bytes": 764
+    },
+    "evidence/baseline-playback-fixture/source-pins.json": {
+      "sha256": "ae9c05ddff1f280699ccbd890a746a8b29386f45609127b9bea4c0cb54ed44c0",
+      "bytes": 2833
+    },
+    "evidence/baseline-playback-fixture/vitest.json": {
+      "sha256": "3075eb476122a2735f9fa76c1c086cdace76cb537643e92a9daca24840fba6eb",
+      "bytes": 5178
+    },
+    "evidence/build-candidate/receipt.json": {
+      "sha256": "cba42491ced4dc94ee972c4d63a12829eb9974a23514075bc3c4545c21e40567",
+      "bytes": 3531
+    },
+    "evidence/build-candidate/vite-build.log": {
+      "sha256": "c28e33baa823d1562a1bfa6e27dbe1f5a37964e58f54ca166f06de114bef12fb",
+      "bytes": 550
+    },
+    "evidence/candidate-register-v1/receipt.json": {
+      "sha256": "45236c01d730ec836bf24166d75d0644084c65e2d8a7708f42134ae263f72341",
+      "bytes": 35017
+    },
+    "evidence/candidate-register-v2/receipt.json": {
+      "sha256": "3c63fb91915c0a71469d70b1c7cdf60d17313ce907085db9334225ab3c3f3887",
+      "bytes": 85142
+    },
+    "evidence/playback-fixture-adapter.json": {
+      "sha256": "80619c50af0761bf476b98d511ade482ffafd5ea96e8d6db3dc264d9152709d7",
+      "bytes": 761
+    },
+    "evidence/receiver-live-fixture-correction.json": {
+      "sha256": "677515a43b0255b32bc3d229425db8f09ecc117893361a7ee47009a497e90873",
+      "bytes": 444
+    },
+    "evidence/source-claim.json": {
+      "sha256": "353f2ce4a6727434bafd1baea38370d5615ce545bbed42cc8a092bf892479009",
+      "bytes": 3184
+    },
+    "evidence/visual-review.json": {
+      "sha256": "893fb6130bc391b061436d9523a8ec7594e021f777f3a54bb834ad358faabe78",
+      "bytes": 730
+    },
+    "inputs/BASELINE-INPUTS.json": {
+      "sha256": "8f7a1ae93877c054d7c9530d1b3abc4b9bb2d5f05d17071046d1781076af14cd",
+      "bytes": 180467
+    },
+    "inputs/CANDIDATE-INPUTS-v2.json": {
+      "sha256": "78cc77d1830f37761e31a4ee9317a6d9b94dd35f401aed5193fb64db448b257a",
+      "bytes": 181648
+    },
+    "methods/cdp.mjs": {
+      "sha256": "be20b757f9cd7b3b85bcc701b589d61ad338123be70d75acb914eda529af5639",
+      "bytes": 5755
+    },
+    "methods/receive-baseline.mjs": {
+      "sha256": "74812c645560f0e5abc3172b83e9914ff389482652e634f3d12932dbd329b3e3",
+      "bytes": 6276
+    },
+    "methods/receive-register.v1.mjs": {
+      "sha256": "8388e815a0966b4adb98cc46dd59e50c81f948883e5ffd31b15c209dbd51c746",
+      "bytes": 18439
+    },
+    "methods/receive-register.v2.mjs": {
+      "sha256": "175a1a9fc5abe73e0b52f3a1dc2dc09a3e7c3226dc2944f2846edfb7732293de",
+      "bytes": 18439
+    },
+    "source-preservation.json": {
+      "sha256": "032c2b9ce27f24f1f0e08324e7d5be1bb48557293090851b44557b71803430cb",
+      "bytes": 1476
+    },
+    "visual/baseline-existing-60-flight-register.png": {
+      "sha256": "f95be04e2d7be33869755e288dd28c41ecfc938aee094f9d3357504fb9b18e18",
+      "bytes": 69693
+    },
+    "visual/register-390-filtered.png": {
+      "sha256": "085ed466e71440497e8ca23ce5cf51c066d202dfdef6915566eb86f5042c61e9",
+      "bytes": 37432
+    },
+    "visual/register-60-altitude-order.png": {
+      "sha256": "a2c01bc54811719ab08e8b96e9a86b6e625832bd94abd816cfe6703dc395bf81",
+      "bytes": 56542
+    }
+  }
+}

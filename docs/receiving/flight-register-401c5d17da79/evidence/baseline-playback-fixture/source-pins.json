@@ -1,0 +1,31 @@
+{
+  "parent": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "paths": {
+    "web/airspace/src/actuation.ts": "a6a3186003cbd7fdcba6e7bc0847c9abfa4ba5174d3c98ce2da651941360dcfb",
+    "web/airspace/src/advisory-options.ts": "4b001ebf546e10761906c19e09af5ef19967e45d994c1b090d376cad695ea976",
+    "web/airspace/src/advisory-review.ts": "45c170f976ffc886db49aef120361cbabc99884f63b3f017fc7a0c7b9923ed3e",
+    "web/airspace/src/audit.ts": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075",
+    "web/airspace/src/core.ts": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+    "web/airspace/src/decision-trace.css": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e",
+    "web/airspace/src/decision-trace.ts": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce",
+    "web/airspace/src/draw.ts": "ae91897f2d4db234451c1fd8b81c9ddc5260e9b76b62c5ac21153d3c7ec2166d",
+    "web/airspace/src/encounter-view.ts": "329ac5994841291b3922702f035fac4d03766ae522eb52b807954f4d5ad508c4",
+    "web/airspace/src/encounter.ts": "efd010d007c8b63830d09fdda9bf8724316803937e373f44fd7f504ff1355883",
+    "web/airspace/src/gate.ts": "3f135cabba46d9b6316475424841e543b5f7488a70d85cba25be5cd8cf5e8c8a",
+    "web/airspace/src/main.ts": "945bc50ed6a6b81442f6f98764e02f6745c02efb8228f8d0aa5f91ca1cd2a50c",
+    "web/airspace/src/maneuvers.ts": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d",
+    "web/airspace/src/planner.ts": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74",
+    "web/airspace/src/python-worker.ts": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987",
+    "web/airspace/src/python.ts": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c",
+    "web/airspace/src/radar-geometry.ts": "4df8158d1ca92115ef9be8067fecb377a1e2ccf72b5cd0f3fa27691284e77349",
+    "web/airspace/src/scenario-file.ts": "8ecfb59fefe8e979d31f00db0bef6240f317d8576ae0054b5143cb530c2c757c",
+    "web/airspace/src/scenario-ui.ts": "9eb933c3ad03670d4d504e45ad9049b4cfee09a273ec2c11aa7b7beff487fb07",
+    "web/airspace/src/track-edit.ts": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046",
+    "web/airspace/src/world-tools.ts": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+    "web/airspace/style.css": "efe5faa57342fb4ba3215e0fc60bf59f780e9469ca9f123758c7b9923550829c",
+    "web/airspace/index.html": "3a330d588e7e4235217f7faf7beed717c190f7417c29d7aeeec8ff077556e31d",
+    "web/airspace/tests/playback-controls.test.ts": "1a3d17a0f87c9e250da5996fbf15d87ed2329bc66d1da6297e58932a0bcefe89",
+    "web/airspace/tests/python-reference.json": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+    "web/airspace/package.json": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd"
+  }
+}

@@ -183,3 +183,15 @@ Manual views clip tracks, labels and projections at the plot boundary. The view 
 A zoom or pan that cannot represent finite usable coordinates is unavailable. If changed traffic makes the current manual frame unrepresentable, the radar says **RADAR VIEW UNAVAILABLE** and **Auto fit all** remains available. This is a display result, not a clear-world verdict. Existing absolute grid values, world-origin reference rings, automatic-fit margins and separation calculations are retained.
 
 Focused model, clipping and control checks: npm test -- radar-view.test.ts.
+
+## Find and order live traffic
+
+Open **Under the hood → Traffic** to find a flight in the live register. **Find callsign** performs a literal, case-insensitive search of callsigns only; outer whitespace is ignored. The register shows the matching count separately from the full flight count. Clear the search to restore every flight.
+
+**Order by** starts in scenario order. Callsign order is A–Z; altitude can run low to high or high to low. Equal altitudes retain scenario order, and ordering uses the current exact altitude before the displayed flight level is rounded. Search and order remain local to the open page and are not saved in scenario files.
+
+Filtering out the selected flight keeps that selection and shows an explicit notice. **Show selected** searches for that callsign without selecting a different flight. Click a visible callsign, or Tab to its button and press Enter or Space, to select it through the existing flight-selection control. Selection stays unavailable while planning or editing a track, while search and order remain available.
+
+Searching and ordering change only this register. They do not pause traffic, edit its world or clock, replace a proposal or approval, alter the decision trace, or replace an unfinished flight or JSON draft. Live rows continue updating without replacing the search field or the focused visible flight button. A replacement scenario removes old rows while retaining the current search and ordering preferences.
+
+The native qualification record and retained controls are in [the register receiving packet](../../docs/receiving/flight-register-401c5d17da79/README.md).

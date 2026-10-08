@@ -1,0 +1,100 @@
+{
+  "schema": "towerops.root-source-integration-observation.v1",
+  "actual_merge": {
+    "sha": "0704ed42a4cf2a9edc4aa99853f8f53c14f0ffcc",
+    "node_id": "C_kwDOUbLgRtoAKDA3MDRlZDQyYTRjZjJhOWVkYzRhYTk5ODUzZjhmNTNjMTRmMGZmY2M",
+    "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/commits/0704ed42a4cf2a9edc4aa99853f8f53c14f0ffcc",
+    "html_url": "https://github.com/Jacob-Met/TowerOps/commit/0704ed42a4cf2a9edc4aa99853f8f53c14f0ffcc",
+    "author": {
+      "name": "Jacob Metoyer",
+      "email": "150724801+Jacob-Met@users.noreply.github.com",
+      "date": "2026-10-08T16:55:08Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-08T16:55:08Z"
+    },
+    "tree": {
+      "sha": "ac06bbdb44c203a4214dadbb818439f1ac4b4279",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/trees/ac06bbdb44c203a4214dadbb818439f1ac4b4279"
+    },
+    "message": "Add complete local scenario save and review\n\nIntegrate the qualified scenario file flow, preserve concurrent playback/radar source and receiving evidence, and deliver through the normal main-push Pages workflow.",
+    "parents": [
+      {
+        "sha": "c9547893ee4a9f4cdfc64dfe555f8f313ba8237a",
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/commits/c9547893ee4a9f4cdfc64dfe555f8f313ba8237a",
+        "html_url": "https://github.com/Jacob-Met/TowerOps/commit/c9547893ee4a9f4cdfc64dfe555f8f313ba8237a"
+      },
+      {
+        "sha": "c326431f0c5f8ad48735889def77d7dba63ad379",
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/commits/c326431f0c5f8ad48735889def77d7dba63ad379",
+        "html_url": "https://github.com/Jacob-Met/TowerOps/commit/c326431f0c5f8ad48735889def77d7dba63ad379"
+      }
+    ],
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqx8rsCRC1aQ7uu5UhlAAAKjkQAByLXEBjYu5wMQ67my/u3zph\nI6WvZVowjSvuY/rxRSGA77rrFHIKq74vssAPBFovs/ms6L121BDF1JF2v2o9SppO\np7/qba/ZS2eVMV1+e/mba+3jKfXaeE79hHJ89E4qy/9wrT3uHTyJZPUhCVR7pbD5\n4dSyoUvK/UNbBMT2r5/vGRmaf/rYss+4D8oge/3COLngdTC+53Q5Oz72BDnQ7XwV\nvGDhwgeMgo3gi+V3vGf+H2bmH+bXjvF14+45A0igHA5Y7xg6YT1qW8hlEf7HsXFM\nzgXwfA8p0JmXL3D0HuvaEzMzd+ewvJJINs0Kiz6H2G27AkRmzlKa6XL3UR/tBdVq\nb45gOtEGwLPe/REMaQ/yUeW452zBnSiDqb6sP0AvHdQ06Cy4IzA6rlN/b31jkmYz\nqkwaxGA8eAxiTRvZIfTF8waMXpalPsMCc52/9Ef4UqwSJ0dhEaw4vclfoFC8LFTD\nijrxgp+shPuc+Aa0urHhhUJDWtmjbLtlA9R5ogy9lug+31cNBOXk1Ubo/ZJC+b6F\nuNRcZv8l8HvO1gziK3fPOMf1rXurp67JS8g5EMWYRsh8b24OqF4fXsh01XXo0btS\nO65WnSLyIXb3Tm2LyjeoMJ2atI6WvZ7FxZ2xK4vmPmRfZ+n95NXCJ8ITHF4mFYAr\nAdf224KrBDqOrbykt4/s\n=D8EV\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree ac06bbdb44c203a4214dadbb818439f1ac4b4279\nparent c9547893ee4a9f4cdfc64dfe555f8f313ba8237a\nparent c326431f0c5f8ad48735889def77d7dba63ad379\nauthor Jacob Metoyer <150724801+Jacob-Met@users.noreply.github.com> 1791478508 -0700\ncommitter GitHub <noreply@github.com> 1791478508 -0700\n\nAdd complete local scenario save and review\n\nIntegrate the qualified scenario file flow, preserve concurrent playback/radar source and receiving evidence, and deliver through the normal main-push Pages workflow.",
+      "verified_at": "2026-10-08T16:55:09Z"
+    }
+  },
+  "fulltree_receiving": {
+    "head": "c326431f0c5f8ad48735889def77d7dba63ad379",
+    "base": "c9547893ee4a9f4cdfc64dfe555f8f313ba8237a",
+    "prospective_commit": "64401d4dc1df16cb33d3e2e8fa7988e1c00f1729",
+    "tree": "ac06bbdb44c203a4214dadbb818439f1ac4b4279",
+    "contribution": 623,
+    "unowned": 458,
+    "total": 1081,
+    "qualified_head_entries_preserved": 1077,
+    "new_owner_docs_preserved": 4,
+    "actual_merge": "0704ed42a4cf2a9edc4aa99853f8f53c14f0ffcc",
+    "exact_actual_parents": true,
+    "actual_tree_verified": true
+  },
+  "premerge_head_manifest_sha256": "1c71f0a6717af257530cec817eeb39591d4c0564d7ed4a894a5d3eb14affc1fe",
+  "qualified_head_tree": "e4046b25c45f97d647d5c65a461de5ce58647a74",
+  "exact_head_workflows": [
+    {
+      "id": 37811486567,
+      "name": "ci",
+      "event": "pull_request",
+      "head": "c326431f0c5f8ad48735889def77d7dba63ad379",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37811486669,
+      "name": "TowerOps Airspace Lab",
+      "event": "pull_request",
+      "head": "c326431f0c5f8ad48735889def77d7dba63ad379",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37811479952,
+      "name": "ci",
+      "event": "push",
+      "head": "c326431f0c5f8ad48735889def77d7dba63ad379",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "exact_head_logs": {
+    "ci": {
+      "run": 37811486567,
+      "job": 113429174402,
+      "checkout": "64401d4dc1df16cb33d3e2e8fa7988e1c00f1729",
+      "python_passed": 146
+    },
+    "airspace": {
+      "run": 37811486669,
+      "job": 113429176063,
+      "checkout": "64401d4dc1df16cb33d3e2e8fa7988e1c00f1729",
+      "frontend_passed": 226,
+      "normal_build": true
+    }
+  }
+}

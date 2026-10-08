@@ -1,0 +1,17 @@
+/* Local register controls share the existing Traffic panel and color variables. */
+.flight-register-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:18px}
+.flight-register-controls label{display:grid;gap:7px;min-width:0;color:var(--muted);font:10px var(--mono);letter-spacing:.06em}
+.flight-register-controls input,.flight-register-controls select{width:100%;min-width:0;min-height:40px;border:1px solid var(--line);border-radius:0;background:#111f24;color:var(--ink);padding:9px;font:12px var(--mono)}
+.flight-register-controls input:focus-visible,.flight-register-controls select:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.flight-register-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:12px}
+.flight-register-actions p{margin:0;color:var(--muted);font:11px/1.5 var(--mono)}
+.flight-register .flight-register-hint{margin-top:10px}
+.flight-register .flight-hidden-selection{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:10px;border-left:2px solid var(--amber);background:#111f24;color:var(--amber);font:11px/1.5 var(--mono);overflow-wrap:anywhere}
+.flight-register .flight-hidden-selection[hidden],.flight-register #flight-no-matches[hidden]{display:none}
+.flight-register #flight-no-matches{padding:14px 0;color:var(--muted);font:12px/1.6 var(--mono)}
+.flight-register .flight-row{align-items:center}
+.flight-register .flight-row button{min-height:32px;padding:4px 6px;overflow-wrap:anywhere}
+.flight-register .flight-row button:disabled{opacity:.45;cursor:not-allowed}
+.flight-register .flight-row button[aria-pressed=true]{border-left:2px solid var(--amber)}
+@media(max-width:620px){.flight-register-controls{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:420px){.flight-register .flight-row{grid-template-columns:minmax(0,1fr);gap:0}.flight-register .flight-meta{padding:0 6px 5px;overflow-wrap:anywhere}}

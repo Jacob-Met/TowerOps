@@ -1,0 +1,6 @@
+{
+  "previous_method_sha256": "8388e815a0966b4adb98cc46dd59e50c81f948883e5ffd31b15c209dbd51c746",
+  "corrected_method_sha256": "175a1a9fc5abe73e0b52f3a1dc2dc09a3e7c3226dc2944f2846edfb7732293de",
+  "change": "Only live-running filter changes from EST (zero climb) to existing STH (60 ft/min climb). Existing metadata is altitude/velocity, so EST correctly does not change during linear flight. Runtime unchanged.",
+  "prior_receipt": "failed"
+}

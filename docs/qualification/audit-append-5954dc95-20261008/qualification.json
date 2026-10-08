@@ -1,0 +1,166 @@
+{
+  "format": "hamon.native-source-qualification.v1",
+  "worker": "chatgpt-5954dc95-20261008/root",
+  "author": "production-integration",
+  "repository": "Jacob-Met/TowerOps",
+  "contribution": {
+    "existing": [
+      "web/airspace/src/audit.ts"
+    ],
+    "added": [
+      "web/airspace/tests/audit-append.test.ts",
+      "docs/qualification/audit-append-5954dc95-20261008/README.md",
+      "docs/qualification/audit-append-5954dc95-20261008/qualification.json"
+    ]
+  },
+  "original_snapshot": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "native_qualification_parent": "a11c30497896455de3e74c21e530787dc7982bca",
+  "publication_parent": "0291a40a82d8981047349b6dc6b68137a71a45fd",
+  "publication_fit": {
+    "receiving": "a11c30497896455de3e74c21e530787dc7982bca",
+    "publication": "0291a40a82d8981047349b6dc6b68137a71a45fd",
+    "tested_path_overlap": [
+      "README.md"
+    ],
+    "code_test_config_unchanged": true,
+    "attachments_verified": [
+      {
+        "filename": "tower-audit-receiving-manifest.json",
+        "file_upload_id": "3f3aedcd-f4a5-81e6-ae43-00b2c1ae6f2f",
+        "bytes": 20574,
+        "sha256": "319452cca95964d8a88de5d8b713bd02632f20903546eb2711fedfb0de9e396c"
+      },
+      {
+        "filename": "tower-audit-receiving-part-1.json",
+        "file_upload_id": "3f3aedcd-f4a5-8154-9e62-00b2bf4e8656",
+        "bytes": 175733,
+        "sha256": "b783ed76795b6c4e45228ca9c7c63631570e451cc200edc2a5ac092a7294d4a3"
+      },
+      {
+        "filename": "tower-audit-receiving-part-2.json",
+        "file_upload_id": "3f3aedcd-f4a5-81a2-9e42-00b2fdff7471",
+        "bytes": 82705,
+        "sha256": "dce0da39cc6e8f51431d8132f20685222b2cddb0bd27c1a23db6ca425c331b65"
+      }
+    ]
+  },
+  "files": {
+    "audit_before": {
+      "git_blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b",
+      "bytes": 2397,
+      "sha256": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075"
+    },
+    "audit_candidate": {
+      "git_blob": "f252d6fb5801fa090a34bce4395e3a0e1e7f08f0",
+      "bytes": 3436,
+      "sha256": "024a2c2905ca190e95914ea8e42dab4880ee453e6391b0a058969b40a1e47737"
+    },
+    "regression": {
+      "git_blob": "0f68ec6ec707431c583f8f95ead9ba5dc79018e4",
+      "bytes": 7204,
+      "sha256": "ded38989892ae714f2b2110189a5434ed292974a9fcdb831e4f2879c7505c882"
+    }
+  },
+  "executed": {
+    "host": "DESKTOP-LA7CMTA",
+    "platform": "win32",
+    "node": "v24.21.0",
+    "python": "3.13.15",
+    "vitest": "4.1.11",
+    "typescript": "5.7.3",
+    "vite": "8.3.3",
+    "native_node": {
+      "baseline": {
+        "passed": 6,
+        "failed": 5
+      },
+      "candidate": {
+        "passed": 11,
+        "failed": 0
+      },
+      "runner_sha256": "357bb193ab2cee37dd11d8ca8047198da5726e98a3bd8e971e29be3043201a78"
+    },
+    "maintained_regression_baseline": {
+      "passed": 2,
+      "failed": 6,
+      "exit_code": 1
+    },
+    "initial_full_candidate": {
+      "passed": 233,
+      "failed": 1,
+      "exit_code": 1,
+      "failed_test": "native decision-trace delivery downloads and reopens exact native JSON including float spellings and Unicode"
+    },
+    "final_full_candidate": {
+      "passed": 234,
+      "failed": 0,
+      "pending": 0,
+      "exit_code": 0,
+      "process_local_python_utf8": "1",
+      "source_or_test_body_change": false
+    },
+    "build": {
+      "command": "npm run build",
+      "stages": [
+        "node prepare-python.mjs",
+        "tsc --noEmit",
+        "vite build"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    "captured_inputs": 75,
+    "inputs_unchanged": true,
+    "final_receipt": {
+      "path": "project-evidence/utf8-receiving/candidate-project.receipt.json",
+      "bytes": 81593,
+      "sha256": "de4c96db48d3ce62a4253e12dd0ac52cfde5bb171e6265b62b8782ebd143364e"
+    }
+  },
+  "preserved_failures": [
+    "Clone advanced to a documentation-only commit; first identity guard stopped before dependency installation.",
+    "Original full candidate run failed one existing Unicode pipe-transport test under native cp1252 defaults.",
+    "Exact unchanged producer/bridge replay demonstrated cp1252 corruption and UTF-8 validity; receiving environment alone changed.",
+    "First single evidence packet exceeded the attachment limit; complete data was partitioned without dropping files."
+  ],
+  "evidence": {
+    "journal": "https://app.notion.com/p/3f3aedcdf4a58172be7dc895d9ae488e",
+    "source_claim": "https://github.com/Jacob-Met/hamon/issues/143#issuecomment-6066906564",
+    "manifest": "tower-audit-receiving-manifest.json",
+    "bytes": 20574,
+    "sha256": "319452cca95964d8a88de5d8b713bd02632f20903546eb2711fedfb0de9e396c",
+    "file_count": 106,
+    "parts": [
+      {
+        "filename": "tower-audit-receiving-part-1.json",
+        "bytes": 175733,
+        "sha256": "b783ed76795b6c4e45228ca9c7c63631570e451cc200edc2a5ac092a7294d4a3",
+        "file_count": 80,
+        "payload_bytes": 521560,
+        "payload_sha256": "4989cffa3e266d7029cbe35ed61d173c65418e2a59b66adcd1da225cc165c73c",
+        "compressed_sha256": "354cbae90ef02f9c24eeed22637358ea7fa3f2f4fb488ee87e1aac568bdc1f5a"
+      },
+      {
+        "filename": "tower-audit-receiving-part-2.json",
+        "bytes": 82705,
+        "sha256": "dce0da39cc6e8f51431d8132f20685222b2cddb0bd27c1a23db6ca425c331b65",
+        "file_count": 26,
+        "payload_bytes": 480560,
+        "payload_sha256": "e7f37ca38223e546c4285c24564b710beb3759221d43701be5aca63f739736bb",
+        "compressed_sha256": "225116aa8627043d13455c3dc2c12ef6e119560508ee857a19105f40d76ba46d"
+      }
+    ],
+    "binary_reference_count": 2,
+    "roundtrip": true,
+    "attachments_downloaded_exact": true
+  },
+  "boundaries": {
+    "browser_receiving": false,
+    "hosted_ci": "record separately on the PR",
+    "integration": "record separately on the PR and journal",
+    "installed_service": false,
+    "live_traffic": false,
+    "python_or_gui_source_change": false,
+    "workflow_or_dependency_change": false
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "format": "towerops-plan-comparison-source.v1",
+  "owner": "ultra-1b3276062063-source",
+  "claim": "https://github.com/Jacob-Met/TowerOps/issues/56",
+  "coordination": "https://github.com/Jacob-Met/hamon/issues/143#issuecomment-6064211470",
+  "original_commit": "5b3015567a01017245c5f715c1bce65e20a06138",
+  "original_tree": "89a7769301291fb66605eb0a4e45cc9ce285861a",
+  "publication_parent": "c9547893ee4a9f4cdfc64dfe555f8f313ba8237a",
+  "publication_parent_tree": "1316686753423cc757f2cc597e9b726fe7b0ca1f",
+  "dependencies": [
+    {
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "path": "towerops.py",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "path": "advisory_options.py",
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "git_blob": "8e826a10cc2f9425de26727dce07851497174bba",
+      "path": "plan_world.py",
+      "sha256": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e"
+    },
+    {
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "path": "scenarios.py",
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    {
+      "git_blob": "d19e5bf1bd2991b076d7166fc2280b7f1d312d9a",
+      "path": "explorer.py",
+      "sha256": "c16106e27f44f9dd247bcbc6ae677dc74db5340ffc8d2df9fd6df655fc9cb340"
+    }
+  ],
+  "product": [
+    {
+      "bytes": 17358,
+      "git_blob": "5a078563e5fe0c588f63aafb5a8cfd709ab341fd",
+      "path": "compare_plans.py",
+      "sha256": "6130e332cea63f42e34aaf86fe50c72ac6c6212372368409914ba3e6c554ba75"
+    },
+    {
+      "bytes": 24468,
+      "git_blob": "b3396fa015ec47c13f174f4cb37cac37f0006410",
+      "path": "tests/test_compare_plans.py",
+      "sha256": "48fda1c2ff39ee9599f2b947b4b9b6870eb53916e4b79d6198e27986f836464c"
+    },
+    {
+      "bytes": 9264,
+      "git_blob": "9132bf573f9829faae00b8cad20f98d21b047b5e",
+      "path": "COMPARE_PLANS.md",
+      "sha256": "0e68968187947e2dbbd7878f294e0c08365d182f08c45ef53736fbbaaa5cebcc"
+    },
+    {
+      "bytes": 2339,
+      "git_blob": "d3b0baed596bacdcfd406db3da90c6fd5d78bd11",
+      "path": "README.md",
+      "sha256": "b14fd2da7427b5dd0fea8b381fdeaebfbe959c2dfff441a9f642e7dd0cc9f7db"
+    }
+  ],
+  "readme_preimage_blob": "d51c0341cd2b85169dbe62d62f178bdfc544f2e7",
+  "readme_composition": "Four additive lines; every original line is preserved. All five native source dependencies are exact on the current publication parent.",
+  "qualification": {
+    "native_api_methods": 16,
+    "passed": 16,
+    "skipped": 0,
+    "mutating_effect_attempts": 0,
+    "real_cli_methods_authored": 8,
+    "real_cli_executed_before_publication": 0,
+    "hosted_ci": "pending normal existing Python3.12 pytest/Ruff workflow",
+    "mac_filesystem": "not qualified; both bootstrap attempts refused before workspace creation",
+    "independent_review": "pending"
+  },
+  "claim_metadata_correction": {
+    "field": "last-read #140 comment",
+    "original_incorrect": 6064069711,
+    "correct": 6064069238,
+    "meaning": "A single issue-body reference was corrected through the normal update API; scope and source are unchanged."
+  }
+}
