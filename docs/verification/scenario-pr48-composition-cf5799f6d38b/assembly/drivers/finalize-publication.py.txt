@@ -1,0 +1,347 @@
+from __future__ import annotations
+
+import argparse
+import base64
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import stat
+import subprocess
+import time
+
+ASSEMBLY = Path("/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4")
+OVERLAY = ASSEMBLY / "overlay"
+CANDIDATE = ASSEMBLY / "publication-candidate"
+PREFIX = "docs/verification/scenario-pr48-composition-cf5799f6d38b"
+BASE = "53aa5048b6585aa08592d5513cfcf555a8bba018"
+BASELINE = "8c11186b1a3f6391879fb0aef14738487f09dc2a"
+PRODUCT = "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993"
+PRIOR = "464299ede19b44fdd1d0d8d8590c9a34e4896df5"
+PRIOR_HEAD = "e8f8fe37e31067c8dbd789577544525afca5e009"
+RUFF = "/tmp/canvaspilot-folders-cf5799f6d38b-FIWmPE/lint-tools/bin/ruff"
+
+def identity_bytes(data):
+    return {"bytes": len(data), "sha256": hashlib.sha256(data).hexdigest(), "git_blob": hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()}
+
+def identity(path):
+    return {**identity_bytes(path.read_bytes()), "mode": "100755" if path.stat().st_mode & stat.S_IXUSR else "100644"}
+
+def write_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes((json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
+    return identity(path)
+
+def copy_exact(source, relative, expected=None):
+    source = Path(source)
+    if Path(relative).is_absolute() or ".." in Path(relative).parts:
+        raise RuntimeError(f"Unsafe publication path {relative}")
+    row = identity(source)
+    if expected:
+        for key in ("bytes", "sha256", "git_blob", "mode"):
+            if key in expected and row[key] != expected[key]:
+                raise RuntimeError(f"Source mismatch {source} {key}")
+    target = OVERLAY / relative
+    if target.exists() and identity(target) != row:
+        raise RuntimeError(f"Destination collision {relative}")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(source.read_bytes())
+    target.chmod(0o755 if row["mode"] == "100755" else 0o644)
+    if identity(target) != row:
+        raise RuntimeError(f"Copy mismatch {relative}")
+    return {"source_path": str(source), "path": relative, **row}
+
+def tree_entries(tree):
+    result = {}
+    for line in subprocess.check_output(["git", "ls-tree", "-rz", tree], cwd=CANDIDATE).split(b"\0"):
+        if not line:
+            continue
+        meta, path = line.split(b"\t", 1)
+        mode, kind, blob = meta.decode().split()
+        result[path.decode()] = {"mode": mode, "type": kind, "git_blob": blob}
+    return result
+
+def stage_overlay():
+    paths = sorted(str(p.relative_to(OVERLAY)) for p in OVERLAY.rglob("*") if p.is_file())
+    for relative in paths:
+        source = OVERLAY / relative
+        target = CANDIDATE / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
+        if identity(target) != identity(source):
+            raise RuntimeError(f"Materialization mismatch {relative}")
+        if "\n" in relative:
+            raise RuntimeError("Unexpected newline in publication filename")
+    hashing = subprocess.run(["git", "hash-object", "-w", "--no-filters", "--stdin-paths"], cwd=CANDIDATE, input=("\n".join(paths) + "\n").encode(), capture_output=True, check=True)
+    blobs = hashing.stdout.decode().splitlines()
+    if len(blobs) != len(paths):
+        raise RuntimeError("Hash-object output length mismatch")
+    records = []
+    for relative, blob in zip(paths, blobs, strict=True):
+        pin = identity(OVERLAY / relative)
+        if blob != pin["git_blob"]:
+            raise RuntimeError(f"Git filter changed content {relative}")
+        records.append(f"{pin['mode']} {blob}\t{relative}\0")
+    subprocess.run(["git", "update-index", "-z", "--index-info"], cwd=CANDIDATE, input="".join(records).encode(), capture_output=True, check=True)
+    return subprocess.check_output(["git", "write-tree"], cwd=CANDIDATE).decode().strip()
+
+def run_ruff(label, tree):
+    started = time.time()
+    arguments = [RUFF, "check", "."]
+    process = subprocess.run(arguments, cwd=CANDIDATE, capture_output=True)
+    stdout = ASSEMBLY / f"{label}.stdout.log"
+    stderr = ASSEMBLY / f"{label}.stderr.log"
+    stdout.write_bytes(process.stdout)
+    stderr.write_bytes(process.stderr)
+    receipt = {
+        "command": arguments, "cwd": str(CANDIDATE), "input_tree": tree,
+        "ruff_version": subprocess.check_output([RUFF, "--version"]).decode().strip(),
+        "exit_code": process.returncode, "seconds": time.time() - started,
+        "stdout": {"source_path": str(stdout), **identity(stdout)},
+        "stderr": {"source_path": str(stderr), **identity(stderr)},
+        "extra_ignore_flags": [], "new_lint_policy": False,
+    }
+    write_json(ASSEMBLY / f"{label}-receipt.json", receipt)
+    if process.returncode:
+        raise RuntimeError(f"{label} exited {process.returncode}; exact raw output retained")
+    return receipt
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--pr50-manifest", required=True)
+parser.add_argument("--pr50-sha256", required=True)
+args = parser.parse_args()
+
+pr50_manifest = Path(args.pr50_manifest)
+if identity(pr50_manifest)["sha256"] != args.pr50_sha256:
+    raise RuntimeError("PR50 manifest hash mismatch")
+pr50 = json.loads(pr50_manifest.read_bytes())
+pr50_rows = []
+for row in pr50["files"]:
+    pr50_rows.append(copy_exact(row["source_path"], row["path"], row))
+pr50_alias = f"{PREFIX}/provenance/pr50-original-manifest.json"
+copy_exact(pr50_manifest, pr50_alias)
+write_json(OVERLAY / PREFIX / "provenance/pr50-packet-custody.json", {
+    "original_manifest": str(pr50_manifest), "published_manifest": pr50_alias,
+    "manifest_sha256": args.pr50_sha256, "declared_files": len(pr50_rows),
+    "files": pr50_rows,
+})
+
+# These executed setup artifacts are first published as explicit transcripts.
+driver_names = [
+    "assemble-evidence.py", "prepare-publication.py",
+    "prepare-publication-resume.py", "prepare-publication-flatten.py",
+    Path(__file__).name,
+]
+mappings = []
+for name in driver_names:
+    row = copy_exact(ASSEMBLY / name, f"{PREFIX}/assembly/drivers/{name}.txt")
+    mappings.append({"original_native_path": row["source_path"], "original_name": name, "published_path": row["path"], **{k: row[k] for k in ("bytes", "sha256", "git_blob", "mode")}})
+write_json(OVERLAY / PREFIX / "assembly/archival-name-mapping.json", {
+    "note": "Exact executed setup/assembly transcripts. The .py.txt names are transport aliases, not newly qualified Python modules. No lint policy exception is introduced.",
+    "files": mappings,
+})
+transcripts = []
+for path in sorted(ASSEMBLY.glob("assembly-*.log")):
+    data = path.read_bytes()
+    text = data.decode("utf-8")
+    if text.encode() != data:
+        raise RuntimeError("Assembly transcript newline conversion")
+    transcripts.append({"source_path": str(path), "native_name": path.name, **identity(path), "encoding": "utf-8", "content": text})
+write_json(OVERLAY / PREFIX / "assembly/exact-command-transcripts.json", {"schema": "towerops-exact-byte-transcript-archive/v1", "files": transcripts})
+receipts = []
+for name in ["assembly-setup-receipt.json", "assembly-resume-receipt.json", "assembly-flat-receipt.json", "assembly-object-graph.json"]:
+    path = ASSEMBLY / name
+    data = path.read_bytes()
+    receipts.append({"source_path": str(path), "native_name": name, **identity(path), "encoding": "utf-8", "content": data.decode("utf-8")})
+write_json(OVERLAY / PREFIX / "assembly/exact-setup-receipts.json", {"schema": "towerops-exact-byte-transcript-archive/v1", "note": "Two nonzero materialization attempts are retained separately from the successful flattened-object continuation.", "files": receipts})
+
+root_map = json.loads((OVERLAY / PREFIX / "provenance/root-receiving-map.json").read_bytes())
+for row in root_map["root_exact_files"]:
+    published = OVERLAY / row["path"]
+    if not published.exists():
+        published = CANDIDATE / row["path"]
+    actual = identity(published)
+    if any(actual[key] != row[key] for key in ("bytes", "sha256", "git_blob", "mode")):
+        raise RuntimeError(f"Root reused/copied source mismatch {published}")
+for row in root_map["unchanged_receivers"]:
+    actual = identity(CANDIDATE / row["published_path"])
+    if any(actual[key] != row[key] for key in ("bytes", "sha256", "git_blob", "mode")):
+        raise RuntimeError("Historical receiver reuse mismatch")
+
+baseline = tree_entries(BASELINE)
+old = tree_entries(PRIOR)
+base = tree_entries(BASE)
+proof = json.loads((OVERLAY / PREFIX / "provenance/assembly-baseline-proof.json").read_bytes())
+products = proof["product_paths"]
+historical = {path: row for path, row in old.items() if path.startswith(("docs/verification/scenario-files-20261008-cf5799f6d38b/", "docs/verification/scenario-raw-draft-independent-cf5799f6d38b/"))}
+unowned = {path: row for path, row in base.items() if path not in products}
+if len(baseline) != 589 or len(historical) != 328 or len(unowned) != 254:
+    raise RuntimeError("Baseline custody counts changed")
+preseal_tree = stage_overlay()
+preseal = tree_entries(preseal_tree)
+if any(preseal.get(path) != row for path, row in baseline.items()):
+    raise RuntimeError("An existing source leaf changed while adding companion evidence")
+new_paths = sorted(set(preseal) - set(baseline))
+if any(not path.startswith("docs/verification/") for path in new_paths):
+    raise RuntimeError("New evidence unexpectedly escaped verification namespaces")
+if any(Path(path).suffix == ".py" or Path(path).name == ".ruff.toml" for path in new_paths):
+    raise RuntimeError("New Python module or Ruff exception was not part of this evidence-only assembly")
+write_json(OVERLAY / PREFIX / "provenance/final-preservation-proof.json", {
+    "baseline_tree": BASELINE, "base_commit": BASE, "base_tree": subprocess.check_output(["git", "rev-parse", BASE + "^{tree}"], cwd=CANDIDATE).decode().strip(),
+    "unchanged_baseline_source_leaves": len(baseline), "product_source_tree": PRODUCT,
+    "unchanged_product_paths": products, "historical_commit": PRIOR_HEAD,
+    "historical_tree": PRIOR, "unchanged_historical_evidence_paths": len(historical),
+    "unchanged_unrelated_current_base_paths": len(unowned),
+    "existing_scenario_contribution_paths_preserved": 335,
+    "source_changes_during_assembly": [], "new_lint_exceptions": [],
+    "old_six_path_ruff_policy_unchanged": True,
+    "peer_declared_files": {"maintained": 32, "alternatives": 33, "inherited_raw_replay": 26, "pr50_native_build": len(pr50_rows)},
+    "source_and_build_receipts_not_requalified_by_copy": True,
+})
+preseal_tree = stage_overlay()
+preseal_receipt = run_ruff("preseal-full-publication-ruff", preseal_tree)
+for name in ["preseal-full-publication-ruff.stdout.log", "preseal-full-publication-ruff.stderr.log", "preseal-full-publication-ruff-receipt.json"]:
+    copy_exact(ASSEMBLY / name, f"{PREFIX}/assembly/{name}")
+final_tree = stage_overlay()
+final_entries = tree_entries(final_tree)
+final_ruff = run_ruff("final-full-publication-ruff", final_tree)
+if subprocess.check_output(["git", "write-tree"], cwd=CANDIDATE).decode().strip() != final_tree:
+    raise RuntimeError("Final Ruff changed index tree")
+for path, expected in final_entries.items():
+    actual = identity(CANDIDATE / path)
+    if actual["mode"] != expected["mode"] or actual["git_blob"] != expected["git_blob"]:
+        raise RuntimeError(f"Final source readback mismatch {path}")
+for path, expected in baseline.items():
+    if final_entries[path] != expected:
+        raise RuntimeError(f"Baseline source changed {path}")
+
+files = []
+for path in sorted(p for p in OVERLAY.rglob("*") if p.is_file()):
+    relative = str(path.relative_to(OVERLAY))
+    files.append({"source_path": str(path), "path": relative, **identity(path)})
+manifest = {
+    "schema": "towerops-final-pr48-publication-companion/v1",
+    "base_commit": BASE, "base_tree": subprocess.check_output(["git", "rev-parse", BASE + "^{tree}"], cwd=CANDIDATE).decode().strip(),
+    "frozen_pr50_composition_tree": BASELINE,
+    "product_source_tree": PRODUCT,
+    "historical_commit": PRIOR_HEAD, "historical_tree": PRIOR,
+    "source_root": str(CANDIDATE), "git_object_directory": str((CANDIDATE / ".git/objects").resolve()),
+    "final_tree": final_tree, "full_tree_file_count": len(final_entries),
+    "overlay_file_count": len(files), "overlay_bytes": sum(x["bytes"] for x in files),
+    "product_paths": products, "product_files": 7,
+    "new_evidence_files": len(files) - 7,
+    "historical_evidence_files_preserved": 328,
+    "current_unrelated_base_files_preserved": 254,
+    "original_335_contribution_paths_preserved": True,
+    "all_589_baseline_files_unchanged": True,
+    "peer_packet_files_exact": {"maintained": 32, "alternatives": 33, "inherited_raw_draft": 26, "pr50": len(pr50_rows)},
+    "final_normal_ruff": final_ruff,
+    "all_final_source_files_read_back": True,
+    "no_new_build_or_browser_run_claimed_by_assembly": True,
+    "files": files,
+}
+manifest_path = ASSEMBLY / "publication-manifest.json"
+write_json(manifest_path, manifest)
+full_manifest = {"tree": final_tree, "files": [{"path": path, **row, **{k: v for k, v in identity(CANDIDATE / path).items() if k not in row}} for path, row in sorted(final_entries.items())]}
+write_json(ASSEMBLY / "final-full-source-readback.json", full_manifest)
+
+# Exact UTF-8 transfer, independent of Python's universal-newline text reads.
+transport = ASSEMBLY / "transport"
+transport.mkdir(exist_ok=False)
+text_rows = []
+binary_by_blob = {}
+existing_binary = {}
+for commit, rows in [(PRIOR_HEAD, old), (BASE, base)]:
+    for path, row in rows.items():
+        existing_binary.setdefault(row["git_blob"], []).append({"commit": commit, "path": path, "mode": row["mode"]})
+for row in files:
+    data = Path(row["source_path"]).read_bytes()
+    try:
+        decoded = data.decode("utf-8")
+    except UnicodeDecodeError:
+        binary_by_blob.setdefault(row["git_blob"], {"pin": {k: row[k] for k in ("bytes", "sha256", "git_blob", "mode")}, "source_path": row["source_path"], "paths": []})["paths"].append(row["path"])
+    else:
+        if decoded.encode() != data:
+            raise RuntimeError("Text transfer byte conversion")
+        text_rows.append({**row, "content": decoded})
+payload = {
+    "schema": "towerops-publication-text-transfer/v1",
+    "final_tree": final_tree,
+    "manifest_file": {"source_path": str(manifest_path), **identity(manifest_path), "content": manifest_path.read_bytes().decode()},
+    "final_ruff_receipt": {"source_path": str(ASSEMBLY / "final-full-publication-ruff-receipt.json"), **identity(ASSEMBLY / "final-full-publication-ruff-receipt.json"), "content": (ASSEMBLY / "final-full-publication-ruff-receipt.json").read_bytes().decode()},
+    "final_ruff_stdout": {"source_path": str(ASSEMBLY / "final-full-publication-ruff.stdout.log"), **identity(ASSEMBLY / "final-full-publication-ruff.stdout.log"), "content": (ASSEMBLY / "final-full-publication-ruff.stdout.log").read_bytes().decode()},
+    "final_ruff_stderr": {"source_path": str(ASSEMBLY / "final-full-publication-ruff.stderr.log"), **identity(ASSEMBLY / "final-full-publication-ruff.stderr.log"), "content": (ASSEMBLY / "final-full-publication-ruff.stderr.log").read_bytes().decode()},
+    "files": text_rows,
+}
+payload_bytes = (json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
+(transport / "text-transfer.json").write_bytes(payload_bytes)
+payload_text = payload_bytes.decode("utf-8")
+pieces = []
+offset = 0
+while offset < len(payload_text):
+    end = min(len(payload_text), offset + 180000)
+    while True:
+        content = payload_text[offset:end]
+        item = {"schema": "towerops-text-transfer-chunk/v1", "part": len(pieces) + 1, "offset_characters": offset, "chunk_utf8_sha256": hashlib.sha256(content.encode()).hexdigest(), "content": content}
+        encoded = (json.dumps(item, ensure_ascii=False, separators=(",", ":")) + "\n").encode()
+        if len(encoded) <= 250 * 1024:
+            break
+        end = offset + max(1, (end - offset) * 9 // 10)
+    path = transport / f"text-part-{len(pieces) + 1:03d}.json"
+    path.write_bytes(encoded)
+    pieces.append({"path": str(path), "part": len(pieces) + 1, "offset_characters": offset, **identity(path)})
+    offset = end
+reconstructed = "".join(json.loads(Path(x["path"]).read_bytes())["content"] for x in pieces).encode()
+if reconstructed != payload_bytes:
+    raise RuntimeError("Text transfer chunk roundtrip failed")
+
+binary_index = []
+for blob, row in sorted(binary_by_blob.items()):
+    old_matches = [x for x in existing_binary.get(blob, []) if x["mode"] == row["pin"]["mode"]]
+    if old_matches:
+        binary_index.append({**row["pin"], "paths": row["paths"], "reuse_existing_git_blob": old_matches[0], "transport_parts": []})
+        continue
+    data = Path(row["source_path"]).read_bytes()
+    encoded_data = base64.b64encode(data).decode("ascii")
+    count = (len(encoded_data) + 239999) // 240000
+    parts = []
+    for index in range(count):
+        encoded_part = encoded_data[index * 240000:(index + 1) * 240000]
+        content = {"schema": "towerops-binary-transfer-chunk/v1", **row["pin"], "part": index + 1, "parts": count, "encoding": "base64", "content": encoded_part}
+        path = transport / f"binary-{blob}-{index + 1:03d}.json"
+        write_json(path, content)
+        if path.stat().st_size > 250 * 1024:
+            raise RuntimeError("Binary wrapper too large")
+        parts.append({"path": str(path), "part": index + 1, **identity(path)})
+    decoded = base64.b64decode("".join(json.loads(Path(x["path"]).read_bytes())["content"] for x in parts))
+    if decoded != data:
+        raise RuntimeError("Binary transfer roundtrip failed")
+    binary_index.append({**row["pin"], "paths": row["paths"], "source_path": row["source_path"], "transport_parts": parts})
+for row in json.loads(reconstructed)["files"]:
+    if identity_bytes(row["content"].encode()) != {k: row[k] for k in ("bytes", "sha256", "git_blob")}:
+        raise RuntimeError("Transferred text file hash mismatch")
+index = {
+    "schema": "towerops-publication-transfer-index/v1", "final_tree": final_tree,
+    "manifest_path": str(manifest_path), "manifest": identity(manifest_path),
+    "file_count": len(files), "text_file_count": len(text_rows),
+    "binary_path_count": sum(len(x["paths"]) for x in binary_index),
+    "unique_binary_blobs": len(binary_index),
+    "binary_blobs_reused_from_published_commits": sum(bool(x.get("reuse_existing_git_blob")) for x in binary_index),
+    "text_transfer": {"path": str(transport / "text-transfer.json"), **identity(transport / "text-transfer.json")},
+    "text_parts": pieces, "binary_blobs": binary_index,
+    "wrapper_max_bytes": max([x["bytes"] for x in pieces] + [part["bytes"] for x in binary_index for part in x["transport_parts"]]),
+    "roundtrip_all_overlay_files_exact": True,
+    "transport_is_external_to_publication": True,
+}
+write_json(transport / "index.json", index)
+summary = {
+    "manifest": {"path": str(manifest_path), **identity(manifest_path)},
+    "transfer_index": {"path": str(transport / "index.json"), **identity(transport / "index.json")},
+    "final_tree": final_tree, "full_tree_files": len(final_entries), "overlay_files": len(files),
+    "overlay_bytes": sum(x["bytes"] for x in files), "normal_ruff_exit": final_ruff["exit_code"],
+    "text_parts": len(pieces), "unique_binary_blobs": len(binary_index),
+    "reused_binary_blobs": index["binary_blobs_reused_from_published_commits"],
+    "wrapper_max_bytes": index["wrapper_max_bytes"], "all_transfers_verified": True,
+}
+write_json(ASSEMBLY / "handoff-summary.json", summary)
+print(json.dumps(summary, indent=2))

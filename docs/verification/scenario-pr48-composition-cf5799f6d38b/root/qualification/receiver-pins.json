@@ -1,0 +1,58 @@
+[
+  {
+    "name": "author.mjs",
+    "prior": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/author.mjs",
+    "current": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/author.mjs",
+    "bytes": 20441,
+    "sha256": "3486cd53f70b44ec9d964d45d7e7688f2d3163cfd693af5beb951f583d65aab6",
+    "bytes_unchanged": true
+  },
+  {
+    "name": "independent.mjs",
+    "prior": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/independent.mjs",
+    "current": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/independent.mjs",
+    "bytes": 16174,
+    "sha256": "64bd1ffa7545148f62a6ec818dbca94e40190787505f1b786d3e66ad8d420544",
+    "bytes_unchanged": true
+  },
+  {
+    "name": "pending.mjs",
+    "prior": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/pending.mjs",
+    "current": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/pending.mjs",
+    "bytes": 10348,
+    "sha256": "968838aba803c324b69c8b03d59c057aa7c5c80fbbafc7c1ca6d9904fb5f9aa6",
+    "bytes_unchanged": true
+  },
+  {
+    "name": "scenario-encounter.mjs",
+    "prior": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-encounter.mjs",
+    "current": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/scenario-encounter.mjs",
+    "bytes": 16904,
+    "sha256": "dfce8b64d2febdc004e63831a9084d47558669fa0dfa47b635d8e465dd370597",
+    "bytes_unchanged": true
+  },
+  {
+    "name": "scenario-decision-trace.mjs",
+    "prior": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-decision-trace.mjs",
+    "current": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/scenario-decision-trace.mjs",
+    "bytes": 13177,
+    "sha256": "d85c43ee1fe3324533454091d027c391e6637e25f0ec68df12ce649670da87f4",
+    "bytes_unchanged": true
+  },
+  {
+    "name": "pr46-puppeteer-receiver-v3.mjs",
+    "prior": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/pr46-puppeteer-receiver-v3.mjs",
+    "current": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/pr46-puppeteer-receiver-v3.mjs",
+    "bytes": 13470,
+    "sha256": "0ef3b762c5fe83eda6b5d676da1d9a6927cb4f682b3053e71e5defe75016ac14",
+    "bytes_unchanged": true
+  },
+  {
+    "name": "scenario-raw-draft-v4.mjs",
+    "prior": "/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/receivers/scenario-raw-draft-v4.mjs",
+    "current": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/receivers/scenario-raw-draft-v4.mjs",
+    "bytes": 14743,
+    "sha256": "d7c7a43100fa3e8e9225a63321859a38f345e3db0bc028b78f3fa26a94832b91",
+    "bytes_unchanged": true
+  }
+]

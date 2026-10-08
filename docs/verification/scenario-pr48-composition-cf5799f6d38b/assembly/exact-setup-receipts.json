@@ -1,0 +1,46 @@
+{
+  "schema": "towerops-exact-byte-transcript-archive/v1",
+  "note": "Two nonzero materialization attempts are retained separately from the successful flattened-object continuation.",
+  "files": [
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-setup-receipt.json",
+      "native_name": "assembly-setup-receipt.json",
+      "bytes": 1110,
+      "sha256": "08eb4b722a5fff7a968060db1cd2855a92fb16c5e98a9c59a9f74a406ec0b105",
+      "git_blob": "5f8155c90a9fcaaa8148cc960b49b3f25f36f279",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\n  \"commands\": [\n    {\n      \"label\": \"clone\",\n      \"command\": [\n        \"git\",\n        \"clone\",\n        \"--shared\",\n        \"--no-checkout\",\n        \"/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed\",\n        \"/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/publication-candidate\"\n      ],\n      \"cwd\": \"/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4\",\n      \"exit_code\": 0,\n      \"seconds\": 0.24290013313293457\n    },\n    {\n      \"label\": \"checkout-base\",\n      \"command\": [\n        \"git\",\n        \"checkout\",\n        \"--detach\",\n        \"53aa5048b6585aa08592d5513cfcf555a8bba018\"\n      ],\n      \"cwd\": \"/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/publication-candidate\",\n      \"exit_code\": 0,\n      \"seconds\": 0.07876467704772949\n    },\n    {\n      \"label\": \"materialize-frozen-tree\",\n      \"command\": [\n        \"git\",\n        \"read-tree\",\n        \"--reset\",\n        \"-u\",\n        \"8c11186b1a3f6391879fb0aef14738487f09dc2a\"\n      ],\n      \"cwd\": \"/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/publication-candidate\",\n      \"exit_code\": 128,\n      \"seconds\": 0.014697074890136719\n    }\n  ]\n}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-resume-receipt.json",
+      "native_name": "assembly-resume-receipt.json",
+      "bytes": 695,
+      "sha256": "52241cbe338e5938a5143ab6e21cb92de2c4309f0287846cc76bf010c7420678",
+      "git_blob": "a9f5f03b702ce46385e13448312ffcfe5825be33",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\n  \"commands\": [\n    {\n      \"label\": \"object-reachability\",\n      \"command\": [\n        \"git\",\n        \"cat-file\",\n        \"-t\",\n        \"8c11186b1a3f6391879fb0aef14738487f09dc2a\"\n      ],\n      \"cwd\": \"/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/publication-candidate\",\n      \"exit_code\": 0,\n      \"seconds\": 0.02158188819885254\n    },\n    {\n      \"label\": \"materialize-frozen-tree\",\n      \"command\": [\n        \"git\",\n        \"read-tree\",\n        \"--reset\",\n        \"-u\",\n        \"8c11186b1a3f6391879fb0aef14738487f09dc2a\"\n      ],\n      \"cwd\": \"/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/publication-candidate\",\n      \"exit_code\": 128,\n      \"seconds\": 0.24961280822753906\n    }\n  ]\n}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-flat-receipt.json",
+      "native_name": "assembly-flat-receipt.json",
+      "bytes": 693,
+      "sha256": "3896bbc463c26ed5a2e4f5b7084154c571948255d2f685e0244fe9f462e0cb0b",
+      "git_blob": "4ec7c4fe038b33de65cd8f0b46bb7a4395b3407b",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\n  \"commands\": [\n    {\n      \"label\": \"object-reachability\",\n      \"command\": [\n        \"git\",\n        \"cat-file\",\n        \"-t\",\n        \"8c11186b1a3f6391879fb0aef14738487f09dc2a\"\n      ],\n      \"cwd\": \"/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/publication-candidate\",\n      \"exit_code\": 0,\n      \"seconds\": 0.021582841873168945\n    },\n    {\n      \"label\": \"materialize-frozen-tree\",\n      \"command\": [\n        \"git\",\n        \"read-tree\",\n        \"--reset\",\n        \"-u\",\n        \"8c11186b1a3f6391879fb0aef14738487f09dc2a\"\n      ],\n      \"cwd\": \"/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/publication-candidate\",\n      \"exit_code\": 0,\n      \"seconds\": 0.2945570945739746\n    }\n  ]\n}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assembly-object-graph.json",
+      "native_name": "assembly-object-graph.json",
+      "bytes": 2851,
+      "sha256": "065788f362da69f742a61d9d8aa119f6fb2d3b63f9e0b796552ffe137238026c",
+      "git_blob": "f8e324dc4b8c4bb900db80f6bddca840f62f9538",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\n  \"direct_stores_leaf_first\": [\n    \"/private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate/.git/objects\",\n    \"/private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2/.git/objects\",\n    \"/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/.git/objects\",\n    \"/private/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial/.git/objects\",\n    \"/private/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset/.git/objects\",\n    \"/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate/.git/objects\",\n    \"/private/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/.git/objects\",\n    \"/private/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed/.git/objects\"\n  ],\n  \"original_graph\": [\n    {\n      \"object_directory\": \"/private/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed/.git/objects\",\n      \"alternates\": [\n        \"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/.git/objects\"\n      ]\n    },\n    {\n      \"object_directory\": \"/private/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/.git/objects\",\n      \"alternates\": [\n        \"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset/.git/objects\",\n        \"/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate/.git/objects\"\n      ]\n    },\n    {\n      \"object_directory\": \"/private/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset/.git/objects\",\n      \"alternates\": [\n        \"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial/.git/objects\"\n      ]\n    },\n    {\n      \"object_directory\": \"/private/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial/.git/objects\",\n      \"alternates\": [\n        \"/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/.git/objects\"\n      ]\n    },\n    {\n      \"object_directory\": \"/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/.git/objects\",\n      \"alternates\": [\n        \"/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2/.git/objects\"\n      ]\n    },\n    {\n      \"object_directory\": \"/private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate-trace-r2/.git/objects\",\n      \"alternates\": [\n        \"/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate/.git/objects\"\n      ]\n    },\n    {\n      \"object_directory\": \"/private/tmp/towerops-encounter-scenarios-cf5799f6d38b-1_su10pa/candidate/.git/objects\",\n      \"alternates\": []\n    },\n    {\n      \"object_directory\": \"/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/publication-candidate/.git/objects\",\n      \"alternates\": [\n        \"/private/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate/.git/objects\"\n      ]\n    }\n  ]\n}\n"
+    }
+  ]
+}

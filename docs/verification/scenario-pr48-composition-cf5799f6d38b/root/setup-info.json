@@ -1,0 +1,21 @@
+{
+  "root": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj",
+  "candidate": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+  "base_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "base_tree": "4a87643d57cabf81e570b21c119f00b43f79448e",
+  "source_checkpoint_tree": "efd5d1d99edc0595111e15836c18a9b178abb4c3",
+  "owned_product_paths": [
+    "web/airspace/README.md",
+    "web/airspace/index.html",
+    "web/airspace/style.css",
+    "web/airspace/src/main.ts",
+    "web/airspace/src/scenario-file.ts",
+    "web/airspace/src/scenario-ui.ts",
+    "web/airspace/tests/scenario-file.test.ts"
+  ],
+  "patch_sha256": "59a9e0b9ad2a604b01112fb91242a667e3c08020f9984110d585a4d3504433e0",
+  "base_full_tree_sha256": "2af1f028bae9e9af8f0e1cc9c6ecb8642df1edea8cb7167596ddc7c226da5f24",
+  "status": "M  web/airspace/README.md\nM  web/airspace/index.html\nM  web/airspace/src/main.ts\nA  web/airspace/src/scenario-file.ts\nA  web/airspace/src/scenario-ui.ts\nUU web/airspace/style.css\nA  web/airspace/tests/scenario-file.test.ts\n",
+  "first_fetch_exit_not_recorded": true,
+  "receiving_note": "The first setup reached ENOSPC while recording fetch output; its process result is not reconstructed. This resume directly verifies the received commit/tree."
+}

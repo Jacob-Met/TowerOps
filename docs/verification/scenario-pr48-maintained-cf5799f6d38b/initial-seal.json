@@ -1,0 +1,82 @@
+{
+  "source_tree": "f4bc1ce05953dde6a33cea8588033fea9e18c5c4",
+  "files": [
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/receive_existing.py",
+      "bytes": 6825,
+      "sha256": "b17896ab3ece6807b215e5e300354caab8fcdcbca97de400a201ed31cf7f00c1",
+      "git_blob": "a132e116e35b55fb575ca800c5cf81ef4cde51f1",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/browser/browser-receipt.json",
+      "bytes": 41931,
+      "sha256": "44cf297bab6888a2665601b6ae8d735a02bfe1cb521e4fe75e7406aa2697eeac",
+      "git_blob": "cfeca225645c0acb8259deb3c10a19aa58ce9af1",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/browser/desktop-alternatives.png",
+      "bytes": 118000,
+      "sha256": "506b79bbfa6a87d7095c53bb4aeedfc5d72fa13b9b54ecc4ab9b2961b2ba4c45",
+      "git_blob": "95067c6d8ad5c1911f9a0158a0200e07c6ef80ed",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/browser/mobile-alternatives.png",
+      "bytes": 125892,
+      "sha256": "00016196f0d1faf30cbce658dd8f082d0a9570ba56be14387781a9a0add7b2e2",
+      "git_blob": "e71c6d9da16854feb5ceb275da2dffd6d584ad00",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/receiver.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/receiver.stdout.log",
+      "bytes": 524,
+      "sha256": "4a28caa9b64ba9ea4dfed9dde76af28f764f7ef71ae45fe60d8a5b0006377dcd",
+      "git_blob": "3904d64ce8aa98dbba6f6092a86a39672e12a2ef",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/receiving-receipt.json",
+      "bytes": 2284,
+      "sha256": "9d805fe896101bfeba7a9f6dd77590940ca646466a3ea32e82d4f23c94fa16b1",
+      "git_blob": "8bd234e28482a8f71c6ed565223f658fc62a7398",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/runtime.json",
+      "bytes": 416,
+      "sha256": "cf452b255dd6b44dcb2978a3189f15aab1802f19c7ff0437c785f607f7beb612",
+      "git_blob": "ef035df0dcdd37268cc3f849fa8bf6633f338d03",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/source-build-after.json",
+      "bytes": 73484,
+      "sha256": "93f4d5a9657c7ac35ef53a5646f8d5bd8208224f26bc4b9f87b1d01d836d25d2",
+      "git_blob": "5983904279cb231bf942d45e1077f96fd631d544",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/source-build-before.json",
+      "bytes": 73484,
+      "sha256": "93f4d5a9657c7ac35ef53a5646f8d5bd8208224f26bc4b9f87b1d01d836d25d2",
+      "git_blob": "5983904279cb231bf942d45e1077f96fd631d544",
+      "mode": "100644"
+    },
+    {
+      "path": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/initial/supplied-source-build-pin.json",
+      "bytes": 78433,
+      "sha256": "022805ce6de15626e92fdfa6daac13349191085d7655e7cd6b35c63dc168e0e6",
+      "git_blob": "62a20a58a9a1a6341b618a6eb27868e8026aa0c1",
+      "mode": "100644"
+    }
+  ]
+}

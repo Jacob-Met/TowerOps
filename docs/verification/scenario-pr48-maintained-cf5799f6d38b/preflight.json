@@ -1,0 +1,14 @@
+{
+  "root": "/tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh",
+  "free_bytes": 7140888576,
+  "source_tree": "f4bc1ce05953dde6a33cea8588033fea9e18c5c4",
+  "source_root": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+  "build_root": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial/web/airspace/dist",
+  "source_count": 251,
+  "build_count": 16,
+  "build_row_sample": {
+    "path": "assets/index-BgA9LRGh.js",
+    "bytes": 62940,
+    "sha256": "5efa225daa53ddc28b2f1b8fcbb7f454302fef8ad67720f57653dc4105803418"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "towerops.scenario-alternatives-source-review.v1",
+  "initial_tree": "f4bc1ce05953dde6a33cea8588033fea9e18c5c4",
+  "successor_tree": "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993",
+  "successor_manifest_sha256": "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba",
+  "source_files": 251,
+  "changed_paths": [
+    "web/airspace/README.md",
+    "web/airspace/src/main.ts"
+  ],
+  "other_source_files_byte_exact": 249,
+  "initial_negative_files_verified": 16,
+  "unchanged_binding_modules": [
+    "web/airspace/src/advisory-options.ts",
+    "web/airspace/src/advisory-review.ts",
+    "web/airspace/src/python-worker.ts",
+    "advisory_options.py"
+  ],
+  "reviewed_delta": "--- initial/web/airspace/README.md\n+++ reset/web/airspace/README.md\n@@ -130,7 +130,7 @@\n \n Use **Choose scenario file** to read a saved file. Review its aircraft count, clock, selected flight and all seven policy values, then choose **Load reviewed scenario**. Reading and reviewing do not change the simulation. **Cancel import**, malformed files and failed reads preserve the current world, proposal, approval and decision trace. If those values change during a read or review, choose the file again before loading.\n \n-Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Run the existing planner, approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history.\n+Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Loading also clears any earlier alternatives review, even when the saved values are identical. Run the existing planner or **Review alternatives**, then use the approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history.\n \n The existing **Inspect or load a WorldState** workbench continues to accept its original raw world shape. That shape contains only aircraft state and does not carry a policy. Use a scenario file when the separation envelope and clock must travel with the traffic.\n \n--- initial/web/airspace/src/main.ts\n+++ reset/web/airspace/src/main.ts\n@@ -39,8 +39,9 @@\n  const restored=createScenario(value);\n  state=restored.world;policy=restored.policy;now=restored.now;rate=restored.time_scale;selected=restored.selected_aircraft_id;\n  running=false;lastFrame=0;trafficSeq=0;audit=new AuditLog();pythonAudit='[]';\n+ optionsReview=null;optionsStatus='Saved scenario loaded. Review alternatives before choosing a proposal.';\n  setText('audit-verdict','');\n- clearPending('Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.');\n+ clearPending('Saved scenario loaded. Run the planner or review alternatives before approval and readback.');\n  $<HTMLInputElement>('policy-horizontal').value=String(policy.min_horizontal_nm);\n  $<HTMLInputElement>('policy-vertical').value=String(policy.min_vertical_ft);\n  $<HTMLInputElement>('policy-horizon').value=String(policy.horizon_min);\n@@ -50,7 +51,7 @@\n  setText('horizon-value',`${policy.horizon_min.toFixed(1)} MIN`);\n  setText('toggle-run','Run traffic');\n  setText('world-json-feedback',`Loaded scenario with ${state.aircraft.length} aircraft at version ${state.version}.${worldJsonEdited?' Your raw JSON draft is still kept. Use Export live world to replace it.':''}`);\n- announce('Saved scenario loaded. Traffic is paused. Previous proposals and decision trace cleared.');\n+ announce('Saved scenario loaded. Traffic is paused. Previous proposals, alternatives and decision trace cleared.');\n  void render();\n }\n type GateState='wait'|'done'|'fail'; let gateScreen:GateState='wait',gateApproval:GateState='wait',gateAck:GateState='wait';\n"
+}

@@ -1,0 +1,25 @@
+
+{
+  "version": 101,
+  "observed_at": 1004,
+  "aircraft": [
+    {
+      "aircraft_id": "DRAFT701",
+      "x_nm": -7,
+      "y_nm": 2,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0,
+      "climb_ft_min": 0
+    },
+    {
+      "aircraft_id": "DRAFT702",
+      "x_nm": 18,
+      "y_nm": 2,
+      "altitude_ft": 13000,
+      "vx_nm_min": 0,
+      "vy_nm_min": 0,
+      "climb_ft_min": 0
+    }
+  ]
+}

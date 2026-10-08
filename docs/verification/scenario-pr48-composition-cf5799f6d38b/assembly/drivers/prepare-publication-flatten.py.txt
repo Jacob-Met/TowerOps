@@ -1,0 +1,119 @@
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import stat
+import subprocess
+import time
+
+ASSEMBLY = Path("/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4")
+SOURCE = Path("/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed")
+CANDIDATE = ASSEMBLY / "publication-candidate"
+TREE = "8c11186b1a3f6391879fb0aef14738487f09dc2a"
+BASE = "53aa5048b6585aa08592d5513cfcf555a8bba018"
+PRODUCT = "74ca2a2c29e09eb3c9d0c8b896eb81afcc418993"
+PRIOR = "464299ede19b44fdd1d0d8d8590c9a34e4896df5"
+BASE093 = "093f88b29d6e1ede778f967528c7e010b7689ab1"
+PREFIX = "docs/verification/scenario-pr48-composition-cf5799f6d38b"
+commands = []
+
+def run(label, arguments, cwd):
+    started = time.time()
+    process = subprocess.run(arguments, cwd=cwd, capture_output=True)
+    for stream in ("stdout", "stderr"):
+        (ASSEMBLY / f"assembly-flat-{label}.{stream}.log").write_bytes(getattr(process, stream))
+    commands.append({"label": label, "command": arguments, "cwd": str(cwd), "exit_code": process.returncode, "seconds": time.time() - started})
+    if process.returncode:
+        raise RuntimeError(f"{label} exited {process.returncode}")
+    return process.stdout
+
+def tree_entries(tree):
+    result = {}
+    for line in subprocess.check_output(["git", "ls-tree", "-rz", tree], cwd=CANDIDATE).split(b"\0"):
+        if not line:
+            continue
+        meta, name = line.split(b"\t", 1)
+        mode, kind, blob = meta.decode().split()
+        result[name.decode()] = {"mode": mode, "type": kind, "git_blob": blob}
+    return result
+
+def file_identity(path):
+    data = path.read_bytes()
+    return {"mode": "100755" if path.stat().st_mode & stat.S_IXUSR else "100644", "type": "blob", "git_blob": hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest(), "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}
+
+try:
+    stores = []
+    seen = set()
+    object_graph = []
+    def visit(directory):
+        directory = directory.resolve()
+        if directory in seen:
+            return
+        seen.add(directory)
+        nested_file = directory / "info" / "alternates"
+        nested = nested_file.read_text().splitlines() if nested_file.exists() else []
+        object_graph.append({"object_directory": str(directory), "alternates": nested})
+        for value in nested:
+            child = Path(value)
+            visit(child if child.is_absolute() else directory / child)
+        stores.append(str(directory))
+    visit(SOURCE / ".git" / "objects")
+    alternate = CANDIDATE / ".git" / "objects" / "info" / "alternates"
+    alternate.write_bytes(("\n".join(stores) + "\n").encode())
+    (ASSEMBLY / "assembly-object-graph.json").write_text(json.dumps({"direct_stores_leaf_first": stores, "original_graph": object_graph}, indent=2) + "\n")
+    run("object-reachability", ["git", "cat-file", "-t", TREE], CANDIDATE)
+    run("materialize-frozen-tree", ["git", "read-tree", "--reset", "-u", TREE], CANDIDATE)
+    actual_tree = subprocess.check_output(["git", "write-tree"], cwd=CANDIDATE).decode().strip()
+    if actual_tree != TREE:
+        raise RuntimeError("Composed tree mismatch")
+    source_manifest = json.loads((SOURCE.parent / "source-manifest.json").read_bytes())
+    if hashlib.sha256((SOURCE.parent / "source-manifest.json").read_bytes()).hexdigest() != "95cd7172d2f0bf2d2d1d651d58e69dbcd25067df95c33321db1fc84f2c8cc935":
+        raise RuntimeError("Memory source manifest changed")
+    entries = tree_entries(TREE)
+    if len(entries) != 589:
+        raise RuntimeError("Expected 589 source leaves")
+    own_manifest = []
+    for path, expected in sorted(entries.items()):
+        actual = file_identity(CANDIDATE / path)
+        if any(actual[key] != expected[key] for key in expected):
+            raise RuntimeError(f"Source checkout mismatch {path}")
+        own_manifest.append({"path": path, **actual})
+    product_paths = subprocess.check_output(["git", "diff", "--name-only", BASE093, PRODUCT], cwd=CANDIDATE).decode().splitlines()
+    if len(product_paths) != 7:
+        raise RuntimeError("Expected seven feature product paths")
+    product_entries = tree_entries(PRODUCT)
+    old_entries = tree_entries(PRIOR)
+    historical = {path: row for path, row in old_entries.items() if path.startswith(("docs/verification/scenario-files-20261008-cf5799f6d38b/", "docs/verification/scenario-raw-draft-independent-cf5799f6d38b/"))}
+    if len(historical) != 328 or any(entries.get(path) != row for path, row in historical.items()):
+        raise RuntimeError("Historical evidence changed")
+    base_entries = tree_entries(BASE)
+    unowned = {path: row for path, row in base_entries.items() if path not in product_paths}
+    if len(unowned) != 254 or any(entries.get(path) != row for path, row in unowned.items()):
+        raise RuntimeError("Unowned base source changed")
+    for path in product_paths:
+        if entries[path] != product_entries[path]:
+            raise RuntimeError(f"Product identity drift {path}")
+        target = ASSEMBLY / "overlay" / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(CANDIDATE / path, target)
+    manifest_path = ASSEMBLY / "initial-589-source-readback.json"
+    manifest_path.write_text(json.dumps({"source_root": str(CANDIDATE), "tree": TREE, "files": own_manifest}, indent=2) + "\n")
+    proof = {
+        "schema": "towerops-publication-baseline-preservation/v1",
+        "source_root": str(CANDIDATE), "source_tree": TREE, "source_file_count": len(entries),
+        "base_commit": BASE, "base_tree": subprocess.check_output(["git", "rev-parse", BASE + "^{tree}"], cwd=CANDIDATE).decode().strip(),
+        "product_source_tree": PRODUCT, "product_paths": product_paths,
+        "historical_published_commit": "e8f8fe37e31067c8dbd789577544525afca5e009",
+        "historical_tree": PRIOR, "historical_evidence_paths_exact": len(historical),
+        "current_unowned_base_paths_exact": len(unowned), "product_paths_exact": len(product_paths),
+        "source_checkout_bytes_match_index": True,
+        "source_manifest_external": str(manifest_path),
+        "source_manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
+        "source_memory_manifest_sha256": hashlib.sha256((SOURCE.parent / "source-manifest.json").read_bytes()).hexdigest(),
+        "no_rebase_beyond_base": True, "build_or_dependency_copy_performed": False,
+    }
+    destination = ASSEMBLY / "overlay" / PREFIX / "provenance" / "assembly-baseline-proof.json"
+    destination.write_text(json.dumps(proof, indent=2) + "\n")
+    print(json.dumps(proof, indent=2))
+finally:
+    (ASSEMBLY / "assembly-flat-receipt.json").write_text(json.dumps({"commands": commands}, indent=2) + "\n")

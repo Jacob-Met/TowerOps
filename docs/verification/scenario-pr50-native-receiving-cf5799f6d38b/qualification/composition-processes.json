@@ -1,0 +1,81 @@
+[
+  {
+    "name": "clone",
+    "command": [
+      "git",
+      "clone",
+      "--shared",
+      "--no-checkout",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified",
+      "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed"
+    ],
+    "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh",
+    "exit_code": 0,
+    "seconds": 0.04413687507621944
+  },
+  {
+    "name": "known-head-object-probe",
+    "command": [
+      "git",
+      "cat-file",
+      "-e",
+      "53aa5048b6585aa08592d5513cfcf555a8bba018^{commit}"
+    ],
+    "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+    "exit_code": 128,
+    "seconds": 0.01704820792656392
+  },
+  {
+    "name": "fetch-named-head",
+    "command": [
+      "git",
+      "-c",
+      "credential.helper=",
+      "-c",
+      "core.askpass=",
+      "fetch",
+      "--depth=1",
+      "https://github.com/Jacob-Met/TowerOps.git",
+      "53aa5048b6585aa08592d5513cfcf555a8bba018"
+    ],
+    "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+    "exit_code": 0,
+    "seconds": 2.2026419579051435
+  },
+  {
+    "name": "checkout-named-head",
+    "command": [
+      "git",
+      "checkout",
+      "--detach",
+      "53aa5048b6585aa08592d5513cfcf555a8bba018"
+    ],
+    "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+    "exit_code": 0,
+    "seconds": 0.09293829102534801
+  },
+  {
+    "name": "overlay-frozen-contribution",
+    "command": [
+      "git",
+      "update-index",
+      "-z",
+      "--index-info"
+    ],
+    "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+    "exit_code": 0,
+    "seconds": 0.03808145900256932
+  },
+  {
+    "name": "materialize",
+    "command": [
+      "git",
+      "checkout-index",
+      "--all",
+      "--force"
+    ],
+    "cwd": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+    "exit_code": 0,
+    "seconds": 0.1404160000383854
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "schema": "towerops.pr50-composition-receipt.v1",
+  "source_tree": "8c11186b1a3f6391879fb0aef14738487f09dc2a",
+  "source_files": 589,
+  "checkout": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed",
+  "git_object_directory": "/tmp/towerops-pr50-receiving-cf5799f6d38b-2ced04gh/composed/.git/objects",
+  "detached_head": "53aa5048b6585aa08592d5513cfcf555a8bba018",
+  "source_manifest_sha256": "95cd7172d2f0bf2d2d1d651d58e69dbcd25067df95c33321db1fc84f2c8cc935",
+  "contribution_files_exact": 335,
+  "unowned_base_leaves_exact": 254,
+  "exact_delta_paths": [
+    "PLAN_WORLD.md",
+    "README.md",
+    "docs/receiving/world-plan-e82707f2bc62/README.md",
+    "docs/receiving/world-plan-e82707f2bc62/author-evidence.zip",
+    "docs/receiving/world-plan-e82707f2bc62/independent/README.md",
+    "docs/receiving/world-plan-e82707f2bc62/independent/raw-evidence.zip",
+    "docs/receiving/world-plan-e82707f2bc62/independent/receiving.json",
+    "docs/receiving/world-plan-e82707f2bc62/source-receipt.json",
+    "plan_world.py",
+    "tests/test_plan_world.py",
+    "tests/test_plan_world_receiving.py"
+  ],
+  "exact_delta_patch_sha256": "2eb79027a71528622a7a67cb2df606ab401a5886b65ccb991c5056c87354893d",
+  "root_frozen_files_verified": 579,
+  "tests_pending": true,
+  "extra_product_edits": false,
+  "rebase_beyond_named_head": false,
+  "read_only_fetch_needed": true
+}

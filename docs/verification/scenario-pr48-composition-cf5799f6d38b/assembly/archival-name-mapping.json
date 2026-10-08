@@ -1,0 +1,50 @@
+{
+  "note": "Exact executed setup/assembly transcripts. The .py.txt names are transport aliases, not newly qualified Python modules. No lint policy exception is introduced.",
+  "files": [
+    {
+      "original_native_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/assemble-evidence.py",
+      "original_name": "assemble-evidence.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/assembly/drivers/assemble-evidence.py.txt",
+      "bytes": 12470,
+      "sha256": "fb7b9ebd1ac4b6fe217503be30e12d21a8a20080f4e72fe99212c8afa0a33650",
+      "git_blob": "bafcc483f8a881bb5016f842b8a53ec354b06fe0",
+      "mode": "100644"
+    },
+    {
+      "original_native_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/prepare-publication.py",
+      "original_name": "prepare-publication.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/assembly/drivers/prepare-publication.py.txt",
+      "bytes": 5872,
+      "sha256": "61f6eb46209f09c89a2ba90aed5b48cd8945eb1f16a4eb1ceebabd7604ecc75a",
+      "git_blob": "1d66467da104f3e4500ab7e7feb3548e65193794",
+      "mode": "100644"
+    },
+    {
+      "original_native_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/prepare-publication-resume.py",
+      "original_name": "prepare-publication-resume.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/assembly/drivers/prepare-publication-resume.py.txt",
+      "bytes": 6104,
+      "sha256": "e84da54f0867fab8d2733b82a80b524726048a45ff23ba067a424a01dc114531",
+      "git_blob": "80807cca497dad87a38fa997f8967e0287db637b",
+      "mode": "100644"
+    },
+    {
+      "original_native_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/prepare-publication-flatten.py",
+      "original_name": "prepare-publication-flatten.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/assembly/drivers/prepare-publication-flatten.py.txt",
+      "bytes": 6700,
+      "sha256": "1fa589347acf82dbcc4425d2a35daa984e299b8bc6be31aec22f75b71a73b8d4",
+      "git_blob": "d337e51dc2cc286b2f0dc77ca72650ff110fc37f",
+      "mode": "100644"
+    },
+    {
+      "original_native_path": "/tmp/towerops-final-pr48-cf5799f6d38b-su5d7ws4/finalize-publication.py",
+      "original_name": "finalize-publication.py",
+      "published_path": "docs/verification/scenario-pr48-composition-cf5799f6d38b/assembly/drivers/finalize-publication.py.txt",
+      "bytes": 19701,
+      "sha256": "233ca77f0d9d7d64648e8d5096a5fb708b433f7297946bad4fb4994351af3f31",
+      "git_blob": "89cd84a478d0763cd4f34383f01d3ebabaac4430",
+      "mode": "100644"
+    }
+  ]
+}

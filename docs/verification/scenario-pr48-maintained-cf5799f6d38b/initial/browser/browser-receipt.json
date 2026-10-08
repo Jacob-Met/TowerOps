@@ -1,0 +1,977 @@
+{
+  "browser": "154.0.8037.98",
+  "options_request": {
+    "op": "options",
+    "state": {
+      "aircraft": [
+        {
+          "aircraft_id": "TWR218",
+          "altitude_ft": 10000,
+          "climb_ft_min": 0,
+          "vx_nm_min": 1,
+          "vy_nm_min": 0,
+          "x_nm": -5,
+          "y_nm": 0
+        },
+        {
+          "aircraft_id": "TWR419",
+          "altitude_ft": 10000,
+          "climb_ft_min": 0,
+          "vx_nm_min": -1,
+          "vy_nm_min": 0,
+          "x_nm": 5,
+          "y_nm": 0
+        }
+      ],
+      "observed_at": 1000,
+      "version": 1
+    },
+    "now": 1002,
+    "policy": {
+      "min_horizontal_nm": 5,
+      "min_vertical_ft": 1000,
+      "horizon_min": 5,
+      "sample_step_min": 0.5,
+      "max_state_age_sec": 10,
+      "max_speed_nm_min": 6,
+      "max_climb_ft_min": 3000
+    }
+  },
+  "options_response": {
+    "id": 2,
+    "result": {
+      "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+      "reviewed_at": 1002,
+      "candidate_count": 74,
+      "advisories": [
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 5.916079783099616,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -5.916079783099616,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2.958039891549808,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "c3ad5478352dd5fb9cdd38a5cd1070505b959fd59eb334dd63f38f43835d25b0"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -2.958039891549808,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "d9f9949e5163975beaaf224ae97a3e7d4f8100ab9eb92fc1d833118595921402"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 1.479019945774904,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "280de832580ae3e4cb10d7b711361ec6a71a1648181421b17eb359f86cef6e56"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -1.479019945774904,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "cbd83e74f609c1363b67029d0d515af2cb7fca5768e9d6c9cc76aa20fcf839ae"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "41a09ed9187b0334475c42462c0df545d8f6c8b6e15c707bf9852d1f9186676f"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "aeda2de0bfa16dec089b44a783a5c75a9525c1e4fbb04ba1b6a11c919391b89e"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "4b1a9b40285cc23f689cd05dbe9278bf9ebf46c861c924a9de818ac1bf532f0b"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "1ed2e3da0642619ed9a3a2c1dd002e82b270cc93245520a0ada633d6caf3fa80"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 3000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "ba3a68297f02b78ffb418d56dc23309e9b7d1536cc48a9f9588c2ea1c3619005"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": -3000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "5ff1b615b834fa8348bab10cd475e8bc6d2f0b422b2fc0d191d1f1c496865309"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 0,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "09b875b32ac7525cdbbc0515ffff1e8f226c587c58b1b3d5ab35d9b41ba44d9e"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "84b2bb11ae5cb832521193fbcdd91359e3580f3a4381c119aef47767228fce4e"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "e76850d1dd506e155bebb5ef5ce6f97e9875c694c2228f9512782b1fdb1af777"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "829613ef93014d8d8cb624a2bda7041bbb4b10945762954ddd3b8fb99eb21dd3"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "67cc9ff93e0847743c1098d2cf63bee080ab009ce3904aa9370b0694caf9107e"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "c470218cc2a5e224a4c2e72436dc3e10c483837a3bc4bbdc3858e93f681c3caa"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "41db2595100ba004c9a15dbc9005d5eb31fcf3267ed71ef13f71bab065f9198f"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "85264161360b067d81d698ba55a49570d9b9b77bf6a708fece23ef5be2edae39"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "f76120ab9ba830a389e3fb3a594467b163043212216cea6cba89a276eaec02a1"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "cf1e1d7c43f8152c607882a873b1fb287a057e4f339eb9b82bb38fd7b876dbac"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "76a40aa7a498592761f8b23252e1e2089d8a92f8992fcc555f6bc0c3ef7ac87e"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "39aa1b0a112d68546909f33ae62fe56f83a5fb66942a89d9e5a2fa9704a5ec12"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "7bc460fdc7232cd0f586bb253da9ef5ead4d98715aae53bb2c2f0aae619367ba"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "6e8820db02b902883cbe2510c84a6acc37033be3cfd0eddd9cf18199d621ae31"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "eb82b2b1ca3b35945df885848cc9b2fd0f4944a57a0d5b7ed053f927b1ea88d6"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "7b123ab6a8677b25a05b43ab381a7393db92afdb0ec9c7edde4e114c167b2c49"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "4fe183807c2e8ba84e3069c9933a52416bebdecc3600a89d44e4ab214eec3ea7"
+        },
+        {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "c55d3da7f378307fe99401146a52a3f27bc2a33b5cdc333e560d672490415376"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "f35010d450340b0996ec2ab4e079cf863f72c1c86863d5c9db07911858de0e92"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "cbfe418ec407e31ec8031b88cd4f043120f0adf2a4b7fe8e1cb9e6a53d8d0f1b"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "7258bba608ef0bdeddbc483efcee2301ad1e60aba29259be4de812711472e1ac"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "3fc665ff2aeb9546fb0851a513b837dd06dbb10c91c2238ac60dd252bd4abd94"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 5.916079783099616,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "99062b6b9b972db9fa40b1e8f824e2487f16bf6ddef6b1a459583a84b1116c62"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -5.916079783099616,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "428d2af8ae699a10b89f4e64664b25aed4f3e0fe2974aef286bc3e40c6b0367f"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 2.958039891549808,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "105755b9f849da84237265c11469c534b756b28ef041007c1d2039f61094d9c5"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -2.958039891549808,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "154187c9096de576c5b55211f5cf6e2d3c971b95c6aaa0b0bea9798b84d1c925"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 1.479019945774904,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "c45ad0594d200216b15d527b68fb950ea587c5b9e5a4959796010c5c9e2c18fd"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -1.479019945774904,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "de6e1c32dc908f422f150f949e869303bc211372681b9a09da0877872fc04406"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "7eb5e96b1d6c05149feb2c6742e97b551cd3530be332e2106ae2a288b0a1ade7"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "0208afddfed875d0b60094be0171bf98a7ec09591ba02bc0a20f7e7e96b2ba09"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "b7612f8414c6bbd44f8eaa0b21017237d14e8480557e9bea3c76538f0acc9647"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "b2ab1bf7a9215bff516741c8497f7dd69e325d185866b2a17258ff0dcf6e375d"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 3000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "8e383abb95c203508da984eef79499167f52cf7a500b58820fb408618500adde"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": -3000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "6e41b90e1c80381c3f1e4c58d9076f5500f454a2843ff754622a584178af54e8"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 0,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "198563d6a798ab9a4fbfdd521cb93aba46223ce66fe6155c53cd66e3ec982370"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 0,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "a2ce1437cde2ed74a13eb285ef11cb5f87a504febcf549c54c115c600878b9de"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "f06ad460e9910e23a3cbbaf446b6d5778cb6ad47283c6eb510efade1eeeea0e9"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "ba1c62ed4d9aacb5f0f33017f1d91b3c9685caff42f78cf82d3cb784c9bb2db0"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "09edfb47d9295f6b44497caa5c99e2c3e4f0802c2b801dfdbe15e0ba1fdacbc4"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "6f3ce33a1cb7e710ba7d6d3bc31e5963e641de1f9d73a94d57dd00584fa35162"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "9b2e53af90f79ff9ce719660c218ed44b5eb704d59bce17e2e751ead0968e105"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "3e6ddc4a75b1d2d16158f4f3bb2605ff7530ddcd28c9a61a865bc0b7926ab28f"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "bae685605df62cfe584b8e1d3275b65616d1009ad9b077a4cf9f4b55dea3b6a2"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "4df7f9e79b39ce25b5a778621877097e565be93df0d1f93dc6483974a1977c8e"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "6cae81ff87fff241ae5ebd1971186c71673fe5b96f867281933e266ff200d0a9"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "0fedddc734feda7dbe9b9d915820bdc05ea323b625ed9d6c03830bc0f8be0a77"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "b9e79d909f9f7ec0ac18dc86e30a14e6cafb834429e4ecbcaca9fe6ed9fb2be0"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": 3,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "d306c3908003b366540f3232f2ead6859f525822b4754e6a523999e9b1ce2dd1"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": 1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "990ff99f1c86ad82052cc93b72ba7fd7d43138a10c45f09bd39c0d7b5fe2a40d"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": -1000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "c761ce6d3cf6b70e70ed2fa48a441e834fcc8bba9cf589d149edb7834c9e6349"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": 2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "63cba272ffd7a6519716737ea7aa4dcff26b28c227a9358c0657a9953870d153"
+        },
+        {
+          "aircraft_id": "TWR218",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": 1,
+          "set_vy_nm_min": -3,
+          "set_climb_ft_min": -2000,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "9fb6edf79b61b2ecf095298a21be942c1806aa8516b3d553dcc09ba6398d8a8d"
+        }
+      ]
+    }
+  },
+  "selected_advisory": {
+    "aircraft_id": "TWR419",
+    "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+    "set_vx_nm_min": -1,
+    "set_vy_nm_min": -2,
+    "set_climb_ft_min": 0,
+    "issued_at": 1002,
+    "expires_at": 1010,
+    "rationale": "synthetic projected-separation recovery",
+    "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48"
+  },
+  "apply_request": {
+    "op": "apply",
+    "state": {
+      "aircraft": [
+        {
+          "aircraft_id": "TWR218",
+          "altitude_ft": 10000,
+          "climb_ft_min": 0,
+          "vx_nm_min": 1,
+          "vy_nm_min": 0,
+          "x_nm": -5,
+          "y_nm": 0
+        },
+        {
+          "aircraft_id": "TWR419",
+          "altitude_ft": 10000,
+          "climb_ft_min": 0,
+          "vx_nm_min": -1,
+          "vy_nm_min": 0,
+          "x_nm": 5,
+          "y_nm": 0
+        }
+      ],
+      "observed_at": 1000,
+      "version": 1
+    },
+    "advisory": {
+      "aircraft_id": "TWR419",
+      "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+      "set_vx_nm_min": -1,
+      "set_vy_nm_min": -2,
+      "set_climb_ft_min": 0,
+      "issued_at": 1002,
+      "expires_at": 1010,
+      "rationale": "synthetic projected-separation recovery",
+      "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48"
+    },
+    "approval": {
+      "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+      "decision": "approve",
+      "approved_at": 1002.2,
+      "approver": "synthetic-controller"
+    },
+    "ack": {
+      "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+      "status": "accepted",
+      "acknowledged_at": 1002.4
+    },
+    "now": 1002.5,
+    "policy": {
+      "min_horizontal_nm": 5,
+      "min_vertical_ft": 1000,
+      "horizon_min": 5,
+      "sample_step_min": 0.5,
+      "max_state_age_sec": 10,
+      "max_speed_nm_min": 6,
+      "max_climb_ft_min": 3000
+    },
+    "audit_json": "[]"
+  },
+  "apply_response": {
+    "id": 3,
+    "result": {
+      "state": {
+        "version": 2,
+        "observed_at": 1002.5,
+        "aircraft": [
+          {
+            "aircraft_id": "TWR218",
+            "x_nm": -5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": 1,
+            "vy_nm_min": 0,
+            "climb_ft_min": 0
+          },
+          {
+            "aircraft_id": "TWR419",
+            "x_nm": 5,
+            "y_nm": 0,
+            "altitude_ft": 10000,
+            "vx_nm_min": -1,
+            "vy_nm_min": -2,
+            "climb_ft_min": 0
+          }
+        ]
+      },
+      "valid": true,
+      "events": [
+        {
+          "seq": 0,
+          "kind": "screen_pass",
+          "payload": {
+            "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+            "advisory_hashes": [
+              "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48"
+            ]
+          },
+          "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "event_hash": "1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e"
+        },
+        {
+          "seq": 1,
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+            "decision": "approve",
+            "approved_at": 1002.2,
+            "approver": "synthetic-controller"
+          },
+          "prev_hash": "1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e",
+          "event_hash": "38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947"
+        },
+        {
+          "seq": 2,
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+            "status": "accepted",
+            "acknowledged_at": 1002.4
+          },
+          "prev_hash": "38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947",
+          "event_hash": "5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e"
+        },
+        {
+          "seq": 3,
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+            "before_world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+            "after_world_hash": "63593d6b064cab708ed180912ec00c29cb0d3e269713679cf4915e4076ef72db"
+          },
+          "prev_hash": "5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e",
+          "event_hash": "db47bb834909be3bc572afa9539d8249dc1d9ca87fabd1b738eb81bb5c6b2a32"
+        }
+      ],
+      "audit_canonical": [
+        "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\"],\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+        "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\",\"approved_at\":1002.2,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e\",\"seq\":1}",
+        "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":1002.4,\"advisory_hash\":\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\",\"status\":\"accepted\"},\"prev_hash\":\"38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947\",\"seq\":2}",
+        "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\",\"after_world_hash\":\"63593d6b064cab708ed180912ec00c29cb0d3e269713679cf4915e4076ef72db\",\"before_world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e\",\"seq\":3}"
+      ],
+      "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e\", \"event_hash\": \"38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947\", \"event_hash\": \"5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"63593d6b064cab708ed180912ec00c29cb0d3e269713679cf4915e4076ef72db\"}, \"prev_hash\": \"5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e\", \"event_hash\": \"db47bb834909be3bc572afa9539d8249dc1d9ca87fabd1b738eb81bb5c6b2a32\"}]"
+    }
+  },
+  "passed": [
+    "original native first-choice identity",
+    "read-only review preserves approval and world",
+    "native ordering, paging and flight filter",
+    "selection clears prior authorization",
+    "exact selected native body and hash through original apply",
+    "original audit verifies",
+    "changed snapshot invalidates options",
+    "conflict-free complete empty review",
+    "mobile review fits viewport",
+    "helper-download failure leaves native planner available"
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "source_sha256": {
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "web/airspace/src/main.ts": "4b95aa8d24b98dedd26d55356556196f1e2f5236095d19ee2e901ad0733afdab",
+    "web/airspace/src/python-worker.ts": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987",
+    "web/airspace/src/advisory-options.ts": "4b001ebf546e10761906c19e09af5ef19967e45d994c1b090d376cad695ea976",
+    "web/airspace/src/advisory-review.ts": "45c170f976ffc886db49aef120361cbabc99884f63b3f017fc7a0c7b9923ed3e",
+    "web/airspace/src/python.ts": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c"
+  }
+}

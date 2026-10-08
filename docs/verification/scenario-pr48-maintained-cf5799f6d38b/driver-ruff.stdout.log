@@ -1,0 +1,25 @@
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> /tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/receive_existing.py:114:9
+    |
+112 |       failure = None
+113 |       try:
+114 | /         with (args.output / "receiver.stdout.log").open("wb") as stdout:
+115 | |             with (args.output / "receiver.stderr.log").open("wb") as stderr:
+    | |____________________________________________________________________________^
+116 |                   process = subprocess.run(
+117 |                       command, cwd=source_root, env=env, stdout=stdout, stderr=stderr,
+    |
+help: Combine `with` statements
+
+BLE001 Do not catch blind exception: `Exception`
+   --> /tmp/towerops-maintained-readonly-cf5799f6d38b-rmmphmvh/receive_existing.py:121:12
+    |
+119 |                 )
+120 |                 code = process.returncode
+121 |     except Exception as error:
+    |            ^^^^^^^^^
+122 |         failure = type(error).__name__ + ": " + str(error)
+123 |     elapsed = time.monotonic() - started
+    |
+
+Found 2 errors.

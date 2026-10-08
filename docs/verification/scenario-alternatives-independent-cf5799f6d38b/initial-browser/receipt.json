@@ -1,0 +1,948 @@
+{
+  "schema": "towerops.scenario-alternatives-independent.v1",
+  "captured_utc": "2026-10-08T14:01:49.287Z",
+  "source_tree": "f4bc1ce05953dde6a33cea8588033fea9e18c5c4",
+  "source": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+  "dist": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial/web/airspace/dist",
+  "input_manifest_sha256": "022805ce6de15626e92fdfa6daac13349191085d7655e7cd6b35c63dc168e0e6",
+  "receiver_sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+  "runtime": {
+    "node": "v26.3.0",
+    "browser": "Chrome/154.0.8037.98",
+    "puppeteer": "25.12.0"
+  },
+  "before": {
+    "source_files": 251,
+    "build_files": 16,
+    "main_sha256": "4b95aa8d24b98dedd26d55356556196f1e2f5236095d19ee2e901ad0733afdab"
+  },
+  "after": {
+    "source_files": 251,
+    "build_files": 16,
+    "main_sha256": "4b95aa8d24b98dedd26d55356556196f1e2f5236095d19ee2e901ad0733afdab"
+  },
+  "integrity_error": null,
+  "read_only_source_and_existing_build": true,
+  "groups": [
+    {
+      "name": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "passed": false,
+      "seconds": 2.711,
+      "observations": {
+        "saved_scenario": {
+          "format": "towerops.airspace-scenario",
+          "version": 1,
+          "world": {
+            "version": 1,
+            "observed_at": 1000,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "x_nm": -5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "x_nm": 5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "policy": {
+            "min_horizontal_nm": 5,
+            "min_vertical_ft": 1000,
+            "horizon_min": 5,
+            "sample_step_min": 0.5,
+            "max_state_age_sec": 10,
+            "max_speed_nm_min": 6,
+            "max_climb_ft_min": 3000
+          },
+          "now": 1002,
+          "time_scale": 1,
+          "selected_aircraft_id": "TWR419"
+        },
+        "initial_download_sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+        "native_review": {
+          "proposal_state": "NEEDS REVIEW",
+          "proposal_output": "No proposal yet. The planner only returns a setpoint if it clears the separation policy.",
+          "approve_enabled": false,
+          "readback_enabled": false,
+          "gates": [
+            "WAIT",
+            "WAIT",
+            "WAIT"
+          ],
+          "options_visible": true,
+          "options_count": "68 ADMITTED / 74 CHECKED",
+          "options_status": "Each option passed the native screen individually for world d01e0ef289. Choose one, then approve and accept its readback.",
+          "review_enabled": true,
+          "options": [
+            {
+              "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            }
+          ],
+          "flight_ids": [
+            "TWR218",
+            "TWR419"
+          ],
+          "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+          "scenario_status": "Scenario file prepared. Check your browser downloads.",
+          "scenario_review_visible": false,
+          "scenario_apply_enabled": false
+        },
+        "selected_before_load": {
+          "proposal_state": "PROPOSAL READY",
+          "proposal_output": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+          "approve_enabled": true,
+          "readback_enabled": false,
+          "gates": [
+            "PASS",
+            "WAIT",
+            "WAIT"
+          ],
+          "options_visible": true,
+          "options_count": "68 ADMITTED / 74 CHECKED",
+          "options_status": "Selected TWR419, proposal d7af68a35f2b. Approval and readback are required for this selection.",
+          "review_enabled": true,
+          "options": [
+            {
+              "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "enabled": false,
+              "visible": true,
+              "text": "Current proposal"
+            },
+            {
+              "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            }
+          ],
+          "flight_ids": [
+            "TWR218",
+            "TWR419"
+          ],
+          "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+          "scenario_status": "Scenario file prepared. Check your browser downloads.",
+          "scenario_review_visible": false,
+          "scenario_apply_enabled": false
+        },
+        "approved_before_load": {
+          "proposal_state": "PROPOSAL READY",
+          "proposal_output": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+          "approve_enabled": false,
+          "readback_enabled": true,
+          "gates": [
+            "PASS",
+            "APPROVED",
+            "WAIT"
+          ],
+          "options_visible": true,
+          "options_count": "68 ADMITTED / 74 CHECKED",
+          "options_status": "Selected TWR419, proposal d7af68a35f2b. Approval and readback are required for this selection.",
+          "review_enabled": true,
+          "options": [
+            {
+              "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "enabled": false,
+              "visible": true,
+              "text": "Current proposal"
+            },
+            {
+              "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            }
+          ],
+          "flight_ids": [
+            "TWR218",
+            "TWR419"
+          ],
+          "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+          "scenario_status": "Scenario file prepared. Check your browser downloads.",
+          "scenario_review_visible": false,
+          "scenario_apply_enabled": false
+        },
+        "reviewed_scenario": {
+          "proposal_state": "PROPOSAL READY",
+          "proposal_output": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+          "approve_enabled": false,
+          "readback_enabled": true,
+          "gates": [
+            "PASS",
+            "APPROVED",
+            "WAIT"
+          ],
+          "options_visible": true,
+          "options_count": "68 ADMITTED / 74 CHECKED",
+          "options_status": "Selected TWR419, proposal d7af68a35f2b. Approval and readback are required for this selection.",
+          "review_enabled": true,
+          "options": [
+            {
+              "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "enabled": false,
+              "visible": true,
+              "text": "Current proposal"
+            },
+            {
+              "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            }
+          ],
+          "flight_ids": [
+            "TWR218",
+            "TWR419"
+          ],
+          "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+          "scenario_status": "Review the saved scenario. The current simulation is unchanged.",
+          "scenario_review_visible": true,
+          "scenario_apply_enabled": true
+        },
+        "after_explicit_load": {
+          "proposal_state": "NEEDS REVIEW",
+          "proposal_output": "Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.",
+          "approve_enabled": false,
+          "readback_enabled": false,
+          "gates": [
+            "WAIT",
+            "WAIT",
+            "WAIT"
+          ],
+          "options_visible": true,
+          "options_count": "68 ADMITTED / 74 CHECKED",
+          "options_status": "Selected TWR419, proposal d7af68a35f2b. Approval and readback are required for this selection.",
+          "review_enabled": true,
+          "options": [
+            {
+              "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            }
+          ],
+          "flight_ids": [
+            "TWR218",
+            "TWR419"
+          ],
+          "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+          "scenario_status": "Scenario loaded with its saved policy. Traffic is paused and the decision trace starts empty.",
+          "scenario_review_visible": false,
+          "scenario_apply_enabled": false
+        },
+        "after_load_download_sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+        "stale_action_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+        "after_old_action": {
+          "proposal_state": "PROPOSAL READY",
+          "proposal_output": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+          "approve_enabled": true,
+          "readback_enabled": false,
+          "gates": [
+            "PASS",
+            "WAIT",
+            "WAIT"
+          ],
+          "options_visible": true,
+          "options_count": "68 ADMITTED / 74 CHECKED",
+          "options_status": "Selected TWR419, proposal d7af68a35f2b. Approval and readback are required for this selection.",
+          "review_enabled": true,
+          "options": [
+            {
+              "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "enabled": false,
+              "visible": true,
+              "text": "Current proposal"
+            },
+            {
+              "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            }
+          ],
+          "flight_ids": [
+            "TWR218",
+            "TWR419"
+          ],
+          "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+          "scenario_status": "Scenario file prepared. Check your browser downloads.",
+          "scenario_review_visible": false,
+          "scenario_apply_enabled": false
+        }
+      },
+      "error": "AssertionError [ERR_ASSERTION]: prior alternatives must not remain selectable after explicit scenario replacement\n+ actual - expected\n\n+ {\n+   enabled: true,\n+   hash: 'd7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f',\n+   text: 'Use this proposal',\n+   visible: true\n+ }\n- undefined\n",
+      "stack": "AssertionError [ERR_ASSERTION]: prior alternatives must not remain selectable after explicit scenario replacement\n+ actual - expected\n\n+ {\n+   enabled: true,\n+   hash: 'd7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f',\n+   text: 'Use this proposal',\n+   visible: true\n+ }\n- undefined\n\n    at file:///private/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/independent_alternative_reset.mjs:184:12\n    at async group (file:///private/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/independent_alternative_reset.mjs:135:7)\n    at async file:///private/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/independent_alternative_reset.mjs:153:3"
+    },
+    {
+      "name": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "passed": true,
+      "seconds": 2.413,
+      "observations": {
+        "initial": {
+          "format": "towerops.airspace-scenario",
+          "version": 1,
+          "world": {
+            "version": 1,
+            "observed_at": 1000,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "x_nm": -5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "x_nm": 5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "policy": {
+            "min_horizontal_nm": 5,
+            "min_vertical_ft": 1000,
+            "horizon_min": 5,
+            "sample_step_min": 0.5,
+            "max_state_age_sec": 10,
+            "max_speed_nm_min": 6,
+            "max_climb_ft_min": 3000
+          },
+          "now": 1002,
+          "time_scale": 1,
+          "selected_aircraft_id": "TWR419"
+        },
+        "native_review": {
+          "proposal_state": "NEEDS REVIEW",
+          "proposal_output": "No proposal yet. The planner only returns a setpoint if it clears the separation policy.",
+          "approve_enabled": false,
+          "readback_enabled": false,
+          "gates": [
+            "WAIT",
+            "WAIT",
+            "WAIT"
+          ],
+          "options_visible": true,
+          "options_count": "68 ADMITTED / 74 CHECKED",
+          "options_status": "Each option passed the native screen individually for world d01e0ef289. Choose one, then approve and accept its readback.",
+          "review_enabled": true,
+          "options": [
+            {
+              "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            },
+            {
+              "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+              "enabled": true,
+              "visible": true,
+              "text": "Use this proposal"
+            }
+          ],
+          "flight_ids": [
+            "TWR218",
+            "TWR419"
+          ],
+          "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+          "scenario_status": "Scenario file prepared. Check your browser downloads.",
+          "scenario_review_visible": false,
+          "scenario_apply_enabled": false
+        },
+        "after_explicit_load": {
+          "proposal_state": "NEEDS REVIEW",
+          "proposal_output": "Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.",
+          "approve_enabled": false,
+          "readback_enabled": false,
+          "gates": [
+            "WAIT",
+            "WAIT",
+            "WAIT"
+          ],
+          "options_visible": true,
+          "options_count": "NO CURRENT REVIEW",
+          "options_status": "The world, clock or policy changed. Review alternatives again before choosing a proposal.",
+          "review_enabled": true,
+          "options": [],
+          "flight_ids": [
+            "TWR218",
+            "TWR419"
+          ],
+          "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+          "scenario_status": "Scenario loaded with its saved policy. Traffic is paused and the decision trace starts empty.",
+          "scenario_review_visible": false,
+          "scenario_apply_enabled": false
+        },
+        "loaded": {
+          "format": "towerops.airspace-scenario",
+          "version": 1,
+          "world": {
+            "version": 2,
+            "observed_at": 1000,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "x_nm": -5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "x_nm": 5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "policy": {
+            "min_horizontal_nm": 5,
+            "min_vertical_ft": 1000,
+            "horizon_min": 5,
+            "sample_step_min": 0.5,
+            "max_state_age_sec": 10,
+            "max_speed_nm_min": 6,
+            "max_climb_ft_min": 3000
+          },
+          "now": 1002,
+          "time_scale": 1,
+          "selected_aircraft_id": "TWR419"
+        },
+        "download_sha256": "e8abe6495e414188a1d0c531d14f1ff5c184d922604b4e6d8bd3b39d93b8097e"
+      }
+    }
+  ],
+  "requests": [
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "29cbf0e4756f02adbb0db140af004f99e1978e50716e66155b855f7a7d1146b6"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/assets/index-TucxfM67.css",
+      "status": 200,
+      "sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/assets/index-BgA9LRGh.js",
+      "status": 200,
+      "sha256": "5efa225daa53ddc28b2f1b8fcbb7f454302fef8ad67720f57653dc4105803418"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "status": 200,
+      "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/advisory_options.py",
+      "status": 200,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/",
+      "status": 200,
+      "sha256": "29cbf0e4756f02adbb0db140af004f99e1978e50716e66155b855f7a7d1146b6"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/assets/index-BgA9LRGh.js",
+      "status": 200,
+      "sha256": "5efa225daa53ddc28b2f1b8fcbb7f454302fef8ad67720f57653dc4105803418"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/assets/index-TucxfM67.css",
+      "status": 200,
+      "sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "status": 200,
+      "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/advisory_options.py",
+      "status": 200,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    }
+  ],
+  "native_asset_requests": [
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "group": "explicit same-value scenario Load retires previous native alternatives and approval",
+      "path": "/TowerOps/airspace/python/advisory_options.py",
+      "status": 200,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "group": "changed-version scenario Load also invalidates alternatives through the existing snapshot guard",
+      "path": "/TowerOps/airspace/python/advisory_options.py",
+      "status": 200,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    }
+  ],
+  "native_assets_received": true,
+  "errors": [],
+  "external_app_requests": [],
+  "proxy_blocks": [
+    {
+      "method": "GET",
+      "url": "http://clients2.google.com/time/1/current?cup2key=10:vsDy5928jtQXnNMWty10zNcSYZCCL3khFVW-I_Z2Jno&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.gstatic.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "update.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "android.clients.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "accounts.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "content-autofill.googleapis.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    },
+    {
+      "method": "CONNECT",
+      "url": "www.google.com:443"
+    }
+  ],
+  "downloads": [
+    {
+      "frameId": "828DCA10F05417AC5C4E7F8F4864970D",
+      "guid": "61e77cb3-0854-47aa-ba9f-51a5d7ff572d",
+      "url": "blob:http://127.0.0.1:64794/81cea389-c189-46d2-9714-02f6419716a3",
+      "suggestedFilename": "towerops-scenario-v1.json",
+      "receiving_label": "same-value scenario before native alternatives"
+    },
+    {
+      "frameId": "828DCA10F05417AC5C4E7F8F4864970D",
+      "guid": "e8d88341-4be1-4dbb-93da-073022bd4a58",
+      "url": "blob:http://127.0.0.1:64794/017c60ee-323a-4e1d-a37f-4f51d3c3e5ea",
+      "suggestedFilename": "towerops-scenario-v1.json",
+      "receiving_label": "same-value live world after explicit scenario Load"
+    },
+    {
+      "frameId": "E1AA4D0C1BB51428A5D4DC11F6CE780A",
+      "guid": "5821f30b-2656-457a-a99b-61fda378d6f8",
+      "url": "blob:http://127.0.0.1:64794/4a6512ef-cf14-42c6-89d6-818466fa64db",
+      "suggestedFilename": "towerops-scenario-v1.json",
+      "receiving_label": "changed-version control initial scenario"
+    },
+    {
+      "frameId": "E1AA4D0C1BB51428A5D4DC11F6CE780A",
+      "guid": "54817cb9-a78a-4671-894c-38b27a6e1655",
+      "url": "blob:http://127.0.0.1:64794/3db82c23-4674-4ae2-aa28-f68c426d9453",
+      "suggestedFilename": "towerops-scenario-v2.json",
+      "receiving_label": "changed-version scenario after explicit Load"
+    }
+  ],
+  "passed": 1,
+  "total": 2,
+  "product_overrides": false,
+  "native_result_fabrication": false
+}

@@ -1,0 +1,56 @@
+from pathlib import Path
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+import tempfile
+import time
+
+root = Path(tempfile.mkdtemp(prefix="towerops-root-advisory-cf5799f6d38b-"))
+source = Path("/tmp/towerops-scenario-draft-cf5799f6d38b-hzrph_6k/candidate")
+repo = root / "candidate-initial"
+old_base = "8d4933f33a0f5e0673fa9d00002e8b29302a1c53"
+old_tree = "efd5d1d99edc0595111e15836c18a9b178abb4c3"
+base = "093f88b29d6e1ede778f967528c7e010b7689ab1"
+products = [
+    "web/airspace/README.md", "web/airspace/index.html",
+    "web/airspace/style.css", "web/airspace/src/main.ts",
+    "web/airspace/src/scenario-file.ts", "web/airspace/src/scenario-ui.ts",
+    "web/airspace/tests/scenario-file.test.ts",
+]
+env = {**os.environ, "GIT_OPTIONAL_LOCKS": "0", "PYTHONDONTWRITEBYTECODE": "1"}
+records = []
+def run(name, args, cwd=None, check=True):
+    start = time.monotonic()
+    result = subprocess.run(args, cwd=cwd, env=env, capture_output=True, timeout=120)
+    (root / (name + ".stdout.log")).write_bytes(result.stdout)
+    (root / (name + ".stderr.log")).write_bytes(result.stderr)
+    row = {"name": name, "command": args, "cwd": str(cwd) if cwd else None,
+           "exit_code": result.returncode, "seconds": round(time.monotonic()-start, 3)}
+    records.append(row)
+    (root / "setup-receipt.json").write_text(json.dumps(records, indent=2) + "\n")
+    print(json.dumps(row), flush=True)
+    if check and result.returncode:
+        print(result.stderr.decode("utf8", "replace")[-5000:], flush=True)
+        raise SystemExit(result.returncode)
+    return result
+
+print(json.dumps({"root": str(root), "free_bytes": shutil.disk_usage(root).free}), flush=True)
+run("qualified-object", ["git", "cat-file", "-t", old_tree], source)
+patch = run("frozen-pr46-product-patch", ["git", "diff", "--binary", old_base, old_tree, "--", *products], source).stdout
+(root / "composition-pr46.patch").write_bytes(patch)
+run("clone", ["git", "clone", "--shared", "--no-checkout", str(source), str(repo)])
+if run("has-pr48-base", ["git", "cat-file", "-e", base], repo, False).returncode:
+    run("read-only-fetch", ["git", "fetch", "--no-tags", "https://github.com/Jacob-Met/TowerOps.git", base], repo)
+run("checkout", ["git", "checkout", "--detach", base], repo)
+before = run("base-full-tree", ["git", "ls-tree", "-r", "--full-tree", base], repo).stdout
+run("apply-frozen-product-patch", ["git", "apply", "--3way", "--index", str(root / "composition-pr46.patch")], repo, False)
+status = run("status", ["git", "status", "--short"], repo).stdout.decode()
+print(status, flush=True)
+info = {"root": str(root), "candidate": str(repo), "base_commit": base,
+        "source_checkpoint_tree": old_tree, "source_checkpoint_base": old_base,
+        "owned_product_paths": products, "patch_sha256": hashlib.sha256(patch).hexdigest(),
+        "base_full_tree_sha256": hashlib.sha256(before).hexdigest(), "status": status}
+(root / "setup-info.json").write_text(json.dumps(info, indent=2) + "\n")
+print(json.dumps(info), flush=True)

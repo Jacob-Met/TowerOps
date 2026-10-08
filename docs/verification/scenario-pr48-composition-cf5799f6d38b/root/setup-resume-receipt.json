@@ -1,0 +1,62 @@
+[
+  {
+    "name": "received-pr48-tree",
+    "command": [
+      "git",
+      "rev-parse",
+      "093f88b29d6e1ede778f967528c7e010b7689ab1^{tree}"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+    "exit_code": 0,
+    "seconds": 0.035
+  },
+  {
+    "name": "checkout",
+    "command": [
+      "git",
+      "checkout",
+      "--detach",
+      "093f88b29d6e1ede778f967528c7e010b7689ab1"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+    "exit_code": 0,
+    "seconds": 0.201
+  },
+  {
+    "name": "base-full-tree",
+    "command": [
+      "git",
+      "ls-tree",
+      "-r",
+      "--full-tree",
+      "093f88b29d6e1ede778f967528c7e010b7689ab1"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+    "exit_code": 0,
+    "seconds": 0.031
+  },
+  {
+    "name": "apply-frozen-product-patch",
+    "command": [
+      "git",
+      "apply",
+      "--3way",
+      "--index",
+      "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/composition-pr46.patch"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+    "exit_code": 1,
+    "seconds": 0.104
+  },
+  {
+    "name": "status",
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial",
+    "exit_code": 0,
+    "seconds": 0.08
+  }
+]

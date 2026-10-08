@@ -1,0 +1,666 @@
+{
+  "schema": "towerops-exact-byte-transcript-archive/v1",
+  "note": "Decode content as UTF-8 without newline conversion; verify bytes/SHA256/Git blob against each entry. Empty logs are retained.",
+  "files": [
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/apply-frozen-product-patch.stderr.log",
+      "native_relative_path": "apply-frozen-product-patch.stderr.log",
+      "bytes": 353,
+      "sha256": "f2c6794eb537762b9b489090e35b26dc97799fb0178b7482c3ff2a428ad8ae71",
+      "git_blob": "b83c82360088f3ada4ec6842c3b852e640e0f88a",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "Applied patch to 'web/airspace/README.md' cleanly.\nApplied patch to 'web/airspace/index.html' cleanly.\nApplied patch to 'web/airspace/src/main.ts' cleanly.\nFalling back to direct application...\nFalling back to direct application...\nApplied patch to 'web/airspace/style.css' with conflicts.\nFalling back to direct application...\nU web/airspace/style.css\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/apply-frozen-product-patch.stdout.log",
+      "native_relative_path": "apply-frozen-product-patch.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/base-full-tree.stderr.log",
+      "native_relative_path": "base-full-tree.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/base-full-tree.stdout.log",
+      "native_relative_path": "base-full-tree.stdout.log",
+      "bytes": 27266,
+      "sha256": "2af1f028bae9e9af8f0e1cc9c6ecb8642df1edea8cb7167596ddc7c226da5f24",
+      "git_blob": "f7b591e5002b10b878087e27ec14672e98c86607",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "100644 blob 5eb47c5ff20015db585ad3a59532fe440e1f11ad\t.github/dependabot.yml\n100644 blob 24356d4f5ce88f21cc1a27329b06df351e156810\t.github/workflows/airspace-demo.yml\n100644 blob 4791e16741c2ee136585d8f4d99f918535a3a017\t.github/workflows/ci.yml\n100644 blob a3dd31ab07eca887ec969f35996ff2f0a2d789db\t.gitignore\n100644 blob 63e584ab028b42d159078aca5c893c247dce0bd9\tARCHITECTURE.md\n100644 blob 177f7e55002eabfee7a7f54846d063bb3dc9371f\tEXPLORER.md\n100644 blob 8d091d5ee1cc4b8fc2d2f6e2f360a9f1edf6912a\tLICENSE\n100644 blob 31d4c6b1c2e5c84e0fc532be81278097ddd2b95f\tREADME.md\n100644 blob 2cb3bb564559fb2fa2b20d9a215b4cb99badecbd\tadvisory_options.py\n100644 blob 5bff69d01f00b0aca5ee680cba130fc3ce5dd540\taudit_replay.py\n100644 blob 638d032972880f4d688cdcb877df855f5977532c\tbrowser_acceptance.py\n100644 blob 227f4c4c2457aab7c15f8fbf36f1ad0143268f3d\tdecision_trace.py\n100644 blob c8d99a8b5b7152f048afc65e8d620e8370df07ed\tdemo.py\n100644 blob 316ce5ea4637ea2d3954d403c1776b87a21949c1\tdocs/RUNBOOK.md\n100644 blob a2bbe263823bed58d4845cda50e2117b2b48ed97\tdocs/qualification/audit-integer-times-20261008-68094585a1c2/README.md\n100644 blob 2e22f8700a43931ccb62d3cdccdda2a40e6271e1\tdocs/qualification/audit-integer-times-20261008-68094585a1c2/baseline-native-interop.txt\n100644 blob 0b30498a2c87bbda6d66dac5e8e892d1748696d6\tdocs/qualification/audit-integer-times-20261008-68094585a1c2/candidate-build.txt\n100644 blob 4bc7eb2e256a6513eb6a716acb681db770cebb69\tdocs/qualification/audit-integer-times-20261008-68094585a1c2/candidate-tests.txt\n100644 blob af71ca5eeb250a554aa96c786c6c3762923fea00\tdocs/qualification/audit-integer-times-20261008-68094585a1c2/source-manifest.json\n100644 blob 61ce55e1be687b5ad62474e045261e5184280185\tdocs/qualification/decision-trace-68094585a1c2/README.md\n100644 blob 20e599b06128789501f8048afe1746f3cd042b22\tdocs/qualification/decision-trace-68094585a1c2/evidence.tar.gz\n100644 blob e2255111b6678d6170361f04a6729f21f900e555\tdocs/qualification/decision-trace-68094585a1c2/receipt.json\n100644 blob d96474054f86a8d4adefb7bfba3810e423dc293a\tdocs/qualification/numeric-admission-8304-20261008/README.md\n100644 blob 58196b751dc3c011bbf483f8907e2c01f1c407e7\tdocs/qualification/numeric-admission-8304-20261008/base-browser.json\n100644 blob f8389444df814679e33cae73352afdad924546f7\tdocs/qualification/numeric-admission-8304-20261008/browser-receiver.mjs\n100644 blob a359cade9e563aead5a4a029f0090f1edf9bf7a8\tdocs/qualification/numeric-admission-8304-20261008/candidate-browser.json\n100644 blob 67bdafe554a5299543966fc0dae8acc1e5cf42bc\tdocs/qualification/numeric-admission-8304-20261008/combined-browser.json\n100644 blob 718d671660d27e20998fe0104c685bf75c667c5a\tdocs/qualification/numeric-admission-8304-20261008/combined-build-manifest.json\n100644 blob b215e6bb02d31ac0aa9859dbc2d1ae68a5ea52cc\tdocs/qualification/numeric-admission-8304-20261008/combined-build.log\n100644 blob 9a132b56ece46470f51d7c4cf6ac746751055a39\tdocs/qualification/numeric-admission-8304-20261008/combined-receiving.md\n100644 blob 4ae39a59f4f67e3fc5bef9180ef8a56c6e763445\tdocs/qualification/numeric-admission-8304-20261008/combined-source-pins.json\n100644 blob e28f06075400cdf731db462b76f8f6291826f568\tdocs/qualification/numeric-admission-8304-20261008/combined-verification.json\n100644 blob 60f97694d244c0cf1129090f68dc5e28942ddbd8\tdocs/qualification/numeric-admission-8304-20261008/differential-cases.json\n100644 blob a1bfdfc3583aa74aa64a14239a903490072428af\tdocs/qualification/numeric-admission-8304-20261008/differential-python-results.json\n100644 blob dc130262006ae60fafd728489d16672f95ab93bb\tdocs/qualification/numeric-admission-8304-20261008/differential-review.md\n100644 blob a3f5432ee6cdd3a235a8a4c3132a1660f6dbbf72\tdocs/qualification/numeric-admission-8304-20261008/differential-typescript-results.json\n100644 blob be28669f6d68450b059668ab696b7001da899425\tdocs/qualification/numeric-admission-8304-20261008/final-composition.json\n100644 blob 5587d314f1b04efb9ca12823074f505cd72a5d95\tdocs/qualification/numeric-admission-8304-20261008/native-verification.json\n100644 blob e0d40be3819ae66bdb4e5e93f079718234b872cb\tdocs/qualification/numeric-admission-8304-20261008/qualified-build-manifest.json\n100644 blob bcf57ba0c233d12cdb768dd09d23570d642fecc6\tdocs/qualification/numeric-admission-8304-20261008/typescript-baseline.json\n100644 blob ccf783d4f7fb3d42e7d5a5ef75c8610b14f49bf2\tdocs/qualification/numeric-admission-8304-20261008/typescript-candidate.json\n100644 blob 23f8f289cd7b1e66fbd3992336baae35a47a4330\tdocs/qualification/numeric-admission-8304-20261008/verification.json\n100644 blob 0962906c4012255b05ddb9aab127cdf1180ee892\tdocs/qualification/numeric-admission-8304-20261008/worker-cases.json\n100644 blob cc6466dc9621248cf7933ff483f78ed0df968503\tdocs/qualification/numeric-canonical-parity-68094585a1c2/README.md\n100644 blob bd06096d4ce534112041d2ad026fcca208f43643\tdocs/qualification/numeric-canonical-parity-68094585a1c2/evidence.tar.gz\n100644 blob 1eff3daa0ef949e4203c0b6af8d39baaf9b2ec9e\tdocs/qualification/numeric-canonical-parity-68094585a1c2/receipt.json\n100644 blob 0cbc8fa9ede7e23b952ddb482731b0616496f957\tdocs/qualification/python-audit-wire-31366547c1f5/README.md\n100644 blob 7677cdef1e1661c5a7bf5b2a28e08966bca98f8c\tdocs/qualification/towerops-audit-interop-receiving-68094585a1c2/README.md\n100644 blob 143e7a87cd2197ee606b43888d81a7b517ff8c76\tdocs/qualification/towerops-audit-interop-receiving-68094585a1c2/evidence.tar.gz\n100644 blob 15e6a780031ff83ea7754394c1d7733827af448a\tdocs/qualification/towerops-audit-interop-receiving-68094585a1c2/receipt.json\n100644 blob d07d890fc38b8680d52c41dd96a4c217b82880ea\tdocs/receipts/advisory-numeric-candidate-8304-20261008.md\n100644 blob f37e9afeee209c08e21fa5c83f5d00a605fc0723\tdocs/receipts/selected-flight-edit-20261008.json\n100644 blob 8d326da2e3d0941e6ba85423e174f17f554fde4e\tdocs/receiving/advisory-options-86776bb3cdb8/README.md\n100644 blob 6ce0c29df599f61cbb4e792f89c960dc7e4aabcc\tdocs/receiving/advisory-options-86776bb3cdb8/artifact-paths.json\n100644 blob a6edbf0e4db75cb8de2564e202b6e3e326559459\tdocs/receiving/advisory-options-86776bb3cdb8/author/baseline-browser.json\n100644 blob ccb3112b9e0dbffe23e9c988b72fa56cfba768b2\tdocs/receiving/advisory-options-86776bb3cdb8/author/baseline-browser.py.txt\n100644 blob f595cbc5119a53a6cef8a715903fe71b11b8afa7\tdocs/receiving/advisory-options-86776bb3cdb8/author/baseline-desktop.png\n100644 blob 2a62413f2c8773cc71f263f34e85be309de9088c\tdocs/receiving/advisory-options-86776bb3cdb8/author/browser-options-tests.log\n100644 blob f42dffc4c289b0eeb00e57ab82cf471ab99be300\tdocs/receiving/advisory-options-86776bb3cdb8/author/browser/browser-receipt.json\n100644 blob 9dd1a3f12057e6de9b63803c7631c7d0bd221793\tdocs/receiving/advisory-options-86776bb3cdb8/author/browser/desktop-alternatives.png\n100644 blob ce4ba704261f7dcb55cfd52140b1f8a4b8153082\tdocs/receiving/advisory-options-86776bb3cdb8/author/browser/mobile-alternatives.png\n100644 blob 1386df1ba295c967e1b60a6739276c28700913da\tdocs/receiving/advisory-options-86776bb3cdb8/author/current-main-build.log\n100644 blob 4d385edeb03abd39d04ce327f29e3cfccb91cb35\tdocs/receiving/advisory-options-86776bb3cdb8/author/current-main-composition.json\n100644 blob 353014e1d4c61601ea70b6e2ce416666da01e957\tdocs/receiving/advisory-options-86776bb3cdb8/author/current-main-mobile.json\n100644 blob da156adf6b124b44664e7a2b4bf4519b4c26ee37\tdocs/receiving/advisory-options-86776bb3cdb8/author/current-main-mobile.png\n100644 blob 01d5a8228ba2074dadd3c87b1637ba63087dfdd0\tdocs/receiving/advisory-options-86776bb3cdb8/author/current-main-pytest.log\n100644 blob 1f5f344d054fae10f39140fb7199c99321d9190a\tdocs/receiving/advisory-options-86776bb3cdb8/author/current-main-ruff-fixed.log\n100644 blob 9127119644050c201283a9fdb7b91da481c68e15\tdocs/receiving/advisory-options-86776bb3cdb8/author/current-main-ruff.log\n100644 blob e174cbe2548180e4b22954defca9ba99f08ce9f0\tdocs/receiving/advisory-options-86776bb3cdb8/author/current-main-vitest.log\n100644 blob 7b3de23a53e20a65e4d51977f7499a17f757c142\tdocs/receiving/advisory-options-86776bb3cdb8/author/native-option-opportunity.json\n100644 blob 55ae6946719871302cef2f113350a81ebe4034a8\tdocs/receiving/advisory-options-86776bb3cdb8/author/native-options-tests.log\n100644 blob 77b5314fdbb969296fca5cb55c078bd8930f7e8f\tdocs/receiving/advisory-options-86776bb3cdb8/author/source-and-build.json\n100644 blob 90de0125814f798d8434ff8cea093534a60988d7\tdocs/receiving/advisory-options-86776bb3cdb8/author/typescript-options-tests.log\n100644 blob 8a017fe0c5f071775abbdac9989db343624ddc94\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/README.md\n100644 blob 3ec3798cb8bfa65927929bf1b742dd996dcaa133\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/build-enospc.log\n100644 blob 5c6071740ecdf2feacf651322a7a347cb014940b\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/build.log\n100644 blob a39496ec809f8439564a74cd9ff53ba559664899\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/composition.json\n100644 blob fefc456f99d6e75ffdbf97754f88307797b71b5f\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/file-hashes.json\n100644 blob 15398399988a8a1a4609ac86f6109b5029ecc777\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/browser.log\n100644 blob 24c2e83bc014e904d9480cd9fdde9d7a646f5968\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/receipt.json\n100644 blob 7713d6700ee128a63f1a13f3f13b2ec38b48f654\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/receive-combined.py.txt\n100644 blob 25f64470a1db0b29f4c2468bc4f7ab1350b007ec\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/selected-option-native-trace.json\n100644 blob d73f998cb123dbcb5a1b17e12d03eac0b2b64bad\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/independent/worker-transcript.json\n100644 blob b37863e3449f9c2f7e7d2a00b1bb09d7776656ef\tdocs/receiving/advisory-options-86776bb3cdb8/current-main-composition/source-and-build.json\n100644 blob dfc857174e72eaa24b81bc6e1c1d16e59301aa02\tdocs/receiving/advisory-options-86776bb3cdb8/file-hashes.json\n100644 blob f6fa23915d8fe89c0f1f06c545dad670fff9708b\tdocs/receiving/advisory-options-86776bb3cdb8/independent/REVIEW.md\n100644 blob 7e2faf6742c6e81606ea2e5b97f36e650179ae84\tdocs/receiving/advisory-options-86776bb3cdb8/independent/acceptance.json\n100644 blob 31b0d4386b9c168feec96c5a1687d125bee9255c\tdocs/receiving/advisory-options-86776bb3cdb8/independent/authored-world.json\n100644 blob 3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1\tdocs/receiving/advisory-options-86776bb3cdb8/independent/base/towerops.py.txt\n100644 blob 61205b5b08fba396a4fec023f4bda5d569368729\tdocs/receiving/advisory-options-86776bb3cdb8/independent/baseline-native-options.json\n100644 blob 33fa6dfc6e63888ad86238dcd4fc3c851ad4c12b\tdocs/receiving/advisory-options-86776bb3cdb8/independent/baseline-native-options.log\n100644 blob f34ccfd079a1833e51691a90de6287dd0dc3726c\tdocs/receiving/advisory-options-86776bb3cdb8/independent/browser-byte-harness-failure.json\n100644 blob e4df2b3946d04f911ab13b8a4f5d6914085786fd\tdocs/receiving/advisory-options-86776bb3cdb8/independent/browser-byte-harness.log\n100644 blob 85597c62374021cfb0999b99930d0c7104419f44\tdocs/receiving/advisory-options-86776bb3cdb8/independent/browser-initial-harness-failure.json\n100644 blob 72bde7ecac8f49741f828e760d03529976bf7432\tdocs/receiving/advisory-options-86776bb3cdb8/independent/browser-initial-harness.log\n100644 blob 968ecc2183f75f96722c2e835f9c71db15b08675\tdocs/receiving/advisory-options-86776bb3cdb8/independent/browser-receipt.json\n100644 blob 970cd070ba9f0ad78b82f7ac6749cf6911f826b4\tdocs/receiving/advisory-options-86776bb3cdb8/independent/browser.log\n100644 blob 22e127561e4533de894d4a175f7220c6627b35a7\tdocs/receiving/advisory-options-86776bb3cdb8/independent/byte-recorder-diagnostic.json\n100644 blob 567c8338b2a0df3d7fa36e09d5171da371f44561\tdocs/receiving/advisory-options-86776bb3cdb8/independent/current-main-tree.json\n100644 blob 907cc0b6ee427c754746a9844c4e0cb97b9c7dc2\tdocs/receiving/advisory-options-86776bb3cdb8/independent/establish-native-options.py.txt\n100644 blob dbcb41d8c8185f5293ecb1d4b60978d5a7f5b3c1\tdocs/receiving/advisory-options-86776bb3cdb8/independent/file-hashes.json\n100644 blob 1b2c72b0ec1f09fb441253757646208015558019\tdocs/receiving/advisory-options-86776bb3cdb8/independent/receive-browser.byte-harness.py.txt\n100644 blob d1f00194bd98eb18f4114369e5dd87c0a70f948a\tdocs/receiving/advisory-options-86776bb3cdb8/independent/receive-browser.initial.py.txt\n100644 blob 297389d0d71fc51b778b22e856b6d8be2a99652f\tdocs/receiving/advisory-options-86776bb3cdb8/independent/receive-browser.py.txt\n100644 blob a978a0b1ce4ad36d760f51a945dd731ce635accf\tdocs/receiving/advisory-options-86776bb3cdb8/independent/selected-option.png\n100644 blob 63ae4d5602d4abbe16889451a008f043d5aaae55\tdocs/receiving/advisory-options-86776bb3cdb8/independent/source-readback.json\n100644 blob 043a9577ef486d2750af614703779544a328b935\tdocs/receiving/advisory-options-86776bb3cdb8/independent/source-readback.log\n100644 blob d58495b557535e0f61f6d62a5337cf2c97c69469\tdocs/receiving/advisory-options-86776bb3cdb8/independent/source-readback.py.txt\n100644 blob 20fd84004df3c70ed1fcedc25e9bdfe177c4e29a\tdocs/receiving/advisory-options-86776bb3cdb8/independent/worker-transcript.json\n100644 blob 944f1146f5947499e97392736ab4327c417305fa\tdocs/verification/reset-owner-receiving-7a9310dad255/README.md\n100644 blob fb9d475af556fb81f8336a4da21914d8f1b6e4bd\tdocs/verification/reset-owner-receiving-7a9310dad255/receiving-evidence.tar.gz\n100644 blob b11672f307e01ee7994564734a317afb603add68\tdocs/verification/reset-owner-receiving-7a9310dad255/source-and-receiving-acceptance.json\n100644 blob 6556bbb815ed9668adf60d0c70321ae471d894b6\tdocs/verification/selected-flight-edit/README.md\n100644 blob 1f3efca81267b96e01af2670c7f83120c0f0ed13\tdocs/verification/selected-flight-edit/REVIEW.md\n100644 blob e5fd9a9618e6556a561a17070117c4b43a0cbb5a\tdocs/verification/selected-flight-edit/browser-receipt.json\n100644 blob 87e7f98c90f19be30a7e54e25d49010e45d1a3c6\tdocs/verification/selected-flight-edit/browser-receiving.mjs\n100644 blob 00c35e828b922e2aa55e8180f715f55e44581a8d\tdocs/verification/selected-flight-edit/browser.log\n100644 blob b4bb8bc1f37e3163dc8c333484c141c3612831fa\tdocs/verification/selected-flight-edit/desktop-preview.png\n100644 blob 5811422b0b5bc31573973cd9df4f0dfcc9ec055a\tdocs/verification/selected-flight-edit/history/machine-specific-v2/browser-receipt.json\n100644 blob ce6b59363b92bfd383aa4d2221bb0f912ed6103b\tdocs/verification/selected-flight-edit/history/machine-specific-v2/browser-receiving.mjs\n100644 blob 8f2ff5935d5f33d1606fb825f1bfdce14b2f63b8\tdocs/verification/selected-flight-edit/history/machine-specific-v2/browser.log\n100644 blob c19bd1289635e686284bc7b9f87fea8d1c7c5b22\tdocs/verification/selected-flight-edit/manifest.json\n100644 blob 17857b16a7c31de4534b0c564004f1eac4712d74\tdocs/verification/selected-flight-edit/mobile-preview.png\n100644 blob 920318fab0c177d03b80d792206c214625684106\tdocs/verification/selected-flight-edit/native-build.log\n100644 blob 3ec05b9df83214c85a4337a3e0eb03286a10ae2a\tdocs/verification/selected-flight-edit/native-vitest.log\n100644 blob 4b7136f6582a43a4d27a6f3af6810d46ed6ec268\tdocs/verification/selected-flight-edit/receiving-candidate.json\n100644 blob f78b98d3e418e9a550b4afbb007999992682fb44\tdocs/verification/selected-flight-edit/transport-attempts.tar.gz\n100644 blob 6e0832d94412981efa7ffac82eb70edc49053005\tdocs/verification/world-draft-owner-receiving-7a9310dad255/README.md\n100644 blob 26edc7a1e2e62fda3a48e569fc5940e398be1b89\tdocs/verification/world-draft-owner-receiving-7a9310dad255/baseline-current9d70.json\n100644 blob 0974c7dd1065b360e554b193a646ccc7e8ba2160\tdocs/verification/world-draft-owner-receiving-7a9310dad255/historical-archive-verification.json\n100644 blob 16168820a89a3a224d4b98c304c3adb9079efc00\tdocs/verification/world-draft-owner-receiving-7a9310dad255/historical-superseded-proposal.tar.gz\n100644 blob 0649298e990a118b23ac62939fd3e7c60acd8849\tdocs/verification/world-draft-owner-receiving-7a9310dad255/manifest.json\n100644 blob 799ecefc29bb7bf5c125113fbf3553ffb29b5f32\tdocs/verification/world-draft-owner-receiving-7a9310dad255/owner-composition.diff\n100644 blob 643ce7b24e5a387d3a29e99396e980b38cd02ab7\tdocs/verification/world-draft-owner-receiving-7a9310dad255/owner-current9d70.json\n100644 blob 52a4bc16110a72874fc5f5c20280f04fb9f9f68e\tdocs/verification/world-draft-owner-receiving-7a9310dad255/ownership-readback.json\n100644 blob bbd61d84b7fbf4a36159d2f8d0d3b7bfe0ce9efc\tdocs/verification/world-draft-owner-receiving-7a9310dad255/receiving-archive-verification.json\n100644 blob 4ad6e655c19e098755538811c35974329923865d\tdocs/verification/world-draft-owner-receiving-7a9310dad255/receiving-current9d70.tar.gz\n100644 blob b825eb3cfb84d526f1ef16cf856b9982a1d092e2\tdocs/verification/world-draft-owner-receiving-7a9310dad255/receiving-export-manifest.json\n100644 blob 240c8681cb0d50461631c2ea1a459d4de29b351f\tdocs/verification/world-draft-owner-receiving-7a9310dad255/source-acceptance.json\n100644 blob e6fb05f02ae610c87954673c573b8ffcefe9aabe\tdocs/verification/world-json-draft-bd1abdb2f886/README.md\n100644 blob 453b312352ad2693225e2d6a245ddb8910c395d1\tdocs/verification/world-json-draft-bd1abdb2f886/baseline-browser-report.json\n100644 blob 926fac8b3f795081423e02f062df20923ff84951\tdocs/verification/world-json-draft-bd1abdb2f886/baseline-browser.log\n100644 blob 604a0318b800ffed9bbc9fcf4f67e446f1bb3c5d\tdocs/verification/world-json-draft-bd1abdb2f886/candidate-browser-report.json\n100644 blob e053114922035ea8d9ca4d35c18c66e1933f9479\tdocs/verification/world-json-draft-bd1abdb2f886/candidate-browser.log\n100644 blob 72bf28eaf618bf1a8eb3b5b7998ffe5575680709\tdocs/verification/world-json-draft-bd1abdb2f886/current-composition.json\n100644 blob 35f7be7c5ec8fb6cac4bafac6529d695ae697493\tdocs/verification/world-json-draft-bd1abdb2f886/final-browser-qualification.json\n100644 blob b69283b5a84e666d9f9edc2a98d7d9fbad738df9\tdocs/verification/world-json-draft-bd1abdb2f886/history/candidate-before-cleanup-report.json\n100644 blob f02aa1fdd56e4561924d4d528ec348f44ed3f0c4\tdocs/verification/world-json-draft-bd1abdb2f886/history/candidate-before-cleanup.log\n100644 blob 6a7848a6cd3ded7308bfb0934e18a094324b362c\tdocs/verification/world-json-draft-bd1abdb2f886/manifest.json\n100644 blob 4274e3271037cc817d405e31e65a80ed8f9bda7f\tdocs/verification/world-json-draft-bd1abdb2f886/native-gates.json\n100644 blob 61b3d429820ac53672deb922a52123e53cfed0b3\tdocs/verification/world-json-draft-bd1abdb2f886/native-test-transcript.txt\n100644 blob e485de446cc38d7263399def151db0dd97d0d956\tdocs/verification/world-json-draft-bd1abdb2f886/trace-current/README.md\n100644 blob a1fcd9af607285870d41444c8c8907147fef9410\tdocs/verification/world-json-draft-bd1abdb2f886/trace-current/browser-report.json\n100644 blob 749d5d08120f820dca84bb72ac5ffe0c0546f209\tdocs/verification/world-json-draft-bd1abdb2f886/trace-current/browser.log\n100644 blob 31df95167fd9bb3dcb207e0f8276d7b9c1fa5301\tdocs/verification/world-json-draft-bd1abdb2f886/trace-current/manifest.json\n100644 blob 9e46d02f6a9da890ead8d3feebb73a07ea3b1cfc\tdocs/verification/world-json-draft-bd1abdb2f886/trace-current/native-driver.log\n100644 blob dfbef7d939aa6bf0de0dc1762c61ec7e35cba8ea\tdocs/verification/world-json-draft-bd1abdb2f886/trace-current/native-gates.json\n100644 blob 8254f663359c2439fb38ef3624f36c82f56880e8\tdocs/verification/world-json-draft-bd1abdb2f886/trace-current/native-test-transcript.txt\n100644 blob f26beabf0818c0d78889e38d04dfb4ae83fdc329\tdocs/verification/world-json-draft-bd1abdb2f886/trace-current/source-composition.json\n100755 blob d19e5bf1bd2991b076d7166fc2280b7f1d312d9a\texplorer.py\n100644 blob 652f019730dcd4d9a606109030c6207ebef50905\tpresentation/README.md\n100644 blob 53fdb575c830ea1cc82d7b4a66cd976ecbd9b261\tpresentation/architecture.svg\n100644 blob 0192d29f91e27c68e27f595cf80fb31073bd365b\tpresentation/assets/architecture.png\n100644 blob f9de1f02ec4fec964d0879ce1b2618ddff390e7a\tpresentation/assets/ui-desktop-approved.png\n100644 blob 6a5bff9841b3edefd4308add0b966cf5c95027cc\tpresentation/assets/ui-desktop-late_ack.png\n100644 blob eec0da231d4448dc63b511a8eb0af17f9ce98140\tpresentation/assets/ui-desktop-missing_ack.png\n100644 blob c60fca867cf106efbfd9993ea4d6c932f6b44bb4\tpresentation/assets/ui-mobile-approved.png\n100644 blob c464c058a682fece042893b6ef9b1d6d665cc78f\tpresentation/assets/ui-mobile-late_ack.png\n100644 blob c8a0b5afa620bf171067f0f8505f7b430e9d5452\tpresentation/assets/ui-mobile-missing_ack.png\n100644 blob c4698f2812d2d1cd77514830c7b17f5a6a34e32a\tpresentation/build_assets.py\n100644 blob d27a7c7695f59de5afdae5594dc01f441157b3a1\tpresentation/build_pack.py\n100644 blob 2b54d2107e291fb6ce073a4d192f2d4a1e64f943\tpresentation/captions.srt\n100644 blob 14c7a8d55bbf1573c7f0675d493957a376ad2e22\tpresentation/check_claims.py\n100644 blob fc875ed327f174f345d67b21f9fd29b3c8cf4373\tpresentation/claims-map.md\n100644 blob f118ba18236bb76f6dcb0ab9e8fb05ce0686a100\tpresentation/demo-script.md\n100644 blob 301d59785920c0a06013cfca99fa9cb082066757\tpresentation/devpost-description.md\n100644 blob 9116d57a17a15f3f9e9fae4125134d3e993b8f8c\tpresentation/shot-list.md\n100644 blob d775089b685609b7bdbb05c8ccff6226f9761ebd\trequirements.txt\n100644 blob 33b5703d2ce0d4177c50f05536e3f2715c8bea3b\tscenarios.py\n100644 blob 01bc26d2d3d34dcac6787ab7b57a15c2f5837cb8\tstrands_adapter.py\n100644 blob 51f7de9067a733d11649684d799417d66c84c36d\ttest_explorer.py\n100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391\ttests/__init__.py\n100644 blob b9e42910cce31f47992b2d9f88786d1120033545\ttests/conftest.py\n100644 blob f10dfdd31816ea27f10d2bc6268b1d82a6aa7ed1\ttests/test_advisory_numeric_candidate.py\n100644 blob 18f90aa8d7f2d6b3933a339d028cbede50261f4c\ttests/test_advisory_options.py\n100644 blob f9d7cec517e978a45aac15b7e6f3d70a10a7ac42\ttests/test_audit_chain.py\n100644 blob 7dec0d4ae0b54283a6c64ac7f92a9c9e2d65e0dd\ttests/test_audit_replay.py\n100644 blob 55e6cd3cceeb93cb3dc41d73c6c46fdfad6a39dc\ttests/test_decision_trace.py\n100644 blob 72ba4f4dec9114a992e36a9f55494d2054085055\ttests/test_determinism.py\n100644 blob dfaf0a4692064a2f26a1479ef8215bb25012843f\ttests/test_failclosed.py\n100644 blob 4cd1ce635d3a128949bd08312094999c8c839bdf\ttests/test_nonfinite_failclosed.py\n100644 blob 4e6fcdb19ac438b36c3b2b5150989a96db45daef\ttests/test_planner.py\n100644 blob 3c8aca58614e23be196edce07b6a3fbd7ed1e285\ttests/test_planner_target.py\n100644 blob 2303369196e06965c2dc943430d8484af8a89357\ttests/test_state_validation.py\n100644 blob 4c0f078d45eb99151fcd28c6688c039480542df9\ttools/capture_airspace.py\n100644 blob 9746bd30b3ca2fb2b0a56db45a461c0f2884afaa\ttools/check_advisory_options_browser.py\n100644 blob 8be5631d8a36630933c0d782a33cf9d162c78ce7\ttools/generate_airspace_reference.py\n100644 blob 9072976649f1d7e78689cd38487d6e5222feb28d\ttools/verify_browser_python.py\n100644 blob 7fdbdebaadfa141b948a1029a9c6d4ea9dc286ef\ttools/verify_decision_trace.mjs\n100644 blob bfef37643d4d7bfe84ba84eaaa21a6f5f425dc96\ttools/verify_encounter_browser.py\n100644 blob 3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1\ttowerops.py\n100644 blob 9bbb2245b44a9b8ecbefe94d9e24a478c3fffb63\tweb/airspace/.gitignore\n100644 blob cab1cc56aa1525904e0b6171b685ee13fc28c91e\tweb/airspace/.npmrc\n100644 blob 02f93b18f0d6a243020ae1d2b1f85990376f7fe8\tweb/airspace/README.md\n100644 blob fb2b2c2b9f0b1f1ea31c14191af328ef09d9e1ec\tweb/airspace/index.html\n100644 blob 9d81d64088a09bf36ce116b67bf48eefc4fe7c27\tweb/airspace/package-lock.json\n100644 blob 836291c282e63943575c82dfaeaf653d278b48a1\tweb/airspace/package.json\n100644 blob 5f816785223c30353f84d8c180e789d021b39a7b\tweb/airspace/prepare-python.mjs\n100644 blob bd6e0d9fc6c7f07b52dd276b9df97bc0d9c34b02\tweb/airspace/public/captures/airspace-desktop.png\n100644 blob 012be9dac2dfd5560162755c9b462213bf241ae9\tweb/airspace/public/captures/airspace-mobile.png\n100644 blob 498832ec27a0a0515bccc5650b70e94bc952f99d\tweb/airspace/public/favicon.svg\n100644 blob 33e2c27481069712484bec409f5cbf2f23d8922f\tweb/airspace/src/actuation.ts\n100644 blob 18d9a51c359007a39ed76352ce245f8a70c1f6c7\tweb/airspace/src/advisory-options.ts\n100644 blob 5e31db5369be3294a0404667614520f58ab6dfe9\tweb/airspace/src/advisory-review.ts\n100644 blob abb707db69d866ff762f8bc2c40fde81fc3b7d3b\tweb/airspace/src/audit.ts\n100644 blob d2f51e37a8b8b6655831abe75b262092b6c0ade7\tweb/airspace/src/core.ts\n100644 blob b1c82719ccc80cec69667003b7d007a0e6dfec52\tweb/airspace/src/decision-trace.css\n100644 blob 83fa2809dc0e375b8f8982387fdb8845bea721c3\tweb/airspace/src/decision-trace.ts\n100644 blob 1cbdddb0ee7e4bab181992e5b6b20baea725b433\tweb/airspace/src/draw.ts\n100644 blob d31fa0ec6bb6c620e7f36f37db06d6f3726e336b\tweb/airspace/src/encounter-view.ts\n100644 blob 3620b0d81d745d8e5b467e5d3823bf5c0de31b21\tweb/airspace/src/encounter.ts\n100644 blob cd17b5191110ea47ee7771745b877fb8b65597a9\tweb/airspace/src/gate.ts\n100644 blob e29d9ea54665e0c93e2baa66e45fa08e12b52203\tweb/airspace/src/main.ts\n100644 blob bbe70e521c80e60123eb3ecc93e687e6bc576276\tweb/airspace/src/maneuvers.ts\n100644 blob 82082fa50cbec1a0d30d377bb4cd3e1a67416d5e\tweb/airspace/src/planner.ts\n100644 blob b1c4218b2abd5d444687d0b728bce70509df8b01\tweb/airspace/src/python-worker.ts\n100644 blob ef32ef39aa6c3bf7196c05fe10840f3c297156ce\tweb/airspace/src/python.ts\n100644 blob ff3668979df28a70f848078356a096dd876cf692\tweb/airspace/src/track-edit.ts\n100644 blob 8e308d78c19389a6881aace8d22412e93557f066\tweb/airspace/src/world-tools.ts\n100644 blob 90dd61e262edd381a7ac9449e3643cc3dac65083\tweb/airspace/style.css\n100644 blob 7da0bf284bd167429cab0a3cff27bfad49c87a18\tweb/airspace/tests/advisory-numeric.test.ts\n100644 blob dc34af345e5be25302669d3641d63199c99cefcd\tweb/airspace/tests/advisory-options.test.ts\n100644 blob 1c6bca592af1f5d0613c37b241dec485bbfa2643\tweb/airspace/tests/algorithm.test.ts\n100644 blob 47c1bbabe27c7e1773e092f59173a7c604952001\tweb/airspace/tests/audit-wire.test.ts\n100644 blob 8817db66c6ee3032a8c7f917fed031177c52db76\tweb/airspace/tests/decision-trace.test.mjs\n100644 blob 8fb7bf845b7796a3ac2c90f850f80006b8f9ea75\tweb/airspace/tests/encounter.test.ts\n100644 blob 47cf573b71eb42e1a77da59ec5a6ed168d1acda2\tweb/airspace/tests/python-audit-interop.test.mjs\n100644 blob 28febf3c725e2761895f55628fd5483e32b48da9\tweb/airspace/tests/python-audit-wire.json\n100644 blob 7466b9213ecefe5ba3352ca9d0935fa9637532cf\tweb/airspace/tests/python-float-parity.test.mjs\n100644 blob 65b017ab362097b161ec1f7c103b55a3c42941f1\tweb/airspace/tests/python-reference.json\n100644 blob 3c0812f94ff7d2dd9ff6a32f573ac28102ff10fe\tweb/airspace/tests/track-edit.test.ts\n100644 blob aa01b6711f7aeb7358cc4bba21477d840f449d45\tweb/airspace/tests/world-json-draft.browser.mjs\n100644 blob 08a2cd5bda3f11e6c375d6f4f7660e8d4c4d33e5\tweb/airspace/tests/world-tools.test.ts\n100644 blob da1989ed943ad339db9c78e57ce2fe0268523c48\tweb/airspace/tsconfig.json\n100644 blob 9a35e51e99a33873dafcca04f18bf2ca8df589f5\tweb/airspace/vite.config.ts\n100644 blob 8e1722a24196b81bad4f1c5837128d7113a96585\tweb/app.js\n100644 blob 6bc1ac6ba66826037b292832feef79b3f96c349b\tweb/index.html\n100644 blob 3770b65750778fecfa1ab2adc5f3ba48bafe10fb\tweb/style.css\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/checkout.stderr.log",
+      "native_relative_path": "checkout.stderr.log",
+      "bytes": 175,
+      "sha256": "9904a9771915c4b235af32075200114864ca25e1169ab99e3d979cc10ab3676e",
+      "git_blob": "77adcd86bf86cbaa244c8ce619f2594f15b977b7",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "Previous HEAD position was 8d4933f Merge pull request #46: preserve WorldState JSON drafts\nHEAD is now at 093f88b Merge PR #48: review and select native advisory alternatives\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/checkout.stdout.log",
+      "native_relative_path": "checkout.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/clone.stderr.log",
+      "native_relative_path": "clone.stderr.log",
+      "bytes": 92,
+      "sha256": "901c861e9baecba0db0b45ca4154383f8d6f59d52144f104c145416a15fb72d0",
+      "git_blob": "04d53492719726b5e6ef92e34e4da31cc9002614",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "Cloning into '/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial'...\ndone.\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/clone.stdout.log",
+      "native_relative_path": "clone.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/frozen-pr46-product-patch.stderr.log",
+      "native_relative_path": "frozen-pr46-product-patch.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/frozen-pr46-product-patch.stdout.log",
+      "native_relative_path": "frozen-pr46-product-patch.stdout.log",
+      "bytes": 43560,
+      "sha256": "59a9e0b9ad2a604b01112fb91242a667e3c08020f9984110d585a4d3504433e0",
+      "git_blob": "aeb19d39039c4fc060a1198197868a2a7ef95482",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "diff --git a/web/airspace/README.md b/web/airspace/README.md\nindex 13a6881..6870084 100644\n--- a/web/airspace/README.md\n+++ b/web/airspace/README.md\n@@ -105,3 +105,39 @@ After installing the existing web dependencies, run the focused real-browser che\n ```sh\n node web/airspace/tests/world-json-draft.browser.mjs --root . --browser /path/to/chromium --output /tmp/towerops-world-json-receiving\n ```\n+\n+## Save and reopen a scenario\n+\n+Open **Save or load a scenario** while traffic is paused and no planner or flight edit is active. **Save scenario file** downloads the current aircraft, complete separation policy, simulation clock, time scale and selected flight as one local JSON file.\n+\n+Use **Choose scenario file** to read a saved file. Review its aircraft count, clock, selected flight and all seven policy values, then choose **Load reviewed scenario**. Reading and reviewing do not change the simulation. **Cancel import**, malformed files and failed reads preserve the current world, proposal, approval and decision trace. If those values change during a read or review, choose the file again before loading.\n+\n+Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Run the existing planner, approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history.\n+\n+The existing **Inspect or load a WorldState** workbench continues to accept its original raw world shape. That shape contains only aircraft state and does not carry a policy. Use a scenario file when the separation envelope and clock must travel with the traffic.\n+\n+An authored raw WorldState JSON draft stays separate from the live simulation during scenario saving, file review, cancellation and loading. Loading a scenario keeps that unfinished text and labels it as a retained draft. Use **Export live world** to replace it with the restored scenario's aircraft; **Save scenario file** always downloads the actual live world and settings. A successful raw **Load into simulation** changes the live world and cancels any pending scenario review. A rejected raw load keeps both the draft and the scenario review available.\n+\n+### Scenario format v1\n+\n+The top-level fields are `format: \"towerops.airspace-scenario\"`, `version: 1`, `world`, `policy`, `now`, `time_scale` and `selected_aircraft_id`. Unknown or missing fields are rejected, including nested world, aircraft and policy fields.\n+\n+| Value | Supported file values |\n+| --- | --- |\n+| World | Existing WorldState fields; 1–60 aircraft, unique uppercase callsigns, finite numeric fields and a nonnegative safe integer version |\n+| Horizontal separation | 3–10 NM in 0.5 NM steps |\n+| Vertical separation | 500–2,500 FT in 100 FT steps |\n+| Look-ahead | 2–10 MIN in 0.5 MIN steps |\n+| Recorded sample step | Current built-in value, 0.5 MIN |\n+| Maximum state age | Current built-in value, 10 SEC |\n+| Speed limit | Current built-in value, 6 NM/MIN |\n+| Climb limit | Current built-in value, 3,000 FT/MIN |\n+| Clock | Finite `now` in seconds, separate from `world.observed_at`; the existing gate still evaluates freshness |\n+| Time scale | 0.5–3 in 0.5 steps |\n+| Selected flight | An exact callsign in the saved world |\n+\n+The four built-in policy parameters are included for reproducibility. Version 1 refuses changes to them because the current lab has no controls to represent those changes. Editable parameters use the same ranges and steps as the existing controls.\n+\n+Files are bounded to 256 KiB of UTF-8 JSON. Finite aircraft values, including signed zero, retain their numeric identity through save and load. The file is read as data and never supplies executable code or a network destination. No file is uploaded or automatically saved to browser storage. Browser download behavior still controls where the requested file is placed.\n+\n+The scenario-file tests run with the existing `npm test` command. Native receiving scripts and exact before/after evidence are recorded in the accompanying source qualification packet.\ndiff --git a/web/airspace/index.html b/web/airspace/index.html\nindex 85d9f9d..187b224 100644\n--- a/web/airspace/index.html\n+++ b/web/airspace/index.html\n@@ -32,6 +32,17 @@\n <div id=\"track-edit-controls\" hidden><div class=\"button-row\"><button id=\"preview-track-edit\" class=\"button button-primary\">Preview edit</button><button id=\"apply-track-edit\" class=\"button button-quiet\" disabled>Apply scenario edit</button></div><button id=\"cancel-track-edit\" class=\"button button-wide\">Cancel edit</button></div>\n <div id=\"track-edit-preview\" class=\"track-edit-preview\" role=\"status\" aria-live=\"polite\" hidden></div>\n <p id=\"builder-feedback\" class=\"fine-print\" role=\"status\">0° = north; 90° = east. Select a flight in the traffic register to edit it, or inject a new track.</p></div><button id=\"perturb-track\" class=\"button button-wide\">Perturb selected track</button><label class=\"speed-control\" for=\"speed-range\"><span>TIME SCALE</span><output id=\"speed-value\">1.0x</output><input id=\"speed-range\" type=\"range\" min=\"0.5\" max=\"3\" step=\"0.5\" value=\"1\"></label><details class=\"policy-editor\"><summary>Adjust the safety envelope</summary><label>Horizontal · <output id=\"horizontal-value\">5.0 NM</output><input id=\"policy-horizontal\" type=\"range\" min=\"3\" max=\"10\" step=\"0.5\" value=\"5\"></label><label>Vertical · <output id=\"vertical-value\">1,000 FT</output><input id=\"policy-vertical\" type=\"range\" min=\"500\" max=\"2500\" step=\"100\" value=\"1000\"></label><label>Look-ahead · <output id=\"horizon-value\">5.0 MIN</output><input id=\"policy-horizon\" type=\"range\" min=\"2\" max=\"10\" step=\"0.5\" value=\"5\"></label><p class=\"fine-print\">These values feed the planner and safety gate.</p></details><p class=\"fine-print\">Every marker advances from its velocity vector. Add, edit or perturb traffic; the solver recomputes the live world.</p></details>\n+<details class=\"depth scenario-workbench\"><summary><span>Save or load a scenario</span><small>traffic, policy and clock in one local file</small></summary>\n+<p>Save the traffic and complete separation policy in a local JSON file. Choose a file to review it before loading.</p>\n+<div class=\"scenario-file-controls\"><button id=\"save-scenario\" class=\"button button-quiet\">Save scenario file</button><button id=\"choose-scenario\" class=\"button button-primary\">Choose scenario file</button><button id=\"cancel-scenario\" class=\"button button-quiet\" hidden>Cancel import</button></div>\n+<input id=\"scenario-file\" type=\"file\" accept=\".json,application/json\" hidden aria-label=\"Choose a TowerOps scenario JSON file\">\n+<p id=\"scenario-availability\" class=\"fine-print\"></p>\n+<section id=\"scenario-review\" class=\"scenario-review\" aria-labelledby=\"scenario-review-title\" hidden>\n+<h3 id=\"scenario-review-title\" tabindex=\"-1\">Review saved scenario</h3><p id=\"scenario-summary\"></p><dl id=\"scenario-policy\" class=\"scenario-policy\"></dl>\n+<p>Loading replaces the traffic, policy, clock and selected flight. It clears pending proposals, approvals and the decision trace. The imported traffic starts paused.</p>\n+<button id=\"load-scenario\" class=\"button button-primary\" disabled>Load reviewed scenario</button></section>\n+<p id=\"scenario-status\" class=\"fine-print\" role=\"status\" aria-live=\"polite\">No scenario file selected.</p>\n+</details>\n <details class=\"depth state-workbench\"><summary><span>Inspect or load a WorldState</span><small>the raw JSON the solver sees</small></summary><p>Paste a TowerOps state to run the same conflict detector and bounded planner on your own traffic. Export any live state to keep iterating.</p><textarea id=\"world-json\" rows=\"10\" spellcheck=\"false\" aria-label=\"Editable TowerOps WorldState JSON\"></textarea><div class=\"button-row\"><button id=\"export-world\" class=\"button button-quiet\">Export live world</button><button id=\"load-world\" class=\"button button-primary\">Load into simulation</button></div><p id=\"world-json-feedback\" role=\"status\" class=\"fine-print\">One to 60 aircraft; finite numeric fields and unique callsigns required.</p></details><details class=\"depth telemetry-wrap\"><summary><span>Under the hood</span><small>traffic register, separation watch, hash-chained decision trace</small></summary><div class=\"telemetry-grid\"><article class=\"data-panel\"><div class=\"panel-head\"><div><span class=\"micro\">LIVE REGISTER</span><strong>Traffic</strong></div><span id=\"flight-count\" class=\"count-chip\">0 FLIGHTS</span></div><div id=\"flight-list\" class=\"flight-list\"></div></article>\n <article class=\"data-panel\"><div class=\"panel-head\"><div><span class=\"micro\">POLICY CHECK</span><strong>Separation watch</strong></div><span class=\"micro\">CONTINUOUS MODEL</span></div><div id=\"conflict-list\" class=\"conflict-list\"></div></article>\n <article class=\"data-panel audit-panel\"><div class=\"panel-head\"><div><span class=\"micro\">HASH-CHAINED</span><strong>Decision trace</strong></div><span id=\"audit-status\" class=\"count-chip\">0 EVENTS</span><button id=\"verify-audit\" class=\"button button-quiet\">Verify chain</button></div><ol id=\"audit-events\" class=\"audit-events\"></ol><p id=\"audit-verdict\" class=\"fine-print\" role=\"status\"></p>\ndiff --git a/web/airspace/src/main.ts b/web/airspace/src/main.ts\nindex d975ab8..8b36b59 100644\n--- a/web/airspace/src/main.ts\n+++ b/web/airspace/src/main.ts\n@@ -3,6 +3,8 @@ import { createEncounterExplorer } from './encounter-view';\n import reference from '../tests/python-reference.json';\n import { Aircraft,DEFAULT_POLICY,SafetyPolicy,WorldState,conflictPairs,projected } from './core';\n import { createAircraft,conflictWindows,parseWorldState } from './world-tools';\n+import { ScenarioFile, createScenario } from './scenario-file';\n+import { connectScenarioFiles } from './scenario-ui';\n import { TrackEditInput,TrackEditPreview,TrackEditSession,applyTrackEdit,beginTrackEdit,previewTrackEdit } from './track-edit';\n import { Advisory } from './planner';\n import { towerPython } from './python';\n@@ -23,6 +25,30 @@ let worldJsonEdited=false;\n let trackEdit:TrackEditSession|null=null,trackPreview:TrackEditPreview|null=null,injectDraft:Record<string,string>|null=null;\n const decisionTrace=initializeDecisionTrace({getCurrentTrace:()=>pythonAudit,reviewTrace:reviewDecisionTrace});\n const flightFields=['flight-id','flight-x','flight-y','flight-level','flight-bearing','flight-speed','flight-climb'];\n+const scenarioFiles=connectScenarioFiles({\n+ capture:()=>({world:state,policy,now,time_scale:rate,selected_aircraft_id:selected}),\n+ context:()=>[state,policy,now,rate,selected,pending,approval,audit.events,pythonAudit,busy,trackEdit,running],\n+ available:()=>!busy&&!trackEdit&&!running,\n+ load:loadSavedScenario,\n+});\n+function loadSavedScenario(value:ScenarioFile):void {\n+ const restored=createScenario(value);\n+ state=restored.world;policy=restored.policy;now=restored.now;rate=restored.time_scale;selected=restored.selected_aircraft_id;\n+ running=false;lastFrame=0;trafficSeq=0;audit=new AuditLog();pythonAudit='[]';\n+ setText('audit-verdict','');\n+ clearPending('Saved scenario loaded. Run the planner on its restored world and policy before approval and readback.');\n+ $<HTMLInputElement>('policy-horizontal').value=String(policy.min_horizontal_nm);\n+ $<HTMLInputElement>('policy-vertical').value=String(policy.min_vertical_ft);\n+ $<HTMLInputElement>('policy-horizon').value=String(policy.horizon_min);\n+ $<HTMLInputElement>('speed-range').value=String(rate);\n+ setText('horizontal-value',`${policy.min_horizontal_nm.toFixed(1)} NM`);\n+ setText('vertical-value',`${policy.min_vertical_ft.toLocaleString()} FT`);\n+ setText('horizon-value',`${policy.horizon_min.toFixed(1)} MIN`);\n+ setText('toggle-run','Run traffic');\n+ setText('world-json-feedback',`Loaded scenario with ${state.aircraft.length} aircraft at version ${state.version}.${worldJsonEdited?' Your raw JSON draft is still kept. Use Export live world to replace it.':''}`);\n+ announce('Saved scenario loaded. Traffic is paused. Previous proposals and decision trace cleared.');\n+ void render();\n+}\n type GateState='wait'|'done'|'fail'; let gateScreen:GateState='wait',gateApproval:GateState='wait',gateAck:GateState='wait';\n function setText(id:string,value:string){$(id).textContent=value;}\n function gate(id:string,status:'wait'|'done'|'fail',label:string){const node=$(id);node.className=`gate-step ${status}`;const i=node.querySelector('i');if(i)i.textContent=label;}\n@@ -37,6 +63,7 @@ function drawLists(pairs:Array<[string,string]>){\n let proposalMessage='No proposal yet. The planner only returns a setpoint if it clears the separation policy.';\n async function render():Promise<void>{\n  decisionTrace.setBusy(busy);\n+ scenarioFiles.refresh();\n  const pairs=conflictPairs(state,policy);drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);drawLists(pairs);\n  encounterExplorer.update(state,policy,running);\n  const badge=$('world-badge');badge.className=`badge ${pairs.length?'alert':'safe'}`;badge.textContent=pairs.length?'ACTION':'CLEAR';\n@@ -142,9 +169,16 @@ async function reviewDecisionTrace(raw:string):Promise<DecisionTraceReport>{\n async function acceptReadback(){if(busy||!pending||!approval)return;const a=pending,applyNow=now+0.5,ack:Ack={advisory_hash:a.advisory_hash,status:'accepted',acknowledged_at:now+0.4};try{busy=true;await render();const result=await towerPython({op:'apply',state,advisory:a,approval,ack,now:applyNow,policy,audit_json:pythonAudit});pythonAudit=result.audit_json;audit.events=result.events as AuditEvent[];if(result.error)throw new GateRejected(result.error);if(!result.valid)throw new Error('Python audit chain verification failed');state=result.state;setText('python-status','Live CPython · ControlRoom.apply · audit verified');now=applyNow;pending=null;approval=null;gateScreen='done';gateApproval='done';gateAck='done';const n=conflictPairs(state,policy).length;proposalMessage=n?`Actuation is simulated; ${n} conflict pair(s) remain. Run another bounded pass.`:'Simulated setpoint applied. No projected conflict remains in the policy window.';}catch(err){proposalMessage=`GATE REJECTED: ${err instanceof GateRejected?err.reason:String(err)}. No state transition was applied.`;pending=null;approval=null;gateScreen='fail';gateAck='fail';}finally{busy=false;}await render();}\n function resetWorld(){running=false;policy={...DEFAULT_POLICY};$<HTMLInputElement>('policy-horizontal').value='5';$<HTMLInputElement>('policy-vertical').value='1000';$<HTMLInputElement>('policy-horizon').value='5';state=copy(fixture.state);now=fixture.now;selected='TWR419';trafficSeq=0;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';gateScreen='wait';gateApproval='wait';gateAck='wait';proposalMessage='Reset to the crossing scenario from demo.py. Run the bounded planner to propose a safe vector.';$<HTMLInputElement>('speed-range').value='1';$('toggle-run').textContent='Run traffic';void render();}\n function frame(t:number){if(!lastFrame)lastFrame=t;const elapsed=Math.min(0.08,Math.max(0,(t-lastFrame)/1000));lastFrame=t;if(running){const minutes=elapsed*rate;now+=minutes*60;state={version:state.version+1,observed_at:now,aircraft:state.aircraft.map(a=>projected(a,minutes))};drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);setText('sim-clock',`T+${Math.floor(now-fixture.now)} SEC`);if(t%250<20)void render();}requestAnimationFrame(frame);}\n-$('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');encounterExplorer.update(state,policy,running);});\n+$('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';scenarioFiles.refresh();if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');encounterExplorer.update(state,policy,running);});\n $('reset-world').addEventListener('click',resetWorld);$('add-traffic').addEventListener('click',addTraffic);$('perturb-track').addEventListener('click',perturbTrack);$('run-planner').addEventListener('click',()=>void runPlanner());$('approve').addEventListener('click',approvePlan);$('readback').addEventListener('click',()=>void acceptReadback());\n-$('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>void audit.verify().then(ok=>setText('audit-verdict',ok?`HASH CHAIN VALID - ${audit.events.length} EVENTS`:'HASH CHAIN INVALID')));$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);});\n+$('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>{\n+ const checkedAudit=audit,checkedEvents=checkedAudit.events,checkedCount=checkedEvents.length;\n+ void checkedAudit.verify().then(ok=>{\n+  if(audit!==checkedAudit||audit.events!==checkedEvents||checkedEvents.length!==checkedCount)return;\n+  setText('audit-verdict',ok?`HASH CHAIN VALID - ${checkedCount} EVENTS`:'HASH CHAIN INVALID');\n+ });\n+});\n+$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);scenarioFiles.refresh();});\n $('world-json').addEventListener('input',()=>{if(!worldJsonEdited){worldJsonEdited=true;setText('world-json-feedback','Draft kept. Load it into the simulation, or export the live world to replace it.');}});\n $('edit-selected-track').addEventListener('click',startTrackEdit);$('preview-track-edit').addEventListener('click',previewSelectedTrack);$('apply-track-edit').addEventListener('click',applySelectedTrack);$('cancel-track-edit').addEventListener('click',cancelSelectedTrack);\n for(const id of flightFields.filter(id=>id!=='flight-id'))$(id).addEventListener('input',invalidateTrackPreview);\ndiff --git a/web/airspace/src/scenario-file.ts b/web/airspace/src/scenario-file.ts\nnew file mode 100644\nindex 0000000..e499d27\n--- /dev/null\n+++ b/web/airspace/src/scenario-file.ts\n@@ -0,0 +1,118 @@\n+import { DEFAULT_POLICY, SafetyPolicy, WorldState } from './core';\n+import { parseWorldState } from './world-tools';\n+\n+export const SCENARIO_FORMAT = 'towerops.airspace-scenario';\n+export const MAX_SCENARIO_BYTES = 256 * 1024;\n+\n+export interface ScenarioSnapshot {\n+  world: WorldState;\n+  policy: SafetyPolicy;\n+  now: number;\n+  time_scale: number;\n+  selected_aircraft_id: string;\n+}\n+export interface ScenarioFile extends ScenarioSnapshot {\n+  format: typeof SCENARIO_FORMAT;\n+  version: 1;\n+}\n+\n+function record(value: unknown, label: string): Record<string, unknown> {\n+  if (!value || typeof value !== 'object' || Array.isArray(value)) {\n+    throw new Error(`${label} must be an object.`);\n+  }\n+  return value as Record<string, unknown>;\n+}\n+function exactKeys(value: Record<string, unknown>, keys: readonly string[], label: string): void {\n+  const actual = Object.keys(value);\n+  if (actual.length !== keys.length || actual.some(key => !keys.includes(key))) {\n+    throw new Error(`${label} needs exactly these fields: ${keys.join(', ')}.`);\n+  }\n+}\n+function finite(value: unknown, label: string): number {\n+  if (typeof value !== 'number' || !Number.isFinite(value)) throw new Error(`${label} must be a finite number.`);\n+  return value;\n+}\n+function controlValue(value: unknown, min: number, max: number, step: number, label: string): number {\n+  const number = finite(value, label);\n+  if (number < min || number > max || !Number.isInteger((number - min) / step)) {\n+    throw new Error(`${label} must be between ${min} and ${max}, in steps of ${step}.`);\n+  }\n+  return number;\n+}\n+function checkedWorld(value: unknown): WorldState {\n+  const world = record(value, 'world');\n+  exactKeys(world, ['version', 'observed_at', 'aircraft'], 'world');\n+  if (!Number.isSafeInteger(world.version) || (world.version as number) < 0) {\n+    throw new Error('world.version must be a non-negative safe integer.');\n+  }\n+  if (Array.isArray(world.aircraft)) {\n+    for (const [index, value] of world.aircraft.entries()) {\n+      exactKeys(record(value, `Aircraft ${index + 1}`),\n+        ['aircraft_id', 'x_nm', 'y_nm', 'altitude_ft', 'vx_nm_min', 'vy_nm_min', 'climb_ft_min'],\n+        `Aircraft ${index + 1}`);\n+    }\n+  }\n+  const parsed = parseWorldState(world);\n+  for (const [index, aircraft] of parsed.aircraft.entries()) {\n+    if (aircraft.aircraft_id !== (world.aircraft as Record<string, unknown>[])[index]!.aircraft_id) {\n+      throw new Error('Scenario callsigns must use uppercase letters, digits, _ or -.');\n+    }\n+  }\n+  return parsed;\n+}\n+function checkedPolicy(value: unknown): SafetyPolicy {\n+  const input = record(value, 'policy');\n+  exactKeys(input, Object.keys(DEFAULT_POLICY), 'policy');\n+  const policy: SafetyPolicy = {\n+    min_horizontal_nm: controlValue(input.min_horizontal_nm, 3, 10, 0.5, 'Horizontal separation (NM)'),\n+    min_vertical_ft: controlValue(input.min_vertical_ft, 500, 2500, 100, 'Vertical separation (FT)'),\n+    horizon_min: controlValue(input.horizon_min, 2, 10, 0.5, 'Look-ahead (MIN)'),\n+    sample_step_min: finite(input.sample_step_min, 'sample_step_min'),\n+    max_state_age_sec: finite(input.max_state_age_sec, 'max_state_age_sec'),\n+    max_speed_nm_min: finite(input.max_speed_nm_min, 'max_speed_nm_min'),\n+    max_climb_ft_min: finite(input.max_climb_ft_min, 'max_climb_ft_min'),\n+  };\n+  // These four parameters have no editor in this lab. Do not silently import\n+  // an invisible policy change which the current controls cannot reproduce.\n+  for (const key of ['sample_step_min', 'max_state_age_sec', 'max_speed_nm_min', 'max_climb_ft_min'] as const) {\n+    if (policy[key] !== DEFAULT_POLICY[key]) throw new Error(`${key} is not configurable in scenario format v1; expected ${DEFAULT_POLICY[key]}.`);\n+  }\n+  return policy;\n+}\n+export function createScenario(snapshot: ScenarioSnapshot): ScenarioFile {\n+  const world = checkedWorld(snapshot.world);\n+  const policy = checkedPolicy(snapshot.policy);\n+  const now = finite(snapshot.now, 'now');\n+  const time_scale = controlValue(snapshot.time_scale, 0.5, 3, 0.5, 'Time scale');\n+  const selected_aircraft_id = snapshot.selected_aircraft_id;\n+  if (typeof selected_aircraft_id !== 'string' || !world.aircraft.some(a => a.aircraft_id === selected_aircraft_id)) {\n+    throw new Error('selected_aircraft_id must identify an aircraft in this world.');\n+  }\n+  return { format: SCENARIO_FORMAT, version: 1, world, policy, now, time_scale, selected_aircraft_id };\n+}\n+export function parseScenario(text: string): ScenarioFile {\n+  if (new TextEncoder().encode(text).byteLength > MAX_SCENARIO_BYTES) throw new Error('Scenario files must be at most 256 KiB.');\n+  let parsed: unknown;\n+  try { parsed = JSON.parse(text); } catch { throw new Error('The selected file is not valid JSON.'); }\n+  const value = record(parsed, 'Scenario');\n+  if (value.format !== SCENARIO_FORMAT || value.version !== 1) throw new Error('Choose a TowerOps Airspace scenario file with format version 1. Raw WorldState JSON uses the existing workbench below.');\n+  exactKeys(value, ['format', 'version', 'world', 'policy', 'now', 'time_scale', 'selected_aircraft_id'], 'Scenario');\n+  return createScenario(value as unknown as ScenarioSnapshot);\n+}\n+\n+// JSON.stringify changes -0 into 0; TowerOps world hashes distinguish them.\n+// Format the validated data only, keeping ordinary JSON number syntax even for\n+// large or subnormal finite values. JSON.parse restores the signed zero.\n+function dataJson(value: unknown, depth = 0): string {\n+  if (typeof value === 'number') return Object.is(value, -0) ? '-0' : JSON.stringify(value);\n+  if (value === null || typeof value !== 'object') return JSON.stringify(value);\n+  const indent = '  '.repeat(depth), child = indent + '  ';\n+  if (Array.isArray(value)) return value.length ? '[\\n' + value.map(item => child + dataJson(item, depth + 1)).join(',\\n') + '\\n' + indent + ']' : '[]';\n+  return '{\\n' + Object.entries(value).map(([key, item]) => child + JSON.stringify(key) + ': ' + dataJson(item, depth + 1)).join(',\\n') + '\\n' + indent + '}';\n+}\n+export function serializeScenario(snapshot: ScenarioSnapshot): { text: string; filename: string; mime: string } {\n+  const scenario = createScenario(snapshot);\n+  const text = dataJson(scenario) + '\\n';\n+  if (new TextEncoder().encode(text).byteLength > MAX_SCENARIO_BYTES) throw new Error('The scenario is larger than the 256 KiB file limit.');\n+  return { text, filename: `towerops-scenario-v${scenario.world.version}.json`, mime: 'application/json;charset=utf-8' };\n+}\ndiff --git a/web/airspace/src/scenario-ui.ts b/web/airspace/src/scenario-ui.ts\nnew file mode 100644\nindex 0000000..f0b99a3\n--- /dev/null\n+++ b/web/airspace/src/scenario-ui.ts\n@@ -0,0 +1,117 @@\n+import { MAX_SCENARIO_BYTES, ScenarioFile, ScenarioSnapshot, parseScenario, serializeScenario } from './scenario-file';\n+\n+interface ScenarioControls {\n+  capture: () => ScenarioSnapshot;\n+  context: () => readonly unknown[];\n+  available: () => boolean;\n+  load: (scenario: ScenarioFile) => void;\n+}\n+interface Review { scenario: ScenarioFile; context: readonly unknown[] }\n+\n+export function connectScenarioFiles(options: ScenarioControls): { refresh: () => void } {\n+  const get = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;\n+  const fileInput = get<HTMLInputElement>('scenario-file');\n+  const save = get<HTMLButtonElement>('save-scenario');\n+  const choose = get<HTMLButtonElement>('choose-scenario');\n+  const apply = get<HTMLButtonElement>('load-scenario');\n+  const cancel = get<HTMLButtonElement>('cancel-scenario');\n+  const panel = get('scenario-review');\n+  const status = get('scenario-status');\n+  let review: Review | null = null, reading: readonly unknown[] | null = null, epoch = 0;\n+  const urls = new Set<string>();\n+  const sameContext = (context: readonly unknown[]) => {\n+    const current = options.context();\n+    return current.length === context.length && current.every((value, index) => Object.is(value, context[index]));\n+  };\n+  function clear(message?: string): void {\n+    epoch++; review = null; reading = null; panel.hidden = true;\n+    cancel.hidden = true; apply.disabled = true; fileInput.value = '';\n+    if (message !== undefined) status.textContent = message;\n+  }\n+  function refresh(): void {\n+    const available = options.available();\n+    save.disabled = !available; choose.disabled = !available;\n+    get('scenario-availability').textContent = available\n+      ? 'Files stay on your device. Loading starts a fresh decision trace.'\n+      : 'Pause traffic or finish the active planner or flight edit before using scenario files.';\n+    const context = review?.context ?? reading;\n+    if (context && (!available || !sameContext(context))) {\n+      clear('The simulation changed. Choose the file again to review its replacement.');\n+    }\n+    apply.disabled = !review || !available;\n+  }\n+  function showReview(scenario: ScenarioFile, filename: string): void {\n+    get('scenario-summary').textContent =\n+      `${filename}: ${scenario.world.aircraft.length} aircraft, world version ${scenario.world.version}. Clock ${scenario.now} s; ${scenario.time_scale}× time scale; selected ${scenario.selected_aircraft_id}.`;\n+    const list = get('scenario-policy'); list.replaceChildren();\n+    const fields: [string, number, string][] = [\n+      ['Horizontal separation', scenario.policy.min_horizontal_nm, 'NM'],\n+      ['Vertical separation', scenario.policy.min_vertical_ft, 'FT'],\n+      ['Look-ahead', scenario.policy.horizon_min, 'MIN'],\n+      ['Recorded sample step', scenario.policy.sample_step_min, 'MIN'],\n+      ['Maximum state age', scenario.policy.max_state_age_sec, 'SEC'],\n+      ['Speed limit', scenario.policy.max_speed_nm_min, 'NM/MIN'],\n+      ['Climb limit', scenario.policy.max_climb_ft_min, 'FT/MIN'],\n+    ];\n+    for (const [label, value, unit] of fields) {\n+      const dt = document.createElement('dt'), dd = document.createElement('dd');\n+      dt.textContent = label; dd.textContent = `${value} ${unit}`; list.append(dt, dd);\n+    }\n+    panel.hidden = false; cancel.hidden = false;\n+    status.textContent = 'Review the saved scenario. The current simulation is unchanged.';\n+    refresh(); get('scenario-review-title').focus();\n+  }\n+  async function readSelectedFile(): Promise<void> {\n+    const file = fileInput.files?.[0];\n+    if (!file) return;\n+    clear(); refresh();\n+    if (!options.available()) { status.textContent = 'Pause traffic or finish the active operation before choosing a scenario.'; return; }\n+    const ticket = epoch, context = [...options.context()];\n+    reading = context; cancel.hidden = false; status.textContent = 'Reading the selected scenario…';\n+    try {\n+      if (file.size > MAX_SCENARIO_BYTES) throw new Error('Scenario files must be at most 256 KiB.');\n+      const text = await file.text();\n+      if (ticket !== epoch) return;\n+      if (!options.available() || !sameContext(context)) { clear('The simulation changed while reading. Choose the file again.'); return; }\n+      const scenario = parseScenario(text);\n+      reading = null; review = { scenario, context }; showReview(scenario, file.name);\n+    } catch (error) {\n+      if (ticket !== epoch) return;\n+      clear(`NOT LOADED: ${error instanceof Error ? error.message : String(error)}`);\n+    }\n+  }\n+  choose.addEventListener('click', () => { refresh(); if (options.available()) fileInput.click(); });\n+  fileInput.addEventListener('change', () => void readSelectedFile());\n+  cancel.addEventListener('click', () => { clear('Import canceled. The current simulation is unchanged.'); choose.focus(); });\n+  apply.addEventListener('click', () => {\n+    refresh();\n+    if (!review || !options.available()) return;\n+    const scenario = review.scenario;\n+    clear();\n+    try {\n+      options.load(scenario);\n+      status.textContent = 'Scenario loaded with its saved policy. Traffic is paused and the decision trace starts empty.';\n+      choose.focus();\n+    } catch (error) {\n+      status.textContent = `NOT LOADED: ${error instanceof Error ? error.message : String(error)}`;\n+    }\n+  });\n+  save.addEventListener('click', () => {\n+    refresh(); if (!options.available()) return;\n+    try {\n+      const file = serializeScenario(options.capture());\n+      const url = URL.createObjectURL(new Blob([file.text], { type: file.mime }));\n+      urls.add(url);\n+      const anchor = document.createElement('a'); anchor.href = url; anchor.download = file.filename;\n+      document.body.append(anchor);\n+      try { anchor.click(); } finally { anchor.remove(); }\n+      setTimeout(() => { URL.revokeObjectURL(url); urls.delete(url); }, 30000);\n+      status.textContent = 'Scenario file prepared. Check your browser downloads.';\n+    } catch (error) {\n+      status.textContent = `NOT SAVED: ${error instanceof Error ? error.message : String(error)}`;\n+    }\n+  });\n+  window.addEventListener('pagehide', () => { clear(); for (const url of urls) URL.revokeObjectURL(url); urls.clear(); });\n+  refresh();\n+  return { refresh };\n+}\ndiff --git a/web/airspace/style.css b/web/airspace/style.css\nindex 63f0835..ce7fbdc 100644\n--- a/web/airspace/style.css\n+++ b/web/airspace/style.css\n@@ -63,3 +63,16 @@\n .encounter-windows dd{font:12px/1.7 var(--mono);color:var(--amber);margin:6px 0 0;overflow-wrap:anywhere}\n #encounter-content[hidden]{display:none}\n @media(max-width:620px){.encounter-charts{grid-template-columns:1fr}.encounter-windows{grid-template-columns:1fr}.encounter-windows div{display:grid;grid-template-columns:1fr 1fr;gap:8px}.encounter-windows dd{margin:0}.encounter-pair{gap:10px}.encounter-readings b{font-size:18px}}\n+\n+/* Local scenario files use the existing progressive-depth workbench. */\n+.scenario-workbench p{font-size:12px;line-height:1.6;color:var(--muted);overflow-wrap:anywhere}\n+.scenario-file-controls{display:flex;flex-wrap:wrap;gap:8px}\n+.scenario-file-controls .button{flex:1 1 160px;min-height:40px}\n+.scenario-review{border:1px solid var(--line);background:var(--bg);padding:14px;margin-top:14px;overflow-wrap:anywhere}\n+.scenario-review h3{font:16px var(--serif);margin:0 0 10px;color:var(--ink)}\n+.scenario-review h3:focus{outline:2px solid var(--amber);outline-offset:4px}\n+.scenario-policy{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;margin:14px 0;font:11px/1.5 var(--mono)}\n+.scenario-policy dt{color:var(--muted)}.scenario-policy dd{margin:0;color:var(--ink);text-align:right}\n+.scenario-review .button{min-height:40px}\n+#scenario-review[hidden],#cancel-scenario[hidden],#scenario-file[hidden]{display:none}\n+@media(max-width:560px){.scenario-review{padding:12px}.scenario-policy{gap:8px;font-size:10px}.scenario-review .button{width:100%}}\ndiff --git a/web/airspace/tests/scenario-file.test.ts b/web/airspace/tests/scenario-file.test.ts\nnew file mode 100644\nindex 0000000..450dc4c\n--- /dev/null\n+++ b/web/airspace/tests/scenario-file.test.ts\n@@ -0,0 +1,148 @@\n+import { describe, expect, it } from 'vitest';\n+import { DEFAULT_POLICY, conflictPairs, worldHash } from '../src/core';\n+import { MAX_SCENARIO_BYTES, SCENARIO_FORMAT, ScenarioSnapshot, createScenario, parseScenario, serializeScenario } from '../src/scenario-file';\n+\n+function snapshot(): ScenarioSnapshot {\n+  return {\n+    world: { version: 7, observed_at: 1000, aircraft: [\n+      { aircraft_id: 'TWR101', x_nm: 0, y_nm: 0, altitude_ft: 10000, vx_nm_min: 0, vy_nm_min: 0, climb_ft_min: 0 },\n+      { aircraft_id: 'TWR202', x_nm: 7, y_nm: 0, altitude_ft: 10000, vx_nm_min: 0, vy_nm_min: 0, climb_ft_min: 0 },\n+    ] },\n+    policy: { ...DEFAULT_POLICY, min_horizontal_nm: 9, min_vertical_ft: 1500, horizon_min: 8 },\n+    now: 1002.5, time_scale: 2.5, selected_aircraft_id: 'TWR202',\n+  };\n+}\n+const read = (value: unknown) => parseScenario(JSON.stringify(value));\n+\n+describe('portable synthetic scenarios', () => {\n+  it('restores the policy that determines the saved conflict, plus clock and selection', async () => {\n+    const before = snapshot();\n+    const file = serializeScenario(before), after = parseScenario(file.text);\n+    expect(conflictPairs(before.world, before.policy)).toEqual([['TWR101', 'TWR202']]);\n+    expect(conflictPairs(before.world, { ...DEFAULT_POLICY, min_horizontal_nm: 3 })).toEqual([]);\n+    expect(conflictPairs(after.world, after.policy)).toEqual(conflictPairs(before.world, before.policy));\n+    expect(await worldHash(after.world)).toBe(await worldHash(before.world));\n+    expect(after).toEqual({ format: SCENARIO_FORMAT, version: 1, ...before });\n+    expect(file.filename).toBe('towerops-scenario-v7.json');\n+    expect(file.mime).toBe('application/json;charset=utf-8');\n+  });\n+  it('makes independent data copies and emits only scenario data', () => {\n+    const before = snapshot(), saved = createScenario(before);\n+    const original = serializeScenario(before).text;\n+    before.world.aircraft[0]!.x_nm = 44; before.policy.min_horizontal_nm = 3;\n+    expect(saved.world.aircraft[0]!.x_nm).toBe(0); expect(saved.policy.min_horizontal_nm).toBe(9);\n+    expect(serializeScenario(saved).text).toBe(original);\n+    expect(Object.keys(saved).sort()).toEqual(['format','now','policy','selected_aircraft_id','time_scale','version','world']);\n+  });\n+  it.each([-0, Number.MIN_VALUE, Number.MAX_VALUE, 1e21, 1e-20, Math.PI, -123.456])('round-trips finite numeric value %s without changing its identity', value => {\n+    const before = snapshot(); before.world.aircraft[0]!.x_nm = value; before.now = value;\n+    const result = parseScenario(serializeScenario(before).text);\n+    expect(Object.is(result.world.aircraft[0]!.x_nm, value)).toBe(true);\n+    expect(Object.is(result.now, value)).toBe(true);\n+  });\n+  it('keeps the signed-zero world hash stable through actual JSON text', async () => {\n+    const before = snapshot(); before.world.aircraft[0]!.vx_nm_min = -0;\n+    const after = parseScenario(serializeScenario(before).text);\n+    expect(await worldHash(after.world)).toBe(await worldHash(before.world));\n+    expect(Object.is(after.world.aircraft[0]!.vx_nm_min, -0)).toBe(true);\n+  });\n+  it.each([1, 60])('supports %s aircraft with preserved ordering and selection', count => {\n+    const before = snapshot();\n+    before.world.aircraft = Array.from({ length: count }, (_, i) => ({ ...before.world.aircraft[0]!, aircraft_id: 'TWR' + i }));\n+    before.selected_aircraft_id = 'TWR' + (count - 1);\n+    const after = parseScenario(serializeScenario(before).text);\n+    expect(after.world.aircraft.map(a => a.aircraft_id)).toEqual(before.world.aircraft.map(a => a.aircraft_id));\n+    expect(after.selected_aircraft_id).toBe(before.selected_aircraft_id);\n+  });\n+  it.each([0, 61])('refuses unsupported aircraft count %s', count => {\n+    const before = snapshot();\n+    before.world.aircraft = Array.from({ length: count }, (_, i) => ({ ...snapshot().world.aircraft[0]!, aircraft_id: 'TWR' + i }));\n+    expect(() => createScenario(before)).toThrow('between 1 and 60');\n+  });\n+  it('refuses duplicate or noncanonical callsigns without silently renaming a saved identity', () => {\n+    const before = snapshot(); before.world.aircraft[1]!.aircraft_id = 'TWR101';\n+    expect(() => createScenario(before)).toThrow('Duplicate callsign');\n+    before.world.aircraft[1]!.aircraft_id = 'twr202';\n+    expect(() => createScenario(before)).toThrow('uppercase');\n+  });\n+  it('requires selection to belong to the saved world', () => {\n+    const before = snapshot(); before.selected_aircraft_id = 'FOREIGN';\n+    expect(() => createScenario(before)).toThrow('selected_aircraft_id');\n+  });\n+  it.each([-1, 0.5, Number.MAX_SAFE_INTEGER + 1, '7', true])('refuses invalid world version %s', value => {\n+    const doc = createScenario(snapshot()); (doc.world as unknown as Record<string, unknown>).version = value;\n+    expect(() => read(doc)).toThrow('safe integer');\n+  });\n+  it('preserves a valid large version without unsafe filename characters', () => {\n+    const before = snapshot(); before.world.version = Number.MAX_SAFE_INTEGER;\n+    const file = serializeScenario(before);\n+    expect(file.filename).toBe('towerops-scenario-v9007199254740991.json');\n+    expect(parseScenario(file.text).world.version).toBe(Number.MAX_SAFE_INTEGER);\n+  });\n+  it('rejects extra world and aircraft data rather than silently discarding it', () => {\n+    const doc = createScenario(snapshot());\n+    expect(() => read({ ...doc, world: { ...doc.world, approval: {} } })).toThrow('world needs exactly');\n+    expect(() => read({ ...doc, world: { ...doc.world, aircraft: [{ ...doc.world.aircraft[0], url: 'https://invalid.example/' }] } })).toThrow('Aircraft 1 needs exactly');\n+  });\n+  it.each(['x_nm','y_nm','altitude_ft','vx_nm_min','vy_nm_min','climb_ft_min'])('refuses malformed %s without coercion', key => {\n+    for (const value of ['1', null, true, NaN, Infinity]) {\n+      const doc = createScenario(snapshot());\n+      (doc.world.aircraft[0] as unknown as Record<string, unknown>)[key] = value;\n+      expect(() => read(doc)).toThrow('finite number');\n+    }\n+  });\n+  it('rejects nonfinite or coerced clock values', () => {\n+    const doc = createScenario(snapshot());\n+    for (const now of [true, null, '1002', Infinity, NaN]) expect(() => read({ ...doc, now })).toThrow('finite number');\n+    expect(() => parseScenario(JSON.stringify(doc).replace('\"now\":1002.5','\"now\":1e999'))).toThrow('finite number');\n+  });\n+  it('keeps finite clock offsets for the existing freshness gate to evaluate', () => {\n+    const before = snapshot(); before.now = before.world.observed_at + 99;\n+    expect(parseScenario(serializeScenario(before).text).now).toBe(1099);\n+  });\n+  it.each([\n+    ['min_horizontal_nm',2.5],['min_horizontal_nm',10.5],['min_horizontal_nm',3.1],\n+    ['min_vertical_ft',400],['min_vertical_ft',2600],['min_vertical_ft',1550],\n+    ['horizon_min',1.5],['horizon_min',10.5],['horizon_min',4.1],\n+  ])('refuses a %s setting that the current controls cannot represent: %s', (key, value) => {\n+    const doc = createScenario(snapshot()); (doc.policy as unknown as Record<string, unknown>)[key as string] = value;\n+    expect(() => read(doc)).toThrow('in steps');\n+  });\n+  it.each(['sample_step_min','max_state_age_sec','max_speed_nm_min','max_climb_ft_min'])('does not import an invisible change to %s', key => {\n+    const doc = createScenario(snapshot()); (doc.policy as unknown as Record<string, unknown>)[key] = 0;\n+    expect(() => read(doc)).toThrow('not configurable');\n+  });\n+  it('requires all policy fields and refuses unexpected policy fields', () => {\n+    const doc = createScenario(snapshot()), policy = { ...doc.policy } as Record<string, unknown>;\n+    delete policy.horizon_min;\n+    expect(() => read({ ...doc, policy })).toThrow('policy needs exactly');\n+    expect(() => read({ ...doc, policy: { ...doc.policy, approve_all: true } })).toThrow('policy needs exactly');\n+    expect(() => read({ ...doc, policy: { ...doc.policy, horizon_min: '8' } })).toThrow('finite number');\n+  });\n+  it.each([0, 0.75, 3.5, '2', true])('refuses unsupported time scale %s', time_scale => {\n+    expect(() => read({ ...createScenario(snapshot()), time_scale })).toThrow();\n+  });\n+  it.each([0.5, 1, 1.5, 2, 2.5, 3])('restores the supported time scale %s', time_scale => {\n+    expect(read({ ...createScenario(snapshot()), time_scale }).time_scale).toBe(time_scale);\n+  });\n+  it('rejects raw WorldState with a useful pointer to its existing reader', () => {\n+    expect(() => read(snapshot().world)).toThrow('Raw WorldState JSON uses the existing workbench');\n+  });\n+  it.each([0, 2, '1', true])('refuses unsupported format version %s', version => {\n+    expect(() => read({ ...createScenario(snapshot()), version })).toThrow('format version 1');\n+  });\n+  it.each([null, false, [], 4, 'text'])('rejects a non-object document %j', value => {\n+    expect(() => read(value)).toThrow('must be an object');\n+  });\n+  it('refuses unknown top-level metadata, approvals and prototype keys', () => {\n+    const doc = createScenario(snapshot());\n+    expect(() => read({ ...doc, approval: { decision: 'approve' } })).toThrow('Scenario needs exactly');\n+    expect(() => parseScenario(JSON.stringify(doc).replace('{','{\"__proto__\":{\"polluted\":true},'))).toThrow('Scenario needs exactly');\n+    expect(({} as Record<string, unknown>).polluted).toBeUndefined();\n+  });\n+  it('reports malformed JSON and bounds UTF-8 file input before parsing', () => {\n+    expect(() => parseScenario('{not json')).toThrow('not valid JSON');\n+    expect(() => parseScenario(' '.repeat(MAX_SCENARIO_BYTES + 1))).toThrow('256 KiB');\n+    expect(() => parseScenario('😀'.repeat(MAX_SCENARIO_BYTES / 4 + 1))).toThrow('256 KiB');\n+  });\n+});\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/has-pr48-base.stderr.log",
+      "native_relative_path": "has-pr48-base.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/has-pr48-base.stdout.log",
+      "native_relative_path": "has-pr48-base.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/initial-build.stderr.log",
+      "native_relative_path": "initial-build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/initial-build.stdout.log",
+      "native_relative_path": "initial-build.stdout.log",
+      "bytes": 530,
+      "sha256": "084d5565e3da0ed7ac9b17b2fe64d957e418232639751fc69f5959e7892ad297",
+      "git_blob": "6407c95444fecae518ba48f80bceba103381e8bd",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "\n> towerops-airspace-lab@0.1.0 build\n> node prepare-python.mjs && tsc --noEmit && vite build --configLoader native\n\nvite v8.3.3 building client environment for production...\ntransforming...\n✓ 23 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/python-worker-D9QUacUJ.js   4.41 kB\ndist/index.html                        16.89 kB │ gzip:  5.50 kB\ndist/assets/index-TucxfM67.css         21.82 kB │ gzip:  5.04 kB\ndist/assets/index-BgA9LRGh.js          62.94 kB │ gzip: 19.84 kB\n\n✓ built in 589ms\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualified-object.stderr.log",
+      "native_relative_path": "qualified-object.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualified-object.stdout.log",
+      "native_relative_path": "qualified-object.stdout.log",
+      "bytes": 5,
+      "sha256": "f27e01fe7624cca3e69811a0bf9a4efd9dca9fd39f7a3a8f939cae0cfe8cdfb8",
+      "git_blob": "5c62b5aa08f761597c5b88d33e6b14b247acac2d",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "tree\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/received-pr48-tree.stderr.log",
+      "native_relative_path": "received-pr48-tree.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/received-pr48-tree.stdout.log",
+      "native_relative_path": "received-pr48-tree.stdout.log",
+      "bytes": 41,
+      "sha256": "e8c16d9aa7b5e74689a7e6fdeabb3c4d14b20575b44161d4115c3fb1bfa7c9b7",
+      "git_blob": "2c23ccecb6245e4e279aa7a1376b78469e733759",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "4a87643d57cabf81e570b21c119f00b43f79448e\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-build.stderr.log",
+      "native_relative_path": "reset-build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-build.stdout.log",
+      "native_relative_path": "reset-build.stdout.log",
+      "bytes": 530,
+      "sha256": "c84dfc1c201ecaa09a01a17d26161b6629b3b6503952dc9530dbae4db8a8f494",
+      "git_blob": "d24f6782c1593766c03eed6d232a800d2d667a10",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "\n> towerops-airspace-lab@0.1.0 build\n> node prepare-python.mjs && tsc --noEmit && vite build --configLoader native\n\nvite v8.3.3 building client environment for production...\ntransforming...\n✓ 23 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/python-worker-D9QUacUJ.js   4.41 kB\ndist/index.html                        16.89 kB │ gzip:  5.50 kB\ndist/assets/index-TucxfM67.css         21.82 kB │ gzip:  5.04 kB\ndist/assets/index-7rg_PNXs.js          63.02 kB │ gzip: 19.85 kB\n\n✓ built in 121ms\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-checkout.stderr.log",
+      "native_relative_path": "reset-checkout.stderr.log",
+      "bytes": 84,
+      "sha256": "84c41a1af0da9d506d328d836a55dbbb466fa984f64ec2d3b31ce240a972bcf3",
+      "git_blob": "43ca4c3157c500904c04e0f1c1576e18a99a2b4a",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "HEAD is now at 093f88b Merge PR #48: review and select native advisory alternatives\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-checkout.stdout.log",
+      "native_relative_path": "reset-checkout.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-clone.stderr.log",
+      "native_relative_path": "reset-clone.stderr.log",
+      "bytes": 90,
+      "sha256": "66090dc3a3f268e7893c91c10d434cc8c8c7781153865c8eabe0c72561ad79c1",
+      "git_blob": "81a8d1618c04ea69d07f7c5079113e6390b7d18c",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "Cloning into '/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset'...\ndone.\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-clone.stdout.log",
+      "native_relative_path": "reset-clone.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-read-initial-tree.stderr.log",
+      "native_relative_path": "reset-read-initial-tree.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/reset-read-initial-tree.stdout.log",
+      "native_relative_path": "reset-read-initial-tree.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/status.stderr.log",
+      "native_relative_path": "status.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/status.stdout.log",
+      "native_relative_path": "status.stdout.log",
+      "bytes": 223,
+      "sha256": "9b85664b0689306935fd6e745d698023cce58d8d2d32c857ebb9f7bdbc700541",
+      "git_blob": "30c434dbf35f3693ad7e55dfb337f287f0ab8167",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "M  web/airspace/README.md\nM  web/airspace/index.html\nM  web/airspace/src/main.ts\nA  web/airspace/src/scenario-file.ts\nA  web/airspace/src/scenario-ui.ts\nUU web/airspace/style.css\nA  web/airspace/tests/scenario-file.test.ts\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/author-browser.stderr.log",
+      "native_relative_path": "qualification/author-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/author-browser.stdout.log",
+      "native_relative_path": "qualification/author-browser.stdout.log",
+      "bytes": 2291,
+      "sha256": "6bc64132dc0985e4e5f5a399c89e39d0a6b443dc22e9890e54546d0ded94f579",
+      "git_blob": "5949ef40884cc89589a4d60ad6479f2aa162b3cf",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\"name\":\"download and reviewed import reproduce the saved policy\",\"passed\":true,\"milliseconds\":1362,\"download_sha256\":\"105912ce39dad318273750a059cd0d85ee21bdbaa2ed3f30ca082b49b1174ced\",\"conflicts_before\":1,\"changed_policy_conflicts\":0,\"restored_conflicts\":1}\n{\"name\":\"cancel preserves approvals; confirmed import starts an empty native Python trace\",\"passed\":true,\"milliseconds\":2212,\"python_roundtrips\":2,\"audit_restored_from_file\":false,\"deterministic_new_trace\":true}\n{\"name\":\"a changed simulation invalidates the reviewed replacement\",\"passed\":true,\"milliseconds\":1085,\"invalidated_by\":[\"policy\",\"time scale\",\"flight editor\",\"running traffic\"],\"paused_controls_available\":true}\n{\"name\":\"canceled and superseded asynchronous file reads cannot publish a replacement\",\"passed\":true,\"milliseconds\":1044,\"fault\":\"delayed File.text only; production source unchanged\",\"canceled\":true,\"newest_wins\":true,\"changed_context_refused\":true}\n{\"name\":\"invalid files preserve the current world, proposal, approval and trace\",\"passed\":true,\"milliseconds\":2066,\"refused_files\":[\"broken.json\",\"wrong-version.json\",\"unknown-field.json\",\"invisible-policy.json\",\"oversize.json\",\"foreign-selection.json\"],\"messages\":[\"NOT LOADED: The selected file is not valid JSON.\",\"NOT LOADED: Choose a TowerOps Airspace scenario file with format version 1. Raw WorldState JSON uses the existing workbench below.\",\"NOT LOADED: Scenario needs exactly these fields: format, version, world, policy, now, time_scale, selected_aircraft_id.\",\"NOT LOADED: max_speed_nm_min is not configurable in scenario format v1; expected 6.\",\"NOT LOADED: Scenario files must be at most 256 KiB.\",\"NOT LOADED: selected_aircraft_id must identify an aircraft in this world.\"],\"unreadable_file_preserved\":true}\n{\"name\":\"legacy WorldState and selected-flight preview/apply remain usable\",\"passed\":true,\"milliseconds\":855,\"legacy_raw_world\":true,\"versioned_selected_edit\":true,\"other_aircraft_preserved\":true}\n{\"name\":\"phone review supports literal filenames, keyboard apply and bounded layout\",\"passed\":true,\"milliseconds\":970,\"phone_width\":390,\"no_horizontal_overflow\":true,\"literal_filename\":true,\"keyboard_confirmed\":true}\n{\"passed\":7,\"total\":7,\"errors\":[],\"external\":[],\"out\":\"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/author-browser\"}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/checkout-base.stderr.log",
+      "native_relative_path": "qualification/checkout-base.stderr.log",
+      "bytes": 84,
+      "sha256": "84c41a1af0da9d506d328d836a55dbbb466fa984f64ec2d3b31ce240a972bcf3",
+      "git_blob": "43ca4c3157c500904c04e0f1c1576e18a99a2b4a",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "HEAD is now at 093f88b Merge PR #48: review and select native advisory alternatives\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/checkout-base.stdout.log",
+      "native_relative_path": "qualification/checkout-base.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/clone.stderr.log",
+      "native_relative_path": "qualification/clone.stderr.log",
+      "bytes": 96,
+      "sha256": "37929c236682cdf825c9ff5e69e950b5384105dfeb07d92c3d6e78c00ddb9605",
+      "git_blob": "a2ebc138e2c130e1c71b83703168315d0e8dcc1b",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "Cloning into '/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified'...\ndone.\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/clone.stdout.log",
+      "native_relative_path": "qualification/clone.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/decision-trace-owner-browser.stderr.log",
+      "native_relative_path": "qualification/decision-trace-owner-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/decision-trace-owner-browser.stdout.log",
+      "native_relative_path": "qualification/decision-trace-owner-browser.stdout.log",
+      "bytes": 795,
+      "sha256": "75b34f5a6da83cb73c54e5a5bf7e88ac34594b3522a555c003c38ce0632e988e",
+      "git_blob": "830818a64ca3dc1a515517d5b9120360431a0990",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "PASS actual planner approval readback, native review and exact download\nPASS saved file reopened while another world-bound approval remains pending\nPASS hash-valid decision issue: unapproved.json\nPASS hash-valid decision issue: wrong-world.json\nPASS hash-valid decision issue: wrong-order.json\nPASS tampered hash chain\nPASS malformed and excessive event files return short errors without state adoption\nPASS file byte limit refuses before a native request\nPASS native labels stay literal and mobile review fits\nPASS demo document compatibility and later native apply retain the live audit\nPASS missing optional replay source preserves planning and an explicit retry succeeds\n{\"passed\":true,\"controls\":11,\"output\":\"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/decision-trace-owner-browser\"}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/encounter-owner-browser.stderr.log",
+      "native_relative_path": "qualification/encounter-owner-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/encounter-owner-browser.stdout.log",
+      "native_relative_path": "qualification/encounter-owner-browser.stdout.log",
+      "bytes": 3252,
+      "sha256": "fa7443ebc7fadc762996b514dcc35d198f274d2a6b6e650224a11bed1b96c75c",
+      "git_blob": "6295faf9de2c4f3019bc6f48471132ae31ead6d5",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\n  \"status\": \"passed\",\n  \"cases\": [\n    {\n      \"name\": \"forecast values, keyboard cursor and complete visible-state nonmutation\",\n      \"status\": \"passed\",\n      \"pair\": [\n        \"TWR218\",\n        \"TWR419\"\n      ],\n      \"minutes\": 3.75,\n      \"horizontal_nm\": 2.5,\n      \"vertical_ft\": 0.0\n    },\n    {\n      \"name\": \"pending real Python advisory and approval preserved while exploring\",\n      \"status\": \"passed\",\n      \"proposal\": \"TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.\",\n      \"gates\": [\n        \"PASS\",\n        \"APPROVED\",\n        \"WAIT\"\n      ]\n    },\n    {\n      \"name\": \"real Python readback applies and forecast refreshes\",\n      \"status\": \"passed\",\n      \"world\": {\n        \"version\": 2,\n        \"observed_at\": 1002.5,\n        \"aircraft\": [\n          {\n            \"aircraft_id\": \"TWR218\",\n            \"x_nm\": -5,\n            \"y_nm\": 0,\n            \"altitude_ft\": 10000,\n            \"vx_nm_min\": 1,\n            \"vy_nm_min\": 0,\n            \"climb_ft_min\": 0\n          },\n          {\n            \"aircraft_id\": \"TWR419\",\n            \"x_nm\": 5,\n            \"y_nm\": 0,\n            \"altitude_ft\": 10000,\n            \"vx_nm_min\": -1,\n            \"vy_nm_min\": 2,\n            \"climb_ft_min\": 0\n          }\n        ]\n      }\n    },\n    {\n      \"name\": \"reduced look-ahead clamps the read-only cursor\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"ten-minute endpoint labels stay within both chart viewports\",\n      \"status\": \"passed\",\n      \"labels\": [\n        {\n          \"chart\": \"horizontal\",\n          \"text\": \"10.0\",\n          \"x\": 285.99847412109375,\n          \"width\": 24.001548767089844\n        },\n        {\n          \"chart\": \"vertical\",\n          \"text\": \"10.0\",\n          \"x\": 285.99847412109375,\n          \"width\": 24.001548767089844\n        }\n      ]\n    },\n    {\n      \"name\": \"selected-flight draft and preview survive forecast interaction\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"imported three-flight world and independent pair selection\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"large shared horizontal/vertical motion preserves constant pair separation\",\n      \"status\": \"passed\",\n      \"readings\": [\n        {\n          \"mode\": \"horizontal\",\n          \"pair\": [\n            \"COMMON1\",\n            \"COMMON2\"\n          ],\n          \"minutes\": 3.0,\n          \"horizontal_nm\": 4.0,\n          \"vertical_ft\": 0.0\n        },\n        {\n          \"mode\": \"vertical\",\n          \"pair\": [\n            \"COMMON1\",\n            \"COMMON2\"\n          ],\n          \"minutes\": 3.0,\n          \"horizontal_nm\": 0.0,\n          \"vertical_ft\": 2048.0\n        },\n        {\n          \"mode\": \"vertical boundary\",\n          \"pair\": [\n            \"COMMON1\",\n            \"COMMON2\"\n          ],\n          \"minutes\": 3.0,\n          \"horizontal_nm\": 0.0,\n          \"vertical_ft\": 500.0\n        }\n      ]\n    },\n    {\n      \"name\": \"one-flight and running worlds hide stale forecasts; reset and pause restore them\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"320x568 touch exploration and responsive charts\",\n      \"status\": \"passed\",\n      \"cursor\": \"230.504587155963\"\n    }\n  ],\n  \"failure\": null,\n  \"out\": \"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/encounter-owner-browser\"\n}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/frontend-tests.stderr.log",
+      "native_relative_path": "qualification/frontend-tests.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/frontend-tests.stdout.log",
+      "native_relative_path": "qualification/frontend-tests.stdout.log",
+      "bytes": 270,
+      "sha256": "cc0d96f417b31d90f98380ee6c8efe1a61ce18528a1c004ad4dedf35af81e7c3",
+      "git_blob": "0b31ed449c5981cc57e001c85872c95d089ce81d",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "\n> towerops-airspace-lab@0.1.0 test\n> vitest run --reporter=json --outputFile=/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/frontend-tests.json\n\nJSON report written to /tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/frontend-tests.json\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/independent-browser.stderr.log",
+      "native_relative_path": "qualification/independent-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/independent-browser.stdout.log",
+      "native_relative_path": "qualification/independent-browser.stdout.log",
+      "bytes": 1694,
+      "sha256": "9ac7264f06e180711be53c66ec9e344d9444395a963fe1b6467eabb259561ae1",
+      "git_blob": "addcd4a9b7b1abd9a3f38e51401581d1dd983d0f",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\"name\":\"clock_freshness_reaches_actual_python_gate\",\"clock_controls\":[{\"label\":\"stale\",\"now\":1012.75,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: stale_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"future\",\"now\":995,\"observed_at\":1000,\"proposal\":\"GATE REJECTED: future_state. No state transition was applied.\",\"world_unchanged\":true},{\"label\":\"fresh\",\"now\":1002,\"world_version\":2,\"proposal\":\"Simulated setpoint applied. No projected conflict remains in the policy window.\"}],\"same_world_three_clock_controls\":true,\"passed\":true,\"elapsed_ms\":2970}\n{\"name\":\"new_scenario_discards_prior_audit_verification_result\",\"previous_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"loaded_verdict\":\"\",\"loaded_event_list\":\"\",\"loaded_audit_status\":\"0 EVENTS / VALID\",\"old_authority_buttons_cleared\":true,\"passed\":true,\"elapsed_ms\":2076}\n{\"name\":\"file_bytes_preserve_signed_zero_policy_selection_and_clock\",\"download_sha256\":\"38f7cee1e8440265c200eeb597fe6860b936d5620eb87c07963dbff2025ae2e6\",\"imported_world_version\":41,\"edited_world_version\":42,\"signed_zero_retained\":true,\"unedited_aircraft_retained\":true,\"passed\":true,\"elapsed_ms\":1057}\n{\"name\":\"approval_change_invalidates_review_without_erasing_approval\",\"prior_review_cannot_be_applied\":true,\"valid_approval_still_applies\":true,\"passed\":true,\"elapsed_ms\":2080}\n{\"name\":\"late_file_read_cannot_replace_completed_native_readback\",\"completed_world_version\":2,\"late_read_held\":true,\"audit_status\":\"4 EVENTS / VALID\",\"passed\":true,\"elapsed_ms\":1927}\n{\"name\":\"selected_edit_cancel_retains_draft_and_pending_decision\",\"draft_retained\":true,\"pending_decision_retained\":true,\"stale_import_not_revived\":true,\"passed\":true,\"elapsed_ms\":2327}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/materialize-full-tree.stderr.log",
+      "native_relative_path": "qualification/materialize-full-tree.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/materialize-full-tree.stdout.log",
+      "native_relative_path": "qualification/materialize-full-tree.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/native-tests.stderr.log",
+      "native_relative_path": "qualification/native-tests.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/native-tests.stdout.log",
+      "native_relative_path": "qualification/native-tests.stdout.log",
+      "bytes": 285,
+      "sha256": "10c7a0db940c7f1eea043d47777384be7d740cf0dc5676786cf1a068ee1e57d3",
+      "git_blob": "0fb9cbedc3e03e3ae25947b071d110b048f4c731",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "........................................................................ [ 60%]\n................................................                         [100%]\n- generated xml file: /tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/native-tests.xml -\n120 passed in 1.06s\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/normal-build.stderr.log",
+      "native_relative_path": "qualification/normal-build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/normal-build.stdout.log",
+      "native_relative_path": "qualification/normal-build.stdout.log",
+      "bytes": 508,
+      "sha256": "e42c550c46f598b8b6054c698904241eedbc9f381afc688e3ea0c949dc8538b4",
+      "git_blob": "b51c6949da9c9144b07cffb6c842f20020259a97",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "\n> towerops-airspace-lab@0.1.0 build\n> node prepare-python.mjs && tsc --noEmit && vite build\n\nvite v8.3.3 building client environment for production...\ntransforming...\n✓ 23 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/python-worker-D9QUacUJ.js   4.41 kB\ndist/index.html                        16.89 kB │ gzip:  5.50 kB\ndist/assets/index-TucxfM67.css         21.82 kB │ gzip:  5.04 kB\ndist/assets/index-7rg_PNXs.js          63.02 kB │ gzip: 19.85 kB\n\n✓ built in 164ms\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/pending-browser.stderr.log",
+      "native_relative_path": "qualification/pending-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/pending-browser.stdout.log",
+      "native_relative_path": "qualification/pending-browser.stdout.log",
+      "bytes": 311,
+      "sha256": "77bb748e4bb7f120b81222c92470b3c21aa3a83ad954e0453ae154ecfa9d3581",
+      "git_blob": "bda13f50f88f3805ddad6cc2b41e030913625d71",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\"name\":\"pending_old_trace_verification_cannot_repaint_loaded_scenario\",\"old_verdict\":\"HASH CHAIN VALID - 4 EVENTS\",\"after_apply_verdict\":\"\",\"after_old_verification_completed\":\"\",\"real_digest_calls\":4,\"real_digest_completions\":4,\"source_edits\":false,\"hash_values_altered\":false,\"passed\":true,\"elapsed_ms\":2070}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/pr46-draft-browser.stderr.log",
+      "native_relative_path": "qualification/pr46-draft-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/pr46-draft-browser.stdout.log",
+      "native_relative_path": "qualification/pr46-draft-browser.stdout.log",
+      "bytes": 850,
+      "sha256": "098f79792a9cc0e0fd39c6c53b51551b4473bc043279fc1c1d871a3b9af5b900",
+      "git_blob": "382ce787369847d8967ba180be67fcaf15364a0f",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "PASS untouched editor follows the live world\nPASS paused flight selection preserves an authored valid JSON draft\nPASS loading after a focus-changing render applies the exact authored world\nPASS resizing preserves an unfinished invalid JSON draft\nPASS moving traffic preserves the blurred draft while the simulation continues\nPASS a rejected load keeps invalid text through a later render\nPASS explicit Export live world replaces the draft and restores live synchronization\nPASS valid direct load normalizes successfully and restores live synchronization\nPASS all observed browser paths are free from JavaScript exceptions\n{\"status\":\"passed\",\"passed\":9,\"failed\":0,\"pageErrors\":0,\"sourceChanged\":[],\"cleanup\":{\"status\":\"passed\",\"profileRemoved\":true},\"report\":\"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/pr46-draft-browser/browser-report.json\"}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/private-dependencies.stderr.log",
+      "native_relative_path": "qualification/private-dependencies.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/private-dependencies.stdout.log",
+      "native_relative_path": "qualification/private-dependencies.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/read-product-tree.stderr.log",
+      "native_relative_path": "qualification/read-product-tree.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/read-product-tree.stdout.log",
+      "native_relative_path": "qualification/read-product-tree.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/reference.stderr.log",
+      "native_relative_path": "qualification/reference.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/reference.stdout.log",
+      "native_relative_path": "qualification/reference.stdout.log",
+      "bytes": 45,
+      "sha256": "5b26499a084f0c377720453183a584f88665ffc32a507203715308791c9993f5",
+      "git_blob": "8cb320156de80ec059465564894403795f83ea4c",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "Python reference OK: 4 real-source scenarios\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/ruff.stderr.log",
+      "native_relative_path": "qualification/ruff.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/ruff.stdout.log",
+      "native_relative_path": "qualification/ruff.stdout.log",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "git_blob": "1f5f344d054fae10f39140fb7199c99321d9190a",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "All checks passed!\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/scenario-decision-browser.stderr.log",
+      "native_relative_path": "qualification/scenario-decision-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/scenario-decision-browser.stdout.log",
+      "native_relative_path": "qualification/scenario-decision-browser.stdout.log",
+      "bytes": 770,
+      "sha256": "46e5ffb1606b920484d1911300b700f68b31d0167cb72d2f8b8691c5f0875eb5",
+      "git_blob": "d3a35defc2ec6dd82bc6b781b3c35cd37750885b",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\"name\":\"scenario Apply clears the native current trace while an opened prior history remains read-only\",\"passed\":true,\"milliseconds\":2345,\"old_trace_sha256\":\"456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a\",\"old_event_count\":4,\"current_trace_after_scenario_load\":\"[]\",\"opened_report_is_named_history\":true,\"scenario_and_gates_unchanged_by_history_review\":true}\n{\"name\":\"native trace review invalidates a pending scenario import and preserves its live approved decision\",\"passed\":true,\"milliseconds\":2113,\"pending_import_invalidated\":true,\"approval_preserved\":true,\"native_readback_accepted\":true,\"new_world_version\":2}\n{\"passed\":2,\"total\":2,\"errors\":[],\"external\":[],\"out\":\"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-decision-browser\"}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/scenario-encounter-browser.stderr.log",
+      "native_relative_path": "qualification/scenario-encounter-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/scenario-encounter-browser.stdout.log",
+      "native_relative_path": "qualification/scenario-encounter-browser.stdout.log",
+      "bytes": 2987,
+      "sha256": "00f99eddf7ffacb8b8abf043a6ba28bc9bc6c7db31684abb02c98732ffe9235e",
+      "git_blob": "5808c225cb023f69cf32d47836dbce4e7ee31747",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\"name\":\"review preserves active forecast and approval; Apply refreshes a foreign pair and shorter horizon\",\"passed\":true,\"milliseconds\":2258,\"view\":{\"first\":\"A1\",\"second\":\"B2\",\"first_options\":[\"A1\",\"B2\",\"C3\"],\"second_options\":[\"B2\",\"C3\"],\"seconds\":120,\"max_seconds\":120,\"horizontal\":\"2.00 NM\",\"vertical\":\"0.0 FT\",\"source\":\"WORLD 73 · CURRENT PAUSED TRAFFIC\",\"message\":\"Forecasts hold both flights' current velocity and climb constant for 2.0 minutes. The live world, proposal and trace stay unchanged.\",\"hidden\":false,\"disabled\":[false,false,false,false,false,false]},\"review_kept_prior_approval\":true,\"apply_cleared_prior_approval\":true,\"resaved_selected_aircraft_id\":\"C3\"}\n{\"name\":\"same-call-sign replacement recomputes the chosen pair; one-flight load hides and recovery restores forecasts\",\"passed\":true,\"milliseconds\":1594,\"before\":{\"first\":\"B2\",\"second\":\"C3\",\"first_options\":[\"A1\",\"B2\",\"C3\"],\"second_options\":[\"A1\",\"C3\"],\"seconds\":60,\"max_seconds\":120,\"horizontal\":\"21.19 NM\",\"vertical\":\"1000.0 FT\",\"source\":\"WORLD 73 · CURRENT PAUSED TRAFFIC\",\"message\":\"Forecasts hold both flights' current velocity and climb constant for 2.0 minutes. The live world, proposal and trace stay unchanged.\",\"hidden\":false,\"disabled\":[false,false,false,true,false,false]},\"after\":{\"first\":\"B2\",\"second\":\"C3\",\"first_options\":[\"C3\",\"A1\",\"B2\"],\"second_options\":[\"C3\",\"A1\"],\"seconds\":60,\"max_seconds\":480,\"horizontal\":\"22.00 NM\",\"vertical\":\"3750.0 FT\",\"source\":\"WORLD 74 · CURRENT PAUSED TRAFFIC\",\"message\":\"Forecasts hold both flights' current velocity and climb constant for 8.0 minutes. The live world, proposal and trace stay unchanged.\",\"hidden\":false,\"disabled\":[false,false,false,true,false,false]},\"singleton\":{\"first\":\"C3\",\"second\":\"\",\"first_options\":[\"C3\"],\"second_options\":[],\"seconds\":60,\"max_seconds\":480,\"horizontal\":\"22.00 NM\",\"vertical\":\"3750.0 FT\",\"source\":\"WORLD 74 · CURRENT PAUSED TRAFFIC\",\"message\":\"Add a second flight to compare an encounter.\",\"hidden\":true,\"disabled\":[true,true,true,true,true,true]},\"restored\":{\"first\":\"C3\",\"second\":\"A1\",\"first_options\":[\"C3\",\"A1\",\"B2\"],\"second_options\":[\"A1\",\"B2\"],\"seconds\":60,\"max_seconds\":480,\"horizontal\":\"9.85 NM\",\"vertical\":\"2750.0 FT\",\"source\":\"WORLD 74 · CURRENT PAUSED TRAFFIC\",\"message\":\"Forecasts hold both flights' current velocity and climb constant for 8.0 minutes. The live world, proposal and trace stay unchanged.\",\"hidden\":false,\"disabled\":[false,false,false,true,false,false]}}\n{\"name\":\"run and pause immediately update both scenario import and encounter controls on a phone\",\"passed\":true,\"milliseconds\":870,\"moving\":{\"review_hidden\":true,\"load_disabled\":true,\"choose_disabled\":true,\"forecast_hidden\":true,\"cursor_disabled\":true},\"paused\":{\"load_disabled\":true,\"choose_disabled\":false,\"forecast_hidden\":false,\"cursor_disabled\":false},\"phone_width\":320,\"no_horizontal_overflow\":true}\n{\"passed\":3,\"total\":3,\"errors\":[],\"external\":[],\"out\":\"/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/scenario-encounter-browser\"}\n"
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/scenario-raw-draft-browser.stderr.log",
+      "native_relative_path": "qualification/scenario-raw-draft-browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": ""
+    },
+    {
+      "source_path": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/qualification/scenario-raw-draft-browser.stdout.log",
+      "native_relative_path": "qualification/scenario-raw-draft-browser.stdout.log",
+      "bytes": 2131,
+      "sha256": "71b1b1a4e1ae5a03ac42e0c9ed46706b2ad78039f612eb2650b4ef928a8a5d22",
+      "git_blob": "95ed92b2b88e25ee457b0567ff18688527002cb6",
+      "mode": "100644",
+      "encoding": "utf-8",
+      "content": "{\"name\":\"saved scenario reads the live world and preserves a separate draft through review and cancel\",\"passed\":true,\"seconds\":1.38,\"draft_sha256\":\"653cfed8ab3c02bc079e217642146d5213b0c41c878950d06039f873d9b8a757\",\"initial_download\":\"0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec\",\"after_cancel_download\":\"0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec\"}\n{\"name\":\"Apply restores actual world and policy, keeps the authored draft and explains its ownership\",\"passed\":true,\"seconds\":2.385,\"restored_download\":\"462a6669ca69a4d97566c08bfb4b8f6bcdafd8d8898a39070f9d61b965320362\",\"loaded_callsigns\":[\"TWR601\",\"TWR602\"],\"retained_draft_sha256\":\"cb8e6c511c09cbc0e9369bd663bcc85f8e46484d616004e87b349cb22686e25d\",\"feedback\":\"Loaded scenario with 2 aircraft at version 73. Your raw JSON draft is still kept. Use Export live world to replace it.\",\"pristine_feedback_unchanged\":true}\n{\"name\":\"successful raw Load invalidates reviewed scenario even for an identical world value\",\"passed\":true,\"seconds\":1.517,\"raw_world_sha256\":\"3a14d9c9ef35423e832c13fc6a899ee2b064ef8531f4c207014af498436387e3\",\"review_invalidated_for\":[\"changed-world\",\"same-world-new-load\"]}\n{\"name\":\"failed raw Load retains review; explicit Export restores live synchronization after scenario Apply\",\"passed\":true,\"seconds\":1.622,\"failed_draft_sha256\":\"cd3f82a5dc806bd5aef71783690c1db62f7f4726fc7974c4effbe70d8599741b\",\"review_preserved_after_refusal\":true,\"restored_after_export\":{\"version\":73,\"observed_at\":1002,\"aircraft\":[{\"aircraft_id\":\"TWR601\",\"x_nm\":0,\"y_nm\":0,\"altitude_ft\":11000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR602\",\"x_nm\":9,\"y_nm\":0,\"altitude_ft\":11000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"live_after_change\":{\"version\":74,\"observed_at\":1002,\"aircraft\":[{\"aircraft_id\":\"TWR601\",\"x_nm\":0,\"y_nm\":0,\"altitude_ft\":11000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR602\",\"x_nm\":9,\"y_nm\":0,\"altitude_ft\":11000,\"vx_nm_min\":0,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"TWR820\",\"x_nm\":0,\"y_nm\":-5,\"altitude_ft\":10000,\"vx_nm_min\":0,\"vy_nm_min\":1,\"climb_ft_min\":0}]}}\n"
+    }
+  ]
+}

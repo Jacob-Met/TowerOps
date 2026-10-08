@@ -1,0 +1,22 @@
+{
+  "schema": "towerops.scenario-alternatives-independent-process.v1",
+  "phase": "initial-composition",
+  "started_utc": "2026-10-08T14:01:43.150433+00:00",
+  "ended_utc": "2026-10-08T14:01:49.349056+00:00",
+  "seconds": 6.198470792034641,
+  "command": [
+    "node",
+    "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/independent_alternative_reset.mjs",
+    "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-source-build-pin.json",
+    "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/initial-browser"
+  ],
+  "exit_code": 1,
+  "receiver_sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+  "root_input_manifest": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/initial-source-build-pin.json",
+  "root_input_manifest_sha256": "022805ce6de15626e92fdfa6daac13349191085d7655e7cd6b35c63dc168e0e6",
+  "free_before_bytes": 7478427648,
+  "free_after_bytes": 7700865024,
+  "node_path": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules",
+  "source_or_build_edits": false,
+  "browser_groups": 2
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-08T13:50:56.581055+00:00",
+  "receiver": "/tmp/towerops-alternative-scenario-review-cf5799f6d38b-fnf5jzcy/independent_alternative_reset.mjs",
+  "sha256": "f1ff675481cb14a30868f6c106bde719aefdb26144688cce3828a299cebbcf0c",
+  "bytes": 14632,
+  "syntax_exit": 0,
+  "syntax_stdout": "",
+  "syntax_stderr": "",
+  "browser_executed": false,
+  "awaiting_root_source_pin": true
+}

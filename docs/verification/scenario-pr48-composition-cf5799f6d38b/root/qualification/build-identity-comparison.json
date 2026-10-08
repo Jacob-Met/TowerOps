@@ -1,0 +1,8 @@
+{
+  "prior_pin_sha256": "90b7ad5fd94cdcf7c465f51fd92b4fd0639ec1da8b738aa901d9f8fd829712ba",
+  "prior_build": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-reset/web/airspace/dist",
+  "normal_build": "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/publication-qualified/web/airspace/dist",
+  "file_count": 16,
+  "byte_identical": true,
+  "differences": []
+}

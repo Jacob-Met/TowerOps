@@ -1,0 +1,101 @@
+from pathlib import Path
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+import time
+
+root = Path("/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj")
+initial = root / "candidate-initial"
+repo = root / "candidate-reset"
+initial_tree = "f4bc1ce05953dde6a33cea8588033fea9e18c5c4"
+base = "093f88b29d6e1ede778f967528c7e010b7689ab1"
+env = {**os.environ, "GIT_OPTIONAL_LOCKS": "0", "PYTHONDONTWRITEBYTECODE": "1",
+       "NODE_PATH": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules"}
+records = []
+def run(name, command, cwd, required=True):
+    start = time.monotonic()
+    with (root / (name + ".stdout.log")).open("xb") as stdout, (root / (name + ".stderr.log")).open("xb") as stderr:
+        result = subprocess.run(command, cwd=cwd, env=env, stdout=stdout, stderr=stderr, timeout=300)
+    receipt = {"name": name, "command": command, "cwd": str(cwd), "exit_code": result.returncode,
+               "seconds": round(time.monotonic()-start, 3)}
+    records.append(receipt)
+    (root / "reset-process-receipt.json").write_text(json.dumps(records, indent=2) + "\n")
+    print(json.dumps(receipt), flush=True)
+    if result.returncode and required:
+        print((root / (name + ".stderr.log")).read_text(errors="replace")[-4000:], flush=True)
+        raise SystemExit(result.returncode)
+def git(*args):
+    return subprocess.check_output(["git", *args], cwd=repo, env=env)
+print(json.dumps({"free_bytes": shutil.disk_usage(root).free}), flush=True)
+assert not repo.exists()
+run("reset-clone", ["git", "clone", "--shared", "--no-checkout", str(initial), str(repo)], root)
+run("reset-checkout", ["git", "checkout", "--detach", base], repo)
+run("reset-read-initial-tree", ["git", "read-tree", "--reset", "-u", initial_tree], repo)
+assert git("write-tree").decode().strip() == initial_tree
+main = repo / "web/airspace/src/main.ts"
+before_main = main.read_bytes()
+needle = b" running=false;lastFrame=0;trafficSeq=0;audit=new AuditLog();pythonAudit='[]';\n"
+assert before_main.count(needle) == 1
+after_main = before_main.replace(needle, needle + b" optionsReview=null;optionsStatus='Saved scenario loaded. Review alternatives before choosing a proposal.';\n")
+old_message = b"Saved scenario loaded. Run the planner on its restored world and policy before approval and readback."
+new_message = b"Saved scenario loaded. Run the planner or review alternatives before approval and readback."
+assert after_main.count(old_message) == 1
+after_main = after_main.replace(old_message, new_message)
+old_announcement = b"Saved scenario loaded. Traffic is paused. Previous proposals and decision trace cleared."
+new_announcement = b"Saved scenario loaded. Traffic is paused. Previous proposals, alternatives and decision trace cleared."
+assert after_main.count(old_announcement) == 1
+after_main = after_main.replace(old_announcement, new_announcement)
+main.write_bytes(after_main)
+readme = repo / "web/airspace/README.md"
+before_readme = readme.read_bytes()
+old_paragraph = b"Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Run the existing planner, approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history."
+new_paragraph = b"Loading restores the saved world and settings together. Traffic starts paused, with no pending proposal or approval and an empty decision trace. Loading also clears any earlier alternatives review, even when the saved values are identical. Run the existing planner or **Review alternatives**, then use the approval and readback workflow to produce a new simulated decision. Files do not resume or grant an earlier approval, and they do not contain the old audit history."
+assert before_readme.count(old_paragraph) == 1
+readme.write_bytes(before_readme.replace(old_paragraph, new_paragraph))
+git("add", "--", "web/airspace/src/main.ts", "web/airspace/README.md")
+tree = git("write-tree").decode().strip()
+patch = git("diff", "--binary", initial_tree, tree)
+(root / "alternative-reset.patch").write_bytes(patch)
+initial_pin = json.loads((root / "initial-source-build-pin.json").read_bytes())
+files = []
+for entry in initial_pin["source_files"]:
+    path = entry["path"]
+    data = (repo / path).read_bytes()
+    mode = format((repo / path).stat().st_mode & 0o777, "o")
+    assert (mode[-3:] == "755") == (entry["mode"] == "100755"), path
+    blob = hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
+    if path not in {"web/airspace/src/main.ts", "web/airspace/README.md"}:
+        assert blob == entry["git_blob"], path
+    files.append({**entry, "git_blob": blob, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
+manifest = {key: value for key, value in initial_pin.items() if key not in {"build_root", "build_files"}}
+manifest.update({"source_root": str(repo), "source_tree": tree, "source_files": files,
+                 "predecessor_tree": initial_tree, "other_249_files_unchanged": True,
+                 "stage": "Scenario-load alternative review reset, awaiting unchanged independent receiving.",
+                 "correction": "Clear the prior alternative review and its status during explicit scenario Load; native snapshot-value equality and all PR48 modules remain unchanged."})
+manifest_path = root / "reset-source-manifest.json"
+manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
+link = repo / "web/airspace/node_modules"
+assert not link.exists()
+link.symlink_to(initial / "web/airspace/node_modules", target_is_directory=True)
+print(json.dumps({"source_tree": tree, "source_files": len(files),
+                  "manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
+                  "patch_sha256": hashlib.sha256(patch).hexdigest()}), flush=True)
+run("reset-build", ["npm", "run", "build", "--", "--configLoader", "native"], repo / "web/airspace")
+build_root = repo / "web/airspace/dist"
+build_files = []
+for file in sorted(build_root.rglob("*")):
+    if file.is_file():
+        data = file.read_bytes()
+        build_files.append({"path": str(file.relative_to(build_root)), "bytes": len(data),
+                            "sha256": hashlib.sha256(data).hexdigest()})
+for entry in files:
+    assert hashlib.sha256((repo / entry["path"]).read_bytes()).hexdigest() == entry["sha256"], entry["path"]
+assert git("write-tree").decode().strip() == tree
+pin = {**manifest, "build_root": str(build_root), "build_files": build_files}
+pin_path = root / "reset-source-build-pin.json"
+pin_path.write_text(json.dumps(pin, indent=2) + "\n")
+print(json.dumps({"pin": str(pin_path), "pin_sha256": hashlib.sha256(pin_path.read_bytes()).hexdigest(),
+                  "source_tree": tree, "source_files": len(files), "build_files": len(build_files)}), flush=True)
+print(patch.decode(), flush=True)

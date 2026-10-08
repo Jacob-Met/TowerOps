@@ -1,0 +1,23 @@
+Process started with PID 62979 (shell: /bin/zsh)
+Initial output:
+{"name": "clone-shared", "command": ["git", "clone", "--shared", "--no-checkout", "/tmp/towerops-root-advisory-cf5799f6d38b-8zg02jnj/candidate-initial", "/private/tmp/towerops-pr48-maintained-cf5799f6d38b-rg1i1qhw/baseline"], "cwd": "/private/tmp/towerops-pr48-maintained-cf5799f6d38b-rg1i1qhw", "exit_code": 0, "seconds": 0.167}
+Traceback (most recent call last):
+  File "/tmp/towerops-pr48-maintained-cf5799f6d38b-rg1i1qhw/receive_baseline.py", line 104, in <module>
+    required("checkout-exact-base", ["git", "checkout", "--detach", COMMIT], BASELINE)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/towerops-pr48-maintained-cf5799f6d38b-rg1i1qhw/receive_baseline.py", line 55, in required
+    result = run(name, command, cwd, timeout)
+  File "/tmp/towerops-pr48-maintained-cf5799f6d38b-rg1i1qhw/receive_baseline.py", line 44, in run
+    (LOGS / (name + ".stdout.log")).write_bytes(result.stdout)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py", line 641, in write_bytes
+    with self.open(mode='wb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: '/private/tmp/towerops-pr48-maintained-cf5799f6d38b-rg1i1qhw/baseline-logs/checkout-exact-base.stdout.log'
+
+✅ Process 62979 has finished execution
+
+[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]
