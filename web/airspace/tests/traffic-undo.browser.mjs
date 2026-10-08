@@ -22,7 +22,11 @@ assert.equal(fs.existsSync(output),false,'receiving output must be a new private
 await mkdir(output,{recursive:true});
 const sha=data=>createHash('sha256').update(data).digest('hex');
 const sourceFiles=[...new Set(execFileSync('git',['-C',root,'ls-files','--cached','--others','--exclude-standard','-z'],{encoding:'utf8'}).split('\0').filter(Boolean))];
-const snapshot=()=>Object.fromEntries(sourceFiles.map(path=>[path,sha(fs.readFileSync(join(root,path)))]));
+const snapshot=()=>Object.fromEntries(sourceFiles.map(path=>{
+ const file=join(root,path);
+ const bytes=fs.lstatSync(file).isSymbolicLink()?Buffer.from('symlink\0'+fs.readlinkSync(file)):fs.readFileSync(file);
+ return [path,sha(bytes)];
+}));
 const beforeSource=snapshot();
 function filesBelow(path,base=path){
  return fs.readdirSync(path,{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?filesBelow(join(path,entry.name),base):[{path:join(path,entry.name).slice(base.length+1),sha256:sha(fs.readFileSync(join(path,entry.name))),bytes:fs.statSync(join(path,entry.name)).size}]);
@@ -40,7 +44,7 @@ const server=createServer((req,res)=>{
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const base='http://127.0.0.1:'+server.address().port;
 const profile=await mkdtemp(join(output,'profile-'));
-const report={kind:'traffic-undo-actual-built-browser',receiverSha256:sha(await readFile(fileURLToPath(import.meta.url))),root,built,base,node:process.version,startedAt:new Date().toISOString(),baseCommit:execFileSync('git',['-C',root,'rev-parse','HEAD'],{encoding:'utf8'}).trim(),baseTree:execFileSync('git',['-C',root,'rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim(),sourceBefore:beforeSource,buildBefore:beforeBuild,checks:[],observations:[],pageErrors:[],requests:[],downloads:[],inputMethod:'Native CDP mouse events and Input.insertText after explicit DOM focus/selection; no product function or worker-result substitute.'};
+const report={kind:'traffic-undo-actual-built-browser',receiverSha256:sha(await readFile(fileURLToPath(import.meta.url))),root,built,base,node:process.version,startedAt:new Date().toISOString(),baseCommit:execFileSync('git',['-C',root,'rev-parse','HEAD'],{encoding:'utf8'}).trim(),baseTree:execFileSync('git',['-C',root,'rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim(),sourceBefore:beforeSource,sourceInventory:'Regular-file bytes; symbolic-link target bytes prefixed by symlink NUL, without traversal.',buildBefore:beforeBuild,checks:[],observations:[],pageErrors:[],requests:[],downloads:[],inputMethod:'Native CDP mouse events and Input.insertText after explicit DOM focus/selection; no product function or worker-result substitute.'};
 let browser,browserClosed,socket,sessionId,browserLog='',sequence=0;
 const pending=new Map(),sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function waitFor(check,label,attempts=200){let last;for(let i=0;i<attempts;i++){try{if(await check())return;}catch(error){last=error;}await sleep(100);}throw Error('Timed out: '+label+(last?' '+last.message:''));}
