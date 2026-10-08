@@ -11,12 +11,18 @@ from dataclasses import asdict, replace
 from pathlib import Path
 from typing import Any
 
-from plan_world import MAX_WORLD_BYTES, _argument_number, _check_policy, _number, parse_world
+from plan_world import (
+    MAX_WORLD_BYTES,
+    _argument_number,
+    _check_policy,
+    _number,
+    parse_world,
+)
 from towerops import Aircraft, SafetyPolicy
 
 
 def _separation(
-    first: Aircraft, second: Aircraft, policy: SafetyPolicy, minutes: int | float,
+    first: Aircraft, second: Aircraft, policy: SafetyPolicy, minutes: float,
 ) -> dict[str, Any]:
     # Use relative motion, as the existing browser encounter consumer does.
     # Large shared motion must not erase the pair's initial separation.
@@ -42,7 +48,7 @@ def _separation(
 
 def inspect_encounter(
     raw: bytes, first: str, second: str, *,
-    at_min: int | float = 0, policy: SafetyPolicy | None = None,
+    at_min: float = 0, policy: SafetyPolicy | None = None,
 ) -> dict[str, Any]:
     """Explain a chosen pair using the unchanged native analytical intervals.
 

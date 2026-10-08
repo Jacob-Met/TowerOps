@@ -21,11 +21,11 @@ from towerops import AdvisoryPlanner, ControlRoom, SafetyPolicy
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def world_bytes(altitude: int | float = 12000, **second_changes: int | float) -> bytes:
-    first = dict(
-        aircraft_id="A", x_nm=0, y_nm=0, altitude_ft=10000,
-        vx_nm_min=0, vy_nm_min=0, climb_ft_min=0,
-    )
+def world_bytes(altitude: float = 12000, **second_changes: float) -> bytes:
+    first = {
+        "aircraft_id": "A", "x_nm": 0, "y_nm": 0, "altitude_ft": 10000,
+        "vx_nm_min": 0, "vy_nm_min": 0, "climb_ft_min": 0,
+    }
     second = {
         **first, "aircraft_id": "B", "x_nm": 6, "altitude_ft": altitude,
         "vx_nm_min": -4, "climb_ft_min": -1000, **second_changes,
@@ -161,25 +161,21 @@ class EncounterTests(unittest.TestCase):
 
     def test_unknown_same_or_invalid_selected_identifiers(self):
         for first, second in [("A", "missing"), ("missing", "A"), ("a", "B"), ("A", "A"), (None, "B"), ("A", ["B"])]:
-            with self.subTest(first=first, second=second):
-                with self.assertRaises((ValueError, TypeError)):
-                    inspect_encounter(world_bytes(), first, second)
+            with self.subTest(first=first, second=second), self.assertRaises((ValueError, TypeError)):
+                inspect_encounter(world_bytes(), first, second)
 
     def test_cursor_and_policy_refusals(self):
         for cursor in [-1, 5.00001, True, "1", None, float("nan"), float("inf")]:
-            with self.subTest(cursor=cursor):
-                with self.assertRaises(ValueError):
-                    inspect_encounter(world_bytes(), "A", "B", at_min=cursor)
+            with self.subTest(cursor=cursor), self.assertRaises(ValueError):
+                inspect_encounter(world_bytes(), "A", "B", at_min=cursor)
         for policy in [False, replace(SafetyPolicy(), horizon_min=0), replace(SafetyPolicy(), min_horizontal_nm=float("inf"))]:
-            with self.subTest(policy=policy):
-                with self.assertRaises((ValueError, TypeError)):
-                    inspect_encounter(world_bytes(), "A", "B", policy=policy)
+            with self.subTest(policy=policy), self.assertRaises((ValueError, TypeError)):
+                inspect_encounter(world_bytes(), "A", "B", policy=policy)
 
     def test_existing_complete_world_admission_is_retained(self):
         for raw in [b"{}", b"\xff", b'{"version":1,"version":2}', b" "*(MAX_WORLD_BYTES+1), world_bytes()+b"bad"]:
-            with self.subTest(raw=raw[:80]):
-                with self.assertRaises((ValueError, TypeError)):
-                    inspect_encounter(raw, "A", "B")
+            with self.subTest(raw=raw[:80]), self.assertRaises((ValueError, TypeError)):
+                inspect_encounter(raw, "A", "B")
 
 
 class CliTests(unittest.TestCase):
