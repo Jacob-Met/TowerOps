@@ -1,0 +1,120 @@
+"""Bounded immutable source preservation for the TowerOps receiver."""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import subprocess
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+MODIFIED = {
+    "web/airspace/README.md", "web/airspace/index.html", "web/airspace/prepare-python.mjs",
+    "web/airspace/src/main.ts", "web/airspace/src/python-worker.ts", "web/airspace/style.css",
+}
+ADDED = {
+    "advisory_options.py", "tests/test_advisory_options.py", "tools/check_advisory_options_browser.py",
+    "web/airspace/src/advisory-options.ts", "web/airspace/src/advisory-review.ts",
+    "web/airspace/tests/advisory-options.test.ts",
+}
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repo", type=Path, required=True)
+    parser.add_argument("--source", required=True)
+    args = parser.parse_args()
+    assert re.fullmatch("[0-9a-f]{40}", args.source)
+    repo = args.repo.resolve()
+    primary = json.loads((ROOT / "current-main-tree.json").read_text())
+    git = lambda *values: subprocess.check_output(["git", "-C", str(repo), *values])
+
+    def leaves(revision):
+        answer = {}
+        for raw in git("ls-tree", "-rz", revision).split(b"\0"):
+            if not raw:
+                continue
+            metadata, path = raw.split(b"\t", 1)
+            mode, kind, blob = metadata.decode().split()
+            answer[path.decode()] = {"mode": mode, "type": kind, "sha": blob}
+        return answer
+
+    before, after = leaves(primary["main"]), leaves(args.source)
+    actual_primary = {row["path"]: {key: row[key] for key in ("mode", "type", "sha")} for row in primary["leaves"]}
+    assert before == actual_primary and not primary["truncated"]
+    assert git("rev-parse", primary["main"] + "^{tree}").decode().strip() == primary["tree"]
+    git("merge-base", "--is-ancestor", primary["main"], args.source)
+    modified = {path for path in before if before[path] != after.get(path)}
+    added = set(after) - set(before)
+    assert modified == MODIFIED, modified
+    assert added == ADDED, added
+    assert not set(before) - set(after)
+    # All scenario, encounter, trace, bridge lifecycle, fixture, dependency,
+    # workflow and original Python leaves stay in the full preserved set.
+    preserved = sorted(set(before) - modified)
+    assert all(before[path] == after[path] for path in preserved)
+    old = lambda path: git("show", primary["main"] + ":" + path)
+    new = lambda path: git("show", args.source + ":" + path)
+    assert new("towerops.py") == (ROOT / "base/towerops.py").read_bytes()
+
+    # main.ts receives only added lines. Every original current-main line and
+    # the complete original approval/readback/apply and Reset bodies remain.
+    main_before, main_after = old("web/airspace/src/main.ts"), new("web/airspace/src/main.ts")
+    cursor = iter(main_after.splitlines())
+    assert all(any(candidate == line for candidate in cursor) for line in main_before.splitlines())
+    exact_functions = []
+    for name in ("runPlanner", "approvePlan", "acceptReadback", "resetWorld", "loadWorld", "perturbTrack", "updatePolicy"):
+        line = next(line for line in main_before.splitlines() if re.search(rb"(?:async )?function " + name.encode() + rb"\(", line))
+        assert line in main_after.splitlines(), name
+        exact_functions.append(name)
+    # The original Python plan/apply bridge and original-byte audit transport
+    # are a single unchanged block after the new options branch.
+    worker_before, worker_after = old("web/airspace/src/python-worker.ts"), new("web/airspace/src/python-worker.ts")
+    start = b"    if q['op'] == 'plan':"
+    stop = b"\n`);"
+    bridge_before = worker_before[worker_before.index(start):worker_before.index(stop)]
+    bridge_after = worker_after[worker_after.index(start):worker_after.index(stop)]
+    assert bridge_before == bridge_after
+    assert old("web/airspace/src/python.ts") == new("web/airspace/src/python.ts")
+    assert old("web/airspace/style.css") in new("web/airspace/style.css")
+    # Existing HTML differs only by the added launcher and its own complete
+    # panel. This preserves the landed encounter explorer markup exactly.
+    html = new("web/airspace/index.html")
+    launcher = b'<button id="review-options" class="button button-wide button-quiet" aria-controls="advisory-review">Review alternatives</button>'
+    assert html.count(launcher) == 1
+    html = html.replace(launcher, b"")
+    start_panel = html.index(b'<section id="advisory-review"')
+    end_panel = html.index(b"</section>\n", start_panel) + len(b"</section>\n")
+    html = html[:start_panel] + html[end_panel:]
+    assert html == old("web/airspace/index.html")
+
+    source_manifest = []
+    for path in sorted(modified | added):
+        body = new(path)
+        assert (repo / path).read_bytes() == body
+        source_manifest.append({"path": path, **after[path], "bytes": len(body), "sha256": hashlib.sha256(body).hexdigest()})
+    receipt = {
+        "observed_at": datetime.now(timezone.utc).isoformat(), "repository": "Jacob-Met/TowerOps",
+        "source": args.source, "tree": git("rev-parse", args.source + "^{tree}").decode().strip(),
+        "parents": git("show", "-s", "--format=%P", args.source).decode().split(),
+        "primary_main": primary["main"], "primary_tree": primary["tree"],
+        "primary_leaves": len(before), "source_leaves": len(after),
+        "preserved_parent_leaf_count": len(preserved), "preserved_parent_paths": preserved,
+        "source_manifest": source_manifest, "original_main_lines_in_order": True,
+        "exact_main_function_lines": exact_functions, "original_plan_apply_bridge_exact": True,
+        "original_html_after_removing_own_panel_exact": True,
+        "original_python_sha256": hashlib.sha256(new("towerops.py")).hexdigest(),
+        "original_plan_apply_bridge_sha256": hashlib.sha256(bridge_after).hexdigest(),
+        "workflow_paths": sorted(path for path in before if path.startswith(".github/workflows/")),
+        "agents_paths": sorted(path for path in before if Path(path).name == "AGENTS.md"),
+        "driver_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "scope": "Immutable complete-tree preservation and narrow inspected source blocks; no native or browser test run in this receipt.",
+    }
+    (ROOT / "source-readback.json").write_text(json.dumps(receipt, indent=2) + "\n")
+    print(json.dumps({key: receipt[key] for key in ("source", "tree", "primary_main", "primary_leaves", "source_leaves", "preserved_parent_leaf_count")}, indent=2))
+
+
+if __name__ == "__main__":
+    main()

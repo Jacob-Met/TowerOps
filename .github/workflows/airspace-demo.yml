@@ -2,9 +2,9 @@ name: TowerOps Airspace Lab
 on:
   push:
     branches: [main]
-    paths: [towerops.py, audit_replay.py, decision_trace.py, scenarios.py, tools/generate_airspace_reference.py, tools/verify_decision_trace.mjs, web/airspace/**, .github/workflows/airspace-demo.yml]
+    paths: [towerops.py, advisory_options.py, audit_replay.py, decision_trace.py, scenarios.py, tools/generate_airspace_reference.py, tools/verify_decision_trace.mjs, web/airspace/**, .github/workflows/airspace-demo.yml]
   pull_request:
-    paths: [towerops.py, audit_replay.py, decision_trace.py, scenarios.py, tools/generate_airspace_reference.py, tools/verify_decision_trace.mjs, web/airspace/**, .github/workflows/airspace-demo.yml]
+    paths: [towerops.py, advisory_options.py, audit_replay.py, decision_trace.py, scenarios.py, tools/generate_airspace_reference.py, tools/verify_decision_trace.mjs, web/airspace/**, .github/workflows/airspace-demo.yml]
   workflow_dispatch:
 permissions:
   contents: read

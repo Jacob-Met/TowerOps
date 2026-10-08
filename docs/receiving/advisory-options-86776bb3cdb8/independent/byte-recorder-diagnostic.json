@@ -1,0 +1,7 @@
+{
+  "source_sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+  "unlabelled_response_body_sha256": "43073ce09074b0929ea353771464b0e0c76510cde599a368d3eeffc38486e101",
+  "source_decoded_cp1252_then_utf8_sha256": "43073ce09074b0929ea353771464b0e0c76510cde599a368d3eeffc38486e101",
+  "completed_flow_count": 3,
+  "diagnosis": "CDP response.body fallback decoding of text/x-python without charset; exact original and dist files match. The actual worker Response.text uses UTF-8."
+}

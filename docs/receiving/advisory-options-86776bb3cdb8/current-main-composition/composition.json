@@ -1,0 +1,86 @@
+{
+  "repository": "Jacob-Met/TowerOps",
+  "base": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "accepted_package": "0e375e3489889355e6c516b4b44ab1800d9acf01",
+  "accepted_package_tree": "27266cda962ef2c4c92a3cae3931b423c0067b17",
+  "owner_pr": 42,
+  "owner_head": "1a75394d52ce2ed56567c3b4035dedcd6cea1c97",
+  "current_main": "9a2468f9bbaa25c0ab92cb12f712170420f9e622",
+  "current_main_tree": "07cb60b0a501ec3ae66f3e5391f54ff11614f849",
+  "owner_head_tree_equals_actual_main": true,
+  "local_head": "8a1cb235aea0fb7684b0d36013dfbe5b0f7dedd7",
+  "tree": "332da64ce4364a7d0daeba15ea70fd681b6d8ba5",
+  "parents": [
+    "0e375e3489889355e6c516b4b44ab1800d9acf01",
+    "9a2468f9bbaa25c0ab92cb12f712170420f9e622"
+  ],
+  "leaves": 201,
+  "resolved_conflicts": [
+    {
+      "path": "web/airspace/prepare-python.mjs",
+      "conflicts": 1,
+      "resolution": "Retain both adjacent parent additions literally, in ours-then-main order."
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "conflicts": 2,
+      "resolution": "Retain both adjacent parent additions literally, in ours-then-main order."
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "conflicts": 1,
+      "resolution": "Keep both exact optional loader guards; removing either reproduces the other parent dispatcher line byte-for-byte."
+    }
+  ],
+  "workflow_variants": [
+    {
+      "name": "main",
+      "parent": "0e375e3489889355e6c516b4b44ab1800d9acf01",
+      "before_blob": "7cafaa92cc7a08c97db20397edac8f46e01ad2d6",
+      "after_blob": "4d7ce747f1afa8afc191889acfe379113e9cae53",
+      "sha256": "47cd62814dc3764754f9ba8790ab2e8fbf3d503af1df24930326bd8d6654405d",
+      "tree": "3c797a7f98197eb9a8f8e5a8f7f89b46ec01b0d8",
+      "leaves": 192,
+      "preserved_leaves": 191,
+      "disposition": "Historical final-package overlay only; do not publish over current main."
+    },
+    {
+      "name": "owner-pr42",
+      "parent": "1a75394d52ce2ed56567c3b4035dedcd6cea1c97",
+      "before_blob": "03e96daeaf2d1147000b54d9be04af3b40869fb3",
+      "after_blob": "24356d4f5ce88f21cc1a27329b06df351e156810",
+      "sha256": "42a4f4bb235b11600dfbb317300792f450ef4afd8912df88d0105ac268f87c7b",
+      "tree": "f5616480346e261f2e37aba0dfaf57e647430ec8",
+      "leaves": 149,
+      "preserved_leaves": 148,
+      "disposition": "Current-main-compatible owner-preserving trigger supplement."
+    }
+  ],
+  "preservation": {
+    "exact_parent_path_union": true,
+    "dropped_paths": [],
+    "unchanged_accepted_package_leaves": 186,
+    "unchanged_current_main_leaves": 142,
+    "accepted_package_changed_paths": [
+      ".github/workflows/airspace-demo.yml",
+      "web/airspace/README.md",
+      "web/airspace/index.html",
+      "web/airspace/prepare-python.mjs",
+      "web/airspace/src/main.ts",
+      "web/airspace/src/python-worker.ts"
+    ],
+    "current_main_changed_paths": [
+      ".github/workflows/airspace-demo.yml",
+      "web/airspace/README.md",
+      "web/airspace/index.html",
+      "web/airspace/prepare-python.mjs",
+      "web/airspace/src/main.ts",
+      "web/airspace/src/python-worker.ts",
+      "web/airspace/style.css"
+    ],
+    "all_46_accepted_evidence_leaves_unchanged": true,
+    "all_pr42_added_source_and_evidence_leaves_unchanged": true
+  },
+  "validation_scope": "Exact Git object/byte composition only here; qualified original suites are not rerun or reattributed to this new head.",
+  "remote_writes": false
+}

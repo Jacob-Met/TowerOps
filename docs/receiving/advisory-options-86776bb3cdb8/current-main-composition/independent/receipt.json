@@ -1,0 +1,504 @@
+{
+  "source": "8a1cb235aea0fb7684b0d36013dfbe5b0f7dedd7",
+  "tree": "332da64ce4364a7d0daeba15ea70fd681b6d8ba5",
+  "observed_at": "2026-10-08T12:22:03.662441+00:00",
+  "driver_sha256": "bf295fa033f8ded4244fb9f7ff3ca79a652538fc11d2287b6f918141f8160b4c",
+  "source_files": [
+    {
+      "path": "advisory_options.py",
+      "blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "path": "audit_replay.py",
+      "blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+    },
+    {
+      "path": "decision_trace.py",
+      "blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+    },
+    {
+      "path": "tools/check_advisory_options_browser.py",
+      "blob": "9746bd30b3ca2fb2b0a56db45a461c0f2884afaa",
+      "sha256": "e5862ba28e8e23354eaa635175759e67c5d929ebda871f96d0df116729e3049f"
+    },
+    {
+      "path": "tools/verify_decision_trace.mjs",
+      "blob": "7fdbdebaadfa141b948a1029a9c6d4ea9dc286ef",
+      "sha256": "27affb1f6f54029582506967e5587676dcad37054c2cab8bcfe7be6d86fad9e8"
+    },
+    {
+      "path": "towerops.py",
+      "blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    {
+      "path": "web/airspace/index.html",
+      "blob": "fb2b2c2b9f0b1f1ea31c14191af328ef09d9e1ec",
+      "sha256": "80acac2fadc82c049af4e553a52f2c9b3f7cc06b7d585954b056e957a28d0ed5"
+    },
+    {
+      "path": "web/airspace/package-lock.json",
+      "blob": "9d81d64088a09bf36ce116b67bf48eefc4fe7c27",
+      "sha256": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655"
+    },
+    {
+      "path": "web/airspace/package.json",
+      "blob": "836291c282e63943575c82dfaeaf653d278b48a1",
+      "sha256": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd"
+    },
+    {
+      "path": "web/airspace/prepare-python.mjs",
+      "blob": "5f816785223c30353f84d8c180e789d021b39a7b",
+      "sha256": "e67ea0d07b7043fc191b4bb4473ff6b45ba7f173eeec294c2f43ace429c61484"
+    },
+    {
+      "path": "web/airspace/src/actuation.ts",
+      "blob": "33e2c27481069712484bec409f5cbf2f23d8922f",
+      "sha256": "a6a3186003cbd7fdcba6e7bc0847c9abfa4ba5174d3c98ce2da651941360dcfb"
+    },
+    {
+      "path": "web/airspace/src/advisory-options.ts",
+      "blob": "18d9a51c359007a39ed76352ce245f8a70c1f6c7",
+      "sha256": "4b001ebf546e10761906c19e09af5ef19967e45d994c1b090d376cad695ea976"
+    },
+    {
+      "path": "web/airspace/src/advisory-review.ts",
+      "blob": "5e31db5369be3294a0404667614520f58ab6dfe9",
+      "sha256": "45c170f976ffc886db49aef120361cbabc99884f63b3f017fc7a0c7b9923ed3e"
+    },
+    {
+      "path": "web/airspace/src/audit.ts",
+      "blob": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b",
+      "sha256": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075"
+    },
+    {
+      "path": "web/airspace/src/core.ts",
+      "blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+      "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac"
+    },
+    {
+      "path": "web/airspace/src/decision-trace.css",
+      "blob": "b1c82719ccc80cec69667003b7d007a0e6dfec52",
+      "sha256": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e"
+    },
+    {
+      "path": "web/airspace/src/decision-trace.ts",
+      "blob": "83fa2809dc0e375b8f8982387fdb8845bea721c3",
+      "sha256": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce"
+    },
+    {
+      "path": "web/airspace/src/draw.ts",
+      "blob": "1cbdddb0ee7e4bab181992e5b6b20baea725b433",
+      "sha256": "75ed074644787c22d5c067e96b4dab852401a367b3d2ad5211f30913238319dc"
+    },
+    {
+      "path": "web/airspace/src/encounter-view.ts",
+      "blob": "d31fa0ec6bb6c620e7f36f37db06d6f3726e336b",
+      "sha256": "329ac5994841291b3922702f035fac4d03766ae522eb52b807954f4d5ad508c4"
+    },
+    {
+      "path": "web/airspace/src/encounter.ts",
+      "blob": "3620b0d81d745d8e5b467e5d3823bf5c0de31b21",
+      "sha256": "efd010d007c8b63830d09fdda9bf8724316803937e373f44fd7f504ff1355883"
+    },
+    {
+      "path": "web/airspace/src/gate.ts",
+      "blob": "cd17b5191110ea47ee7771745b877fb8b65597a9",
+      "sha256": "3f135cabba46d9b6316475424841e543b5f7488a70d85cba25be5cd8cf5e8c8a"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "blob": "13668cc84da77ee1c0c0c2b70f80ba59e7d2444b",
+      "sha256": "c4118bad76a423bf1e7a52038543e26de8f48984cb5f8ed0959d37cdb5211f48"
+    },
+    {
+      "path": "web/airspace/src/maneuvers.ts",
+      "blob": "bbe70e521c80e60123eb3ecc93e687e6bc576276",
+      "sha256": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d"
+    },
+    {
+      "path": "web/airspace/src/planner.ts",
+      "blob": "82082fa50cbec1a0d30d377bb4cd3e1a67416d5e",
+      "sha256": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74"
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "blob": "b1c4218b2abd5d444687d0b728bce70509df8b01",
+      "sha256": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987"
+    },
+    {
+      "path": "web/airspace/src/python.ts",
+      "blob": "ef32ef39aa6c3bf7196c05fe10840f3c297156ce",
+      "sha256": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c"
+    },
+    {
+      "path": "web/airspace/src/track-edit.ts",
+      "blob": "ff3668979df28a70f848078356a096dd876cf692",
+      "sha256": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046"
+    },
+    {
+      "path": "web/airspace/src/world-tools.ts",
+      "blob": "8e308d78c19389a6881aace8d22412e93557f066",
+      "sha256": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115"
+    },
+    {
+      "path": "web/airspace/style.css",
+      "blob": "90dd61e262edd381a7ac9449e3643cc3dac65083",
+      "sha256": "9abb24f39088be588aff941dc1a456cb9cdf27fbb085d1514b68900b934dbe8f"
+    }
+  ],
+  "build_files": [
+    {
+      "path": "assets/index-BHHse_Io.css",
+      "bytes": 20856,
+      "sha256": "15c8901b2335cfbe0fa49187ebaa7a30cfbe959bfa5be22fa2727d2e840af009"
+    },
+    {
+      "path": "assets/index-DqIHl7Kw.js",
+      "bytes": 54738,
+      "sha256": "ae6b1e55b39658e3b5c576a4396c8692df23a04406a8dbade8cc15ce700efe37"
+    },
+    {
+      "path": "assets/python-worker-D9QUacUJ.js",
+      "bytes": 4419,
+      "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804"
+    },
+    {
+      "path": "captures/airspace-desktop.png",
+      "bytes": 391153,
+      "sha256": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7"
+    },
+    {
+      "path": "captures/airspace-mobile.png",
+      "bytes": 190636,
+      "sha256": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 15485,
+      "sha256": "f2058d27d0538454196501a86866d963ccfa6c3c58c9f32855532b089e4f8931"
+    },
+    {
+      "path": "python/advisory_options.py",
+      "bytes": 2380,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "path": "python/audit_replay.py",
+      "bytes": 7927,
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+    },
+    {
+      "path": "python/decision_trace.py",
+      "bytes": 2099,
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+    },
+    {
+      "path": "python/pyodide-lock.json",
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "python/pyodide.asm.js",
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "python/pyodide.asm.wasm",
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "python/pyodide.mjs",
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "python/python_stdlib.zip",
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "python/towerops.py",
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    }
+  ],
+  "product_build_receipt_sha256": "5943a144bc7eb184c554ed89128c98f9838bf2d78b51a04609cc5757fe8b7de9",
+  "passed": true,
+  "cases": [
+    {
+      "name": "nondefault native option through fresh approval, apply and adopted trace review/download/reopen",
+      "native_option_count": 68,
+      "selected": {
+        "aircraft_id": "TWR419",
+        "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+        "set_vx_nm_min": -1,
+        "set_vy_nm_min": -2,
+        "set_climb_ft_min": 0,
+        "issued_at": 1002,
+        "expires_at": 1010,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48"
+      },
+      "original_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+      "apply_request": {
+        "op": "apply",
+        "state": {
+          "aircraft": [
+            {
+              "aircraft_id": "TWR218",
+              "altitude_ft": 10000,
+              "climb_ft_min": 0,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "x_nm": -5,
+              "y_nm": 0
+            },
+            {
+              "aircraft_id": "TWR419",
+              "altitude_ft": 10000,
+              "climb_ft_min": 0,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "x_nm": 5,
+              "y_nm": 0
+            }
+          ],
+          "observed_at": 1000,
+          "version": 1
+        },
+        "advisory": {
+          "aircraft_id": "TWR419",
+          "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": -2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48"
+        },
+        "approval": {
+          "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+          "decision": "approve",
+          "approved_at": 1002.2,
+          "approver": "synthetic-controller"
+        },
+        "ack": {
+          "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+          "status": "accepted",
+          "acknowledged_at": 1002.4
+        },
+        "now": 1002.5,
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "audit_json": "[]"
+      },
+      "apply_response": {
+        "id": 3,
+        "result": {
+          "state": {
+            "version": 2,
+            "observed_at": 1002.5,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "x_nm": -5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "x_nm": 5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": -1,
+                "vy_nm_min": -2,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "valid": true,
+          "events": [
+            {
+              "seq": 0,
+              "kind": "screen_pass",
+              "payload": {
+                "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+                "advisory_hashes": [
+                  "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48"
+                ]
+              },
+              "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+              "event_hash": "1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e"
+            },
+            {
+              "seq": 1,
+              "kind": "approval",
+              "payload": {
+                "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+                "decision": "approve",
+                "approved_at": 1002.2,
+                "approver": "synthetic-controller"
+              },
+              "prev_hash": "1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e",
+              "event_hash": "38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947"
+            },
+            {
+              "seq": 2,
+              "kind": "ack",
+              "payload": {
+                "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+                "status": "accepted",
+                "acknowledged_at": 1002.4
+              },
+              "prev_hash": "38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947",
+              "event_hash": "5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e"
+            },
+            {
+              "seq": 3,
+              "kind": "simulated_actuation",
+              "payload": {
+                "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+                "before_world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+                "after_world_hash": "63593d6b064cab708ed180912ec00c29cb0d3e269713679cf4915e4076ef72db"
+              },
+              "prev_hash": "5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e",
+              "event_hash": "db47bb834909be3bc572afa9539d8249dc1d9ca87fabd1b738eb81bb5c6b2a32"
+            }
+          ],
+          "audit_canonical": [
+            "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\"],\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+            "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\",\"approved_at\":1002.2,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e\",\"seq\":1}",
+            "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":1002.4,\"advisory_hash\":\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\",\"status\":\"accepted\"},\"prev_hash\":\"38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947\",\"seq\":2}",
+            "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\",\"after_world_hash\":\"63593d6b064cab708ed180912ec00c29cb0d3e269713679cf4915e4076ef72db\",\"before_world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e\",\"seq\":3}"
+          ],
+          "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"1d1f721afedb81c5c8308b9515cadc5266863c94c20dda4b090cc8c06211bc4e\", \"event_hash\": \"38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"38a16e853d060972353ea4d60fd2076a1348122fe84f4b70895c74704010d947\", \"event_hash\": \"5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"63593d6b064cab708ed180912ec00c29cb0d3e269713679cf4915e4076ef72db\"}, \"prev_hash\": \"5625d634cbab44fd0f68c7b29db092cbec5302bab4f38b1864368b0b7cbd026e\", \"event_hash\": \"db47bb834909be3bc572afa9539d8249dc1d9ca87fabd1b738eb81bb5c6b2a32\"}]"
+        }
+      },
+      "trace_report": {
+        "chain_valid": true,
+        "ok": true,
+        "event_count": 4,
+        "advisories": [
+          {
+            "advisory_hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+            "screen_seq": 0,
+            "screen_world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+            "approval_seq": 1,
+            "approver": "synthetic-controller",
+            "ack_seq": 2,
+            "actuations": [
+              {
+                "seq": 3,
+                "before_world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+                "after_world_hash": "63593d6b064cab708ed180912ec00c29cb0d3e269713679cf4915e4076ef72db"
+              }
+            ],
+            "issues": []
+          }
+        ],
+        "rejects": [],
+        "issues": []
+      },
+      "trace_bytes_preserved": true,
+      "live_state_preserved_during_trace_review": true
+    },
+    {
+      "name": "optional alternatives download failure preserves original native planner",
+      "authored_http_status": 503,
+      "refused_requests": [
+        "http://127.0.0.1:35611/python/advisory_options.py"
+      ],
+      "options_error": {
+        "id": 1,
+        "error": "Error: TowerOps alternatives source could not load"
+      },
+      "plan_request": {
+        "op": "plan",
+        "state": {
+          "aircraft": [
+            {
+              "aircraft_id": "TWR218",
+              "altitude_ft": 10000,
+              "climb_ft_min": 0,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "x_nm": -5,
+              "y_nm": 0
+            },
+            {
+              "aircraft_id": "TWR419",
+              "altitude_ft": 10000,
+              "climb_ft_min": 0,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "x_nm": 5,
+              "y_nm": 0
+            }
+          ],
+          "observed_at": 1000,
+          "version": 1
+        },
+        "now": 1002,
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        }
+      },
+      "plan_response": {
+        "id": 2,
+        "result": {
+          "advisory": {
+            "aircraft_id": "TWR419",
+            "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+            "set_vx_nm_min": -1,
+            "set_vy_nm_min": 2,
+            "set_climb_ft_min": 0,
+            "issued_at": 1002,
+            "expires_at": 1010,
+            "rationale": "synthetic projected-separation recovery",
+            "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+          }
+        }
+      },
+      "original_plan_identity_preserved": true
+    }
+  ],
+  "page_errors": [],
+  "unexpected_network": [],
+  "loaded_native_sources": {
+    "combined/towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "combined/advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "combined/audit_replay.py": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+    "combined/decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "missing-alternatives/towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+  },
+  "browser": "153.0.8010.0",
+  "source_and_build_unchanged": true,
+  "worker_transcript_sha256": "b510ad0e8772981f202c6e3ed336dd05ca76727ca882cc08656b193ea211bcf6"
+}

@@ -1,0 +1,139 @@
+{
+  "source": "8a1cb235aea0fb7684b0d36013dfbe5b0f7dedd7",
+  "tree": "332da64ce4364a7d0daeba15ea70fd681b6d8ba5",
+  "typescript": "5.7.3",
+  "source_files_on_disk_verified": 201,
+  "checks": [
+    {
+      "path": "web/airspace/src/main.ts",
+      "parent": "0e375e3489889355e6c516b4b44ab1800d9acf01",
+      "unchanged_top_level_statements": 80
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "parent": "9a2468f9bbaa25c0ab92cb12f712170420f9e622",
+      "unchanged_top_level_statements": 75
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "parent": "0e375e3489889355e6c516b4b44ab1800d9acf01",
+      "unchanged_top_level_statements": 3
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "parent": "9a2468f9bbaa25c0ab92cb12f712170420f9e622",
+      "unchanged_top_level_statements": 3
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "render_exact_parent_reductions": true
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "complete_python_function_and_dispatcher_exact_parent_reductions": true,
+      "trace_dispatch_precedes_state_access": true,
+      "plan_apply_and_audit_bodies_unchanged": true
+    },
+    {
+      "path": "web/airspace/prepare-python.mjs",
+      "both_native_copy_routes_literal_and_reversible": true
+    },
+    {
+      "readme_exact_parent_reductions": true,
+      "html_parent_ids_preserved_and_unique": 106
+    }
+  ],
+  "build_command": "npm run build",
+  "build_exit_code": 0,
+  "build_log_sha256": "075e2b12a099918316193e56fbd19836acc36a623aeb98b88f0ad07e2085e745",
+  "initial_build_failure": {
+    "cause": "ENOSPC copying the unchanged Pyodide runtime",
+    "log_sha256": "7b240fb0057ceee6b1d1829bd8b3355b0d1b7c9900370bdee009e786c689cf81",
+    "recovery": "Removed only unused musl binaries from our own copied dependency cache on this glibc host; reran the unchanged native build."
+  },
+  "build_files": [
+    {
+      "path": "assets/index-BHHse_Io.css",
+      "bytes": 20856,
+      "sha256": "15c8901b2335cfbe0fa49187ebaa7a30cfbe959bfa5be22fa2727d2e840af009"
+    },
+    {
+      "path": "assets/index-DqIHl7Kw.js",
+      "bytes": 54738,
+      "sha256": "ae6b1e55b39658e3b5c576a4396c8692df23a04406a8dbade8cc15ce700efe37"
+    },
+    {
+      "path": "assets/python-worker-D9QUacUJ.js",
+      "bytes": 4419,
+      "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804"
+    },
+    {
+      "path": "captures/airspace-desktop.png",
+      "bytes": 391153,
+      "sha256": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7"
+    },
+    {
+      "path": "captures/airspace-mobile.png",
+      "bytes": 190636,
+      "sha256": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 15485,
+      "sha256": "f2058d27d0538454196501a86866d963ccfa6c3c58c9f32855532b089e4f8931"
+    },
+    {
+      "path": "python/advisory_options.py",
+      "bytes": 2380,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "path": "python/audit_replay.py",
+      "bytes": 7927,
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+    },
+    {
+      "path": "python/decision_trace.py",
+      "bytes": 2099,
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+    },
+    {
+      "path": "python/pyodide-lock.json",
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "path": "python/pyodide.asm.js",
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "path": "python/pyodide.asm.wasm",
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "path": "python/pyodide.mjs",
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "path": "python/python_stdlib.zip",
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "path": "python/towerops.py",
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    }
+  ],
+  "bundled_native_files_match_source": true,
+  "accepted_suites_rerun": false,
+  "new_browser_check": "Separately assigned to engine receiver; no result claimed here."
+}

@@ -1,0 +1,853 @@
+{
+  "repository": "Jacob-Met/TowerOps",
+  "main": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "tree": "e50e0f2c6302be0b5a1d90fed7fffa2a197bd321",
+  "parents": [
+    "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+    "36a4f119a3c7468166a5cff4010675ea39ed70ba"
+  ],
+  "truncated": false,
+  "leaves": [
+    {
+      "path": ".github/dependabot.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5eb47c5ff20015db585ad3a59532fe440e1f11ad"
+    },
+    {
+      "path": ".github/workflows/airspace-demo.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cafaa92cc7a08c97db20397edac8f46e01ad2d6"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4791e16741c2ee136585d8f4d99f918535a3a017"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3dd31ab07eca887ec969f35996ff2f0a2d789db"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63e584ab028b42d159078aca5c893c247dce0bd9"
+    },
+    {
+      "path": "EXPLORER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "177f7e55002eabfee7a7f54846d063bb3dc9371f"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d091d5ee1cc4b8fc2d2f6e2f360a9f1edf6912a"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31d4c6b1c2e5c84e0fc532be81278097ddd2b95f"
+    },
+    {
+      "path": "audit_replay.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540"
+    },
+    {
+      "path": "browser_acceptance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "638d032972880f4d688cdcb877df855f5977532c"
+    },
+    {
+      "path": "demo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8d99a8b5b7152f048afc65e8d620e8370df07ed"
+    },
+    {
+      "path": "docs/RUNBOOK.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "316ce5ea4637ea2d3954d403c1776b87a21949c1"
+    },
+    {
+      "path": "docs/qualification/audit-integer-times-20261008-68094585a1c2/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2bbe263823bed58d4845cda50e2117b2b48ed97"
+    },
+    {
+      "path": "docs/qualification/audit-integer-times-20261008-68094585a1c2/baseline-native-interop.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e22f8700a43931ccb62d3cdccdda2a40e6271e1"
+    },
+    {
+      "path": "docs/qualification/audit-integer-times-20261008-68094585a1c2/candidate-build.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b30498a2c87bbda6d66dac5e8e892d1748696d6"
+    },
+    {
+      "path": "docs/qualification/audit-integer-times-20261008-68094585a1c2/candidate-tests.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bc7eb2e256a6513eb6a716acb681db770cebb69"
+    },
+    {
+      "path": "docs/qualification/audit-integer-times-20261008-68094585a1c2/source-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af71ca5eeb250a554aa96c786c6c3762923fea00"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d96474054f86a8d4adefb7bfba3810e423dc293a"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/base-browser.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58196b751dc3c011bbf483f8907e2c01f1c407e7"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/browser-receiver.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8389444df814679e33cae73352afdad924546f7"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/candidate-browser.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a359cade9e563aead5a4a029f0090f1edf9bf7a8"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/combined-browser.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67bdafe554a5299543966fc0dae8acc1e5cf42bc"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/combined-build-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "718d671660d27e20998fe0104c685bf75c667c5a"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/combined-build.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b215e6bb02d31ac0aa9859dbc2d1ae68a5ea52cc"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/combined-receiving.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a132b56ece46470f51d7c4cf6ac746751055a39"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/combined-source-pins.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ae39a59f4f67e3fc5bef9180ef8a56c6e763445"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/combined-verification.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e28f06075400cdf731db462b76f8f6291826f568"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/differential-cases.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60f97694d244c0cf1129090f68dc5e28942ddbd8"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/differential-python-results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1bfdfc3583aa74aa64a14239a903490072428af"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/differential-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc130262006ae60fafd728489d16672f95ab93bb"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/differential-typescript-results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3f5432ee6cdd3a235a8a4c3132a1660f6dbbf72"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/final-composition.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be28669f6d68450b059668ab696b7001da899425"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/native-verification.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5587d314f1b04efb9ca12823074f505cd72a5d95"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/qualified-build-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0d40be3819ae66bdb4e5e93f079718234b872cb"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/typescript-baseline.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcf57ba0c233d12cdb768dd09d23570d642fecc6"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/typescript-candidate.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccf783d4f7fb3d42e7d5a5ef75c8610b14f49bf2"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/verification.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23f8f289cd7b1e66fbd3992336baae35a47a4330"
+    },
+    {
+      "path": "docs/qualification/numeric-admission-8304-20261008/worker-cases.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0962906c4012255b05ddb9aab127cdf1180ee892"
+    },
+    {
+      "path": "docs/qualification/numeric-canonical-parity-68094585a1c2/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc6466dc9621248cf7933ff483f78ed0df968503"
+    },
+    {
+      "path": "docs/qualification/numeric-canonical-parity-68094585a1c2/evidence.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd06096d4ce534112041d2ad026fcca208f43643"
+    },
+    {
+      "path": "docs/qualification/numeric-canonical-parity-68094585a1c2/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eff3daa0ef949e4203c0b6af8d39baaf9b2ec9e"
+    },
+    {
+      "path": "docs/qualification/python-audit-wire-31366547c1f5/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cbc8fa9ede7e23b952ddb482731b0616496f957"
+    },
+    {
+      "path": "docs/qualification/towerops-audit-interop-receiving-68094585a1c2/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7677cdef1e1661c5a7bf5b2a28e08966bca98f8c"
+    },
+    {
+      "path": "docs/qualification/towerops-audit-interop-receiving-68094585a1c2/evidence.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "143e7a87cd2197ee606b43888d81a7b517ff8c76"
+    },
+    {
+      "path": "docs/qualification/towerops-audit-interop-receiving-68094585a1c2/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15e6a780031ff83ea7754394c1d7733827af448a"
+    },
+    {
+      "path": "docs/receipts/advisory-numeric-candidate-8304-20261008.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d07d890fc38b8680d52c41dd96a4c217b82880ea"
+    },
+    {
+      "path": "docs/receipts/selected-flight-edit-20261008.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f37e9afeee209c08e21fa5c83f5d00a605fc0723"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6556bbb815ed9668adf60d0c70321ae471d894b6"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f3efca81267b96e01af2670c7f83120c0f0ed13"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/browser-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5fd9a9618e6556a561a17070117c4b43a0cbb5a"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/browser-receiving.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87e7f98c90f19be30a7e54e25d49010e45d1a3c6"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/browser.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00c35e828b922e2aa55e8180f715f55e44581a8d"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/desktop-preview.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4bb8bc1f37e3163dc8c333484c141c3612831fa"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/history/machine-specific-v2/browser-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5811422b0b5bc31573973cd9df4f0dfcc9ec055a"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/history/machine-specific-v2/browser-receiving.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce6b59363b92bfd383aa4d2221bb0f912ed6103b"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/history/machine-specific-v2/browser.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f2ff5935d5f33d1606fb825f1bfdce14b2f63b8"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c19bd1289635e686284bc7b9f87fea8d1c7c5b22"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/mobile-preview.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17857b16a7c31de4534b0c564004f1eac4712d74"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/native-build.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "920318fab0c177d03b80d792206c214625684106"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/native-vitest.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ec05b9df83214c85a4337a3e0eb03286a10ae2a"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/receiving-candidate.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b7136f6582a43a4d27a6f3af6810d46ed6ec268"
+    },
+    {
+      "path": "docs/verification/selected-flight-edit/transport-attempts.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f78b98d3e418e9a550b4afbb007999992682fb44"
+    },
+    {
+      "path": "explorer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d19e5bf1bd2991b076d7166fc2280b7f1d312d9a"
+    },
+    {
+      "path": "presentation/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "652f019730dcd4d9a606109030c6207ebef50905"
+    },
+    {
+      "path": "presentation/architecture.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53fdb575c830ea1cc82d7b4a66cd976ecbd9b261"
+    },
+    {
+      "path": "presentation/assets/architecture.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0192d29f91e27c68e27f595cf80fb31073bd365b"
+    },
+    {
+      "path": "presentation/assets/ui-desktop-approved.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9de1f02ec4fec964d0879ce1b2618ddff390e7a"
+    },
+    {
+      "path": "presentation/assets/ui-desktop-late_ack.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a5bff9841b3edefd4308add0b966cf5c95027cc"
+    },
+    {
+      "path": "presentation/assets/ui-desktop-missing_ack.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eec0da231d4448dc63b511a8eb0af17f9ce98140"
+    },
+    {
+      "path": "presentation/assets/ui-mobile-approved.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c60fca867cf106efbfd9993ea4d6c932f6b44bb4"
+    },
+    {
+      "path": "presentation/assets/ui-mobile-late_ack.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c464c058a682fece042893b6ef9b1d6d665cc78f"
+    },
+    {
+      "path": "presentation/assets/ui-mobile-missing_ack.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8a0b5afa620bf171067f0f8505f7b430e9d5452"
+    },
+    {
+      "path": "presentation/build_assets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4698f2812d2d1cd77514830c7b17f5a6a34e32a"
+    },
+    {
+      "path": "presentation/build_pack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d27a7c7695f59de5afdae5594dc01f441157b3a1"
+    },
+    {
+      "path": "presentation/captions.srt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b54d2107e291fb6ce073a4d192f2d4a1e64f943"
+    },
+    {
+      "path": "presentation/check_claims.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14c7a8d55bbf1573c7f0675d493957a376ad2e22"
+    },
+    {
+      "path": "presentation/claims-map.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc875ed327f174f345d67b21f9fd29b3c8cf4373"
+    },
+    {
+      "path": "presentation/demo-script.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f118ba18236bb76f6dcb0ab9e8fb05ce0686a100"
+    },
+    {
+      "path": "presentation/devpost-description.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "301d59785920c0a06013cfca99fa9cb082066757"
+    },
+    {
+      "path": "presentation/shot-list.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9116d57a17a15f3f9e9fae4125134d3e993b8f8c"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d775089b685609b7bdbb05c8ccff6226f9761ebd"
+    },
+    {
+      "path": "scenarios.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b"
+    },
+    {
+      "path": "strands_adapter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01bc26d2d3d34dcac6787ab7b57a15c2f5837cb8"
+    },
+    {
+      "path": "test_explorer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51f7de9067a733d11649684d799417d66c84c36d"
+    },
+    {
+      "path": "tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9e42910cce31f47992b2d9f88786d1120033545"
+    },
+    {
+      "path": "tests/test_advisory_numeric_candidate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f10dfdd31816ea27f10d2bc6268b1d82a6aa7ed1"
+    },
+    {
+      "path": "tests/test_audit_chain.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9d7cec517e978a45aac15b7e6f3d70a10a7ac42"
+    },
+    {
+      "path": "tests/test_audit_replay.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dec0d4ae0b54283a6c64ac7f92a9c9e2d65e0dd"
+    },
+    {
+      "path": "tests/test_determinism.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72ba4f4dec9114a992e36a9f55494d2054085055"
+    },
+    {
+      "path": "tests/test_failclosed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfaf0a4692064a2f26a1479ef8215bb25012843f"
+    },
+    {
+      "path": "tests/test_nonfinite_failclosed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cd1ce635d3a128949bd08312094999c8c839bdf"
+    },
+    {
+      "path": "tests/test_planner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e6fcdb19ac438b36c3b2b5150989a96db45daef"
+    },
+    {
+      "path": "tests/test_planner_target.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c8aca58614e23be196edce07b6a3fbd7ed1e285"
+    },
+    {
+      "path": "tests/test_state_validation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2303369196e06965c2dc943430d8484af8a89357"
+    },
+    {
+      "path": "tools/capture_airspace.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c0f078d45eb99151fcd28c6688c039480542df9"
+    },
+    {
+      "path": "tools/generate_airspace_reference.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8be5631d8a36630933c0d782a33cf9d162c78ce7"
+    },
+    {
+      "path": "tools/verify_browser_python.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9072976649f1d7e78689cd38487d6e5222feb28d"
+    },
+    {
+      "path": "tools/verify_encounter_browser.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfef37643d4d7bfe84ba84eaaa21a6f5f425dc96"
+    },
+    {
+      "path": "towerops.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1"
+    },
+    {
+      "path": "web/airspace/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bbb2245b44a9b8ecbefe94d9e24a478c3fffb63"
+    },
+    {
+      "path": "web/airspace/.npmrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cab1cc56aa1525904e0b6171b685ee13fc28c91e"
+    },
+    {
+      "path": "web/airspace/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "869d7ae91902d202a6ff13fa66135de1b5f5818e"
+    },
+    {
+      "path": "web/airspace/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc94cb48912f23b6282be14556e16751241fbd4a"
+    },
+    {
+      "path": "web/airspace/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d81d64088a09bf36ce116b67bf48eefc4fe7c27"
+    },
+    {
+      "path": "web/airspace/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "836291c282e63943575c82dfaeaf653d278b48a1"
+    },
+    {
+      "path": "web/airspace/prepare-python.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f50ba4edb7e058be7196386fa3699605e8697f2"
+    },
+    {
+      "path": "web/airspace/public/captures/airspace-desktop.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd6e0d9fc6c7f07b52dd276b9df97bc0d9c34b02"
+    },
+    {
+      "path": "web/airspace/public/captures/airspace-mobile.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "012be9dac2dfd5560162755c9b462213bf241ae9"
+    },
+    {
+      "path": "web/airspace/public/favicon.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "498832ec27a0a0515bccc5650b70e94bc952f99d"
+    },
+    {
+      "path": "web/airspace/src/actuation.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33e2c27481069712484bec409f5cbf2f23d8922f"
+    },
+    {
+      "path": "web/airspace/src/audit.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b"
+    },
+    {
+      "path": "web/airspace/src/core.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2f51e37a8b8b6655831abe75b262092b6c0ade7"
+    },
+    {
+      "path": "web/airspace/src/draw.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cbdddb0ee7e4bab181992e5b6b20baea725b433"
+    },
+    {
+      "path": "web/airspace/src/encounter-view.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d31fa0ec6bb6c620e7f36f37db06d6f3726e336b"
+    },
+    {
+      "path": "web/airspace/src/encounter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3620b0d81d745d8e5b467e5d3823bf5c0de31b21"
+    },
+    {
+      "path": "web/airspace/src/gate.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd17b5191110ea47ee7771745b877fb8b65597a9"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77e1496b83c3f0a92ab1eea15e6b702013dd9e60"
+    },
+    {
+      "path": "web/airspace/src/maneuvers.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbe70e521c80e60123eb3ecc93e687e6bc576276"
+    },
+    {
+      "path": "web/airspace/src/planner.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82082fa50cbec1a0d30d377bb4cd3e1a67416d5e"
+    },
+    {
+      "path": "web/airspace/src/python-worker.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "688f4b0ba15fb86f89de07b39640603e4c860760"
+    },
+    {
+      "path": "web/airspace/src/python.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef32ef39aa6c3bf7196c05fe10840f3c297156ce"
+    },
+    {
+      "path": "web/airspace/src/track-edit.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff3668979df28a70f848078356a096dd876cf692"
+    },
+    {
+      "path": "web/airspace/src/world-tools.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e308d78c19389a6881aace8d22412e93557f066"
+    },
+    {
+      "path": "web/airspace/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63f0835c4e49ab5ce993b752cdec49afb39e426b"
+    },
+    {
+      "path": "web/airspace/tests/advisory-numeric.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7da0bf284bd167429cab0a3cff27bfad49c87a18"
+    },
+    {
+      "path": "web/airspace/tests/algorithm.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c6bca592af1f5d0613c37b241dec485bbfa2643"
+    },
+    {
+      "path": "web/airspace/tests/audit-wire.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47c1bbabe27c7e1773e092f59173a7c604952001"
+    },
+    {
+      "path": "web/airspace/tests/encounter.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fb7bf845b7796a3ac2c90f850f80006b8f9ea75"
+    },
+    {
+      "path": "web/airspace/tests/python-audit-interop.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47cf573b71eb42e1a77da59ec5a6ed168d1acda2"
+    },
+    {
+      "path": "web/airspace/tests/python-audit-wire.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28febf3c725e2761895f55628fd5483e32b48da9"
+    },
+    {
+      "path": "web/airspace/tests/python-float-parity.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7466b9213ecefe5ba3352ca9d0935fa9637532cf"
+    },
+    {
+      "path": "web/airspace/tests/python-reference.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65b017ab362097b161ec1f7c103b55a3c42941f1"
+    },
+    {
+      "path": "web/airspace/tests/track-edit.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c0812f94ff7d2dd9ff6a32f573ac28102ff10fe"
+    },
+    {
+      "path": "web/airspace/tests/world-tools.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08a2cd5bda3f11e6c375d6f4f7660e8d4c4d33e5"
+    },
+    {
+      "path": "web/airspace/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da1989ed943ad339db9c78e57ce2fe0268523c48"
+    },
+    {
+      "path": "web/airspace/vite.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a35e51e99a33873dafcca04f18bf2ca8df589f5"
+    },
+    {
+      "path": "web/app.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e1722a24196b81bad4f1c5837128d7113a96585"
+    },
+    {
+      "path": "web/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bc1ac6ba66826037b292832feef79b3f96c349b"
+    },
+    {
+      "path": "web/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb"
+    }
+  ],
+  "read_at_utc": "2026-10-08T11:45:13.203Z"
+}
