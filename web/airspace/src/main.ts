@@ -6,6 +6,7 @@ import { Aircraft,DEFAULT_POLICY,SafetyPolicy,WorldState,conflictPairs,projected
 import { createAircraft,conflictWindows,parseWorldState } from './world-tools';
 import { ScenarioFile, createScenario } from './scenario-file';
 import { connectScenarioFiles } from './scenario-ui';
+import { connectTrackCopy } from './track-copy-view';
 import { TrackEditInput,TrackEditPreview,TrackEditSession,applyTrackEdit,beginTrackEdit,previewTrackEdit } from './track-edit';
 import { Advisory } from './planner';
 import { towerPython } from './python';
@@ -40,6 +41,17 @@ const scenarioFiles=connectScenarioFiles({
  available:()=>!busy&&!trackEdit&&!running,
  load:loadSavedScenario,
 });
+const trackCopy=connectTrackCopy({
+ capture:()=>({world:state,policy,now,selected}),
+ context:()=>[state,policy,now,rate,selected,pending,approval,audit.events,pythonAudit,busy,trackEdit,running],
+ available:()=>!busy&&!trackEdit,
+ paused:()=>!running,
+ pause:pauseTraffic,
+ commit:(world,id)=>{
+  state=world;selected=id;clearPending('Flight copied. Run the planner on the changed world before approval and readback.');
+  announce(`${id} copied. Run the planner again.`);void render();
+ },
+});
 function loadSavedScenario(value:ScenarioFile):void {
  const restored=createScenario(value);
  state=restored.world;policy=restored.policy;now=restored.now;rate=restored.time_scale;selected=restored.selected_aircraft_id;
@@ -73,6 +85,7 @@ let proposalMessage='No proposal yet. The planner only returns a setpoint if it 
 async function render():Promise<void>{
  decisionTrace.setBusy(busy);
  scenarioFiles.refresh();
+ trackCopy.refresh();
  const pairs=conflictPairs(state,policy);drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);drawLists(pairs);
  encounterExplorer.update(state,policy,running);
  const badge=$('world-badge');badge.className=`badge ${pairs.length?'alert':'safe'}`;badge.textContent=pairs.length?'ACTION':'CLEAR';
@@ -227,5 +240,7 @@ $('edit-selected-track').addEventListener('click',startTrackEdit);$('preview-tra
 $('review-options').addEventListener('click',()=>void reviewAdvisoryOptions());
 $('close-options').addEventListener('click',()=>{$('advisory-review').hidden=true;$('review-options').focus();});
 for(const id of flightFields.filter(id=>id!=='flight-id'))$(id).addEventListener('input',invalidateTrackPreview);
+$('toggle-run').addEventListener('click',trackCopy.refresh);
+$('speed-range').addEventListener('input',trackCopy.refresh);
 function announce(message:string){setText('announcer',message);}
 window.addEventListener('resize',()=>void render());void render();requestAnimationFrame(frame);
