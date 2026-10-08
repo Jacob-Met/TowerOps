@@ -1,0 +1,204 @@
+{
+  "schema": "towerops-playback-receiving-continuation/v1",
+  "author": "estate-55e3e26c5905",
+  "repository": "Jacob-Met/TowerOps",
+  "publication_base": {
+    "commit": "0704ed42a4cf2a9edc4aa99853f8f53c14f0ffcc",
+    "tree": "ac06bbdb44c203a4214dadbb818439f1ac4b4279",
+    "leaves": 1081
+  },
+  "publication_scope": "Nine additive evidence files only. No runtime, source, build, workflow, installed app or hosted request is changed or performed by this continuation.",
+  "source_integration": {
+    "pr": 44,
+    "merge": "7865ffeda311b711b13f2d04fedeeef5c432017e",
+    "tree": "878ecf58ab8a99c77331aa99ff1278b902f3aa75",
+    "accepted_owned": 174,
+    "preserved_other_parent_leaves": 257,
+    "qualified_inputs": 60,
+    "closure": {
+      "id": 6064550229,
+      "html_url": "https://github.com/Jacob-Met/TowerOps/pull/44#issuecomment-6064550229",
+      "created_at": "2026-10-08T16:37:20Z",
+      "updated_at": "2026-10-08T16:37:20Z",
+      "body": "### Playback integration closed; current deployment receiving handed forward\n\nPR44 merged normally as `7865ffeda311b711b13f2d04fedeeef5c432017e`, actual tree `878ecf58ab8a99c77331aa99ff1278b902f3aa75`, with parents `53aa5048b6585aa08592d5513cfcf555a8bba018` and expected head `f538d9c8633a2b7901fe9d3cfdb1177f39592616`. Root readback accepted **174 owned leaves, all257 other actual-parent leaves, all60 qualified source/build inputs, and no unexpected path changes**.\n\nThe retained current093/0893 native cut passed all147 Vitest tests, baseline/candidate TypeScript and production builds, and the four original browser cases at desktop1280 and mobile390 with zero page errors or overflow. Reset after speed changes restores rate1 and the existing policy controls; policy/refused-flight auto-pause preserves the chosen speed for resume. Exact final PR Airspace run37798306543 and CI run37798306516 passed on synthetic merge `f56a1dca406ed0f756d690b6684433521763aeb1`, whose tree exactly equals the actual merge tree. That hosted CI included147 frontend tests,146 Python tests, four native Python/browser checks, eleven trace controls, lint and adapter checks. The immutable current/earlier source, original failures, native raw logs, PNGs and independent receipts are in this merge.\n\nActual main-push Pages run [37798915263](https://github.com/Jacob-Met/TowerOps/actions/runs/37798915263) also succeeded: build113385586679, deploy113386069706, selected artifact11560420141, successful deployment at15:22:05 UTC to the actual returned `http://jacobmetoyer.com/TowerOps/` URL. Its exact ZIP digest and all17 regular-file identities were independently read.\n\nBefore our single hosted receiving attempt, radar #53 and its test-only compatibility repair #55 advanced main. At16:02:05–16:02:06, the actual hosted HTML returned HTTP200/no redirects but differed from the older7865 artifact; the receiver refused before Chrome, with **zero browser cases and screenshots**. Root then identified that exact HTML hash against the newer selected artifact11561948285 for successful main5b3015/run37804950753. The observed page belongs to the newer deployed source; this is no new hosted playback result.\n\nCurrent corrected playback+radar public interaction receiving stays with the #55 owner. The exact deployment/document handoff is [comment6064334592](https://github.com/Jacob-Met/TowerOps/pull/55#issuecomment-6064334592). The failed older-artifact admission and newer-artifact identification are being preserved as continuation evidence, with the original qualified source and its outcomes unchanged."
+    }
+  },
+  "old_deployment": {
+    "run_id": 37798915263,
+    "attempt": 1,
+    "build_job": 113385586679,
+    "deploy_job": 113386069706,
+    "artifact_id": 11560420141,
+    "head": "7865ffeda311b711b13f2d04fedeeef5c432017e",
+    "success_utc": "2026-10-08T15:22:05.4641969Z",
+    "environment_url": "http://jacobmetoyer.com/TowerOps/",
+    "archive": {
+      "bytes": 6449591,
+      "sha256": "516bbc7a96dc242c023bf2d7cb221e5e5ecab8fe79d6c93e2a0167cf204642a5",
+      "provider_file_id": "file_00000000379c820e9957ac0d580bb4ef"
+    },
+    "access_history": "The direct signed CDN request returned403 before expiry. The original failure was retained. The documented first-party file materialization of the GitHub connector's file succeeded; no alternative account, host or spoofing was used."
+  },
+  "old_artifact_hosted_attempt": {
+    "requests": 1,
+    "request_utc": "2026-10-08T16:02:05.664Z",
+    "url": "http://jacobmetoyer.com/TowerOps/airspace/",
+    "status": 200,
+    "redirects": 0,
+    "bytes": 15485,
+    "expected_sha256": "5552cd180541440bffe40b13257ad985f9c86a848bbffcad7e4a41d094daae60",
+    "observed_sha256": "ea6f785d08a05249dcdcb648f7d8a9fa24c1cbe05a21b618a2aeba151b38ee2e",
+    "exit_code": 1,
+    "timed_out": false,
+    "browser_cases": 0,
+    "screenshots": 0,
+    "served_javascript_css_python_requests": 0,
+    "raw_html_saved": false
+  },
+  "newer_archive_match": {
+    "head": "5b3015567a01017245c5f715c1bce65e20a06138",
+    "tree": "89a7769301291fb66605eb0a4e45cc9ce285861a",
+    "run_id": 37804950753,
+    "attempt": 1,
+    "build_job": 113406670574,
+    "deploy_job": 113407257636,
+    "artifact_id": 11561948285,
+    "success_utc": "2026-10-08T15:58:48.3590659Z",
+    "environment_url": "http://jacobmetoyer.com/TowerOps/",
+    "archive": {
+      "bytes": 6450539,
+      "sha256": "96e88f7e5925ed04de48e81e55a8dc7979abb6e3c1921e75bf15d5e89b20edae",
+      "provider_file_id": "file_00000000265082308525b65928dc7a33"
+    },
+    "index_matches_received_streaming_hash": true,
+    "identity_limit": "The observed HTML exactly matches this selected artifact's HTML. This does not prove that the same HTML bytes could not occur in another release, or identify any served JS/CSS/Python bytes.",
+    "handoff": {
+      "id": 6064334592,
+      "html_url": "https://github.com/Jacob-Met/TowerOps/pull/55#issuecomment-6064334592",
+      "created_at": "2026-10-08T16:24:59Z",
+      "updated_at": "2026-10-08T16:24:59Z",
+      "body": "### Exact newer Pages document received — estate-55e3e26c5905\n\nThe public HTML observed during our already-prepared playback receiving attempt belongs to this corrected deployment.\n\n- Main `5b3015567a01017245c5f715c1bce65e20a06138`, tree `89a7769301291fb66605eb0a4e45cc9ce285861a`: actual main-push run [37804950753](https://github.com/Jacob-Met/TowerOps/actions/runs/37804950753), build `113406670574` and deploy `113407257636`, all successful. The actual deploy-pages payload selected artifact `11561948285` and that exact build version; success was reported at 15:58:48.3590659 UTC. Returned environment URL: `http://jacobmetoyer.com/TowerOps/`.\n- We independently received the selected artifact through the authenticated GitHub connector and documented first-party file materialization. Exact ZIP: 6,450,539 bytes, SHA256 `96e88f7e5925ed04de48e81e55a8dc7979abb6e3c1921e75bf15d5e89b20edae`, equal to the API digest. Inner tar: 14,581,760 bytes, SHA256 `a00b60a747e7eb07a38d0e2f26883c39292a392b49bf9f89855d5fb30945daa3`; 17 regular files. Unsafe, duplicate and nonregular leaf names were refused during mapping.\n- At 16:02:05–16:02:06 UTC, the single actual GET of `http://jacobmetoyer.com/TowerOps/airspace/` returned HTTP200, no redirects, 15,485 bytes, SHA256 `ea6f785d08a05249dcdcb648f7d8a9fa24c1cbe05a21b618a2aeba151b38ee2e`. This exactly matches **this artifact's index.html**. Observed Last-Modified was 15:58:44 GMT; ETag `\"6ac7bdb4-3c7d\"`.\n- The artifact's `assets/index-CLwLT_75.js` is 57,665 bytes, SHA256 `b6d32ffc38b4e2c405d62393adc67d632eda3f681c2648c823e1f39f312a09d1`, matching the native build recorded in this PR. That is an archive comparison; the receiving attempt did not request the served JS.\n\nThe attempt was deliberately bound to earlier merge7865/run37798915263/artifact11560420141, whose index SHA was `5552cd180541440bffe40b13257ad985f9c86a848bbffcad7e4a41d094daae60`. Its document admission therefore refused before Chrome launched: exit1, no timeout, **zero browser cases or screenshots**. The failure and exact receiver/input/source/build custody are independently received and retained. It is a deployment-identity change, with the returned document now positively identified; it supplies no new playback or radar interaction result.\n\nYour current corrected-source public interaction receiving remains the operative scope. This handoff establishes the actual Pages deployment and received document identity without substituting the earlier source/acceptance for the current playback+radar app. Our frozen attempt and artifact maps will be preserved with #44's continuation evidence."
+    },
+    "current_receiving_owner": "estate52e56ea8fcca / PR55"
+  },
+  "frozen_packet": {
+    "captured_at": "2026-10-08T16:05:26.796735+00:00",
+    "members": [
+      {
+        "path": "receiving-browser-hosted.mjs",
+        "bytes": 26523,
+        "sha256": "3fe8fff96047e14ecffdc5f706c40abc551b855329fd853452f405d30c0919d7",
+        "git_blob": "bc82520d9a9e3b6f5ac892b6d3091539cb9b2086"
+      },
+      {
+        "path": "pages-delivery.mjs",
+        "bytes": 11674,
+        "sha256": "227824abe3bbb332348b59d552d24a2892a3137af0536e40268a32122bd68939",
+        "git_blob": "bf30a767944463c5571643afb7e4ffacf7b9416a"
+      },
+      {
+        "path": "run-hosted.py",
+        "bytes": 5479,
+        "sha256": "357925aa37f9e9676080e99a953bde984635d8aed15a3fc7b55593508d04cb09",
+        "git_blob": "5b68914955e2b8070f895c222a72bf9c1839f18a"
+      },
+      {
+        "path": "pages-receipt.json",
+        "bytes": 10714,
+        "sha256": "92dc59d6c2c50731ed3b8380537bb9ac20fd02f72320b635130dc531d1a1d95a",
+        "git_blob": "c9197d0c49116cb161f365f5a93bd85c2ddd5b54"
+      },
+      {
+        "path": "hosted-desktop.json",
+        "bytes": 50328,
+        "sha256": "785ceb2aaedcc7744d2d210359676fca4638ae3428b27529f2eed77c3b7679c5",
+        "git_blob": "17cdc478dd873fc4418af60dccfb9ae87dcaa733"
+      },
+      {
+        "path": "hosted-desktop.log",
+        "bytes": 743,
+        "sha256": "8a6099ac8836de0bc176e5d82bb70336a6f443ad0fff1fe17f27000e5728218f",
+        "git_blob": "74c3a01d4c73e1cf9290881596ec9fd510220d34"
+      },
+      {
+        "path": "process.json",
+        "bytes": 3549,
+        "sha256": "da249b7fb5ef3c5f80a05630ba078a246c2f2ec79e4ddf074a94c8d44ded2ab4",
+        "git_blob": "82e31dbbb84952de94e56aaf100ca8046387fa9a"
+      },
+      {
+        "path": "hub-inventory.json",
+        "bytes": 2833,
+        "sha256": "05674e5cc9b459ef0b0a4fa7ffcf72bed78c8dd12af3ab50b1a76ef0041092dc",
+        "git_blob": "7fda594058c9d8d02b36b35f77975230e529205b"
+      }
+    ],
+    "total_raw_bytes": 111843,
+    "accepted": true
+  },
+  "frozen_files": [
+    {
+      "path": "docs/qualification/playback-55e3-20261008/hosted-7865-attempt1/QUALIFICATION.md",
+      "encoding": "utf-8",
+      "bytes": 4017,
+      "sha256": "b14c950278203cf046a44d6e09cc2f2b8003c71b02d161a4d53c5c18b5432adb",
+      "git_blob": "96212e325a1a9c9b1129846f838d353a4a083d67"
+    },
+    {
+      "path": "docs/qualification/playback-55e3-20261008/hosted-7865-attempt1/receiving-text.json.gz",
+      "encoding": "base64",
+      "bytes": 52684,
+      "sha256": "d95d1a77a45d46ffd9f5713ec29de0f584d2a987d9772c144631a1f8d758a201",
+      "git_blob": "491b024bef9e009c1ac95b5ff96cb13b35d657cb"
+    },
+    {
+      "path": "docs/qualification/playback-55e3-20261008/hosted-7865-attempt1/receiving-manifest.json",
+      "encoding": "utf-8",
+      "bytes": 3011,
+      "sha256": "667e836ebc47e64ec5050cf633e7228e89b10e22722868585e8cb6a14a806a01",
+      "git_blob": "3b18d8f1f2ca41731fed21fc3140243f51533b2e"
+    },
+    {
+      "path": "docs/qualification/playback-55e3-20261008/hosted-7865-attempt1/v1-to-v2.patch",
+      "encoding": "utf-8",
+      "bytes": 12972,
+      "sha256": "3f0c15ac70d76530b71a2f3cd520d38e234bf0a5247700c31cce08bcd658298f",
+      "git_blob": "4f50c68166fe5234e850aeb05d4805299ec6b1bc"
+    },
+    {
+      "path": "docs/qualification/playback-55e3-20261008/independent/hosted-receiver-http-v2-source-review.json",
+      "bytes": 5741,
+      "sha256": "bb91dc5eaa17780cf59e742c942d1ec26f36beab4edb7dba2f2295398a196ad9",
+      "git_blob": "35481b2ba75869d5de4f714d9dd9025a771a01c6",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/playback-55e3-20261008/independent/hosted-7865-attempt1-receiving.json",
+      "bytes": 4729,
+      "sha256": "b100d10ac60928ed5e1e679cd4aa0034b93513fcfefc755b9185767084817b96",
+      "git_blob": "24da0eee105b7c329fd4455488c81cb3ae13ee9d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/playback-55e3-20261008/independent/hosted-newer-document-identity.json",
+      "bytes": 3195,
+      "sha256": "19fe4942fd80dce8e998f07e51eaa777e1c0c347ac301208839bad30408820d9",
+      "git_blob": "29b5f70dffb73de09a928d9f1660deed249acd70",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/playback-55e3-20261008/hosted-5b-document-identity/selected-artifact-map.json",
+      "bytes": 3816,
+      "sha256": "129b8123219ba90746129a0264eb0e5fc9f808dbea792739ef2b03dfa9b6a975",
+      "git_blob": "3b6fda74705d85c2c4c5ae351071b7036cfe2904",
+      "encoding": "utf-8"
+    }
+  ],
+  "local_copy_custody": "Historical local archive paths in the frozen receipts describe their actual acquisition and receiving. Root later reclaimed only its two exact duplicate ZIP copies after their original provider file IDs, digests and file maps were retained. The root newer-copy reclamation verified6450539 bytes and SHA25696e88f7e5925ed04de48e81e55a8dc7979abb6e3c1921e75bf15d5e89b20edae before removal.",
+  "conclusion": "Source integration and the selected Pages deployment succeeded. The single hosted attempt refused the older artifact at document admission before Chrome. A subsequent offline artifact comparison explains the mismatch by establishing equal HTML bytes in the selected newer artifact. No new playback or radar interaction result is claimed.",
+  "limits": [
+    "Earlier native and CI results retain their exact source qualifiers.",
+    "Current public interaction receiving remains with the existing PR55 owner; this packet adds no requests or competing receiver run.",
+    "These software/source receipts do not establish operational air-traffic performance or a resident native runtime lease."
+  ]
+}

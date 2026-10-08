@@ -1,0 +1,67 @@
+{
+  "schema": "towerops-hosted-delivery-receiving-manifest/v1",
+  "archive": {
+    "path": "/tmp/towerops-playback-55e3-ypg8xw8q/hosted-pages-bhrwco6m/receiver-v2/receiving-text.json.gz",
+    "bytes": 52684,
+    "sha256": "d95d1a77a45d46ffd9f5713ec29de0f584d2a987d9772c144631a1f8d758a201",
+    "git_blob": "491b024bef9e009c1ac95b5ff96cb13b35d657cb"
+  },
+  "files": [
+    {
+      "path": "receiving-browser-hosted.mjs",
+      "original_path": "/tmp/towerops-playback-55e3-ypg8xw8q/hosted-pages-bhrwco6m/receiver-v2/receiving-browser-hosted.mjs",
+      "bytes": 26523,
+      "sha256": "3fe8fff96047e14ecffdc5f706c40abc551b855329fd853452f405d30c0919d7",
+      "git_blob": "bc82520d9a9e3b6f5ac892b6d3091539cb9b2086"
+    },
+    {
+      "path": "pages-delivery.mjs",
+      "original_path": "/tmp/towerops-playback-55e3-ypg8xw8q/hosted-pages-bhrwco6m/receiver-v2/pages-delivery.mjs",
+      "bytes": 11674,
+      "sha256": "227824abe3bbb332348b59d552d24a2892a3137af0536e40268a32122bd68939",
+      "git_blob": "bf30a767944463c5571643afb7e4ffacf7b9416a"
+    },
+    {
+      "path": "run-hosted.py",
+      "original_path": "/tmp/towerops-playback-55e3-ypg8xw8q/hosted-pages-bhrwco6m/receiver-v2/run-hosted.py",
+      "bytes": 5479,
+      "sha256": "357925aa37f9e9676080e99a953bde984635d8aed15a3fc7b55593508d04cb09",
+      "git_blob": "5b68914955e2b8070f895c222a72bf9c1839f18a"
+    },
+    {
+      "path": "pages-receipt.json",
+      "original_path": "/tmp/towerops-playback-55e3-ypg8xw8q/hosted-pages-bhrwco6m/receiver-v2/pages-receipt.json",
+      "bytes": 10714,
+      "sha256": "92dc59d6c2c50731ed3b8380537bb9ac20fd02f72320b635130dc531d1a1d95a",
+      "git_blob": "c9197d0c49116cb161f365f5a93bd85c2ddd5b54"
+    },
+    {
+      "path": "hosted-desktop.json",
+      "original_path": "/tmp/towerops-playback-55e3-ypg8xw8q/hosted-pages-bhrwco6m/receiver-v2/hosted-desktop.json",
+      "bytes": 50328,
+      "sha256": "785ceb2aaedcc7744d2d210359676fca4638ae3428b27529f2eed77c3b7679c5",
+      "git_blob": "17cdc478dd873fc4418af60dccfb9ae87dcaa733"
+    },
+    {
+      "path": "hosted-desktop.log",
+      "original_path": "/tmp/towerops-playback-55e3-ypg8xw8q/hosted-pages-bhrwco6m/receiver-v2/hosted-desktop.log",
+      "bytes": 743,
+      "sha256": "8a6099ac8836de0bc176e5d82bb70336a6f443ad0fff1fe17f27000e5728218f",
+      "git_blob": "74c3a01d4c73e1cf9290881596ec9fd510220d34"
+    },
+    {
+      "path": "process.json",
+      "original_path": "/tmp/towerops-playback-55e3-ypg8xw8q/hosted-pages-bhrwco6m/receiver-v2/process.json",
+      "bytes": 3549,
+      "sha256": "da249b7fb5ef3c5f80a05630ba078a246c2f2ec79e4ddf074a94c8d44ded2ab4",
+      "git_blob": "82e31dbbb84952de94e56aaf100ca8046387fa9a"
+    },
+    {
+      "path": "hub-inventory.json",
+      "original_path": "/tmp/towerops-playback-55e3-ypg8xw8q/hosted-pages-bhrwco6m/hub-inventory.json",
+      "bytes": 2833,
+      "sha256": "05674e5cc9b459ef0b0a4fa7ffcf72bed78c8dd12af3ab50b1a76ef0041092dc",
+      "git_blob": "7fda594058c9d8d02b36b35f77975230e529205b"
+    }
+  ]
+}
