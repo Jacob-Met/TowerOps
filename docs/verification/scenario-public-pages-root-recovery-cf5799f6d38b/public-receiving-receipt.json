@@ -1,0 +1,3185 @@
+{
+  "schema": "towerops-normal-public-pages-receiving/v1",
+  "receiver": {
+    "path": "/private/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/receive_public_pages.mjs",
+    "bytes": 38951,
+    "sha256": "0c3609ef24131ea9620e5b006731af4d18a8523cb59f5fcc9019b296c18937a7",
+    "git_blob": "f9fe93873ca5853419d9a041b47c9cf5b65b05d4"
+  },
+  "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/",
+  "expected_merge_sha": "0704ed42a4cf2a9edc4aa99853f8f53c14f0ffcc",
+  "expected_run_id": 37812532089,
+  "started_utc": "2026-10-08T17:06:09.612Z",
+  "runtime": {
+    "node": "v26.3.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "puppeteer": "25.12.0",
+    "browser": "Chrome/154.0.8037.98"
+  },
+  "fresh_profile": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/fresh-profile",
+  "request_response_or_product_override": false,
+  "fixture_service": false,
+  "deployment_or_account_mutation": false,
+  "inputs": [
+    {
+      "path": "/private/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/run.json",
+      "bytes": 12299,
+      "sha256": "01fbd5366edb5f5d4cc57a22f029669840673299eaac17c1cd3246f82a3fd6c6",
+      "git_blob": "f3b504b8b17e981aa02aabcdb18a79c83fcfa323"
+    },
+    {
+      "path": "/private/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/artifacts.json",
+      "bytes": 812,
+      "sha256": "a49c8683a501157b1c18578bd3f37219d9affa01302075b700b830a01ddcefe5",
+      "git_blob": "826fabcf136e090114aab6fb993a13f41c37e95d"
+    },
+    {
+      "path": "/private/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/inputs/artifact-manifest.json",
+      "bytes": 3309,
+      "sha256": "89a0b06ec788dddfb4b0d90d9644f1b67f86521a529b101eb4af094b0f1737ac",
+      "git_blob": "e96dc90971b067fba9696e119e18c5bd3ab4a4cd"
+    }
+  ],
+  "http": [
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "expected_path": "airspace/index.html",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5495",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:09 GMT",
+        "etag": "W/\"6ac7cb31-4200\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 16896,
+      "sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "git_blob": "325cd2b84d31f3851557bb740515d6d722031b43",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/canonical-index.html.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "expected_path": "airspace/assets/index-DPcJQeI6.js",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "20707",
+        "content-type": "application/javascript; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:09 GMT",
+        "etag": "W/\"6ac7cb32-100e2\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 65762,
+      "sha256": "704a85b4becf475769781b73a2cc41b655cae3b31ada5df380116b5e19932e23",
+      "git_blob": "da5f65c6a6364874f89c0aa84b7c89a7c7e2c67a",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/assets/index-DPcJQeI6.js.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "expected_path": "airspace/assets/index-TucxfM67.css",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5075",
+        "content-type": "text/css; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:09 GMT",
+        "etag": "W/\"6ac7cb32-553f\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 21823,
+      "sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d",
+      "git_blob": "e688b0b73ea6e5e45dc782947519afaa6ecd2d4c",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/assets/index-TucxfM67.css.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "expected_path": "airspace/assets/python-worker-D9QUacUJ.js",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "1703",
+        "content-type": "application/javascript; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:09 GMT",
+        "etag": "W/\"6ac7cb31-1143\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 4419,
+      "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804",
+      "git_blob": "fefa6ed7980f7a262299e63f575e8a805748d4d9",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/assets/python-worker-D9QUacUJ.js.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "expected_path": "airspace/favicon.svg",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-length": "252",
+        "content-type": "image/svg+xml",
+        "date": "Thu, 08 Oct 2026 17:06:10 GMT",
+        "etag": "\"6ac7cb31-fc\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+      "git_blob": "498832ec27a0a0515bccc5650b70e94bc952f99d",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/favicon.svg.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/index.html",
+      "expected_path": "airspace/index.html",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/index.html",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5495",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:10 GMT",
+        "etag": "W/\"6ac7cb32-4200\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 16896,
+      "sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "git_blob": "325cd2b84d31f3851557bb740515d6d722031b43",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/index.html.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "expected_path": "airspace/python/advisory_options.py",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "1016",
+        "content-type": "application/octet-stream",
+        "date": "Thu, 08 Oct 2026 17:06:10 GMT",
+        "etag": "W/\"6ac7cb31-94c\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 2380,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/python/advisory_options.py.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/python/audit_replay.py",
+      "expected_path": "airspace/python/audit_replay.py",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/python/audit_replay.py",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "2408",
+        "content-type": "application/octet-stream",
+        "date": "Thu, 08 Oct 2026 17:06:10 GMT",
+        "etag": "W/\"6ac7cb31-1ef7\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 7927,
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+      "git_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/python/audit_replay.py.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/python/decision_trace.py",
+      "expected_path": "airspace/python/decision_trace.py",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/python/decision_trace.py",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "911",
+        "content-type": "application/octet-stream",
+        "date": "Thu, 08 Oct 2026 17:06:10 GMT",
+        "etag": "W/\"6ac7cb32-833\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 2099,
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+      "git_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/python/decision_trace.py.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "expected_path": "airspace/python/pyodide-lock.json",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "26234",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:10 GMT",
+        "etag": "W/\"6ac7cb31-1b64d\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "git_blob": "03c7058474f8a5fec00cd220cd3c53f73119700f",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/python/pyodide-lock.json.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "expected_path": "airspace/python/pyodide.asm.js",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "237936",
+        "content-type": "application/javascript; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:10 GMT",
+        "etag": "W/\"6ac7cb31-132908\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "git_blob": "7d7e6f6b24ff344d560fcff81595701abb5b27bf",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/python/pyodide.asm.js.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "expected_path": "airspace/python/pyodide.asm.wasm",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "3192948",
+        "content-type": "application/wasm",
+        "date": "Thu, 08 Oct 2026 17:06:10 GMT",
+        "etag": "W/\"6ac7cb31-9a32c9\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "git_blob": "9383f847fe340f37e4f313a0e1d4713d5e7ca395",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/python/pyodide.asm.wasm.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "expected_path": "airspace/python/pyodide.mjs",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5670",
+        "content-type": "text/javascript; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:11 GMT",
+        "etag": "W/\"6ac7cb32-366b\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+      "git_blob": "5ecef60d60cd1f2b547e46c55e4868bdfdc2b9aa",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/python/pyodide.mjs.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "expected_path": "airspace/python/python_stdlib.zip",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-length": "2360737",
+        "content-type": "application/x-zip-compressed",
+        "date": "Thu, 08 Oct 2026 17:06:11 GMT",
+        "etag": "\"6ac7cb32-2405a1\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "git_blob": "6cf1e281902398897c897d6920dfb4bc3f295180",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/python/python_stdlib.zip.body"
+    },
+    {
+      "requested_url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "expected_path": "airspace/python/towerops.py",
+      "final_url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "4918",
+        "content-type": "application/octet-stream",
+        "date": "Thu, 08 Oct 2026 17:06:11 GMT",
+        "etag": "W/\"6ac7cb31-4c06\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "matches_artifact": true,
+      "body_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/http/airspace/python/towerops.py.body"
+    }
+  ],
+  "browser_requests": [
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "method": "GET",
+      "type": "document",
+      "expected_path": "airspace/index.html"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-page",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "method": "GET",
+      "type": "Document",
+      "expected_path": "airspace/index.html"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "method": "GET",
+      "type": "script",
+      "expected_path": "airspace/assets/index-DPcJQeI6.js"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "method": "GET",
+      "type": "stylesheet",
+      "expected_path": "airspace/assets/index-TucxfM67.css"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-page",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "method": "GET",
+      "type": "Script",
+      "expected_path": "airspace/assets/index-DPcJQeI6.js"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-page",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "method": "GET",
+      "type": "Stylesheet",
+      "expected_path": "airspace/assets/index-TucxfM67.css"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "method": "GET",
+      "type": "other",
+      "expected_path": "airspace/favicon.svg"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-page",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "method": "GET",
+      "type": "Other",
+      "expected_path": "airspace/favicon.svg"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "method": "GET",
+      "type": "script",
+      "expected_path": "airspace/assets/python-worker-D9QUacUJ.js"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-page",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "method": "GET",
+      "type": "Script",
+      "expected_path": "airspace/assets/python-worker-D9QUacUJ.js"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "method": "GET",
+      "type": "script",
+      "expected_path": "airspace/python/pyodide.mjs"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "method": "GET",
+      "type": "Fetch",
+      "expected_path": "airspace/python/python_stdlib.zip"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "method": "GET",
+      "type": "Fetch",
+      "expected_path": "airspace/python/pyodide.asm.wasm"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "method": "GET",
+      "type": "Fetch",
+      "expected_path": "airspace/python/pyodide-lock.json"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "method": "GET",
+      "type": "Script",
+      "expected_path": "airspace/python/pyodide.asm.js"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "method": "GET",
+      "type": "fetch",
+      "expected_path": "airspace/python/python_stdlib.zip"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "method": "GET",
+      "type": "fetch",
+      "expected_path": "airspace/python/pyodide.asm.wasm"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "method": "GET",
+      "type": "fetch",
+      "expected_path": "airspace/python/pyodide-lock.json"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "method": "GET",
+      "type": "script",
+      "expected_path": "airspace/python/pyodide.asm.js"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "method": "GET",
+      "type": "Fetch",
+      "expected_path": "airspace/python/towerops.py"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "method": "GET",
+      "type": "fetch",
+      "expected_path": "airspace/python/towerops.py"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "method": "GET",
+      "type": "document",
+      "expected_path": "airspace/index.html"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-page",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "method": "GET",
+      "type": "Document",
+      "expected_path": "airspace/index.html"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-page",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "method": "GET",
+      "type": "Script",
+      "expected_path": "airspace/assets/index-DPcJQeI6.js"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-page",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "method": "GET",
+      "type": "Stylesheet",
+      "expected_path": "airspace/assets/index-TucxfM67.css"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "method": "GET",
+      "type": "script",
+      "expected_path": "airspace/assets/index-DPcJQeI6.js"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "method": "GET",
+      "type": "stylesheet",
+      "expected_path": "airspace/assets/index-TucxfM67.css"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "method": "GET",
+      "type": "script",
+      "expected_path": "airspace/assets/python-worker-D9QUacUJ.js"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-page",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "method": "GET",
+      "type": "Script",
+      "expected_path": "airspace/assets/python-worker-D9QUacUJ.js"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "method": "GET",
+      "type": "Script",
+      "expected_path": "airspace/python/pyodide.mjs"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "method": "GET",
+      "type": "script",
+      "expected_path": "airspace/python/pyodide.mjs"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "method": "GET",
+      "type": "Fetch",
+      "expected_path": "airspace/python/python_stdlib.zip"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "method": "GET",
+      "type": "Fetch",
+      "expected_path": "airspace/python/pyodide.asm.wasm"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "method": "GET",
+      "type": "Fetch",
+      "expected_path": "airspace/python/pyodide-lock.json"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "method": "GET",
+      "type": "Script",
+      "expected_path": "airspace/python/pyodide.asm.js"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "method": "GET",
+      "type": "fetch",
+      "expected_path": "airspace/python/python_stdlib.zip"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "method": "GET",
+      "type": "fetch",
+      "expected_path": "airspace/python/pyodide.asm.wasm"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "method": "GET",
+      "type": "fetch",
+      "expected_path": "airspace/python/pyodide-lock.json"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "method": "GET",
+      "type": "script",
+      "expected_path": "airspace/python/pyodide.asm.js"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "method": "GET",
+      "type": "Fetch",
+      "expected_path": "airspace/python/towerops.py"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "method": "GET",
+      "type": "fetch",
+      "expected_path": "airspace/python/towerops.py"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "method": "GET",
+      "type": "Fetch",
+      "expected_path": "airspace/python/advisory_options.py"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-request",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "method": "GET",
+      "type": "fetch",
+      "expected_path": "airspace/python/advisory_options.py"
+    }
+  ],
+  "browser_responses": [
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5495",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "etag": "W/\"6ac7cb31-4200\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 16896,
+      "sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "git_blob": "325cd2b84d31f3851557bb740515d6d722031b43",
+      "expected_path": "airspace/index.html",
+      "expected_sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-page",
+      "request_id": "E5D79E56D488936F43199C5056106689",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "status": 200,
+      "mime_type": "text/html",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5495",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "etag": "W/\"6ac7cb31-4200\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 16896,
+      "sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "git_blob": "325cd2b84d31f3851557bb740515d6d722031b43",
+      "expected_path": "airspace/index.html",
+      "expected_sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5075",
+        "content-type": "text/css; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "etag": "W/\"6ac7cb32-553f\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 21823,
+      "sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d",
+      "git_blob": "e688b0b73ea6e5e45dc782947519afaa6ecd2d4c",
+      "expected_path": "airspace/assets/index-TucxfM67.css",
+      "expected_sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-page",
+      "request_id": "52112.3",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "status": 200,
+      "mime_type": "text/css",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb32-553f\"",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "5075",
+        "server": "GitHub.com"
+      },
+      "bytes": 21823,
+      "sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d",
+      "git_blob": "e688b0b73ea6e5e45dc782947519afaa6ecd2d4c",
+      "expected_path": "airspace/assets/index-TucxfM67.css",
+      "expected_sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "20707",
+        "content-type": "application/javascript; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "etag": "W/\"6ac7cb32-100e2\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 65762,
+      "sha256": "704a85b4becf475769781b73a2cc41b655cae3b31ada5df380116b5e19932e23",
+      "git_blob": "da5f65c6a6364874f89c0aa84b7c89a7c7e2c67a",
+      "expected_path": "airspace/assets/index-DPcJQeI6.js",
+      "expected_sha256": "704a85b4becf475769781b73a2cc41b655cae3b31ada5df380116b5e19932e23",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-page",
+      "request_id": "52112.2",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "status": 200,
+      "mime_type": "application/javascript",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb32-100e2\"",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "20707",
+        "server": "GitHub.com"
+      },
+      "bytes": 65762,
+      "sha256": "704a85b4becf475769781b73a2cc41b655cae3b31ada5df380116b5e19932e23",
+      "git_blob": "da5f65c6a6364874f89c0aa84b7c89a7c7e2c67a",
+      "expected_path": "airspace/assets/index-DPcJQeI6.js",
+      "expected_sha256": "704a85b4becf475769781b73a2cc41b655cae3b31ada5df380116b5e19932e23",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-length": "252",
+        "content-type": "image/svg+xml",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "etag": "\"6ac7cb31-fc\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+      "git_blob": "498832ec27a0a0515bccc5650b70e94bc952f99d",
+      "expected_path": "airspace/favicon.svg",
+      "expected_sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-page",
+      "request_id": "52112.6",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "status": 200,
+      "mime_type": "image/svg+xml",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "etag": "\"6ac7cb31-fc\"",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "content-type": "image/svg+xml",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "252",
+        "server": "GitHub.com"
+      },
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+      "git_blob": "498832ec27a0a0515bccc5650b70e94bc952f99d",
+      "expected_path": "airspace/favicon.svg",
+      "expected_sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "1703",
+        "content-type": "application/javascript; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "etag": "W/\"6ac7cb31-1143\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 4419,
+      "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804",
+      "git_blob": "fefa6ed7980f7a262299e63f575e8a805748d4d9",
+      "expected_path": "airspace/assets/python-worker-D9QUacUJ.js",
+      "expected_sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "request_id": "52112.8",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb32-366b\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "5670",
+        "server": "GitHub.com"
+      },
+      "body_observation_error": "ProtocolError: Protocol error (Network.getResponseBody): No resource with given identifier found"
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5670",
+        "content-type": "text/javascript; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "etag": "W/\"6ac7cb32-366b\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+      "git_blob": "5ecef60d60cd1f2b547e46c55e4868bdfdc2b9aa",
+      "expected_path": "airspace/python/pyodide.mjs",
+      "expected_sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "request_id": "52112.11",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "mime_type": "application/json",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-1b64d\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "26234",
+        "server": "GitHub.com"
+      },
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "git_blob": "03c7058474f8a5fec00cd220cd3c53f73119700f",
+      "expected_path": "airspace/python/pyodide-lock.json",
+      "expected_sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "26234",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "etag": "W/\"6ac7cb31-1b64d\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "git_blob": "03c7058474f8a5fec00cd220cd3c53f73119700f",
+      "expected_path": "airspace/python/pyodide-lock.json",
+      "expected_sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "request_id": "52112.10",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "mime_type": "application/wasm",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-9a32c9\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/wasm",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "3192948",
+        "server": "GitHub.com"
+      },
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "git_blob": "9383f847fe340f37e4f313a0e1d4713d5e7ca395",
+      "expected_path": "airspace/python/pyodide.asm.wasm",
+      "expected_sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "3192948",
+        "content-type": "application/wasm",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "etag": "W/\"6ac7cb31-9a32c9\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "git_blob": "9383f847fe340f37e4f313a0e1d4713d5e7ca395",
+      "expected_path": "airspace/python/pyodide.asm.wasm",
+      "expected_sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "request_id": "52112.9",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "mime_type": "application/x-zip-compressed",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "etag": "\"6ac7cb32-2405a1\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/x-zip-compressed",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "2360737",
+        "server": "GitHub.com"
+      },
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "git_blob": "6cf1e281902398897c897d6920dfb4bc3f295180",
+      "expected_path": "airspace/python/python_stdlib.zip",
+      "expected_sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-length": "2360737",
+        "content-type": "application/x-zip-compressed",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "etag": "\"6ac7cb32-2405a1\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "git_blob": "6cf1e281902398897c897d6920dfb4bc3f295180",
+      "expected_path": "airspace/python/python_stdlib.zip",
+      "expected_sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "request_id": "52112.12",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "mime_type": "application/javascript",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-132908\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "237936",
+        "server": "GitHub.com"
+      },
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "git_blob": "7d7e6f6b24ff344d560fcff81595701abb5b27bf",
+      "expected_path": "airspace/python/pyodide.asm.js",
+      "expected_sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "237936",
+        "content-type": "application/javascript; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "etag": "W/\"6ac7cb31-132908\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "git_blob": "7d7e6f6b24ff344d560fcff81595701abb5b27bf",
+      "expected_path": "airspace/python/pyodide.asm.js",
+      "expected_sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "cdp-other",
+      "request_id": "52112.13",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "mime_type": "application/octet-stream",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-4c06\"",
+        "date": "Thu, 08 Oct 2026 17:06:15 GMT",
+        "content-type": "application/octet-stream",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "4918",
+        "server": "GitHub.com"
+      },
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "expected_path": "airspace/python/towerops.py",
+      "expected_sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "matches_artifact": true
+    },
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "4918",
+        "content-type": "application/octet-stream",
+        "date": "Thu, 08 Oct 2026 17:06:15 GMT",
+        "etag": "W/\"6ac7cb31-4c06\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "expected_path": "airspace/python/towerops.py",
+      "expected_sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "status": 200,
+      "from_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5495",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "etag": "W/\"6ac7cb31-4200\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 16896,
+      "sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "git_blob": "325cd2b84d31f3851557bb740515d6d722031b43",
+      "expected_path": "airspace/index.html",
+      "expected_sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-page",
+      "request_id": "7E8710B435D0F7240AF54962257C620D",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+      "status": 200,
+      "mime_type": "text/html",
+      "from_disk_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "5495",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "etag": "W/\"6ac7cb31-4200\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "bytes": 16896,
+      "sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "git_blob": "325cd2b84d31f3851557bb740515d6d722031b43",
+      "expected_path": "airspace/index.html",
+      "expected_sha256": "e9f4646de14326ea3b1850c0e6f4f6e14e524483f7984f80e7c1c79028fdfa6f",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-page",
+      "request_id": "52893.3",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "status": 200,
+      "mime_type": "text/css",
+      "from_disk_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb32-553f\"",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "5075",
+        "server": "GitHub.com"
+      },
+      "bytes": 21823,
+      "sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d",
+      "git_blob": "e688b0b73ea6e5e45dc782947519afaa6ecd2d4c",
+      "expected_path": "airspace/assets/index-TucxfM67.css",
+      "expected_sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "status": 200,
+      "from_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb32-553f\"",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "5075",
+        "server": "GitHub.com"
+      },
+      "bytes": 21823,
+      "sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d",
+      "git_blob": "e688b0b73ea6e5e45dc782947519afaa6ecd2d4c",
+      "expected_path": "airspace/assets/index-TucxfM67.css",
+      "expected_sha256": "06e5b79ded37dbe961bb246daa9d550b4166545004efaab17a2205f3c2ad5f7d",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-page",
+      "request_id": "52893.2",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "status": 200,
+      "mime_type": "application/javascript",
+      "from_disk_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb32-100e2\"",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "20707",
+        "server": "GitHub.com"
+      },
+      "bytes": 65762,
+      "sha256": "704a85b4becf475769781b73a2cc41b655cae3b31ada5df380116b5e19932e23",
+      "git_blob": "da5f65c6a6364874f89c0aa84b7c89a7c7e2c67a",
+      "expected_path": "airspace/assets/index-DPcJQeI6.js",
+      "expected_sha256": "704a85b4becf475769781b73a2cc41b655cae3b31ada5df380116b5e19932e23",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "status": 200,
+      "from_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb32-100e2\"",
+        "date": "Thu, 08 Oct 2026 17:06:12 GMT",
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "20707",
+        "server": "GitHub.com"
+      },
+      "bytes": 65762,
+      "sha256": "704a85b4becf475769781b73a2cc41b655cae3b31ada5df380116b5e19932e23",
+      "git_blob": "da5f65c6a6364874f89c0aa84b7c89a7c7e2c67a",
+      "expected_path": "airspace/assets/index-DPcJQeI6.js",
+      "expected_sha256": "704a85b4becf475769781b73a2cc41b655cae3b31ada5df380116b5e19932e23",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-1143\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "1703",
+        "server": "GitHub.com"
+      },
+      "bytes": 4419,
+      "sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804",
+      "git_blob": "fefa6ed7980f7a262299e63f575e8a805748d4d9",
+      "expected_path": "airspace/assets/python-worker-D9QUacUJ.js",
+      "expected_sha256": "71091799ef785dc5b3229845ebeaf3a2fe6801471f77c58a0d3a53d91f72e804",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "request_id": "52893.7",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "from_disk_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb32-366b\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "5670",
+        "server": "GitHub.com"
+      },
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+      "git_blob": "5ecef60d60cd1f2b547e46c55e4868bdfdc2b9aa",
+      "expected_path": "airspace/python/pyodide.mjs",
+      "expected_sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "status": 200,
+      "from_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb32-366b\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "5670",
+        "server": "GitHub.com"
+      },
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+      "git_blob": "5ecef60d60cd1f2b547e46c55e4868bdfdc2b9aa",
+      "expected_path": "airspace/python/pyodide.mjs",
+      "expected_sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "request_id": "52893.8",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "mime_type": "application/x-zip-compressed",
+      "from_disk_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "etag": "\"6ac7cb32-2405a1\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/x-zip-compressed",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "2360737",
+        "server": "GitHub.com"
+      },
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "git_blob": "6cf1e281902398897c897d6920dfb4bc3f295180",
+      "expected_path": "airspace/python/python_stdlib.zip",
+      "expected_sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "status": 200,
+      "from_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "etag": "\"6ac7cb32-2405a1\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/x-zip-compressed",
+        "last-modified": "Thu, 08 Oct 2026 16:56:18 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "2360737",
+        "server": "GitHub.com"
+      },
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "git_blob": "6cf1e281902398897c897d6920dfb4bc3f295180",
+      "expected_path": "airspace/python/python_stdlib.zip",
+      "expected_sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "request_id": "52893.9",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "mime_type": "application/wasm",
+      "from_disk_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-9a32c9\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/wasm",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "3192948",
+        "server": "GitHub.com"
+      },
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "git_blob": "9383f847fe340f37e4f313a0e1d4713d5e7ca395",
+      "expected_path": "airspace/python/pyodide.asm.wasm",
+      "expected_sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "status": 200,
+      "from_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-9a32c9\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/wasm",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "3192948",
+        "server": "GitHub.com"
+      },
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "git_blob": "9383f847fe340f37e4f313a0e1d4713d5e7ca395",
+      "expected_path": "airspace/python/pyodide.asm.wasm",
+      "expected_sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "request_id": "52893.10",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "mime_type": "application/json",
+      "from_disk_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-1b64d\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "26234",
+        "server": "GitHub.com"
+      },
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "git_blob": "03c7058474f8a5fec00cd220cd3c53f73119700f",
+      "expected_path": "airspace/python/pyodide-lock.json",
+      "expected_sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "status": 200,
+      "from_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-1b64d\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "26234",
+        "server": "GitHub.com"
+      },
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "git_blob": "03c7058474f8a5fec00cd220cd3c53f73119700f",
+      "expected_path": "airspace/python/pyodide-lock.json",
+      "expected_sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "request_id": "52893.11",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "mime_type": "application/javascript",
+      "from_disk_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-132908\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "237936",
+        "server": "GitHub.com"
+      },
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "git_blob": "7d7e6f6b24ff344d560fcff81595701abb5b27bf",
+      "expected_path": "airspace/python/pyodide.asm.js",
+      "expected_sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "status": 200,
+      "from_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-132908\"",
+        "date": "Thu, 08 Oct 2026 17:06:13 GMT",
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "237936",
+        "server": "GitHub.com"
+      },
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "git_blob": "7d7e6f6b24ff344d560fcff81595701abb5b27bf",
+      "expected_path": "airspace/python/pyodide.asm.js",
+      "expected_sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "request_id": "52893.12",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "mime_type": "application/octet-stream",
+      "from_disk_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-4c06\"",
+        "date": "Thu, 08 Oct 2026 17:06:15 GMT",
+        "content-type": "application/octet-stream",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "4918",
+        "server": "GitHub.com"
+      },
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "expected_path": "airspace/python/towerops.py",
+      "expected_sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py",
+      "status": 200,
+      "from_cache": true,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-4c06\"",
+        "date": "Thu, 08 Oct 2026 17:06:15 GMT",
+        "content-type": "application/octet-stream",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "4918",
+        "server": "GitHub.com"
+      },
+      "bytes": 19462,
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "expected_path": "airspace/python/towerops.py",
+      "expected_sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "cdp-other",
+      "request_id": "52893.13",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "status": 200,
+      "mime_type": "application/octet-stream",
+      "from_disk_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "W/\"6ac7cb31-94c\"",
+        "date": "Thu, 08 Oct 2026 17:06:19 GMT",
+        "content-type": "application/octet-stream",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "cache-control": "max-age=600",
+        "content-length": "1016",
+        "server": "GitHub.com"
+      },
+      "bytes": 2380,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "expected_path": "airspace/python/advisory_options.py",
+      "expected_sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+      "matches_artifact": true
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "observer": "puppeteer-response",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "status": 200,
+      "from_cache": false,
+      "from_service_worker": false,
+      "headers": {
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "content-length": "1016",
+        "content-type": "application/octet-stream",
+        "date": "Thu, 08 Oct 2026 17:06:19 GMT",
+        "etag": "W/\"6ac7cb31-94c\"",
+        "last-modified": "Thu, 08 Oct 2026 16:56:17 GMT",
+        "server": "GitHub.com"
+      },
+      "body_observation_error": "ProtocolError: Could not load response body for this request. This might happen if the request is a preflight request."
+    }
+  ],
+  "observer_errors": [],
+  "workers": [
+    {
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "type": "other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js"
+    },
+    {
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "type": "other",
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js"
+    }
+  ],
+  "downloads": [
+    {
+      "label": "saved-scenario-a",
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "guid": "0033d59f-a3a8-44af-b9fb-9c436455c772",
+      "url": "blob:https://jacobmetoyer.com/c7181a13-27f4-4e7a-906b-1267ab778aaf",
+      "suggested_filename": "towerops-scenario-v1.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/0033d59f-a3a8-44af-b9fb-9c436455c772",
+      "completed": true,
+      "received_bytes": 817,
+      "total_bytes": 817,
+      "bytes": 817,
+      "sha256": "8443aa699785374903e7d7db48dfe45af57c468fdc0552b0c9ce4589009722d5",
+      "git_blob": "04632bc2bbc41355e8ef38ee3441a7528da5a79a",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/01-saved-scenario-a-towerops-scenario-v1.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "after-first-native-actuation",
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "guid": "7436a047-ad90-4d91-9cbd-222c55d42b6b",
+      "url": "blob:https://jacobmetoyer.com/f7f3aea3-c537-4486-99ed-e5b261d16d8e",
+      "suggested_filename": "towerops-scenario-v2.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/7436a047-ad90-4d91-9cbd-222c55d42b6b",
+      "completed": true,
+      "received_bytes": 821,
+      "total_bytes": 821,
+      "bytes": 821,
+      "sha256": "3bc037239960bf71bfbc152798ae7c26ce5d77a1a06ee313ba3eec1c61e5a89a",
+      "git_blob": "6ac817e8e2e3700e8ef1af7dced98f0382534517",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/02-after-first-native-actuation-towerops-scenario-v2.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "prior-live-native-trace",
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "guid": "e2e34233-ad0a-47f1-9031-6fd59b02abd6",
+      "url": "blob:https://jacobmetoyer.com/db72dccb-0e06-4604-8e8d-710c8a1aea61",
+      "suggested_filename": "towerops-decision-trace.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/e2e34233-ad0a-47f1-9031-6fd59b02abd6",
+      "completed": true,
+      "received_bytes": 1575,
+      "total_bytes": 1575,
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/03-prior-live-native-trace-towerops-decision-trace.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "live-state-before-reviewed-load",
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "guid": "1a3e1ef6-48b0-49f8-a634-b796c05743fa",
+      "url": "blob:https://jacobmetoyer.com/fcbacc03-0239-43d7-808a-b8d3c9736321",
+      "suggested_filename": "towerops-scenario-v3.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/1a3e1ef6-48b0-49f8-a634-b796c05743fa",
+      "completed": true,
+      "received_bytes": 840,
+      "total_bytes": 840,
+      "bytes": 840,
+      "sha256": "5aaffe53f45e2744dca178a20417a29cc2ec7b4a27766e31d9cb7cac8293a0fc",
+      "git_blob": "6cf0f021b7457299da7109377d19cc57ca1ab392",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/04-live-state-before-reviewed-load-towerops-scenario-v3.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "unchanged-live-state-during-review",
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "guid": "8af21644-4efc-4261-88e5-581633aa8232",
+      "url": "blob:https://jacobmetoyer.com/99a97257-6f32-42c5-8697-9dd1b655ae2d",
+      "suggested_filename": "towerops-scenario-v3.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/8af21644-4efc-4261-88e5-581633aa8232",
+      "completed": true,
+      "received_bytes": 840,
+      "total_bytes": 840,
+      "bytes": 840,
+      "sha256": "5aaffe53f45e2744dca178a20417a29cc2ec7b4a27766e31d9cb7cac8293a0fc",
+      "git_blob": "6cf0f021b7457299da7109377d19cc57ca1ab392",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/05-unchanged-live-state-during-review-towerops-scenario-v3.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "restored-scenario-a",
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "guid": "bd677fb9-c456-4937-a630-69c0bfce2089",
+      "url": "blob:https://jacobmetoyer.com/f37e1584-260f-495c-9d17-33c637ac7be5",
+      "suggested_filename": "towerops-scenario-v1.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/bd677fb9-c456-4937-a630-69c0bfce2089",
+      "completed": true,
+      "received_bytes": 817,
+      "total_bytes": 817,
+      "bytes": 817,
+      "sha256": "8443aa699785374903e7d7db48dfe45af57c468fdc0552b0c9ce4589009722d5",
+      "git_blob": "04632bc2bbc41355e8ef38ee3441a7528da5a79a",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/06-restored-scenario-a-towerops-scenario-v1.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "empty-live-trace-after-load",
+      "group": "saved-scenario-restores-live-state-and-clears-decisions",
+      "guid": "db165180-de6d-4639-9c0c-fb6eeb5636b9",
+      "url": "blob:https://jacobmetoyer.com/a64b0bee-414c-49cf-8f94-a740b679f3f3",
+      "suggested_filename": "towerops-decision-trace.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/db165180-de6d-4639-9c0c-fb6eeb5636b9",
+      "completed": true,
+      "received_bytes": 2,
+      "total_bytes": 2,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "git_blob": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/07-empty-live-trace-after-load-towerops-decision-trace.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "identical-scenario-original",
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "guid": "1049ae37-5154-415c-8b05-f999c61af24e",
+      "url": "blob:https://jacobmetoyer.com/066c890a-4d9d-41c5-810c-0db5462ab810",
+      "suggested_filename": "towerops-scenario-v1.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/1049ae37-5154-415c-8b05-f999c61af24e",
+      "completed": true,
+      "received_bytes": 812,
+      "total_bytes": 812,
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/08-identical-scenario-original-towerops-scenario-v1.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "identical-scenario-before-load",
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "guid": "79cb5a9e-830a-4d39-b410-a9cc855274ac",
+      "url": "blob:https://jacobmetoyer.com/41ade889-41e0-4e80-82fd-97e1ce3c5d13",
+      "suggested_filename": "towerops-scenario-v1.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/79cb5a9e-830a-4d39-b410-a9cc855274ac",
+      "completed": true,
+      "received_bytes": 812,
+      "total_bytes": 812,
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/09-identical-scenario-before-load-towerops-scenario-v1.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "identical-scenario-after-load",
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "guid": "c5e47782-fc23-492b-82b1-b191b926d813",
+      "url": "blob:https://jacobmetoyer.com/0b819560-2489-4b56-bd8f-48f599d6e8d1",
+      "suggested_filename": "towerops-scenario-v1.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/c5e47782-fc23-492b-82b1-b191b926d813",
+      "completed": true,
+      "received_bytes": 812,
+      "total_bytes": 812,
+      "bytes": 812,
+      "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+      "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/10-identical-scenario-after-load-towerops-scenario-v1.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "after-fresh-native-readback",
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "guid": "ff60c773-bf24-40bd-9877-017e1d6edbbd",
+      "url": "blob:https://jacobmetoyer.com/e824854f-9cf6-4c79-8e5f-fa993c3297b0",
+      "suggested_filename": "towerops-scenario-v2.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/ff60c773-bf24-40bd-9877-017e1d6edbbd",
+      "completed": true,
+      "received_bytes": 816,
+      "total_bytes": 816,
+      "bytes": 816,
+      "sha256": "430f38e47d46fbb1d75d17887b2ff5011e105804bc4ae8754ba625ff12f288ec",
+      "git_blob": "6ac14c1ade1a8ec7f4a047cbdcbd254fe16eaacc",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/11-after-fresh-native-readback-towerops-scenario-v2.json",
+      "file_chooser_copy_matches_download": true
+    },
+    {
+      "label": "fresh-native-trace-after-identical-load",
+      "group": "identical-load-discards-options-before-fresh-native-readback",
+      "guid": "03bf4fbf-cbec-428a-ac1f-0ca624095a49",
+      "url": "blob:https://jacobmetoyer.com/0bdaac53-b82e-44f2-953c-b1a361e06a1f",
+      "suggested_filename": "towerops-decision-trace.json",
+      "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/03bf4fbf-cbec-428a-ac1f-0ca624095a49",
+      "completed": true,
+      "received_bytes": 1575,
+      "total_bytes": 1575,
+      "bytes": 1575,
+      "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+      "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+      "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/12-fresh-native-trace-after-identical-load-towerops-decision-trace.json",
+      "file_chooser_copy_matches_download": true
+    }
+  ],
+  "groups": [
+    {
+      "name": "saved-scenario-restores-live-state-and-clears-decisions",
+      "started_utc": "2026-10-08T17:06:12.531Z",
+      "passed": true,
+      "initial": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 0.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "NEEDS REVIEW",
+        "proposal_output": "No proposal yet. The planner only returns a setpoint if it clears the separation policy.",
+        "gates": {
+          "gate-screen": "WAIT",
+          "gate-approval": "WAIT",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": false,
+        "review_options_disabled": false,
+        "audit_count": 0,
+        "audit_status": "0 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "Review native alternatives for the current world.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "",
+        "scenario_policy": [],
+        "scenario_status": "No scenario file selected.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "1"
+        },
+        "raw_draft": "{\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": -5,\n      \"y_nm\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": 5,\n      \"y_nm\": 0\n    }\n  ],\n  \"observed_at\": 1000,\n  \"version\": 1\n}",
+        "raw_feedback": "One to 60 aircraft; finite numeric fields and unique callsigns required.",
+        "python_status": "Python loads when you run the planner.",
+        "traffic_button": "Run traffic"
+      },
+      "first_approval": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 0.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "PROPOSAL READY",
+        "proposal_output": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+        "gates": {
+          "gate-screen": "PASS",
+          "gate-approval": "APPROVED",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": false,
+        "planner_disabled": true,
+        "review_options_disabled": false,
+        "audit_count": 0,
+        "audit_status": "0 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "Review native alternatives for the current world.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "",
+        "scenario_policy": [],
+        "scenario_status": "Scenario file prepared. Check your browser downloads.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "4.5",
+          "policy-vertical": "900",
+          "policy-horizon": "4.5",
+          "speed-range": "1.5"
+        },
+        "raw_draft": "{\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": -5,\n      \"y_nm\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": 5,\n      \"y_nm\": 0\n    }\n  ],\n  \"observed_at\": 1000,\n  \"version\": 1\n}",
+        "raw_feedback": "One to 60 aircraft; finite numeric fields and unique callsigns required.",
+        "python_status": "Live CPython · towerops.py · AdvisoryPlanner",
+        "traffic_button": "Run traffic"
+      },
+      "first_readback": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 2.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "0",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "IDLE",
+        "proposal_output": "Simulated setpoint applied. No projected conflict remains in the policy window.",
+        "gates": {
+          "gate-screen": "PASS",
+          "gate-approval": "APPROVED",
+          "gate-ack": "ACCEPTED"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": true,
+        "review_options_disabled": false,
+        "audit_count": 4,
+        "audit_status": "4 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [
+          "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+          "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+          "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+          "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387"
+        ],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "Review native alternatives for the current world.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "",
+        "scenario_policy": [],
+        "scenario_status": "Scenario file prepared. Check your browser downloads.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "4.5",
+          "policy-vertical": "900",
+          "policy-horizon": "4.5",
+          "speed-range": "1.5"
+        },
+        "raw_draft": "{\n  \"version\": 2,\n  \"observed_at\": 1002.5,\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"x_nm\": -5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"x_nm\": 5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 2,\n      \"climb_ft_min\": 0\n    }\n  ]\n}",
+        "raw_feedback": "One to 60 aircraft; finite numeric fields and unique callsigns required.",
+        "python_status": "Live CPython · ControlRoom.apply · audit verified",
+        "traffic_button": "Run traffic"
+      },
+      "prior_approved_proposal": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": true
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, -0.0 NM/M",
+            "selected": false
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "PROPOSAL READY",
+        "proposal_output": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to a5089b4d1e.",
+        "gates": {
+          "gate-screen": "PASS",
+          "gate-approval": "APPROVED",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": false,
+        "planner_disabled": true,
+        "review_options_disabled": false,
+        "audit_count": 4,
+        "audit_status": "4 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [
+          "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+          "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+          "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+          "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387"
+        ],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "Review native alternatives for the current world.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "",
+        "scenario_policy": [],
+        "scenario_status": "Scenario file prepared. Check your browser downloads.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "2.5"
+        },
+        "raw_draft": "{\n  \"version\": 3,\n  \"observed_at\": 1002.5,\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"x_nm\": -5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"x_nm\": 5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": -1.8369701987210297e-16,\n      \"climb_ft_min\": 0\n    }\n  ]\n}",
+        "raw_feedback": "One to 60 aircraft; finite numeric fields and unique callsigns required.",
+        "python_status": "Live CPython · towerops.py · AdvisoryPlanner",
+        "traffic_button": "Run traffic"
+      },
+      "review": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": true
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, -0.0 NM/M",
+            "selected": false
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "PROPOSAL READY",
+        "proposal_output": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to a5089b4d1e.",
+        "gates": {
+          "gate-screen": "PASS",
+          "gate-approval": "APPROVED",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": false,
+        "planner_disabled": true,
+        "review_options_disabled": false,
+        "audit_count": 4,
+        "audit_status": "4 EVENTS / VALID",
+        "audit_verdict": "HASH CHAIN VALID - 4 EVENTS",
+        "audit_events": [
+          "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+          "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+          "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+          "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387"
+        ],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "Review native alternatives for the current world.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": false,
+        "scenario_summary": "01-saved-scenario-a-towerops-scenario-v1.json: 2 aircraft, world version 1. Clock 1002 s; 1.5× time scale; selected TWR419.",
+        "scenario_policy": [
+          [
+            "Horizontal separation",
+            "4.5 NM"
+          ],
+          [
+            "Vertical separation",
+            "900 FT"
+          ],
+          [
+            "Look-ahead",
+            "4.5 MIN"
+          ],
+          [
+            "Recorded sample step",
+            "0.5 MIN"
+          ],
+          [
+            "Maximum state age",
+            "10 SEC"
+          ],
+          [
+            "Speed limit",
+            "6 NM/MIN"
+          ],
+          [
+            "Climb limit",
+            "3000 FT/MIN"
+          ]
+        ],
+        "scenario_status": "Review the saved scenario. The current simulation is unchanged.",
+        "scenario_load_disabled": false,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "2.5"
+        },
+        "raw_draft": "\n  {\n   \"version\": 78,\n   \"observed_at\": 1000,\n   \"aircraft\": [\n      {\n         \"aircraft_id\": \"TWR218\",\n         \"x_nm\": -4.25,\n         \"y_nm\": 0,\n         \"altitude_ft\": 10000,\n         \"vx_nm_min\": 1,\n         \"vy_nm_min\": 0,\n         \"climb_ft_min\": 0\n      },\n      {\n         \"aircraft_id\": \"TWR419\",\n         \"x_nm\": 5,\n         \"y_nm\": 0,\n         \"altitude_ft\": 10000,\n         \"vx_nm_min\": -1,\n         \"vy_nm_min\": 0,\n         \"climb_ft_min\": 0\n      }\n   ]\n}\n",
+        "raw_feedback": "Draft kept. Load it into the simulation, or export the live world to replace it.",
+        "python_status": "Live CPython · towerops.py · AdvisoryPlanner",
+        "traffic_button": "Run traffic"
+      },
+      "restored": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 0.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "NEEDS REVIEW",
+        "proposal_output": "Saved scenario loaded. Run the planner or review alternatives before approval and readback.",
+        "gates": {
+          "gate-screen": "WAIT",
+          "gate-approval": "WAIT",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": false,
+        "review_options_disabled": false,
+        "audit_count": 0,
+        "audit_status": "0 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "Saved scenario loaded. Review alternatives before choosing a proposal.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "01-saved-scenario-a-towerops-scenario-v1.json: 2 aircraft, world version 1. Clock 1002 s; 1.5× time scale; selected TWR419.",
+        "scenario_policy": [
+          [
+            "Horizontal separation",
+            "4.5 NM"
+          ],
+          [
+            "Vertical separation",
+            "900 FT"
+          ],
+          [
+            "Look-ahead",
+            "4.5 MIN"
+          ],
+          [
+            "Recorded sample step",
+            "0.5 MIN"
+          ],
+          [
+            "Maximum state age",
+            "10 SEC"
+          ],
+          [
+            "Speed limit",
+            "6 NM/MIN"
+          ],
+          [
+            "Climb limit",
+            "3000 FT/MIN"
+          ]
+        ],
+        "scenario_status": "Scenario file prepared. Check your browser downloads.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "4.5",
+          "policy-vertical": "900",
+          "policy-horizon": "4.5",
+          "speed-range": "1.5"
+        },
+        "raw_draft": "\n  {\n   \"version\": 78,\n   \"observed_at\": 1000,\n   \"aircraft\": [\n      {\n         \"aircraft_id\": \"TWR218\",\n         \"x_nm\": -4.25,\n         \"y_nm\": 0,\n         \"altitude_ft\": 10000,\n         \"vx_nm_min\": 1,\n         \"vy_nm_min\": 0,\n         \"climb_ft_min\": 0\n      },\n      {\n         \"aircraft_id\": \"TWR419\",\n         \"x_nm\": 5,\n         \"y_nm\": 0,\n         \"altitude_ft\": 10000,\n         \"vx_nm_min\": -1,\n         \"vy_nm_min\": 0,\n         \"climb_ft_min\": 0\n      }\n   ]\n}\n",
+        "raw_feedback": "Loaded scenario with 2 aircraft at version 1. Your raw JSON draft is still kept. Use Export live world to replace it.",
+        "python_status": "Live CPython · towerops.py · AdvisoryPlanner",
+        "traffic_button": "Run traffic"
+      },
+      "saved_file": {
+        "label": "saved-scenario-a",
+        "group": "saved-scenario-restores-live-state-and-clears-decisions",
+        "guid": "0033d59f-a3a8-44af-b9fb-9c436455c772",
+        "url": "blob:https://jacobmetoyer.com/c7181a13-27f4-4e7a-906b-1267ab778aaf",
+        "suggested_filename": "towerops-scenario-v1.json",
+        "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/0033d59f-a3a8-44af-b9fb-9c436455c772",
+        "completed": true,
+        "received_bytes": 817,
+        "total_bytes": 817,
+        "bytes": 817,
+        "sha256": "8443aa699785374903e7d7db48dfe45af57c468fdc0552b0c9ce4589009722d5",
+        "git_blob": "04632bc2bbc41355e8ef38ee3441a7528da5a79a",
+        "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/01-saved-scenario-a-towerops-scenario-v1.json",
+        "file_chooser_copy_matches_download": true
+      },
+      "restored_file": {
+        "label": "restored-scenario-a",
+        "group": "saved-scenario-restores-live-state-and-clears-decisions",
+        "guid": "bd677fb9-c456-4937-a630-69c0bfce2089",
+        "url": "blob:https://jacobmetoyer.com/f37e1584-260f-495c-9d17-33c637ac7be5",
+        "suggested_filename": "towerops-scenario-v1.json",
+        "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/bd677fb9-c456-4937-a630-69c0bfce2089",
+        "completed": true,
+        "received_bytes": 817,
+        "total_bytes": 817,
+        "bytes": 817,
+        "sha256": "8443aa699785374903e7d7db48dfe45af57c468fdc0552b0c9ce4589009722d5",
+        "git_blob": "04632bc2bbc41355e8ef38ee3441a7528da5a79a",
+        "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/06-restored-scenario-a-towerops-scenario-v1.json",
+        "file_chooser_copy_matches_download": true
+      },
+      "authored_raw_draft_sha256": "4e37c458d2ce2a169683eec2fdb2e570de4867b27aed332c94e9924e1f6df6ff",
+      "all_scenario_fields_and_bytes_restored": true,
+      "live_register_and_fresh_download_are_state_oracles": true,
+      "final": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 0.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "NEEDS REVIEW",
+        "proposal_output": "Saved scenario loaded. Run the planner or review alternatives before approval and readback.",
+        "gates": {
+          "gate-screen": "WAIT",
+          "gate-approval": "WAIT",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": false,
+        "review_options_disabled": false,
+        "audit_count": 0,
+        "audit_status": "0 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "Saved scenario loaded. Review alternatives before choosing a proposal.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "01-saved-scenario-a-towerops-scenario-v1.json: 2 aircraft, world version 1. Clock 1002 s; 1.5× time scale; selected TWR419.",
+        "scenario_policy": [
+          [
+            "Horizontal separation",
+            "4.5 NM"
+          ],
+          [
+            "Vertical separation",
+            "900 FT"
+          ],
+          [
+            "Look-ahead",
+            "4.5 MIN"
+          ],
+          [
+            "Recorded sample step",
+            "0.5 MIN"
+          ],
+          [
+            "Maximum state age",
+            "10 SEC"
+          ],
+          [
+            "Speed limit",
+            "6 NM/MIN"
+          ],
+          [
+            "Climb limit",
+            "3000 FT/MIN"
+          ]
+        ],
+        "scenario_status": "Scenario file prepared. Check your browser downloads.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "4.5",
+          "policy-vertical": "900",
+          "policy-horizon": "4.5",
+          "speed-range": "1.5"
+        },
+        "raw_draft": "\n  {\n   \"version\": 78,\n   \"observed_at\": 1000,\n   \"aircraft\": [\n      {\n         \"aircraft_id\": \"TWR218\",\n         \"x_nm\": -4.25,\n         \"y_nm\": 0,\n         \"altitude_ft\": 10000,\n         \"vx_nm_min\": 1,\n         \"vy_nm_min\": 0,\n         \"climb_ft_min\": 0\n      },\n      {\n         \"aircraft_id\": \"TWR419\",\n         \"x_nm\": 5,\n         \"y_nm\": 0,\n         \"altitude_ft\": 10000,\n         \"vx_nm_min\": -1,\n         \"vy_nm_min\": 0,\n         \"climb_ft_min\": 0\n      }\n   ]\n}\n",
+        "raw_feedback": "Loaded scenario with 2 aircraft at version 1. Your raw JSON draft is still kept. Use Export live world to replace it.",
+        "python_status": "Live CPython · towerops.py · AdvisoryPlanner",
+        "traffic_button": "Run traffic"
+      },
+      "finished_utc": "2026-10-08T17:06:17.675Z"
+    },
+    {
+      "name": "identical-load-discards-options-before-fresh-native-readback",
+      "started_utc": "2026-10-08T17:06:17.676Z",
+      "passed": true,
+      "initial": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 0.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "NEEDS REVIEW",
+        "proposal_output": "No proposal yet. The planner only returns a setpoint if it clears the separation policy.",
+        "gates": {
+          "gate-screen": "WAIT",
+          "gate-approval": "WAIT",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": false,
+        "review_options_disabled": false,
+        "audit_count": 0,
+        "audit_status": "0 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "Review native alternatives for the current world.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "",
+        "scenario_policy": [],
+        "scenario_status": "No scenario file selected.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "1"
+        },
+        "raw_draft": "{\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": -5,\n      \"y_nm\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": 5,\n      \"y_nm\": 0\n    }\n  ],\n  \"observed_at\": 1000,\n  \"version\": 1\n}",
+        "raw_feedback": "One to 60 aircraft; finite numeric fields and unique callsigns required.",
+        "python_status": "Python loads when you run the planner.",
+        "traffic_button": "Run traffic"
+      },
+      "old_review": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 0.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "NEEDS REVIEW",
+        "proposal_output": "No proposal yet. The planner only returns a setpoint if it clears the separation policy.",
+        "gates": {
+          "gate-screen": "WAIT",
+          "gate-approval": "WAIT",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": false,
+        "review_options_disabled": false,
+        "audit_count": 0,
+        "audit_status": "0 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [],
+        "alternatives_count": "68 ADMITTED / 74 CHECKED",
+        "alternatives_status": "Each option passed the native screen individually for world d01e0ef289. Choose one, then approve and accept its readback.",
+        "alternative_buttons": [
+          {
+            "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+            "disabled": false,
+            "text": "Use this proposal"
+          }
+        ],
+        "scenario_review_hidden": true,
+        "scenario_summary": "",
+        "scenario_policy": [],
+        "scenario_status": "Scenario file prepared. Check your browser downloads.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "1"
+        },
+        "raw_draft": "{\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": -5,\n      \"y_nm\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": 5,\n      \"y_nm\": 0\n    }\n  ],\n  \"observed_at\": 1000,\n  \"version\": 1\n}",
+        "raw_feedback": "One to 60 aircraft; finite numeric fields and unique callsigns required.",
+        "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+        "traffic_button": "Run traffic"
+      },
+      "import_review": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 0.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "PROPOSAL READY",
+        "proposal_output": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to d01e0ef289.",
+        "gates": {
+          "gate-screen": "PASS",
+          "gate-approval": "APPROVED",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": false,
+        "planner_disabled": true,
+        "review_options_disabled": false,
+        "audit_count": 0,
+        "audit_status": "0 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [],
+        "alternatives_count": "68 ADMITTED / 74 CHECKED",
+        "alternatives_status": "Selected TWR419, proposal d7af68a35f2b. Approval and readback are required for this selection.",
+        "alternative_buttons": [
+          {
+            "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+            "disabled": true,
+            "text": "Current proposal"
+          },
+          {
+            "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+            "disabled": false,
+            "text": "Use this proposal"
+          }
+        ],
+        "scenario_review_hidden": false,
+        "scenario_summary": "08-identical-scenario-original-towerops-scenario-v1.json: 2 aircraft, world version 1. Clock 1002 s; 1× time scale; selected TWR419.",
+        "scenario_policy": [
+          [
+            "Horizontal separation",
+            "5 NM"
+          ],
+          [
+            "Vertical separation",
+            "1000 FT"
+          ],
+          [
+            "Look-ahead",
+            "5 MIN"
+          ],
+          [
+            "Recorded sample step",
+            "0.5 MIN"
+          ],
+          [
+            "Maximum state age",
+            "10 SEC"
+          ],
+          [
+            "Speed limit",
+            "6 NM/MIN"
+          ],
+          [
+            "Climb limit",
+            "3000 FT/MIN"
+          ]
+        ],
+        "scenario_status": "Review the saved scenario. The current simulation is unchanged.",
+        "scenario_load_disabled": false,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "1"
+        },
+        "raw_draft": "{\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": -5,\n      \"y_nm\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"altitude_ft\": 10000,\n      \"climb_ft_min\": 0,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 0,\n      \"x_nm\": 5,\n      \"y_nm\": 0\n    }\n  ],\n  \"observed_at\": 1000,\n  \"version\": 1\n}",
+        "raw_feedback": "One to 60 aircraft; finite numeric fields and unique callsigns required.",
+        "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+        "traffic_button": "Run traffic"
+      },
+      "after_identical_load": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 0.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "NEEDS REVIEW",
+        "proposal_output": "Saved scenario loaded. Run the planner or review alternatives before approval and readback.",
+        "gates": {
+          "gate-screen": "WAIT",
+          "gate-approval": "WAIT",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": false,
+        "review_options_disabled": false,
+        "audit_count": 0,
+        "audit_status": "0 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "Saved scenario loaded. Review alternatives before choosing a proposal.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "08-identical-scenario-original-towerops-scenario-v1.json: 2 aircraft, world version 1. Clock 1002 s; 1× time scale; selected TWR419.",
+        "scenario_policy": [
+          [
+            "Horizontal separation",
+            "5 NM"
+          ],
+          [
+            "Vertical separation",
+            "1000 FT"
+          ],
+          [
+            "Look-ahead",
+            "5 MIN"
+          ],
+          [
+            "Recorded sample step",
+            "0.5 MIN"
+          ],
+          [
+            "Maximum state age",
+            "10 SEC"
+          ],
+          [
+            "Speed limit",
+            "6 NM/MIN"
+          ],
+          [
+            "Climb limit",
+            "3000 FT/MIN"
+          ]
+        ],
+        "scenario_status": "Scenario loaded with its saved policy. Traffic is paused and the decision trace starts empty.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "1"
+        },
+        "raw_draft": "{\n  \"version\": 1,\n  \"observed_at\": 1000,\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"x_nm\": -5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"x_nm\": 5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    }\n  ]\n}",
+        "raw_feedback": "Loaded scenario with 2 aircraft at version 1.",
+        "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+        "traffic_button": "Run traffic"
+      },
+      "fresh_review": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 0.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "1",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "NEEDS REVIEW",
+        "proposal_output": "Saved scenario loaded. Run the planner or review alternatives before approval and readback.",
+        "gates": {
+          "gate-screen": "WAIT",
+          "gate-approval": "WAIT",
+          "gate-ack": "WAIT"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": false,
+        "review_options_disabled": false,
+        "audit_count": 0,
+        "audit_status": "0 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [],
+        "alternatives_count": "68 ADMITTED / 74 CHECKED",
+        "alternatives_status": "Each option passed the native screen individually for world d01e0ef289. Choose one, then approve and accept its readback.",
+        "alternative_buttons": [
+          {
+            "hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "ef20ee8238df22c802d15e0d22fa468a9011e33c1eafedfbc666b53ac1d4ab48",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "9e5295ec2fdb781ed6408243465d7040228cff94affede504e828dd9d9ea6576",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "d0468b5a7f99a9fda6e5d49ad64859ec0cc167486db5d7f9cdd583f1c7e0d315",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "347df41f813643352f07fbc523b5e1483fabfa4fe7f5ed9a505e594143a16875",
+            "disabled": false,
+            "text": "Use this proposal"
+          },
+          {
+            "hash": "17df60c12f41d5273a9f6588930d73f2ecd7753517117fef49b5b463f906474f",
+            "disabled": false,
+            "text": "Use this proposal"
+          }
+        ],
+        "scenario_review_hidden": true,
+        "scenario_summary": "08-identical-scenario-original-towerops-scenario-v1.json: 2 aircraft, world version 1. Clock 1002 s; 1× time scale; selected TWR419.",
+        "scenario_policy": [
+          [
+            "Horizontal separation",
+            "5 NM"
+          ],
+          [
+            "Vertical separation",
+            "1000 FT"
+          ],
+          [
+            "Look-ahead",
+            "5 MIN"
+          ],
+          [
+            "Recorded sample step",
+            "0.5 MIN"
+          ],
+          [
+            "Maximum state age",
+            "10 SEC"
+          ],
+          [
+            "Speed limit",
+            "6 NM/MIN"
+          ],
+          [
+            "Climb limit",
+            "3000 FT/MIN"
+          ]
+        ],
+        "scenario_status": "Scenario file prepared. Check your browser downloads.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "1"
+        },
+        "raw_draft": "{\n  \"version\": 1,\n  \"observed_at\": 1000,\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"x_nm\": -5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"x_nm\": 5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    }\n  ]\n}",
+        "raw_feedback": "Loaded scenario with 2 aircraft at version 1.",
+        "python_status": "Live CPython · native candidate review · ControlRoom.screen_batch",
+        "traffic_button": "Run traffic"
+      },
+      "fresh_selected_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+      "fresh_readback": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 2.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "0",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "IDLE",
+        "proposal_output": "Simulated setpoint applied. No projected conflict remains in the policy window.",
+        "gates": {
+          "gate-screen": "PASS",
+          "gate-approval": "APPROVED",
+          "gate-ack": "ACCEPTED"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": true,
+        "review_options_disabled": false,
+        "audit_count": 4,
+        "audit_status": "4 EVENTS / VALID",
+        "audit_verdict": "",
+        "audit_events": [
+          "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+          "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+          "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+          "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387"
+        ],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "The world, clock or policy changed. Review alternatives again before choosing a proposal.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "08-identical-scenario-original-towerops-scenario-v1.json: 2 aircraft, world version 1. Clock 1002 s; 1× time scale; selected TWR419.",
+        "scenario_policy": [
+          [
+            "Horizontal separation",
+            "5 NM"
+          ],
+          [
+            "Vertical separation",
+            "1000 FT"
+          ],
+          [
+            "Look-ahead",
+            "5 MIN"
+          ],
+          [
+            "Recorded sample step",
+            "0.5 MIN"
+          ],
+          [
+            "Maximum state age",
+            "10 SEC"
+          ],
+          [
+            "Speed limit",
+            "6 NM/MIN"
+          ],
+          [
+            "Climb limit",
+            "3000 FT/MIN"
+          ]
+        ],
+        "scenario_status": "Scenario file prepared. Check your browser downloads.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "1"
+        },
+        "raw_draft": "{\n  \"version\": 2,\n  \"observed_at\": 1002.5,\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"x_nm\": -5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"x_nm\": 5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 2,\n      \"climb_ft_min\": 0\n    }\n  ]\n}",
+        "raw_feedback": "Loaded scenario with 2 aircraft at version 1.",
+        "python_status": "Live CPython · ControlRoom.apply · audit verified",
+        "traffic_button": "Run traffic"
+      },
+      "old_selected_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+      "saved_file": {
+        "label": "identical-scenario-original",
+        "group": "identical-load-discards-options-before-fresh-native-readback",
+        "guid": "1049ae37-5154-415c-8b05-f999c61af24e",
+        "url": "blob:https://jacobmetoyer.com/066c890a-4d9d-41c5-810c-0db5462ab810",
+        "suggested_filename": "towerops-scenario-v1.json",
+        "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/1049ae37-5154-415c-8b05-f999c61af24e",
+        "completed": true,
+        "received_bytes": 812,
+        "total_bytes": 812,
+        "bytes": 812,
+        "sha256": "0aa77d010974111d58fdc4812650e4f5c7f9c5efd86af88ae87ef8479f6984ec",
+        "git_blob": "ea7a53382127f6ca67e87303adcb2d25f1e89d1e",
+        "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/08-identical-scenario-original-towerops-scenario-v1.json",
+        "file_chooser_copy_matches_download": true
+      },
+      "final_live_file": {
+        "label": "after-fresh-native-readback",
+        "group": "identical-load-discards-options-before-fresh-native-readback",
+        "guid": "ff60c773-bf24-40bd-9877-017e1d6edbbd",
+        "url": "blob:https://jacobmetoyer.com/e824854f-9cf6-4c79-8e5f-fa993c3297b0",
+        "suggested_filename": "towerops-scenario-v2.json",
+        "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/ff60c773-bf24-40bd-9877-017e1d6edbbd",
+        "completed": true,
+        "received_bytes": 816,
+        "total_bytes": 816,
+        "bytes": 816,
+        "sha256": "430f38e47d46fbb1d75d17887b2ff5011e105804bc4ae8754ba625ff12f288ec",
+        "git_blob": "6ac14c1ade1a8ec7f4a047cbdcbd254fe16eaacc",
+        "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/11-after-fresh-native-readback-towerops-scenario-v2.json",
+        "file_chooser_copy_matches_download": true
+      },
+      "fresh_trace_file": {
+        "label": "fresh-native-trace-after-identical-load",
+        "group": "identical-load-discards-options-before-fresh-native-readback",
+        "guid": "03bf4fbf-cbec-428a-ac1f-0ca624095a49",
+        "url": "blob:https://jacobmetoyer.com/0bdaac53-b82e-44f2-953c-b1a361e06a1f",
+        "suggested_filename": "towerops-decision-trace.json",
+        "native_path": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/downloads/03bf4fbf-cbec-428a-ac1f-0ca624095a49",
+        "completed": true,
+        "received_bytes": 1575,
+        "total_bytes": 1575,
+        "bytes": 1575,
+        "sha256": "456d0fcc4b192cafef13cad3162237c8bf2bbfec37dc65e5308f26e5a0e57c3a",
+        "git_blob": "e21bb2c8fc6211395aabee854b6831176889d7fa",
+        "file_chooser_copy": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/selected-files/12-fresh-native-trace-after-identical-load-towerops-decision-trace.json",
+        "file_chooser_copy_matches_download": true
+      },
+      "identical_saved_bytes_preserved": true,
+      "old_list_cleared_before_new_native_review": true,
+      "final": {
+        "url": "https://jacobmetoyer.com/TowerOps/airspace/",
+        "flights": [
+          {
+            "id": "TWR218",
+            "meta": "100 FL / 1.0, 0.0 NM/M",
+            "selected": false
+          },
+          {
+            "id": "TWR419",
+            "meta": "100 FL / -1.0, 2.0 NM/M",
+            "selected": true
+          }
+        ],
+        "flight_count": "2 FLIGHTS",
+        "pair_count": "0",
+        "sim_clock": "T+0 SEC",
+        "proposal_state": "IDLE",
+        "proposal_output": "Simulated setpoint applied. No projected conflict remains in the policy window.",
+        "gates": {
+          "gate-screen": "PASS",
+          "gate-approval": "APPROVED",
+          "gate-ack": "ACCEPTED"
+        },
+        "approve_disabled": true,
+        "readback_disabled": true,
+        "planner_disabled": true,
+        "review_options_disabled": false,
+        "audit_count": 4,
+        "audit_status": "4 EVENTS / VALID",
+        "audit_verdict": "HASH CHAIN VALID - 4 EVENTS",
+        "audit_events": [
+          "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+          "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+          "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+          "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387"
+        ],
+        "alternatives_count": "NO CURRENT REVIEW",
+        "alternatives_status": "The world, clock or policy changed. Review alternatives again before choosing a proposal.",
+        "alternative_buttons": [],
+        "scenario_review_hidden": true,
+        "scenario_summary": "08-identical-scenario-original-towerops-scenario-v1.json: 2 aircraft, world version 1. Clock 1002 s; 1× time scale; selected TWR419.",
+        "scenario_policy": [
+          [
+            "Horizontal separation",
+            "5 NM"
+          ],
+          [
+            "Vertical separation",
+            "1000 FT"
+          ],
+          [
+            "Look-ahead",
+            "5 MIN"
+          ],
+          [
+            "Recorded sample step",
+            "0.5 MIN"
+          ],
+          [
+            "Maximum state age",
+            "10 SEC"
+          ],
+          [
+            "Speed limit",
+            "6 NM/MIN"
+          ],
+          [
+            "Climb limit",
+            "3000 FT/MIN"
+          ]
+        ],
+        "scenario_status": "Scenario file prepared. Check your browser downloads.",
+        "scenario_load_disabled": true,
+        "controls": {
+          "policy-horizontal": "5",
+          "policy-vertical": "1000",
+          "policy-horizon": "5",
+          "speed-range": "1"
+        },
+        "raw_draft": "{\n  \"version\": 2,\n  \"observed_at\": 1002.5,\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"x_nm\": -5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"x_nm\": 5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": 2,\n      \"climb_ft_min\": 0\n    }\n  ]\n}",
+        "raw_feedback": "Loaded scenario with 2 aircraft at version 1.",
+        "python_status": "Live CPython · ControlRoom.apply · audit verified",
+        "traffic_button": "Run traffic"
+      },
+      "finished_utc": "2026-10-08T17:06:20.294Z"
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "request_failures": [],
+  "deployment": {
+    "source_commit": "0704ed42a4cf2a9edc4aa99853f8f53c14f0ffcc",
+    "source_tree": "ac06bbdb44c203a4214dadbb818439f1ac4b4279",
+    "workflow_run": 37812532089,
+    "artifact_id": 11566060929,
+    "archive": {
+      "path": "/private/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/github-pages-11566060929.zip",
+      "bytes": 6453278,
+      "sha256": "e62ba742818b9c9190633516c8f6b595ba80ea96868f060d7193b781a931fb3d"
+    },
+    "verified_normal_main_push": true,
+    "artifact_digest_verified": true
+  },
+  "passed": true,
+  "browser_pin_coverage": {
+    "observed_artifact_urls": [
+      "https://jacobmetoyer.com/TowerOps/airspace/",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py"
+    ],
+    "matched_browser_body_urls": [
+      "https://jacobmetoyer.com/TowerOps/airspace/",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py"
+    ],
+    "unmatched_observed_artifact_urls": [],
+    "mismatches": [],
+    "external_requests": [],
+    "qualification_scope": "Exact artifact HTTP bytes plus at least one matching browser body for every observed requested artifact URL; duplicate body-observer errors remain recorded."
+  },
+  "inputs_after": [
+    {
+      "path": "/private/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/run.json",
+      "bytes": 12299,
+      "sha256": "01fbd5366edb5f5d4cc57a22f029669840673299eaac17c1cd3246f82a3fd6c6",
+      "git_blob": "f3b504b8b17e981aa02aabcdb18a79c83fcfa323"
+    },
+    {
+      "path": "/private/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/artifacts.json",
+      "bytes": 812,
+      "sha256": "a49c8683a501157b1c18578bd3f37219d9affa01302075b700b830a01ddcefe5",
+      "git_blob": "826fabcf136e090114aab6fb993a13f41c37e95d"
+    },
+    {
+      "path": "/private/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/inputs/artifact-manifest.json",
+      "bytes": 3309,
+      "sha256": "89a0b06ec788dddfb4b0d90d9644f1b67f86521a529b101eb4af094b0f1737ac",
+      "git_blob": "e96dc90971b067fba9696e119e18c5bd3ab4a4cd"
+    }
+  ],
+  "inputs_unchanged": true,
+  "receiver_unchanged": true,
+  "finished_utc": "2026-10-08T17:06:20.382Z"
+}

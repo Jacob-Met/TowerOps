@@ -1,0 +1,13 @@
+# Root hosted receiving acceptance
+
+Verdict: **ACCEPT the saved-policy comparison for source integration**, subject to the repository's ordinary current-source and merge checks.
+
+Root directly read the actual [PR64 workflow run37820535313](https://github.com/Jacob-Met/TowerOps/actions/runs/37820535313), test job113460110868. The tested checkout is `5d93029ebfed871b6b0b56fbe9a19086fd83896c`, the synthetic pull-request composition for source head `a75888c42338ae0ffe165aa522a01c3e27e3d1d2`. It is not an actual integration commit. The executed comparison module is SHA256 `2042f344a71cdbcebbe97ad7e31fdcdb359be3282a8e4427b728cc1afe6d76c0`; hosted Python is3.12.15.
+
+All27 frozen independent API cases and22 actual CLI processes passed. The program retained exact complete advisory identities, native world/clock representation, policy values, original menu order and source-byte hashes. It correctly refused incompatible or malformed complete reports and file-boundary cases. The real Linux output-device failure returned2. Every input fixture hash and the comparison source remained unchanged.
+
+The frozen fixture packet remains SHA256 `617776a8e17779c24b09405e483490b8df4f078d9e1f67e4d96757e407e7ae82`; the unchanged harness remains `8b143a918ad29210226831c8247f69bb106862301993651992aa562eea9bba44`. These expectations were fixed using the original native producer before candidate exposure. The earlier Mac pre-candidate producer run, cloud-local API result, unobserved Mac candidate timeout, and first cloud metadata-probe refusal retain their original meanings.
+
+Root decoded the actual log archive in memory, verified its compressed and uncompressed length/SHA256, then independently verified all47 retained file byte sequences (382,423 bytes). The archive's26,403-byte RECEIVING.json is byte-identical to the plainly delimited log receipt and has SHA256 `6654b124627c238fccbe64f8d92991a3ed03f463a95fc8729ccd378e6a8d7d76`. The full raw archive is516,392 bytes, SHA256 `9b4aed1031e606cf8d9f40866ce642d09d63b12ef08467627087704797fc971c`; its67,439-byte zlib form is `c1e905647f8360bacffd9afba797ba6a1917289877d005a31dc1463f9305443c`. The accompanying custody JSON records every file's exact identity.
+
+This is actual hosted API/CLI receiving plus static source acceptance. It does not claim Mac/Windows/LA7 receiving, an installed command, or live planning/aviation effects. Source integration and any later host delivery remain separately evidenced. The existing test, lint and adapter jobs all passed on this source head; retain the original previous-head test-oracle and style failures rather than relabeling them.
