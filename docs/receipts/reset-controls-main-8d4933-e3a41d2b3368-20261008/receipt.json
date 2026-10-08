@@ -1,0 +1,158 @@
+{
+  "archive": {
+    "bytes": 94887,
+    "sha256": "13d81ef8c7fc3c48ff37548bb4bae5c7e7adaf75248204c95e7ad2a8376ce88a"
+  },
+  "archive_members": 31,
+  "created_at": "2026-10-08T13:41:43.144556+00:00",
+  "limits": [
+    "No new 8d4933 baseline execution; earlier a704 negative controls remain historical.",
+    "120 unchanged unit tests were not repeated.",
+    "Draft owner receiver uses exact source through pinned Vite; Reset receiver uses the new production bundle.",
+    "No GitHub or live hosting/deployment action."
+  ],
+  "preservation": {
+    "draft_edits_preserved": true,
+    "historical_receipts": [
+      {
+        "bytes": 5652,
+        "path": "docs/receipts/reset-controls-current-main-e3a41d2b3368-20261008/README.md",
+        "sha256": "8713c4506a76a75ce1e285e74143bd1ade77b059ca8f02b294a82beb1c7584ff"
+      },
+      {
+        "bytes": 8471,
+        "path": "docs/receipts/reset-controls-current-main-e3a41d2b3368-20261008/manifest.json",
+        "sha256": "d928e04ace38578078a119469e9c00ee36394d8ce7d46c056a07381eb0b325be"
+      },
+      {
+        "bytes": 3428,
+        "path": "docs/receipts/reset-controls-current-main-e3a41d2b3368-20261008/receipt.json",
+        "sha256": "7b2b4ed4b0fb7e7993fa05524111253f4f05b0b0c2a7b22f082a3c68644f8f55"
+      },
+      {
+        "bytes": 128932,
+        "path": "docs/receipts/reset-controls-current-main-e3a41d2b3368-20261008/receiving-evidence.tar.gz",
+        "sha256": "25a7b18b8a99c772e8d496d4e7d69da29d3b950a5b192d1e8c0e8d80076f99ef"
+      }
+    ],
+    "other_source_bytes_unchanged": true,
+    "outside_reset_world_bytes_identical": true,
+    "retained_statements": 16,
+    "served_build_unchanged": true,
+    "upstream_files_and_modes": 185
+  },
+  "qualified_commands": {
+    "candidate-build": {
+      "command": [
+        "/usr/bin/node",
+        "/home/jacob/hamon-universal-e3a41d2b3368-towerops-reset-main-8d4933/build.mjs",
+        "candidate"
+      ],
+      "elapsed_seconds": 3.8703242489136755,
+      "exit_code": 0,
+      "result": {
+        "bytes": 2905,
+        "sha256": "96dfc3b6a37ff0e40a0548086f4239175d7a2c21c3083c377f4d011b15f3da2f"
+      }
+    },
+    "candidate-draft-browser": {
+      "command": [
+        "/usr/bin/node",
+        "/home/jacob/hamon-universal-e3a41d2b3368-towerops-reset-main-8d4933/candidate/web/airspace/tests/world-json-draft.browser.mjs",
+        "--root",
+        "/home/jacob/hamon-universal-e3a41d2b3368-towerops-reset-main-8d4933/candidate",
+        "--qa",
+        "/home/jacob/hamon-universal-e3a41d2b3368-towerops-reset-main-8d4933/qa/candidate-draft-browser/work",
+        "--output",
+        "/home/jacob/hamon-universal-e3a41d2b3368-towerops-reset-main-8d4933/qa/candidate-draft-browser/browser",
+        "--toolchain",
+        "/home/jacob/towerops-current-main-31366547c1f5/repository/web/airspace/node_modules",
+        "--browser",
+        "/snap/bin/chromium"
+      ],
+      "elapsed_seconds": 23.028923898003995,
+      "exit_code": 0,
+      "result": {
+        "bytes": 5237,
+        "sha256": "17d126ed4f261cd41872dbb73473c1d1be31a1f23ec5c08b51bacfbfc4b74472"
+      }
+    },
+    "candidate-reset-browser": {
+      "command": [
+        "/usr/bin/node",
+        "/home/jacob/hamon-universal-e3a41d2b3368-towerops-reset-main-8d4933/candidate/tools/verify_airspace_reset.cjs",
+        "/home/jacob/hamon-universal-e3a41d2b3368-towerops-reset-main-8d4933/candidate-dist",
+        "/home/jacob/hamon-universal-e3a41d2b3368-towerops-reset-main-8d4933/qa/candidate-reset-browser/browser",
+        "/home/jacob/hamon-universal-e3a41d2b3368-towerops-reset-main-8d4933/candidate/web/airspace/src/main.ts",
+        "/snap/bin/chromium"
+      ],
+      "elapsed_seconds": 28.928047899040394,
+      "exit_code": 0,
+      "result": {
+        "bytes": 4454,
+        "sha256": "159e546d27852e6e2bb1ed819e6a66366f18305c9be80d608f8cd3e46fb8acd9"
+      }
+    }
+  },
+  "reset": {
+    "assertions_passed": 19,
+    "browser": "153.0.8010.47",
+    "errors": 0,
+    "groups_passed": 3,
+    "receipt": {
+      "bytes": 13062,
+      "sha256": "549026a7be4446513f0a5f9a8428a5e793333586734e7c282403340accd98c41"
+    }
+  },
+  "schema": "towerops.reset-controls.current-main-receiving.v2",
+  "served_build_sha256": {
+    "assets/index-WhwvGorf.js": "b25f2353ddbab438bda42f3fd71294d6f82ec386574e555e40648059f3ebb769",
+    "assets/index-z51yMqTQ.css": "7c226d52820f0d49bd6fecd8d4e8637582ffc21f13bfb8e37472555b50d599d2",
+    "assets/python-worker-CvN6OBkC.js": "ee3a0389239a60e88ac2c91d7ed5a1ee6ad7d281996481969dea74138c04b096",
+    "captures/airspace-desktop.png": "a8523cd17734b8661d46a87f56bb4b9ed6ee4846166c7aa8bda8c254c1ee86c7",
+    "captures/airspace-mobile.png": "1719422ba17148eab7dacbb3ddf3c9548af8242bdef7c9867e308541fffcbd43",
+    "favicon.svg": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+    "index.html": "324bf7e1f4b34092c4878c56e690c063573ccd01387cb1f29f223ab15f835179",
+    "python/audit_replay.py": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+    "python/decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "python/pyodide-lock.json": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+    "python/pyodide.asm.js": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+    "python/pyodide.asm.wasm": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+    "python/pyodide.mjs": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+    "python/python_stdlib.zip": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+    "python/towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+  },
+  "source": {
+    "author_sha256": "c9c07a4a1ce29e6a29e918ecbe26a75bd3816cc77741231a4167c99b408f43f5",
+    "base_commit": "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+    "base_tree": "918931cb2034049be9e7717012b3b3309a63b4c3",
+    "baseline_git_blob": "d975ab8c55c01b0f6177ad736ed0c6b1fa821599",
+    "baseline_sha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa",
+    "baseline_statements": 20,
+    "browser_harness_sha256": "30d8abef87cc09615277b839dc4d6edcc7ae90d6443abdbe18a90f86294aa6d7",
+    "candidate_git_blob": "cbde364e9d4d7438d41c324f51791d2ab7db40ca",
+    "candidate_sha256": "77b06c469aa9d22695acf7fe192a4569cd2e040862a59c045880dd2a6407b15c",
+    "candidate_statements": 24,
+    "draft_browser_git_blob": "aa01b6711f7aeb7358cc4bba21477d840f449d45",
+    "draft_browser_sha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+    "exact_authored_reset_function": true,
+    "original_function_identical_on_current_main": true,
+    "outside_reset_world_bytes_identical": true,
+    "preserved_statements": 16,
+    "receiving_delta": "WorldState JSON draft PR46; every byte outside resetWorld preserved, including all five draft changes",
+    "scope": "Only the accepted resetWorld rate and policy-control synchronization; PR44 broad pause handling remains with owner",
+    "upstream_leaves": 185
+  },
+  "status": "qualified isolated current-main candidate; not published or deployed",
+  "visual_inspection": "Fast-wide-policy screenshot reviewed; default 5.0 NM, 1,000 FT, and 5.0 MIN agree with controls.",
+  "worldstate_draft": {
+    "checks_passed": 9,
+    "cleanup": "passed",
+    "errors": 0,
+    "receipt": {
+      "bytes": 50059,
+      "sha256": "0e756e556a58dc5564afede8c81c6294ef85b6ca187dbff0f9e94746dc0c411b"
+    },
+    "receiver_sha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f"
+  }
+}

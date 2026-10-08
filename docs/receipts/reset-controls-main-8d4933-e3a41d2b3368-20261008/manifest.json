@@ -1,0 +1,195 @@
+{
+  "archive_members": [
+    {
+      "bytes": 23120,
+      "path": "preparation/baseline-main.ts",
+      "sha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa"
+    },
+    {
+      "bytes": 1176,
+      "path": "preparation/build.mjs",
+      "sha256": "ee3c943051a19cf90d5e4a4540a5d73ffb554ba5cac640c535da2dac491d20e5"
+    },
+    {
+      "bytes": 96,
+      "path": "preparation/clone.log",
+      "sha256": "c819d1a1291d2fb5f0abbf7e61cd2c47148f3ad441f70b786fba531b47b1dd59"
+    },
+    {
+      "bytes": 5090,
+      "path": "preparation/compose.cjs",
+      "sha256": "bd1054b439b9a72e34579678c14f25cb1a9ef2f7e915704da7dac9989ae53c8f"
+    },
+    {
+      "bytes": 1299,
+      "path": "preparation/composition.json",
+      "sha256": "779f1aca5dbb881869343c64675f974adc580c5599e2b32c0373cc6ebb5d5fc1"
+    },
+    {
+      "bytes": 58908,
+      "path": "preparation/expected-source.json",
+      "sha256": "9c273b280d823c2ebe889a5e98b3d06b1bb0ac05d8af344324bc8984c2743509"
+    },
+    {
+      "bytes": 10424,
+      "path": "preparation/finalize_packet.py",
+      "sha256": "5eb04cc35e8022aaf731096089ec3c9818f2b654bf2a1e2b3f952ebc43465825"
+    },
+    {
+      "bytes": 5303,
+      "path": "preparation/run_qualification.py",
+      "sha256": "cba8d44a666062a5a6cd527fbf48abb6791a8765936b5c84e31d351071ba8528"
+    },
+    {
+      "bytes": 4105,
+      "path": "preparation/runtime.diff",
+      "sha256": "45d02c162cbdab65d39af4f66e2ed1a2b6253a844fca1c2902c4cabcf93f3e9b"
+    },
+    {
+      "bytes": 892,
+      "path": "qa/candidate-build/request.json",
+      "sha256": "51da96d6b9c8ebc0c04c244bbb2975cbdc3997efcf29087d1420e8429c9f62ba"
+    },
+    {
+      "bytes": 2905,
+      "path": "qa/candidate-build/result.json",
+      "sha256": "96dfc3b6a37ff0e40a0548086f4239175d7a2c21c3083c377f4d011b15f3da2f"
+    },
+    {
+      "bytes": 684,
+      "path": "qa/candidate-build/run.log",
+      "sha256": "e0a65a4e62dcf7a3cd8609baba2e81b5dbefca54ee509de48290914f1ac1961e"
+    },
+    {
+      "bytes": 50059,
+      "path": "qa/candidate-draft-browser/browser/browser-report.json",
+      "sha256": "0e756e556a58dc5564afede8c81c6294ef85b6ca187dbff0f9e94746dc0c411b"
+    },
+    {
+      "bytes": 1420,
+      "path": "qa/candidate-draft-browser/request.json",
+      "sha256": "fc00afc8691d304d227da733342f8d9576ed4f193265cde441b47e95f23c55cf"
+    },
+    {
+      "bytes": 5237,
+      "path": "qa/candidate-draft-browser/result.json",
+      "sha256": "17d126ed4f261cd41872dbb73473c1d1be31a1f23ec5c08b51bacfbfc4b74472"
+    },
+    {
+      "bytes": 884,
+      "path": "qa/candidate-draft-browser/run.log",
+      "sha256": "483a2af520afc9cddd2891c5670af11d702a8a00851d0c80899878e1bb78683f"
+    },
+    {
+      "bytes": 11447,
+      "path": "qa/candidate-reset-browser/browser/fast-wide-policy-policy.png",
+      "sha256": "c6790ba0e67c425882e0f9d45224efdab9955cec382cf7911c0c7caf7c7f53f5"
+    },
+    {
+      "bytes": 1896,
+      "path": "qa/candidate-reset-browser/browser/fast-wide-policy-speed.png",
+      "sha256": "c8b8fec5d11f62768560e53eafc8abd89c47d3ddd994271f7acd2de5f355e8ad"
+    },
+    {
+      "bytes": 13062,
+      "path": "qa/candidate-reset-browser/browser/receipt.json",
+      "sha256": "549026a7be4446513f0a5f9a8428a5e793333586734e7c282403340accd98c41"
+    },
+    {
+      "bytes": 11447,
+      "path": "qa/candidate-reset-browser/browser/slow-narrow-policy-policy.png",
+      "sha256": "c6790ba0e67c425882e0f9d45224efdab9955cec382cf7911c0c7caf7c7f53f5"
+    },
+    {
+      "bytes": 1896,
+      "path": "qa/candidate-reset-browser/browser/slow-narrow-policy-speed.png",
+      "sha256": "c8b8fec5d11f62768560e53eafc8abd89c47d3ddd994271f7acd2de5f355e8ad"
+    },
+    {
+      "bytes": 1243,
+      "path": "qa/candidate-reset-browser/request.json",
+      "sha256": "829205ae1f5c0a86e66370d8acffa07fa69e9534db541097eb3aa7ea0514ece3"
+    },
+    {
+      "bytes": 4454,
+      "path": "qa/candidate-reset-browser/result.json",
+      "sha256": "159e546d27852e6e2bb1ed819e6a66366f18305c9be80d608f8cd3e46fb8acd9"
+    },
+    {
+      "bytes": 1146,
+      "path": "qa/candidate-reset-browser/run.log",
+      "sha256": "fa2e2fde60bd08149ce54f5fe7d5a18fb6cc8cec480bb4394aceff7a56766f1b"
+    },
+    {
+      "bytes": 48575,
+      "path": "served-build/assets/index-WhwvGorf.js",
+      "sha256": "b25f2353ddbab438bda42f3fd71294d6f82ec386574e555e40648059f3ebb769"
+    },
+    {
+      "bytes": 18314,
+      "path": "served-build/assets/index-z51yMqTQ.css",
+      "sha256": "7c226d52820f0d49bd6fecd8d4e8637582ffc21f13bfb8e37472555b50d599d2"
+    },
+    {
+      "bytes": 3631,
+      "path": "served-build/assets/python-worker-CvN6OBkC.js",
+      "sha256": "ee3a0389239a60e88ac2c91d7ed5a1ee6ad7d281996481969dea74138c04b096"
+    },
+    {
+      "bytes": 13788,
+      "path": "served-build/index.html",
+      "sha256": "324bf7e1f4b34092c4878c56e690c063573ccd01387cb1f29f223ab15f835179"
+    },
+    {
+      "bytes": 23422,
+      "path": "source/main.ts",
+      "sha256": "77b06c469aa9d22695acf7fe192a4569cd2e040862a59c045880dd2a6407b15c"
+    },
+    {
+      "bytes": 9100,
+      "path": "source/verify_airspace_reset.cjs",
+      "sha256": "30d8abef87cc09615277b839dc4d6edcc7ae90d6443abdbe18a90f86294aa6d7"
+    },
+    {
+      "bytes": 14483,
+      "path": "source/world-json-draft.browser.mjs",
+      "sha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f"
+    }
+  ],
+  "files": {
+    "README.md": {
+      "bytes": 4768,
+      "sha256": "9b0a213a7b97ea142b7549fce10648d34b99dd65ebf1688d21640e88b68ed4a2"
+    },
+    "receipt.json": {
+      "bytes": 7561,
+      "sha256": "834960c72968984b5891e4159973ea61fba65a9315eea0758f1873e27cb21e0a"
+    },
+    "receiving-evidence.tar.gz": {
+      "bytes": 94887,
+      "sha256": "13d81ef8c7fc3c48ff37548bb4bae5c7e7adaf75248204c95e7ad2a8376ce88a"
+    }
+  },
+  "schema": "towerops.receiving.member-manifest.v1",
+  "source": {
+    "author_sha256": "c9c07a4a1ce29e6a29e918ecbe26a75bd3816cc77741231a4167c99b408f43f5",
+    "base_commit": "8d4933f33a0f5e0673fa9d00002e8b29302a1c53",
+    "base_tree": "918931cb2034049be9e7717012b3b3309a63b4c3",
+    "baseline_git_blob": "d975ab8c55c01b0f6177ad736ed0c6b1fa821599",
+    "baseline_sha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa",
+    "baseline_statements": 20,
+    "browser_harness_sha256": "30d8abef87cc09615277b839dc4d6edcc7ae90d6443abdbe18a90f86294aa6d7",
+    "candidate_git_blob": "cbde364e9d4d7438d41c324f51791d2ab7db40ca",
+    "candidate_sha256": "77b06c469aa9d22695acf7fe192a4569cd2e040862a59c045880dd2a6407b15c",
+    "candidate_statements": 24,
+    "draft_browser_git_blob": "aa01b6711f7aeb7358cc4bba21477d840f449d45",
+    "draft_browser_sha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+    "exact_authored_reset_function": true,
+    "original_function_identical_on_current_main": true,
+    "outside_reset_world_bytes_identical": true,
+    "preserved_statements": 16,
+    "receiving_delta": "WorldState JSON draft PR46; every byte outside resetWorld preserved, including all five draft changes",
+    "scope": "Only the accepted resetWorld rate and policy-control synchronization; PR44 broad pause handling remains with owner",
+    "upstream_leaves": 185
+  }
+}
