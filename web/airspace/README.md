@@ -23,6 +23,24 @@ From `web/airspace`, run `npm run dev`; then open the printed local URL. The dem
 
 `tools/capture_airspace.py` is an optional local Chrome/Playwright check used to capture the desktop and phone states; pass `--chrome` if Chrome is not at the Raider default path.
 
+## Review and choose a native alternative
+
+Choose **Review alternatives** beside the planner controls to pause traffic and inspect every individually admitted option from the original Python maneuver menu. The first option keeps the planner's original priority. Filter by flight or page through the alternatives; each card shows its exact setpoint and can expand the full proposal and native hash.
+
+Reviewing preserves the current proposal, approval, world and decision trace. **Use this proposal** explicitly replaces the proposal; a different choice clears its previous approval and requires **Approve** followed by **Accept readback + apply**. The current proposal is marked and cannot be accidentally selected again. The original `ControlRoom.apply` rechecks the selected body, world hash, freshness, approval and acknowledgement. Alternatives are never submitted as a simultaneous batch.
+
+Changing the world, policy or simulation clock invalidates the review, including a response that arrives after the snapshot changed. Run **Review alternatives** again to obtain current options. A conflict-free world needs no advisory, and a conflicted world may have no admitted option in the bounded menu. Resolving one flight's conflicts can leave other pairs for a subsequent planning pass.
+
+The browser loads `advisory_options.py` on demand alongside the unchanged `towerops.py`. The helper uses the original candidate generator and gate; its private screening events do not become the simulation's decision trace. If the helper cannot load, the existing planner and apply operations remain available.
+
+After building, a focused check uses the optional Playwright runtime and an installed Chromium. Run from the repository root:
+
+```bash
+python tools/check_advisory_options_browser.py --chrome /path/to/chromium --output-dir /path/to/evidence
+```
+
+It serves the build on loopback, observes real native worker exchanges, verifies exact selection through approval/readback/apply, and saves desktop/mobile captures. Its explicit failed-helper-download control also checks that the original planner remains usable.
+
 ## Preview a selected-flight edit
 
 Open **Shape the traffic** and choose **Edit TWR419** (or the flight selected in the traffic register under **Under the hood**). The existing fields fill with that flight's position, flight level, bearing, speed and climb. Its callsign stays fixed, and traffic pauses while you edit.
@@ -92,3 +110,16 @@ This reviews the recorded gate story; it does not rerun the separation policy,
 reconstruct aircraft motion or authenticate an approval. The replay source loads
 only when requested, so an unavailable replay module does not replace or disable
 the existing native planner.
+
+
+## Edit raw WorldState JSON
+
+Open **Inspect or load a WorldState** to edit the live world as JSON. Once you type, that draft stays in the editor for the current page session while traffic moves, flight selection changes, or the layout resizes. The simulation continues independently of the draft.
+
+**Load into simulation** validates and applies the entered world. If validation fails, the exact text stays available to correct. A successful load resumes the editor’s live updates. **Export live world** explicitly replaces the draft with the current simulated world and also resumes live updates.
+
+After installing the existing web dependencies, run the focused real-browser checks from the repository root with Node 22+ and Chrome/Chromium:
+
+```sh
+node web/airspace/tests/world-json-draft.browser.mjs --root . --browser /path/to/chromium --output /tmp/towerops-world-json-receiving
+```

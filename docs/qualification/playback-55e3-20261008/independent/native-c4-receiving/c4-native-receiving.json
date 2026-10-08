@@ -1,0 +1,946 @@
+{
+  "schema": "towerops.independent-native-c4-receiving.v1",
+  "at_utc": "2026-10-08T13:29:41.607833+00:00",
+  "source_scope": "Completed C4/fbe composition on native9a dependencies, before later8d WorldState-draft integration. Later composition requires its own receiving.",
+  "received_manifest": {
+    "path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/receiving-manifest.json",
+    "bytes": 19058,
+    "sha256": "884de02ee57403c97a4823bc0e9c6b095f54454373833ce59b32e87f18cd2ec5",
+    "git_blob": "5364aecec6bbcb882b4a7c0c11ca8358a5903c6a"
+  },
+  "verified_files": [
+    {
+      "path": "evidence/baseline-browser-process.json",
+      "bytes": 744,
+      "sha256": "2895d1d13b46db767805ea868382d02c6c26805769b541cf502d7e6a8df81c83",
+      "git_blob": "b0ddb31066311f198437ccf3d6e550bbef99f47f"
+    },
+    {
+      "path": "evidence/baseline-browser.log",
+      "bytes": 587,
+      "sha256": "7992944d5f7fd83e68767c93d276c70d769f691575500fda3f77bc0a85a74097",
+      "git_blob": "42f90b578d7a261fa085a2b55d7e3fc7795252f9"
+    },
+    {
+      "path": "evidence/baseline-build.log",
+      "bytes": 508,
+      "sha256": "286220f81c9eb2b6bbc1b2a55aefdf63de48f9b7b2fa07e3c15d499b27590fee",
+      "git_blob": "1352565b3e231a359cb8245c702ba2dbf71919b7"
+    },
+    {
+      "path": "evidence/baseline-desktop.json",
+      "bytes": 91984,
+      "sha256": "13cccc31c735a18f42c45452086e940a3ac5f79debe13cce0c3db7e94d45ce3f",
+      "git_blob": "764661abbd4fb7c87dbe762f9683fd0f1b0a0926"
+    },
+    {
+      "path": "evidence/candidate-build.log",
+      "bytes": 351,
+      "sha256": "b01e56b442631010f7d51e6f47386fca6a11e2ed06db3bb437090568fe9f12cc",
+      "git_blob": "1c3d5492185bcc049f9931533d5ee1f3dccbf785"
+    },
+    {
+      "path": "evidence/candidate-v1/candidate-source-manifest.json",
+      "bytes": 26051,
+      "sha256": "881edca88215edf2e817c641d7f83db04f3231c05b392a7653679754cdea9319",
+      "git_blob": "b06b3111bf21e215fff569e3105656d1442762c8"
+    },
+    {
+      "path": "evidence/candidate-v1/evidence/candidate-build.log",
+      "bytes": 351,
+      "sha256": "b01e56b442631010f7d51e6f47386fca6a11e2ed06db3bb437090568fe9f12cc",
+      "git_blob": "1c3d5492185bcc049f9931533d5ee1f3dccbf785"
+    },
+    {
+      "path": "evidence/candidate-v1/evidence/candidate-vitest-playback.log",
+      "bytes": 603,
+      "sha256": "05fde7475d5b0aa74cd6a93f4c8d96e3b65a12ecb7c1385d80d21970787f4bb6",
+      "git_blob": "09dccd1d5ef8c4dce29e82d614ed1c2a56759a6c"
+    },
+    {
+      "path": "evidence/candidate-v1/evidence/native-candidate-build.json",
+      "bytes": 24881,
+      "sha256": "0f1f3ac950f18f9b53d7452895fcec81b210a971cbe2948ce9d03eb30c42858d",
+      "git_blob": "644bb1bbde4eb6d1e51ec6cc40efd173f8a319db"
+    },
+    {
+      "path": "evidence/candidate-v1/preservation.json",
+      "bytes": 2843,
+      "sha256": "7a6d4b59d0c270e3527169ee5e93d60aac7450b1b682bad494f69e7a3241b0e1",
+      "git_blob": "2ea5a55e6b6171d8d66291b4ab1cf3364f20cd25"
+    },
+    {
+      "path": "evidence/candidate-v1/repo/web/airspace/src/main.ts",
+      "bytes": 22918,
+      "sha256": "aec0e5398939e3b99cfe1e4b0cbe9ba5a63cb0df0de095a98f45aa035a4c11f9",
+      "git_blob": "14fc6dda3553ab4cb2fc0e3677f704812c69f7c1"
+    },
+    {
+      "path": "evidence/candidate-v1/repo/web/airspace/tests/playback-controls.test.ts",
+      "bytes": 9100,
+      "sha256": "46a4f0d1043845fed4e9cd148362eef491483b9e647cb88daf11b6fbd38e9133",
+      "git_blob": "e23d6a796e7f7747d015d07d3754aa0db1cf80f6"
+    },
+    {
+      "path": "evidence/candidate-vitest-playback.log",
+      "bytes": 603,
+      "sha256": "05fde7475d5b0aa74cd6a93f4c8d96e3b65a12ecb7c1385d80d21970787f4bb6",
+      "git_blob": "09dccd1d5ef8c4dce29e82d614ed1c2a56759a6c"
+    },
+    {
+      "path": "evidence/joint-v1/baseline-desktop-process.json",
+      "bytes": 5208,
+      "sha256": "4f652807efdc3d9b8d07719c10d6d3c17bd25ced08e8edf86326d16395d7e749",
+      "git_blob": "ea0c350ba68fa613a507858c17b7cf6f86406cb2"
+    },
+    {
+      "path": "evidence/joint-v1/baseline-desktop.json",
+      "bytes": 114068,
+      "sha256": "91f4da79d3318e53e50f572e192e3183fcfbe4e35ca334b44d87015a2c93f12b",
+      "git_blob": "348adc13c86e5e362f5cf61d8623a339db721ca1"
+    },
+    {
+      "path": "evidence/joint-v1/baseline-desktop.log",
+      "bytes": 621,
+      "sha256": "c201948ff68d66e521408d6f7d068cb7fa6af9790fe0c133bbefaee6da7eabdf",
+      "git_blob": "7bacfca6d60ede707f7dfe592bedda37f32b93af"
+    },
+    {
+      "path": "evidence/joint-v1/build.log",
+      "bytes": 508,
+      "sha256": "6f26248b7c159cbbaf06ca4f02f85a01359ec1a5da3405fb69d366ddbbf12583",
+      "git_blob": "6b2f956eb8c09fb529222eacff4ca6f6f6087720"
+    },
+    {
+      "path": "evidence/joint-v1/candidate-desktop-process.json",
+      "bytes": 4328,
+      "sha256": "3bb8234c98bc2b096fe9c032d8c95621ec14ab4722f7fbc81df1b3bb2f691bf3",
+      "git_blob": "c74b66a4a5674dac88d47db6276924b339f3de8d"
+    },
+    {
+      "path": "evidence/joint-v1/candidate-desktop.json",
+      "bytes": 106945,
+      "sha256": "de503be0a83ad374334428ba5b88db76c7a74f1adb1d518dcdcfcb713f11d643",
+      "git_blob": "dd1dd343850f2746ceb2cdfc16e66507a869393c"
+    },
+    {
+      "path": "evidence/joint-v1/candidate-desktop.log",
+      "bytes": 513,
+      "sha256": "0dfef4fc80b88804f0f224fce69a179532cc8d06089451cacc77f85d1704912a",
+      "git_blob": "613dad3493b263fdc63d39e92fef9dd20304d916"
+    },
+    {
+      "path": "evidence/joint-v1/candidate-mobile-process.json",
+      "bytes": 4278,
+      "sha256": "ea4a793cd989451f748c9f9e9820ee5146c4349ec83e9a510a58325b7fab67ef",
+      "git_blob": "a2690fe538b068361977a489918c7a146678cdb2"
+    },
+    {
+      "path": "evidence/joint-v1/candidate-mobile.json",
+      "bytes": 106882,
+      "sha256": "825d48942a62f3e58c20ad42c9e5c16da63da16f2d5c741420ebc241a6d2bb62",
+      "git_blob": "abe7daa4bd92d752729ca1ad7d6141eb4b236ee7"
+    },
+    {
+      "path": "evidence/joint-v1/candidate-mobile.log",
+      "bytes": 511,
+      "sha256": "0b9d66f74ea324641c7d1da928552aaa2497319029bdab54eff26a617b1784bd",
+      "git_blob": "b0c76a0fbfb6e53462bb94d6627d6b87aca3d84b"
+    },
+    {
+      "path": "evidence/joint-v1/native-browser-processes.json",
+      "bytes": 18338,
+      "sha256": "9c23960dd1c64170dfa59e0c25bf3ec94ed4913e5984fb66b42d092d0ef288da",
+      "git_blob": "9d11d931ea595f6a443bfc4bf338869f5c2c561e"
+    },
+    {
+      "path": "evidence/joint-v1/native-build.json",
+      "bytes": 29149,
+      "sha256": "53399b9539a3674a1f01077e36a38a49281537b1dcdf59d52724fcb0c2c129e7",
+      "git_blob": "de3b66ed19459c989eab9b900a084f0a5db6cd53"
+    },
+    {
+      "path": "evidence/joint-v1/vitest-playback.log",
+      "bytes": 602,
+      "sha256": "811dc5bb8c440d99b59de165c752032b3a782051383189e3c96532c6f887e37b",
+      "git_blob": "7c4b442f9c01436617679f3cf2b854c1fa0b6673"
+    },
+    {
+      "path": "evidence/native-baseline-build.json",
+      "bytes": 22824,
+      "sha256": "157b32c0e55ebc9f95b0e7513f23000abb794ddfbdbabba926ec06e014f09b51",
+      "git_blob": "6354aa9012db7f7fc58420cc1a03eb7b27d91373"
+    },
+    {
+      "path": "evidence/native-candidate-build.json",
+      "bytes": 24881,
+      "sha256": "0f1f3ac950f18f9b53d7452895fcec81b210a971cbe2948ce9d03eb30c42858d",
+      "git_blob": "644bb1bbde4eb6d1e51ec6cc40efd173f8a319db"
+    },
+    {
+      "path": "evidence/source-stage-receipt.json",
+      "bytes": 12865,
+      "sha256": "db56151061d79579cc289768f37c9d4657d94e103c180f09604aff81df7edc91",
+      "git_blob": "918fbb1d7e28317ae97f36e7d0a361567df4f51a"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 35693,
+      "sha256": "a62c3ce636e794d1b2da7e9873eb8051b0bb5a8c6b967164d148e63f534aee0b",
+      "git_blob": "aa6d5d6d73efe3ef06bdd668cdcc8186c17a2348"
+    },
+    {
+      "path": "candidate-source-manifest.json",
+      "bytes": 26051,
+      "sha256": "881edca88215edf2e817c641d7f83db04f3231c05b392a7653679754cdea9319",
+      "git_blob": "b06b3111bf21e215fff569e3105656d1442762c8"
+    },
+    {
+      "path": "joint-candidate-source-manifest.json",
+      "bytes": 27375,
+      "sha256": "e3eac6eb1d4900885f021aa924c1ada91e6e891d57be8293f83703ff5e28aea9",
+      "git_blob": "27efb05c659a02ca54142b102eb2c5bf37c3906c"
+    },
+    {
+      "path": "receiving-browser.mjs",
+      "bytes": 22759,
+      "sha256": "2bb8ad31a537bef13a7bcc21630eddedbf8ab7156bbdcd7edb1f60278126f610",
+      "git_blob": "14377e50f1e24acd0ff6476c12c272e88e88abaa"
+    },
+    {
+      "path": "receiving-browser-joint.mjs",
+      "bytes": 25299,
+      "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+      "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49"
+    },
+    {
+      "path": "run-joint-browser.py",
+      "bytes": 5120,
+      "sha256": "1489be6b6864cf4950b408e2ec536c719d34ed65bf3445ada767df9599959f21",
+      "git_blob": "d8d1f50fd2dd63a65ed4dbb6b73f5ec954da964d"
+    }
+  ],
+  "native_build": {
+    "receipt": {
+      "bytes": 29149,
+      "sha256": "53399b9539a3674a1f01077e36a38a49281537b1dcdf59d52724fcb0c2c129e7",
+      "git_blob": "de3b66ed19459c989eab9b900a084f0a5db6cd53"
+    },
+    "host": "Mac.lan isolated qualification host; no main-hub deployment claim",
+    "versions": {
+      "pyodide": "0.27.7",
+      "typescript": "5.7.3",
+      "vite": "8.3.3",
+      "vitest": "4.1.11"
+    },
+    "commands": [
+      {
+        "name": "vitest-playback",
+        "argv": [
+          "/opt/homebrew/bin/npm",
+          "--cache",
+          "/tmp/towerops-playback-55e3-ypg8xw8q/npm-cache",
+          "--userconfig",
+          "/tmp/towerops-playback-55e3-ypg8xw8q/npm-userconfig",
+          "--globalconfig",
+          "/tmp/towerops-playback-55e3-ypg8xw8q/npm-globalconfig",
+          "test",
+          "--",
+          "tests/playback-controls.test.ts"
+        ],
+        "cwd": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/repo/web/airspace",
+        "exit_code": 0,
+        "timed_out": false,
+        "seconds": 1.008,
+        "log": {
+          "path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/vitest-playback.log",
+          "bytes": 602,
+          "sha256": "811dc5bb8c440d99b59de165c752032b3a782051383189e3c96532c6f887e37b",
+          "git_blob": "7c4b442f9c01436617679f3cf2b854c1fa0b6673"
+        }
+      },
+      {
+        "name": "build",
+        "argv": [
+          "/opt/homebrew/bin/npm",
+          "--cache",
+          "/tmp/towerops-playback-55e3-ypg8xw8q/npm-cache",
+          "--userconfig",
+          "/tmp/towerops-playback-55e3-ypg8xw8q/npm-userconfig",
+          "--globalconfig",
+          "/tmp/towerops-playback-55e3-ypg8xw8q/npm-globalconfig",
+          "run",
+          "build"
+        ],
+        "cwd": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/repo/web/airspace",
+        "exit_code": 0,
+        "timed_out": false,
+        "seconds": 1.394,
+        "log": {
+          "path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/build.log",
+          "bytes": 508,
+          "sha256": "6f26248b7c159cbbaf06ca4f02f85a01359ec1a5da3405fb69d366ddbbf12583",
+          "git_blob": "6b2f956eb8c09fb529222eacff4ca6f6f6087720"
+        }
+      }
+    ],
+    "vitest_methods": 14,
+    "build_exit_code": 0,
+    "source_files": 53,
+    "source_unchanged": true,
+    "build_files": 15,
+    "installed_dependencies_unchanged": true
+  },
+  "browser_runs": [
+    {
+      "run": "baseline-desktop",
+      "report": {
+        "bytes": 114068,
+        "sha256": "91f4da79d3318e53e50f572e192e3183fcfbe4e35ca334b44d87015a2c93f12b",
+        "git_blob": "348adc13c86e5e362f5cf61d8623a339db721ca1"
+      },
+      "accepted_known_before_case_patterns": 4,
+      "passing_candidate_cases": 0,
+      "browser": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/154.0.8037.98",
+        "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "jsVersion": "15.4.80.20"
+      },
+      "source_file_count": 52,
+      "build_file_count": 15,
+      "case_observations": [
+        {
+          "case": "reset-3x",
+          "known_baseline_failures": [
+            "reset rate readout",
+            "reset horizontal policy readout",
+            "reset vertical policy readout",
+            "reset horizon policy readout",
+            "reset default engine rate: clock",
+            "reset default engine rate: TWR218 east",
+            "reset default engine rate: TWR419 east"
+          ],
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "6.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,500 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "6.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "reset_rate": 1,
+          "reset_rate_label": "3.0x",
+          "resumed_seconds_from_fixture_clock": 14.399999999999977,
+          "resumed_east_nm": [
+            -4.76,
+            4.76
+          ]
+        },
+        {
+          "case": "reset-0.5x",
+          "known_baseline_failures": [
+            "reset rate readout",
+            "reset horizontal policy readout",
+            "reset vertical policy readout",
+            "reset horizon policy readout",
+            "reset default engine rate: clock",
+            "reset default engine rate: TWR218 east",
+            "reset default engine rate: TWR419 east"
+          ],
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "6.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,500 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "6.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "reset_rate": 1,
+          "reset_rate_label": "0.5x",
+          "resumed_seconds_from_fixture_clock": 2.3999999999999773,
+          "resumed_east_nm": [
+            -4.96,
+            4.96
+          ]
+        },
+        {
+          "case": "automatic-pause-policy-2x",
+          "known_baseline_failures": [
+            "automatic pause action label"
+          ],
+          "paused_label": "Pause traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "resumed_seconds": 9.600000000000023
+        },
+        {
+          "case": "automatic-pause-refused-flight-2x",
+          "known_baseline_failures": [
+            "automatic pause action label",
+            "paused encounter forecast",
+            "paused encounter source"
+          ],
+          "paused_label": "Pause traffic",
+          "paused_encounter": {
+            "hidden": true,
+            "time_disabled": true,
+            "message": "Pause traffic to explore a stable forecast.",
+            "source": "WORLD 1 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "resumed_seconds": 9.600000000000023
+        }
+      ],
+      "layout": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "controls": {
+          "toggle-run": {
+            "x": 843.03125,
+            "y": 1045.515625,
+            "width": 193.96875,
+            "height": 33,
+            "visible": true,
+            "text": "Run traffic"
+          },
+          "reset-world": {
+            "x": 1045,
+            "y": 1045.515625,
+            "width": 193.984375,
+            "height": 33,
+            "visible": true,
+            "text": "Reset"
+          },
+          "speed-range": {
+            "x": 41,
+            "y": 1821.015625,
+            "width": 1198,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "speed-value": {
+            "x": 1214.078125,
+            "y": 1801.015625,
+            "width": 24.921875,
+            "height": 10,
+            "visible": true,
+            "text": "3.0x"
+          },
+          "policy-horizontal": {
+            "x": 52,
+            "y": 1918.015625,
+            "width": 1176,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "horizontal-value": {
+            "x": 52,
+            "y": 1900.015625,
+            "width": 1176,
+            "height": 11,
+            "visible": true,
+            "text": "6.0 NM"
+          },
+          "policy-vertical": {
+            "x": 52,
+            "y": 1981.015625,
+            "width": 1176,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "vertical-value": {
+            "x": 52,
+            "y": 1963.015625,
+            "width": 1176,
+            "height": 11,
+            "visible": true,
+            "text": "1,500 FT"
+          },
+          "policy-horizon": {
+            "x": 52,
+            "y": 2044.015625,
+            "width": 1176,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "horizon-value": {
+            "x": 52,
+            "y": 2026.015625,
+            "width": 1176,
+            "height": 11,
+            "visible": true,
+            "text": "6.0 MIN"
+          }
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/private/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/baseline-desktop.png",
+          "step": "reset-3x/after-reset-paused",
+          "bytes": 432107,
+          "sha256": "3fe0f86abfe06652286c7ff0ed38014e66fe75114c3b9b4a6cadfd5ee5fc9adc",
+          "git_blob": "180ae7a35e9e3d338d9aae08ed874e611a5d32ad"
+        }
+      ],
+      "page_errors": 0
+    },
+    {
+      "run": "candidate-desktop",
+      "report": {
+        "bytes": 106945,
+        "sha256": "de503be0a83ad374334428ba5b88db76c7a74f1adb1d518dcdcfcb713f11d643",
+        "git_blob": "dd1dd343850f2746ceb2cdfc16e66507a869393c"
+      },
+      "accepted_known_before_case_patterns": 0,
+      "passing_candidate_cases": 4,
+      "browser": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/154.0.8037.98",
+        "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "jsVersion": "15.4.80.20"
+      },
+      "source_file_count": 53,
+      "build_file_count": 15,
+      "case_observations": [
+        {
+          "case": "reset-3x",
+          "known_baseline_failures": [],
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "reset_rate": 1,
+          "reset_rate_label": "1.0x",
+          "resumed_seconds_from_fixture_clock": 4.7999999999999545,
+          "resumed_east_nm": [
+            -4.92,
+            4.92
+          ]
+        },
+        {
+          "case": "reset-0.5x",
+          "known_baseline_failures": [],
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "reset_rate": 1,
+          "reset_rate_label": "1.0x",
+          "resumed_seconds_from_fixture_clock": 4.7999999999999545,
+          "resumed_east_nm": [
+            -4.92,
+            4.92
+          ]
+        },
+        {
+          "case": "automatic-pause-policy-2x",
+          "known_baseline_failures": [],
+          "paused_label": "Run traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "resumed_seconds": 9.600000000000023
+        },
+        {
+          "case": "automatic-pause-refused-flight-2x",
+          "known_baseline_failures": [],
+          "paused_label": "Run traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "resumed_seconds": 9.600000000000023
+        }
+      ],
+      "layout": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "controls": {
+          "toggle-run": {
+            "x": 843.03125,
+            "y": 1045.515625,
+            "width": 193.96875,
+            "height": 33,
+            "visible": true,
+            "text": "Run traffic"
+          },
+          "reset-world": {
+            "x": 1045,
+            "y": 1045.515625,
+            "width": 193.984375,
+            "height": 33,
+            "visible": true,
+            "text": "Reset"
+          },
+          "speed-range": {
+            "x": 41,
+            "y": 1821.015625,
+            "width": 1198,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "speed-value": {
+            "x": 1214.078125,
+            "y": 1801.015625,
+            "width": 24.921875,
+            "height": 10,
+            "visible": true,
+            "text": "1.0x"
+          },
+          "policy-horizontal": {
+            "x": 52,
+            "y": 1918.015625,
+            "width": 1176,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "horizontal-value": {
+            "x": 52,
+            "y": 1900.015625,
+            "width": 1176,
+            "height": 11,
+            "visible": true,
+            "text": "5.0 NM"
+          },
+          "policy-vertical": {
+            "x": 52,
+            "y": 1981.015625,
+            "width": 1176,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "vertical-value": {
+            "x": 52,
+            "y": 1963.015625,
+            "width": 1176,
+            "height": 11,
+            "visible": true,
+            "text": "1,000 FT"
+          },
+          "policy-horizon": {
+            "x": 52,
+            "y": 2044.015625,
+            "width": 1176,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "horizon-value": {
+            "x": 52,
+            "y": 2026.015625,
+            "width": 1176,
+            "height": 11,
+            "visible": true,
+            "text": "5.0 MIN"
+          }
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/private/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-desktop.png",
+          "step": "reset-3x/after-reset-paused",
+          "bytes": 431987,
+          "sha256": "67595dde5b63b59c884f028568db2a4ccc3b56776af572002a29f6ccfd60f2e4",
+          "git_blob": "aa475cce6e49d2a70d634881eba4fb1f6d9de2a7"
+        }
+      ],
+      "page_errors": 0
+    },
+    {
+      "run": "candidate-mobile",
+      "report": {
+        "bytes": 106882,
+        "sha256": "825d48942a62f3e58c20ad42c9e5c16da63da16f2d5c741420ebc241a6d2bb62",
+        "git_blob": "abe7daa4bd92d752729ca1ad7d6141eb4b236ee7"
+      },
+      "accepted_known_before_case_patterns": 0,
+      "passing_candidate_cases": 4,
+      "browser": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/154.0.8037.98",
+        "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "jsVersion": "15.4.80.20"
+      },
+      "source_file_count": 53,
+      "build_file_count": 15,
+      "case_observations": [
+        {
+          "case": "reset-3x",
+          "known_baseline_failures": [],
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "reset_rate": 1,
+          "reset_rate_label": "1.0x",
+          "resumed_seconds_from_fixture_clock": 4.7999999999999545,
+          "resumed_east_nm": [
+            -4.92,
+            4.92
+          ]
+        },
+        {
+          "case": "reset-0.5x",
+          "known_baseline_failures": [],
+          "reset_policy": {
+            "horizontal": {
+              "value": 5,
+              "label": "5.0 NM",
+              "active": "5.0"
+            },
+            "vertical": {
+              "value": 1000,
+              "label": "1,000 FT",
+              "active": "1,000"
+            },
+            "horizon": {
+              "value": 5,
+              "label": "5.0 MIN",
+              "active": "5.0"
+            }
+          },
+          "reset_rate": 1,
+          "reset_rate_label": "1.0x",
+          "resumed_seconds_from_fixture_clock": 4.7999999999999545,
+          "resumed_east_nm": [
+            -4.92,
+            4.92
+          ]
+        },
+        {
+          "case": "automatic-pause-policy-2x",
+          "known_baseline_failures": [],
+          "paused_label": "Run traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "resumed_seconds": 9.600000000000023
+        },
+        {
+          "case": "automatic-pause-refused-flight-2x",
+          "known_baseline_failures": [],
+          "paused_label": "Run traffic",
+          "paused_encounter": {
+            "hidden": false,
+            "time_disabled": false,
+            "message": "Forecasts hold both flights' current velocity and climb constant for 5.0 minutes. The live world, proposal and trace stay unchanged.",
+            "source": "WORLD 3 \u00b7 CURRENT PAUSED TRAFFIC"
+          },
+          "resumed_seconds": 9.600000000000023
+        }
+      ],
+      "layout": {
+        "width": 390,
+        "scrollWidth": 390,
+        "controls": {
+          "toggle-run": {
+            "x": 43,
+            "y": 1476.125,
+            "width": 148,
+            "height": 33,
+            "visible": true,
+            "text": "Run traffic"
+          },
+          "reset-world": {
+            "x": 199,
+            "y": 1476.125,
+            "width": 148,
+            "height": 33,
+            "visible": true,
+            "text": "Reset"
+          },
+          "speed-range": {
+            "x": 43,
+            "y": 2361.625,
+            "width": 304,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "speed-value": {
+            "x": 322.078125,
+            "y": 2341.625,
+            "width": 24.921875,
+            "height": 10,
+            "visible": true,
+            "text": "1.0x"
+          },
+          "policy-horizontal": {
+            "x": 54,
+            "y": 2458.625,
+            "width": 282,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "horizontal-value": {
+            "x": 54,
+            "y": 2440.625,
+            "width": 282,
+            "height": 11,
+            "visible": true,
+            "text": "5.0 NM"
+          },
+          "policy-vertical": {
+            "x": 54,
+            "y": 2521.625,
+            "width": 282,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "vertical-value": {
+            "x": 54,
+            "y": 2503.625,
+            "width": 282,
+            "height": 11,
+            "visible": true,
+            "text": "1,000 FT"
+          },
+          "policy-horizon": {
+            "x": 54,
+            "y": 2584.625,
+            "width": 282,
+            "height": 16,
+            "visible": true,
+            "text": ""
+          },
+          "horizon-value": {
+            "x": 54,
+            "y": 2566.625,
+            "width": 282,
+            "height": 11,
+            "visible": true,
+            "text": "5.0 MIN"
+          }
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/private/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-mobile.png",
+          "step": "reset-3x/after-reset-paused",
+          "bytes": 257630,
+          "sha256": "c6445cae285f9f8f92ea7f68b38db6049da07ed38e4e77aeee0e5fc8b0fcac29",
+          "git_blob": "5bcc55a716fd4cf46ae3da0245b6319fab6176b8"
+        }
+      ],
+      "page_errors": 0
+    }
+  ],
+  "source_build_receiving": "Exact candidate browser sources match all53 native-build inputs and all15 served build files. Exact reused baseline build matches the prior2bb baseline browser build map; baseline sources match the52-source native build receipt.",
+  "historical_failures_preserved": [
+    "Initial virtual-merge CI:120 existing tests pass and14 oldstub setup failures; no playback assertion reached.",
+    "PredecessorAEC/46a native run:14 Vitest pass; TypeScript build fails on node:fs and node:timers/promises declarations.",
+    "Earlier5ae/32ce Mac attempt:120 to12 numeric-input clearing precondition failure before baseline admission."
+  ],
+  "pending_visual_review": [
+    {
+      "bytes": 418999,
+      "git_blob": "e3e4f3d13c2c3d8994e54c3aa521bd9e19e48c3e",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/baseline-desktop.png",
+      "path": "evidence/baseline-desktop.png",
+      "sha256": "71323c9fbd02aed4a03c96327b6a6bd8ec961dbbb3dfe8fca8653028b5c80e3b"
+    },
+    {
+      "bytes": 432107,
+      "git_blob": "180ae7a35e9e3d338d9aae08ed874e611a5d32ad",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/baseline-desktop.png",
+      "path": "evidence/joint-v1/baseline-desktop.png",
+      "sha256": "3fe0f86abfe06652286c7ff0ed38014e66fe75114c3b9b4a6cadfd5ee5fc9adc"
+    },
+    {
+      "bytes": 431987,
+      "git_blob": "aa475cce6e49d2a70d634881eba4fb1f6d9de2a7",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-desktop.png",
+      "path": "evidence/joint-v1/candidate-desktop.png",
+      "sha256": "67595dde5b63b59c884f028568db2a4ccc3b56776af572002a29f6ccfd60f2e4"
+    },
+    {
+      "bytes": 257630,
+      "git_blob": "5bcc55a716fd4cf46ae3da0245b6319fab6176b8",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-mobile.png",
+      "path": "evidence/joint-v1/candidate-mobile.png",
+      "sha256": "c6445cae285f9f8f92ea7f68b38db6049da07ed38e4e77aeee0e5fc8b0fcac29"
+    }
+  ],
+  "qualification_limit": "Receipt/custody and raw observation review only, not new product executions. Screenshots are pinned but binary readback/visual inspection is still pending. No planner, approval, Pyodide, deployment, physical-device or wall-time frame scheduling claim."
+}

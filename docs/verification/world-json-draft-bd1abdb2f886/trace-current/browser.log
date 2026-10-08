@@ -1,0 +1,10 @@
+PASS untouched editor follows the live world
+PASS paused flight selection preserves an authored valid JSON draft
+PASS loading after a focus-changing render applies the exact authored world
+PASS resizing preserves an unfinished invalid JSON draft
+PASS moving traffic preserves the blurred draft while the simulation continues
+PASS a rejected load keeps invalid text through a later render
+PASS explicit Export live world replaces the draft and restores live synchronization
+PASS valid direct load normalizes successfully and restores live synchronization
+PASS all observed browser paths are free from JavaScript exceptions
+{"status":"passed","passed":9,"failed":0,"pageErrors":0,"sourceChanged":[],"cleanup":{"status":"passed","profileRemoved":true},"report":"/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-trace-current/browser-report.json"}

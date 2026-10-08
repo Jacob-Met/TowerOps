@@ -1,0 +1,17 @@
+{
+  "base": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+  "current_main": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "own_source": "282ff2fbed3e37778f67174c5f202a33350467a9",
+  "resolved_paths": [
+    "web/airspace/index.html",
+    "web/airspace/style.css"
+  ],
+  "html_owner_bytes_exact_after_removing_two_owned_insertions": true,
+  "css_owner_bytes_exact_prefix": true,
+  "owned_panel_sha256": "b6adee6ac3cbc72c8cbd7391748a54eae164937d110ea2adfdcbb4a6686570da",
+  "owned_css_sha256": "d009f9a643dd21800b6da76c0d30f425c53e3796a78254468e6f60471626a4ae",
+  "resolved_sha256": {
+    "web/airspace/index.html": "4b6d71d287fd6947d69b13b25ed164c58197af9cbb2ad0d8726e764973107468",
+    "web/airspace/style.css": "9abb24f39088be588aff941dc1a456cb9cdf27fbb085d1514b68900b934dbe8f"
+  }
+}

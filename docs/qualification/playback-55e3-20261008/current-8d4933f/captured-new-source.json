@@ -1,0 +1,26 @@
+[
+  {
+    "path": "web/airspace/src/main.ts",
+    "local_path": "/dev/shm/estate-55e3e26c5905/towerops-native-8d4933f/repo/web/airspace/src/main.ts",
+    "git_blob": "d975ab8c55c01b0f6177ad736ed0c6b1fa821599",
+    "sha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa",
+    "bytes": 23120,
+    "mode": "100644"
+  },
+  {
+    "path": "web/airspace/README.md",
+    "local_path": "/dev/shm/estate-55e3e26c5905/towerops-native-8d4933f/repo/web/airspace/README.md",
+    "git_blob": "13a68810fbecca3fd5284ab8c449cedc44fbd042",
+    "sha256": "3180fca723a615465152ab3586236c5e77f246107982df94c6076dd88a93fe68",
+    "bytes": 7085,
+    "mode": "100644"
+  },
+  {
+    "path": "web/airspace/tests/world-json-draft.browser.mjs",
+    "local_path": "/dev/shm/estate-55e3e26c5905/towerops-native-8d4933f/repo/web/airspace/tests/world-json-draft.browser.mjs",
+    "git_blob": "aa01b6711f7aeb7358cc4bba21477d840f449d45",
+    "sha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+    "bytes": 14483,
+    "mode": "100644"
+  }
+]

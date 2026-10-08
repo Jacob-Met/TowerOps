@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/dev/shm/86776bb3cdb8-receiving-tower-options/receive-browser.py", line 275, in <module>
+    main()
+  File "/dev/shm/86776bb3cdb8-receiving-tower-options/receive-browser.py", line 249, in main
+    assert sources_loaded[name] == sha(git("show", args.source + ":" + name)), name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: towerops.py

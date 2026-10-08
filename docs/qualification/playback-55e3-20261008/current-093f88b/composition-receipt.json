@@ -1,0 +1,59 @@
+{
+  "schema": "towerops.native-alternatives-playback-composition.v1",
+  "inputs": {
+    "native8d": {
+      "local_path": "/dev/shm/estate-55e3e26c5905/towerops-native-8d4933f/repo/web/airspace/src/main.ts",
+      "sha256": "234a50fe1eeb05125dc633120cc9902c8e5a5a9f15b142aa1a5b2f50ff55f1fa"
+    },
+    "qualified803": {
+      "local_path": "/dev/shm/estate-55e3e26c5905/towerops-native-8d4933f/candidate/web/airspace/src/main.ts",
+      "sha256": "80333c3dc3f533fdc0b9cfc3f807ce0475a5656c2a294f3b8838028d3bf92b86"
+    },
+    "native093": {
+      "local_path": "/dev/shm/estate-55e3e26c5905/towerops-native-093f88b/native/web/airspace/src/main.ts",
+      "sha256": "423fb8abb2601136f709cec347b5bf066f9553ab49a53c7541351061277e5ce6"
+    }
+  },
+  "candidate": {
+    "local_path": "/dev/shm/estate-55e3e26c5905/towerops-native-093f88b/candidate/web/airspace/src/main.ts",
+    "sha256": "0893cae0bedbe7e7516b92c0f55eb01a0d6c09289dac3ed14d6f4da153b3b0dd",
+    "git_blob": "3c29b72c944df2c38a5a5fc6104aea6809bdca55",
+    "bytes": 26601
+  },
+  "native_five_edits": [
+    "native imports",
+    "native review state",
+    "native render integration",
+    "native review and choose functions",
+    "native button bindings"
+  ],
+  "qualified_edits": [
+    "qualified pause helper",
+    "addTraffic existing pause point",
+    "addCustomFlight existing pause point",
+    "removeSelected existing pause point",
+    "updatePolicy existing pause point",
+    "perturbTrack existing pause point",
+    "Load existing pause point",
+    "planner existing pause point",
+    "qualified existing-owner Reset"
+  ],
+  "proofs": {
+    "native8d_plus_native_five_edits_equals_every093_byte": true,
+    "native8d_plus_qualified_edits_equals_every803_byte": true,
+    "both_composition_routes_equal": true,
+    "inverse_qualified_recovers_every093_byte": true,
+    "inverse_native_recovers_every803_byte": true,
+    "inverse_native_upstream_recovers_every8d_byte": true,
+    "qualified_Reset_byte_identical": true,
+    "native_review_and_choose_handler_block_byte_identical": true,
+    "Load_order_parse_clear_draft_pause_assign_preserved": true,
+    "all59_native_and54_predecessor_candidate_pins_verified": true,
+    "fbe_test_unchanged": true
+  },
+  "manifest_pins": {
+    "baseline": "4a695377d3d974fe2643b550442ee5459eaf162af1fe972e97e883abc3cfb106",
+    "candidate": "bd65ceeabbf436b1ba620fbaa1202242dc95dca144e5f2ed189788e45c01202d"
+  },
+  "qualification": "Source-only exact composition/inverse proof. Prior803 native134/build results remain tied to803. New current native tests/build/browser receiving is pending. The native PR48 alternative review/selection flows and their owner qualification are not reattributed to this packet."
+}

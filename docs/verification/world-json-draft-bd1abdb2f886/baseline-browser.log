@@ -1,0 +1,113 @@
+PASS untouched editor follows the live world
+FAIL paused flight selection preserves an authored valid JSON draft: flight selection must not replace unsubmitted JSON
++ actual - expected
+
+  '{\n' +
+    '  "aircraft": [\n' +
+    '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
+-   '      "aircraft_id": "DRAFT101",\n' +
+    '      "altitude_ft": 10000,\n' +
+    '      "climb_ft_min": 0,\n' +
+    '      "vx_nm_min": 1,\n' +
+    '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
+-   '      "x_nm": 42,\n' +
+    '      "y_nm": 0\n' +
+    '    },\n' +
+    '    {\n' +
+    '      "aircraft_id": "TWR419",\n' +
+    '      "altitude_ft": 10000,\n' +
+
+FAIL loading after a focus-changing render applies the exact authored world: the explicitly loaded authored callsign must appear
+FAIL resizing preserves an unfinished invalid JSON draft: layout changes must not discard partial editing
++ actual - expected
+
++ '{\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 5,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ],\n' +
++   '  "observed_at": 1000,\n' +
++   '  "version": 1\n' +
++   '}'
+- '{\n  "version": '
+
+FAIL moving traffic preserves the blurred draft while the simulation continues: running renders must preserve blurred draft
++ actual - expected
+
++ '{\n' +
++   '  "version": 62,\n' +
++   '  "observed_at": 1061.994,\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -4.000099999999996,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 4.000099999999996,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ]\n' +
++   '}'
+- '{"still editing": '
+
+FAIL a rejected load keeps invalid text through a later render: failed validation must leave the exact draft available to correct
++ actual - expected
+
++ '{\n' +
++   '  "aircraft": [\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR218",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": 1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": -5,\n' +
++   '      "y_nm": 0\n' +
++   '    },\n' +
++   '    {\n' +
++   '      "aircraft_id": "TWR419",\n' +
++   '      "altitude_ft": 10000,\n' +
++   '      "climb_ft_min": 0,\n' +
++   '      "vx_nm_min": -1,\n' +
++   '      "vy_nm_min": 0,\n' +
++   '      "x_nm": 5,\n' +
++   '      "y_nm": 0\n' +
++   '    }\n' +
++   '  ],\n' +
++   '  "observed_at": 1000,\n' +
++   '  "version": 1\n' +
++   '}'
+- '{"version":-1,"aircraft":[]}'
+
+PASS explicit Export live world replaces the draft and restores live synchronization
+PASS valid direct load normalizes successfully and restores live synchronization
+PASS all observed browser paths are free from JavaScript exceptions
+{"status":"failed","passed":4,"failed":5,"pageErrors":0,"sourceChanged":[],"cleanup":{"status":"passed","profileRemoved":true},"report":"/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-baseline-clean/browser-report.json"}
