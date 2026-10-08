@@ -1,0 +1,67 @@
+{
+  "first_bootstrap": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 41207 (shell: /bin/zsh)\nInitial output:\nzsh:1: can't create temp file for here document: no space left on device\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "isError": false
+  },
+  "first_read_only": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 50107 (shell: /bin/zsh)\nInitial output:\n{\"filesystems\": {\"tmp\": {\"available_inodes\": 4446200, \"free_bytes\": 455290880, \"path\": \"/tmp\"}}, \"target_exists\": false}\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "isError": false
+  },
+  "successor_start": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 48617 (shell: /bin/zsh)\nInitial output:\n\n⏳ Process is running. Use read_process_output to get more output."
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "isError": false
+  },
+  "successor_completion": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Reading last 2 lines (total: 2 lines)]\n\nrefused:512MiB reserve plus bounded bootstrap budget unavailable\n\n✅ Process completed with exit code 1 (runtime: 5.58s)"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "isError": false
+  },
+  "successor_read_only": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 65759 (shell: /bin/zsh)\nInitial output:\n{\"free_bytes\": 316723200, \"owned_files\": [], \"target_exists\": false}\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "isError": false
+  }
+}
