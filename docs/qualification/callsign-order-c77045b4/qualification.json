@@ -1,0 +1,684 @@
+{
+  "schema": "towerops.callsign-order-qualification.v1",
+  "prepared_at": "2026-10-08T18:53:19.829Z",
+  "source_claim": "https://github.com/Jacob-Met/TowerOps/issues/67",
+  "owner": "hamon-ultra-20261008-c77045b4-lead",
+  "status": "Local source verification complete; independent receiving and normal hosted gates remain before integration.",
+  "originalBase": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "incomingHead": "a11c30497896455de3e74c21e530787dc7982bca",
+  "incomingTree": "b6435584e26bf52c281be4878d9dd1c875caabaa",
+  "productionFilesChanged": 1,
+  "sourceFiles": {
+    "web/airspace/src/core.ts": {
+      "worktree": {
+        "bytes": 5710,
+        "sha256": "c240b53b69075daab91f53889e6ceec0d3de2feb4583eaf9cbfd897ba4b7d243"
+      },
+      "canonical": {
+        "bytes": 5616,
+        "sha256": "01c351be73c9f404aeb6a30d80ab6796ec72a0b24fade725ac853104c89f940f",
+        "gitBlob": "acab00c3e8cb6498e3b5352333f2dfe767edb907"
+      },
+      "relation": "Git clean filter converts CRLF working-tree line endings to canonical LF; all other bytes identical"
+    },
+    "web/airspace/tests/identifier-parity.test.ts": {
+      "worktree": {
+        "bytes": 2070,
+        "sha256": "a3e2d120775c44a1c82f736baa73105c06fa813095a655254fb769e27e9951c1"
+      },
+      "canonical": {
+        "bytes": 2070,
+        "sha256": "a3e2d120775c44a1c82f736baa73105c06fa813095a655254fb769e27e9951c1",
+        "gitBlob": "c2f2955f0360545bb4e541b519ec18124f0e9e3d"
+      },
+      "relation": "byte-identical"
+    },
+    "web/airspace/tests/identifier-parity.json": {
+      "worktree": {
+        "bytes": 24117,
+        "sha256": "44a9be0011197a14f91260d1240dfcc5a2b7d4a9a4ae6a90abdfa7b1472c7a6e"
+      },
+      "canonical": {
+        "bytes": 23263,
+        "sha256": "873cc77f747efd94bc97f93006fefb1b603fbeb27ddad723c17ba15ff25f2bba",
+        "gitBlob": "0dd241a4b0c5ac8b2bddfca8fa8c1422bfbc1f47"
+      },
+      "relation": "Git clean filter converts CRLF working-tree line endings to canonical LF; all other bytes identical"
+    }
+  },
+  "runtimes": {
+    "node": "v24.21.0",
+    "typescript": "5.7.3",
+    "nativePython": "3.13.15",
+    "pyodide": "0.27.7",
+    "pyodidePython": "3.12.7"
+  },
+  "baseline": {
+    "started": "2026-10-08T18:44:49.465Z",
+    "ended": "2026-10-08T18:44:52.353Z",
+    "exitCode": 1,
+    "total": 238,
+    "passed": 229,
+    "failed": 9,
+    "pending": 0,
+    "sourceUnchanged": true,
+    "filesChecked": 1092
+  },
+  "candidate": {
+    "started": "2026-10-08T18:46:05.234Z",
+    "ended": "2026-10-08T18:46:08.214Z",
+    "exitCode": 0,
+    "total": 238,
+    "passed": 238,
+    "failed": 0,
+    "pending": 0,
+    "sourceUnchanged": true,
+    "filesChecked": 1092
+  },
+  "build": {
+    "started": "2026-10-08T18:51:04.562Z",
+    "ended": "2026-10-08T18:51:10.373Z",
+    "exitCode": 0,
+    "sourceUnchanged": true,
+    "filesChecked": 1092,
+    "artifacts": 16
+  },
+  "crossLanguage": {
+    "native-cpython-baseline.json": {
+      "at": "2026-10-08T18:39:25.576Z",
+      "head": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+      "node": "v24.21.0",
+      "typescript": "5.7.3",
+      "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+      "pythonExecutable": "C:\\Users\\minec\\AppData\\Local\\Hamon\\hubtwo\\runtime\\python-3.13.15\\python.exe",
+      "sourcePins": {
+        "web/airspace/src/core.ts": "d862b22ce5cac69bc9dd7dd02f1d10088277be434663d2131b4b048db8cfb56c",
+        "web/airspace/src/world-tools.ts": "9c60e938dd10322132e0a342263e6a15847ec7bb2cfb354ef9558fcd6c61c00c",
+        "web/airspace/src/maneuvers.ts": "a24bad0b6d7bc37f7c70feb69a164e73d030926d61b2994238805d95518c6700",
+        "web/airspace/src/planner.ts": "cf80e5970f3d4428f75677ecd765107a4b9321cd6007e758a51b39679ae653f6",
+        "web/airspace/src/gate.ts": "61514451fddb01e220480f461f7e05fe2b87c8ee03ed8f60091e68607f22aca5",
+        "web/airspace/src/audit.ts": "964c45e4f562cd38beb09bc38a1bd36407964ac36a0fa1c0316f811e9387c257"
+      },
+      "cases": [
+        {
+          "ids": [
+            "A",
+            "B"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "B",
+          "pythonTarget": "B",
+          "tsHash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+          "pythonHash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "1ed2e4ab68abb4d695ac0c1adfb331f4c22c4c96fb86c606209d0813be4933b5",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "A-1",
+            "A_1"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": false,
+          "targetEqual": false,
+          "tsTarget": "A-1",
+          "pythonTarget": "A_1",
+          "tsHash": "8ec5b6ea9748486fbc6652a67cf1b4ba12c7ef9c358a67e4258787205ce29baa",
+          "pythonHash": "8df8f2b5afd2c167f25af36bf7e88f9d1fb6b734a944b6ca070270fa1c54ce37",
+          "nativeAcceptsTs": false,
+          "tsAcceptsNative": false,
+          "nativeTransaction": {
+            "applied": false,
+            "reason": "world_hash_mismatch"
+          }
+        },
+        {
+          "ids": [
+            "-A",
+            "_A"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": false,
+          "targetEqual": false,
+          "tsTarget": "-A",
+          "pythonTarget": "_A",
+          "tsHash": "ac46df327f8a9c312ad133f16deb36394010e7c38d4cd95a38ed7d2ccd41bb5a",
+          "pythonHash": "5d134fd790bb62db860e4b59d9a02acdf241d3d646697f29128611e6dcd5c581",
+          "nativeAcceptsTs": false,
+          "tsAcceptsNative": false,
+          "nativeTransaction": {
+            "applied": false,
+            "reason": "world_hash_mismatch"
+          }
+        },
+        {
+          "ids": [
+            "B",
+            "_A"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": false,
+          "targetEqual": false,
+          "tsTarget": "B",
+          "pythonTarget": "_A",
+          "tsHash": "695faf22d4f84b0f2a1c3b2a8406729c26c0f882f9c919b6f314bbe1411c98f8",
+          "pythonHash": "c5948b5c748921d0fd795199b4d064432efd2d2f25830aae6e8f8dc86de9cc20",
+          "nativeAcceptsTs": false,
+          "tsAcceptsNative": false,
+          "nativeTransaction": {
+            "applied": false,
+            "reason": "world_hash_mismatch"
+          }
+        },
+        {
+          "ids": [
+            "A1",
+            "A2"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "A2",
+          "pythonTarget": "A2",
+          "tsHash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+          "pythonHash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "c1e438f7cb3e80414bf2c80451785a1fa55242c6738392e6053406ff7f6a7b70",
+            "version": 2
+          }
+        }
+      ],
+      "scopeLimit": "Maintained TypeScript API/native cross-language contract; current production UI delegates decisions directly to Python and no UI failure is claimed."
+    },
+    "native-typescript-baseline.json": {
+      "at": "2026-10-08T18:36:32.152Z",
+      "head": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+      "node": "v24.21.0",
+      "typescript": "5.7.3",
+      "python": "3.12.7 (main, Jun  4 2025, 22:38:17) [Clang 19.0.0git (https:/github.com/llvm/llvm-project 0a8cd1ed1f4f35905df318015b",
+      "pythonRuntime": "The project's exact pinned Pyodide 0.27.7 package, executed locally in Node; not a browser UI test",
+      "sourcePins": {
+        "web/airspace/src/core.ts": "d862b22ce5cac69bc9dd7dd02f1d10088277be434663d2131b4b048db8cfb56c",
+        "web/airspace/src/world-tools.ts": "9c60e938dd10322132e0a342263e6a15847ec7bb2cfb354ef9558fcd6c61c00c",
+        "web/airspace/src/maneuvers.ts": "a24bad0b6d7bc37f7c70feb69a164e73d030926d61b2994238805d95518c6700",
+        "web/airspace/src/planner.ts": "cf80e5970f3d4428f75677ecd765107a4b9321cd6007e758a51b39679ae653f6",
+        "web/airspace/src/gate.ts": "61514451fddb01e220480f461f7e05fe2b87c8ee03ed8f60091e68607f22aca5",
+        "web/airspace/src/audit.ts": "964c45e4f562cd38beb09bc38a1bd36407964ac36a0fa1c0316f811e9387c257",
+        "towerops.py": "45d655ad91904bdce4c79664043fbb3e7c28b3f808637bdfd3c51e4f10048213"
+      },
+      "cases": [
+        {
+          "ids": [
+            "A",
+            "B"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "B",
+          "pythonTarget": "B",
+          "tsHash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+          "pythonHash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+          "tsOrder": [
+            "A",
+            "B"
+          ],
+          "pythonOrder": [
+            "A",
+            "B"
+          ],
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "1ed2e4ab68abb4d695ac0c1adfb331f4c22c4c96fb86c606209d0813be4933b5",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "A-1",
+            "A_1"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": false,
+          "targetEqual": false,
+          "tsTarget": "A-1",
+          "pythonTarget": "A_1",
+          "tsHash": "8ec5b6ea9748486fbc6652a67cf1b4ba12c7ef9c358a67e4258787205ce29baa",
+          "pythonHash": "8df8f2b5afd2c167f25af36bf7e88f9d1fb6b734a944b6ca070270fa1c54ce37",
+          "tsOrder": [
+            "A_1",
+            "A-1"
+          ],
+          "pythonOrder": [
+            "A-1",
+            "A_1"
+          ],
+          "nativeAcceptsTs": false,
+          "tsAcceptsNative": false,
+          "nativeTransaction": {
+            "applied": false,
+            "reason": "world_hash_mismatch"
+          }
+        },
+        {
+          "ids": [
+            "-A",
+            "_A"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": false,
+          "targetEqual": false,
+          "tsTarget": "-A",
+          "pythonTarget": "_A",
+          "tsHash": "ac46df327f8a9c312ad133f16deb36394010e7c38d4cd95a38ed7d2ccd41bb5a",
+          "pythonHash": "5d134fd790bb62db860e4b59d9a02acdf241d3d646697f29128611e6dcd5c581",
+          "tsOrder": [
+            "_A",
+            "-A"
+          ],
+          "pythonOrder": [
+            "-A",
+            "_A"
+          ],
+          "nativeAcceptsTs": false,
+          "tsAcceptsNative": false,
+          "nativeTransaction": {
+            "applied": false,
+            "reason": "world_hash_mismatch"
+          }
+        },
+        {
+          "ids": [
+            "B",
+            "_A"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": false,
+          "targetEqual": false,
+          "tsTarget": "B",
+          "pythonTarget": "_A",
+          "tsHash": "695faf22d4f84b0f2a1c3b2a8406729c26c0f882f9c919b6f314bbe1411c98f8",
+          "pythonHash": "c5948b5c748921d0fd795199b4d064432efd2d2f25830aae6e8f8dc86de9cc20",
+          "tsOrder": [
+            "_A",
+            "B"
+          ],
+          "pythonOrder": [
+            "B",
+            "_A"
+          ],
+          "nativeAcceptsTs": false,
+          "tsAcceptsNative": false,
+          "nativeTransaction": {
+            "applied": false,
+            "reason": "world_hash_mismatch"
+          }
+        },
+        {
+          "ids": [
+            "A1",
+            "A2"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "A2",
+          "pythonTarget": "A2",
+          "tsHash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+          "pythonHash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+          "tsOrder": [
+            "A1",
+            "A2"
+          ],
+          "pythonOrder": [
+            "A1",
+            "A2"
+          ],
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "c1e438f7cb3e80414bf2c80451785a1fa55242c6738392e6053406ff7f6a7b70",
+            "version": 2
+          }
+        }
+      ],
+      "qualifiedDomain": "All five worlds pass the unchanged UI WorldState parser; fields and motion are from the maintained two-flight fixture with only callsigns changed.",
+      "scopeLimit": "Current production UI delegates planning/application directly to Python; these results concern the maintained TypeScript API and cross-language source contract."
+    },
+    "native-cpython-candidate.json": {
+      "at": "2026-10-08T18:50:25.596Z",
+      "head": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+      "node": "v24.21.0",
+      "typescript": "5.7.3",
+      "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+      "pythonExecutable": "C:\\Users\\minec\\AppData\\Local\\Hamon\\hubtwo\\runtime\\python-3.13.15\\python.exe",
+      "sourcePins": {
+        "web/airspace/src/core.ts": "c240b53b69075daab91f53889e6ceec0d3de2feb4583eaf9cbfd897ba4b7d243",
+        "web/airspace/src/world-tools.ts": "9c60e938dd10322132e0a342263e6a15847ec7bb2cfb354ef9558fcd6c61c00c",
+        "web/airspace/src/maneuvers.ts": "a24bad0b6d7bc37f7c70feb69a164e73d030926d61b2994238805d95518c6700",
+        "web/airspace/src/planner.ts": "cf80e5970f3d4428f75677ecd765107a4b9321cd6007e758a51b39679ae653f6",
+        "web/airspace/src/gate.ts": "61514451fddb01e220480f461f7e05fe2b87c8ee03ed8f60091e68607f22aca5",
+        "web/airspace/src/audit.ts": "964c45e4f562cd38beb09bc38a1bd36407964ac36a0fa1c0316f811e9387c257"
+      },
+      "cases": [
+        {
+          "ids": [
+            "A",
+            "B"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "B",
+          "pythonTarget": "B",
+          "tsHash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+          "pythonHash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "1ed2e4ab68abb4d695ac0c1adfb331f4c22c4c96fb86c606209d0813be4933b5",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "A-1",
+            "A_1"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "A_1",
+          "pythonTarget": "A_1",
+          "tsHash": "8df8f2b5afd2c167f25af36bf7e88f9d1fb6b734a944b6ca070270fa1c54ce37",
+          "pythonHash": "8df8f2b5afd2c167f25af36bf7e88f9d1fb6b734a944b6ca070270fa1c54ce37",
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "c72ae8f8bceb18959bdfa85cc747f599bcf90736225c31b317321808184e6242",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "-A",
+            "_A"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "_A",
+          "pythonTarget": "_A",
+          "tsHash": "5d134fd790bb62db860e4b59d9a02acdf241d3d646697f29128611e6dcd5c581",
+          "pythonHash": "5d134fd790bb62db860e4b59d9a02acdf241d3d646697f29128611e6dcd5c581",
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "bc25f3a9539e58d3c9a9490439e1c8790b72c86c480d05ae2f5c5aa24c4eb313",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "B",
+            "_A"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "_A",
+          "pythonTarget": "_A",
+          "tsHash": "c5948b5c748921d0fd795199b4d064432efd2d2f25830aae6e8f8dc86de9cc20",
+          "pythonHash": "c5948b5c748921d0fd795199b4d064432efd2d2f25830aae6e8f8dc86de9cc20",
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "1653300984d68861ba711432eed4a213b43a86ec8313c1c37681d1655dd2b355",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "A1",
+            "A2"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "A2",
+          "pythonTarget": "A2",
+          "tsHash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+          "pythonHash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "c1e438f7cb3e80414bf2c80451785a1fa55242c6738392e6053406ff7f6a7b70",
+            "version": 2
+          }
+        }
+      ],
+      "scopeLimit": "Maintained TypeScript API/native cross-language contract; current production UI delegates decisions directly to Python and no UI failure is claimed."
+    },
+    "native-typescript-candidate.json": {
+      "at": "2026-10-08T18:51:17.051Z",
+      "head": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+      "node": "v24.21.0",
+      "typescript": "5.7.3",
+      "python": "3.12.7 (main, Jun  4 2025, 22:38:17) [Clang 19.0.0git (https:/github.com/llvm/llvm-project 0a8cd1ed1f4f35905df318015b",
+      "pythonRuntime": "The project's exact pinned Pyodide 0.27.7 package, executed locally in Node; not a browser UI test",
+      "sourcePins": {
+        "web/airspace/src/core.ts": "c240b53b69075daab91f53889e6ceec0d3de2feb4583eaf9cbfd897ba4b7d243",
+        "web/airspace/src/world-tools.ts": "9c60e938dd10322132e0a342263e6a15847ec7bb2cfb354ef9558fcd6c61c00c",
+        "web/airspace/src/maneuvers.ts": "a24bad0b6d7bc37f7c70feb69a164e73d030926d61b2994238805d95518c6700",
+        "web/airspace/src/planner.ts": "cf80e5970f3d4428f75677ecd765107a4b9321cd6007e758a51b39679ae653f6",
+        "web/airspace/src/gate.ts": "61514451fddb01e220480f461f7e05fe2b87c8ee03ed8f60091e68607f22aca5",
+        "web/airspace/src/audit.ts": "964c45e4f562cd38beb09bc38a1bd36407964ac36a0fa1c0316f811e9387c257",
+        "towerops.py": "45d655ad91904bdce4c79664043fbb3e7c28b3f808637bdfd3c51e4f10048213"
+      },
+      "cases": [
+        {
+          "ids": [
+            "A",
+            "B"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "B",
+          "pythonTarget": "B",
+          "tsHash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+          "pythonHash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+          "tsOrder": [
+            "A",
+            "B"
+          ],
+          "pythonOrder": [
+            "A",
+            "B"
+          ],
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "1ed2e4ab68abb4d695ac0c1adfb331f4c22c4c96fb86c606209d0813be4933b5",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "A-1",
+            "A_1"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "A_1",
+          "pythonTarget": "A_1",
+          "tsHash": "8df8f2b5afd2c167f25af36bf7e88f9d1fb6b734a944b6ca070270fa1c54ce37",
+          "pythonHash": "8df8f2b5afd2c167f25af36bf7e88f9d1fb6b734a944b6ca070270fa1c54ce37",
+          "tsOrder": [
+            "A-1",
+            "A_1"
+          ],
+          "pythonOrder": [
+            "A-1",
+            "A_1"
+          ],
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "c72ae8f8bceb18959bdfa85cc747f599bcf90736225c31b317321808184e6242",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "-A",
+            "_A"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "_A",
+          "pythonTarget": "_A",
+          "tsHash": "5d134fd790bb62db860e4b59d9a02acdf241d3d646697f29128611e6dcd5c581",
+          "pythonHash": "5d134fd790bb62db860e4b59d9a02acdf241d3d646697f29128611e6dcd5c581",
+          "tsOrder": [
+            "-A",
+            "_A"
+          ],
+          "pythonOrder": [
+            "-A",
+            "_A"
+          ],
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "bc25f3a9539e58d3c9a9490439e1c8790b72c86c480d05ae2f5c5aa24c4eb313",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "B",
+            "_A"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "_A",
+          "pythonTarget": "_A",
+          "tsHash": "c5948b5c748921d0fd795199b4d064432efd2d2f25830aae6e8f8dc86de9cc20",
+          "pythonHash": "c5948b5c748921d0fd795199b4d064432efd2d2f25830aae6e8f8dc86de9cc20",
+          "tsOrder": [
+            "B",
+            "_A"
+          ],
+          "pythonOrder": [
+            "B",
+            "_A"
+          ],
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "1653300984d68861ba711432eed4a213b43a86ec8313c1c37681d1655dd2b355",
+            "version": 2
+          }
+        },
+        {
+          "ids": [
+            "A1",
+            "A2"
+          ],
+          "uiParserAccepted": true,
+          "worldHashEqual": true,
+          "targetEqual": true,
+          "tsTarget": "A2",
+          "pythonTarget": "A2",
+          "tsHash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+          "pythonHash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+          "tsOrder": [
+            "A1",
+            "A2"
+          ],
+          "pythonOrder": [
+            "A1",
+            "A2"
+          ],
+          "nativeAcceptsTs": true,
+          "tsAcceptsNative": true,
+          "nativeTransaction": {
+            "applied": true,
+            "world_hash": "c1e438f7cb3e80414bf2c80451785a1fa55242c6738392e6053406ff7f6a7b70",
+            "version": 2
+          }
+        }
+      ],
+      "qualifiedDomain": "All five worlds pass the unchanged UI WorldState parser; fields and motion are from the maintained two-flight fixture with only callsigns changed.",
+      "scopeLimit": "Current production UI delegates planning/application directly to Python; these results concern the maintained TypeScript API and cross-language source contract."
+    }
+  },
+  "composition": {
+    "at": "2026-10-08T18:52:15.657Z",
+    "completed": "2026-10-08T18:52:16.919Z",
+    "originalBase": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+    "incomingHead": "a11c30497896455de3e74c21e530787dc7982bca",
+    "incomingTree": "b6435584e26bf52c281be4878d9dd1c875caabaa",
+    "changed": [
+      "A\tdocs/verification/scenario-public-pages-root-recovery-cf5799f6d38b/README.md",
+      "A\tdocs/verification/scenario-public-pages-root-recovery-cf5799f6d38b/normal-pages-primary.json",
+      "A\tdocs/verification/scenario-public-pages-root-recovery-cf5799f6d38b/public-receiving-receipt.json",
+      "A\tdocs/verification/scenario-public-pages-root-recovery-cf5799f6d38b/receiving-boundaries.json",
+      "A\tdocs/verification/scenario-public-pages-root-recovery-cf5799f6d38b/source-integration.json"
+    ],
+    "qualifiedProductTestBuildInputsUnchanged": true,
+    "candidateCorePreserved": true,
+    "coreSha256": "c240b53b69075daab91f53889e6ceec0d3de2feb4583eaf9cbfd897ba4b7d243",
+    "headAfter": "a11c30497896455de3e74c21e530787dc7982bca",
+    "status": "M web/airspace/src/core.ts\n?? web/airspace/tests/identifier-parity.json\n?? web/airspace/tests/identifier-parity.test.ts",
+    "decision": "Fast-forward only; all five incoming paths are another owner's additive verification documents. Original full-suite/build source qualification remains applicable to identical production/test/build inputs."
+  },
+  "retainedReceiverFailures": [
+    {
+      "failure": "Initial native vector generation read UTF-8 input through Windows CP1252 text stdin, producing surrogate escapes and UnicodeEncodeError.",
+      "correction": "The receiver reads sys.stdin.buffer as JSON; native source is unchanged.",
+      "evidence": [
+        "generator-initial.cjs",
+        "generator-initial-failure.txt"
+      ]
+    },
+    {
+      "failure": "Initial full suite could not launch the default python3 for 13 existing reference tests.",
+      "correction": "Use the existing TOWEROPS_PYTHON override and explicit UTF-8 stdio with exact native CPython; no test or machine-wide configuration change.",
+      "evidence": [
+        "baseline-test-receipt.json",
+        "baseline-vitest.json",
+        "baseline-vitest.log",
+        "run-identifier-qualification-initial.cjs"
+      ]
+    }
+  ],
+  "scopeLimit": "The maintained TypeScript API's world identity and planner target selection now agree with Python. The current production interface delegates planning and application directly to Python; no failure or changed behavior of those live controls is claimed. Pyodide receiving ran its actual pinned runtime in Node, not browser UI.",
+  "sourceQualificationBoundary": "Native runs pin the actual Windows working-tree bytes. The canonical Git blobs below are proven identical apart from Git's CRLF-to-LF clean filter; normal hosted gates and independent receiving must qualify the published candidate."
+}

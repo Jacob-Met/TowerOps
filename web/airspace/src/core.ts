@@ -37,8 +37,18 @@ export async function hashObject(value:unknown):Promise<string> {
   const digest=await globalThis.crypto.subtle.digest('SHA-256',bytes);
   return Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('');
 }
+// Python orders strings by Unicode code point, independent of locale.
+// Use that same order for both canonical identity and planner priority.
+function compareAircraftIds(left:string,right:string):number {
+  const a=Array.from(left),b=Array.from(right);
+  for(let i=0;i<Math.min(a.length,b.length);i++) {
+    const difference=a[i]!.codePointAt(0)!-b[i]!.codePointAt(0)!;
+    if(difference!==0) return difference;
+  }
+  return a.length-b.length;
+}
 export async function worldHash(state:WorldState):Promise<string> {
-  const aircraft=[...state.aircraft].sort((a,b)=>a.aircraft_id.localeCompare(b.aircraft_id));
+  const aircraft=[...state.aircraft].sort((a,b)=>compareAircraftIds(a.aircraft_id,b.aircraft_id));
   return hashObject({version:state.version,observed_at:state.observed_at,aircraft});
 }
 export function projected(a:Aircraft,minutes:number):Aircraft {
@@ -79,6 +89,6 @@ export function conflictPairs(state:WorldState,policy:SafetyPolicy=DEFAULT_POLIC
   return out;
 }
 export function conflictingAircraft(state:WorldState,policy:SafetyPolicy=DEFAULT_POLICY):Aircraft[] {
-  const sorted=[...state.aircraft].sort((a,b)=>a.aircraft_id.localeCompare(b.aircraft_id));
+  const sorted=[...state.aircraft].sort((a,b)=>compareAircraftIds(a.aircraft_id,b.aircraft_id));
   return sorted.filter(a=>sorted.some(b=>b.aircraft_id!==a.aircraft_id&&pairConflict(a,b,policy)));
 }
