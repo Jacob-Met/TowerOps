@@ -1,0 +1,82 @@
+"""Read-only native counterexample on the immutable pre-contribution implementation."""
+from __future__ import annotations
+
+import hashlib
+import json
+import sys
+from dataclasses import asdict, replace
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / "base"))
+import towerops as native  # noqa: E402
+
+assert Path(native.__file__).resolve() == ROOT / "base/towerops.py"
+assert hashlib.sha256(Path(native.__file__).read_bytes()).hexdigest() == "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+world = native.WorldState(7, 4350.25, (
+    native.Aircraft("RX-A", -6.25, 0.0, 12300.0, 1.25, 0.0, 0.0),
+    native.Aircraft("RX-B", 6.25, 0.0, 12300.0, -1.25, 0.0, 0.0),
+    native.Aircraft("RX-Z", 30.0, 32.0, 22000.0, 0.0, 0.0, 0.0),
+))
+now = world.observed_at
+policy = native.SafetyPolicy()
+planner = native.AdvisoryPlanner(policy)
+before = native.canonical_bytes(world.to_dict())
+targets = policy.conflicting_aircraft(world)
+assert [target.aircraft_id for target in targets] == ["RX-A", "RX-B"]
+exposed = planner.plan(world, now)
+assert len(exposed) == 1
+accepted, rejected = [], []
+for target in reversed(targets):
+    for vx, vy, climb in planner._maneuver_candidates(target):
+        advisory = native.Advisory(target.aircraft_id, world.world_hash, vx, vy, climb,
+                                   now, now + 8.0, "synthetic projected-separation recovery")
+        room = native.ControlRoom(policy)
+        try:
+            assert room.screen_batch(world, [advisory], now) == [advisory.advisory_hash]
+        except native.GateRejected as error:
+            rejected.append(error.reason)
+        else:
+            assert room.audit.events[-1]["kind"] == "screen_pass"
+            assert native.AuditLog.verify(room.audit.events)
+            accepted.append(advisory)
+assert len(accepted) >= 2
+assert accepted[0] == exposed[0]
+assert len({value.advisory_hash for value in accepted}) == len(accepted)
+assert len({(value.aircraft_id, value.set_vx_nm_min, value.set_vy_nm_min, value.set_climb_ft_min) for value in accepted}) == len(accepted)
+assert all(value.aircraft_id in {"RX-A", "RX-B"} for value in accepted)
+
+def rejects(name, state, advisories, time, expected):
+    room = native.ControlRoom(policy)
+    try:
+        room.screen_batch(state, advisories, time)
+    except native.GateRejected as error:
+        assert error.reason == expected, (name, error.reason)
+        assert native.AuditLog.verify(room.audit.events)
+        return {"name": name, "reason": error.reason}
+    raise AssertionError(name + " unexpectedly passed")
+
+negative = [
+    rejects("options_are_exclusive_choices", world, accepted[:2], now, "conflicting_recommendations"),
+    rejects("changed_world", replace(world, version=8), accepted[:1], now, "world_hash_mismatch"),
+    rejects("stale_world", world, accepted[:1], now + 11.0, "stale_state"),
+    rejects("unsafe_setpoint", world, [replace(accepted[0], set_vx_nm_min=99.0)], now, "unsafe_advisory"),
+]
+assert native.canonical_bytes(world.to_dict()) == before
+receipt = {
+    "source": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+    "native_module": str(Path(native.__file__).resolve()),
+    "native_source_sha256": hashlib.sha256(Path(native.__file__).read_bytes()).hexdigest(),
+    "driver_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+    "python": sys.version,
+    "world": world.to_dict(), "world_hash": world.world_hash, "policy": asdict(policy), "now": now,
+    "original_exposed": [dict(asdict(value), advisory_hash=value.advisory_hash) for value in exposed],
+    "native_screened_option_count": len(accepted), "rejected_candidate_count": len(rejected),
+    "native_screened_options": [dict(asdict(value), advisory_hash=value.advisory_hash) for value in accepted],
+    "native_admission_controls": negative,
+    "world_unchanged": True,
+    "scope": "Original native planner and per-advisory ControlRoom.screen_batch on a separately authored world. No production edits, approval or simulated actuation."
+}
+(ROOT / "baseline-native-options.json").write_text(json.dumps(receipt, indent=2) + "\n")
+(ROOT / "authored-world.json").write_text(json.dumps(world.to_dict(), indent=2) + "\n")
+print(json.dumps({"source": receipt["source"], "native_options": len(accepted), "original_exposed": len(exposed), "targets": sorted({value.aircraft_id for value in accepted}), "rejected_candidates": len(rejected), "native_admission_controls": negative, "world_unchanged": True}, indent=2))

@@ -1,0 +1,274 @@
+"""Independent real Chromium/Pyodide choice and unchanged gate receiving."""
+from __future__ import annotations
+
+import argparse
+import functools
+import hashlib
+import json
+import os
+import subprocess
+import sys
+import threading
+from datetime import datetime, timezone
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+
+from playwright.sync_api import sync_playwright
+
+ROOT = Path(__file__).resolve().parent
+OBSERVER = r"""
+(() => {
+  const NativeWorker = window.Worker;
+  const observation = {requests: [], responses: [], fault: null, otherHash: null};
+  window.__towerReceiving = observation;
+  window.Worker = class extends NativeWorker {
+    constructor(...args) {
+      super(...args);
+      this.addEventListener('message', event => observation.responses.push(structuredClone(event.data)));
+    }
+    postMessage(message, transfer) {
+      const sent = structuredClone(message);
+      let injected = null;
+      if (sent.request?.op === 'apply' && observation.fault) {
+        injected = observation.fault;
+        if (injected === 'different-world') sent.request.state.version += 1;
+        else if (injected === 'cross-option-ack') sent.request.ack.advisory_hash = observation.otherHash;
+        else throw new Error('Unknown receiving fault');
+        observation.fault = null;
+      }
+      observation.requests.push({original: structuredClone(message), sent, injected});
+      return super.postMessage(sent, transfer);
+    }
+  };
+})();
+"""
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repo", type=Path, required=True)
+    parser.add_argument("--source", required=True)
+    parser.add_argument("--chrome", type=Path, required=True)
+    args = parser.parse_args()
+    repo = args.repo.resolve()
+    dist = repo / "web/airspace/dist"
+    os.environ["PLAYWRIGHT_NODEJS_PATH"] = "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node"
+    (ROOT / "browser-tmp").mkdir(exist_ok=True)
+    os.environ["TMPDIR"] = str(ROOT / "browser-tmp")
+    os.environ["PYTHONDONTWRITEBYTECODE"] = "1"
+    git = lambda *values: subprocess.check_output(["git", "-C", str(repo), *values])
+    assert git("rev-parse", args.source).decode().strip() == args.source
+    source_tree = git("rev-parse", args.source + "^{tree}").decode().strip()
+    source_files = []
+    for raw in git("ls-tree", "-rz", args.source).split(b"\0"):
+        if not raw:
+            continue
+        _, encoded_path = raw.split(b"\t", 1)
+        path = encoded_path.decode()
+        if path in ("towerops.py", "advisory_options.py", "web/airspace/index.html", "web/airspace/style.css", "web/airspace/prepare-python.mjs", "web/airspace/package.json", "web/airspace/package-lock.json") or path.startswith("web/airspace/src/"):
+            expected = git("show", args.source + ":" + path)
+            assert (repo / path).read_bytes() == expected, path
+            source_files.append({"path": path, "sha256": sha(expected)})
+    for name in ("towerops.py", "advisory_options.py"):
+        assert (dist / "python" / name).read_bytes() == git("show", args.source + ":" + name)
+    build_files = [{"path": str(path.relative_to(dist)), "bytes": path.stat().st_size, "sha256": sha(path.read_bytes())}
+                   for path in sorted(dist.rglob("*")) if path.is_file()]
+    baseline = json.loads((ROOT / "baseline-native-options.json").read_text())
+    sys.path.insert(0, str(ROOT / "base"))
+    import towerops as original_native
+    assert Path(original_native.__file__).resolve() == ROOT / "base/towerops.py"
+    assert sha(Path(original_native.__file__).read_bytes()) == baseline["native_source_sha256"]
+    world = baseline["world"]
+    expected_options = baseline["native_screened_options"]
+    # Filter to the other conflict participant, then choose its second-page row.
+    selected_option = [a for a in expected_options if a["aircraft_id"] == "RX-A"][6]
+    selected_hash = selected_option["advisory_hash"]
+    first_hash = expected_options[0]["advisory_hash"]
+    assert selected_hash != first_hash and selected_option["set_vy_nm_min"] % 1 != 0
+    errors, rejected_network, sources_loaded = [], [], {}
+
+    class Quiet(SimpleHTTPRequestHandler):
+        def log_message(self, *unused):
+            pass
+
+    server = ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(Quiet, directory=str(dist)))
+    server.daemon_threads = True
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    origin = f"http://127.0.0.1:{server.server_address[1]}"
+    transcripts, observations = [], []
+    try:
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(executable_path=str(args.chrome), headless=True,
+                                                 args=["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu"])
+            context = browser.new_context(viewport={"width": 1440, "height": 1100})
+            context.add_init_script(OBSERVER)
+
+            def route(request_route):
+                if request_route.request.url.startswith(origin + "/"):
+                    request_route.continue_()
+                else:
+                    rejected_network.append(request_route.request.url)
+                    request_route.abort()
+
+            context.route("**/*", route)
+
+            def response(response):
+                if response.status >= 400:
+                    errors.append(f"HTTP {response.status}: {response.url}")
+                if response.url.endswith(("/python/towerops.py", "/python/advisory_options.py")):
+                    sources_loaded[response.url.rsplit("/", 1)[-1]] = sha(response.body())
+
+            context.on("response", response)
+
+            def page_world(page):
+                page.locator("#export-world").click()
+                return json.loads(page.locator("#world-json").input_value())
+
+            def open_world(page):
+                page.on("pageerror", lambda error: errors.append(str(error)))
+                page.goto(origin + "/", wait_until="networkidle")
+                page.evaluate("document.querySelectorAll('details.depth').forEach(node => node.open = true)")
+                page.locator("#world-json").fill(json.dumps(world))
+                page.locator("#load-world").click()
+                assert page_world(page) == world
+
+            def review(page):
+                before = page_world(page)
+                page.locator("#review-options").click()
+                page.wait_for_function("document.querySelector('#advisory-options-count').textContent.startsWith('68 ADMITTED')", timeout=90000)
+                data = page.evaluate("window.__towerReceiving")
+                request = next(row["sent"] for row in reversed(data["requests"]) if row["sent"]["request"]["op"] == "options")
+                result = next(row["result"] for row in data["responses"] if row["id"] == request["id"])
+                assert result["advisories"] == expected_options
+                assert result["candidate_count"] == baseline["native_screened_option_count"] + baseline["rejected_candidate_count"]
+                assert result["world_hash"] == baseline["world_hash"] and result["reviewed_at"] == baseline["now"]
+                assert page_world(page) == before
+                return result
+
+            def choose(page):
+                page.locator("#advisory-flight-filter").select_option("RX-A")
+                page.locator("#advisory-options-next").click()
+                row = page.locator(f'#advisory-options-list li[data-advisory-hash="{selected_hash}"]')
+                assert row.count() == 1
+                displayed = json.loads(row.locator("pre").inner_text())
+                assert displayed == selected_option
+                assert [float(x) for x in row.locator("dd").all_text_contents()] == [selected_option[key] for key in ("set_vx_nm_min", "set_vy_nm_min", "set_climb_ft_min")]
+                row.locator("button").click()
+                assert row.locator("button").is_disabled()
+                assert page.locator("#readback").is_disabled() and page.locator("#approve").is_enabled()
+                assert page.locator("#gate-approval i").inner_text() == "WAIT"
+                assert selected_hash[:12] in page.locator("#advisory-options-status").inner_text()
+                assert "RX-A" in page.locator("#proposal-output").inner_text()
+                assert page_world(page) == world
+                return displayed
+
+            for case in ("chosen_native_option_applies", "cross-option-ack", "different-world"):
+                page = context.new_page()
+                open_world(page)
+                if case == "chosen_native_option_applies":
+                    # Preserve the original single-plan workflow and its approval during review.
+                    page.locator("#run-planner").click()
+                    page.wait_for_function("document.querySelector('#proposal-state').textContent === 'PROPOSAL READY'", timeout=90000)
+                    page.locator("#approve").click()
+                    assert page.locator("#readback").is_enabled()
+                reviewed = review(page)
+                assert page.locator("#audit-status").inner_text() == "0 EVENTS / VALID"
+                if case == "chosen_native_option_applies":
+                    assert page.locator("#readback").is_enabled()
+                    assert page.locator(f'button[data-advisory-hash="{first_hash}"]').is_disabled()
+                displayed = choose(page)
+                page.locator("#approve").click()
+                if case == "chosen_native_option_applies":
+                    row = page.locator(f'li[data-advisory-hash="{selected_hash}"]')
+                    row.locator("details").evaluate("node => node.open = true")
+                    page.locator("#advisory-review").screenshot(path=str(ROOT / "selected-option.png"))
+                else:
+                    page.evaluate("value => { window.__towerReceiving.fault=value.fault; window.__towerReceiving.otherHash=value.hash; }", {"fault": case, "hash": first_hash})
+                page.locator("#readback").click()
+                page.wait_for_function("document.querySelector('#proposal-state').textContent !== 'PROPOSAL READY' && !document.querySelector('#review-options').disabled", timeout=90000)
+                data = page.evaluate("window.__towerReceiving")
+                calls = [row for row in data["requests"] if row["original"]["request"]["op"] == "apply"]
+                assert len(calls) == 1
+                call = calls[0]
+                original = call["original"]["request"]
+                assert original["advisory"] == displayed
+                assert original["approval"]["advisory_hash"] == selected_hash
+                assert original["ack"]["advisory_hash"] == selected_hash
+                result = next(row["result"] for row in data["responses"] if row["id"] == call["sent"]["id"])
+                exact_native_audit = json.loads(result["audit_json"])
+                assert original_native.AuditLog.verify(exact_native_audit)
+                assert exact_native_audit == result["events"]
+                after = page_world(page)
+                if case == "chosen_native_option_applies":
+                    assert call["injected"] is None and result["valid"]
+                    assert after == result["state"] and after["version"] == world["version"] + 1
+                    assert after["observed_at"] == baseline["now"] + 0.5
+                    for aircraft in after["aircraft"]:
+                        old = next(a for a in world["aircraft"] if a["aircraft_id"] == aircraft["aircraft_id"])
+                        expected = dict(old)
+                        if aircraft["aircraft_id"] == selected_option["aircraft_id"]:
+                            expected.update(vx_nm_min=selected_option["set_vx_nm_min"], vy_nm_min=selected_option["set_vy_nm_min"], climb_ft_min=selected_option["set_climb_ft_min"])
+                        assert aircraft == expected
+                    assert [event["kind"] for event in result["events"]] == ["screen_pass", "approval", "ack", "simulated_actuation"]
+                    assert result["events"][-1]["payload"]["advisory_hash"] == selected_hash
+                    assert page.locator("#pair-count").inner_text() == "0"
+                else:
+                    expected_reason = "ack_invalid" if case == "cross-option-ack" else "world_hash_mismatch"
+                    assert call["injected"] == case and result["error"] == expected_reason
+                    assert "state" not in result and after == world
+                    assert not any(event["kind"] == "simulated_actuation" for event in result["events"])
+                    assert expected_reason in page.locator("#proposal-output").inner_text()
+                assert page.locator("#audit-status").inner_text().endswith(" / VALID")
+                stale_selection = None
+                if case == "cross-option-ack":
+                    # The refusal leaves the reviewed world intact; reuse then invalidate it via existing scenario input.
+                    row = page.locator(f'li[data-advisory-hash="{selected_hash}"]')
+                    row.locator("button").click()
+                    page.locator("#approve").click()
+                    assert page.locator("#readback").is_enabled()
+                    page.locator("#perturb-track").click()
+                    assert page.locator("#advisory-options-count").inner_text() == "NO CURRENT REVIEW"
+                    assert page.locator("#advisory-options-list button").count() == 0
+                    assert page.locator("#readback").is_disabled()
+                    assert len([row for row in page.evaluate("window.__towerReceiving.requests") if row["sent"]["request"]["op"] == "apply"]) == 1
+                    stale_selection = "changed world clears reviewed choices and approval before any further apply"
+                observations.append({"case": case, "selected": displayed, "native_option_count": len(reviewed["advisories"]), "displayed_equals_requested": True,
+                                     "apply_request": call, "native_result": result, "original_native_audit_verify": True, "world_before": world, "world_after": after, "stale_selection_control": stale_selection})
+                transcripts.append({"case": case, **data})
+                page.close()
+            browser_version = browser.version
+            browser.close()
+        assert not errors, errors
+        assert not rejected_network, rejected_network
+        for name in ("towerops.py", "advisory_options.py"):
+            assert sources_loaded[name] == sha(git("show", args.source + ":" + name)), name
+        for row in source_files:
+            assert sha((repo / row["path"]).read_bytes()) == row["sha256"], row["path"]
+        for row in build_files:
+            assert sha((dist / row["path"]).read_bytes()) == row["sha256"], row["path"]
+        (ROOT / "worker-transcript.json").write_text(json.dumps(transcripts, indent=2) + "\n")
+        receipt = {"observed_at": datetime.now(timezone.utc).isoformat(), "source": args.source, "tree": source_tree,
+                   "browser": browser_version, "chrome": str(args.chrome), "driver_sha256": sha(Path(__file__).read_bytes()),
+                   "source_files": source_files, "build_files": build_files, "native_sources_loaded": sources_loaded,
+                   "cases": observations, "page_or_http_errors": errors, "unexpected_network": rejected_network,
+                   "worker_transcript_sha256": sha((ROOT / "worker-transcript.json").read_bytes()),
+                   "scope": "Three real Chromium/Pyodide flows on synthetic authored state. Worker responses remain native and unmodified; two clearly identified outgoing request faults exercise native refusal. No deployment or real-world actuation."}
+        (ROOT / "browser-receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
+        print(json.dumps({"source": args.source, "browser": browser_version, "flows_passed": len(observations), "native_options": len(expected_options),
+                          "selected_hash": selected_hash, "selected_aircraft": selected_option["aircraft_id"], "receipt_sha256": sha((ROOT / "browser-receipt.json").read_bytes())}, indent=2))
+    except BaseException as error:
+        partial = {"source": args.source, "tree": source_tree, "error": repr(error), "completed_cases": observations,
+                   "page_or_http_errors": errors, "unexpected_network": rejected_network, "native_sources_loaded": sources_loaded}
+        (ROOT / "browser-failure.json").write_text(json.dumps(partial, indent=2) + "\n")
+        raise
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,72 @@
+"""Capture the unchanged native planner workflow in a local browser."""
+import hashlib
+import json
+import threading
+from functools import partial
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+
+from playwright.sync_api import expect, sync_playwright
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class QuietHandler(SimpleHTTPRequestHandler):
+    def log_message(self, *args):
+        pass
+
+
+server = ThreadingHTTPServer(
+    ("127.0.0.1", 0), partial(QuietHandler, directory=ROOT / "repo/web/airspace/dist")
+)
+threading.Thread(target=server.serve_forever, daemon=True).start()
+origin = f"http://127.0.0.1:{server.server_port}/"
+errors, external = [], []
+try:
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            executable_path="/workspace/scratch/86776bb3cdb8/product-delivery/browser-runtime/chromium",
+            args=["--no-sandbox", "--disable-gpu"],
+        )
+        page = browser.new_page(viewport={"width": 1440, "height": 1000})
+        page.on("pageerror", lambda error: errors.append(str(error)))
+
+        def local_only(route):
+            if route.request.url.startswith(origin):
+                route.continue_()
+            else:
+                external.append(route.request.url)
+                route.abort()
+
+        page.route("**/*", local_only)
+        page.goto(origin, wait_until="networkidle")
+        expect(page.locator("#pair-count")).to_have_text("1")
+        audit_before = page.locator("#audit-status").inner_text()
+        page.locator("#run-planner").click()
+        expect(page.locator("#proposal-state")).to_have_text("PROPOSAL READY", timeout=90000)
+        proposal = page.locator("#proposal-output").inner_text()
+        assert "TWR419" in proposal and "vy 2.0" in proposal, proposal
+        buttons = page.locator("button").all_text_contents()
+        assert not any("alternative" in label.lower() or "options" in label.lower() for label in buttons)
+        assert page.locator("#audit-status").inner_text() == audit_before
+        assert not external, external
+        assert not errors, errors
+        page.screenshot(path=ROOT / "evidence/baseline-desktop.png", full_page=True)
+        result = {
+            "source": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+            "tree": "356e66716c8953a3c2aac8a23790ce6eeaba20d0",
+            "browser": browser.version,
+            "python_status": page.locator("#python-status").inner_text(),
+            "proposal": proposal,
+            "buttons": buttons,
+            "audit_unchanged": audit_before,
+            "external_requests": external,
+            "page_errors": errors,
+            "served_native_sha256": hashlib.sha256((ROOT / "repo/web/airspace/dist/python/towerops.py").read_bytes()).hexdigest(),
+        }
+        (ROOT / "evidence/baseline-browser.json").write_text(json.dumps(result, indent=2) + "\n")
+        print(json.dumps(result, indent=2))
+        browser.close()
+finally:
+    server.shutdown()
+    server.server_close()

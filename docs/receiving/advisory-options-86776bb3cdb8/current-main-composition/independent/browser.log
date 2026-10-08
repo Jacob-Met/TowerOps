@@ -1,0 +1,3 @@
+PASS combined native option and adopted trace journey
+PASS optional-helper failure retains original native planner
+{"passed": true, "source": "8a1cb235aea0fb7684b0d36013dfbe5b0f7dedd7", "cases": 2, "receipt_sha256": "c9e012be5a65dc268a4dae329e5d30f662d3536b0428a8cbf51f4589b7c5c79d"}

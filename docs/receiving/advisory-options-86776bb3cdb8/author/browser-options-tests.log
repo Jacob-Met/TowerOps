@@ -1,0 +1,15 @@
+{
+  "browser": "153.0.8010.0",
+  "passed": [
+    "original native first-choice identity",
+    "read-only review preserves approval and world",
+    "native ordering, paging and flight filter",
+    "selection clears prior authorization",
+    "exact selected native body and hash through original apply",
+    "original audit verifies",
+    "changed snapshot invalidates options",
+    "conflict-free complete empty review",
+    "mobile review fits viewport",
+    "helper-download failure leaves native planner available"
+  ]
+}

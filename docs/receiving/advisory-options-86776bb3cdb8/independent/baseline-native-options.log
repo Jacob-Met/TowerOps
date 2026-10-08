@@ -1,0 +1,29 @@
+{
+  "source": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+  "native_options": 68,
+  "original_exposed": 1,
+  "targets": [
+    "RX-A",
+    "RX-B"
+  ],
+  "rejected_candidates": 6,
+  "native_admission_controls": [
+    {
+      "name": "options_are_exclusive_choices",
+      "reason": "conflicting_recommendations"
+    },
+    {
+      "name": "changed_world",
+      "reason": "world_hash_mismatch"
+    },
+    {
+      "name": "stale_world",
+      "reason": "stale_state"
+    },
+    {
+      "name": "unsafe_setpoint",
+      "reason": "unsafe_advisory"
+    }
+  ],
+  "world_unchanged": true
+}
