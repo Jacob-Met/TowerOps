@@ -13,6 +13,13 @@ existing native planner and returns every individually screened alternative.
 It preserves the saved input and performs no actuation. See [PLAN_WORLD.md](PLAN_WORLD.md)
 for file/stdin use, clock and policy settings, complete results, and refusal limits.
 
+## Author traffic from a spreadsheet
+
+`python3 world_from_csv.py examples/traffic.csv --observed-at 1000` converts
+explicitly denominated aircraft rows into the existing raw WorldState JSON.
+Use it with the native planner or the workbench's raw-world editor; see
+[WORLD_FROM_CSV.md](WORLD_FROM_CSV.md) for columns, bounds and complete examples.
+
 ## Verify
 
 From the repository root:
