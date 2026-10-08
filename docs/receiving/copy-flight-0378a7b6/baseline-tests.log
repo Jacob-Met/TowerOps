@@ -1,0 +1,412 @@
+
+> towerops-airspace-lab@0.1.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90mD:/Hamon/worktrees/towerops-discovery-0378a7b6/web/airspace[39m
+
+ [32m✓[39m tests/flight-register.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/encounter.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+ [32m✓[39m tests/advisory-options.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/track-edit.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m tests/audit-wire.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m tests/scenario-file.test.ts [2m([22m[2m68 tests[22m[2m)[22m[32m 83[2mms[22m[39m
+ [32m✓[39m tests/radar-geometry.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+ [32m✓[39m tests/audit-append.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 93[2mms[22m[39m
+ [32m✓[39m tests/advisory-numeric.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 182[2mms[22m[39m
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+ [32m✓[39m tests/world-tools.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/algorithm.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m tests/identifier-parity.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+ [31m❯[39m tests/python-float-parity.test.mjs [2m([22m[2m5 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[33m 960[2mms[22m[39m
+[31m     [31m×[31m 'positive microsecond approval' preserves admitted state and audit hashes[39m[33m 305[2mms[22m[39m
+[31m     [31m×[31m 'UI offsets yielding a small fraction' preserves admitted state and audit hashes[39m[32m 244[2mms[22m[39m
+[31m     [31m×[31m 'large fractional clock control' preserves admitted state and audit hashes[39m[32m 183[2mms[22m[39m
+[31m     [31m×[31m 'large clock in Python exponent notati…' preserves admitted state and audit hashes[39m[32m 111[2mms[22m[39m
+[31m     [31m×[31m matches actual Python canonical bytes at signed format and finite limits[39m[32m 114[2mms[22m[39m
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+ [31m❯[39m tests/python-audit-interop.test.mjs [2m([22m[2m3 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[33m 407[2mms[22m[39m
+[31m     [31m×[31m keeps a valid approval/readback chain at clock 1000 valid[39m[32m 178[2mms[22m[39m
+[31m     [31m×[31m keeps a valid approval/readback chain at clock 0.8 valid[39m[32m 118[2mms[22m[39m
+[31m     [31m×[31m keeps a valid approval/readback chain at clock 0.6 valid[39m[32m 109[2mms[22m[39m
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+ [31m❯[39m tests/decision-trace.test.mjs [2m([22m[2m6 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[33m 666[2mms[22m[39m
+[31m     [31m×[31m reviews a trace without any world, policy, advisory, approval or ack in the request[39m[32m 213[2mms[22m[39m
+[31m     [31m×[31m returns a bounded delivery error for malformed trace {[39m[32m 112[2mms[22m[39m
+[31m     [31m×[31m returns a bounded delivery error for malformed trace [null][39m[32m 106[2mms[22m[39m
+[31m     [31m×[31m returns a bounded delivery error for malformed trace {}[39m[32m 108[2mms[22m[39m
+[31m     [31m×[31m downloads and reopens exact native JSON including float spellings and Unicode[39m[32m 112[2mms[22m[39m
+     [32m✓[39m applies the browser review bound to UTF-8 bytes while downloads retain the original text[32m 12[2mms[22m[39m
+ [32m✓[39m tests/playback-controls.test.ts [2m([22m[2m14 tests[22m[2m)[22m[33m 1669[2mms[22m[39m
+     [33m[2m✓[22m[39m starts at the displayed default rate [33m 452[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 13 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m tests/decision-trace.test.mjs[2m > [22mnative decision-trace delivery[2m > [22mreviews a trace without any world, policy, advisory, approval or ack in the request
+[31m[1mError[22m: Command failed: python3 -c 
+import json
+from dataclasses import asdict
+from towerops import Aircraft, WorldState, SafetyPolicy, AdvisoryPlanner, Advisory, Approval, Ack, ControlRoom, GateRejected, canonical_bytes
+
+def browser_audit(room):
+    return {
+        'events': room.audit.events,
+        'audit_canonical': [canonical_bytes({k: v for k, v in event.items() if k != 'event_hash'}).decode('utf-8') for event in room.audit.events],
+        'audit_json': json.dumps(room.audit.events),
+    }
+
+def browser_request(raw):
+    q = json.loads(raw)
+    if q.get('op') == 'review_trace':
+        from decision_trace import review_trace
+        try:
+            return json.dumps(review_trace(q.get('trace_json')), allow_nan=False)
+        except (TypeError, ValueError) as error:
+            return json.dumps({'error': str(error)})
+    s = q['state']
+    state = WorldState(s['version'], float(s['observed_at']), tuple(Aircraft(**{k: (v if k == 'aircraft_id' else float(v)) for k,v in a.items()}) for a in s['aircraft']))
+    policy = SafetyPolicy(**{k: float(v) for k,v in q['policy'].items()})
+    if q['op'] == 'options':
+        from advisory_options import review_advisory_options
+        review = review_advisory_options(state, float(q['now']), policy)
+        return json.dumps({
+            'world_hash': review.world_hash,
+            'reviewed_at': review.reviewed_at,
+            'candidate_count': review.candidate_count,
+            'advisories': [dict(asdict(a), advisory_hash=a.advisory_hash) for a in review.advisories],
+        })
+    if q['op'] == 'plan':
+        plans = AdvisoryPlanner(policy).plan(state, float(q['now']))
+        a = plans[0] if plans else None
+        return json.dumps({'advisory': dict(asdict(a), advisory_hash=a.advisory_hash) if a else None})
+    body = dict(q['advisory'])
+    body.pop('advisory_hash', None)
+    a = Advisory(**{k: (v if k in ('aircraft_id', 'world_hash', 'rationale') else float(v)) for k,v in body.items()})
+    room = ControlRoom(policy)
+    room.audit.events = json.loads(q.get('audit_json', '[]'))
+    # JSON.stringify drops .0 from whole-number timestamps. Preserve the
+    # declared float fields before Python hashes the approval/readback event,
+    # just as the state and advisory fields above already do. Otherwise a
+    # valid chain can hash 1 here and 1.0 in the browser's canonical verifier.
+    # Only restore JSON integer numbers; booleans/strings/null retain their
+    # original types so the native gate can reject invalid timestamps.
+    approval = Approval(**{k: (float(v) if k == 'approved_at' and type(v) is int else v) for k,v in q['approval'].items()}) if q.get('approval') else None
+    ack = Ack(**{k: (float(v) if k == 'acknowledged_at' and type(v) is int else v) for k,v in q['ack'].items()}) if q.get('ack') else None
+    try:
+        after = room.apply(state, a, approval, ack, float(q['now']))
+        return json.dumps({'state': after.to_dict(), 'valid': room.audit.verify(room.audit.events), **browser_audit(room)})
+    except GateRejected as e:
+        return json.dumps({'error': e.reason, **browser_audit(room)})
+
+import sys
+print(browser_request(sys.stdin.read()))
+
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[39m
+[36m [2m❯[22m nativeRequest tests/decision-trace.test.mjs:[2m13:21[22m[39m
+    [90m 11|[39m
+    [90m 12|[39m [35mfunction[39m [34mnativeRequest[39m(request) {
+    [90m 13|[39m   return JSON.parse(execFileSync(process.env.TOWEROPS_PYTHON ?? 'pytho…
+    [90m   |[39m                     [31m^[39m
+    [90m 14|[39m     cwd: root, input: JSON.stringify(request), encoding: 'utf8', timeo…
+    [90m 15|[39m   }))[33m;[39m
+[90m [2m❯[22m tests/decision-trace.test.mjs:[2m20:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/decision-trace.test.mjs[2m > [22mnative decision-trace delivery[2m > [22mreturns a bounded delivery error for malformed trace {
+[41m[1m FAIL [22m[49m tests/decision-trace.test.mjs[2m > [22mnative decision-trace delivery[2m > [22mreturns a bounded delivery error for malformed trace [null]
+[41m[1m FAIL [22m[49m tests/decision-trace.test.mjs[2m > [22mnative decision-trace delivery[2m > [22mreturns a bounded delivery error for malformed trace {}
+[31m[1mError[22m: Command failed: python3 -c 
+import json
+from dataclasses import asdict
+from towerops import Aircraft, WorldState, SafetyPolicy, AdvisoryPlanner, Advisory, Approval, Ack, ControlRoom, GateRejected, canonical_bytes
+
+def browser_audit(room):
+    return {
+        'events': room.audit.events,
+        'audit_canonical': [canonical_bytes({k: v for k, v in event.items() if k != 'event_hash'}).decode('utf-8') for event in room.audit.events],
+        'audit_json': json.dumps(room.audit.events),
+    }
+
+def browser_request(raw):
+    q = json.loads(raw)
+    if q.get('op') == 'review_trace':
+        from decision_trace import review_trace
+        try:
+            return json.dumps(review_trace(q.get('trace_json')), allow_nan=False)
+        except (TypeError, ValueError) as error:
+            return json.dumps({'error': str(error)})
+    s = q['state']
+    state = WorldState(s['version'], float(s['observed_at']), tuple(Aircraft(**{k: (v if k == 'aircraft_id' else float(v)) for k,v in a.items()}) for a in s['aircraft']))
+    policy = SafetyPolicy(**{k: float(v) for k,v in q['policy'].items()})
+    if q['op'] == 'options':
+        from advisory_options import review_advisory_options
+        review = review_advisory_options(state, float(q['now']), policy)
+        return json.dumps({
+            'world_hash': review.world_hash,
+            'reviewed_at': review.reviewed_at,
+            'candidate_count': review.candidate_count,
+            'advisories': [dict(asdict(a), advisory_hash=a.advisory_hash) for a in review.advisories],
+        })
+    if q['op'] == 'plan':
+        plans = AdvisoryPlanner(policy).plan(state, float(q['now']))
+        a = plans[0] if plans else None
+        return json.dumps({'advisory': dict(asdict(a), advisory_hash=a.advisory_hash) if a else None})
+    body = dict(q['advisory'])
+    body.pop('advisory_hash', None)
+    a = Advisory(**{k: (v if k in ('aircraft_id', 'world_hash', 'rationale') else float(v)) for k,v in body.items()})
+    room = ControlRoom(policy)
+    room.audit.events = json.loads(q.get('audit_json', '[]'))
+    # JSON.stringify drops .0 from whole-number timestamps. Preserve the
+    # declared float fields before Python hashes the approval/readback event,
+    # just as the state and advisory fields above already do. Otherwise a
+    # valid chain can hash 1 here and 1.0 in the browser's canonical verifier.
+    # Only restore JSON integer numbers; booleans/strings/null retain their
+    # original types so the native gate can reject invalid timestamps.
+    approval = Approval(**{k: (float(v) if k == 'approved_at' and type(v) is int else v) for k,v in q['approval'].items()}) if q.get('approval') else None
+    ack = Ack(**{k: (float(v) if k == 'acknowledged_at' and type(v) is int else v) for k,v in q['ack'].items()}) if q.get('ack') else None
+    try:
+        after = room.apply(state, a, approval, ack, float(q['now']))
+        return json.dumps({'state': after.to_dict(), 'valid': room.audit.verify(room.audit.events), **browser_audit(room)})
+    except GateRejected as e:
+        return json.dumps({'error': e.reason, **browser_audit(room)})
+
+import sys
+print(browser_request(sys.stdin.read()))
+
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[39m
+[36m [2m❯[22m nativeRequest tests/decision-trace.test.mjs:[2m13:21[22m[39m
+    [90m 11|[39m
+    [90m 12|[39m [35mfunction[39m [34mnativeRequest[39m(request) {
+    [90m 13|[39m   return JSON.parse(execFileSync(process.env.TOWEROPS_PYTHON ?? 'pytho…
+    [90m   |[39m                     [31m^[39m
+    [90m 14|[39m     cwd: root, input: JSON.stringify(request), encoding: 'utf8', timeo…
+    [90m 15|[39m   }))[33m;[39m
+[90m [2m❯[22m tests/decision-trace.test.mjs:[2m26:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/decision-trace.test.mjs[2m > [22mnative decision-trace delivery[2m > [22mdownloads and reopens exact native JSON including float spellings and Unicode
+[31m[1mError[22m: Command failed: python3 -c 
+import json
+from towerops import AuditLog
+log = AuditLog()
+log.append('reject', {'reason': 'révision <history>', 'approved_at': 1.0, 'offset': -0.0, 'tiny': 1e-5})
+print(json.dumps(log.events, ensure_ascii=False), end='')
+
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[39m
+[36m [2m❯[22m tests/decision-trace.test.mjs:[2m33:17[22m[39m
+    [90m 31|[39m
+    [90m 32|[39m   it('downloads and reopens exact native JSON including float spelling…
+    [90m 33|[39m     const raw = execFileSync(process.env.TOWEROPS_PYTHON ?? 'python3',…
+    [90m   |[39m                 [31m^[39m
+    [90m 34|[39m import json
+    [90m 35|[39m from towerops import AuditLog
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/python-audit-interop.test.mjs[2m > [22mreal Python Worker audit received by the browser verifier[2m > [22mkeeps a valid approval/readback chain at clock 1000 valid
+[41m[1m FAIL [22m[49m tests/python-audit-interop.test.mjs[2m > [22mreal Python Worker audit received by the browser verifier[2m > [22mkeeps a valid approval/readback chain at clock 0.8 valid
+[41m[1m FAIL [22m[49m tests/python-audit-interop.test.mjs[2m > [22mreal Python Worker audit received by the browser verifier[2m > [22mkeeps a valid approval/readback chain at clock 0.6 valid
+[31m[1mError[22m: Command failed: python3 -c 
+import json
+from dataclasses import asdict
+from towerops import Aircraft, WorldState, SafetyPolicy, AdvisoryPlanner, Advisory, Approval, Ack, ControlRoom, GateRejected, canonical_bytes
+
+def browser_audit(room):
+    return {
+        'events': room.audit.events,
+        'audit_canonical': [canonical_bytes({k: v for k, v in event.items() if k != 'event_hash'}).decode('utf-8') for event in room.audit.events],
+        'audit_json': json.dumps(room.audit.events),
+    }
+
+def browser_request(raw):
+    q = json.loads(raw)
+    if q.get('op') == 'review_trace':
+        from decision_trace import review_trace
+        try:
+            return json.dumps(review_trace(q.get('trace_json')), allow_nan=False)
+        except (TypeError, ValueError) as error:
+            return json.dumps({'error': str(error)})
+    s = q['state']
+    state = WorldState(s['version'], float(s['observed_at']), tuple(Aircraft(**{k: (v if k == 'aircraft_id' else float(v)) for k,v in a.items()}) for a in s['aircraft']))
+    policy = SafetyPolicy(**{k: float(v) for k,v in q['policy'].items()})
+    if q['op'] == 'options':
+        from advisory_options import review_advisory_options
+        review = review_advisory_options(state, float(q['now']), policy)
+        return json.dumps({
+            'world_hash': review.world_hash,
+            'reviewed_at': review.reviewed_at,
+            'candidate_count': review.candidate_count,
+            'advisories': [dict(asdict(a), advisory_hash=a.advisory_hash) for a in review.advisories],
+        })
+    if q['op'] == 'plan':
+        plans = AdvisoryPlanner(policy).plan(state, float(q['now']))
+        a = plans[0] if plans else None
+        return json.dumps({'advisory': dict(asdict(a), advisory_hash=a.advisory_hash) if a else None})
+    body = dict(q['advisory'])
+    body.pop('advisory_hash', None)
+    a = Advisory(**{k: (v if k in ('aircraft_id', 'world_hash', 'rationale') else float(v)) for k,v in body.items()})
+    room = ControlRoom(policy)
+    room.audit.events = json.loads(q.get('audit_json', '[]'))
+    # JSON.stringify drops .0 from whole-number timestamps. Preserve the
+    # declared float fields before Python hashes the approval/readback event,
+    # just as the state and advisory fields above already do. Otherwise a
+    # valid chain can hash 1 here and 1.0 in the browser's canonical verifier.
+    # Only restore JSON integer numbers; booleans/strings/null retain their
+    # original types so the native gate can reject invalid timestamps.
+    approval = Approval(**{k: (float(v) if k == 'approved_at' and type(v) is int else v) for k,v in q['approval'].items()}) if q.get('approval') else None
+    ack = Ack(**{k: (float(v) if k == 'acknowledged_at' and type(v) is int else v) for k,v in q['ack'].items()}) if q.get('ack') else None
+    try:
+        after = room.apply(state, a, approval, ack, float(q['now']))
+        return json.dumps({'state': after.to_dict(), 'valid': room.audit.verify(room.audit.events), **browser_audit(room)})
+    except GateRejected as e:
+        return json.dumps({'error': e.reason, **browser_audit(room)})
+
+
+import sys
+requests = json.load(sys.stdin)
+q = requests['plan']
+plan = json.loads(browser_request(json.dumps(q)))['advisory']
+if plan is None:
+    raise RuntimeError('The baseline crossing must produce an advisory')
+q.update(op='apply', advisory=plan,
+    approval={'advisory_hash': plan['advisory_hash'], 'decision': 'approve',
+              'approved_at': requests['approvalAt'], 'approver': 'synthetic-controller'},
+    ack={'advisory_hash': plan['advisory_hash'], 'status': 'accepted',
+         'acknowledged_at': requests['acknowledgedAt']}, now=requests['applyAt'])
+print(browser_request(json.dumps(q)))
+
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[39m
+[36m [2m❯[22m applyThroughPython tests/python-audit-interop.test.mjs:[2m39:21[22m[39m
+    [90m 37|[39m print(browser_request(json.dumps(q)))
+    [90m 38|[39m `[39m[33m;[39m
+    [90m 39|[39m   return JSON.parse(execFileSync(process.env.TOWEROPS_PYTHON ?? 'pytho…
+    [90m   |[39m                     [31m^[39m
+    [90m 40|[39m     cwd[33m:[39m root[33m,[39m
+    [90m 41|[39m     input[33m:[39m [33mJSON[39m[33m.[39m[34mstringify[39m(requests)[33m,[39m
+[90m [2m❯[22m tests/python-audit-interop.test.mjs:[2m49:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/python-float-parity.test.mjs[2m > [22mPython float canonical bytes received by native TypeScript consumers[2m > [22m'positive microsecond approval' preserves admitted state and audit hashes
+[41m[1m FAIL [22m[49m tests/python-float-parity.test.mjs[2m > [22mPython float canonical bytes received by native TypeScript consumers[2m > [22m'UI offsets yielding a small fraction' preserves admitted state and audit hashes
+[41m[1m FAIL [22m[49m tests/python-float-parity.test.mjs[2m > [22mPython float canonical bytes received by native TypeScript consumers[2m > [22m'large fractional clock control' preserves admitted state and audit hashes
+[41m[1m FAIL [22m[49m tests/python-float-parity.test.mjs[2m > [22mPython float canonical bytes received by native TypeScript consumers[2m > [22m'large clock in Python exponent notati…' preserves admitted state and audit hashes
+[31m[1mError[22m: Command failed: python3 -c 
+import json
+from dataclasses import asdict
+from towerops import Aircraft, WorldState, SafetyPolicy, AdvisoryPlanner, Advisory, Approval, Ack, ControlRoom, GateRejected, canonical_bytes
+
+def browser_audit(room):
+    return {
+        'events': room.audit.events,
+        'audit_canonical': [canonical_bytes({k: v for k, v in event.items() if k != 'event_hash'}).decode('utf-8') for event in room.audit.events],
+        'audit_json': json.dumps(room.audit.events),
+    }
+
+def browser_request(raw):
+    q = json.loads(raw)
+    if q.get('op') == 'review_trace':
+        from decision_trace import review_trace
+        try:
+            return json.dumps(review_trace(q.get('trace_json')), allow_nan=False)
+        except (TypeError, ValueError) as error:
+            return json.dumps({'error': str(error)})
+    s = q['state']
+    state = WorldState(s['version'], float(s['observed_at']), tuple(Aircraft(**{k: (v if k == 'aircraft_id' else float(v)) for k,v in a.items()}) for a in s['aircraft']))
+    policy = SafetyPolicy(**{k: float(v) for k,v in q['policy'].items()})
+    if q['op'] == 'options':
+        from advisory_options import review_advisory_options
+        review = review_advisory_options(state, float(q['now']), policy)
+        return json.dumps({
+            'world_hash': review.world_hash,
+            'reviewed_at': review.reviewed_at,
+            'candidate_count': review.candidate_count,
+            'advisories': [dict(asdict(a), advisory_hash=a.advisory_hash) for a in review.advisories],
+        })
+    if q['op'] == 'plan':
+        plans = AdvisoryPlanner(policy).plan(state, float(q['now']))
+        a = plans[0] if plans else None
+        return json.dumps({'advisory': dict(asdict(a), advisory_hash=a.advisory_hash) if a else None})
+    body = dict(q['advisory'])
+    body.pop('advisory_hash', None)
+    a = Advisory(**{k: (v if k in ('aircraft_id', 'world_hash', 'rationale') else float(v)) for k,v in body.items()})
+    room = ControlRoom(policy)
+    room.audit.events = json.loads(q.get('audit_json', '[]'))
+    # JSON.stringify drops .0 from whole-number timestamps. Preserve the
+    # declared float fields before Python hashes the approval/readback event,
+    # just as the state and advisory fields above already do. Otherwise a
+    # valid chain can hash 1 here and 1.0 in the browser's canonical verifier.
+    # Only restore JSON integer numbers; booleans/strings/null retain their
+    # original types so the native gate can reject invalid timestamps.
+    approval = Approval(**{k: (float(v) if k == 'approved_at' and type(v) is int else v) for k,v in q['approval'].items()}) if q.get('approval') else None
+    ack = Ack(**{k: (float(v) if k == 'acknowledged_at' and type(v) is int else v) for k,v in q['ack'].items()}) if q.get('ack') else None
+    try:
+        after = room.apply(state, a, approval, ack, float(q['now']))
+        return json.dumps({'state': after.to_dict(), 'valid': room.audit.verify(room.audit.events), **browser_audit(room)})
+    except GateRejected as e:
+        return json.dumps({'error': e.reason, **browser_audit(room)})
+
+import sys
+from towerops import canonical_bytes
+result = json.loads(browser_request(sys.stdin.read()))
+if 'events' in result:
+    result['canonical_events'] = [canonical_bytes({k: v for k, v in event.items()
+        if k != 'event_hash'}).decode('utf-8') for event in result['events']]
+print(json.dumps(result))
+
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[39m
+[36m [2m❯[22m python tests/python-float-parity.test.mjs:[2m14:21[22m[39m
+    [90m 12|[39m
+    [90m 13|[39m [35mfunction[39m [34mpython[39m(script[33m,[39m input) {
+    [90m 14|[39m   return JSON.parse(execFileSync(process.env.TOWEROPS_PYTHON ?? 'pytho…
+    [90m   |[39m                     [31m^[39m
+    [90m 15|[39m     [...(process.env.TOWEROPS_TEST_OPTIMIZE === '1' ? ['-O'] : []), '-…
+    [90m 16|[39m       cwd: root, input: JSON.stringify(input), encoding: 'utf8', timeo…
+[90m [2m❯[22m native tests/python-float-parity.test.mjs:[2m21:10[22m[39m
+[90m [2m❯[22m tests/python-float-parity.test.mjs:[2m45:26[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/python-float-parity.test.mjs[2m > [22mPython float canonical bytes received by native TypeScript consumers[2m > [22mmatches actual Python canonical bytes at signed format and finite limits
+[31m[1mError[22m: Command failed: python3 -c import json, sys
+from towerops import canonical_bytes
+values = json.load(sys.stdin)
+print(json.dumps({'floats': [canonical_bytes(float(v)).decode('utf-8') for v in values],
+    'integer_keys': canonical_bytes({'seq': 7, 'version': 8, 'value': -0.0}).decode('utf-8')}))
+
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[39m
+[36m [2m❯[22m python tests/python-float-parity.test.mjs:[2m14:21[22m[39m
+    [90m 12|[39m
+    [90m 13|[39m [35mfunction[39m [34mpython[39m(script[33m,[39m input) {
+    [90m 14|[39m   return JSON.parse(execFileSync(process.env.TOWEROPS_PYTHON ?? 'pytho…
+    [90m   |[39m                     [31m^[39m
+    [90m 15|[39m     [...(process.env.TOWEROPS_TEST_OPTIMIZE === '1' ? ['-O'] : []), '-…
+    [90m 16|[39m       cwd: root, input: JSON.stringify(input), encoding: 'utf8', timeo…
+[90m [2m❯[22m tests/python-float-parity.test.mjs:[2m73:22[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/13]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m3 failed[39m[22m[2m | [22m[1m[32m13 passed[39m[22m[90m (16)[39m
+[2m      Tests [22m [1m[31m13 failed[39m[22m[2m | [22m[1m[32m241 passed[39m[22m[90m (254)[39m
+[2m   Start at [22m 14:06:34
+[2m   Duration [22m 2.31s[2m (transform 2.44s, setup 0ms, import 3.36s, tests 4.36s, environment 3ms)[22m
+
