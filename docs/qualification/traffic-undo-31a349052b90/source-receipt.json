@@ -1,0 +1,112 @@
+{
+  "kind": "TowerOps one-step traffic Undo source and historical receiving",
+  "issue": "https://github.com/Jacob-Met/TowerOps/issues/51",
+  "scope_extension": "https://github.com/Jacob-Met/TowerOps/issues/51#issuecomment-6063959244",
+  "source_review_commit": "8c1ba62144c36834e47e8a9e327f59ae1214c40f",
+  "base_commit": "5b3015567a01017245c5f715c1bce65e20a06138",
+  "tree_preservation": {
+    "base_tree": "89a7769301291fb66605eb0a4e45cc9ce285861a",
+    "candidate_tree": "2a35c148480763570f6d9e0c8448d678cebb8c4a",
+    "base_leaves": 458,
+    "candidate_leaves": 461,
+    "preserved_existing": 454,
+    "changed": [
+      ".github/workflows/airspace-demo.yml",
+      "web/airspace/README.md",
+      "web/airspace/index.html",
+      "web/airspace/src/main.ts"
+    ],
+    "added": [
+      "web/airspace/src/traffic-undo.ts",
+      "web/airspace/tests/traffic-undo.test.ts",
+      "web/airspace/tests/traffic-undo.browser.mjs"
+    ]
+  },
+  "source_files": {
+    "web/airspace/src/traffic-undo.ts": {
+      "bytes": 3717,
+      "sha256": "f32941eb4fa0540140afd46a11ab3411da3b83c764f2c8153d0039702083bd0a",
+      "blob": "b1dba46c2845a5e330588d52e6caf40a7e407fab"
+    },
+    "web/airspace/tests/traffic-undo.test.ts": {
+      "bytes": 8969,
+      "sha256": "0d0f4b6798f9603d29ecba8dbb41d70143c41540fb81ab234bfa7f48f7e5daa6",
+      "blob": "6357ef14755a618847c24f3e6780f04cbbc96c7a"
+    },
+    "web/airspace/index.html": {
+      "bytes": 15695,
+      "sha256": "94dd08794002bc92cc4aadac99917c2e63b549a64f4ac659c0a3d7764ffbf212",
+      "blob": "d02367aeb96eda7961b08f564fb4e4ac972bbe74"
+    },
+    "web/airspace/README.md": {
+      "bytes": 11931,
+      "sha256": "e4d97c7099ad213e1aa724ea47389590c7eff71f9001528685270a35e3f804ce",
+      "blob": "1baf13623cb248a20e60c1a84f0bb55f49be29e1"
+    },
+    "web/airspace/tests/traffic-undo.browser.mjs": {
+      "bytes": 26970,
+      "sha256": "ee275996c96ee86004e4cf0c16189d5813e92c24139015463655d46c02867af3",
+      "blob": "80385e644e0fac338200843f13c2427de3e54e8e"
+    },
+    ".github/workflows/airspace-demo.yml": {
+      "bytes": 4727,
+      "sha256": "b13a78a041e996b72abe2b100380373f353881063fe403fc0bd07f1576ace133",
+      "blob": "6751109cb489780ffc043fa9d2d4d428134f28a3"
+    },
+    "web/airspace/src/main.ts": {
+      "bytes": 28721,
+      "sha256": "4b3dbf46cbff3cf5078d7f0c21ab012a1ccfeb32e8186046ae8534a1cda22054",
+      "blob": "ecd90be56a0f3e9606b862976790c6e7b26a206a"
+    }
+  },
+  "root_independent_review": {
+    "disposition": "accepted source for draft publication and actual hosted receiving",
+    "method": "Independent complete source, current-base diff, workflow/receiver and byte-hash review",
+    "attribution": "Separate /root agent; no duplicate native execution",
+    "merge_gate": "Actual baseline/candidate browser evidence and independent final-source/evidence acceptance remain required"
+  },
+  "historical_packet": {
+    "path": "docs/qualification/traffic-undo-31a349052b90/native-history.tar.gz",
+    "bytes": 202059,
+    "sha256": "e0b4cd1ef9f1ac3a9b9a1cc3c7d061bb4bb8414f312ea9a8bff0c91506efdb8c",
+    "git_blob": "cdd8607478c4630e678d37848b0ea0216d4178b7",
+    "manifest_sha256": "abe79c92f71078bb48aa1482284d24f45b70b703a9c7f8a28653aa97daad3d04",
+    "regular_members": 53,
+    "manifest_files": 52,
+    "uncompressed_bytes": 674537,
+    "independent_verification": "Separate cloud-memory decode; exact archive Git/SHA256 identities, unique safe regular member paths and modes, complete manifest membership, per-member sizes/SHA256, and four historical source Git blobs all verified",
+    "historical_source_blobs": {
+      "native-source-v1/index.html": "d02367aeb96eda7961b08f564fb4e4ac972bbe74",
+      "native-source-v1/src/main.ts": "6a33fb7a269e186d0a0d76333d731553cd8fe88a",
+      "native-source-v1/src/traffic-undo.ts": "b1dba46c2845a5e330588d52e6caf40a7e407fab",
+      "native-source-v1/tests/traffic-undo.test.ts": "6357ef14755a618847c24f3e6780f04cbbc96c7a"
+    },
+    "historical_native_results": {
+      "baseline_tests": 133,
+      "candidate_tests": 154,
+      "added_undo_tests": 21,
+      "ordinary_build": "passed",
+      "source_preservation": "passed",
+      "current_composed_source_test_status": "pending hosted run"
+    },
+    "browser_transport_attempts": {
+      "count": 5,
+      "result": "failed before product assertions",
+      "meaning": "No actual missing-Undo negative or successful browser receiving"
+    },
+    "native_python_fixture": "real plan/apply/plan passed; not browser acceptance"
+  },
+  "current_local_static_checks": {
+    "final_receiver_node_syntax": "passed",
+    "workflow_yaml_parse": "passed"
+  },
+  "hosted_gate": {
+    "workflow": ".github/workflows/airspace-demo.yml",
+    "receiver": "web/airspace/tests/traffic-undo.browser.mjs",
+    "artifact": "towerops-traffic-undo-browser",
+    "baseline": "same three original methods: exact missing-Undo failure plus two passing controls",
+    "candidate_groups": 10,
+    "status": "pending"
+  },
+  "boundary": "Own isolated source and evidence only; no host configuration, services, installed app, live account operations or source-owner branch mutation"
+}
