@@ -23,7 +23,7 @@ See [COMPARE_PLANS.md](COMPARE_PLANS.md) for exact identities, file limits and J
 From the repository root:
 
 ```bash
-py -3 tools/generate_airspace_reference.py --check
+python3 tools/generate_airspace_reference.py --check
 cd web/airspace
 npm ci
 npm test
@@ -33,7 +33,7 @@ npm run build
 Optional Raider browser acceptance and desktop/phone captures:
 
 ```bash
-py -3 tools/capture_airspace.py
+python3 tools/capture_airspace.py
 ```
 
 The app uses synthetic or visitor-provided state only. It is a research simulation, not operational air-traffic-control software or aviation assurance. Approval/readback controls are fixtures, not real authority.
