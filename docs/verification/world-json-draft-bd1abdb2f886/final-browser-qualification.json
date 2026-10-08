@@ -1,0 +1,45 @@
+{
+  "qualifiedAt": "2026-10-08T12:02:39.796Z",
+  "base": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "sourceSha256": "35d95fa3e931ffef4f11562358f59a7a6128bbb1a7cbad36946a2c490551f6eb",
+  "receiverSha256": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+  "receiverTransportOnlyRevision": "Wait for owned Chromium process closure, bounded retry on own profile removal, and write final status after cleanup. All nine assertion groups remain exact.",
+  "originalReceiverSha256": "4d8196cdda7ab4509fdf0eba577966dbc03f62b9286d7ac93e84b5175253d7d2",
+  "steps": [
+    {
+      "name": "baseline-clean",
+      "project": "/home/jacob/towerops-json-draft-baseline-bd1abdb2f886",
+      "code": 1,
+      "signal": null,
+      "pass": 4,
+      "fail": 5,
+      "cleanup": {
+        "status": "passed",
+        "profileRemoved": true
+      },
+      "sourceChanged": [],
+      "pageErrors": [],
+      "report": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-baseline-clean/browser-report.json",
+      "reportSha256": "43b9cfb0825a1690e802c32860af68e051453883d2a98ef99bf266b0438984b0",
+      "logSha256": "aee162a287ec3d0542d39a8e53f0bc45872fdac488bcbc8a1f5d8f7b4db5de0c"
+    },
+    {
+      "name": "candidate-clean",
+      "project": "/home/jacob/towerops-json-draft-bd1abdb2f886",
+      "code": 0,
+      "signal": null,
+      "pass": 9,
+      "fail": 0,
+      "cleanup": {
+        "status": "passed",
+        "profileRemoved": true
+      },
+      "sourceChanged": [],
+      "pageErrors": [],
+      "report": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-candidate-clean/browser-report.json",
+      "reportSha256": "b89ccfbebc180e901b6ac46567c47dab3dd01ceda06fa52d7958fbe63a141db9",
+      "logSha256": "ec28b636a493478d196e7d3dac03a9ec51b17c9f7488d649193225d4b43638c8"
+    }
+  ],
+  "status": "passed"
+}

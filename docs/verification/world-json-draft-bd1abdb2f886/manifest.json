@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "kind": "towerops-raw-world-json-draft-receiving",
+  "createdAt": "2026-10-08T12:09:21.308Z",
+  "repository": "Jacob-Met/TowerOps",
+  "issue": 43,
+  "base": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "sourceSha256": {
+    "web/airspace/src/main.ts": "35d95fa3e931ffef4f11562358f59a7a6128bbb1a7cbad36946a2c490551f6eb",
+    "web/airspace/README.md": "2d08fe2f20b3f5b0a549e567597bb178a64802d42646c299a253c072b51ef91e",
+    "web/airspace/tests/world-json-draft.browser.mjs": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f"
+  },
+  "files": [
+    {
+      "path": "baseline-browser-report.json",
+      "bytes": 40313,
+      "sha256": "43b9cfb0825a1690e802c32860af68e051453883d2a98ef99bf266b0438984b0",
+      "gitBlob": "453b312352ad2693225e2d6a245ddb8910c395d1",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-baseline-clean/browser-report.json",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "baseline-browser.log",
+      "bytes": 3725,
+      "sha256": "aee162a287ec3d0542d39a8e53f0bc45872fdac488bcbc8a1f5d8f7b4db5de0c",
+      "gitBlob": "926fac8b3f795081423e02f062df20923ff84951",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-baseline-clean.log",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "candidate-browser-report.json",
+      "bytes": 36873,
+      "sha256": "b89ccfbebc180e901b6ac46567c47dab3dd01ceda06fa52d7958fbe63a141db9",
+      "gitBlob": "604a0318b800ffed9bbc9fcf4f67e446f1bb3c5d",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-candidate-clean/browser-report.json",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "candidate-browser.log",
+      "bytes": 853,
+      "sha256": "ec28b636a493478d196e7d3dac03a9ec51b17c9f7488d649193225d4b43638c8",
+      "gitBlob": "e053114922035ea8d9ca4d35c18c66e1933f9479",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-candidate-clean.log",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "final-browser-qualification.json",
+      "bytes": 1831,
+      "sha256": "3b34c6d06e311147993e6400fd5ff7a9994be4ba668dd8cb7010d10e663c31e5",
+      "gitBlob": "35f7be7c5ec8fb6cac4bafac6529d695ae697493",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/final-browser-qualification.json",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "native-gates.json",
+      "bytes": 38614,
+      "sha256": "a087c2bd5cd82d355e98f88771dedd9c714f2a690405d4a22140403749fcb8dd",
+      "gitBlob": "4274e3271037cc817d405e31e65a80ed8f9bda7f",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/candidate-native-gates.json",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "current-composition.json",
+      "bytes": 15614,
+      "sha256": "fcf821e38cc1844c617814b2fbfe092ac72495ae074ab971be80728c8d7f590c",
+      "gitBlob": "72bf28eaf618bf1a8eb3b5b7998ffe5575680709",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/current-composition.json",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "history/candidate-before-cleanup-report.json",
+      "bytes": 36803,
+      "sha256": "27636e483cd8ec2bd8efa2a8aa705161f228bbbcec4d1b28c2abb0bdb628f090",
+      "gitBlob": "b69283b5a84e666d9f9edc2a98d7d9fbad738df9",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-candidate-current/browser-report.json",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "history/candidate-before-cleanup.log",
+      "bytes": 1024,
+      "sha256": "ef4fb6444f156d4f7a1021f04da7b63585e1d7811d1c91ad1d55abe85fc84668",
+      "gitBlob": "f02aa1fdd56e4561924d4d528ec348f44ed3f0c4",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/browser-candidate-current.log",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "native-test-transcript.txt",
+      "bytes": 1024,
+      "sha256": "6af50b82bccbebc633b2982b8d8cc1764385a8ff6cd43ee2bc2848f292071aab",
+      "gitBlob": "61b3d429820ac53672deb922a52123e53cfed0b3",
+      "source": "/home/jacob/towerops-json-draft-bd1abdb2f886-qa/candidate-vitest.log",
+      "originalSha256": "d497696709e9b6bec96dd056230ae698facda5f5fea5640012b2d620ebed39c2",
+      "transformation": "Remove ANSI terminal controls and NUL padding only"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5587,
+      "sha256": "81cd27afbb0edb35d30cc48b06cf4f46bc682913c41182dcc59f35d1ffbc8f6e",
+      "gitBlob": "e6fb05f02ae610c87954673c573b8ffcefe9aabe"
+    }
+  ]
+}
