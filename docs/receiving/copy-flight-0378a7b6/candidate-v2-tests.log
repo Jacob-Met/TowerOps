@@ -1,0 +1,38 @@
+
+> towerops-airspace-lab@0.1.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90mD:/Hamon/worktrees/towerops-discovery-0378a7b6/web/airspace[39m
+
+ [32m✓[39m tests/encounter.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m tests/track-copy.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 82[2mms[22m[39m
+ [32m✓[39m tests/scenario-file.test.ts [2m([22m[2m68 tests[22m[2m)[22m[32m 84[2mms[22m[39m
+ [32m✓[39m tests/algorithm.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32m✓[39m tests/identifier-parity.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 102[2mms[22m[39m
+ [32m✓[39m tests/audit-append.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 98[2mms[22m[39m
+ [32m✓[39m tests/advisory-numeric.test.ts [2m([22m[2m25 tests[22m[2m)[22m[33m 311[2mms[22m[39m
+ [32m✓[39m tests/audit-wire.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 57[2mms[22m[39m
+ [32m✓[39m tests/track-edit.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 46[2mms[22m[39m
+ [32m✓[39m tests/world-tools.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/radar-geometry.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/advisory-options.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/flight-register.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/python-audit-interop.test.mjs [2m([22m[2m3 tests[22m[2m)[22m[33m 918[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps a valid approval/readback chain at clock 1000 valid [33m 324[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps a valid approval/readback chain at clock 0.8 valid [33m 316[2mms[22m[39m
+ [32m✓[39m tests/decision-trace.test.mjs [2m([22m[2m6 tests[22m[2m)[22m[33m 1394[2mms[22m[39m
+     [33m[2m✓[22m[39m reviews a trace without any world, policy, advisory, approval or ack in the request [33m 301[2mms[22m[39m
+     [33m[2m✓[22m[39m returns a bounded delivery error for malformed trace { [33m 328[2mms[22m[39m
+     [33m[2m✓[22m[39m downloads and reopens exact native JSON including float spellings and Unicode [33m 341[2mms[22m[39m
+ [32m✓[39m tests/python-float-parity.test.mjs [2m([22m[2m5 tests[22m[2m)[22m[33m 1569[2mms[22m[39m
+     [33m[2m✓[22m[39m 'positive microsecond approval' preserves admitted state and audit hashes [33m 645[2mms[22m[39m
+     [33m[2m✓[22m[39m 'UI offsets yielding a small fraction' preserves admitted state and audit hashes [33m 395[2mms[22m[39m
+ [32m✓[39m tests/playback-controls.test.ts [2m([22m[2m14 tests[22m[2m)[22m[33m 2017[2mms[22m[39m
+     [33m[2m✓[22m[39m starts at the displayed default rate [33m 514[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m17 passed[39m[22m[90m (17)[39m
+[2m      Tests [22m [1m[32m276 passed[39m[22m[90m (276)[39m
+[2m   Start at [22m 14:24:13
+[2m   Duration [22m 2.66s[2m (transform 2.17s, setup 0ms, import 3.23s, tests 6.89s, environment 4ms)[22m
+

@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-08T21:13:51.090Z",
+  "source": "2119eac83f97763cfb66f8c29bff506437ba4725",
+  "node": "v24.19.0",
+  "python": "C:/Hamon/worker/python/cpython-3.12.14-windows-x86_64-none/python.exe",
+  "pythonVersion": "Python 3.12.14",
+  "correction": "Use repository-required existing CPython3.12 with UTF-8 process pipes and no runtime bytecode writes; preserve both earlier baseline failures",
+  "checks": [
+    {
+      "tag": "tests",
+      "command": "npm test",
+      "code": 0
+    },
+    {
+      "tag": "build",
+      "command": "npm run build",
+      "code": 0
+    }
+  ],
+  "completedAt": "2026-10-08T21:13:57.948Z"
+}

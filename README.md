@@ -18,6 +18,10 @@ experiments for the same exact native world and review clock, showing policy
 changes and complete advisory membership/order without planning again.
 See [COMPARE_PLANS.md](COMPARE_PLANS.md) for exact identities, file limits and JSON output.
 
+## Reuse a selected trajectory
+
+In Shape the traffic, copy a selected flight with a new callsign and position offsets. Preview its conflict intervals before adding; its source vector stays exact and the original tracks remain unchanged. See [COPY_FLIGHT.md](COPY_FLIGHT.md) for the workflow and review limits.
+
 ## Verify
 
 From the repository root:

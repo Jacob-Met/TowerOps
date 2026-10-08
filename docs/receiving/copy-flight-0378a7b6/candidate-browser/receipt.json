@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-08T21:23:18.470Z",
+  "source": "2119eac83f97763cfb66f8c29bff506437ba4725",
+  "node": "v24.19.0",
+  "sourceHashes": {
+    "web/airspace/src/main.ts": "30cf979825c1b2978e10b820c0ffdb75ab5b2e0b26e9d9c92dec8da870bf428b",
+    "web/airspace/index.html": "580a5acfcebe37e854a3af163b20352670bf75cfca47e6f8b9b4df15d2aba480",
+    "web/airspace/src/track-copy.ts": "1ec5395a3281c5c1d3bc9247dfcdb620fd711ff2c1dae84e2fa7690748282f0a",
+    "web/airspace/src/track-copy-view.ts": "ec80ff2c8592bee97db9a80fdc0481e938eaa2f5055d64055849edb2b5a638f4",
+    "web/airspace/tests/track-copy.test.ts": "f5a1614a3310ac2704a3cb09aa22d39dc79c3b21ebe142f173ad9791a675c8d1",
+    "web/airspace/src/track-edit.ts": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046",
+    "web/airspace/src/world-tools.ts": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+    "web/airspace/src/core.ts": "01c351be73c9f404aeb6a30d80ab6796ec72a0b24fade725ac853104c89f940f",
+    "web/airspace/src/python.ts": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c",
+    "web/airspace/src/python-worker.ts": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987",
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+  },
+  "groups": [
+    "relative position preview is nonmutating; cancellation preserves exact original world, raw JSON and independent builder draft; desktop and mobile controls visible",
+    "duplicate, changed and unannounced changed inputs refuse; exact-vector copy appends once, selects the new flight and keeps raw/builder drafts; double activation is inert"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "result": "fail",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at file:///D:/Hamon/worktrees/towerops-copy-flight-0378a7b6-proof/receive-candidate.mjs:30:103",
+  "completedAt": "2026-10-08T21:23:22.419Z"
+}

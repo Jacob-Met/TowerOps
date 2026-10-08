@@ -1,0 +1,35 @@
+
+> towerops-airspace-lab@0.1.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90mD:/Hamon/worktrees/towerops-discovery-0378a7b6/web/airspace[39m
+
+ [32m✓[39m tests/encounter.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/world-tools.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32m✓[39m tests/algorithm.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m tests/scenario-file.test.ts [2m([22m[2m68 tests[22m[2m)[22m[32m 73[2mms[22m[39m
+ [32m✓[39m tests/advisory-numeric.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 87[2mms[22m[39m
+ [32m✓[39m tests/identifier-parity.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 96[2mms[22m[39m
+ [32m✓[39m tests/audit-append.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 98[2mms[22m[39m
+ [32m✓[39m tests/audit-wire.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 44[2mms[22m[39m
+ [32m✓[39m tests/track-edit.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/radar-geometry.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m tests/advisory-options.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/flight-register.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/python-audit-interop.test.mjs [2m([22m[2m3 tests[22m[2m)[22m[33m 793[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps a valid approval/readback chain at clock 0.8 valid [33m 333[2mms[22m[39m
+ [32m✓[39m tests/decision-trace.test.mjs [2m([22m[2m6 tests[22m[2m)[22m[33m 1242[2mms[22m[39m
+     [33m[2m✓[22m[39m returns a bounded delivery error for malformed trace { [33m 316[2mms[22m[39m
+     [33m[2m✓[22m[39m downloads and reopens exact native JSON including float spellings and Unicode [33m 314[2mms[22m[39m
+ [32m✓[39m tests/python-float-parity.test.mjs [2m([22m[2m5 tests[22m[2m)[22m[33m 1420[2mms[22m[39m
+     [33m[2m✓[22m[39m 'positive microsecond approval' preserves admitted state and audit hashes [33m 589[2mms[22m[39m
+     [33m[2m✓[22m[39m 'UI offsets yielding a small fraction' preserves admitted state and audit hashes [33m 318[2mms[22m[39m
+ [32m✓[39m tests/playback-controls.test.ts [2m([22m[2m14 tests[22m[2m)[22m[33m 2173[2mms[22m[39m
+     [33m[2m✓[22m[39m starts at the displayed default rate [33m 520[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m16 passed[39m[22m[90m (16)[39m
+[2m      Tests [22m [1m[32m254 passed[39m[22m[90m (254)[39m
+[2m   Start at [22m 14:13:51
+[2m   Duration [22m 2.77s[2m (transform 2.43s, setup 0ms, import 3.28s, tests 6.22s, environment 3ms)[22m
+
