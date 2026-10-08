@@ -1,0 +1,25 @@
+{
+  "command": "/workspace/scratch/ae0a1ea0b247/venv-production/bin/python -m pytest -q -p no:cacheprovider tests/test_world_from_csv.py tests/test_plan_world.py",
+  "result": {
+    "chunk_id": "7603ef",
+    "wall_time_seconds": 5.321857648,
+    "exit_code": 0,
+    "original_token_count": 39,
+    "output": "............................. [ 85%]\n.....                                                                    [100%]\n34 passed, 43 subtests passed in 5.10s\n"
+  },
+  "lintCommand": "/workspace/scratch/ac386303dce2/runtime-execution/canvaspilot-env/bin/python -m ruff check world_from_csv.py tests/test_world_from_csv.py",
+  "lintResult": {
+    "chunk_id": "e6596d",
+    "wall_time_seconds": 0.000020251,
+    "exit_code": 0,
+    "original_token_count": 5,
+    "output": "All checks passed!\n"
+  },
+  "firstLint": {
+    "result": "PYI041 Use float instead of int | float",
+    "path": "world_from_csv.py",
+    "line": 28,
+    "beforeBlob": "babf92ec3195fc3a6e1d1bbe0900094c325b6af7",
+    "correction": "Only observed_at parameter annotation changed from int | float to float under future annotations; numeric interpretation is unchanged."
+  }
+}

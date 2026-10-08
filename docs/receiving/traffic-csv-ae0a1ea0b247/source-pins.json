@@ -1,0 +1,143 @@
+{
+  "schema": "towerops-traffic-csv-receiving/v1",
+  "repository": "Jacob-Met/TowerOps",
+  "issue": 52,
+  "central_claim": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6062707452",
+  "execution_base": "53aa5048b6585aa08592d5513cfcf555a8bba018",
+  "receiving_parent": "687a1f9492eb3c9d7dfaed2ae745c7a1bb3313d8",
+  "receiving_parent_tree": "aa483f5d708f4f6f6ab510168884eaf4d25cf9e1",
+  "parent_leaf_count": 454,
+  "contribution": [
+    {
+      "path": "world_from_csv.py",
+      "git_blob": "c20ad8c93ac06f882bc6630f755559499fdf3f7d",
+      "sha256": "714336eff875d88980de9ac80e559060cea2741d2d4a182a9654a58d64105478",
+      "bytes": 4490
+    },
+    {
+      "path": "tests/test_world_from_csv.py",
+      "git_blob": "57ae5fca2c81429ecb47fa3b865fef188130e560",
+      "sha256": "53a1227c5e54fd631bdd5291e279466c33d8c924715fb60e4129f935847a7e3f",
+      "bytes": 8762
+    },
+    {
+      "path": "WORLD_FROM_CSV.md",
+      "git_blob": "1b385503aa027e396ea815fad98235b63fdb89f2",
+      "sha256": "00755a371f7d19a4962bbf1f92a2c5e72973b6bfb4994ec48fabe9e77851e01d",
+      "bytes": 4398
+    },
+    {
+      "path": "examples/traffic.csv",
+      "git_blob": "d47387de02d5066a23a85090268d51de40051fa5",
+      "sha256": "12edf3bcfd67028b9778701abe42947a74865103a78172f0259ad9f5f292a22f",
+      "bytes": 132
+    },
+    {
+      "path": "README.md",
+      "git_blob": "249ada3b491978b73d2aadf32ead0869a2ffb514",
+      "sha256": "3bd3f4fb7a8f4b2ced8201b7cf5df509726fb708e077b6bba6570b612ad6fe53",
+      "bytes": 2364
+    }
+  ],
+  "receiving_dependencies": [
+    {
+      "path": "towerops.py",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1"
+    },
+    {
+      "path": "plan_world.py",
+      "git_blob": "8e826a10cc2f9425de26727dce07851497174bba"
+    },
+    {
+      "path": "advisory_options.py",
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd"
+    },
+    {
+      "path": "tests/test_plan_world.py",
+      "git_blob": "8ea1e3f8ea138f9b5b8b42fdadba2bc147c0db6f"
+    },
+    {
+      "path": "tests/conftest.py",
+      "git_blob": "b9e42910cce31f47992b2d9f88786d1120033545"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "4791e16741c2ee136585d8f4d99f918535a3a017"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "d51c0341cd2b85169dbe62d62f178bdfc544f2e7"
+    }
+  ],
+  "readme_inverse": "Remove only the seven-line Author traffic from a spreadsheet section; reconstructs native README blob d51c0341cd2b85169dbe62d62f178bdfc544f2e7.",
+  "author_tests": {
+    "passed": 34,
+    "subtests_passed": 43,
+    "command": "python -m pytest -q -p no:cacheprovider tests/test_world_from_csv.py tests/test_plan_world.py",
+    "ruff": "passed"
+  },
+  "independent": {
+    "groups_passed": 4,
+    "actual_child_processes": 7,
+    "archive_git_blob": "6965d88bed4108148709b9307f90fd8fdf7cbab0",
+    "archive_sha256": "48da44d641b1f09adb569f05be47f3fb079990a43916b97660c9c6b18b9aec3b"
+  },
+  "evidence": [
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/original-driver.py.txt",
+      "git_blob": "f57bff3abdd73a5253a39ef598f2416466aabaa7",
+      "sha256": "3e5af0b3dfff7199e47668d48fd2fe266ab06f24855b1437313909877d397582",
+      "bytes": 34624
+    },
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/receiver-correction.patch",
+      "git_blob": "75324f5cfe4b4cb2e125357a4872ccc317934fe0",
+      "sha256": "0a42eedc91b63d9d34e6c8317ad7e21bc22e3039a24535c798d354ebc72cf1d2",
+      "bytes": 198
+    },
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/initial-receiver-result.json",
+      "git_blob": "8e2831842e38197d3f76d32d62780c4a14a4c938",
+      "sha256": "7bb44655cc342421926aebe923d57c2780939e7fe8af73263ea890275b984238",
+      "bytes": 221
+    },
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/diagnostic-result.json",
+      "git_blob": "aa86c9bb707d44d9e837b5d317d3fc9b7e77cace",
+      "sha256": "acb9c0823badb39c4fd88d05780f1e6d62e105430febf9634b0d4172fbefbd2f",
+      "bytes": 1674
+    },
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/corrected-result.json",
+      "git_blob": "9878f4e01cee29ff2f480ce463dd52a717e9ae35",
+      "sha256": "a3b9baf4117ae52958f94aa4d1838731d6990186f64c56c8f009ff14224e9a36",
+      "bytes": 2685
+    },
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/author-native.json",
+      "git_blob": "be9abd43772420da57c8b6b72964fa63678df7eb",
+      "sha256": "830d0d8649daaae1619ce25bcde1a849d4a5df553a7191b75539aed63c04796f",
+      "bytes": 1154
+    },
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/independent-review.tar.gz",
+      "git_blob": "6965d88bed4108148709b9307f90fd8fdf7cbab0",
+      "sha256": "48da44d641b1f09adb569f05be47f3fb079990a43916b97660c9c6b18b9aec3b",
+      "bytes": 42115
+    },
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/README.md",
+      "git_blob": "daf2491b17103676f1530cc1b0ef116b2ae9c087",
+      "sha256": "e973b8b7e117cb9916640728c6632e8570b9c1bed10027177bb2e9cab3412cd0",
+      "bytes": 3270
+    },
+    {
+      "path": "docs/receiving/traffic-csv-ae0a1ea0b247/packaging-correction.json",
+      "git_blob": "f4c9533515cd0557a8a69e1e9fc89aa833d2da56",
+      "sha256": "2ded4cfb92ca0c7fedad1ed606112e97b8960886c94413a859b8f2506d39a790",
+      "bytes": 1119
+    }
+  ],
+  "qualification": "Actual execution was on execution_base. Receiving is a source-identity comparison against the later playback merge; it is not a repeated execution claim. Hosted CI and integration results are recorded separately in the native PR.",
+  "packaging_correction": "Historical receiver bytes are preserved as original-driver.py.txt; the initial whole-repository lint failure and evidence-only rename are recorded in packaging-correction.json. No product/test/workflow/lint configuration changes."
+}

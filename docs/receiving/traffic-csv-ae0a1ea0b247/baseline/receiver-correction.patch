@@ -1,0 +1,2 @@
+- report=json.loads(b.stdout);assert report['world']==world and report['status']=='options_available'
++ report=json.loads(b.stdout);assert report['world']==world and report['status']=='no_conflict'

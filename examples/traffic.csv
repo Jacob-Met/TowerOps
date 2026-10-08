@@ -1,0 +1,4 @@
+aircraft_id,x_nm,y_nm,altitude_ft,vx_nm_min,vy_nm_min,climb_ft_min
+WEST,5,0,10000,-1,0,0
+EAST,-5,0,10000,1,0,0
+HIGH,0,0,13000,0,0,0

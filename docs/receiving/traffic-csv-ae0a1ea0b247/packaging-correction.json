@@ -1,0 +1,21 @@
+{
+  "original_head": "c6d32fc8be14526a214f52251970c3681f2193ad",
+  "run": 37801657558,
+  "job": 113395139861,
+  "conclusion": "failure",
+  "scope": "Historical receiver transcript was discovered as active Python source by whole-repository Ruff. Product source and tests are unchanged.",
+  "diagnostics": [
+    "2026-10-08T15:33:01.3467279Z I001 [*] Import block is un-sorted or un-formatted",
+    "2026-10-08T15:33:01.3468395Z  --> docs/receiving/traffic-csv-ae0a1ea0b247/baseline/original-driver.py:2:1",
+    "2026-10-08T15:33:01.3673369Z F401 [*] `os` imported but unused",
+    "2026-10-08T15:33:01.3674140Z  --> docs/receiving/traffic-csv-ae0a1ea0b247/baseline/original-driver.py:2:53",
+    "2026-10-08T15:33:01.3873947Z Found 2 errors."
+  ],
+  "correction": {
+    "from": "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/original-driver.py",
+    "to": "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/original-driver.py.txt",
+    "exact_git_blob_preserved": "f57bff3abdd73a5253a39ef598f2416466aabaa7"
+  },
+  "product_and_independent_archive_unchanged": true,
+  "workflow_and_lint_configuration_unchanged": true
+}
