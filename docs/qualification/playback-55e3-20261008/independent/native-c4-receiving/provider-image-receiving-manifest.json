@@ -1,0 +1,34 @@
+{
+  "schema": "towerops.joint-native-image-readback.v1",
+  "parent_text_manifest": {
+    "path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/receiving-manifest.json",
+    "sha256": "884de02ee57403c97a4823bc0e9c6b095f54454373833ce59b32e87f18cd2ec5"
+  },
+  "files": [
+    {
+      "bytes": 432107,
+      "git_blob": "180ae7a35e9e3d338d9aae08ed874e611a5d32ad",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/baseline-desktop.png",
+      "path": "evidence/joint-v1/baseline-desktop.png",
+      "sha256": "3fe0f86abfe06652286c7ff0ed38014e66fe75114c3b9b4a6cadfd5ee5fc9adc",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/baseline-desktop.png"
+    },
+    {
+      "bytes": 431987,
+      "git_blob": "aa475cce6e49d2a70d634881eba4fb1f6d9de2a7",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-desktop.png",
+      "path": "evidence/joint-v1/candidate-desktop.png",
+      "sha256": "67595dde5b63b59c884f028568db2a4ccc3b56776af572002a29f6ccfd60f2e4",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-desktop.png"
+    },
+    {
+      "bytes": 257630,
+      "git_blob": "5bcc55a716fd4cf46ae3da0245b6319fab6176b8",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-mobile.png",
+      "path": "evidence/joint-v1/candidate-mobile.png",
+      "sha256": "c6445cae285f9f8f92ea7f68b38db6049da07ed38e4e77aeee0e5fc8b0fcac29",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-mobile.png"
+    }
+  ],
+  "boundary": "Original native PNG bytes read back through the same authorized RDC device. No image edits. Existing text receipt unchanged."
+}

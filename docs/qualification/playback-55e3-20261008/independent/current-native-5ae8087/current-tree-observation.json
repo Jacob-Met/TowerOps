@@ -1,0 +1,67 @@
+{
+  "commit": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+  "entries": [
+    {
+      "mode": "100644",
+      "path": "web/airspace/README.md",
+      "sha": "ba599a0d74a6ea586ea53bdc7cb4ee5eb0671be8",
+      "size": 2467,
+      "type": "blob"
+    },
+    {
+      "mode": "100644",
+      "path": "web/airspace/index.html",
+      "sha": "a473918c4694202460d6f2c208163bb276751f6d",
+      "size": 9968,
+      "type": "blob"
+    },
+    {
+      "mode": "100644",
+      "path": "web/airspace/package.json",
+      "sha": "836291c282e63943575c82dfaeaf653d278b48a1",
+      "size": 357,
+      "type": "blob"
+    },
+    {
+      "mode": "100644",
+      "path": "web/airspace/src/audit.ts",
+      "sha": "abb707db69d866ff762f8bc2c40fde81fc3b7d3b",
+      "size": 2397,
+      "type": "blob"
+    },
+    {
+      "mode": "100644",
+      "path": "web/airspace/src/core.ts",
+      "sha": "d2f51e37a8b8b6655831abe75b262092b6c0ade7",
+      "size": 5158,
+      "type": "blob"
+    },
+    {
+      "mode": "100644",
+      "path": "web/airspace/src/main.ts",
+      "sha": "2aabfdba1292f6db0890b2fb0b9bc8cf9e027636",
+      "size": 21887,
+      "type": "blob"
+    },
+    {
+      "mode": "100644",
+      "path": "web/airspace/src/world-tools.ts",
+      "sha": "8e308d78c19389a6881aace8d22412e93557f066",
+      "size": 4263,
+      "type": "blob"
+    },
+    {
+      "mode": "100644",
+      "path": "web/airspace/tests/python-reference.json",
+      "sha": "65b017ab362097b161ec1f7c103b55a3c42941f1",
+      "size": 14868,
+      "type": "blob"
+    }
+  ],
+  "note": "Exact relevant entry subset from the parent-received recursive tree. The product candidate overlays only main.ts; the audit update and all other captured source blobs match these native entries.",
+  "origin": "/dev/shm/estate-55e3e26c5905/towerops-native-5ae8087/tree.json",
+  "origin_sha256": "d4f90c71d8416ec5b9e22ce791f77032db32ecdd4d1d9675468b47c91746a321",
+  "repository": "Jacob-Met/TowerOps",
+  "schema": "received-current-tree-subset.v1",
+  "tree": "356e66716c8953a3c2aac8a23790ce6eeaba20d0"
+}

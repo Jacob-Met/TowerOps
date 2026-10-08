@@ -1,0 +1,45 @@
+--- f34433a5/playback-controls.test.ts
++++ 9a-current/playback-controls.test.ts
+@@ -15,12 +15,15 @@
+   id = ''; value = ''; textContent = ''; className = '';
+   disabled = false; hidden = false; readOnly = false;
+   children: unknown[] = [];
++  attributes = new Map<string, string>();
++  get options() { return this.children as ElementStub[]; }
++  setAttribute(name: string, value: string) { this.attributes.set(name, value); }
+   listeners = new Map<string, Listener[]>();
+   icon: ElementStub | null = null;
+   get valueAsNumber() { return this.value.trim() === '' ? NaN : Number(this.value); }
+   append(...nodes: unknown[]) { this.children.push(...nodes); }
+   replaceChildren(...nodes: unknown[]) { this.children = nodes; }
+-  querySelector(selector: string) { return selector === 'i' ? (this.icon ??= new ElementStub()) : null; }
++  querySelector(selector: string) { return selector === 'i' ? (this.icon ??= new ElementStub()) : selector.startsWith('#') ? node(selector.slice(1)) : null; }
+   toggleAttribute(name: string, value: boolean) { if (name === 'disabled') this.disabled = value; return value; }
+   addEventListener(kind: string, listener: Listener) { this.listeners.set(kind, [...(this.listeners.get(kind) ?? []), listener]); }
+ }
+@@ -63,7 +66,7 @@
+     element.textContent = match[2]!; element.disabled = attributes.has('disabled');
+     elements.set(element.id, element);
+   }
+-  vi.stubGlobal('document', { activeElement: null, getElementById: node, createElement: () => new ElementStub() });
++  vi.stubGlobal('document', { activeElement: null, getElementById: node, createElement: () => new ElementStub(), createElementNS: () => new ElementStub() });
+   vi.stubGlobal('window', { addEventListener: vi.fn() });
+   vi.stubGlobal('requestAnimationFrame', (callback: FrameRequestCallback) => frames.push(callback));
+   await import('../src/main');
+@@ -115,6 +118,8 @@
+     const before = world(); await dispatch('add-custom-flight');
+     expect(node('builder-feedback').textContent).toMatch(/^NOT ADDED:/);
+     expect(node('toggle-run').textContent).toBe('Run traffic');
++    expect(node('encounter-first').disabled).toBe(false);
++    expect(node('encounter-content').hidden).toBe(false);
+     await tick(1160); expect(world()).toEqual(before);
+   });
+ 
+@@ -124,6 +129,7 @@
+     await dispatch('remove-selected');
+     expect(node('builder-feedback').textContent).toBe('Keep at least one aircraft in the world.');
+     expect(node('toggle-run').textContent).toBe('Run traffic');
++    expect(node('encounter-message').textContent).toBe('Add a second flight to compare an encounter.');
+     await tick(1160); expect(world()).toEqual(before);
+   });
+ 

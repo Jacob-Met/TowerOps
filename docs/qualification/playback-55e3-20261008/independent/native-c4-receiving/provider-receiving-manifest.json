@@ -1,0 +1,321 @@
+{
+  "files": [
+    {
+      "bytes": 744,
+      "git_blob": "b0ddb31066311f198437ccf3d6e550bbef99f47f",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/baseline-browser-process.json",
+      "path": "evidence/baseline-browser-process.json",
+      "sha256": "2895d1d13b46db767805ea868382d02c6c26805769b541cf502d7e6a8df81c83",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/baseline-browser-process.json"
+    },
+    {
+      "bytes": 587,
+      "git_blob": "42f90b578d7a261fa085a2b55d7e3fc7795252f9",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/baseline-browser.log",
+      "path": "evidence/baseline-browser.log",
+      "sha256": "7992944d5f7fd83e68767c93d276c70d769f691575500fda3f77bc0a85a74097",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/baseline-browser.log"
+    },
+    {
+      "bytes": 508,
+      "git_blob": "1352565b3e231a359cb8245c702ba2dbf71919b7",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/baseline-build.log",
+      "path": "evidence/baseline-build.log",
+      "sha256": "286220f81c9eb2b6bbc1b2a55aefdf63de48f9b7b2fa07e3c15d499b27590fee",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/baseline-build.log"
+    },
+    {
+      "bytes": 91984,
+      "git_blob": "764661abbd4fb7c87dbe762f9683fd0f1b0a0926",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/baseline-desktop.json",
+      "path": "evidence/baseline-desktop.json",
+      "sha256": "13cccc31c735a18f42c45452086e940a3ac5f79debe13cce0c3db7e94d45ce3f",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/baseline-desktop.json"
+    },
+    {
+      "bytes": 351,
+      "git_blob": "1c3d5492185bcc049f9931533d5ee1f3dccbf785",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/candidate-build.log",
+      "path": "evidence/candidate-build.log",
+      "sha256": "b01e56b442631010f7d51e6f47386fca6a11e2ed06db3bb437090568fe9f12cc",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/candidate-build.log"
+    },
+    {
+      "bytes": 26051,
+      "git_blob": "b06b3111bf21e215fff569e3105656d1442762c8",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/candidate-v1/candidate-source-manifest.json",
+      "path": "evidence/candidate-v1/candidate-source-manifest.json",
+      "sha256": "881edca88215edf2e817c641d7f83db04f3231c05b392a7653679754cdea9319",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/candidate-v1/candidate-source-manifest.json"
+    },
+    {
+      "bytes": 351,
+      "git_blob": "1c3d5492185bcc049f9931533d5ee1f3dccbf785",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/candidate-v1/evidence/candidate-build.log",
+      "path": "evidence/candidate-v1/evidence/candidate-build.log",
+      "sha256": "b01e56b442631010f7d51e6f47386fca6a11e2ed06db3bb437090568fe9f12cc",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/candidate-v1/evidence/candidate-build.log"
+    },
+    {
+      "bytes": 603,
+      "git_blob": "09dccd1d5ef8c4dce29e82d614ed1c2a56759a6c",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/candidate-v1/evidence/candidate-vitest-playback.log",
+      "path": "evidence/candidate-v1/evidence/candidate-vitest-playback.log",
+      "sha256": "05fde7475d5b0aa74cd6a93f4c8d96e3b65a12ecb7c1385d80d21970787f4bb6",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/candidate-v1/evidence/candidate-vitest-playback.log"
+    },
+    {
+      "bytes": 24881,
+      "git_blob": "644bb1bbde4eb6d1e51ec6cc40efd173f8a319db",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/candidate-v1/evidence/native-candidate-build.json",
+      "path": "evidence/candidate-v1/evidence/native-candidate-build.json",
+      "sha256": "0f1f3ac950f18f9b53d7452895fcec81b210a971cbe2948ce9d03eb30c42858d",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/candidate-v1/evidence/native-candidate-build.json"
+    },
+    {
+      "bytes": 2843,
+      "git_blob": "2ea5a55e6b6171d8d66291b4ab1cf3364f20cd25",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/candidate-v1/preservation.json",
+      "path": "evidence/candidate-v1/preservation.json",
+      "sha256": "7a6d4b59d0c270e3527169ee5e93d60aac7450b1b682bad494f69e7a3241b0e1",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/candidate-v1/preservation.json"
+    },
+    {
+      "bytes": 22918,
+      "git_blob": "14fc6dda3553ab4cb2fc0e3677f704812c69f7c1",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/candidate-v1/repo/web/airspace/src/main.ts",
+      "path": "evidence/candidate-v1/repo/web/airspace/src/main.ts",
+      "sha256": "aec0e5398939e3b99cfe1e4b0cbe9ba5a63cb0df0de095a98f45aa035a4c11f9",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/candidate-v1/repo/web/airspace/src/main.ts"
+    },
+    {
+      "bytes": 9100,
+      "git_blob": "e23d6a796e7f7747d015d07d3754aa0db1cf80f6",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/candidate-v1/repo/web/airspace/tests/playback-controls.test.ts",
+      "path": "evidence/candidate-v1/repo/web/airspace/tests/playback-controls.test.ts",
+      "sha256": "46a4f0d1043845fed4e9cd148362eef491483b9e647cb88daf11b6fbd38e9133",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/candidate-v1/repo/web/airspace/tests/playback-controls.test.ts"
+    },
+    {
+      "bytes": 603,
+      "git_blob": "09dccd1d5ef8c4dce29e82d614ed1c2a56759a6c",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/candidate-vitest-playback.log",
+      "path": "evidence/candidate-vitest-playback.log",
+      "sha256": "05fde7475d5b0aa74cd6a93f4c8d96e3b65a12ecb7c1385d80d21970787f4bb6",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/candidate-vitest-playback.log"
+    },
+    {
+      "bytes": 5208,
+      "git_blob": "ea0c350ba68fa613a507858c17b7cf6f86406cb2",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/baseline-desktop-process.json",
+      "path": "evidence/joint-v1/baseline-desktop-process.json",
+      "sha256": "4f652807efdc3d9b8d07719c10d6d3c17bd25ced08e8edf86326d16395d7e749",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/baseline-desktop-process.json"
+    },
+    {
+      "bytes": 114068,
+      "git_blob": "348adc13c86e5e362f5cf61d8623a339db721ca1",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/baseline-desktop.json",
+      "path": "evidence/joint-v1/baseline-desktop.json",
+      "sha256": "91f4da79d3318e53e50f572e192e3183fcfbe4e35ca334b44d87015a2c93f12b",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/baseline-desktop.json"
+    },
+    {
+      "bytes": 621,
+      "git_blob": "7bacfca6d60ede707f7dfe592bedda37f32b93af",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/baseline-desktop.log",
+      "path": "evidence/joint-v1/baseline-desktop.log",
+      "sha256": "c201948ff68d66e521408d6f7d068cb7fa6af9790fe0c133bbefaee6da7eabdf",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/baseline-desktop.log"
+    },
+    {
+      "bytes": 508,
+      "git_blob": "6b2f956eb8c09fb529222eacff4ca6f6f6087720",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/build.log",
+      "path": "evidence/joint-v1/build.log",
+      "sha256": "6f26248b7c159cbbaf06ca4f02f85a01359ec1a5da3405fb69d366ddbbf12583",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/build.log"
+    },
+    {
+      "bytes": 4328,
+      "git_blob": "c74b66a4a5674dac88d47db6276924b339f3de8d",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-desktop-process.json",
+      "path": "evidence/joint-v1/candidate-desktop-process.json",
+      "sha256": "3bb8234c98bc2b096fe9c032d8c95621ec14ab4722f7fbc81df1b3bb2f691bf3",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-desktop-process.json"
+    },
+    {
+      "bytes": 106945,
+      "git_blob": "dd1dd343850f2746ceb2cdfc16e66507a869393c",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-desktop.json",
+      "path": "evidence/joint-v1/candidate-desktop.json",
+      "sha256": "de503be0a83ad374334428ba5b88db76c7a74f1adb1d518dcdcfcb713f11d643",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-desktop.json"
+    },
+    {
+      "bytes": 513,
+      "git_blob": "613dad3493b263fdc63d39e92fef9dd20304d916",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-desktop.log",
+      "path": "evidence/joint-v1/candidate-desktop.log",
+      "sha256": "0dfef4fc80b88804f0f224fce69a179532cc8d06089451cacc77f85d1704912a",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-desktop.log"
+    },
+    {
+      "bytes": 4278,
+      "git_blob": "a2690fe538b068361977a489918c7a146678cdb2",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-mobile-process.json",
+      "path": "evidence/joint-v1/candidate-mobile-process.json",
+      "sha256": "ea4a793cd989451f748c9f9e9820ee5146c4349ec83e9a510a58325b7fab67ef",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-mobile-process.json"
+    },
+    {
+      "bytes": 106882,
+      "git_blob": "abe7daa4bd92d752729ca1ad7d6141eb4b236ee7",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-mobile.json",
+      "path": "evidence/joint-v1/candidate-mobile.json",
+      "sha256": "825d48942a62f3e58c20ad42c9e5c16da63da16f2d5c741420ebc241a6d2bb62",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-mobile.json"
+    },
+    {
+      "bytes": 511,
+      "git_blob": "b0c76a0fbfb6e53462bb94d6627d6b87aca3d84b",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-mobile.log",
+      "path": "evidence/joint-v1/candidate-mobile.log",
+      "sha256": "0b9d66f74ea324641c7d1da928552aaa2497319029bdab54eff26a617b1784bd",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/candidate-mobile.log"
+    },
+    {
+      "bytes": 18338,
+      "git_blob": "9d11d931ea595f6a443bfc4bf338869f5c2c561e",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/native-browser-processes.json",
+      "path": "evidence/joint-v1/native-browser-processes.json",
+      "sha256": "9c23960dd1c64170dfa59e0c25bf3ec94ed4913e5984fb66b42d092d0ef288da",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/native-browser-processes.json"
+    },
+    {
+      "bytes": 29149,
+      "git_blob": "de3b66ed19459c989eab9b900a084f0a5db6cd53",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/native-build.json",
+      "path": "evidence/joint-v1/native-build.json",
+      "sha256": "53399b9539a3674a1f01077e36a38a49281537b1dcdf59d52724fcb0c2c129e7",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/native-build.json"
+    },
+    {
+      "bytes": 602,
+      "git_blob": "7c4b442f9c01436617679f3cf2b854c1fa0b6673",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/vitest-playback.log",
+      "path": "evidence/joint-v1/vitest-playback.log",
+      "sha256": "811dc5bb8c440d99b59de165c752032b3a782051383189e3c96532c6f887e37b",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/joint-v1/vitest-playback.log"
+    },
+    {
+      "bytes": 22824,
+      "git_blob": "6354aa9012db7f7fc58420cc1a03eb7b27d91373",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/native-baseline-build.json",
+      "path": "evidence/native-baseline-build.json",
+      "sha256": "157b32c0e55ebc9f95b0e7513f23000abb794ddfbdbabba926ec06e014f09b51",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/native-baseline-build.json"
+    },
+    {
+      "bytes": 24881,
+      "git_blob": "644bb1bbde4eb6d1e51ec6cc40efd173f8a319db",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/native-candidate-build.json",
+      "path": "evidence/native-candidate-build.json",
+      "sha256": "0f1f3ac950f18f9b53d7452895fcec81b210a971cbe2948ce9d03eb30c42858d",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/native-candidate-build.json"
+    },
+    {
+      "bytes": 12865,
+      "git_blob": "918fbb1d7e28317ae97f36e7d0a361567df4f51a",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/source-stage-receipt.json",
+      "path": "evidence/source-stage-receipt.json",
+      "sha256": "db56151061d79579cc289768f37c9d4657d94e103c180f09604aff81df7edc91",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/evidence/source-stage-receipt.json"
+    },
+    {
+      "bytes": 35693,
+      "git_blob": "aa6d5d6d73efe3ef06bdd668cdcc8186c17a2348",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/source-manifest.json",
+      "path": "source-manifest.json",
+      "sha256": "a62c3ce636e794d1b2da7e9873eb8051b0bb5a8c6b967164d148e63f534aee0b",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/source-manifest.json"
+    },
+    {
+      "bytes": 26051,
+      "git_blob": "b06b3111bf21e215fff569e3105656d1442762c8",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/candidate-source-manifest.json",
+      "path": "candidate-source-manifest.json",
+      "sha256": "881edca88215edf2e817c641d7f83db04f3231c05b392a7653679754cdea9319",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/candidate-source-manifest.json"
+    },
+    {
+      "bytes": 27375,
+      "git_blob": "27efb05c659a02ca54142b102eb2c5bf37c3906c",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/joint-candidate-source-manifest.json",
+      "path": "joint-candidate-source-manifest.json",
+      "sha256": "e3eac6eb1d4900885f021aa924c1ada91e6e891d57be8293f83703ff5e28aea9",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/joint-candidate-source-manifest.json"
+    },
+    {
+      "bytes": 22759,
+      "git_blob": "14377e50f1e24acd0ff6476c12c272e88e88abaa",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/receiving-browser.mjs",
+      "path": "receiving-browser.mjs",
+      "sha256": "2bb8ad31a537bef13a7bcc21630eddedbf8ab7156bbdcd7edb1f60278126f610",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/receiving-browser.mjs"
+    },
+    {
+      "bytes": 25299,
+      "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/receiving-browser-joint.mjs",
+      "path": "receiving-browser-joint.mjs",
+      "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/receiving-browser-joint.mjs"
+    },
+    {
+      "bytes": 5120,
+      "git_blob": "d8d1f50fd2dd63a65ed4dbb6b73f5ec954da964d",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/run-joint-browser.py",
+      "path": "run-joint-browser.py",
+      "sha256": "1489be6b6864cf4950b408e2ec536c719d34ed65bf3445ada767df9599959f21",
+      "local_path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/run-joint-browser.py"
+    }
+  ],
+  "images_preserved_on_native_host": [
+    {
+      "bytes": 418999,
+      "git_blob": "e3e4f3d13c2c3d8994e54c3aa521bd9e19e48c3e",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/baseline-desktop.png",
+      "path": "evidence/baseline-desktop.png",
+      "sha256": "71323c9fbd02aed4a03c96327b6a6bd8ec961dbbb3dfe8fca8653028b5c80e3b"
+    },
+    {
+      "bytes": 432107,
+      "git_blob": "180ae7a35e9e3d338d9aae08ed874e611a5d32ad",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/baseline-desktop.png",
+      "path": "evidence/joint-v1/baseline-desktop.png",
+      "sha256": "3fe0f86abfe06652286c7ff0ed38014e66fe75114c3b9b4a6cadfd5ee5fc9adc"
+    },
+    {
+      "bytes": 431987,
+      "git_blob": "aa475cce6e49d2a70d634881eba4fb1f6d9de2a7",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-desktop.png",
+      "path": "evidence/joint-v1/candidate-desktop.png",
+      "sha256": "67595dde5b63b59c884f028568db2a4ccc3b56776af572002a29f6ccfd60f2e4"
+    },
+    {
+      "bytes": 257630,
+      "git_blob": "5bcc55a716fd4cf46ae3da0245b6319fab6176b8",
+      "native_path": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a/evidence/joint-v1/candidate-mobile.png",
+      "path": "evidence/joint-v1/candidate-mobile.png",
+      "sha256": "c6445cae285f9f8f92ea7f68b38db6049da07ed38e4e77aeee0e5fc8b0fcac29"
+    }
+  ],
+  "root": "/tmp/towerops-playback-55e3-ypg8xw8q/current-9a",
+  "schema": "towerops.current9a-native-receiving-text.v1",
+  "archive": {
+    "path": "/dev/shm/estate-55e3e26c5905/estate-production/towerops-receiving/current9a-native/receiving-text.json.gz",
+    "bytes": 218642,
+    "sha256": "9a8251cd3626c2c6e413f1a5d9a3d7aea95381c98901b75d2151700cab31a2a0"
+  }
+}

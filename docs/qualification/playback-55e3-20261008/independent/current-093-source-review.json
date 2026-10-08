@@ -1,0 +1,141 @@
+{
+  "schema": "towerops.independent-093-source-review.v1",
+  "at_utc": "2026-10-08T14:20:11.640273+00:00",
+  "native_base_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+  "native_tree": "4a87643d57cabf81e570b21c119f00b43f79448e",
+  "manifests": {
+    "source-manifest.json": {
+      "manifest": {
+        "bytes": 33268,
+        "sha256": "4a695377d3d974fe2643b550442ee5459eaf162af1fe972e97e883abc3cfb106",
+        "git_blob": "aaad4132ae0dd02d4d0baf6102d39953747651fb"
+      },
+      "file_count": 59,
+      "total_bytes": 973677,
+      "verified_entries_sha256": "20e58736b2cc2895c1c3baecf0570252ee5e6ef5f46bf3db1f6c47c4afaed691"
+    },
+    "candidate-source-manifest.json": {
+      "manifest": {
+        "bytes": 31285,
+        "sha256": "bd65ceeabbf436b1ba620fbaa1202242dc95dca144e5f2ed189788e45c01202d",
+        "git_blob": "285140afc6b9dc559b80c547df6a789c93cc020e"
+      },
+      "file_count": 60,
+      "total_bytes": 983138,
+      "verified_entries_sha256": "7eb4fb728198d1d0d1fa39466ed69cb0f023675414ce3fc460354513ea0557a0"
+    }
+  },
+  "native_tree_receipt": {
+    "bytes": 91412,
+    "sha256": "5fd498c495c25b6cdd70d5ce10a9fad1c97e07b97a48bec41f7c8dcdd0c2c839",
+    "git_blob": "a29557603ddc4367edd5a3ecd2b63436ae836a3b"
+  },
+  "composition_receipt": {
+    "bytes": 2713,
+    "sha256": "3cd0f78f4954984819a902390b4ad41227dd84f9b58771a6f3da488e81495abd",
+    "git_blob": "c418dc088a6722ccd7d677e25e97d170ac972864"
+  },
+  "native_main": {
+    "bytes": 26212,
+    "sha256": "423fb8abb2601136f709cec347b5bf066f9553ab49a53c7541351061277e5ce6",
+    "git_blob": "e29d9ea54665e0c93e2baa66e45fa08e12b52203"
+  },
+  "candidate_main": {
+    "bytes": 26601,
+    "sha256": "0893cae0bedbe7e7516b92c0f55eb01a0d6c09289dac3ed14d6f4da153b3b0dd",
+    "git_blob": "3c29b72c944df2c38a5a5fc6104aea6809bdca55"
+  },
+  "unchanged_playback_test": {
+    "bytes": 9072,
+    "sha256": "fbe02527200a428fae18c6d45b09ef942b9dcfd411d7e8a8bf11c30d5e74a845",
+    "git_blob": "de7a02cd88f69bf8192516cb1acf7aa6eb276853"
+  },
+  "source_closure": {
+    "all_manifest_native_bytes_and_modes_match_current_tree": true,
+    "all_current_airspace_leaves_included": 44,
+    "candidate_changed": [
+      "web/airspace/src/main.ts"
+    ],
+    "candidate_added": [
+      "web/airspace/tests/playback-controls.test.ts"
+    ],
+    "candidate_removed": [],
+    "unowned_current_manifest_files_preserved": true
+  },
+  "inverse_proofs": {
+    "remove_five_native_insertions_from093_recovers_exact8d": true,
+    "remove_five_native_insertions_from_candidate_recovers_exact803": true,
+    "remove_qualified_playback_Reset_changes_recovers_exact093": true,
+    "add_native_insertions_to803_recovers_exact_candidate": true,
+    "whole_native_review_choose_handler_block_preserved": true,
+    "whole_C4_Reset_preserved": true,
+    "pause_helper_and_existing_call_points_preserved": true
+  },
+  "patches": {
+    "native-alternatives-on-8d.patch": {
+      "pin": {
+        "bytes": 6713,
+        "sha256": "a683017c4a5f49d069f28dc63fb66272e7f139bfaaae923577b5d83f93d73cf1",
+        "git_blob": "2ac8c5ae89d1aff98c979094e048b1b5024e7919"
+      },
+      "exact_source_diff": true
+    },
+    "qualified-playback-on-current.patch": {
+      "pin": {
+        "bytes": 13647,
+        "sha256": "84965f79657bd295bd9e4c6c83805a319c9ff7743027ebe3bfc3368825d36b99",
+        "git_blob": "b333f04ce8dcd14804c469bb7f004c37e30d4c42"
+      },
+      "exact_source_diff": true
+    },
+    "native-alternatives-on-qualified803.patch": {
+      "pin": {
+        "bytes": 6691,
+        "sha256": "8cef4366f42104d8e2438883c311e37f35ac5c46c43582ecdfaf1e53ba224fa1",
+        "git_blob": "c9cfcff274e8eb7bd5ad6f85ff7c1110bcdcc2d9"
+      },
+      "exact_source_diff": true
+    }
+  },
+  "consumer_review": {
+    "new_html_ids": [
+      "advisory-flight-filter",
+      "advisory-options-count",
+      "advisory-options-list",
+      "advisory-options-next",
+      "advisory-options-page",
+      "advisory-options-previous",
+      "advisory-options-status",
+      "advisory-review",
+      "advisory-review-title",
+      "close-options",
+      "review-options"
+    ],
+    "prior_html_ids_preserved": true,
+    "duplicate_html_ids": false,
+    "application_raf_occurrences": {
+      "web/airspace/src/main.ts": 2
+    },
+    "frame_and_manual_toggle_unchanged": true,
+    "panel_state_boundary": "AdvisoryReviewPanel receives review, status, selected proposal and busy/track-edit blocking, not running. A refusal that changes only playback state does not require another panel update. Native review/choose pause-label-render behavior is byte-preserved.",
+    "test_DOM_boundary": "The initial null review uses the existing ID lookup, text, disabled and replaceChildren operations supported by the unchanged fbe test double. new Option, selected-option events and focus belong to unexercised alternatives flows. No test assertion, fake, case or product source was changed.",
+    "build_boundary": "Current closure includes advisory_options.py, its native Python/test/browser inputs, advisory-options/advisory-review TypeScript and tests, and actual prepare-python, worker, workflow, HTML and CSS. No alternative Python request is made by the four playback browser cases."
+  },
+  "driver": {
+    "bytes": 25299,
+    "sha256": "f1162d6d417327de3a8959e394541c27ab6f9f04aa3ee773c4958e286c4de941",
+    "git_blob": "f89563a1b4cf8736c9c4ee61a96202f2120b6f49"
+  },
+  "receiving_limits": [
+    "Unchanged f116 obtains the actual WorldState by explicit native Export; this deliberately replaces editor content and clears the existing draft flag. Its four playback cases do not qualify typed draft persistence or advisory alternatives.",
+    "Load JSON/native-shape parsing precedes draft-flag clearing, pause and state assignment; rejection by those parsers occurs before those mutations. No rollback guarantee for later exceptions is claimed.",
+    "New Review alternatives button changes layout; actual current desktop/mobile rendering remains a native browser receiving gate.",
+    "Historical C4 native/browser results and the producer-reported 803 native 134-test/build pass remain tied to their original cuts. The 803 browser launcher transfer produced no browser result.",
+    "This reviewer performed source/hash/inverse checks only. No new product runtime test count, deployment, planner/advisory flow or operational airspace claim."
+  ],
+  "storage_limit": "The prior independent 8d receipt write hit ENOSPC and its zero-byte manifest copy remains unqualified. The completed 8d review has since been saved without rerunning it. No copied source closures were created for this review.",
+  "result": "accepted_source_only_current_native_execution_pending",
+  "proposed_repo_path": "docs/qualification/playback-55e3-20261008/independent/current-093-source-review.json",
+  "method": "Read-only byte, SHA256 and Git blob/mode verification; source-derived removal and insertion of five native blocks; removal of the qualified helper, seven prior pause points and Reset delta; whole-file equality and exact regenerated unified diffs. No product code was executed.",
+  "verified_entries_digest_definition": "SHA256 of JSON for the manifest-ordered actual {path,bytes,sha256,git_blob} entries, using sorted keys and separators(',',':')."
+}

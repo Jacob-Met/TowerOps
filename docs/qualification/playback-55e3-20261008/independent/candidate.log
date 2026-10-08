@@ -1,0 +1,14 @@
+PASS native_rate_input_changes_actual_world_progression
+PASS manual_pause_and_resume_preserve_world_and_discard_paused_wall_time
+PASS reset_restores_unit_progression_from_3_paused
+PASS reset_restores_unit_progression_from_0.5_running
+PASS add_traffic_automatic_pause_updates_control_and_preserves_rate
+PASS perturb_track_automatic_pause_updates_control_and_preserves_rate
+PASS policy_change_automatic_pause_updates_control_and_preserves_rate
+PASS planner_pending_and_rejected_bridge_keep_pause_control_truthful
+PASS last_aircraft_removal_refusal_still_reports_paused_state
+PASS duplicate_flight_refusal_still_reports_paused_state
+{"passed":10,"failed":0,"sources_unchanged":true,"report":"/dev/shm/hamon-memory-capability-55e3e26c5905/towerops-playback-review/candidate-report.json"}
+(node:13) ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13) ExperimentalWarning: VM Modules is an experimental feature and might change at any time

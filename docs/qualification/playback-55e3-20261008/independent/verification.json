@@ -1,0 +1,53 @@
+{
+  "baseline_commit": "09b96e31d2867af5b7a9738406d0431cf1010090",
+  "baseline_main_sha256": "e712557df83d2159d8c496393e982de28dc7258be1beeefb7d3d4da0664b8d9f",
+  "baseline_tree": "4d22827647c0b2e37d11921aa5273f7a358bcdde",
+  "historical_harness_correction": "Initial eight-control harness used state.observed_at=1000 instead of native fixture.now=1002. Its driver/report/log are retained; final baseline corrects that assumption and adds two refusal controls before any candidate.",
+  "limits": [
+    "Exact captured native TypeScript runtime values execute via Node syntax stripping and VM modules with the documented small DOM, canvas and bridge boundaries.",
+    "No real browser, native TypeScript type-check, Vite/Vitest run, Pyodide planner, gate/apply, selected-track-edit behavior, deployment or operational-airspace claim.",
+    "Failed-load supplement covers malformed JSON and native-shape refusal while running/paused; it is not a broader scenario validation assessment.",
+    "Selected-edit code and frame/event bindings are byte-preserved; the native track-edit dependency was unavailable and is not executed.",
+    "The source identity is a private candidate over the captured upstream pair, not a newly fetched GitHub head or deployed source.",
+    "The product owner separately authored native test integration; its execution is outside this independent report."
+  ],
+  "main_controls_frozen_before_candidate": true,
+  "qualified_candidate_main_sha256": "c5867cb7c293eb3f5f104b5f3a0e5d2c94a5b8bb42be833bd2f7df42085ac312",
+  "results": {
+    "baseline-failed-load-report.json": {
+      "driver_sha256": "b98e79a7337ae5d3096a5f18c7732db0d47d5d88cb4b96b9191d96c91d2cf20d",
+      "failed": 0,
+      "passed": 1,
+      "sha256": "e3e39299a0bce8a7e484776acb803ef453fa86cdcbd27a982494f5bb8d574c5c",
+      "source_manifest_sha256": "843117f2e9e8b9a26d1add208e28a96daf61eb1524b9ddcd20fc8a5bf939aed3",
+      "sources_unchanged": true
+    },
+    "baseline-report.json": {
+      "driver_sha256": "7803c72ba02684290b8bd93fb2ee7c2052a1201b222d8a28d59c11c47f3c501b",
+      "failed": 8,
+      "passed": 2,
+      "sha256": "282c55bcf538c80ecf28da5daee8685994cef818a148a1ff157a58b432d9a249",
+      "source_manifest_sha256": "843117f2e9e8b9a26d1add208e28a96daf61eb1524b9ddcd20fc8a5bf939aed3",
+      "sources_unchanged": true
+    },
+    "candidate-failed-load-report.json": {
+      "driver_sha256": "b98e79a7337ae5d3096a5f18c7732db0d47d5d88cb4b96b9191d96c91d2cf20d",
+      "failed": 0,
+      "passed": 1,
+      "sha256": "38bd0cd2ee055db5a32d64f8cec2cb84efe46235537bb7842bd3142bbd1dea28",
+      "source_manifest_sha256": "1a7e82d2fffbce9670f02bf39ff5c7944960bc34e5de6a5512fc62131c046d40",
+      "sources_unchanged": true
+    },
+    "candidate-report.json": {
+      "driver_sha256": "7803c72ba02684290b8bd93fb2ee7c2052a1201b222d8a28d59c11c47f3c501b",
+      "failed": 0,
+      "passed": 10,
+      "sha256": "6771eca8224a014aba6d1ca1b7f9d549e81b20430cfba324f599cba51b5d89e1",
+      "source_manifest_sha256": "1a7e82d2fffbce9670f02bf39ff5c7944960bc34e5de6a5512fc62131c046d40",
+      "sources_unchanged": true
+    }
+  },
+  "schema": "independent-towerops-playback-qualification.v1",
+  "source_review_sha256": "975420b1d84a01b7dbc28be888a81f94fa6e75640ea396c8ccd264c69c1c79d1",
+  "supplemental_control_authored_after_candidate": true
+}

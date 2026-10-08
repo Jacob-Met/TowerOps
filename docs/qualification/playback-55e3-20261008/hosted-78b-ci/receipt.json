@@ -1,0 +1,94 @@
+{
+  "schema": "towerops.hosted-current-composition.v1",
+  "observed_at_utc": "2026-10-08 14:30:35 UTC",
+  "head": "78b4f2f94492de220e0a1ce18bd5621908a6caa9",
+  "executed_merge": "8a1440b9a13c0050f68acdf505cad241e895f7a2",
+  "tree": "f1b78f00aff2bd3f3cafa1c7df5d8bf014d3e404",
+  "parents": [
+    "093f88b29d6e1ede778f967528c7e010b7689ab1",
+    "78b4f2f94492de220e0a1ce18bd5621908a6caa9"
+  ],
+  "source_preflight": {
+    "tree": "f1b78f00aff2bd3f3cafa1c7df5d8bf014d3e404",
+    "base": "093f88b29d6e1ede778f967528c7e010b7689ab1",
+    "baseTree": "4a87643d57cabf81e570b21c119f00b43f79448e",
+    "ownedExact": 158,
+    "unownedExact": 247,
+    "leaves": 405,
+    "unexpected": 0
+  },
+  "workflow_runs": [
+    {
+      "id": 37791731786,
+      "name": "TowerOps Airspace Lab",
+      "event": "pull_request",
+      "conclusion": "success"
+    },
+    {
+      "id": 37791731787,
+      "name": "ci",
+      "event": "pull_request",
+      "conclusion": "success"
+    }
+  ],
+  "results": {
+    "vitest": {
+      "files": 11,
+      "passed": 147
+    },
+    "python": {
+      "passed": 120
+    },
+    "python_reference_scenarios": 4,
+    "normal_build": "passed",
+    "browser_python_check": "passed",
+    "browser_capture": "passed",
+    "saved_decision_traces": "passed",
+    "ruff": "passed",
+    "strands_adapter_import": "passed",
+    "pages_artifact_upload": "passed",
+    "deploy": "skipped because pull_request"
+  },
+  "logs": [
+    {
+      "path": "/dev/shm/estate-55e3e26c5905/towerops-hosted-78b/ci-113360603760.log",
+      "bytes": 62788,
+      "git_blob": "ea00c5907f32a8a3f8905f01dccc7506aedd4855",
+      "sha256": "96954ff342473a267c14e5b46c235bd5301edd9dbda8499754ea2749e765d5e1",
+      "job_id": 113360603760,
+      "name": "build",
+      "conclusion": "success"
+    },
+    {
+      "path": "/dev/shm/estate-55e3e26c5905/towerops-hosted-78b/ci-113360602707.log",
+      "bytes": 17001,
+      "git_blob": "524a990da36d62b7ecd7511b390b2891b9859088",
+      "sha256": "12bab4acee267f1679e7b3b62a1a5247e66cf92f2b9d86b36337790cb26c541e",
+      "job_id": 113360602707,
+      "name": "test",
+      "conclusion": "success"
+    },
+    {
+      "path": "/dev/shm/estate-55e3e26c5905/towerops-hosted-78b/ci-113360603171.log",
+      "bytes": 16755,
+      "git_blob": "8bf4aaaf7b43b407f0d320059f2c141f3d71a52e",
+      "sha256": "534bf2ac577d0852d682ef535e219dd77b2be23b0d5ba3986526aabc42dc6007",
+      "job_id": 113360603171,
+      "name": "lint",
+      "conclusion": "success"
+    },
+    {
+      "path": "/dev/shm/estate-55e3e26c5905/towerops-hosted-78b/ci-113360603484.log",
+      "bytes": 16887,
+      "git_blob": "0265105f5985bc227602306c80343b1d2f68ad12",
+      "sha256": "0d3134c0600280b1d73cdbf18616f906e7fed9f9b4371a6845b6e13e9e35ae94",
+      "job_id": 113360603484,
+      "name": "strands-adapter",
+      "conclusion": "success"
+    }
+  ],
+  "limitations": [
+    "CI executed the exact reported synthetic merge tree, not a deployment.",
+    "These results remain bound to head78b and its runtime source; later evidence-only commits require exact source preservation and their own applicable checks."
+  ]
+}

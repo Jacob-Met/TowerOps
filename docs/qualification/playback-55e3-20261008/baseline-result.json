@@ -1,0 +1,785 @@
+{
+  "schema": "towerops.playback.controlled-replay.v1",
+  "nativeRoot": "/dev/shm/estate-55e3e26c5905/research-frontier/towerops-playback-baseline/repo/web/airspace",
+  "runtime": "v24.19.0",
+  "command": "node --experimental-vm-modules playback-baseline.mjs [airspace-root] [result-json]",
+  "qualification": "Exact main/core/world-tools/audit and reference JSON, Node type erasure, controlled DOM/events/RAF. No real browser, Canvas rendering, Pyodide, build or deployment.",
+  "sourceBefore": {
+    "src/main.ts": "e712557df83d2159d8c496393e982de28dc7258be1beeefb7d3d4da0664b8d9f",
+    "src/core.ts": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+    "src/world-tools.ts": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+    "src/audit.ts": "a3ec4bb0c29fcfa52475ab50772b44fc17746722ad9c7ac9d94ea2908705d787",
+    "tests/python-reference.json": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+    "index.html": "aada9ddb9f7ca77b954026402000e33ec3209e9de953d2173db1e27efa1e3d0b"
+  },
+  "sourceAfter": {
+    "src/main.ts": "e712557df83d2159d8c496393e982de28dc7258be1beeefb7d3d4da0664b8d9f",
+    "src/core.ts": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+    "src/world-tools.ts": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+    "src/audit.ts": "a3ec4bb0c29fcfa52475ab50772b44fc17746722ad9c7ac9d94ea2908705d787",
+    "tests/python-reference.json": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+    "index.html": "aada9ddb9f7ca77b954026402000e33ec3209e9de953d2173db1e27efa1e3d0b"
+  },
+  "passed": 2,
+  "failed": 8,
+  "cases": [
+    {
+      "name": "fresh_run_advances_at_native_default_rate",
+      "pass": true,
+      "observation": {
+        "initial": {
+          "state": {
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -5,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 5,
+                "y_nm": 0
+              }
+            ],
+            "observed_at": 1000,
+            "version": 1
+          },
+          "rateLabel": "1.0x",
+          "slider": "1",
+          "runLabel": "Run traffic",
+          "clock": "T+0 SEC"
+        },
+        "after": {
+          "state": {
+            "version": 3,
+            "observed_at": 1006.8,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.92,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.92,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "1.0x",
+          "slider": "1",
+          "runLabel": "Pause traffic",
+          "clock": "T+4 SEC"
+        },
+        "deltaSeconds": 4.7999999999999545,
+        "deltaNm": 0.08000000000000007
+      }
+    },
+    {
+      "name": "reset_restores_slider_label_and_actual_default_rate",
+      "pass": false,
+      "error": "Error: reset must restore engine rate, label and slider together",
+      "observation": {
+        "beforeReset": {
+          "state": {
+            "version": 3,
+            "observed_at": 1016.4,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.76,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.76,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "3.0x",
+          "slider": "3",
+          "runLabel": "Pause traffic",
+          "clock": "T+14 SEC"
+        },
+        "reset": {
+          "state": {
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -5,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 5,
+                "y_nm": 0
+              }
+            ],
+            "observed_at": 1000,
+            "version": 1
+          },
+          "rateLabel": "3.0x",
+          "slider": "1",
+          "runLabel": "Run traffic",
+          "clock": "T+0 SEC"
+        },
+        "after": {
+          "state": {
+            "version": 3,
+            "observed_at": 1016.4,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.76,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.76,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "3.0x",
+          "slider": "1",
+          "runLabel": "Pause traffic",
+          "clock": "T+14 SEC"
+        },
+        "deltaSeconds": 14.399999999999977,
+        "deltaNm": 0.2400000000000002
+      }
+    },
+    {
+      "name": "automatic_pause_add-traffic",
+      "pass": false,
+      "error": "Error: automatic pause must expose Run traffic and hold the world",
+      "observation": {
+        "paused": {
+          "state": {
+            "version": 4,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR820",
+                "x_nm": 0,
+                "y_nm": -5,
+                "altitude_ft": 10000,
+                "vx_nm_min": 0,
+                "vy_nm_min": 1,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "held": {
+          "state": {
+            "version": 4,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR820",
+                "x_nm": 0,
+                "y_nm": -5,
+                "altitude_ft": 10000,
+                "vx_nm_min": 0,
+                "vy_nm_min": 1,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "unexpected": []
+      }
+    },
+    {
+      "name": "automatic_pause_perturb-track",
+      "pass": false,
+      "error": "Error: automatic pause must expose Run traffic and hold the world",
+      "observation": {
+        "paused": {
+          "state": {
+            "version": 4,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -0.6,
+                "vy_nm_min": 0.3,
+                "x_nm": 4.84,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "held": {
+          "state": {
+            "version": 4,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -0.6,
+                "vy_nm_min": 0.3,
+                "x_nm": 4.84,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "unexpected": []
+      }
+    },
+    {
+      "name": "automatic_pause_policy-horizontal",
+      "pass": false,
+      "error": "Error: automatic pause must expose Run traffic and hold the world",
+      "observation": {
+        "paused": {
+          "state": {
+            "version": 3,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.84,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "held": {
+          "state": {
+            "version": 3,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.84,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "unexpected": []
+      }
+    },
+    {
+      "name": "automatic_pause_add-custom-flight",
+      "pass": false,
+      "error": "Error: automatic pause must expose Run traffic and hold the world",
+      "observation": {
+        "paused": {
+          "state": {
+            "version": 4,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR820",
+                "x_nm": 0,
+                "y_nm": -8,
+                "altitude_ft": 10000,
+                "vx_nm_min": 0,
+                "vy_nm_min": 2,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "held": {
+          "state": {
+            "version": 4,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.84,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR820",
+                "x_nm": 0,
+                "y_nm": -8,
+                "altitude_ft": 10000,
+                "vx_nm_min": 0,
+                "vy_nm_min": 2,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "unexpected": []
+      }
+    },
+    {
+      "name": "automatic_pause_remove-selected",
+      "pass": false,
+      "error": "Error: automatic pause must expose Run traffic and hold the world",
+      "observation": {
+        "paused": {
+          "state": {
+            "version": 4,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "held": {
+          "state": {
+            "version": 4,
+            "observed_at": 1011.6,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.84,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+9 SEC"
+        },
+        "unexpected": []
+      }
+    },
+    {
+      "name": "automatic_pause_load-world",
+      "pass": false,
+      "error": "Error: automatic pause must expose Run traffic and hold the world",
+      "observation": {
+        "paused": {
+          "state": {
+            "version": 1,
+            "observed_at": 1000,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "x_nm": -5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "x_nm": 5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+0 SEC"
+        },
+        "held": {
+          "state": {
+            "version": 1,
+            "observed_at": 1000,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "x_nm": -5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "x_nm": 5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "rateLabel": "2.0x",
+          "slider": "2",
+          "runLabel": "Pause traffic",
+          "clock": "T+0 SEC"
+        },
+        "unexpected": []
+      }
+    },
+    {
+      "name": "failed_flight_validation_still_displays_actual_paused_state",
+      "pass": false,
+      "error": "Error: validation refusal must not leave a stale Pause traffic button",
+      "observation": {
+        "paused": {
+          "state": {
+            "version": 3,
+            "observed_at": 1006.8,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.92,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.92,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "1.0x",
+          "slider": "1",
+          "runLabel": "Pause traffic",
+          "clock": "T+4 SEC"
+        },
+        "held": {
+          "state": {
+            "version": 3,
+            "observed_at": 1006.8,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.92,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.92,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "1.0x",
+          "slider": "1",
+          "runLabel": "Pause traffic",
+          "clock": "T+4 SEC"
+        },
+        "feedback": "NOT ADDED: Every flight field must be a finite number."
+      }
+    },
+    {
+      "name": "manual_pause_resume_preserves_selected_rate_and_ignores_paused_gap",
+      "pass": true,
+      "observation": {
+        "paused": {
+          "state": {
+            "version": 3,
+            "observed_at": 1004.4,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.96,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.96,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "0.5x",
+          "slider": "0.5",
+          "runLabel": "Run traffic",
+          "clock": "T+2 SEC"
+        },
+        "held": {
+          "state": {
+            "version": 3,
+            "observed_at": 1004.4,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.96,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.96,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "0.5x",
+          "slider": "0.5",
+          "runLabel": "Run traffic",
+          "clock": "T+2 SEC"
+        },
+        "resumed": {
+          "state": {
+            "version": 5,
+            "observed_at": 1006.8,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -4.92,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 4.92,
+                "y_nm": 0
+              }
+            ]
+          },
+          "rateLabel": "0.5x",
+          "slider": "0.5",
+          "runLabel": "Pause traffic",
+          "clock": "T+4 SEC"
+        },
+        "deltaSeconds": 2.3999999999999773
+      }
+    }
+  ]
+}

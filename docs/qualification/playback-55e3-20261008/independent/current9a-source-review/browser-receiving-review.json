@@ -1,0 +1,30 @@
+{
+  "accepted_input_delta": "Bounded native Backspace and Delete events clear both sides of the existing caret; exact empty-value assertion remains. No DOM value assignment, clipboard, or baseline-admission change.",
+  "current_browser_driver_sha256": "2bb8ad31a537bef13a7bcc21630eddedbf8ab7156bbdcd7edb1f60278126f610",
+  "current_browser_execution_pending": true,
+  "current_encounter_delta": "Actual native hidden/time-disabled/message/source-version fields are observed. Reset and paused candidate/policy paths must expose the current paused forecast. Refused-flight baseline must positively match the exact hidden/disabled running panel with the original fixture source version; only its two specified forecast/source failures join the existing known label failure.",
+  "historical_attempt": {
+    "driver_sha256": "32ceece05135ae23dbf6442b2c3755da0a1602e85d7408328b9118b23d43ce93",
+    "exact_error": "'12' !== '' at the empty-field precondition",
+    "exit_code": 1,
+    "expected_baseline_admission_reached": false,
+    "historical_npm_ci_and_build_exit_codes": [
+      0,
+      0
+    ],
+    "native_build_receipt_sha256": "117c9bd036188c9c9f853bea6c2ae98dc100b73bed5438f59f773f01397f3536",
+    "not_a_complete_browser_baseline": true,
+    "page_exceptions": 0,
+    "process_sha256": "4f6fcaab0cc4e278c2c85d1885671b28f0d079cffd80045afc80dbeb157c826d",
+    "report_sha256": "04487b1c8f8cb324c9a282384228ed87d94710cd874b394db38b4663207bef62",
+    "served_build_files_unchanged": 13,
+    "source_commit": "5ae808749c8624d9e267d23997beaa3ae5220dbc",
+    "source_files_bound_across_stage_build_browser": 41,
+    "source_stage_receipt_sha256": "71bafad69adca330f8b09b8ac522ff50824de7a5d3f85219ce816e2c3914dbc0",
+    "timed_out": false
+  },
+  "incomplete_copy_note": "An earlier RAM-full copy attempt was not admitted as evidence. The complete current driver in this packet was freshly read and SHA256 verified from its frozen owner source.",
+  "input_repair_sha256": "d5eb8acf4dd7cf61b7469dfde3f76cf007e962b131ba12eaca81f3c5f9f1a753",
+  "review": "Source/delta review and receiving of the historical failed attempt; no browser execution by this reviewer.",
+  "schema": "independent-towerops-native-browser-receiving-review.v1"
+}

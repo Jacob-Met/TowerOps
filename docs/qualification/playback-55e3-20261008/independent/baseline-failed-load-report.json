@@ -1,0 +1,451 @@
+{
+  "schema": "independent-towerops-failed-load-boundary.v1",
+  "label": "baseline-failed-load-boundary",
+  "upstream_commit": "09b96e31d2867af5b7a9738406d0431cf1010090",
+  "upstream_tree": "4d22827647c0b2e37d11921aa5273f7a358bcdde",
+  "app": "/workspace/scratch/55e3e26c5905/towerops-playback-independent/baseline",
+  "runtime": {
+    "node": "v24.19.0",
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "exec_arguments": [
+      "--experimental-vm-modules"
+    ]
+  },
+  "driver_sha256": "b98e79a7337ae5d3096a5f18c7732db0d47d5d88cb4b96b9191d96c91d2cf20d",
+  "source_manifest_sha256": "843117f2e9e8b9a26d1add208e28a96daf61eb1524b9ddcd20fc8a5bf939aed3",
+  "sources": {
+    "README.md": {
+      "bytes": 2467,
+      "sha256": "ad1502b77c1854b182d1b676eba510ca81155a8cdc8276d746142a700f19ea17"
+    },
+    "index.html": {
+      "bytes": 9968,
+      "sha256": "aada9ddb9f7ca77b954026402000e33ec3209e9de953d2173db1e27efa1e3d0b"
+    },
+    "package.json": {
+      "bytes": 357,
+      "sha256": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd"
+    },
+    "src/audit.ts": {
+      "bytes": 1193,
+      "sha256": "a3ec4bb0c29fcfa52475ab50772b44fc17746722ad9c7ac9d94ea2908705d787"
+    },
+    "src/core.ts": {
+      "bytes": 5158,
+      "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac"
+    },
+    "src/main.ts": {
+      "bytes": 21887,
+      "sha256": "e712557df83d2159d8c496393e982de28dc7258be1beeefb7d3d4da0664b8d9f"
+    },
+    "src/world-tools.ts": {
+      "bytes": 4263,
+      "sha256": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115"
+    },
+    "tests/python-reference.json": {
+      "bytes": 14868,
+      "sha256": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2"
+    }
+  },
+  "sources_unchanged": true,
+  "used_sources": [
+    "index.html",
+    "src/audit.ts",
+    "src/core.ts",
+    "src/main.ts",
+    "src/world-tools.ts",
+    "tests/python-reference.json"
+  ],
+  "transformed_sha256": {
+    "src/main.ts": "f3a102e3638eb7caddee153ce00f2ea94129f570c38e209d7ac55d0309bd3ca5",
+    "src/core.ts": "4bdb10414cab34c507fd48c522617e01b9db779b1b3589c2225f28aa9c3ec244",
+    "src/world-tools.ts": "6f9a9661c82e6e5b932d0b613bbc62304be41d438566389d302fcfafcfb0ef3e",
+    "src/audit.ts": "a06dd75ac7100ea1734b64dabf89c2bc09f717a4bc9af055d08fa67cd3c9e806"
+  },
+  "results": [
+    {
+      "name": "failed_world_load_preserves_prior_playback_boundary",
+      "passed": true,
+      "observed": {
+        "cases": [
+          {
+            "running": true,
+            "input": "{",
+            "before": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            },
+            "displayBefore": {
+              "button": "Pause traffic",
+              "disabled": false,
+              "slider": "2",
+              "readout": "2.0x",
+              "clock": "T+4 SEC"
+            },
+            "feedback": "NOT LOADED: Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+            "displayAfter": {
+              "button": "Pause traffic",
+              "disabled": false,
+              "slider": "2",
+              "readout": "2.0x",
+              "clock": "T+4 SEC"
+            },
+            "immediatelyAfter": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            },
+            "later": {
+              "version": 4,
+              "observed_at": 1011.5999999999999,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.84,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.84,
+                  "y_nm": 0
+                }
+              ]
+            }
+          },
+          {
+            "running": true,
+            "input": "{}",
+            "before": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            },
+            "displayBefore": {
+              "button": "Pause traffic",
+              "disabled": false,
+              "slider": "2",
+              "readout": "2.0x",
+              "clock": "T+4 SEC"
+            },
+            "feedback": "NOT LOADED: World version must be a non-negative integer.",
+            "displayAfter": {
+              "button": "Pause traffic",
+              "disabled": false,
+              "slider": "2",
+              "readout": "2.0x",
+              "clock": "T+4 SEC"
+            },
+            "immediatelyAfter": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            },
+            "later": {
+              "version": 4,
+              "observed_at": 1011.5999999999999,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.84,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.84,
+                  "y_nm": 0
+                }
+              ]
+            }
+          },
+          {
+            "running": false,
+            "input": "{",
+            "before": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            },
+            "displayBefore": {
+              "button": "Run traffic",
+              "disabled": false,
+              "slider": "2",
+              "readout": "2.0x",
+              "clock": "T+4 SEC"
+            },
+            "feedback": "NOT LOADED: Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+            "displayAfter": {
+              "button": "Run traffic",
+              "disabled": false,
+              "slider": "2",
+              "readout": "2.0x",
+              "clock": "T+4 SEC"
+            },
+            "immediatelyAfter": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            },
+            "later": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            }
+          },
+          {
+            "running": false,
+            "input": "{}",
+            "before": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            },
+            "displayBefore": {
+              "button": "Run traffic",
+              "disabled": false,
+              "slider": "2",
+              "readout": "2.0x",
+              "clock": "T+4 SEC"
+            },
+            "feedback": "NOT LOADED: World version must be a non-negative integer.",
+            "displayAfter": {
+              "button": "Run traffic",
+              "disabled": false,
+              "slider": "2",
+              "readout": "2.0x",
+              "clock": "T+4 SEC"
+            },
+            "immediatelyAfter": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            },
+            "later": {
+              "version": 3,
+              "observed_at": 1006.8,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -4.92,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 4.92,
+                  "y_nm": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "milliseconds": 89.35400499999999
+    }
+  ],
+  "passed": 1,
+  "failed": 0,
+  "boundaries": {
+    "dom": "Small event/value/disabled-state model populated from exact native index.html IDs and defaults.",
+    "native_modules": "Actual captured main.ts, core.ts, world-tools.ts and audit.ts plus actual reference JSON.",
+    "typescript": "Node syntax stripping with inert erased-type export names; not native tsc/Vite/Vitest qualification.",
+    "draw": "Canvas rendering and range presentation stubbed; actual state is read via the native export-world event.",
+    "python": "One controlled pending/rejected plan promise; no actual Python planner, gate or actuation claim.",
+    "unexercised": "Track edit and gate/apply paths are excluded; no scenario-file, numeric or audit algorithm assertion.",
+    "browser": "No browser, visual, layout, deployment or operational-airspace qualification."
+  }
+}
