@@ -1,0 +1,11 @@
+# Root recovery of the normal public scenario release
+
+The scenario feature merged as `0704ed42a4cf2a9edc4aa99853f8f53c14f0ffcc`, exact tree `ac06bbdb44c203a4214dadbb818439f1ac4b4279`. Root verified its actual parents and every received tree entry: 623 contribution entries and all 458 unrelated current-main entries, 1,081 total.
+
+Normal main-push Pages run [37812532089](https://github.com/Jacob-Met/TowerOps/actions/runs/37812532089) passed its build and deploy jobs. Its artifact `11566060929` is 6,453,278 bytes with SHA256 `e62ba742818b9c9190633516c8f6b595ba80ea96868f060d7193b781a931fb3d`.
+
+The complete native public receipt is preserved here byte-for-byte with SHA256 `663f524fdfd8544e7860c502025acb9fc4c8592276af4518ec6bae10902fe853`. At 2026-10-08 17:06 UTC, two action groups passed at https://jacobmetoyer.com/TowerOps/airspace/ using a fresh Chrome profile. Real file downloads and the live register establish complete scenario restoration, retention of an authored raw draft, retirement of old decisions, and fresh native alternatives/approval/readback after an identical scenario load. The successful outer process was reported separately as exit 0 in 11.207 seconds.
+
+All 15 direct HTTP bodies matched the normal Pages artifact, and all 12 artifact URLs actually requested by the browser had matching body observations. Two duplicate response-body observer errors remain visible; alternate passive observers supplied the matching bodies. The receipt's application error, console error, request failure and top-level observer error arrays are empty. No request replacement, fixture service or deployment mutation is claimed by this receiving run.
+
+The original Mac then became unavailable during root's transfer of the author's already frozen 27-file companion. This recovery captures complete evidence already held by root. It does not recreate inaccessible raw logs, screenshots, source or patches, and it does not replace or relabel the two earlier failed receiving attempts. `receiving-boundaries.json` identifies the frozen original packet and distinguishes author-reported metadata from root-read bytes. The full author packet remains pending native availability and exact transfer.

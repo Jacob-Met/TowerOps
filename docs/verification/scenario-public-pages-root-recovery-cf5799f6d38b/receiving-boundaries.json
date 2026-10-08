@@ -1,0 +1,84 @@
+{
+  "schema": "towerops.root-public-recovery-boundary.v1",
+  "complete_original_receipt": {
+    "sha256": "663f524fdfd8544e7860c502025acb9fc4c8592276af4518ec6bae10902fe853",
+    "native_source": "/tmp/towerops-public-pages-0704-cf5799f6d38b-gnbjs4re/keyboard-adapter-r4/public-receiving/receipt.json",
+    "root_full_tool_read": true
+  },
+  "original_author_publication": {
+    "native_root": "/private/tmp/towerops-public-pages-publication-cf5799f6d38b-o2k4ftxa",
+    "manifest_sha256": "3efed4e36f8a4c0edd2d21f860dc9b084dba59fac43a3452cae36720fa0c1cf7",
+    "transport_index_sha256": "053fc63f7fa4709b4b7e37a236cfab03e1965f12cae80a62112e6788e923d929",
+    "declared_files": 27,
+    "declared_bytes": 4042874,
+    "status": "Author frozen and verified; root transfer reads timed out after original Mac went offline. Original bytes remain at recorded native paths."
+  },
+  "earlier_receiving_reported_by_author": [
+    {
+      "receiver_prefix": "aa671edf",
+      "groups_passed": 1,
+      "groups": 2,
+      "exit": 1,
+      "reason": "Puppeteer rejected combined Meta+A key name"
+    },
+    {
+      "receiver_prefix": "0f6cab89",
+      "groups_passed": 1,
+      "groups": 2,
+      "exit": 1,
+      "reason": "Separate key events did not select numeric input; literal assertion observed 100100 rather than 100"
+    }
+  ],
+  "correction_reported_by_author": {
+    "final_receiver_sha256": "0c3609ef24131ea9620e5b006731af4d18a8523cb59f5fcc9019b296c18937a7",
+    "scope": "Only native input-helper line changed; native selectAll editing command",
+    "unchanged_predicate_bytes": 10896
+  },
+  "duplicate_passive_body_errors": [
+    {
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "observer": "cdp-other",
+      "error": "ProtocolError: Protocol error (Network.getResponseBody): No resource with given identifier found"
+    },
+    {
+      "url": "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "observer": "puppeteer-response",
+      "error": "ProtocolError: Could not load response body for this request. This might happen if the request is a preflight request."
+    }
+  ],
+  "body_coverage": {
+    "observed_artifact_urls": [
+      "https://jacobmetoyer.com/TowerOps/airspace/",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py"
+    ],
+    "matched_browser_body_urls": [
+      "https://jacobmetoyer.com/TowerOps/airspace/",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/index-DPcJQeI6.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/index-TucxfM67.css",
+      "https://jacobmetoyer.com/TowerOps/airspace/assets/python-worker-D9QUacUJ.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/favicon.svg",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/advisory_options.py",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide-lock.json",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.js",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.asm.wasm",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/pyodide.mjs",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/python_stdlib.zip",
+      "https://jacobmetoyer.com/TowerOps/airspace/python/towerops.py"
+    ],
+    "unmatched_observed_artifact_urls": [],
+    "mismatches": [],
+    "external_requests": [],
+    "qualification_scope": "Exact artifact HTTP bytes plus at least one matching browser body for every observed requested artifact URL; duplicate body-observer errors remain recorded."
+  },
+  "limitation": "Earlier raw failures, receiver source/patches and original PNGs are not reconstructed here. This recovery preserves the complete root-read final receipt and direct primary records without replacing the frozen author packet."
+}
