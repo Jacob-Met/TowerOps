@@ -1,0 +1,186 @@
+{
+  "schema": "towerops.numeric-canonical-parity.author.v1",
+  "created_at": "2026-10-08T08:55:38.844767+00:00",
+  "repository": "Jacob-Met/TowerOps",
+  "base_commit": "e522e53246986327b7903f3c404abf8a04ab5f1d",
+  "production_files": [
+    {
+      "path": "web/airspace/src/core.ts",
+      "bytes": 5158,
+      "sha256": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+      "git_blob": "d2f51e37a8b8b6655831abe75b262092b6c0ade7"
+    },
+    {
+      "path": "web/airspace/tests/python-float-parity.test.mjs",
+      "bytes": 4672,
+      "sha256": "86b0eb813c03fecb7c188f6bb77d76f4b77cea8fe37c2d282cf602dafc27f235",
+      "git_blob": "7466b9213ecefe5ba3352ca9d0935fa9637532cf"
+    }
+  ],
+  "receiving_dependency": {
+    "path": "web/airspace/src/python-worker.ts",
+    "sha256": "54882f2f3f4b351f17fec31f6f75cc21e9446da6486ab911ac69a3d0e7bb52db",
+    "ownership": "Separate frozen production-worker timestamp-guard contribution; unchanged by this patch."
+  },
+  "change": "For finite non-integer-key numbers, retain JavaScript shortest roundtrip digits but use Python float repr scientific thresholds and signed/padded exponents. Preserve seq/version, signed zero, finite refusal, and fixed decimal .0 convention.",
+  "results": {
+    "original_real_transaction_probe_baseline": {
+      "normal": {
+        "passed": 1,
+        "failed": 3
+      },
+      "optimized": {
+        "passed": 1,
+        "failed": 3
+      }
+    },
+    "same_probe_candidate": {
+      "normal": {
+        "passed": 4,
+        "failed": 0
+      },
+      "optimized": {
+        "passed": 4,
+        "failed": 0
+      }
+    },
+    "permanent_new_native_regression_baseline": {
+      "normal": {
+        "passed": 1,
+        "failed": 4
+      },
+      "optimized": {
+        "passed": 1,
+        "failed": 4
+      }
+    },
+    "combined_native_candidate": {
+      "normal": {
+        "passed": 15,
+        "failed": 0
+      },
+      "optimized": {
+        "passed": 15,
+        "failed": 0
+      },
+      "composition": "7 unchanged native cases + 3 frozen timestamp-guard cases + 5 new float-parity cases"
+    },
+    "native_build": "passed: prepare-python.mjs, tsc --noEmit, vite build",
+    "skips": 0
+  },
+  "minimal_admitted_counterexample": {
+    "clock": 0,
+    "approved_at": 1e-06,
+    "acknowledged_at": 2e-06,
+    "applied_at": 3e-06,
+    "native_journal_valid": true,
+    "baseline_browser_verification": false,
+    "native_canonical_fragment": "\"approved_at\":1e-06",
+    "baseline_browser_fragment": "\"approved_at\":0.000001",
+    "candidate_browser_verification": true,
+    "native_result": "screen_pass, approval, ack, simulated_actuation; world version7\u21928"
+  },
+  "real_transactions": [
+    "positive microsecond approval through actual planner/application",
+    "ordinary UI offsets from a valid clock-0.199999 yielding a tiny approval fraction",
+    "large fractional clock1e15+0.25 control",
+    "ordinary UI offsets at clock1e16"
+  ],
+  "boundary_decimal_inputs": [
+    "1e-4",
+    "-1e-4",
+    "1e-5",
+    "-1e-5",
+    "1e15",
+    "1e16",
+    "0.0",
+    "-0.0",
+    "5e-324",
+    "-5e-324",
+    "1.7976931348623157e308",
+    "-1.7976931348623157e308"
+  ],
+  "additional_controls": [
+    "all real-transaction event canonical bytes and world/advisory hashes equal actual Python",
+    "modified signed approver payload fails audit verification",
+    "all boundary JSON outputs parse back to the identical Number including negative zero",
+    "seq/version integer convention compared against actual native canonical_bytes",
+    "NaN and both infinities retain existing TypeScript refusal"
+  ],
+  "ownership": "Fresh TowerOps issue32 scopes track-edit/UI and explicitly excludes TS core. Production confirms ff300 owns python.ts/client tests/docs only, with no observed canonical owner. Root authorized this exact core-only fix.",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "node": "v24.19.0",
+    "typescript": "5.7.3",
+    "vitest": "4.1.11",
+    "vite": "8.3.3",
+    "python_optimized_native_run": "PYTHONOPTIMIZE=1 and TOWEROPS_TEST_OPTIMIZE=1; existing and new native subprocesses inherit optimization."
+  },
+  "primary_semantic_references": [
+    "https://github.com/python/cpython/blob/main/Python/pystrtod.c",
+    "https://tc39.es/ecma262/2024/multipage/numbers-and-dates.html#sec-number.prototype.toexponential"
+  ],
+  "limits": [
+    "Node executes the actual TypeScript verifier; this does not claim loaded browser/Pyodide or live deployment.",
+    "Selected valid transactions and explicit numerical boundaries; no random sweep or production throughput claim.",
+    "Python canonical producer, gates, dependencies, audit schema and frozen worker guard unchanged."
+  ],
+  "files": {
+    "native_transaction.py": {
+      "bytes": 810,
+      "sha256": "03a0685376ab6a35f96b270908358314c1c5849add8d0ba36875db3f8f181804"
+    },
+    "probe_valid_transactions.mjs": {
+      "bytes": 5411,
+      "sha256": "37040a587892cfe55dce80f6a20c92bb15d77fcba840294dcf1ceabcd08bc02c"
+    },
+    "baseline-normal.json": {
+      "bytes": 19733,
+      "sha256": "8feddc465b4804a6c68d8958db50d58765a86d568c1018989cf697e3ab279e9e"
+    },
+    "baseline-optimized.json": {
+      "bytes": 19732,
+      "sha256": "5cd4ed1a3a42ddff969bfff07d6cf7c164ff2997fca643cc55af65370c040691"
+    },
+    "candidate-normal.json": {
+      "bytes": 17929,
+      "sha256": "67a8424f7dd61ca410329b57e762ee0a628c4f4004b428fb4986e6a825841d29"
+    },
+    "candidate-optimized.json": {
+      "bytes": 17928,
+      "sha256": "fc34d14cb6ad7fa9677c3795c0edaf50134bd2dd781be63bade9a04dfa63ff5c"
+    },
+    "native-baseline-normal.log": {
+      "bytes": 8374,
+      "sha256": "b2b6a90956bd34aa461d42ea4af58e45fe5ac185a60b2b42c96169a6d89a8420"
+    },
+    "native-baseline-optimized.log": {
+      "bytes": 8379,
+      "sha256": "59bf48fd1cc23a0d1634463180380be3e302a2a089038754620d576b91e161c5"
+    },
+    "native-candidate-normal.log": {
+      "bytes": 407,
+      "sha256": "e0fb80f4a8b5e4310811ff845a3d6b5e20b0a57fcb00441ac7f018a2f9e7e2ce"
+    },
+    "native-candidate-optimized.log": {
+      "bytes": 407,
+      "sha256": "1df80f869fb06f9453a42276a47fc642c4b252cf4c2d966591fa5960be5feb2f"
+    },
+    "native-build.log": {
+      "bytes": 604,
+      "sha256": "2a0bbb1590043d718750d79c5865a8703abc989746213c10670135a4159a612f"
+    },
+    "source-pins.json": {
+      "bytes": 1282,
+      "sha256": "6ebf8f9e0a203b0cdbd9f5346e99e7b77a4f09ab684654595e9cb79a5429ac37"
+    },
+    "final-source-check.json": {
+      "bytes": 1784,
+      "sha256": "cf504b62862f5bf5853e0a86718a83757f9c7dd263fd8cdc2ac7d008e08ed217"
+    },
+    "native-checkout-pins.json": {
+      "bytes": 1190,
+      "sha256": "fda6eb27c754d5851d11b13c44ac53ec1c26cb8f55c94049fbfbd5658868ea8a"
+    }
+  }
+}

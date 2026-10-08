@@ -27,8 +27,14 @@ def browser_request(raw):
     a = Advisory(**{k: (v if k in ('aircraft_id', 'world_hash', 'rationale') else float(v)) for k,v in body.items()})
     room = ControlRoom(policy)
     room.audit.events = json.loads(q.get('audit_json', '[]'))
-    approval = Approval(**q['approval']) if q.get('approval') else None
-    ack = Ack(**q['ack']) if q.get('ack') else None
+    # JSON.stringify drops .0 from whole-number timestamps. Preserve the
+    # declared float fields before Python hashes the approval/readback event,
+    # just as the state and advisory fields above already do. Otherwise a
+    # valid chain can hash 1 here and 1.0 in the browser's canonical verifier.
+    # Only restore JSON integer numbers; booleans/strings/null retain their
+    # original types so the native gate can reject invalid timestamps.
+    approval = Approval(**{k: (float(v) if k == 'approved_at' and type(v) is int else v) for k,v in q['approval'].items()}) if q.get('approval') else None
+    ack = Ack(**{k: (float(v) if k == 'acknowledged_at' and type(v) is int else v) for k,v in q['ack'].items()}) if q.get('ack') else None
     try:
         after = room.apply(state, a, approval, ack, float(q['now']))
         return json.dumps({'state': after.to_dict(), 'events': room.audit.events, 'valid': room.audit.verify(room.audit.events), 'audit_json': json.dumps(room.audit.events)})
