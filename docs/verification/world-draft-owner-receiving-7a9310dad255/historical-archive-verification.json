@@ -1,0 +1,11 @@
+{
+  "original_payload_sha256": "6ff2a5a88a4cb6cacd87c6eff610d7fc823f03a075a1bdbdeb27b164e36b6fa3",
+  "original_files": 99,
+  "original_bytes": 1027235,
+  "archive_bytes": 596319,
+  "archive_sha256": "3ea2e0b5176fed4e5e2215986d248caf5c1daad31bac9877d009c6766a7bbbe5",
+  "archive_git_blob": "16168820a89a3a224d4b98c304c3adb9079efc00",
+  "members": 101,
+  "all_members_byte_exact": true,
+  "disposition": "superseded proposal; application source not adopted"
+}

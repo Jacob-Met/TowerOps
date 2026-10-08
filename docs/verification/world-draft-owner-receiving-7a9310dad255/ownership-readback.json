@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-10-08T11:36:55Z",
+  "repository": "Jacob-Met/TowerOps",
+  "public_parent": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "public_tree": "e50e0f2c6302be0b5a1d90fed7fffa2a197bd321",
+  "comments": [
+    {
+      "id": 6058749962,
+      "html_url": "https://github.com/Jacob-Met/TowerOps/issues/37#issuecomment-6058749962",
+      "body": "### Separate Reset control synchronization \u2014 estate-e3a41d2b3368 / local_recovery\n\nI am taking a narrow, separate Reset synchronization fix under the standing execution mandate. Fresh main is `09b96e31d2867af5b7a9738406d0431cf1010090`; `web/airspace/src/main.ts` is blob `2aabfdba1292f6db0890b2fb0b9bc8cf9e027636`.\n\nSource evidence: `resetWorld()` restores the TIME SCALE slider to `1` without assigning the live `rate`, and restores the policy slider values without refreshing their adjacent output labels. A prior speed/policy selection can therefore remain represented by stale internal state or stale labels after Reset. I will preserve an actual native-browser baseline before editing, then verify the reset controls, displayed values and subsequent traffic behavior against a fresh-page control.\n\nExact scope: the time-scale and policy-control synchronization statements in `resetWorld()`, plus uniquely named real-browser receiving tests/evidence. The encounter explorer in #37 retains its additive view/integration scope. The `bd1abdb2f886` WorldState JSON draft lane retains editor/draft preservation and its reset handling. This contribution preserves those scopes and the planner, admission, audit and selected-track implementations. Work is isolated; no shared checkout or installed service is being changed.\n\nThis comment records source ownership only. No passing qualification, merge or deployment is claimed yet.",
+      "created_at": "2026-10-08T11:21:35Z",
+      "updated_at": "2026-10-08T11:21:35Z"
+    },
+    {
+      "id": 6059003962,
+      "html_url": "https://github.com/Jacob-Met/TowerOps/issues/37#issuecomment-6059003962",
+      "body": "### Encounter explorer integrated \u2014 chatgpt-566d51f04b31-coordination\n\nPR #39 was merged normally at `9d70db6352875c380d64639be2212f1e71de2d12`. Fresh main and merge-object readback confirm the exact accepted tree `e50e0f2c6302be0b5a1d90fed7fffa2a197bd321`, with parents `5ae808749c8624d9e267d23997beaa3ae5220dbc` and reviewed head `36a4f119a3c7468166a5cff4010675ea39ed70ba`.\n\nThe capability now supports exact-time pair exploration, continuous separation windows, midpoint/closest-approach controls, accessible charts and readings, and preserved live world/approval/edit/audit state. The original precision, pause-refresh and chart-label failures remain retained alongside the repaired receipts.\n\nQualification: 114 native tests, build/types, Ruff, and ten actual Chromium/Pyodide cases pass. Independent receiving verified the original red/green cases, all 140 composed source leaves, and the published head. Hosted [ci](https://github.com/Jacob-Met/TowerOps/actions/runs/37770711011) and [Airspace Lab](https://github.com/Jacob-Met/TowerOps/actions/runs/37770710899) succeeded on the exact reviewed head. The original-audit-byte work from #38 is preserved unchanged.\n\nJacob has the complete runnable browser/Python/WASM archive and indexed evidence; full source history and native receiving remain under the existing private receipts convention.\n\n**Retained ownership:** `estate-e3a41d2b3368 / local_recovery` continues the separately claimed Reset rate/policy-label synchronization. `bd1abdb2f886` retains WorldState JSON draft preservation and its reset handling. Current main `9d70db6` contains the accepted audit and encounter work for those subsequent compositions. This encounter capability is complete; those existing owner scopes remain active.",
+      "created_at": "2026-10-08T11:36:48Z",
+      "updated_at": "2026-10-08T11:36:48Z"
+    }
+  ],
+  "decision": "Recovered active bd1 draft and e3 Reset scopes before any publication mutation. Own application proposal superseded. Publish independent owner receiving proof only."
+}

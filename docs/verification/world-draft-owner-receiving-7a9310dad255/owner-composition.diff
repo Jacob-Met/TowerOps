@@ -1,0 +1,191 @@
+diff --git a/web/airspace/README.md b/web/airspace/README.md
+index 869d7ae..be53281 100644
+--- a/web/airspace/README.md
++++ b/web/airspace/README.md
+@@ -66,3 +66,16 @@ python3 tools/verify_encounter_browser.py --chrome /path/to/chrome --out /new/ev
+ ```
+ 
+ Run from the repository root. It uses an ephemeral loopback server and synthetic worlds, retains desktop/phone captures and source/build hashes, and exercises the actual Python planner and approval/readback gate. The output path must be new.
++
++
++## Edit raw WorldState JSON
++
++Open **Inspect or load a WorldState** to edit the live world as JSON. Once you type, that draft stays in the editor for the current page session while traffic moves, flight selection changes, or the layout resizes. The simulation continues independently of the draft.
++
++**Load into simulation** validates and applies the entered world. If validation fails, the exact text stays available to correct. A successful load resumes the editor’s live updates. **Export live world** explicitly replaces the draft with the current simulated world and also resumes live updates.
++
++After installing the existing web dependencies, run the focused real-browser checks from the repository root with Node 22+ and Chrome/Chromium:
++
++```sh
++node web/airspace/tests/world-json-draft.browser.mjs --root . --browser /path/to/chromium --output /tmp/towerops-world-json-receiving
++```
+diff --git a/web/airspace/src/main.ts b/web/airspace/src/main.ts
+index 77e1496..27aa744 100644
+--- a/web/airspace/src/main.ts
++++ b/web/airspace/src/main.ts
+@@ -18,6 +18,7 @@ const encounterExplorer=createEncounterExplorer($('encounter-explorer'));
+ let policy:SafetyPolicy={...DEFAULT_POLICY};
+ let state=copy(fixture.state),now=fixture.now,selected='TWR419',running=false,pending:Advisory|null=null,approval:Approval|null=null,audit=new AuditLog();
+ let rate=1,lastFrame=0,trafficSeq=0,busy=false,pythonAudit='[]';
++let worldJsonEdited=false;
+ let trackEdit:TrackEditSession|null=null,trackPreview:TrackEditPreview|null=null,injectDraft:Record<string,string>|null=null;
+ const flightFields=['flight-id','flight-x','flight-y','flight-level','flight-bearing','flight-speed','flight-climb'];
+ type GateState='wait'|'done'|'fail'; let gateScreen:GateState='wait',gateApproval:GateState='wait',gateAck:GateState='wait';
+@@ -38,7 +39,7 @@ async function render():Promise<void>{
+  const badge=$('world-badge');badge.className=`badge ${pairs.length?'alert':'safe'}`;badge.textContent=pairs.length?'ACTION':'CLEAR';
+  setText('world-title',pairs.length?`${pairs.length} conflict pair${pairs.length===1?'':'s'} inside policy envelope`:'No projected conflict');
+  setText('world-note',pairs.length?'Horizontal and vertical unsafe-time intervals overlap inside the active policy horizon.':'No simultaneous horizontal and vertical intrusion inside the active policy horizon.');
+- setText('pair-count',String(pairs.length));setText('policy-window',`${policy.horizon_min.toFixed(1)} MIN`);setText('range-label',`RANGE +/- ${viewRange(state,policy)} NM`);setText('projection-label',`${policy.horizon_min.toFixed(1)} MIN PROJECTION`);const first=conflictWindows(state,policy)[0];setText('conflict-time',first?`T+${(first.start_min*60).toFixed(0)} SEC`:'CLEAR');setText('conflict-detail',first?`${first.aircraft_a} / ${first.aircraft_b} share ${first.start_min.toFixed(2)} to ${first.end_min.toFixed(2)} min. Midpoint: ${first.horizontal_nm.toFixed(2)} NM / ${first.vertical_ft.toFixed(0)} FT.`:'No simultaneous loss of separation. Add traffic or tighten the envelope.');setText('policy-stat-horizontal',policy.min_horizontal_nm.toFixed(1));setText('policy-stat-vertical',policy.min_vertical_ft.toLocaleString('en-US'));setText('policy-stat-horizon',policy.horizon_min.toFixed(1));const editor=$<HTMLTextAreaElement>('world-json');if(document.activeElement!==editor)editor.value=JSON.stringify(state,null,2);setText('sim-clock',`T+${Math.max(0,Math.floor(now-fixture.now))} SEC`);setText('speed-value',`${rate.toFixed(1)}x`);
++ setText('pair-count',String(pairs.length));setText('policy-window',`${policy.horizon_min.toFixed(1)} MIN`);setText('range-label',`RANGE +/- ${viewRange(state,policy)} NM`);setText('projection-label',`${policy.horizon_min.toFixed(1)} MIN PROJECTION`);const first=conflictWindows(state,policy)[0];setText('conflict-time',first?`T+${(first.start_min*60).toFixed(0)} SEC`:'CLEAR');setText('conflict-detail',first?`${first.aircraft_a} / ${first.aircraft_b} share ${first.start_min.toFixed(2)} to ${first.end_min.toFixed(2)} min. Midpoint: ${first.horizontal_nm.toFixed(2)} NM / ${first.vertical_ft.toFixed(0)} FT.`:'No simultaneous loss of separation. Add traffic or tighten the envelope.');setText('policy-stat-horizontal',policy.min_horizontal_nm.toFixed(1));setText('policy-stat-vertical',policy.min_vertical_ft.toLocaleString('en-US'));setText('policy-stat-horizon',policy.horizon_min.toFixed(1));const editor=$<HTMLTextAreaElement>('world-json');if(!worldJsonEdited&&document.activeElement!==editor)editor.value=JSON.stringify(state,null,2);setText('sim-clock',`T+${Math.max(0,Math.floor(now-fixture.now))} SEC`);setText('speed-value',`${rate.toFixed(1)}x`);
+  setText('proposal-state',pending?'PROPOSAL READY':pairs.length?'NEEDS REVIEW':'IDLE');
+  if(pending)setText('proposal-output',`${pending.aircraft_id} -> vx ${pending.set_vx_nm_min.toFixed(1)} / vy ${pending.set_vy_nm_min.toFixed(1)} NM/M / climb ${pending.set_climb_ft_min} FT/M. Bound to ${pending.world_hash.slice(0,10)}.`);else setText('proposal-output',proposalMessage);
+  gate('gate-screen',gateScreen,gateScreen==='done'?'PASS':gateScreen==='fail'?'FAIL':'WAIT');gate('gate-approval',gateApproval,gateApproval==='done'?'APPROVED':gateApproval==='fail'?'REJECTED':'WAIT');gate('gate-ack',gateAck,gateAck==='done'?'ACCEPTED':gateAck==='fail'?'REJECTED':'WAIT');
+@@ -117,8 +118,8 @@ function invalidateTrackPreview(){
+ function addTraffic(){running=false;clearPending('Traffic added. The planner will evaluate the changed world, not an animation script.');let id:string;do{id=`TWR${820+trafficSeq}`;trafficSeq++;}while(state.aircraft.some(a=>a.aircraft_id===id));state={version:state.version+1,observed_at:now,aircraft:[...state.aircraft,{aircraft_id:id,x_nm:0,y_nm:-5,altitude_ft:10000,vx_nm_min:0,vy_nm_min:1,climb_ft_min:0}]};selected=id;void render();}
+ function addCustomFlight(){running=false;try{const num=(id:string)=>$<HTMLInputElement>(id).valueAsNumber;const flight=createAircraft({aircraft_id:$<HTMLInputElement>('flight-id').value,x_nm:num('flight-x'),y_nm:num('flight-y'),altitude_ft:num('flight-level')*100,heading_deg:num('flight-bearing'),speed_kt:num('flight-speed'),climb_ft_min:num('flight-climb')});if(state.aircraft.some(a=>a.aircraft_id===flight.aircraft_id))throw new Error(`Callsign ${flight.aircraft_id} already exists.`);state={version:state.version+1,observed_at:now,aircraft:[...state.aircraft,flight]};selected=flight.aircraft_id;clearPending('Visitor-supplied flight added; the solver now evaluates this world.');setText('builder-feedback',`${flight.aircraft_id} injected. Run traffic or ask the planner to solve.`);void render();}catch(err){setText('builder-feedback',`NOT ADDED: ${err instanceof Error?err.message:String(err)}`);}}
+ function removeSelected(){running=false;if(state.aircraft.length<=1){setText('builder-feedback','Keep at least one aircraft in the world.');return;}state={version:state.version+1,observed_at:now,aircraft:state.aircraft.filter(a=>a.aircraft_id!==selected)};selected=state.aircraft[0]!.aircraft_id;clearPending('Selected flight removed. Recompute on the remaining live world.');setText('builder-feedback',`${selected} selected; ${state.aircraft.length} aircraft remain.`);void render();}function updatePolicy(){running=false;policy={...policy,min_horizontal_nm:$<HTMLInputElement>('policy-horizontal').valueAsNumber,min_vertical_ft:$<HTMLInputElement>('policy-vertical').valueAsNumber,horizon_min:$<HTMLInputElement>('policy-horizon').valueAsNumber};setText('horizontal-value',`${policy.min_horizontal_nm.toFixed(1)} NM`);setText('vertical-value',`${policy.min_vertical_ft.toLocaleString()} FT`);setText('horizon-value',`${policy.horizon_min.toFixed(1)} MIN`);clearPending('Safety envelope changed. Re-solve the live world.');void render();}
+-function exportWorld(){const editor=$<HTMLTextAreaElement>('world-json');editor.value=JSON.stringify(state,null,2);setText('world-json-feedback','Live world exported. Edit tracks, then load your changes.');}
+-function loadWorld(){try{const next=parseWorldState(JSON.parse($<HTMLTextAreaElement>('world-json').value));running=false;state=next;now=next.observed_at;selected=next.aircraft[0]!.aircraft_id;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';clearPending('Visitor WorldState loaded. The solver runs on this exact input.');setText('world-json-feedback',`Loaded ${state.aircraft.length} aircraft at version ${state.version}.`);void render();}catch(err){setText('world-json-feedback',`NOT LOADED: ${err instanceof Error?err.message:String(err)}`);}}function perturbTrack(){running=false;clearPending('Track changed. The safety policy is being recomputed from the new vector.');state={version:state.version+1,observed_at:now,aircraft:state.aircraft.map(a=>a.aircraft_id===selected?{...a,vx_nm_min:a.vx_nm_min+0.4,vy_nm_min:a.vy_nm_min+0.3}:a)};void render();}
++function exportWorld(){const editor=$<HTMLTextAreaElement>('world-json');editor.value=JSON.stringify(state,null,2);worldJsonEdited=false;setText('world-json-feedback','Live world exported. Edit tracks, then load your changes.');}
++function loadWorld(){try{const next=parseWorldState(JSON.parse($<HTMLTextAreaElement>('world-json').value));worldJsonEdited=false;running=false;state=next;now=next.observed_at;selected=next.aircraft[0]!.aircraft_id;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';clearPending('Visitor WorldState loaded. The solver runs on this exact input.');setText('world-json-feedback',`Loaded ${state.aircraft.length} aircraft at version ${state.version}.`);void render();}catch(err){setText('world-json-feedback',`NOT LOADED: ${err instanceof Error?err.message:String(err)}`);}}function perturbTrack(){running=false;clearPending('Track changed. The safety policy is being recomputed from the new vector.');state={version:state.version+1,observed_at:now,aircraft:state.aircraft.map(a=>a.aircraft_id===selected?{...a,vx_nm_min:a.vx_nm_min+0.4,vy_nm_min:a.vy_nm_min+0.3}:a)};void render();}
+ async function runPlanner(){running=false;busy=true;setText('python-status','Loading real TowerOps Python… (first run only)');await render();try{const result=await towerPython({op:'plan',state,now,policy});const plan:Advisory|null=result.advisory;setText('python-status','Live CPython · towerops.py · AdvisoryPlanner');if(!plan){const has=conflictPairs(state,policy).length>0;clearPending(has?'No admissible maneuver in the bounded candidate set. No state changed.':'No projected conflict. No advisory needed.');if(has)gateScreen='fail';}else{pending=plan;approval=null;proposalMessage='The Python planner found a safe candidate. Review the exact world-bound setpoint, then approve and acknowledge it.';gateScreen='done';gateApproval='wait';gateAck='wait';}}catch(err){clearPending('Python unavailable. No substitute planner or state change.');setText('python-status',String(err));}finally{busy=false;await render();}}
+ function approvePlan(){if(!pending)return;approval={advisory_hash:pending.advisory_hash,decision:'approve',approved_at:now+0.2,approver:'synthetic-controller'};gateApproval='done';gateAck='wait';proposalMessage='Approval is bound to this advisory hash. Readback is still required before simulated actuation.';void render();}
+ 
+@@ -128,6 +129,7 @@ function frame(t:number){if(!lastFrame)lastFrame=t;const elapsed=Math.min(0.08,M
+ $('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');encounterExplorer.update(state,policy,running);});
+ $('reset-world').addEventListener('click',resetWorld);$('add-traffic').addEventListener('click',addTraffic);$('perturb-track').addEventListener('click',perturbTrack);$('run-planner').addEventListener('click',()=>void runPlanner());$('approve').addEventListener('click',approvePlan);$('readback').addEventListener('click',()=>void acceptReadback());
+ $('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>void audit.verify().then(ok=>setText('audit-verdict',ok?`HASH CHAIN VALID - ${audit.events.length} EVENTS`:'HASH CHAIN INVALID')));$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);});
++$('world-json').addEventListener('input',()=>{if(!worldJsonEdited){worldJsonEdited=true;setText('world-json-feedback','Draft kept. Load it into the simulation, or export the live world to replace it.');}});
+ $('edit-selected-track').addEventListener('click',startTrackEdit);$('preview-track-edit').addEventListener('click',previewSelectedTrack);$('apply-track-edit').addEventListener('click',applySelectedTrack);$('cancel-track-edit').addEventListener('click',cancelSelectedTrack);
+ for(const id of flightFields.filter(id=>id!=='flight-id'))$(id).addEventListener('input',invalidateTrackPreview);
+ function announce(message:string){setText('announcer',message);}
+diff --git a/web/airspace/tests/world-json-draft.browser.mjs b/web/airspace/tests/world-json-draft.browser.mjs
+new file mode 100644
+index 0000000..3333082
+--- /dev/null
++++ b/web/airspace/tests/world-json-draft.browser.mjs
+@@ -0,0 +1,124 @@
++#!/usr/bin/env node
++import assert from 'node:assert/strict';
++import fs from 'node:fs';
++import {readFile,writeFile,mkdir,mkdtemp,rm} from 'node:fs/promises';
++import {createHash} from 'node:crypto';
++import {spawn,execFileSync} from 'node:child_process';
++import {join,resolve} from 'node:path';
++import {pathToFileURL,fileURLToPath} from 'node:url';
++
++const args=process.argv.slice(2);
++const option=(name,fallback)=>args.includes(name)?args[args.indexOf(name)+1]:fallback;
++const root=resolve(option('--root',process.cwd()));
++const qa=resolve(option('--qa',root+'-qa'));
++const output=resolve(option('--output',join(qa,'browser-baseline')));
++const toolchain=resolve(option('--toolchain',join(root,'web/airspace/node_modules')));
++const web=join(root,'web/airspace'), executable=option('--browser','/snap/bin/chromium');
++await mkdir(output,{recursive:true});
++const sha=b=>createHash('sha256').update(b).digest('hex');
++const sourceFiles=execFileSync('git',['-C',root,'ls-files','-z'],{encoding:'utf8'}).split('\0').filter(Boolean);
++const snapshot=()=>Object.fromEntries(sourceFiles.map(p=>[p,sha(fs.readFileSync(join(root,p)))]));
++const sourceBefore=snapshot();
++const lock=await readFile(join(web,'package-lock.json'));
++assert.equal(sha(lock),sha(await readFile(join(toolchain,'../package-lock.json'))),'borrowed dependency lock is the exact project lock');
++const expectedVersions={typescript:'5.7.3',vite:'8.3.3',vitest:'4.1.11',pyodide:'0.27.7'};
++const dependencies={};
++for(const [name,version] of Object.entries(expectedVersions)){
++ const file=join(toolchain,name,'package.json'), bytes=await readFile(file);
++ assert.equal(JSON.parse(bytes).version,version);
++ dependencies[name]={version,sha256:sha(bytes)};
++}
++const ownModules=join(web,'node_modules');
++if(!fs.existsSync(ownModules))fs.symlinkSync(toolchain,ownModules,'dir');
++else assert.equal(fs.realpathSync(ownModules),fs.realpathSync(toolchain),'only own dependency link may exist');
++const {createServer}=await import(pathToFileURL(join(toolchain,'vite/dist/node/index.js')));
++const server=await createServer({root:web,configFile:false,cacheDir:join(qa,'vite-cache'),logLevel:'error',optimizeDeps:{noDiscovery:true,include:[]},server:{host:'127.0.0.1',port:0,fs:{allow:[root,toolchain]}}});
++await server.listen();
++const base='http://127.0.0.1:'+server.httpServer.address().port;
++const profile=await mkdtemp(join(output,'profile-'));
++const report={kind:'raw-world-json-draft-browser-receiving',receiverSha256:sha(await readFile(fileURLToPath(import.meta.url))),node:process.version,startedAt:new Date().toISOString(),root,baseCommit:execFileSync('git',['-C',root,'rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceBefore,toolchain,dependencyLockSha256:sha(lock),dependencies,serving:'Exact source through existing pinned Vite API; configFile:false, own cache only',checks:[],observations:[],pageErrors:[]};
++let browser,socket,sessionId,browserLog='',sequence=0;
++const pending=new Map();
++const sleep=ms=>new Promise(r=>setTimeout(r,ms));
++async function waitFor(check,label){let last;for(let n=0;n<200;n++){try{if(await check())return;}catch(e){last=e;}await sleep(100);}throw Error('Timed out: '+label+(last?' '+last.message:''));}
++function command(method,params={},scoped=true){const id=++sequence;return new Promise((resolve,reject)=>{const timer=setTimeout(()=>{pending.delete(id);reject(Error('CDP timeout '+method));},10000);pending.set(id,{resolve,reject,timer});socket.send(JSON.stringify({id,method,params,...scoped&&sessionId?{sessionId}:{}}));});}
++async function evaluate(expression){const r=await command('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description??r.exceptionDetails.text);return r.result.value;}
++async function click(selector){
++ const point=await evaluate('(()=>{const n=document.querySelector('+JSON.stringify(selector)+');if(!n)throw Error("Missing element");n.scrollIntoView({block:"center"});const r=n.getBoundingClientRect();if(!r.width||!r.height)throw Error("Hidden element");return {x:r.x+r.width/2,y:r.y+r.height/2}})()');
++ await command('Input.dispatchMouseEvent',{type:'mouseMoved',...point});
++ await command('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...point});
++ await command('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,...point});
++}
++async function press(key,code,modifiers=0){for(const type of ['keyDown','keyUp'])await command('Input.dispatchKeyEvent',{type,key,code:key,windowsVirtualKeyCode:code,nativeVirtualKeyCode:code,modifiers});}
++async function edit(text){await click('#world-json');await press('a',65,2);await command('Input.insertText',{text});assert.equal(await evaluate('document.querySelector("#world-json").value'),text,'actual typing reaches editor');}
++const editor=()=>evaluate('document.querySelector("#world-json").value');
++const feedback=()=>evaluate('document.querySelector("#world-json-feedback").textContent');
++const register=()=>evaluate('[...document.querySelectorAll("#flight-list button")].map(n=>n.textContent)');
++async function navigate(){
++ await command('Emulation.setDeviceMetricsOverride',{width:1280,height:950,deviceScaleFactor:1,mobile:false});
++ await command('Page.navigate',{url:base+'/'});
++ await waitFor(()=>evaluate('document.readyState==="complete" && !!document.querySelector("#world-json")?.value && document.querySelector("#flight-list")?.children.length>0'),'actual workbench ready');
++ await click('.state-workbench > summary');
++}
++async function check(name,fn){try{await fn();report.checks.push({name,status:'passed'});console.log('PASS '+name);}catch(e){report.checks.push({name,status:'failed',error:e.message});console.log('FAIL '+name+': '+e.message);}}
++try{
++ browser=spawn(executable,['--headless=new','--no-sandbox','--disable-gpu','--disable-background-networking','--disable-component-update','--disable-sync','--no-first-run','--no-default-browser-check','--remote-debugging-address=127.0.0.1','--remote-debugging-port=0','--user-data-dir='+profile,'about:blank'],{stdio:['ignore','ignore','pipe']});
++ browser.stderr.on('data',b=>{browserLog=(browserLog+b.toString()).slice(-5000);});
++ let launchError;browser.on('error',e=>{launchError=e;});let port,endpoint;
++ await waitFor(async()=>{if(launchError)throw launchError;if(browser.exitCode!==null)throw Error('Browser exited '+browser.exitCode+' '+browserLog);[port,endpoint]=(await readFile(join(profile,'DevToolsActivePort'),'utf8')).trim().split('\n');return port&&endpoint;},'browser startup');
++ socket=new WebSocket('ws://127.0.0.1:'+port+endpoint);
++ socket.addEventListener('message',event=>{const m=JSON.parse(event.data);if(m.id){const p=pending.get(m.id);if(!p)return;pending.delete(m.id);clearTimeout(p.timer);m.error?p.reject(Error(m.error.message)):p.resolve(m.result);}else if(m.method==='Runtime.exceptionThrown')report.pageErrors.push(m.params.exceptionDetails.exception?.description??m.params.exceptionDetails.text);});
++ await new Promise((r,j)=>{socket.addEventListener('open',r,{once:true});socket.addEventListener('error',j,{once:true});});
++ report.browser=await command('Browser.getVersion',{},false);
++ const {targetId}=await command('Target.createTarget',{url:'about:blank'},false);
++ ({sessionId}=await command('Target.attachToTarget',{targetId,flatten:true},false));
++ await command('Page.enable');await command('Runtime.enable');
++ await check('untouched editor follows the live world',async()=>{
++  await navigate();const initial=JSON.parse(await editor());assert.deepEqual(initial.aircraft.map(a=>a.aircraft_id),await register());
++  await click('#toggle-run');await sleep(550);await click('#toggle-run');await command('Emulation.setDeviceMetricsOverride',{width:1240,height:950,deviceScaleFactor:1,mobile:false});await sleep(150);
++  assert.ok(JSON.parse(await editor()).version>initial.version);report.observations.push({name:'untouched-world-sync',beforeVersion:initial.version,afterVersion:JSON.parse(await editor()).version});
++ });
++ await check('paused flight selection preserves an authored valid JSON draft',async()=>{
++  await navigate();const live=JSON.parse(await editor()),draft=structuredClone(live);draft.aircraft[0].aircraft_id='DRAFT101';draft.aircraft[0].x_nm=42;const text=JSON.stringify(draft,null,2);
++  await edit(text);assert.deepEqual(await register(),live.aircraft.map(a=>a.aircraft_id));
++  await click('.telemetry-wrap > summary');await click('#flight-list button');await sleep(150);
++  const after=await editor();report.observations.push({name:'paused-selection-draft',draftSha256:sha(Buffer.from(text)),afterSha256:sha(Buffer.from(after)),beforeCallsign:draft.aircraft[0].aircraft_id,afterCallsign:JSON.parse(after).aircraft[0].aircraft_id});
++  assert.equal(after,text,'flight selection must not replace unsubmitted JSON');
++ });
++ await check('loading after a focus-changing render applies the exact authored world',async()=>{
++  await navigate();const draft=JSON.parse(await editor());draft.aircraft[0].aircraft_id='DRAFT202';draft.aircraft[0].x_nm=-37;const text=JSON.stringify(draft,null,2);
++  await edit(text);await click('.telemetry-wrap > summary');await click('#flight-list button');await sleep(100);await click('#load-world');await sleep(150);
++  const actual=await register();report.observations.push({name:'loaded-world-identity',expected:'DRAFT202',actual,feedback:await feedback()});assert.ok(actual.includes('DRAFT202'),'the explicitly loaded authored callsign must appear');
++ });
++ await check('resizing preserves an unfinished invalid JSON draft',async()=>{
++  await navigate();const text='{\n  "version": ';await edit(text);await press('Tab',9);assert.notEqual(await evaluate('document.activeElement.id'),'world-json');
++  await command('Emulation.setDeviceMetricsOverride',{width:1090,height:900,deviceScaleFactor:1,mobile:false});await sleep(150);const actual=await editor();report.observations.push({name:'resize-partial-draft',expected:text,actualPrefix:actual.slice(0,75)});assert.equal(actual,text,'layout changes must not discard partial editing');
++ });
++ await check('moving traffic preserves the blurred draft while the simulation continues',async()=>{
++  await navigate();await click('#toggle-run');await edit('{"still editing": ');const beforeClock=await evaluate('document.querySelector("#sim-clock").textContent');await sleep(350);assert.equal(await editor(),'{"still editing": ','focused editing is a baseline control');
++  await press('Tab',9);await sleep(750);const afterClock=await evaluate('document.querySelector("#sim-clock").textContent'),actual=await editor();report.observations.push({name:'running-blurred-draft',beforeClock,afterClock,actualPrefix:actual.slice(0,75)});assert.notEqual(afterClock,beforeClock,'draft protection must not freeze live traffic');assert.equal(actual,'{"still editing": ','running renders must preserve blurred draft');
++ });
++ await check('a rejected load keeps invalid text through a later render',async()=>{
++  await navigate();const text='{"version":-1,"aircraft":[]}';await edit(text);await click('#load-world');assert.match(await feedback(),/NOT LOADED/);
++  await command('Emulation.setDeviceMetricsOverride',{width:1050,height:900,deviceScaleFactor:1,mobile:false});await sleep(150);assert.equal(await editor(),text,'failed validation must leave the exact draft available to correct');
++ });
++ await check('explicit Export live world replaces the draft and restores live synchronization',async()=>{
++  await navigate();const initial=JSON.parse(await editor());await edit('{"unfinished":');await click('#export-world');assert.deepEqual(JSON.parse(await editor()),initial);assert.match(await feedback(),/exported/i);
++  await click('#toggle-run');await sleep(550);await click('#toggle-run');await command('Emulation.setDeviceMetricsOverride',{width:1180,height:950,deviceScaleFactor:1,mobile:false});await sleep(150);assert.ok(JSON.parse(await editor()).version>initial.version);
++ });
++ await check('valid direct load normalizes successfully and restores live synchronization',async()=>{
++  await navigate();const draft=JSON.parse(await editor());draft.aircraft[0].aircraft_id='DRAFT303';const text=JSON.stringify(draft);await edit(text);await click('#load-world');assert.match(await feedback(),/Loaded/);assert.ok((await register()).includes('DRAFT303'));
++  await click('#toggle-run');await sleep(550);await click('#toggle-run');await command('Emulation.setDeviceMetricsOverride',{width:1140,height:950,deviceScaleFactor:1,mobile:false});await sleep(150);const current=JSON.parse(await editor());assert.ok(current.version>draft.version);assert.equal(current.aircraft[0].aircraft_id,'DRAFT303');
++ });
++ await check('all observed browser paths are free from JavaScript exceptions',async()=>assert.deepEqual(report.pageErrors,[]));
++}catch(e){report.fatal=e.stack;report.browserLog=browserLog;console.log('FATAL '+e.stack);}
++finally{
++ report.finishedAt=new Date().toISOString();report.sourceAfter=snapshot();report.sourceChanged=Object.keys(sourceBefore).filter(p=>sourceBefore[p]!==report.sourceAfter[p]);report.status=!report.fatal&&report.checks.every(x=>x.status==='passed')&&!report.sourceChanged.length?'passed':'failed';
++ await writeFile(join(output,'browser-report.json'),JSON.stringify(report,null,2)+'\n');
++ if(socket?.readyState===WebSocket.OPEN){try{await command('Browser.close',{},false);}catch{}socket.close();}
++ if(browser&&browser.exitCode===null)browser.kill('SIGTERM');
++ for(const p of pending.values())clearTimeout(p.timer);pending.clear();
++ await server.close();await rm(profile,{recursive:true,force:true});
++ console.log(JSON.stringify({status:report.status,passed:report.checks.filter(x=>x.status==='passed').length,failed:report.checks.filter(x=>x.status==='failed').length,pageErrors:report.pageErrors.length,sourceChanged:report.sourceChanged,report:join(output,'browser-report.json')}));
++ if(report.status!=='passed')process.exitCode=1;
++}

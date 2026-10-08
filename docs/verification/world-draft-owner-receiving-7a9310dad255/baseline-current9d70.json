@@ -1,0 +1,673 @@
+{
+  "version": 1,
+  "source": "/home/jacob/hamon-7a9310dad255-tower-bd1/source-current9d70-baseline",
+  "source_parent": "9d70db6352875c380d64639be2212f1e71de2d12",
+  "source_tree": "e50e0f2c6302be0b5a1d90fed7fffa2a197bd321",
+  "source_manifest_sha256": "d56763bad83ac9576452c399f9344894f8a8f3878db865ceb08899851e9fa2ba",
+  "source_files": 140,
+  "driver_sha256": "f9adbf76945f82966c6f4632156f849326861cb11bfe3dde75c961bba53ce30c",
+  "node": "v22.22.1",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "checks": [
+    {
+      "name": "initial_editor_is_live_world",
+      "passed": true,
+      "detail": {
+        "aircraft": 2,
+        "version": 1
+      },
+      "failure": null
+    },
+    {
+      "name": "valid_draft_survives_blur_resize",
+      "passed": false,
+      "failure": "AssertionError [ERR_ASSERTION]: Rendering erased the valid draft\n+ actual - expected\n... Skipped lines\n\n  '{\\n' +\n    '  \"aircraft\": [\\n' +\n    '    {\\n' +\n    '      \"aircraft_id\": \"TWR218\",\\n' +\n    '      \"altitude_ft\": 10000,\\n' +\n...\n    '      \"vy_nm_min\": 0,\\n' +\n+   '      \"x_nm\": -5,\\n' +\n-   '      \"x_nm\": -1.75,\\n' +\n    '      \"y_nm\": 0\\n' +\n    '    },\\n' +\n    '    {\\n' +\n    '      \"aircraft_id\": \"TWR419\",\\n' +\n    '      \"altitude_ft\": 10000,\\n' +\n...\n    '  \"version\": 1\\n' +\n+   '}'\n-   '}\\n'\n\n    at file:///home/jacob/hamon-7a9310dad255-tower-bd1/receiver_thinkpad.mjs:157:10\n    at async record (file:///home/jacob/hamon-7a9310dad255-tower-bd1/receiver_thinkpad.mjs:79:13)\n    at async file:///home/jacob/hamon-7a9310dad255-tower-bd1/receiver_thinkpad.mjs:149:2"
+    },
+    {
+      "name": "invalid_draft_survives_blur_resize",
+      "passed": false,
+      "failure": "AssertionError [ERR_ASSERTION]: Rendering erased incomplete authored input\n+ actual - expected\n\n+ '{\\n' +\n+   '  \"aircraft\": [\\n' +\n+   '    {\\n' +\n+   '      \"aircraft_id\": \"TWR218\",\\n' +\n+   '      \"altitude_ft\": 10000,\\n' +\n+   '      \"climb_ft_min\": 0,\\n' +\n+   '      \"vx_nm_min\": 1,\\n' +\n+   '      \"vy_nm_min\": 0,\\n' +\n+   '      \"x_nm\": -5,\\n' +\n+   '      \"y_nm\": 0\\n' +\n+   '    },\\n' +\n+   '    {\\n' +\n+   '      \"aircraft_id\": \"TWR419\",\\n' +\n+   '      \"altitude_ft\": 10000,\\n' +\n+   '      \"climb_ft_min\": 0,\\n' +\n+   '      \"vx_nm_min\": -1,\\n' +\n+   '      \"vy_nm_min\": 0,\\n' +\n+   '      \"x_nm\": 5,\\n' +\n+   '      \"y_nm\": 0\\n' +\n+   '    }\\n' +\n+   '  ],\\n' +\n+   '  \"observed_at\": 1000,\\n' +\n+   '  \"version\": 1\\n' +\n+   '}'\n- '{\\n  \"aircraft\": [\\n    {\"aircraft_id\": \"DRAFT7\",\\n'\n\n    at file:///home/jacob/hamon-7a9310dad255-tower-bd1/receiver_thinkpad.mjs:167:10\n    at async record (file:///home/jacob/hamon-7a9310dad255-tower-bd1/receiver_thinkpad.mjs:79:13)\n    at async file:///home/jacob/hamon-7a9310dad255-tower-bd1/receiver_thinkpad.mjs:160:2"
+    },
+    {
+      "name": "failed_load_preserves_draft_for_correction",
+      "passed": false,
+      "failure": "AssertionError [ERR_ASSERTION]: A later render erased the refused input\n+ actual - expected\n\n+ '{\\n' +\n+   '  \"aircraft\": [\\n' +\n+   '    {\\n' +\n+   '      \"aircraft_id\": \"TWR218\",\\n' +\n+   '      \"altitude_ft\": 10000,\\n' +\n+   '      \"climb_ft_min\": 0,\\n' +\n+   '      \"vx_nm_min\": 1,\\n' +\n+   '      \"vy_nm_min\": 0,\\n' +\n+   '      \"x_nm\": -5,\\n' +\n+   '      \"y_nm\": 0\\n' +\n+   '    },\\n' +\n+   '    {\\n' +\n+   '      \"aircraft_id\": \"TWR419\",\\n' +\n+   '      \"altitude_ft\": 10000,\\n' +\n+   '      \"climb_ft_min\": 0,\\n' +\n+   '      \"vx_nm_min\": -1,\\n' +\n+   '      \"vy_nm_min\": 0,\\n' +\n+   '      \"x_nm\": 5,\\n' +\n+   '      \"y_nm\": 0\\n' +\n+   '    }\\n' +\n+   '  ],\\n' +\n+   '  \"observed_at\": 1000,\\n' +\n+   '  \"version\": 1\\n' +\n+   '}'\n- '{\"world\":\"unfinished\"'\n\n    at file:///home/jacob/hamon-7a9310dad255-tower-bd1/receiver_thinkpad.mjs:177:10\n    at async record (file:///home/jacob/hamon-7a9310dad255-tower-bd1/receiver_thinkpad.mjs:79:13)\n    at async file:///home/jacob/hamon-7a9310dad255-tower-bd1/receiver_thinkpad.mjs:170:2"
+    },
+    {
+      "name": "explicit_export_replaces_draft",
+      "passed": true,
+      "detail": {
+        "explicit_replacement": true
+      },
+      "failure": null
+    },
+    {
+      "name": "valid_load_changes_world_and_resumes_sync",
+      "passed": true,
+      "detail": {
+        "loaded_version": 18,
+        "next_version": 19
+      },
+      "failure": null
+    },
+    {
+      "name": "clean_editor_follows_live_changes",
+      "passed": true,
+      "detail": {
+        "before_aircraft": 2,
+        "after_aircraft": 3
+      },
+      "failure": null
+    }
+  ],
+  "passed": 4,
+  "total": 7,
+  "exceptions": [],
+  "external_requests": [],
+  "proxy_blocks": [
+    "http://clients2.google.com/time/1/current?cup2key=10:G8hnWM_su_V_6hLPkQ3bmVAKNWPUfii6EfJc-gt__eA&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "www.google.com:443",
+    "accounts.google.com:443",
+    "www.google.com:443",
+    "www.google.com:443",
+    "update.googleapis.com:443",
+    "www.google.com:443",
+    "www.google.com:443",
+    "www.google.com:443",
+    "accounts.google.com:443",
+    "content-autofill.googleapis.com:443",
+    "content-autofill.googleapis.com:443",
+    "content-autofill.googleapis.com:443",
+    "content-autofill.googleapis.com:443",
+    "android.clients.google.com:443",
+    "accounts.google.com:443",
+    "content-autofill.googleapis.com:443"
+  ],
+  "served": [
+    {
+      "path": "/index.html",
+      "bytes": 12442,
+      "sha256": "1cdb28babd494bffcf944d0c4d7d9af7b12c2958f84b73eb5c5f42b87c3f4b6c"
+    },
+    {
+      "path": "/index.html",
+      "bytes": 12442,
+      "sha256": "1cdb28babd494bffcf944d0c4d7d9af7b12c2958f84b73eb5c5f42b87c3f4b6c"
+    },
+    {
+      "path": "/assets/index-fBr4_XjM.css",
+      "bytes": 16775,
+      "sha256": "b709a4a0dc3b7b81fcfcfc05e74841d4cd1fb473122dbe3962b75a529b2bff89"
+    },
+    {
+      "path": "/assets/index-DmRRNwpo.js",
+      "bytes": 43572,
+      "sha256": "299bd4b635891162f7002680a081cb5227792fea26962726094d420c2e081a00"
+    },
+    {
+      "path": "/favicon.svg",
+      "bytes": 252,
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2"
+    }
+  ],
+  "selfCheck": {
+    "url": "http://127.0.0.1:41069/",
+    "status": 200,
+    "bytes": 12442,
+    "sha256": "1cdb28babd494bffcf944d0c4d7d9af7b12c2958f84b73eb5c5f42b87c3f4b6c"
+  },
+  "serverEvents": [
+    {
+      "kind": "request",
+      "url": "/",
+      "method": "GET"
+    },
+    {
+      "kind": "request",
+      "url": "/",
+      "method": "GET"
+    },
+    {
+      "kind": "request",
+      "url": "/assets/index-fBr4_XjM.css",
+      "method": "GET"
+    },
+    {
+      "kind": "request",
+      "url": "/assets/index-DmRRNwpo.js",
+      "method": "GET"
+    },
+    {
+      "kind": "request",
+      "url": "/favicon.svg",
+      "method": "GET"
+    }
+  ],
+  "networkEvents": [
+    {
+      "kind": "request",
+      "url": "http://127.0.0.1:41069/",
+      "requestId": "59013C5B17D15A4BF526CFB2A2F56DEE"
+    },
+    {
+      "kind": "request",
+      "url": "http://127.0.0.1:41069/assets/index-DmRRNwpo.js",
+      "requestId": "2252077.2"
+    },
+    {
+      "kind": "request",
+      "url": "http://127.0.0.1:41069/assets/index-fBr4_XjM.css",
+      "requestId": "2252077.3"
+    },
+    {
+      "kind": "request",
+      "url": "http://127.0.0.1:41069/favicon.svg",
+      "requestId": "2252077.6"
+    }
+  ],
+  "debugEvents": [
+    {
+      "id": 1,
+      "hasResult": true
+    },
+    {
+      "id": 2,
+      "hasResult": true
+    },
+    {
+      "method": "Target.attachedToTarget",
+      "hasResult": false
+    },
+    {
+      "id": 3,
+      "hasResult": true
+    },
+    {
+      "method": "Runtime.executionContextCreated",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 4,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 5,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 6,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "method": "Page.frameResized",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 7,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 8,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "method": "Page.frameStartedNavigating",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Page.frameStartedLoading",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 9,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Runtime.executionContextsCleared",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Runtime.executionContextsCleared",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Page.frameNavigated",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.policyUpdated",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Runtime.executionContextCreated",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.loadingFinished",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 10,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "method": "Network.loadingFinished",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.loadingFinished",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 11,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "method": "Page.domContentEventFired",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Page.loadEventFired",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Page.frameStoppedLoading",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 12,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 13,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 14,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 15,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "method": "Network.responseReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.dataReceived",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "method": "Network.loadingFinished",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 16,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 17,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 18,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 19,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 20,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 21,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 22,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 23,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 24,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 25,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 26,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 27,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 28,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 29,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 30,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 31,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 32,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 33,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 34,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 35,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 36,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 37,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 38,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 39,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 40,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 41,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "method": "Page.frameResized",
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": false
+    },
+    {
+      "id": 42,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 43,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 44,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 45,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 46,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 47,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 48,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 49,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 50,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 51,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 52,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 53,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 54,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 55,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 56,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 57,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 58,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    },
+    {
+      "id": 59,
+      "sessionId": "FA447FFC9E9059D06E5889121C4B9A17",
+      "hasResult": true
+    }
+  ],
+  "boundary": "Actual retained native product build, isolated browser/profile and loopback reads. No owner source or installed service mutation."
+}
