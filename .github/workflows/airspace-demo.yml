@@ -36,6 +36,42 @@ jobs:
         run: |
           TOWEROPS_PLAYWRIGHT_JS="$(python -c 'from pathlib import Path; import playwright; print(Path(playwright.__file__).parent / "driver" / "package" / "index.mjs")')"
           node tools/verify_decision_trace.mjs --playwright "$TOWEROPS_PLAYWRIGHT_JS" --output "$RUNNER_TEMP/towerops-decision-trace-browser"
+      - name: Verify traffic-edit Undo in the actual browser
+        timeout-minutes: 5
+        env:
+          TOWEROPS_UNDO_BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          TOWEROPS_UNDO_OUT="$RUNNER_TEMP/towerops-traffic-undo"
+          mkdir -p "$TOWEROPS_UNDO_OUT"
+          TOWEROPS_CHROME="$(python -c 'from playwright.sync_api import sync_playwright; p = sync_playwright().start(); print(p.chromium.executable_path); p.stop()')"
+          if [ -n "$TOWEROPS_UNDO_BASE" ]; then
+            git fetch --no-tags origin "$TOWEROPS_UNDO_BASE"
+            TOWEROPS_UNDO_BASE_PATH="$(git ls-tree "$TOWEROPS_UNDO_BASE" -- web/airspace/src/traffic-undo.ts)"
+            if [ -z "$TOWEROPS_UNDO_BASE_PATH" ]; then
+              TOWEROPS_UNDO_BEFORE="$TOWEROPS_UNDO_OUT/baseline-source"
+              git worktree add --detach "$TOWEROPS_UNDO_BEFORE" "$TOWEROPS_UNDO_BASE"
+              cmp web/airspace/package-lock.json "$TOWEROPS_UNDO_BEFORE/web/airspace/package-lock.json"
+              ln -s "$GITHUB_WORKSPACE/web/airspace/node_modules" "$TOWEROPS_UNDO_BEFORE/web/airspace/node_modules"
+              npm --prefix "$TOWEROPS_UNDO_BEFORE/web/airspace" run build > "$TOWEROPS_UNDO_OUT/baseline-build.log" 2>&1
+              cat "$TOWEROPS_UNDO_OUT/baseline-build.log"
+              node --experimental-websocket web/airspace/tests/traffic-undo.browser.mjs --root "$TOWEROPS_UNDO_BEFORE" --browser "$TOWEROPS_CHROME" --suite basic --expect-missing-undo --output "$TOWEROPS_UNDO_OUT/baseline"
+            fi
+          fi
+          node --experimental-websocket web/airspace/tests/traffic-undo.browser.mjs --root . --browser "$TOWEROPS_CHROME" --output "$TOWEROPS_UNDO_OUT/candidate"
+      - name: Retain traffic-edit Undo browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: towerops-traffic-undo-browser
+          path: |
+            ${{ runner.temp }}/towerops-traffic-undo/baseline-build.log
+            ${{ runner.temp }}/towerops-traffic-undo/baseline/browser-report.json
+            ${{ runner.temp }}/towerops-traffic-undo/baseline/*.png
+            ${{ runner.temp }}/towerops-traffic-undo/candidate/browser-report.json
+            ${{ runner.temp }}/towerops-traffic-undo/candidate/*.png
+            ${{ runner.temp }}/towerops-traffic-undo/candidate/trace-*.json
+          if-no-files-found: ignore
+          retention-days: 7
       - run: |
           mkdir -p site/airspace
           cp -R web/airspace/dist/. site/airspace/

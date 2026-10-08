@@ -4,6 +4,7 @@ import reference from '../tests/python-reference.json';
 import { Aircraft,DEFAULT_POLICY,SafetyPolicy,WorldState,conflictPairs,projected } from './core';
 import { createAircraft,conflictWindows,parseWorldState } from './world-tools';
 import { TrackEditInput,TrackEditPreview,TrackEditSession,applyTrackEdit,beginTrackEdit,previewTrackEdit } from './track-edit';
+import { TrafficEditUndo } from './traffic-undo';
 import { Advisory } from './planner';
 import { towerPython } from './python';
 import { AuditLog } from './audit';
@@ -23,6 +24,37 @@ let state=copy(fixture.state),now=fixture.now,selected='TWR419',running=false,pe
 let rate=1,lastFrame=0,trafficSeq=0,busy=false,pythonAudit='[]';
 let worldJsonEdited=false;
 let trackEdit:TrackEditSession|null=null,trackPreview:TrackEditPreview|null=null,injectDraft:Record<string,string>|null=null;
+
+const trafficUndo=new TrafficEditUndo();
+const trafficUndoContext=()=>({state,policy,now,scenario:audit});
+function syncTrafficUndo(){
+ if(running)trafficUndo.clear();
+ const label=trafficUndo.label(trafficUndoContext()),blocked=busy||!!trackEdit||running;
+ $('undo-traffic-edit').toggleAttribute('disabled',!label||blocked);
+ setText('undo-traffic-edit',label?`Undo ${label}`:'Undo last traffic edit');
+ setText('traffic-undo-status',!label
+  ? 'One-step Undo is available after a traffic edit, until traffic moves or the world, policy or clock changes.'
+  : busy?'Finish the current request before undoing the last traffic edit.'
+  : trackEdit?'Apply or cancel the open flight edit before using Undo.'
+  : 'Restores aircraft and selection as a new revision; clears proposals and approvals. Your raw draft and decision trace are kept.');
+}
+function recordTrafficEdit(label:string,action:()=>void){
+ const before=trafficUndo.capture(trafficUndoContext(),selected);
+ action();
+ trafficUndo.record(label,before,trafficUndoContext());
+ syncTrafficUndo();
+}
+function undoTrafficEdit(){
+ if(busy||trackEdit||running)return;
+ try{
+  const restored=trafficUndo.take(trafficUndoContext());
+  state=restored.state;selected=restored.selected;
+  clearPending('Traffic edit undone. Run the planner on this new revision before approval and readback.');
+  const message=`Undid ${restored.label}. ${selected} selected at world version ${state.version}. Raw draft and decision trace retained.`;
+  setText('builder-feedback',message);announce(message);void render();$('edit-selected-track').focus();
+ }catch(err){setText('builder-feedback',err instanceof Error?err.message:String(err));syncTrafficUndo();}
+}
+
 let optionsReview:AdvisoryOptionsReview|null=null,optionsStatus='Review native alternatives for the current world.';
 const optionsPanel=new AdvisoryReviewPanel($('advisory-review'),chooseAdvisoryOption);
 const decisionTrace=initializeDecisionTrace({getCurrentTrace:()=>pythonAudit,reviewTrace:reviewDecisionTrace});
@@ -41,6 +73,7 @@ function drawLists(pairs:Array<[string,string]>){
 let proposalMessage='No proposal yet. The planner only returns a setpoint if it clears the separation policy.';
 async function render():Promise<void>{
  decisionTrace.setBusy(busy);
+ syncTrafficUndo();
  const pairs=conflictPairs(state,policy);drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);drawLists(pairs);
  encounterExplorer.update(state,policy,running);
  const badge=$('world-badge');badge.className=`badge ${pairs.length?'alert':'safe'}`;badge.textContent=pairs.length?'ACTION':'CLEAR';
@@ -181,10 +214,12 @@ async function acceptReadback(){if(busy||!pending||!approval)return;const a=pend
 function resetWorld(){pauseTraffic();rate=1;policy={...DEFAULT_POLICY};$<HTMLInputElement>('policy-horizontal').value=String(policy.min_horizontal_nm);$<HTMLInputElement>('policy-vertical').value=String(policy.min_vertical_ft);$<HTMLInputElement>('policy-horizon').value=String(policy.horizon_min);setText('horizontal-value',`${policy.min_horizontal_nm.toFixed(1)} NM`);setText('vertical-value',`${policy.min_vertical_ft.toLocaleString()} FT`);setText('horizon-value',`${policy.horizon_min.toFixed(1)} MIN`);state=copy(fixture.state);now=fixture.now;selected='TWR419';trafficSeq=0;pending=null;approval=null;audit=new AuditLog();pythonAudit='[]';gateScreen='wait';gateApproval='wait';gateAck='wait';proposalMessage='Reset to the crossing scenario from demo.py. Run the bounded planner to propose a safe vector.';$<HTMLInputElement>('speed-range').value=String(rate);void render();}
 function frame(t:number){if(!lastFrame)lastFrame=t;const elapsed=Math.min(0.08,Math.max(0,(t-lastFrame)/1000));lastFrame=t;if(running){const minutes=elapsed*rate;now+=minutes*60;state={version:state.version+1,observed_at:now,aircraft:state.aircraft.map(a=>projected(a,minutes))};drawAirspace($<HTMLCanvasElement>('airspace'),state,selected,policy);setText('sim-clock',`T+${Math.floor(now-fixture.now)} SEC`);if(t%250<20)void render();}requestAnimationFrame(frame);}
 $('toggle-run').addEventListener('click',()=>{running=!running;lastFrame=0;$('toggle-run').textContent=running?'Pause traffic':'Run traffic';if(running)announce('Traffic is moving from its displayed velocity vectors.');else announce('Traffic paused.');encounterExplorer.update(state,policy,running);});
-$('reset-world').addEventListener('click',resetWorld);$('add-traffic').addEventListener('click',addTraffic);$('perturb-track').addEventListener('click',perturbTrack);$('run-planner').addEventListener('click',()=>void runPlanner());$('approve').addEventListener('click',approvePlan);$('readback').addEventListener('click',()=>void acceptReadback());
-$('add-custom-flight').addEventListener('click',addCustomFlight);$('remove-selected').addEventListener('click',removeSelected);for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>void audit.verify().then(ok=>setText('audit-verdict',ok?`HASH CHAIN VALID - ${audit.events.length} EVENTS`:'HASH CHAIN INVALID')));$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);});
+$('reset-world').addEventListener('click',resetWorld);$('add-traffic').addEventListener('click',()=>recordTrafficEdit('crossing-flight addition',addTraffic));$('perturb-track').addEventListener('click',()=>recordTrafficEdit(`vector change to ${selected}`,perturbTrack));$('run-planner').addEventListener('click',()=>void runPlanner());$('approve').addEventListener('click',approvePlan);$('readback').addEventListener('click',()=>void acceptReadback());
+$('add-custom-flight').addEventListener('click',()=>recordTrafficEdit('flight addition',addCustomFlight));$('remove-selected').addEventListener('click',()=>recordTrafficEdit(`removal of ${selected}`,removeSelected));for(const id of ['policy-horizontal','policy-vertical','policy-horizon'])$(id).addEventListener('input',updatePolicy);$('load-world').addEventListener('click',loadWorld);$('export-world').addEventListener('click',exportWorld);$('verify-audit').addEventListener('click',()=>void audit.verify().then(ok=>setText('audit-verdict',ok?`HASH CHAIN VALID - ${audit.events.length} EVENTS`:'HASH CHAIN INVALID')));$('speed-range').addEventListener('input',e=>{rate=Number((e.currentTarget as HTMLInputElement).value);setText('speed-value',`${rate.toFixed(1)}x`);});
 $('world-json').addEventListener('input',()=>{if(!worldJsonEdited){worldJsonEdited=true;setText('world-json-feedback','Draft kept. Load it into the simulation, or export the live world to replace it.');}});
-$('edit-selected-track').addEventListener('click',startTrackEdit);$('preview-track-edit').addEventListener('click',previewSelectedTrack);$('apply-track-edit').addEventListener('click',applySelectedTrack);$('cancel-track-edit').addEventListener('click',cancelSelectedTrack);
+$('edit-selected-track').addEventListener('click',startTrackEdit);$('preview-track-edit').addEventListener('click',previewSelectedTrack);$('apply-track-edit').addEventListener('click',()=>recordTrafficEdit(`edit to ${selected}`,applySelectedTrack));$('cancel-track-edit').addEventListener('click',cancelSelectedTrack);
+$('undo-traffic-edit').addEventListener('click',undoTrafficEdit);
+$('toggle-run').addEventListener('click',syncTrafficUndo);
 $('review-options').addEventListener('click',()=>void reviewAdvisoryOptions());
 $('close-options').addEventListener('click',()=>{$('advisory-review').hidden=true;$('review-options').focus();});
 for(const id of flightFields.filter(id=>id!=='flight-id'))$(id).addEventListener('input',invalidateTrackPreview);

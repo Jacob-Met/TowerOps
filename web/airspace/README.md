@@ -49,6 +49,32 @@ Open **Shape the traffic** and choose **Edit TWR419** (or the flight selected in
 
 **Cancel edit** preserves the world, pending proposal and approval, and returns the builder to its previous new-flight draft. Traffic stays paused. Changing a field invalidates the preview; a changed world, policy or clock also prevents applying a stale edit. Unchanged velocity vectors retain their exact values during position or altitude edits.
 
+## Undo the last traffic edit
+
+After adding, removing, perturbing or applying a selected-flight edit, use **Undo**
+in **Shape the traffic** to recover the aircraft and selection from just before
+that change. The button names the edit it will undo. It keeps one step: a later
+successful edit replaces the earlier entry. A refused or unchanged edit does
+not replace an available entry.
+
+Undo creates a new world revision and clears any planner proposal and approval.
+Run the planner again before approval and readback. It retains your raw JSON
+draft and the complete decision trace; it does not rewind the simulation clock
+or restore an old approval.
+
+The entry ends when traffic starts moving or the world, policy or clock changes.
+Loading or resetting a scenario ends it even if the new scenario has identical
+values. Applying a native readback also changes the world and ends the entry.
+Changing only the selected flight keeps Undo available. Finish a current Python
+request, or apply/cancel an open flight edit, before undoing.
+
+After the ordinary web build, run the focused receiving check from the repository
+root with Node 22+ and an installed Chrome/Chromium. Use a new evidence directory:
+
+```sh
+node web/airspace/tests/traffic-undo.browser.mjs --root . --browser /path/to/chromium --output /new/towerops-undo-evidence
+```
+
 ## Explore a flight pair over time
 
 Open **Explore an encounter**, choose two current flights, and move the forecast
