@@ -1,0 +1,854 @@
+{
+  "schema": "towerops.identifier-parity.v1",
+  "producer": "Unmodified native towerops.py WorldState/SafetyPolicy/AdvisoryPlanner",
+  "source_commit": "89529c5459b1c3d52448e197de2b2f7fe8b6d128",
+  "source_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+  "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "cases": [
+    {
+      "name": "ordinary letters",
+      "ui_callsigns": true,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "A",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "B",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+      "conflicting_aircraft": [
+        "A",
+        "B"
+      ],
+      "advisory": {
+        "aircraft_id": "B",
+        "world_hash": "d773cd9ed9896865bf9a04be9a4d475cbc48bf2ed9e81d06605bcc1c04e5a5aa",
+        "set_vx_nm_min": -1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "6a8b74650488fc6843d7e327b472d8e2f06817640db75bfb4eb6ca2949d37464"
+      }
+    },
+    {
+      "name": "ordinary digits",
+      "ui_callsigns": true,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "A1",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "A2",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+      "conflicting_aircraft": [
+        "A1",
+        "A2"
+      ],
+      "advisory": {
+        "aircraft_id": "A2",
+        "world_hash": "7f882be3d0f586e74e3911f5b766256932a54b3696f98e475189337abb36fae6",
+        "set_vx_nm_min": -1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "47b6568b98db3093e5b65d8b3d431d86fb3fd75eb8bbc28948e0a9c5ccefbf41"
+      }
+    },
+    {
+      "name": "internal punctuation",
+      "ui_callsigns": true,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "A-1",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "A_1",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "8df8f2b5afd2c167f25af36bf7e88f9d1fb6b734a944b6ca070270fa1c54ce37",
+      "conflicting_aircraft": [
+        "A-1",
+        "A_1"
+      ],
+      "advisory": {
+        "aircraft_id": "A_1",
+        "world_hash": "8df8f2b5afd2c167f25af36bf7e88f9d1fb6b734a944b6ca070270fa1c54ce37",
+        "set_vx_nm_min": -1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "8a369484a6adffdc5c9a28701db5f21d534eb043f6ce86219da7207e7a60ce78"
+      }
+    },
+    {
+      "name": "leading punctuation",
+      "ui_callsigns": true,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "-A",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "_A",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "5d134fd790bb62db860e4b59d9a02acdf241d3d646697f29128611e6dcd5c581",
+      "conflicting_aircraft": [
+        "-A",
+        "_A"
+      ],
+      "advisory": {
+        "aircraft_id": "_A",
+        "world_hash": "5d134fd790bb62db860e4b59d9a02acdf241d3d646697f29128611e6dcd5c581",
+        "set_vx_nm_min": -1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "a3e3837541853d4eb2340adfa681dde1a62ec3a633f7cfd41f527f771664af8f"
+      }
+    },
+    {
+      "name": "underscore and letter",
+      "ui_callsigns": true,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "B",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "_A",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "c5948b5c748921d0fd795199b4d064432efd2d2f25830aae6e8f8dc86de9cc20",
+      "conflicting_aircraft": [
+        "B",
+        "_A"
+      ],
+      "advisory": {
+        "aircraft_id": "_A",
+        "world_hash": "c5948b5c748921d0fd795199b4d064432efd2d2f25830aae6e8f8dc86de9cc20",
+        "set_vx_nm_min": -1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "24d892eb56c5f0ebc8e8218358ecb769b9970cc8259e0c6c522d774b49e9e40b"
+      }
+    },
+    {
+      "name": "prefix before extension",
+      "ui_callsigns": true,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "A",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "A-",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "1346114053a47fed2840a8cfa08457169acb1f5d79c519b33d2db5930d5f0c3c",
+      "conflicting_aircraft": [
+        "A",
+        "A-"
+      ],
+      "advisory": {
+        "aircraft_id": "A-",
+        "world_hash": "1346114053a47fed2840a8cfa08457169acb1f5d79c519b33d2db5930d5f0c3c",
+        "set_vx_nm_min": -1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "e91172dd7030dad9a846150f9dc31d5205b4fe3c275cf5dfa8522fc18e25c511"
+      }
+    },
+    {
+      "name": "all admitted single characters",
+      "ui_callsigns": true,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "-",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "0",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "1",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "2",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "3",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "4",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "5",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "6",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "7",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "8",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "9",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "A",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "B",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "C",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "D",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "E",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "F",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "G",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "H",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "I",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "J",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "K",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "L",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "M",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "N",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "O",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "P",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "Q",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "R",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "S",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "T",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "U",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "V",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "W",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "X",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "Y",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "Z",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "_",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "40ae9819bd227d98a88f367ebb407e5d6e77beefff52e2fd589d2dbdcd09df9c",
+      "conflicting_aircraft": [
+        "-",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "_"
+      ],
+      "advisory": null
+    },
+    {
+      "name": "case-sensitive native identifiers",
+      "ui_callsigns": false,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "A",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "a",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "bbfd109e394402b9589037e42cf43bb33941f5047513934d57c32fc4a71715af",
+      "conflicting_aircraft": [
+        "A",
+        "a"
+      ],
+      "advisory": {
+        "aircraft_id": "a",
+        "world_hash": "bbfd109e394402b9589037e42cf43bb33941f5047513934d57c32fc4a71715af",
+        "set_vx_nm_min": 1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "65223b0b7098f8797fc29e79c3febb7036f564a20d426e5751c15fd3e57a8506"
+      }
+    },
+    {
+      "name": "accented native identifiers",
+      "ui_callsigns": false,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "Z",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "\u00e4",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "a2813290d31f069317014080311982a635f2cf03416b477af5f211c0a25d19e7",
+      "conflicting_aircraft": [
+        "Z",
+        "\u00e4"
+      ],
+      "advisory": {
+        "aircraft_id": "\u00e4",
+        "world_hash": "a2813290d31f069317014080311982a635f2cf03416b477af5f211c0a25d19e7",
+        "set_vx_nm_min": -1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "ec32cc2ece2373f4a0e172734b77836938a9f8ad8380b1b24ab434be695ec910"
+      }
+    },
+    {
+      "name": "distinct combining representation",
+      "ui_callsigns": false,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "e\u0301",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "\u00e9",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "1000f518153b8a3bc56c237c056bf97ee8145f545f03213211e8a80810c92d36",
+      "conflicting_aircraft": [
+        "e\u0301",
+        "\u00e9"
+      ],
+      "advisory": {
+        "aircraft_id": "\u00e9",
+        "world_hash": "1000f518153b8a3bc56c237c056bf97ee8145f545f03213211e8a80810c92d36",
+        "set_vx_nm_min": 1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "b54336b2790c103602d481d8e7e32a40a36f1952970b2526e366140f945c46a6"
+      }
+    },
+    {
+      "name": "astral and BMP code points",
+      "ui_callsigns": false,
+      "world": {
+        "version": 1,
+        "observed_at": 1000.0,
+        "aircraft": [
+          {
+            "aircraft_id": "\ue000",
+            "x_nm": -5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": 1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          },
+          {
+            "aircraft_id": "\ud800\udc00",
+            "x_nm": 5.0,
+            "y_nm": 0.0,
+            "altitude_ft": 10000.0,
+            "vx_nm_min": -1.0,
+            "vy_nm_min": 0.0,
+            "climb_ft_min": 0.0
+          }
+        ]
+      },
+      "now": 1002.0,
+      "world_hash": "ca42cef073e5828aa32dbb7f1cf438f802df23b5a896be9470d800fc6b6693ce",
+      "conflicting_aircraft": [
+        "\ue000",
+        "\ud800\udc00"
+      ],
+      "advisory": {
+        "aircraft_id": "\ud800\udc00",
+        "world_hash": "ca42cef073e5828aa32dbb7f1cf438f802df23b5a896be9470d800fc6b6693ce",
+        "set_vx_nm_min": -1.0,
+        "set_vy_nm_min": 2.0,
+        "set_climb_ft_min": 0.0,
+        "issued_at": 1002.0,
+        "expires_at": 1010.0,
+        "rationale": "synthetic projected-separation recovery",
+        "advisory_hash": "029c82c2b0d76340af25a830082804a9dd471e666a7d35be412b7aef992c237e"
+      }
+    }
+  ]
+}
