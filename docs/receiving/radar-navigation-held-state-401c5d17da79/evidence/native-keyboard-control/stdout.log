@@ -1,0 +1,151 @@
+{
+  "schema": "towerops.receiver.native-keyboard-calibration.v1",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "method_sha256": "b738dab91670d1c45de8ac996a8c92c12b6e73ab34ff219467e935dc319f6187",
+  "observations": [
+    {
+      "name": "Enter without text",
+      "key": "Enter",
+      "code": "Enter",
+      "n": 13,
+      "text": null,
+      "clicks": 0,
+      "events": [
+        {
+          "type": "keydown",
+          "key": "Enter",
+          "code": "Enter",
+          "isTrusted": true,
+          "defaultPrevented": false
+        },
+        {
+          "type": "keyup",
+          "key": "Enter",
+          "code": "Enter",
+          "isTrusted": true,
+          "defaultPrevented": false
+        }
+      ],
+      "active": "button"
+    },
+    {
+      "name": "Enter with carriage-return text",
+      "key": "Enter",
+      "code": "Enter",
+      "n": 13,
+      "text": "\r",
+      "clicks": 1,
+      "events": [
+        {
+          "type": "keydown",
+          "key": "Enter",
+          "code": "Enter",
+          "isTrusted": true,
+          "defaultPrevented": false
+        },
+        {
+          "type": "keypress",
+          "key": "Enter",
+          "code": "Enter",
+          "isTrusted": true,
+          "defaultPrevented": false
+        },
+        {
+          "type": "click",
+          "key": null,
+          "code": null,
+          "isTrusted": true,
+          "defaultPrevented": false
+        },
+        {
+          "type": "keyup",
+          "key": "Enter",
+          "code": "Enter",
+          "isTrusted": true,
+          "defaultPrevented": false
+        }
+      ],
+      "active": "button"
+    },
+    {
+      "name": "Space without text",
+      "key": " ",
+      "code": "Space",
+      "n": 32,
+      "text": null,
+      "clicks": 1,
+      "events": [
+        {
+          "type": "keydown",
+          "key": " ",
+          "code": "Space",
+          "isTrusted": true,
+          "defaultPrevented": false
+        },
+        {
+          "type": "keyup",
+          "key": " ",
+          "code": "Space",
+          "isTrusted": true,
+          "defaultPrevented": false
+        },
+        {
+          "type": "click",
+          "key": null,
+          "code": null,
+          "isTrusted": true,
+          "defaultPrevented": false
+        }
+      ],
+      "active": "button"
+    },
+    {
+      "name": "Space with text",
+      "key": " ",
+      "code": "Space",
+      "n": 32,
+      "text": " ",
+      "clicks": 1,
+      "events": [
+        {
+          "type": "keydown",
+          "key": " ",
+          "code": "Space",
+          "isTrusted": true,
+          "defaultPrevented": false
+        },
+        {
+          "type": "keypress",
+          "key": " ",
+          "code": "Space",
+          "isTrusted": true,
+          "defaultPrevented": false
+        },
+        {
+          "type": "keyup",
+          "key": " ",
+          "code": "Space",
+          "isTrusted": true,
+          "defaultPrevented": false
+        },
+        {
+          "type": "click",
+          "key": null,
+          "code": null,
+          "isTrusted": true,
+          "defaultPrevented": false
+        }
+      ],
+      "active": "button"
+    }
+  ],
+  "errors": [],
+  "blocked": []
+}
+
