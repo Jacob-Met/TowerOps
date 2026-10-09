@@ -3,7 +3,7 @@
   "status": "Frozen native candidate qualified; integration, independent receiving and public deployment remain separate gates",
   "source_commit": "093f88b29d6e1ede778f967528c7e010b7689ab1",
   "source_tree": "4a87643d57cabf81e570b21c119f00b43f79448e",
-  "claim": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6061148593",
+  "claim": "[redacted]",
   "source_changes": [
     {
       "path": "web/airspace/src/radar-geometry.ts",
@@ -449,32 +449,32 @@
     ],
     "python_resources": {
       "pyodide.mjs": {
-        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide.mjs",
+        "source": "[redacted]/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide.mjs",
         "bytes": 13931,
         "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
       },
       "python_stdlib.zip": {
-        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/python_stdlib.zip",
+        "source": "[redacted]/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/python_stdlib.zip",
         "bytes": 2360737,
         "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
       },
       "pyodide.asm.wasm": {
-        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide.asm.wasm",
+        "source": "[redacted]/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide.asm.wasm",
         "bytes": 10105545,
         "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
       },
       "pyodide-lock.json": {
-        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide-lock.json",
+        "source": "[redacted]/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide-lock.json",
         "bytes": 112205,
         "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
       },
       "pyodide.asm.js": {
-        "source": "/Users/me/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide.asm.js",
+        "source": "[redacted]/Developer/towerops-receiving-72ac1419/web/airspace/node_modules/pyodide/pyodide.asm.js",
         "bytes": 1255688,
         "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
       },
       "towerops.py": {
-        "source": "/Users/me/workspace/towerops-radar-52e56ea8fcca/candidate-v1/source/towerops.py",
+        "source": "[redacted]/workspace/towerops-radar-52e56ea8fcca/candidate-v1/source/towerops.py",
         "bytes": 19462,
         "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
       }
