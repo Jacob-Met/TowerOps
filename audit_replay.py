@@ -7,8 +7,9 @@ replays the recorded lifecycle and checks the semantic story the gate claims:
 - every ``simulated_actuation`` is preceded, for the same advisory hash, by a
   ``screen_pass`` admission, an ``approve`` approval, and an ``accepted`` ack,
   in that order;
-- the actuation's ``before_world_hash`` matches the world hash the advisory
-  was screened against.
+- the actuation's ``before_world_hash`` and its screened world hash are
+  nonblank strings and match exactly. Missing identity is a finding, not
+  evidence of a matching world.
 
 Usage:
     python3 audit_replay.py demo_output.json   # demo.py's JSON (audit_events)
@@ -150,9 +151,21 @@ def replay_audit(events: list[dict[str, Any]]) -> ReplayReport:
                 adv.add_issue("actuation without accepted ack")
             elif adv.ack_seq > act.seq:
                 adv.add_issue("ack recorded after actuation")
+            screen_bound = (
+                isinstance(adv.screen_world_hash, str)
+                and bool(adv.screen_world_hash.strip())
+            )
+            before_bound = (
+                isinstance(act.before_world_hash, str)
+                and bool(act.before_world_hash.strip())
+            )
+            if not screen_bound:
+                adv.add_issue("actuation has no usable screened world_hash")
+            if not before_bound:
+                adv.add_issue("actuation has no usable before_world_hash")
             if (
-                adv.screen_world_hash is not None
-                and act.before_world_hash is not None
+                screen_bound
+                and before_bound
                 and act.before_world_hash != adv.screen_world_hash
             ):
                 adv.add_issue("actuation before_world_hash does not match screened world_hash")

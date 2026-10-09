@@ -1,0 +1,23 @@
+{
+  "format": "ultra.tower-world-linkage.scope-proof.v1",
+  "baseline_sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+  "candidate_sha256": "b1a457ddf670b01b1ac62037dfd752009a6da5b5b53d1531a95c746fff9fda75",
+  "unchanged_top_level_nodes": [
+    "ImportFrom",
+    "Import",
+    "Import",
+    "ImportFrom",
+    "ImportFrom",
+    "ImportFrom",
+    "Assign",
+    "ActuationRecord",
+    "AdvisoryReplay",
+    "ReplayReport",
+    "_load_events",
+    "main",
+    "If"
+  ],
+  "diff": "--- baseline/audit_replay.py\n+++ candidate/audit_replay.py\n@@ -7,8 +7,9 @@\n - every ``simulated_actuation`` is preceded, for the same advisory hash, by a\n   ``screen_pass`` admission, an ``approve`` approval, and an ``accepted`` ack,\n   in that order;\n-- the actuation's ``before_world_hash`` matches the world hash the advisory\n-  was screened against.\n+- the actuation's ``before_world_hash`` and its screened world hash are\n+  nonblank strings and match exactly. Missing identity is a finding, not\n+  evidence of a matching world.\n \n Usage:\n     python3 audit_replay.py demo_output.json   # demo.py's JSON (audit_events)\n@@ -150,9 +151,21 @@\n                 adv.add_issue(\"actuation without accepted ack\")\n             elif adv.ack_seq > act.seq:\n                 adv.add_issue(\"ack recorded after actuation\")\n+            screen_bound = (\n+                isinstance(adv.screen_world_hash, str)\n+                and bool(adv.screen_world_hash.strip())\n+            )\n+            before_bound = (\n+                isinstance(act.before_world_hash, str)\n+                and bool(act.before_world_hash.strip())\n+            )\n+            if not screen_bound:\n+                adv.add_issue(\"actuation has no usable screened world_hash\")\n+            if not before_bound:\n+                adv.add_issue(\"actuation has no usable before_world_hash\")\n             if (\n-                adv.screen_world_hash is not None\n-                and act.before_world_hash is not None\n+                screen_bound\n+                and before_bound\n                 and act.before_world_hash != adv.screen_world_hash\n             ):\n                 adv.add_issue(\"actuation before_world_hash does not match screened world_hash\")\n",
+  "tests_ast_valid": true,
+  "local_lint": "ruff and pytest not installed; no install requested/performed"
+}

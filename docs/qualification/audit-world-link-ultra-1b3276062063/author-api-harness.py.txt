@@ -1,0 +1,20 @@
+import contextlib,copy,hashlib,inspect,io,json,os,subprocess,sys,types,unittest
+from unittest.mock import patch
+SOURCES=__SOURCES__
+mods={}
+for name,source in SOURCES.items():
+    m=types.ModuleType(name);m.__file__="<exact-source:"+name+">";sys.modules[name]=m
+    exec(compile(source,m.__file__,"exec"),m.__dict__);mods[name]=m
+effects=[]
+def guard(event,args):
+    if event in ("open","os.mkdir","os.remove","os.rename","os.rmdir","os.link","os.symlink","subprocess.Popen","socket.__new__","socket.connect"):
+        effects.append(event);raise RuntimeError("unexpected effect "+event)
+sys.addaudithook(guard)
+stream=io.StringIO()
+result=unittest.TextTestRunner(stream=stream,verbosity=2).run(unittest.defaultTestLoader.loadTestsFromModule(mods["test_audit_world_linkage"]))
+inherited=[]
+for name,func in vars(mods["test_audit_replay"]).items():
+    if name.startswith("test_") and callable(func) and not inspect.signature(func).parameters:
+        func();inherited.append(name)
+print(json.dumps({"format":"ultra.tower-world-linkage.candidate-api.v1","python":sys.version,"platform":list(os.uname()),"source_sha256":{k:hashlib.sha256(v.encode()).hexdigest() for k,v in SOURCES.items()},"new_methods":result.testsRun,"new_suite_passed":result.wasSuccessful(),"new_failures":len(result.failures),"new_errors":len(result.errors),"raw_new_suite":stream.getvalue(),"inherited_parameterless_methods":inherited,"inherited_methods_requiring_filesystem_not_run":[n for n,f in vars(mods["test_audit_replay"]).items() if n.startswith("test_") and callable(f) and inspect.signature(f).parameters],"effects":effects},sort_keys=True))
+raise SystemExit(0 if result.wasSuccessful() else 1)

@@ -1,0 +1,55 @@
+import contextlib,copy,hashlib,io,json,os,sys,types
+SOURCES=__SOURCES__
+mods={}
+for name in ("towerops","audit_replay","decision_trace"):
+    m=types.ModuleType(name);m.__file__="<exact-source:"+name+">";sys.modules[name]=m
+    exec(compile(SOURCES[name],m.__file__,"exec"),m.__dict__);mods[name]=m
+core,replay,adapter=mods["towerops"],mods["audit_replay"],mods["decision_trace"]
+policy=core.SafetyPolicy()
+state=core.WorldState(1,1000.0,(core.Aircraft("LEFT",-5.,0.,10000.,1.,0.),core.Aircraft("RIGHT",5.,0.,10000.,-1.,0.)))
+advisory=core.AdvisoryPlanner(policy).plan(state,1002.)[0]
+room=core.ControlRoom(policy)
+room.apply(state,advisory,core.Approval(advisory.advisory_hash,"approve",1002.2,"Authored control"),core.Ack(advisory.advisory_hash,"accepted",1002.4),1002.5)
+original=copy.deepcopy(room.audit.events)
+def rebuilt(change=None):
+    log=core.AuditLog()
+    for source in original:
+        item=copy.deepcopy(source)
+        if change:change(item)
+        log.append(item["kind"],item["payload"])
+    return log.events
+def omitted(kind,field):
+    return rebuilt(lambda e:e["payload"].pop(field,None) if e["kind"]==kind else None)
+def set_value(kind,field,value):
+    return rebuilt(lambda e:e["payload"].__setitem__(field,value) if e["kind"]==kind else None)
+fixtures=[
+("actual_producer",original,True),
+("missing_before_world",omitted("simulated_actuation","before_world_hash"),False),
+("null_before_world",set_value("simulated_actuation","before_world_hash",None),False),
+("missing_screen_world",omitted("screen_pass","world_hash"),False),
+("null_screen_world",set_value("screen_pass","world_hash",None),False),
+("wrong_present_world",set_value("simulated_actuation","before_world_hash","f"*64),False),
+]
+none=core.AuditLog();none.append("reject",{"reason":"authored rejected control"})
+unknown=core.AuditLog();unknown.append("future_note",{"text":"authored unknown-kind compatibility"})
+screenonly=core.AuditLog();screenonly.append("screen_pass",{"advisory_hashes":[advisory.advisory_hash]})
+fixtures +=[("empty",[],True),("reject_only",none.events,True),("unknown_kind",unknown.events,True),("screen_only_missing_world",screenonly.events,True)]
+effects=[]
+def guard(event,args):
+    if event in ("open","os.mkdir","os.remove","os.rename","os.rmdir","os.link","os.symlink","subprocess.Popen","socket.__new__","socket.connect"):
+        effects.append(event);raise RuntimeError("unexpected effect "+event)
+sys.addaudithook(guard)
+rows=[]
+for name,events,expected in fixtures:
+    snapshot=copy.deepcopy(events);raw=json.dumps(events,ensure_ascii=False)
+    report=replay.replay_audit(events)
+    received=adapter.review_trace(raw)
+    out,err=io.StringIO(),io.StringIO()
+    with contextlib.redirect_stdout(out),contextlib.redirect_stderr(err):
+        prior=sys.stdin;sys.stdin=io.StringIO(raw)
+        try:code=replay.main(["audit_replay.py","-"])
+        finally:sys.stdin=prior
+    actual=json.loads(out.getvalue())
+    assert events==snapshot and report.ok==received["ok"]==actual["ok"]
+    rows.append({"name":name,"expected_ok":expected,"actual_ok":report.ok,"chain_valid":report.chain_valid,"issues":report.issues,"stdin_main_exit":code,"stdout":out.getvalue(),"stderr":err.getvalue(),"input_unchanged":True})
+print(json.dumps({"format":"ultra.tower-replay-world-link.original.v1","python":sys.version,"platform":list(os.uname()),"source_sha256":{k:hashlib.sha256(v.encode()).hexdigest() for k,v in SOURCES.items()},"scope":"Exact Python APIs and captured main(stdin) in one cloud process; no actual filesystem CLI or browser receiving.","fixtures":[{"name":n,"events":e,"expected_ok":ok} for n,e,ok in fixtures],"rows":rows,"effects":effects},sort_keys=True))

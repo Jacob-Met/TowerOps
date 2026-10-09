@@ -1,0 +1,13 @@
+{
+  "format": "ultra.tower-replay-world-link.pre-candidate.v1",
+  "source_baseline": "3715876cb45d051a50873a0c93aa4067f494da6b",
+  "source_blobs": {
+    "towerops": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+    "audit_replay": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+    "decision_trace": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d"
+  },
+  "candidate_generated": false,
+  "actual_original_result": "four absent/null linkage cases incorrectly clean through API, adapter and captured stdin main; complete producer, wrong-present-world finding and four incomplete/nonactuated compatibility controls behave as expected",
+  "scope": "Only already-recorded simulated_actuation must have usable screened-world and before-world identities before a clean linkage result. Empty, rejection-only, unknown kinds and unfinished non-actuated traces keep existing meaning. No exact-digest grammar or after-world/cross-event motion/authority checks are added by this proposed repair.",
+  "qualification": "Cloud CPython3.12 in-memory native Python source APIs and captured main(stdin); no browser, native estate, live planner/model/provider or filesystem receiving claim."
+}

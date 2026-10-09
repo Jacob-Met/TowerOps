@@ -1,0 +1,139 @@
+{
+  "format": "ultra.tower-world-linkage.source-manifest.v1",
+  "actor": "ultra-1b3276062063-source",
+  "baseline": "3715876cb45d051a50873a0c93aa4067f494da6b",
+  "baseline_tree": "f26fede247b68504443bf69fc113f7db90515958",
+  "claim": "https://github.com/Jacob-Met/TowerOps/issues/87",
+  "changed_existing": [
+    "audit_replay.py"
+  ],
+  "unchanged_existing_blob_leaves": 1176,
+  "old_audit_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+  "qualified_candidate_packet": "6c41b81734c9b40dd8590064dc507f45df19e848",
+  "root_acceptance": "f86481b9dee7fd973300befa1aa760b311202e55",
+  "static_acceptance": "32ee57317f164063ee7c06b82cd4b8f1f9faff4a",
+  "mode": "100644",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/original/PRE_CANDIDATE.json",
+      "bytes": 1163,
+      "sha256": "5dcfcf69fba5040c39f5b388714d939975916405d3b50162e52ee477601ac8eb"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/original/original_receipt.json",
+      "bytes": 18788,
+      "sha256": "f031b1d2fa98eb71340c4ff9886456a6ae5eb7476316686a16d31e15f2ed9854"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/original/original_probe.py.txt",
+      "bytes": 3685,
+      "sha256": "59e7a3810c40eb3142aa5f9cac1e12bb9826edffac27b0e0ce0c21ff7d597660"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/original/original_raw_process.json",
+      "bytes": 16000,
+      "sha256": "534eef86614e793b3f1797d92c99dbdef8ec67b31b958224ceb61834919f8103"
+    },
+    {
+      "path": "audit_replay.py",
+      "bytes": 8488,
+      "sha256": "b1a457ddf670b01b1ac62037dfd752009a6da5b5b53d1531a95c746fff9fda75"
+    },
+    {
+      "path": "tests/test_audit_world_linkage.py",
+      "bytes": 6238,
+      "sha256": "a81b5badf0f274f9b20d6e69712d656619082f933890ab2685efeefcaddc590d"
+    },
+    {
+      "path": "AUDIT_REPLAY.md",
+      "bytes": 2902,
+      "sha256": "cb3fabd74df40bb96ab5b6bef778f8657703534b6c4cf8836c4a2976a6bbffeb"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/author-api-receipt.json",
+      "bytes": 3437,
+      "sha256": "69e30b2c0d3030af4de3ab877c516154725ea7ecbf38505eab5e86529ae6140f"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/author-api-harness.py.txt",
+      "bytes": 1677,
+      "sha256": "f5d0f448ef5157932062b365400edf2d69df2fb008107b5745dd482de0385e55"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/author-api-raw-process.json",
+      "bytes": 3527,
+      "sha256": "63221a5fbbea4f4eecdb3e3b3bc2b9cf9543a43296e89e0952e490a30fcca2a2"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/source-scope-proof.json",
+      "bytes": 2387,
+      "sha256": "5adfc13039f615c5ee159f867838d4180ee14f88f79cd300d9c1ae186655aa39"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/baseline-sensitivity.json",
+      "bytes": 21927,
+      "sha256": "285baa6817c69a25781cc86de0dee7eccf21da6590e45800e4cf56af94b5fb56"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/baseline-sensitivity-raw.json",
+      "bytes": 22404,
+      "sha256": "81a1f3cf75001e8e5b7b51a6be04772631d73e941cda13b75a5a02b8cc13a5e0"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/independent/PRE_CANDIDATE.json",
+      "bytes": 23808,
+      "sha256": "9af091574a4e5b04be0703ae1d947987393c52709c10f647f83b92d061dfa7e5"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/EVIDENCE_PATHS.json",
+      "bytes": 1908,
+      "sha256": "d6c61f1cec50c22193723126fef615791f79c1b50188bd39d9907922f56dbaff"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/independent-static/REVIEW.json",
+      "bytes": 5936,
+      "sha256": "f1b618dfa5d3758609b17f9a4dcff521e9a004c15b333346ad9ef9ce75bdafb5"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/independent-static/TWO_HUNK_PROOF.json",
+      "bytes": 1918,
+      "sha256": "557b49eb2855798853aa34fbaf76cba57a405dfe9220593ec8485b5e02d3b057"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/independent/BASELINE_PACKET.json",
+      "bytes": 68721,
+      "sha256": "06aefae389cc62454e386e0e8e4d96583cee3db32c9806df55d99d2a2ecb7a9c"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/independent/ACCEPTANCE_PACKET.json",
+      "bytes": 83005,
+      "sha256": "f6257b11f111582c0e38c32355f43fbad81919b8c06338bc01df9d9f391cb7e9"
+    },
+    {
+      "path": "docs/qualification/audit-world-link-ultra-1b3276062063/README.md",
+      "bytes": 3793,
+      "sha256": "5141f50506edd296e08f9ab650d2dde82db1fd807336c2c2cb5c8bfae826185f"
+    }
+  ],
+  "source_integration": {
+    "commit_message_skip": "[skip actions]",
+    "workflow_pins": [
+      {
+        "path": ".github/workflows/airspace-demo.yml",
+        "git": "24356d4f5ce88f21cc1a27329b06df351e156810"
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "git": "4791e16741c2ee136585d8f4d99f918535a3a017"
+      }
+    ],
+    "ordinary_main_gates": "main protected:false;requiredchecks off/contexts[]/checks[];rulesets[] observed;fresh exact checks remain integration owner's responsibility",
+    "not_claimed": [
+      "full repository pytest/Ruff",
+      "OS-process CLI tests",
+      "browser/installed-estate adoption",
+      "Actions execution"
+    ]
+  }
+}
