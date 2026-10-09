@@ -4,7 +4,7 @@
   "repository": "Jacob-Met/TowerOps",
   "issue": "https://github.com/Jacob-Met/TowerOps/issues/32",
   "receiving_base": "e522e53246986327b7903f3c404abf8a04ab5f1d",
-  "coordination": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6055190250",
+  "coordination": "[redacted]",
   "state": "Native verification and independent exact-source receiving passed; recorded before hosted CI and integration.",
   "source_recovery": {
     "scope": "31 build/source Git blobs, not a complete local Git clone",
