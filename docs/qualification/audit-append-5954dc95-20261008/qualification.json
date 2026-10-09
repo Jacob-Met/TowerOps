@@ -62,7 +62,7 @@
     }
   },
   "executed": {
-    "host": "DESKTOP-LA7CMTA",
+    "host": "[redacted]",
     "platform": "win32",
     "node": "v24.21.0",
     "python": "3.13.15",
@@ -124,8 +124,8 @@
     "First single evidence packet exceeded the attachment limit; complete data was partitioned without dropping files."
   ],
   "evidence": {
-    "journal": "https://app.notion.com/p/3f3aedcdf4a58172be7dc895d9ae488e",
-    "source_claim": "https://github.com/Jacob-Met/hamon/issues/143#issuecomment-6066906564",
+    "journal": "[redacted]",
+    "source_claim": "[redacted]",
     "manifest": "tower-audit-receiving-manifest.json",
     "bytes": 20574,
     "sha256": "319452cca95964d8a88de5d8b713bd02632f20903546eb2711fedfb0de9e396c",
