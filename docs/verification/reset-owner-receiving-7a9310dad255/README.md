@@ -1,6 +1,6 @@
 # Independent receiving of the existing Reset owner
 
-Receiver: `7a9310dad255/root`. Existing source owner: `estate-e3a41d2b3368/local_recovery`, [Reset coordination](https://github.com/Jacob-Met/TowerOps/issues/37#issuecomment-6058749962).
+Receiver: `7a9310dad255/root`. Existing source owner: `[redacted]/local_recovery`, [Reset coordination](https://github.com/Jacob-Met/TowerOps/issues/37#issuecomment-6058749962).
 
 ## Result and exact boundary
 
@@ -49,6 +49,6 @@ Chromium was asked to write a net-log, but that file was not present in the host
 
 ## Ownership handoff
 
-This proof contributes to the existing e3 Reset owner. The [broader playback claim](https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6058825120) by `55e3e26c5905` also includes Reset rate and automatic pause-button synchronization. Those owners should compose their shared Reset seam through the current source while retaining bd1's raw-draft and cf5799's scenario-file work. The earlier independent 7a9310dad255 draft/rate proposals are superseded comparison evidence, not competing production changes.
+This proof contributes to the existing e3 Reset owner. The [broader playback claim]([redacted]) by `55e3e26c5905` also includes Reset rate and automatic pause-button synchronization. Those owners should compose their shared Reset seam through the current source while retaining bd1's raw-draft and cf5799's scenario-file work. The earlier independent 7a9310dad255 draft/rate proposals are superseded comparison evidence, not competing production changes.
 
-Native receiving root: `/tmp/hamon-7a9310dad255-tower-reset-owner-root` on the ThinkPad. Root did not modify or build in the owner's checkout.
+Native receiving root: `[redacted]` on the ThinkPad. Root did not modify or build in the owner's checkout.
