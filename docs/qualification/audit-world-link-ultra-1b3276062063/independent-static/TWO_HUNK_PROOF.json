@@ -1,0 +1,19 @@
+{
+  "baseline_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+  "baseline_sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+  "candidate_sha256": "b1a457ddf670b01b1ac62037dfd752009a6da5b5b53d1531a95c746fff9fda75",
+  "exactly_two_unique_replacements": true,
+  "forward_entire_source_equal": true,
+  "reverse_entire_source_equal": true,
+  "all_outside_regions_exact": true,
+  "changes": [
+    {
+      "old": "- the actuation's ``before_world_hash`` matches the world hash the advisory\n  was screened against.",
+      "replacement": "- the actuation's ``before_world_hash`` and its screened world hash are\n  nonblank strings and match exactly. Missing identity is a finding, not\n  evidence of a matching world."
+    },
+    {
+      "old": "            if (\n                adv.screen_world_hash is not None\n                and act.before_world_hash is not None\n                and act.before_world_hash != adv.screen_world_hash\n            ):\n                adv.add_issue(\"actuation before_world_hash does not match screened world_hash\")",
+      "replacement": "            screen_bound = (\n                isinstance(adv.screen_world_hash, str)\n                and bool(adv.screen_world_hash.strip())\n            )\n            before_bound = (\n                isinstance(act.before_world_hash, str)\n                and bool(act.before_world_hash.strip())\n            )\n            if not screen_bound:\n                adv.add_issue(\"actuation has no usable screened world_hash\")\n            if not before_bound:\n                adv.add_issue(\"actuation has no usable before_world_hash\")\n            if (\n                screen_bound\n                and before_bound\n                and act.before_world_hash != adv.screen_world_hash\n            ):\n                adv.add_issue(\"actuation before_world_hash does not match screened world_hash\")"
+    }
+  ]
+}

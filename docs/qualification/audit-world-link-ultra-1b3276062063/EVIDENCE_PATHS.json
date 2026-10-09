@@ -1,0 +1,36 @@
+{
+  "format": "ultra.exact-evidence-paths.v1",
+  "reason": "Historical compact harness templates are archived verbatim as text; they are not maintained runnable modules or repo lint targets. Original packet paths and exact content hashes remain recoverable.",
+  "mapping": [
+    {
+      "packet": "8505472a30fdcd01188c1e617e139533edbf9f52",
+      "original_path": "PRE_CANDIDATE.json",
+      "archived_path": "docs/qualification/audit-world-link-ultra-1b3276062063/original/PRE_CANDIDATE.json",
+      "sha256": "5dcfcf69fba5040c39f5b388714d939975916405d3b50162e52ee477601ac8eb"
+    },
+    {
+      "packet": "8505472a30fdcd01188c1e617e139533edbf9f52",
+      "original_path": "original_receipt.json",
+      "archived_path": "docs/qualification/audit-world-link-ultra-1b3276062063/original/original_receipt.json",
+      "sha256": "f031b1d2fa98eb71340c4ff9886456a6ae5eb7476316686a16d31e15f2ed9854"
+    },
+    {
+      "packet": "8505472a30fdcd01188c1e617e139533edbf9f52",
+      "original_path": "original_probe.py",
+      "archived_path": "docs/qualification/audit-world-link-ultra-1b3276062063/original/original_probe.py.txt",
+      "sha256": "59e7a3810c40eb3142aa5f9cac1e12bb9826edffac27b0e0ce0c21ff7d597660"
+    },
+    {
+      "packet": "8505472a30fdcd01188c1e617e139533edbf9f52",
+      "original_path": "original_raw_process.json",
+      "archived_path": "docs/qualification/audit-world-link-ultra-1b3276062063/original/original_raw_process.json",
+      "sha256": "534eef86614e793b3f1797d92c99dbdef8ec67b31b958224ceb61834919f8103"
+    },
+    {
+      "packet": "6c41b81734c9b40dd8590064dc507f45df19e848",
+      "original_path": "docs/qualification/audit-world-link-ultra-1b3276062063/author-api-harness.py",
+      "archived_path": "docs/qualification/audit-world-link-ultra-1b3276062063/author-api-harness.py.txt",
+      "sha256": "f5d0f448ef5157932062b365400edf2d69df2fb008107b5745dd482de0385e55"
+    }
+  ]
+}

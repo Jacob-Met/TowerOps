@@ -1,0 +1,911 @@
+{
+  "format": "ultra.towerops.actuation-world-link-independent-expectations.v1",
+  "actor": "ultra-1b3276062063",
+  "exposure": "Current producer, public replay contract and original replay source read; candidate source and successor author tests unseen. Expectations frozen before independent candidate exposure.",
+  "basis": {
+    "main": "3715876cb45d051a50873a0c93aa4067f494da6b",
+    "towerops": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+    "audit_replay": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+    "decision_trace": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+    "owner_claim": 87
+  },
+  "contract": "For actuated histories, unavailable or unusable screened/before-world references produce a semantic finding. Present nonblank strings are compared exactly without normalization or a new SHA-format grammar. Unfinished nonactuated, empty, reject-only and unknown-kind histories keep existing behavior. This is an explicit completeness tightening of historical available-link checking, not a claim that all legacy omissions were previously forbidden.",
+  "chain_construction": "For each row event i: set seq=i, prev_hash=previous event_hash or64zeroes; hash SHA256(prev ASCII + LF + json.dumps(event,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode('utf-8')); append event_hash. All listed fixture events are therefore validly rehashed before product receiving. No fixture comes from live actuation.",
+  "receiving": "Run exact baseline/candidate replay_audit and unchanged decision_trace.review_trace plus actual main(argv) with captured stdin/stdout/stderr; this is in-process CLI-entry receiving, not independent OS-child/native/UI receiving. Report counters, complete JSON, findings, source/input immutability and original mismatched-link diagnostic preservation. Bound local execution to fixed case set; no filesystem or actuation calls.",
+  "rows": [
+    {
+      "id": "valid-arbitrary-nonblank",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": "world::α"
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": "world::α",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": true,
+        "cli_exit": 0,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "missing-before",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": "world"
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "missing-screen",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ]
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": "world",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "both-missing",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ]
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "null-before",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": "world"
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": null,
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "null-screen",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": null
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": "world",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "both-null",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": null
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": null,
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "empty-pair",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": ""
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": "",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "blank-pair",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": " \t"
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": " \t",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "equal-number",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": 0
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": 0,
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "equal-boolean",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": false
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": false,
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "equal-array",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": [
+              "world"
+            ]
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": [
+              "world"
+            ],
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "equal-object",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": {
+              "id": "world"
+            }
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": {
+              "id": "world"
+            },
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "nonblank-edge-whitespace-exact",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": " world "
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": " world ",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": true,
+        "cli_exit": 0,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "do-not-normalize",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": " world "
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": "world",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "present-mismatch",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": "world-A"
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": "world-B",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "nonactuated-partial",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ]
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": true,
+        "cli_exit": 0,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "empty",
+      "events": [],
+      "expected": {
+        "chain_valid": true,
+        "ok": true,
+        "cli_exit": 0,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "reject-and-unknown",
+      "events": [
+        {
+          "kind": "reject",
+          "payload": {
+            "reason": "fictional rejection"
+          }
+        },
+        {
+          "kind": "future_record",
+          "payload": {
+            "world_hash": null
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": true,
+        "cli_exit": 0,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "two-advisory-isolation",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": "world-A"
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": "world-A",
+            "after_world_hash": "after::Ω"
+          }
+        },
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-002"
+            ],
+            "world_hash": "world-B"
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-002",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-002",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-002",
+            "after_world_hash": "after::Ω"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "second-actuation-missing",
+      "events": [
+        {
+          "kind": "screen_pass",
+          "payload": {
+            "advisory_hashes": [
+              "advisory-root-receiving-001"
+            ],
+            "world_hash": "world"
+          }
+        },
+        {
+          "kind": "approval",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "decision": "approve",
+            "approver": "independent-receiver"
+          }
+        },
+        {
+          "kind": "ack",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "status": "accepted"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "before_world_hash": "world",
+            "after_world_hash": "after::Ω"
+          }
+        },
+        {
+          "kind": "simulated_actuation",
+          "payload": {
+            "advisory_hash": "advisory-root-receiving-001",
+            "after_world_hash": "after-2"
+          }
+        }
+      ],
+      "expected": {
+        "chain_valid": true,
+        "ok": false,
+        "cli_exit": 1,
+        "source_unchanged": true
+      }
+    }
+  ],
+  "extra_control": {
+    "id": "tampered-valid-fixture",
+    "from": "valid-arbitrary-nonblank",
+    "change": "After construction change last payload.before_world_hash to 'changed-without-rehash' without recomputing any event_hash.",
+    "expected": {
+      "chain_valid": false,
+      "ok": false,
+      "cli_exit": 1,
+      "advisory_count": 0
+    }
+  }
+}

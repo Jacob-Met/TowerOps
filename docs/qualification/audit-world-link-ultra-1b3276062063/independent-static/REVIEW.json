@@ -1,0 +1,73 @@
+{
+  "schema": "ultra.tower-world-linkage.independent-static-review.v1",
+  "reviewer": "ultra-1b3276062063-mac",
+  "reviewed_utc": "2026-10-09 03:20:56 UTC",
+  "disposition": "ACCEPT; no blocking source finding",
+  "candidate_packet": "6c41b81734c9b40dd8590064dc507f45df19e848",
+  "baseline": "3715876cb45d051a50873a0c93aa4067f494da6b",
+  "baseline_tree": "f26fede247b68504443bf69fc113f7db90515958",
+  "source_pins": {
+    "producer": {
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+    },
+    "baseline_checker": {
+      "git_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2"
+    },
+    "adapter": {
+      "git_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675"
+    },
+    "candidate_leaves": [
+      {
+        "path": "audit_replay.py",
+        "bytes": 8488,
+        "sha256": "b1a457ddf670b01b1ac62037dfd752009a6da5b5b53d1531a95c746fff9fda75"
+      },
+      {
+        "path": "tests/test_audit_world_linkage.py",
+        "bytes": 6238,
+        "sha256": "a81b5badf0f274f9b20d6e69712d656619082f933890ab2685efeefcaddc590d"
+      },
+      {
+        "path": "AUDIT_REPLAY.md",
+        "bytes": 2902,
+        "sha256": "cb3fabd74df40bb96ab5b6bef778f8657703534b6c4cf8836c4a2976a6bbffeb"
+      },
+      {
+        "path": "docs/qualification/audit-world-link-ultra-1b3276062063/author-api-receipt.json",
+        "bytes": 3437,
+        "sha256": "69e30b2c0d3030af4de3ab877c516154725ea7ecbf38505eab5e86529ae6140f"
+      },
+      {
+        "path": "docs/qualification/audit-world-link-ultra-1b3276062063/author-api-harness.py",
+        "bytes": 1677,
+        "sha256": "f5d0f448ef5157932062b365400edf2d69df2fb008107b5745dd482de0385e55"
+      },
+      {
+        "path": "docs/qualification/audit-world-link-ultra-1b3276062063/author-api-raw-process.json",
+        "bytes": 3527,
+        "sha256": "63221a5fbbea4f4eecdb3e3b3bc2b9cf9543a43296e89e0952e490a30fcca2a2"
+      }
+    ]
+  },
+  "observations": [
+    "All six candidate-packet content byte lengths/SHA256 hashes were independently recomputed. Direct baseline tree maps the producer, baseline checker and adapter to their stated full Git identities.",
+    "Entire checker is reproduced from baseline by exactly two unique replacements: module contract text and the actuation world-linkage conditional. Reverse substitution restores the entire baseline byte-for-byte. Thus imports, dataclasses/report shape, chain verifier invocation/early return, first-screen selection, binding collection, lifecycle logic, unknown event kinds and CLI input/output/exit behavior are unchanged outside the intended finding semantics.",
+    "The unchanged producer writes screen_pass.world_hash from state.world_hash and simulated_actuation.before_world_hash from that same state.world_hash; the new condition checks that existing relationship without recomputing world state or adding authority.",
+    "For every recorded actuation, each binding independently requires a string whose strip() result is nonempty. Missing/null/empty/whitespace/non-string values cannot yield a clean world link even when equal to each other. A later deficient actuation still contributes a finding after an earlier valid one; existing issue deduplication only collapses repeated diagnostic text.",
+    "strip() is used solely as a truth predicate. The stored identity is not assigned, trimmed, case-folded, normalized, parsed as hex or otherwise replaced. Equality compares the two original strings, so arbitrary exact nonblank labels, including surrounding spaces, remain admitted; differing original strings remain findings.",
+    "These new checks are inside the existing for-actuation loop. Empty, rejection-only, unknown-kind and unfinished nonactuated histories gain no world-binding requirement. Existing lifecycle findings and invalid-chain behavior remain effective.",
+    "The new maintained tests derive their normal four-event history through the actual unchanged producer, rebuild deliberately altered histories through AuditLog, check both direct replay and unchanged decision_trace delivery, and assert input equality. Ten source-read test methods cover availability, equal invalid values, opaque labels, non-normalization, prefixes, unknown/reject, later invalid actuation, broken chain and captured stdin behavior. None was executed by this reviewer.",
+    "The guide accurately distinguishes complete recorded actuation links from completeness/authenticity of a saved history. It explicitly excludes after-world validation, aircraft-motion reconstruction, approval authentication, policy rerun and actuation/repair; legacy exact-string compatibility is documented.",
+    "The production delta is generic type/presence/equality logic only. It contains no root/author fixture values, scene identifiers, expected digest literals, fixture-specific branching, external fixture imports, test callbacks or qualification-packet-dependent behavior."
+  ],
+  "scope_limits": [
+    "Static source/integrity review only; no author/root test rerun, parser/compiler invocation, native/host/process/browser/UI receiving.",
+    "Root's independent source-blind22-group execution and author10+13 API execution are separate evidence, not claimed by this review.",
+    "No planner, actuation, producer, adapter, UI controls, dependency, host, route, workflow or source-ref mutation.",
+    "This accepts the bounded per-record world-link completeness correction, not every pre-existing malformed-Python-object or saved-history completeness behavior."
+  ],
+  "integration": "Preserve exact product/test/guide leaves and include this review plus two-hunk proof unchanged. A fresh final-tree/source comparison remains separate from this source-packet acceptance."
+}
