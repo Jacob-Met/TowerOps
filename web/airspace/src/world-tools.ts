@@ -12,7 +12,7 @@ export function createAircraft(input:FlightInput):Aircraft {
 }export function parseWorldState(value:unknown):WorldState {
   if(!value||typeof value!=='object'||Array.isArray(value)) throw new Error('World JSON must be an object.');
   const world=value as Record<string,unknown>;
-  if(typeof world.version!=='number'||!Number.isInteger(world.version)||world.version<0) throw new Error('World version must be a non-negative integer.');
+  if(typeof world.version!=='number'||!Number.isSafeInteger(world.version)||world.version<0) throw new Error('World version must be a non-negative safe integer.');
   if(typeof world.observed_at!=='number'||!Number.isFinite(world.observed_at)) throw new Error('observed_at must be a finite timestamp in seconds.');
   if(!Array.isArray(world.aircraft)||world.aircraft.length<1||world.aircraft.length>60) throw new Error('Supply between 1 and 60 aircraft.');
   const seen=new Set<string>();
