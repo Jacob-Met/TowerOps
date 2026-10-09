@@ -1,6 +1,6 @@
 # TowerOps radar framing — native receiving
 
-This packet qualifies the five-file radar framing contribution against TowerOps main **093f88b29d6e1ede778f967528c7e010b7689ab1** (tree **4a87643d57cabf81e570b21c119f00b43f79448e**). It is author qualification of the frozen candidate, before integration and public deployment. The source claim is [HAMON#140 comment6061148593](https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6061148593).
+This packet qualifies the five-file radar framing contribution against TowerOps main **093f88b29d6e1ede778f967528c7e010b7689ab1** (tree **4a87643d57cabf81e570b21c119f00b43f79448e**). It is author qualification of the frozen candidate, before integration and public deployment. The source claim is [[redacted]]([redacted]).
 
 ## User-visible change
 
