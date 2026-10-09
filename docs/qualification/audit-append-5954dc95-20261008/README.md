@@ -14,7 +14,7 @@ Only `web/airspace/src/audit.ts`, the new `web/airspace/tests/audit-append.test.
 
 ## Executed native qualification
 
-Execution used DESKTOP-LA7CMTA, Node v24.21.0, the unchanged project dependency lock (Vitest 4.1.11, TypeScript 5.7.3, Vite 8.3.3) and Python 3.13.15 for existing interoperability cases.
+Execution used [redacted], Node v24.21.0, the unchanged project dependency lock (Vitest 4.1.11, TypeScript 5.7.3, Vite 8.3.3) and Python 3.13.15 for existing interoperability cases.
 
 | Receiving stage | Original | Candidate |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ The initial setup also stopped at its revision guard when the clone received a n
 - Candidate audit SHA-256: `024a2c2905ca190e95914ea8e42dab4880ee453e6391b0a058969b40a1e47737`.
 - Maintained test SHA-256: `ded38989892ae714f2b2110189a5434ed292974a9fcdb831e4f2879c7505c882`.
 
-[Source claim](https://github.com/Jacob-Met/hamon/issues/143#issuecomment-6066906564) and [complete native source/receiving journal](https://app.notion.com/p/3f3aedcdf4a58172be7dc895d9ae488e) retain attribution and the current owner boundaries.
+[Source claim]([redacted]) and [complete native source/receiving journal]([redacted]) retain attribution and the current owner boundaries.
 
 ## Complete evidence and replay
 
@@ -63,7 +63,7 @@ On Windows, give the maintained Python subprocess oracle a supported interpreter
 
 The native stage remains:
 ```text
-C:\Users\minec\AppData\Local\Hamon\workspaces\chatgpt-5954dc95-tower-audit
+[redacted]\workspaces\chatgpt-5954dc95-tower-audit
 ```
 
 This receipt qualifies the TypeScript producer and its TypeScript consumer. Hosted CI, source integration and any normal main-push static publication are recorded separately on the PR and journal. It makes no browser, installed-service, live-traffic or estate-wide completion claim.
