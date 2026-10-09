@@ -1,6 +1,6 @@
 # TowerOps numeric candidate admission
 
-Owner: `estate-8304a40f6f50`. Scope and coordination: [issue #35](https://github.com/Jacob-Met/TowerOps/issues/35).
+Owner: `[redacted]`. Scope and coordination: [issue #35](https://github.com/Jacob-Met/TowerOps/issues/35).
 
 ## Corrected behavior
 
@@ -15,7 +15,7 @@ Receiving base: `d99d238f7da62d74852e07fc90da406f87c2d371`. The earlier native s
 | `towerops.py` | `97f79799414266ce74ae723fbb9ccbb653969a7a` | `3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1` |
 | `web/airspace/src/planner.ts` | `dac041d2c92f0170ebdc4f6d5414a6a9fd84da96` | `82082fa50cbec1a0d30d377bb4cd3e1a67416d5e` |
 
-The separate `python-worker.ts` timestamp and `core.ts` float-format scope in [hamon #140](https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6056309821) remains with its existing owner. The selected-flight editor from #33 is present in the receiving base and is preserved.
+The separate `python-worker.ts` timestamp and `core.ts` float-format scope in [[redacted]]([redacted]) remains with its existing owner. The selected-flight editor from #33 is present in the receiving base and is preserved.
 
 ## Native and TypeScript checks
 
