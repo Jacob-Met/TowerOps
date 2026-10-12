@@ -1,0 +1,134 @@
+{
+  "source_commit": "a86b661ee66c19c2617ed9ee75e193ed6d0f21a8",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "source_sha256": {
+    "audit_replay.py": "b1a457ddf670b01b1ac62037dfd752009a6da5b5b53d1531a95c746fff9fda75",
+    "decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+  },
+  "cases": [
+    {
+      "case": "wrapper-hides-failed-history",
+      "raw": "{\"audit_events\":[{\"seq\": 0, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"decision\": \"approve\"}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"bfb10c2a00d28179ceccbf7b8642f7aea45044a4781788111d40351e57c07ae4\"}],\"audit_events\":[]}",
+      "raw_sha256": "28ec8c87a02176b80e06f8d15d639c2db06bdadf52955fa429b7572dc0d7f3fe",
+      "adapter": {
+        "chain_valid": true,
+        "ok": true,
+        "event_count": 0,
+        "advisories": [],
+        "rejects": [],
+        "issues": []
+      },
+      "cli_exit": 0,
+      "cli_stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 0,\n  \"actuated\": 0,\n  \"rejects\": 0,\n  \"issues\": []\n}\n",
+      "cli_stderr": ""
+    },
+    {
+      "case": "event-kind",
+      "raw": "[{\"seq\": 0, \"kind\":\"approval\",\"kind\":\"reject\", \"payload\": {\"reason\": \"stale_state\"}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"b449d41376ab887099ba78aa51045c8f014e1d46553b6ce7653707c2f54d7666\"}]",
+      "raw_sha256": "33ffa25872315fdf78674119d51f5ce90a5f53b1b25a24f89e60bd5fa388bdc9",
+      "adapter": {
+        "chain_valid": true,
+        "ok": true,
+        "event_count": 1,
+        "advisories": [],
+        "rejects": [
+          {
+            "seq": 0,
+            "reason": "stale_state"
+          }
+        ],
+        "issues": []
+      },
+      "cli_exit": 0,
+      "cli_stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 0,\n  \"actuated\": 0,\n  \"rejects\": 1,\n  \"issues\": []\n}\n",
+      "cli_stderr": ""
+    },
+    {
+      "case": "payload-value",
+      "raw": "[{\"seq\": 0, \"kind\": \"reject\", \"payload\": {\"reason\":\"other\",\"reason\":\"stale_state\"}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"b449d41376ab887099ba78aa51045c8f014e1d46553b6ce7653707c2f54d7666\"}]",
+      "raw_sha256": "18a4e34d687cfea3ed97eea646d85b3ae0dccf8479aa80328da64d5a55de5b43",
+      "adapter": {
+        "chain_valid": true,
+        "ok": true,
+        "event_count": 1,
+        "advisories": [],
+        "rejects": [
+          {
+            "seq": 0,
+            "reason": "stale_state"
+          }
+        ],
+        "issues": []
+      },
+      "cli_exit": 0,
+      "cli_stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 0,\n  \"actuated\": 0,\n  \"rejects\": 1,\n  \"issues\": []\n}\n",
+      "cli_stderr": ""
+    },
+    {
+      "case": "deep-value",
+      "raw": "[{\"seq\": 0, \"kind\": \"observer_note\", \"payload\": {\"metadata\": {\"label\":\"hidden\",\"label\":\"retained\"}}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"40e4420c83aa0faf52b6dc12eeb9a197a851c54a234efeb9793dab98828a905b\"}]",
+      "raw_sha256": "2e82920928bde498322deb69e6cb0431a0d6262066be13fb44e8c46c6a315317",
+      "adapter": {
+        "chain_valid": true,
+        "ok": true,
+        "event_count": 1,
+        "advisories": [],
+        "rejects": [],
+        "issues": []
+      },
+      "cli_exit": 0,
+      "cli_stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 0,\n  \"actuated\": 0,\n  \"rejects\": 0,\n  \"issues\": []\n}\n",
+      "cli_stderr": ""
+    },
+    {
+      "case": "escaped-wrapper-name",
+      "raw": "{\"audit_events\":[null],\"\\u0061udit_events\":[]}",
+      "raw_sha256": "69cb1b6f197e413f6a2629a408e1944cb657cb05333e29dcdc8399f9e2ea0cf6",
+      "adapter": {
+        "chain_valid": true,
+        "ok": true,
+        "event_count": 0,
+        "advisories": [],
+        "rejects": [],
+        "issues": []
+      },
+      "cli_exit": 0,
+      "cli_stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 0,\n  \"actuated\": 0,\n  \"rejects\": 0,\n  \"issues\": []\n}\n",
+      "cli_stderr": ""
+    },
+    {
+      "case": "equal-values",
+      "raw": "{\"audit_events\":[],\"audit_events\":[]}",
+      "raw_sha256": "cf49a2a88144bb4c5ef286994caca180205171b5a632b58fbf3fe8cc4898f797",
+      "adapter": {
+        "chain_valid": true,
+        "ok": true,
+        "event_count": 0,
+        "advisories": [],
+        "rejects": [],
+        "issues": []
+      },
+      "cli_exit": 0,
+      "cli_stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 0,\n  \"actuated\": 0,\n  \"rejects\": 0,\n  \"issues\": []\n}\n",
+      "cli_stderr": ""
+    },
+    {
+      "case": "unrelated-wrapper-metadata",
+      "raw": "{\"audit_events\":[],\"note\":1,\"note\":2}",
+      "raw_sha256": "f7cb4faefa4c23ac9d4f4052c9cca06c039b418cc7c5e3b661c124d00ab1035a",
+      "adapter": {
+        "chain_valid": true,
+        "ok": true,
+        "event_count": 0,
+        "advisories": [],
+        "rejects": [],
+        "issues": []
+      },
+      "cli_exit": 0,
+      "cli_stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 0,\n  \"actuated\": 0,\n  \"rejects\": 0,\n  \"issues\": []\n}\n",
+      "cli_stderr": ""
+    }
+  ],
+  "qualification_note": "Original unchanged production source. The new regression suite returned 21 failed, 4 passed; all failing cases accepted duplicate fields before the repair."
+}

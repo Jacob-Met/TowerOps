@@ -10,7 +10,7 @@ import json
 from dataclasses import asdict
 from typing import Any
 
-from audit_replay import replay_audit
+from audit_replay import _unique_object, replay_audit
 
 MAX_TRACE_BYTES = 2 * 1024 * 1024
 MAX_TRACE_EVENTS = 5000
@@ -27,7 +27,7 @@ def review_trace(raw: str) -> dict[str, Any]:
     if size > MAX_TRACE_BYTES:
         raise ValueError("Decision trace exceeds the 2 MiB file limit.")
     try:
-        data = json.loads(raw)
+        data = json.loads(raw, object_pairs_hook=_unique_object)
     except (ValueError, RecursionError) as exc:
         raise ValueError("Decision trace is not readable JSON.") from exc
     if isinstance(data, dict):
