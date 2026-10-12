@@ -1,0 +1,24 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import crypto from 'node:crypto';import {execFileSync} from 'node:child_process';
+import {createServer} from 'file:///D:/Hamon/worktrees/towerops-discovery-0378a7b6/web/airspace/node_modules/vite/dist/node/index.js';
+import {chromium} from 'file:///D:/Hamon/worktrees/surgeon-trails-0378a7b6-proof/browser-tools/node_modules/playwright-core/index.mjs';
+const root='D:/Hamon/worktrees/towerops-discovery-0378a7b6',proof='D:/Hamon/worktrees/towerops-copy-flight-0378a7b6-proof',out=proof+'/baseline-browser-v2';
+fs.mkdirSync(out);const sha=b=>crypto.createHash('sha256').update(b).digest('hex');const files=['web/airspace/src/main.ts','web/airspace/index.html','web/airspace/src/track-edit.ts','web/airspace/src/world-tools.ts','web/airspace/src/core.ts','web/airspace/src/python.ts','web/airspace/src/python-worker.ts','towerops.py'];
+const hashes=()=>Object.fromEntries(files.map(p=>[p,sha(fs.readFileSync(root+'/'+p))]));const original=hashes();const report={at:new Date().toISOString(),source:execFileSync('git',['-C',root,'rev-parse','HEAD'],{encoding:'utf8'}).trim(),node:process.version,sourceHashes:original,groups:[],errors:[],externalRequests:[]};
+const server=await createServer({root:root+'/web/airspace',configFile:false,cacheDir:proof+'/baseline-vite-cache',logLevel:'error',server:{host:'127.0.0.1',port:0}});await server.listen();const base='http://127.0.0.1:'+server.httpServer.address().port;let browser;
+try{
+browser=await chromium.launch({executablePath:'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',headless:true,env:{...process.env,TEMP:proof+'/temp',TMP:proof+'/temp'},args:['--disable-background-networking','--no-first-run']});
+const page=await browser.newPage({viewport:{width:1440,height:1000}});page.on('pageerror',e=>report.errors.push(String(e)));await page.route('**/*',route=>{if(new URL(route.request().url()).origin===base)return route.continue();report.externalRequests.push(route.request().url());return route.abort();});
+await page.goto(base,{waitUntil:'networkidle'});await page.waitForFunction(()=>document.querySelector('#flight-count')?.textContent==='2 FLIGHTS');
+await page.locator('.control-card>summary').click();await page.locator('.state-workbench>summary').click();
+const input={version:7,observed_at:1000,aircraft:[{aircraft_id:'COPYBASE',x_nm:3.125,y_nm:-4.75,altitude_ft:12345,vx_nm_min:1.23456789,vy_nm_min:-0.375,climb_ft_min:75},{aircraft_id:'OTHER',x_nm:50,y_nm:20,altitude_ft:15000,vx_nm_min:-1,vy_nm_min:0.5,climb_ft_min:0}]};
+await page.locator('#world-json').fill(JSON.stringify(input));await page.locator('#load-world').click();await page.waitForFunction(()=>document.querySelector('#edit-selected-track')?.textContent==='Edit COPYBASE');
+assert.equal(await page.getByRole('button',{name:/^(copy|duplicate)(\s|$)/i}).count(),0);assert.equal(await page.locator('#flight-id').inputValue(),'TWR820');
+await page.locator('#edit-selected-track').click();assert.equal(await page.locator('#flight-id').inputValue(),'COPYBASE');assert.equal(await page.locator('#flight-id').evaluate(e=>e.readOnly),true);
+await page.locator('#flight-x').fill('4.125');await page.locator('#preview-track-edit').click();await page.waitForFunction(()=>!document.querySelector('#apply-track-edit').disabled);assert.equal(await page.locator('#flight-count').textContent(),'2 FLIGHTS');await page.screenshot({path:out+'/selected-edit-only.png',fullPage:true});
+await page.locator('#cancel-track-edit').click();await page.locator('#export-world').click();assert.deepEqual(JSON.parse(await page.locator('#world-json').inputValue()),input);
+report.groups.push('selected trajectory can be edited under fixed callsign, but no independent copy action; cancel preserves complete world and original new-flight draft');
+await page.locator('#reset-world').click();await page.locator('#run-planner').click();await page.waitForFunction(()=>document.querySelector('#proposal-state')?.textContent==='PROPOSAL READY',null,{timeout:90000});
+await page.locator('#approve').click();await page.locator('#readback').click();await page.waitForFunction(()=>document.querySelector('#world-title')?.textContent==='No projected conflict',null,{timeout:90000});assert.match(await page.locator('#audit-status').textContent(),/VALID/);
+report.groups.push('original native CPython planner, approval, readback and audit workflow passes');
+assert.deepEqual(report.errors,[]);assert.deepEqual(report.externalRequests,[]);assert.deepEqual(hashes(),original);report.sourceUnchanged=true;report.result='pass';
+}catch(error){report.result='fail';report.error=String(error.stack??error);process.exitCode=1;}finally{await browser?.close();await server.close();report.completedAt=new Date().toISOString();fs.writeFileSync(out+'/receipt.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));}

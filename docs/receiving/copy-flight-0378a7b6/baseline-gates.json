@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-08T21:06:33.719Z",
+  "source": "2119eac83f97763cfb66f8c29bff506437ba4725",
+  "node": "v24.19.0",
+  "checks": [
+    {
+      "tag": "tests",
+      "command": "npm test",
+      "code": 1
+    }
+  ],
+  "completedAt": "2026-10-08T21:06:37.167Z"
+}

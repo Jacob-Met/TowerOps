@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-08T21:25:13.635Z",
+  "head": "531f9763246c8cddeefecd939bb4f5c9db22af3a",
+  "tree": "4bd0fa7395af9c1f9fa32dcef71f757db6b65e92",
+  "parent": "2119eac83f97763cfb66f8c29bff506437ba4725",
+  "files": {
+    "web/airspace/src/track-copy.ts": "1ec5395a3281c5c1d3bc9247dfcdb620fd711ff2c1dae84e2fa7690748282f0a",
+    "web/airspace/src/track-copy-view.ts": "ec80ff2c8592bee97db9a80fdc0481e938eaa2f5055d64055849edb2b5a638f4",
+    "web/airspace/tests/track-copy.test.ts": "f5a1614a3310ac2704a3cb09aa22d39dc79c3b21ebe142f173ad9791a675c8d1",
+    "web/airspace/src/main.ts": "a40578525188b70c7b39756e1c197b9822b761b9cc1433775ef03bb7042b1cee",
+    "web/airspace/index.html": "580a5acfcebe37e854a3af163b20352670bf75cfca47e6f8b9b4df15d2aba480",
+    "COPY_FLIGHT.md": "78bf6985cac81e59ba1fdccafa4b6a0b53d2d83985852a6c11c105400cd99204",
+    "README.md": "a20b358dfd63160eefad64c22db8519e17eac8d50ea23959851636ddf87df9df"
+  },
+  "status": ""
+}

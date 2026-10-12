@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-08T21:17:36.624Z",
+  "source": "2119eac83f97763cfb66f8c29bff506437ba4725",
+  "node": "v24.19.0",
+  "sourceHashes": {
+    "web/airspace/src/main.ts": "7d5a85d7618c76863acaee66a7d88d20094832c0f68522c684b55415b2f06418",
+    "web/airspace/index.html": "305fb3c9af8e81e7b02bc72b073ee8ffd656c5716c88ce521889ab086f08aaae",
+    "web/airspace/src/track-edit.ts": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046",
+    "web/airspace/src/world-tools.ts": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+    "web/airspace/src/core.ts": "01c351be73c9f404aeb6a30d80ab6796ec72a0b24fade725ac853104c89f940f",
+    "web/airspace/src/python.ts": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c",
+    "web/airspace/src/python-worker.ts": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987",
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+  },
+  "groups": [
+    "selected trajectory can be edited under fixed callsign, but no independent copy action; cancel preserves complete world and original new-flight draft",
+    "original native CPython planner, approval, readback and audit workflow passes"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "sourceUnchanged": true,
+  "result": "pass",
+  "completedAt": "2026-10-08T21:17:42.166Z"
+}
