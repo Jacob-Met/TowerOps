@@ -1,0 +1,48 @@
+{
+  "consumer": "Pyodide 0.27.7, Node host, built distribution Python sources; not a real browser session",
+  "source_sha256": {
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "audit_replay.py": "f31da5028a27ee51d389869db2a27cdaf82c102965c64e3381430fa69c627622",
+    "decision_trace.py": "d85ad8b76eb43a8925c8fd16f9233928c5f6e7c8ae481d3754329ea33d683a97"
+  },
+  "runtime": "3.12.7 (main, Jun  4 2025, 22:38:17) [Clang 19.0.0git (https:/github.com/llvm/llvm-project 0a8cd1ed1f4f35905df318015b",
+  "cases": [
+    {
+      "case": "wrapper-hides-failed-history",
+      "rejected": true
+    },
+    {
+      "case": "event-kind",
+      "rejected": true
+    },
+    {
+      "case": "payload-value",
+      "rejected": true
+    },
+    {
+      "case": "deep-value",
+      "rejected": true
+    },
+    {
+      "case": "escaped-wrapper-name",
+      "rejected": true
+    },
+    {
+      "case": "equal-values",
+      "rejected": true
+    },
+    {
+      "case": "unrelated-wrapper-metadata",
+      "rejected": true
+    }
+  ],
+  "exact_number_control": {
+    "chain_valid": true,
+    "ok": true,
+    "event_count": 1,
+    "advisories": [],
+    "rejects": [],
+    "issues": []
+  },
+  "empty_control": true
+}

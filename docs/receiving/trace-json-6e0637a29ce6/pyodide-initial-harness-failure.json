@@ -1,0 +1,5 @@
+{
+  "attempt": "Node-hosted Pyodide boot from the browser distribution directory",
+  "message": "require is not defined",
+  "interpretation": "Harness/runtime initialization failed before loading product modules; the package-scoped Node runtime will host the built product sources in the next bounded check."
+}

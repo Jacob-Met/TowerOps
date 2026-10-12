@@ -98,13 +98,34 @@ the frozen receiving, reviewed the implementation and exercised the Windows
 consumer. Both original negative results and the completed receiving packet
 are retained with their source hashes.
 
-The final full-repository run on Python 3.12.14 passes **192 tests in 8.07 seconds**
+The original published increment's full-repository run on Python 3.12.14 passes
+**192 tests in 8.07 seconds**
 with the repository's pinned pytest 8.3.5. Pinned Ruff 0.16.10 reports **All checks
 passed** for `python -m ruff check .`. Their first run found two inherited formatting issues
 in `tests/test_audit_world_linkage.py`, alongside one in the new regression.
 The accompanying test-only cleanup wraps imports and combines equivalent
 context managers in their original order. It changes no assertions, inputs or
 audit implementation, and was separately reviewed.
+
+## Integration with the saved-trace reader repair
+
+The subsequent composition preserves all 13 leaves merged by PR 99 at
+`cb99f91ca5485ce0e4269a09e8aa3b7d2015aca7`, including its duplicate-field
+refusal, tests and original receiving evidence. The automatic merge has no
+conflicts. The request handler, maintained request tests and browser assets
+retain the already reviewed bytes.
+
+This combined source passes **217 tests in 10.06 seconds** with pytest 8.3.5,
+and the full Ruff 0.16.10 check passes. The separate reviewer verified exact
+leaf preservation and reran the unchanged 29-case socket receiver against the
+combined source: **29/29 pass**, with no server errors. Idle refusal returned
+HTTP 408 after 5.0058 seconds without entering either consumer.
+
+The Windows packet remains a historical receipt for published source
+`c677afc7228db90a9399e776331805f7fac1f4a9`. PR 99 changes `audit_replay.py`, so
+the packet is not relabeled as an exact Windows execution of the combined
+tree. The new composition qualification is the local Python suite and the
+independent loopback receiving described above.
 
 ## Publication
 
