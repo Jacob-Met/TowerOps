@@ -9,7 +9,16 @@ from unittest.mock import patch
 
 import audit_replay
 from decision_trace import review_trace
-from towerops import Ack, AdvisoryPlanner, Aircraft, Approval, AuditLog, ControlRoom, SafetyPolicy, WorldState
+from towerops import (
+    Ack,
+    AdvisoryPlanner,
+    Aircraft,
+    Approval,
+    AuditLog,
+    ControlRoom,
+    SafetyPolicy,
+    WorldState,
+)
 
 
 def produced_events():
@@ -131,9 +140,12 @@ class WorldLinkageTests(unittest.TestCase):
         events = rebuild(events)
         raw = json.dumps({"audit_events": events, "label": "saved incomplete trace"})
         out, err = io.StringIO(), io.StringIO()
-        with patch.object(sys, "stdin", io.StringIO(raw)):
-            with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
-                code = audit_replay.main(["audit_replay.py", "-"])
+        with (
+            patch.object(sys, "stdin", io.StringIO(raw)),
+            contextlib.redirect_stdout(out),
+            contextlib.redirect_stderr(err),
+        ):
+            code = audit_replay.main(["audit_replay.py", "-"])
         summary = json.loads(out.getvalue())
         self.assertEqual(code, 1)
         self.assertTrue(summary["chain_valid"])
