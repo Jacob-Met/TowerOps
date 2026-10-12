@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/tmp/towerops-plan-html-066deeadcc8b-author/verify-publication-parent.py",
+    "/tmp/towerops-plan-html-066deeadcc8b-author/publication-parent-input.json",
+    "/tmp/towerops-plan-html-066deeadcc8b-author/frozen/native-packet.tar.xz"
+  ],
+  "exit": 0,
+  "stderr_bytes": 0,
+  "output_sha256": "286a9a1b68a1c0e85443380c80775e8c6fe495bca9f14121f9613a266677d889",
+  "verifier_sha256": "fdc4f21873d3f1255bba6464ea7b251f823ef8ba2600c2cdd607142be3f4db04",
+  "source_only": true
+}

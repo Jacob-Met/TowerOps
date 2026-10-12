@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-10-08T19:49:14.809857+00:00",
+  "archive": {
+    "path": "/tmp/towerops-plan-html-066deeadcc8b-author/native-packet.tar.xz",
+    "bytes": 801012,
+    "sha256": "324591b384d27b3820d5e181a0d39572f27ed040679ae979d0f42d61ad4f5985",
+    "ordinary_members": 211
+  },
+  "manifest_artifacts": 210,
+  "all_input_bytes_stable": true,
+  "verifier_runs": [
+    {
+      "label": "normal",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/towerops-plan-html-066deeadcc8b-author/verify-author.py",
+        "/tmp/towerops-plan-html-066deeadcc8b-author/native-packet.tar.xz"
+      ],
+      "exit": 0,
+      "stdout_sha256": "247f3b4c7f953b3f425c254843dd3938dac3d0752c362e10911d1cd60deb016b",
+      "stderr": ""
+    },
+    {
+      "label": "optimized",
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "-B",
+        "/tmp/towerops-plan-html-066deeadcc8b-author/verify-author.py",
+        "/tmp/towerops-plan-html-066deeadcc8b-author/native-packet.tar.xz"
+      ],
+      "exit": 0,
+      "stdout_sha256": "247f3b4c7f953b3f425c254843dd3938dac3d0752c362e10911d1cd60deb016b",
+      "stderr": ""
+    }
+  ]
+}

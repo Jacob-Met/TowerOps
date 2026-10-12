@@ -1,0 +1,14 @@
+{
+  "format": "towerops-cold-semantic-negatives-v1",
+  "product_execution": false,
+  "controls": [
+    {
+      "control": "wrong-admitted-count",
+      "rejected_at": "crossing-375 summary"
+    },
+    {
+      "control": "wrong-saved-download",
+      "rejected_at": "crossing-375 actual download"
+    }
+  ]
+}

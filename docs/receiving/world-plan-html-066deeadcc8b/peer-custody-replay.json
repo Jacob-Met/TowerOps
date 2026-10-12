@@ -1,0 +1,64 @@
+{
+  "schema": "towerops.plan-html-peer-custody/1",
+  "at": "2026-10-08T20:13:17.247107+00:00",
+  "peer_manifest_path": "/home/jacob/hamon-product-066deeadcc8b/towerops-review-final-manifest.json",
+  "peer_receipt_sha256": "ddb2901b56996bfdef001f50ecd0f2bdc30e05238539ccf0473a0e029bd8239f",
+  "all20_peer_files_exact_before_after": true,
+  "raw_archive_sha256": "e868b0055987f58504d62ab28501c83633754a4cc69e551c44f2e26de5082172",
+  "cold_replays": [
+    {
+      "label": "normal",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen/verify-peer.py",
+        "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen"
+      ],
+      "exit": 0,
+      "stdout_sha256": "156c9f9ddd0ad190b984ab53d2f13d95f10a649486c3b31ae24f043bb6f053a8",
+      "stderr_bytes": 0
+    },
+    {
+      "label": "optimized",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen/verify-peer.py",
+        "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen"
+      ],
+      "exit": 0,
+      "stdout_sha256": "156c9f9ddd0ad190b984ab53d2f13d95f10a649486c3b31ae24f043bb6f053a8",
+      "stderr_bytes": 0
+    },
+    {
+      "label": "negative",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen/verify-peer.py",
+        "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen",
+        "--negative-controls"
+      ],
+      "exit": 0,
+      "stdout_sha256": "45a302a1e58cf28b0f281065907999d1f572b947929db864c39352a86d367557",
+      "stderr_bytes": 0
+    },
+    {
+      "label": "negative-optimized",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen/verify-peer.py",
+        "/home/jacob/hamon-product-066deeadcc8b/towerops-review-frozen",
+        "--negative-controls"
+      ],
+      "exit": 0,
+      "stdout_sha256": "45a302a1e58cf28b0f281065907999d1f572b947929db864c39352a86d367557",
+      "stderr_bytes": 0
+    }
+  ],
+  "product_browser_service_execution": false,
+  "boundary": "Author custody replay of independent receiver-owned frozen packet; no peer byte edited or native result reattributed"
+}

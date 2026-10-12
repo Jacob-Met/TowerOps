@@ -1,0 +1,46 @@
+{
+  "format": "towerops-independent-cold-verification-v1",
+  "product_execution": false,
+  "browser_execution": false,
+  "archive_members": 382,
+  "source": {
+    "baseline_files": 33,
+    "candidate_files": 36,
+    "unowned_candidate_files": 31,
+    "unchanged_nonmain_definitions": 7,
+    "canonical_explorer_mode": "100755",
+    "native_explorer_projection_mode": "100644"
+  },
+  "baseline_cli": {
+    "checks": 64,
+    "processes": 16
+  },
+  "candidate_cli": {
+    "checks": 84,
+    "processes": 21
+  },
+  "unchanged_native_json_outputs": 7,
+  "browser": {
+    "views": 9,
+    "checks": 6122,
+    "exact_positive_downloads": 9,
+    "separate_control_downloads": 2,
+    "rendered_alternative_appearances": 400,
+    "world_data_cells": 119,
+    "component_value_cells": 2400,
+    "negative_controls_rejected": [
+      "drop-last-alternative",
+      "wrong-json-download"
+    ],
+    "preserved_first_observer_failures": 17,
+    "mobile_alternative_checks": 9,
+    "visually_reviewed_pngs": 4
+  },
+  "source_only_current_parent": {
+    "commit": "473d36f8135ced7c4000fefd8fc91c0128d3c106",
+    "tree": "49061dc44cf45da6b405483a84c08c79fc2e756f",
+    "closure_unchanged_except_readme": 32,
+    "scope_unchanged_except_readme": 4,
+    "native_rerun": false
+  }
+}

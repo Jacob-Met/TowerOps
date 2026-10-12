@@ -1,0 +1,195 @@
+{
+  "schema": "towerops.plan-html-publication-parent-verification/1",
+  "parent": "473d36f8135ced7c4000fefd8fc91c0128d3c106",
+  "tree": "49061dc44cf45da6b405483a84c08c79fc2e756f",
+  "prior_source_only_parent": "3b5123bcc611a25c15e09720c70c26a8b40b73b5",
+  "prior_leaf_count": 1138,
+  "current_leaf_count": 1144,
+  "upstream_added": [
+    "docs/qualification/callsign-order-c77045b4/README.md",
+    "docs/qualification/callsign-order-c77045b4/archive-manifest.json",
+    "docs/qualification/callsign-order-c77045b4/native-receiving.zip",
+    "docs/qualification/callsign-order-c77045b4/qualification.json",
+    "web/airspace/tests/identifier-parity.json",
+    "web/airspace/tests/identifier-parity.test.ts"
+  ],
+  "upstream_changed": [
+    "web/airspace/src/core.ts"
+  ],
+  "upstream_removed": [],
+  "closure_files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "4791e16741c2ee136585d8f4d99f918535a3a017",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "PLAN_WORLD.md",
+      "git_blob": "4b73b0ff02748528ed698118e034c79ef517f9be",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "d3b0baed596bacdcfd406db3da90c6fd5d78bd11",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "advisory_options.py",
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "audit_replay.py",
+      "git_blob": "5bff69d01f00b0aca5ee680cba130fc3ce5dd540",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "browser_acceptance.py",
+      "git_blob": "638d032972880f4d688cdcb877df855f5977532c",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "decision_trace.py",
+      "git_blob": "227f4c4c2457aab7c15f8fbf36f1ad0143268f3d",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "demo.py",
+      "git_blob": "c8d99a8b5b7152f048afc65e8d620e8370df07ed",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "explorer.py",
+      "git_blob": "d19e5bf1bd2991b076d7166fc2280b7f1d312d9a",
+      "canonical_mode": "100755"
+    },
+    {
+      "path": "plan_world.py",
+      "git_blob": "8e826a10cc2f9425de26727dce07851497174bba",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "requirements.txt",
+      "git_blob": "d775089b685609b7bdbb05c8ccff6226f9761ebd",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "scenarios.py",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "strands_adapter.py",
+      "git_blob": "01bc26d2d3d34dcac6787ab7b57a15c2f5837cb8",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "test_explorer.py",
+      "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/conftest.py",
+      "git_blob": "b9e42910cce31f47992b2d9f88786d1120033545",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_advisory_numeric_candidate.py",
+      "git_blob": "f10dfdd31816ea27f10d2bc6268b1d82a6aa7ed1",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_advisory_options.py",
+      "git_blob": "18f90aa8d7f2d6b3933a339d028cbede50261f4c",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_audit_chain.py",
+      "git_blob": "f9d7cec517e978a45aac15b7e6f3d70a10a7ac42",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_audit_replay.py",
+      "git_blob": "7dec0d4ae0b54283a6c64ac7f92a9c9e2d65e0dd",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_decision_trace.py",
+      "git_blob": "55e6cd3cceeb93cb3dc41d73c6c46fdfad6a39dc",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_determinism.py",
+      "git_blob": "72ba4f4dec9114a992e36a9f55494d2054085055",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_failclosed.py",
+      "git_blob": "dfaf0a4692064a2f26a1479ef8215bb25012843f",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_nonfinite_failclosed.py",
+      "git_blob": "4cd1ce635d3a128949bd08312094999c8c839bdf",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_plan_world.py",
+      "git_blob": "8ea1e3f8ea138f9b5b8b42fdadba2bc147c0db6f",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_plan_world_receiving.py",
+      "git_blob": "2cab5b89008adf3ef0ba4200f2a073330d77fe1d",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_planner.py",
+      "git_blob": "4e6fcdb19ac438b36c3b2b5150989a96db45daef",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_planner_target.py",
+      "git_blob": "3c8aca58614e23be196edce07b6a3fbd7ed1e285",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "tests/test_state_validation.py",
+      "git_blob": "2303369196e06965c2dc943430d8484af8a89357",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "towerops.py",
+      "git_blob": "3f541e5f0f3a05dac9d12c96e75d3d69ef3377d1",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "web/app.js",
+      "git_blob": "8e1722a24196b81bad4f1c5837128d7113a96585",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "web/index.html",
+      "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b",
+      "canonical_mode": "100644"
+    },
+    {
+      "path": "web/style.css",
+      "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb",
+      "canonical_mode": "100644"
+    }
+  ],
+  "readme_overlay": {
+    "bytes": 2645,
+    "sha256": "89c1875d735e00c5948f8815d48575af551df1c4c37ed6f2ec4ca11971e6ed1d",
+    "git_blob": "c8a55ecff9cf76e4f46321b5f6a0780bfaca0b3d"
+  },
+  "source_payload_sha256": "8fac68f17e089dde99826ab85b0a0f4881270fada7e9884d4591ffdc98022d66",
+  "native_execution_at_new_parent": false,
+  "final_checkout_gate": "Normal hosted checks at the exact proposed head; all unowned current leaves and modes preserved by overlay"
+}

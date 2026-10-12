@@ -1,0 +1,119 @@
+{
+  "schema": "towerops.plan-html-author-verification/1",
+  "archive_sha256": "324591b384d27b3820d5e181a0d39572f27ed040679ae979d0f42d61ad4f5985",
+  "ordinary_members": 211,
+  "manifest_artifacts": 210,
+  "canonical_baseline_files": 33,
+  "frozen_candidate_files": 36,
+  "scoped_paths": [
+    "world_plan_html.py",
+    "plan_world.py",
+    "tests/test_world_plan_html.py",
+    "WORLD_PLAN_HTML.md",
+    "README.md"
+  ],
+  "native_projection_mode_difference": {
+    "path": "explorer.py",
+    "canonical_git_blob": "d19e5bf1bd2991b076d7166fc2280b7f1d312d9a",
+    "canonical_git_mode": "100755",
+    "native_copy_mode": "100644"
+  },
+  "actual_native_tests": {
+    "passed": 155,
+    "subtests_passed": 89
+  },
+  "cli_pairs": [
+    {
+      "case": "crossing",
+      "status": "options_available",
+      "advisories": 66,
+      "json_sha256": "b2a20e81a585f0bd82a994b5180674ffc6be19ce8857d32913294bf5a16fd9b8"
+    },
+    {
+      "case": "policy-clock",
+      "status": "options_available",
+      "advisories": 68,
+      "json_sha256": "10408cbd25bddeef3b8278e966802fff1cd94565ca6c3b0a5f88102aa97108e8"
+    },
+    {
+      "case": "empty",
+      "status": "no_conflict",
+      "advisories": 0,
+      "json_sha256": "00c62b95d40ddc502a531d89c09cda2b4b346056bd41aa8385c2a1fddf72c76f"
+    },
+    {
+      "case": "no-option",
+      "status": "no_admitted_option",
+      "advisories": 0,
+      "json_sha256": "257d421ba79e1b84eb5742844439f69013b130fff6b329d912c90b8cbe2d6df7"
+    },
+    {
+      "case": "case-signed-zero",
+      "status": "options_available",
+      "advisories": 66,
+      "json_sha256": "a0e2f44490efea4afda4d4561e7f6cbf0775cea9a42953525457bf41258aa125"
+    },
+    {
+      "case": "sixty-flight",
+      "status": "no_conflict",
+      "advisories": 0,
+      "json_sha256": "bef4e089fd696c7b64c5836ec0ec92598475befe8ccb35f51274acf8255dc78b"
+    }
+  ],
+  "advisory_bindings_recomputed": 200,
+  "accepted_browser_checks": 72,
+  "accepted_actual_browser_downloads": 6,
+  "original_incomplete_suite_and_browser_failures_retained": true,
+  "images": [
+    {
+      "path": "evidence/author-browser-v3/crossing-375.png",
+      "width": 375,
+      "height": 900,
+      "sha256": "d70669783649ae5a50cd8976daf564d0f4dcd8ad6d86fc633f2c89eec242f785"
+    },
+    {
+      "path": "evidence/author-browser-v3/crossing-alternative-375.png",
+      "width": 375,
+      "height": 900,
+      "sha256": "6055237205e85a8e1686aef21c98ac6bd34fbeff04256bb8645fe67f0ad58168"
+    },
+    {
+      "path": "evidence/author-browser-v4/sixty-flight-375.png",
+      "width": 375,
+      "height": 900,
+      "sha256": "b2ad10b681e48f258d913e456894d6f02bc8ce751b38a5f50c970cee8bb7db42"
+    },
+    {
+      "path": "evidence/keyboard-diagnostic-v1/crossing.png",
+      "width": 375,
+      "height": 900,
+      "sha256": "2e9064e7db528ca5ba7230e70cfaa405856ff6e66731af9e345249524062b009"
+    },
+    {
+      "path": "evidence/keyboard-diagnostic-v1/policy-clock.png",
+      "width": 375,
+      "height": 900,
+      "sha256": "3888c248bb6a38ff10c655973192a855efa65038f4d0c84447168ed381b3a455"
+    },
+    {
+      "path": "evidence/visual-supplement-v1/alternative-proposed-375.png",
+      "width": 375,
+      "height": 900,
+      "sha256": "a457f533aa8fff1301185ccbbb83146dfcc20571fa7f331673faa2b72bd5ad86"
+    },
+    {
+      "path": "evidence/visual-supplement-v1/intro-1280.png",
+      "width": 1280,
+      "height": 900,
+      "sha256": "e51e27ccef94c6ecc2578bed2900f74d86b6bae4b0ce5da05ade3a974942fe74"
+    },
+    {
+      "path": "evidence/visual-supplement-v1/intro-375.png",
+      "width": 375,
+      "height": 900,
+      "sha256": "c5e9aed2a58b31e174028dff7f6f0c3e480894243e9028776b94439c292cb5cc"
+    }
+  ],
+  "current_source_only_parent": "3b5123bcc611a25c15e09720c70c26a8b40b73b5",
+  "product_execution_during_verification": false
+}
