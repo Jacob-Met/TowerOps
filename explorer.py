@@ -11,6 +11,7 @@ from scenarios import DISCLAIMER, SCENARIOS, replay_result, run_scenario
 
 ROOT = Path(__file__).resolve().parent
 MAX_BODY = 262144
+BODY_READ_TIMEOUT = 5.0
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -57,16 +58,47 @@ class Handler(BaseHTTPRequestHandler):
             self.respond(404, {"error": "Not found"})
             return
         try:
-            length = int(self.headers.get("Content-Length", "-1"))
-            if not 0 < length <= MAX_BODY:
+            if self.headers.get_all("Transfer-Encoding") is not None:
+                self.respond(400, {"error": "Transfer-Encoding is not supported; use Content-Length"})
+                return
+            lengths = self.headers.get_all("Content-Length", [])
+            if not lengths:
+                self.respond(411, {"error": "Content-Length is required"})
+                return
+            if len(lengths) != 1:
+                self.respond(400, {"error": "Provide exactly one Content-Length"})
+                return
+            length_text = lengths[0].strip(" \t")
+            if not length_text.isascii() or not length_text.isdecimal():
+                self.respond(400, {"error": "Content-Length must contain ASCII decimal digits"})
+                return
+            # Compare decimal text before conversion, including arbitrarily
+            # many leading zeroes, without Python's integer-string limit.
+            length_text = length_text.lstrip("0") or "0"
+            maximum = str(MAX_BODY)
+            if (length_text == "0" or len(length_text) > len(maximum)
+                    or (len(length_text) == len(maximum) and length_text > maximum)):
                 self.respond(413, {"error": "Body must be between 1 and 262144 bytes"})
                 return
+            length = int(length_text)
             if self.headers.get("Content-Type", "").split(";")[0] != "application/json":
                 self.respond(415, {"error": "Use application/json"})
                 return
+            previous_timeout = self.connection.gettimeout()
+            self.connection.settimeout(BODY_READ_TIMEOUT)
+            try:
+                raw = self.rfile.read(length)
+            except TimeoutError:
+                self.respond(408, {"error": "Timed out waiting for the complete request body"})
+                return
+            finally:
+                self.connection.settimeout(previous_timeout)
+            if len(raw) != length:
+                self.respond(400, {"error": "Request body is shorter than Content-Length"})
+                return
             def reject_constant(value):
                 raise ValueError("Non-finite JSON is not supported")
-            value = json.loads(self.rfile.read(length), parse_constant=reject_constant)
+            value = json.loads(raw, parse_constant=reject_constant)
             if self.path == "/api/replay":
                 result = replay_result(value)
             else:
