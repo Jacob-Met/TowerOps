@@ -59,6 +59,9 @@ class WorldState:
     aircraft: tuple[Aircraft, ...]
 
     def __post_init__(self) -> None:
+        # Keep the exact membership checked below even if a caller supplied a
+        # mutable sequence or a one-shot iterator instead of a native tuple.
+        object.__setattr__(self, "aircraft", tuple(self.aircraft))
         # Aircraft ids key every id-based operation (get, replace_aircraft,
         # advisory_safe's target exclusion). Duplicate ids would silently
         # break those invariants — e.g. advisory_safe skips id-twins, letting
