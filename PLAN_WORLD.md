@@ -129,6 +129,14 @@ The CLI accepts at most 262,144 bytes of UTF-8 JSON. A bounded read enforces tha
 limit for files and stdin. Duplicate JSON fields, malformed text, unsupported
 fields and incomplete objects are refused as a whole.
 
+A named path must resolve to a regular file; symlinks to regular files remain
+supported. Named pipes, devices and directories return exit 2 before reading.
+The opened file is checked again before the bounded read, with a nonblocking
+open where the platform supports it so a path replaced by a named pipe cannot
+trap that open. An oversized opened file is refused before its contents are read.
+Use explicit `-` for streamed input. Stdin still waits for its producer, and this
+file-type check is not a time limit for slow or unresponsive filesystems.
+
 The world must contain exactly `version`, `observed_at` and `aircraft`. Version
 must be an integer JSON token from 0 through 9,007,199,254,740,991; booleans and
 floating tokens such as `7.0` are not integer tokens. There may be 0–60 aircraft;

@@ -11,7 +11,9 @@ import argparse
 import hashlib
 import json
 import math
+import os
 import re
+import stat
 import sys
 from dataclasses import asdict, replace
 from pathlib import Path
@@ -139,6 +141,27 @@ def _argument_number(value: str) -> int | float:
         raise argparse.ArgumentTypeError(str(exc)) from exc
 
 
+def _read_world_file(path: Path) -> bytes:
+    """Read a bounded regular file, retaining ordinary file-symlink support."""
+    if not stat.S_ISREG(path.stat().st_mode):
+        raise ValueError("World input path must resolve to a regular file.")
+    flags = os.O_RDONLY | getattr(os, "O_NONBLOCK", 0) | getattr(os, "O_BINARY", 0)
+    descriptor = os.open(path, flags)
+    try:
+        info = os.fstat(descriptor)
+        if not stat.S_ISREG(info.st_mode):
+            raise ValueError("Opened world input is not a regular file.")
+        if info.st_size > MAX_WORLD_BYTES:
+            raise ValueError(f"World input exceeds {MAX_WORLD_BYTES} bytes.")
+        stream = os.fdopen(descriptor, "rb")
+        descriptor = None
+        with stream:
+            return stream.read(MAX_WORLD_BYTES + 1)
+    finally:
+        if descriptor is not None:
+            os.close(descriptor)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Inspect a saved synthetic WorldState with the native planner; proposals only.",
@@ -169,8 +192,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.world == "-":
             raw = sys.stdin.buffer.read(MAX_WORLD_BYTES + 1)
         else:
-            with Path(args.world).open("rb") as stream:
-                raw = stream.read(MAX_WORLD_BYTES + 1)
+            raw = _read_world_file(Path(args.world))
         result = review_world(raw, args.now, policy)
         output = json.dumps(result, ensure_ascii=False, allow_nan=False, indent=2) + "\n"
     except GateRejected as exc:
