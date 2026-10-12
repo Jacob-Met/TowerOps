@@ -172,13 +172,23 @@ def replay_audit(events: list[dict[str, Any]]) -> ReplayReport:
     return report
 
 
+def _unique_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    """Keep every saved JSON field unambiguous before checking its evidence."""
+    result: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError("Duplicate JSON object fields are not supported.")
+        result[key] = value
+    return result
+
+
 def _load_events(source: str) -> list[dict[str, Any]]:
     if source == "-":
         raw = sys.stdin.read()
     else:
         with open(source, "r", encoding="utf-8") as fh:
             raw = fh.read()
-    data = json.loads(raw)
+    data = json.loads(raw, object_pairs_hook=_unique_object)
     if isinstance(data, dict) and isinstance(data.get("audit_events"), list):
         return data["audit_events"]
     if isinstance(data, list):

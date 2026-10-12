@@ -1,0 +1,68 @@
+"""Independently authored duplicate-JSON receiving, no candidate mutation."""
+import contextlib
+import hashlib
+import io
+import json
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+
+root = Path(sys.argv[1]).resolve()
+sys.path.insert(0, str(root))
+import audit_replay
+import decision_trace
+from towerops import AuditLog
+
+paths = [root / name for name in ('audit_replay.py', 'decision_trace.py', 'towerops.py')]
+before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+chain = AuditLog()
+chain.append('screen_pass', {'world_hash': 'world-A', 'advisory_hashes': ['adv-A']})
+chain.append('approval', {'advisory_hash': 'adv-A', 'decision': 'approve', 'approver': 'reviewer-é'})
+chain.append('ack', {'advisory_hash': 'adv-A', 'status': 'accepted'})
+chain.append('simulated_actuation', {'advisory_hash': 'adv-A', 'before_world_hash': 'world-A', 'after_world_hash': 'world-B'})
+good = json.dumps({'audit_events': chain.events, 'metadata': {'integer': 2**63 + 1, 'float': 1.0}}, ensure_ascii=False)
+duplicate_payload = good.replace('"decision": "approve"', '"decision": "reject", "\\u0064ecision": "approve"')
+illegal = AuditLog()
+illegal.append('simulated_actuation', {'advisory_hash': 'no-authority', 'before_world_hash': 'world-X'})
+duplicate_envelope = '{"audit_events":' + json.dumps(illegal.events) + ',"audit_eve\\u006ets":' + json.dumps(chain.events) + '}'
+valid_changed = json.dumps({'audit_events': chain.events, 'metadata': {'integer': 2**63 + 3, 'float': 1.25}, 'other': {'integer': 4}}, ensure_ascii=False)
+rows = []
+with tempfile.TemporaryDirectory() as td:
+    for name, raw, duplicate in (
+        ('literal-and-escaped-event-field', duplicate_payload, True),
+        ('hidden-illegal-history', duplicate_envelope, True),
+        ('valid-complete-history', good, False),
+        ('valid-changed-metadata-and-repeated-names', valid_changed, False),
+    ):
+        path = Path(td) / (name + '.json')
+        path.write_text(raw, encoding='utf-8')
+        for reader in ('api', 'file', 'stdin', 'cli'):
+            try:
+                if reader == 'api':
+                    result = decision_trace.review_trace(raw)
+                    observed = {'accepted': True, 'ok': result['ok'], 'chain_valid': result['chain_valid'], 'events': result['event_count']}
+                elif reader == 'file':
+                    events = audit_replay._load_events(str(path))
+                    result = audit_replay.replay_audit(events)
+                    observed = {'accepted': True, 'ok': result.ok, 'chain_valid': result.chain_valid, 'events': len(events)}
+                elif reader == 'stdin':
+                    old_stdin = sys.stdin
+                    try:
+                        sys.stdin = io.StringIO(raw)
+                        events = audit_replay._load_events('-')
+                    finally:
+                        sys.stdin = old_stdin
+                    result = audit_replay.replay_audit(events)
+                    observed = {'accepted': True, 'ok': result.ok, 'chain_valid': result.chain_valid, 'events': len(events)}
+                else:
+                    command = [sys.executable, '-B'] + (['-O'] if not __debug__ else []) + [str(root / 'audit_replay.py'), str(path)]
+                    proc = subprocess.run(command, text=True, capture_output=True, timeout=10)
+                    observed = {'accepted': proc.returncode == 0, 'returncode': proc.returncode, 'stdout': proc.stdout, 'stderr': proc.stderr}
+            except ValueError as exc:
+                observed = {'accepted': False, 'error': str(exc)}
+            rows.append({'fixture': name, 'reader': reader, 'expected_accept': not duplicate, 'observed': observed, 'passed': observed['accepted'] == (not duplicate)})
+after = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+receipt = {'source': str(root), 'optimized': not __debug__, 'hashes': before, 'source_unchanged': before == after, 'passed': sum(r['passed'] for r in rows), 'checks': len(rows), 'rows': rows}
+print(json.dumps(receipt, ensure_ascii=False, indent=2))
+raise SystemExit(0 if all(r['passed'] for r in rows) and before == after else 1)

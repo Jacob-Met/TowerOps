@@ -1,0 +1,206 @@
+{
+  "source": "/workspace/scratch/6e0637a29ce6/research_delivery/towerops_original",
+  "optimized": false,
+  "hashes": {
+    "audit_replay.py": "b1a457ddf670b01b1ac62037dfd752009a6da5b5b53d1531a95c746fff9fda75",
+    "decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874"
+  },
+  "source_unchanged": true,
+  "passed": 8,
+  "checks": 16,
+  "rows": [
+    {
+      "fixture": "literal-and-escaped-event-field",
+      "reader": "api",
+      "expected_accept": false,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": false
+    },
+    {
+      "fixture": "literal-and-escaped-event-field",
+      "reader": "file",
+      "expected_accept": false,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": false
+    },
+    {
+      "fixture": "literal-and-escaped-event-field",
+      "reader": "stdin",
+      "expected_accept": false,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": false
+    },
+    {
+      "fixture": "literal-and-escaped-event-field",
+      "reader": "cli",
+      "expected_accept": false,
+      "observed": {
+        "accepted": true,
+        "returncode": 0,
+        "stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 1,\n  \"actuated\": 1,\n  \"rejects\": 0,\n  \"issues\": []\n}\n",
+        "stderr": ""
+      },
+      "passed": false
+    },
+    {
+      "fixture": "hidden-illegal-history",
+      "reader": "api",
+      "expected_accept": false,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": false
+    },
+    {
+      "fixture": "hidden-illegal-history",
+      "reader": "file",
+      "expected_accept": false,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": false
+    },
+    {
+      "fixture": "hidden-illegal-history",
+      "reader": "stdin",
+      "expected_accept": false,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": false
+    },
+    {
+      "fixture": "hidden-illegal-history",
+      "reader": "cli",
+      "expected_accept": false,
+      "observed": {
+        "accepted": true,
+        "returncode": 0,
+        "stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 1,\n  \"actuated\": 1,\n  \"rejects\": 0,\n  \"issues\": []\n}\n",
+        "stderr": ""
+      },
+      "passed": false
+    },
+    {
+      "fixture": "valid-complete-history",
+      "reader": "api",
+      "expected_accept": true,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": true
+    },
+    {
+      "fixture": "valid-complete-history",
+      "reader": "file",
+      "expected_accept": true,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": true
+    },
+    {
+      "fixture": "valid-complete-history",
+      "reader": "stdin",
+      "expected_accept": true,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": true
+    },
+    {
+      "fixture": "valid-complete-history",
+      "reader": "cli",
+      "expected_accept": true,
+      "observed": {
+        "accepted": true,
+        "returncode": 0,
+        "stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 1,\n  \"actuated\": 1,\n  \"rejects\": 0,\n  \"issues\": []\n}\n",
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "fixture": "valid-changed-metadata-and-repeated-names",
+      "reader": "api",
+      "expected_accept": true,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": true
+    },
+    {
+      "fixture": "valid-changed-metadata-and-repeated-names",
+      "reader": "file",
+      "expected_accept": true,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": true
+    },
+    {
+      "fixture": "valid-changed-metadata-and-repeated-names",
+      "reader": "stdin",
+      "expected_accept": true,
+      "observed": {
+        "accepted": true,
+        "ok": true,
+        "chain_valid": true,
+        "events": 4
+      },
+      "passed": true
+    },
+    {
+      "fixture": "valid-changed-metadata-and-repeated-names",
+      "reader": "cli",
+      "expected_accept": true,
+      "observed": {
+        "accepted": true,
+        "returncode": 0,
+        "stdout": "{\n  \"ok\": true,\n  \"chain_valid\": true,\n  \"advisories\": 1,\n  \"actuated\": 1,\n  \"rejects\": 0,\n  \"issues\": []\n}\n",
+        "stderr": ""
+      },
+      "passed": true
+    }
+  ]
+}
