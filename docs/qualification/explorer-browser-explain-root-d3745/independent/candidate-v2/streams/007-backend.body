@@ -1,0 +1,1 @@
+{"matches": false, "audit_valid": true, "outcome": "simulated_actuation", "rejection_reason": null, "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778", "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."}

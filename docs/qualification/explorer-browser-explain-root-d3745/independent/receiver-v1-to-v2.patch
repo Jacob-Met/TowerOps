@@ -1,0 +1,29 @@
+--- receive-explain-v1.cjs
++++ receive-explain-v2.cjs
+@@ -11,7 +11,7 @@
+  return new Promise((resolve,reject)=>{const b=body===undefined?null:Buffer.from(body);const req=http.request({host:"127.0.0.1",port,path:url,method,headers:{Host:"127.0.0.1:"+port,...(b?{"Content-Type":"application/json","Content-Length":b.length}:{}),...headers},timeout:12000},res=>{const chunks=[];res.on("data",b=>chunks.push(b));res.on("end",()=>resolve({status:res.statusCode,headers:res.headers,body:Buffer.concat(chunks)}));res.on("error",reject);});req.on("error",reject);req.on("timeout",()=>req.destroy(Error("HTTP timeout")));if(b)req.write(b);req.end();});
+ }
+ (async()=>{
+- const base=__dirname,criteriaPath=path.join(base,"criteria.json"),freezePath=path.join(base,"driver-freeze-v1.json");
++ const base=__dirname,criteriaPath=path.join(base,"criteria.json"),freezePath=path.join(base,"driver-freeze-v2.json");
+  const criteria=JSON.parse(fs.readFileSync(criteriaPath)),freeze=JSON.parse(fs.readFileSync(freezePath)),spec=JSON.parse(fs.readFileSync(specPath));
+  assert.equal(sha(fs.readFileSync(__filename)),freeze.receiver.sha256);assert.equal(sha(fs.readFileSync(criteriaPath)),freeze.criteria.sha256);
+  assert.equal(spec.variant,variant);assert.equal(spec.files.length,8);assert.deepEqual(spec.files.map(x=>x.path).sort(),criteria.source_boundary.slice().sort());
+@@ -22,7 +22,7 @@
+  const fixtureBefore=Object.values(fixtures).map(ident),values=Object.fromEntries(Object.entries(fixtures).map(([k,p])=>[k,JSON.parse(fs.readFileSync(p))]));
+  for(const r of freeze.fixtures){const i=ident(r.path);assert.equal(i.sha256,r.sha256);assert.equal(i.bytes,r.bytes);assert.equal(i.mode,r.mode);}
+  fs.mkdirSync(out);fs.mkdirSync(path.join(out,"streams"));fs.mkdirSync(path.join(out,"tmp"));fs.mkdirSync(path.join(out,"cache"));
+- const receipt={schema:"hamon.loom.towerops-explain-browser.v1",variant,started:new Date().toISOString(),source_spec:spec,source_before:sourceBefore,controls_before:controlsBefore,fixtures_before:fixtureBefore,checks:[],http:[],request_finished:[],page_errors:[],failed_requests:[],external_requests:[],inline_requests:[],screenshots:[],error:null};
++ const receipt={schema:"hamon.loom.towerops-explain-browser.v2",variant,started:new Date().toISOString(),source_spec:spec,source_before:sourceBefore,controls_before:controlsBefore,fixtures_before:fixtureBefore,checks:[],http:[],request_finished:[],page_errors:[],failed_requests:[],external_requests:[],inline_requests:[],screenshots:[],error:null};
+  const check=(id,actual,expected)=>{const pass=equal(actual,expected);receipt.checks.push({id,actual,expected,pass});return pass;};
+  const need=(id,actual,expected)=>{assert(check(id,actual,expected),id);};
+  let backend,browser,relay,releaseHeld=null,backendStdout="",backendStderr="",backendDone=false,relayClosed=false,backendPort,relayError=null;
+@@ -153,7 +153,7 @@
+  }catch(e){receipt.error=String(e.stack||e);}
+  finally{
+   try{if(releaseHeld)releaseHeld();if(browser){const p=browser.process();await bounded(browser.close(),15000,"browser close");receipt.browser_closed=true;receipt.browser_exit_code=p?.exitCode;}}catch(e){receipt.browser_close_error=String(e);}
+-  try{if(relay){relay.closeIdleConnections();await bounded(new Promise(r=>relay.close(r)),10000,"relay close");relayClosed=true;}receipt.relay_closed=relayClosed;receipt.open_relay_sockets=sockets.size;}catch(e){receipt.relay_close_error=String(e);for(const s of sockets)s.destroy();}
++  try{if(relay){relay.closeIdleConnections();await bounded(new Promise(r=>relay.close(r)),10000,"relay close");await until(()=>sockets.size===0,"relay socket close events",2000);relayClosed=true;}receipt.relay_closed=relayClosed;receipt.open_relay_sockets=sockets.size;}catch(e){receipt.relay_close_error=String(e);for(const s of sockets)s.destroy();}
+   try{if(backend&&!backendDone){backend.kill("SIGINT");await until(()=>backendDone,"backend graceful close",7000);}receipt.backend_closed=backendDone;}catch(e){receipt.backend_close_error=String(e);backend?.kill("SIGTERM");}
+   receipt.backend_stdout=save("backend.stdout",backendStdout);receipt.backend_stderr=save("backend.stderr",backendStderr);
+   try{receipt.source_after=sourceBefore.map(r=>ident(r.path));check("source.preserved",receipt.source_after,sourceBefore);receipt.controls_after=controlsBefore.map(r=>ident(r.path));check("controls.preserved",receipt.controls_after,controlsBefore);receipt.fixtures_after=fixtureBefore.map(r=>ident(r.path));check("fixtures.preserved",receipt.fixtures_after,fixtureBefore);}catch(e){receipt.preservation_error=String(e);}

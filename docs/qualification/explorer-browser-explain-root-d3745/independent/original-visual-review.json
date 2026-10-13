@@ -1,0 +1,12 @@
+{
+  "schema": "hamon.loom.towerops-explain-original-visual.v1",
+  "at": "2026-10-13T16:11:17.763573+00:00",
+  "image": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/original-mismatch-no-action.png",
+    "bytes": 166660,
+    "sha256": "6c93f6ea9bd65a273c33755696144412b86b1c0f6db3561c9f4aa83efe2f8f30",
+    "mode": "0o664"
+  },
+  "review": "Loom viewed the retained native 1440x1100 Firefox screenshot via read_file after the original course. It shows B.json selected, existing Replay MISMATCH text, no explanation action, and the unchanged approved run/export controls and result. No new browser execution or rendering was performed.",
+  "limits": "One viewport image; complete DOM/network/source assertions remain in the original raw receipt and separate closure audit."
+}

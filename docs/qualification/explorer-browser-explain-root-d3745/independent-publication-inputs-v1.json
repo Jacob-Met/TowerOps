@@ -1,0 +1,885 @@
+{
+  "schema": "hamon.loom.towerops-browser-explain-publication-inputs.v1",
+  "prefix": "docs/qualification/explorer-browser-explain-root-d3745/independent/",
+  "files": [
+    {
+      "path": "LICENSE",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/LICENSE",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 1066,
+      "sha256": "d946a9700b643b060dd422829c2cb41166f9f2ae4ea08fcebaa2afa173df5f36"
+    },
+    {
+      "path": "README.md",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/README.md",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 9925,
+      "sha256": "11e98edbe04556c4b219e2597d7852d06f5572ed7e58788960ed6221940a466b"
+    },
+    {
+      "path": "candidate-source/EXPLORER.md",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/EXPLORER.md",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3"
+    },
+    {
+      "path": "candidate-source/explorer.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/explorer.py",
+      "mode": "100755",
+      "native_mode": "0o755",
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843"
+    },
+    {
+      "path": "candidate-source/replay_explain.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/replay_explain.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b"
+    },
+    {
+      "path": "candidate-source/scenarios.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/scenarios.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    {
+      "path": "candidate-source/towerops.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/towerops.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70"
+    },
+    {
+      "path": "candidate-source/web/app.js",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/app.js",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739"
+    },
+    {
+      "path": "candidate-source/web/index.html",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/index.html",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1"
+    },
+    {
+      "path": "candidate-source/web/style.css",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/style.css",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9"
+    },
+    {
+      "path": "candidate-spec-v1.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-spec-v1.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 4233,
+      "sha256": "00f953e8b555d528a11029bc79f1b31d6112bdf566ed758546008c47bbe84f93"
+    },
+    {
+      "path": "candidate-v2/A-match-after-old-explanation.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/A-match-after-old-explanation.png",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 163865,
+      "sha256": "41bcd693f32d09d311b37c239e2560b4c5133dde81bb3c30a31bb82ccee06003"
+    },
+    {
+      "path": "candidate-v2/B-one-field.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/B-one-field.png",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 158231,
+      "sha256": "22f655dfa416c758094846ba59f0660c0d11c58c9d6da93b03ab81997f727bac"
+    },
+    {
+      "path": "candidate-v2/C-literal-typed-and-missing.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/C-literal-typed-and-missing.png",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 158321,
+      "sha256": "141ab1983bb2a382f548143e291fd33e547846bdf6a4191b933d31a298f1cdaa"
+    },
+    {
+      "path": "candidate-v2/D-limited-differences.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/D-limited-differences.png",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 159242,
+      "sha256": "bbb884f7802683bb917d1b4f04328e0ecac5428c34c70705abeef19981ec6af7"
+    },
+    {
+      "path": "candidate-v2/receipt.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/receipt.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 689799,
+      "sha256": "ee3d0afd77da9bd6c6d3c37517956b4ad48ce1928c5f48774ddfcfdead584181"
+    },
+    {
+      "path": "candidate-v2/streams/001-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/001-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1"
+    },
+    {
+      "path": "candidate-v2/streams/002-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/002-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9"
+    },
+    {
+      "path": "candidate-v2/streams/003-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/003-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739"
+    },
+    {
+      "path": "candidate-v2/streams/004-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/004-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 1303,
+      "sha256": "d8e97f9e4aea80a4512020023b5fe3fa81b437d574a9b1e37786677614790d4b"
+    },
+    {
+      "path": "candidate-v2/streams/005-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/005-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 22,
+      "sha256": "064e1262e82600f52520eec5a475fe906f349f8a6452efa8b1ba6f39250902b6"
+    },
+    {
+      "path": "candidate-v2/streams/006-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/006-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4753,
+      "sha256": "ed152653da5e9d9d0989f05a206ce883e55891426c654135836cf23fafa4cefc"
+    },
+    {
+      "path": "candidate-v2/streams/006-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/006-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 66,
+      "sha256": "039f014e76f5d8f32d8a213555100b738e68cca0ccf24a2819150a6205892473"
+    },
+    {
+      "path": "candidate-v2/streams/007-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/007-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 289,
+      "sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f"
+    },
+    {
+      "path": "candidate-v2/streams/007-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/007-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4418,
+      "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578"
+    },
+    {
+      "path": "candidate-v2/streams/008-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/008-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 527,
+      "sha256": "26f0cd349dcbd4d0da5c50999abcb08f0a45d6c13c68802465b98b580c1fc3fe"
+    },
+    {
+      "path": "candidate-v2/streams/008-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/008-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4418,
+      "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578"
+    },
+    {
+      "path": "candidate-v2/streams/009-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/009-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 289,
+      "sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f"
+    },
+    {
+      "path": "candidate-v2/streams/009-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/009-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4474,
+      "sha256": "7aeb41e2cd876e3ed73c00ebec58d65191303ced9d01ccf6e86d230a9ae8a98f"
+    },
+    {
+      "path": "candidate-v2/streams/010-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/010-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 991,
+      "sha256": "da199b386bf9838a9a777fdbb41a2199d998bfdd20530154f67f14c8e191694c"
+    },
+    {
+      "path": "candidate-v2/streams/010-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/010-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4474,
+      "sha256": "7aeb41e2cd876e3ed73c00ebec58d65191303ced9d01ccf6e86d230a9ae8a98f"
+    },
+    {
+      "path": "candidate-v2/streams/011-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/011-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 991,
+      "sha256": "da199b386bf9838a9a777fdbb41a2199d998bfdd20530154f67f14c8e191694c"
+    },
+    {
+      "path": "candidate-v2/streams/011-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/011-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4474,
+      "sha256": "7aeb41e2cd876e3ed73c00ebec58d65191303ced9d01ccf6e86d230a9ae8a98f"
+    },
+    {
+      "path": "candidate-v2/streams/012-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/012-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 289,
+      "sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f"
+    },
+    {
+      "path": "candidate-v2/streams/012-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/012-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 5048,
+      "sha256": "d3c106c937a27d514944a8f76e90c996246856ece72cecdb98623976eae7f602"
+    },
+    {
+      "path": "candidate-v2/streams/013-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/013-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4799,
+      "sha256": "df4e863822d5679194ef9013b6e5f6c9e2b15da0e8a9c37bae9563d61e88a933"
+    },
+    {
+      "path": "candidate-v2/streams/013-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/013-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 5048,
+      "sha256": "d3c106c937a27d514944a8f76e90c996246856ece72cecdb98623976eae7f602"
+    },
+    {
+      "path": "candidate-v2/streams/014-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/014-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 289,
+      "sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f"
+    },
+    {
+      "path": "candidate-v2/streams/014-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/014-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4418,
+      "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578"
+    },
+    {
+      "path": "candidate-v2/streams/015-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/015-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 527,
+      "sha256": "26f0cd349dcbd4d0da5c50999abcb08f0a45d6c13c68802465b98b580c1fc3fe"
+    },
+    {
+      "path": "candidate-v2/streams/015-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/015-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4418,
+      "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578"
+    },
+    {
+      "path": "candidate-v2/streams/016-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/016-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 288,
+      "sha256": "a38e8d4de32142e8f65ed2c9623d6bc22106163883e7638b2c40d3fc8adcd8bc"
+    },
+    {
+      "path": "candidate-v2/streams/016-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/016-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4418,
+      "sha256": "801ef6f67d1363e84c6cb064a6ab907e19204e8a663a6394489c7f7361798130"
+    },
+    {
+      "path": "candidate-v2/streams/017-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/017-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 289,
+      "sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f"
+    },
+    {
+      "path": "candidate-v2/streams/017-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/017-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4418,
+      "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578"
+    },
+    {
+      "path": "candidate-v2/streams/018-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/018-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 527,
+      "sha256": "26f0cd349dcbd4d0da5c50999abcb08f0a45d6c13c68802465b98b580c1fc3fe"
+    },
+    {
+      "path": "candidate-v2/streams/018-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/018-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4418,
+      "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578"
+    },
+    {
+      "path": "candidate-v2/streams/backend.stderr",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/backend.stderr",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 1307,
+      "sha256": "ec53b7d9fb0588b36c1f6f25bd3c5652c384139c82a856e9c3a2f6c431c34d4f"
+    },
+    {
+      "path": "candidate-v2/streams/backend.stdout",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/streams/backend.stdout",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 198,
+      "sha256": "9ea756e4972f19d9e6ebde2121bf58b2b9ecee77eb363aa636a06b7c8810965c"
+    },
+    {
+      "path": "consumer-custody.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/consumer-custody.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 10323,
+      "sha256": "9111229e5dde45f605bc813eed73e45177ec9b5df19089e53f4e5f031eee3e0c"
+    },
+    {
+      "path": "criteria-freeze.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria-freeze.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 4416,
+      "sha256": "43eab80cff5e55607ff0a6bebd4168134cf8098e456ab66c6d75527d741d6c5b"
+    },
+    {
+      "path": "criteria.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 13808,
+      "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505"
+    },
+    {
+      "path": "driver-freeze-v1.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/driver-freeze-v1.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 2412,
+      "sha256": "30e1cd5cff25bc19ccbffdcbbab0ec74a7fb2f43da663b0414ac51c0e2bd496e"
+    },
+    {
+      "path": "driver-freeze-v2.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/driver-freeze-v2.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 3492,
+      "sha256": "001345d7d3a45ac929afcd85be5e627358a1a293d59b8de05fd8fe28854faf39"
+    },
+    {
+      "path": "fixtures/A.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/A.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592"
+    },
+    {
+      "path": "fixtures/B.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/B.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 5684,
+      "sha256": "5d00c4c20385b398c4e60d84326924fab2cabaae7b2c95cc1ebe046e340af5b0"
+    },
+    {
+      "path": "fixtures/C.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 5787,
+      "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32"
+    },
+    {
+      "path": "fixtures/D.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/D.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 6474,
+      "sha256": "c02df565471b55487479efce0712cd5c1e88ebd83adca3c70ffea7d443fb601f"
+    },
+    {
+      "path": "original-closure-audit.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-closure-audit.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 1207,
+      "sha256": "d685cb73d4c756c0315f68762b7443d1a61d09f48e4bdb876280d63b093e4d8f"
+    },
+    {
+      "path": "original-runtime/EXPLORER.md",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/EXPLORER.md",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09"
+    },
+    {
+      "path": "original-runtime/explorer.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/explorer.py",
+      "mode": "100755",
+      "native_mode": "0o755",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9"
+    },
+    {
+      "path": "original-runtime/replay_explain.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/replay_explain.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b"
+    },
+    {
+      "path": "original-runtime/scenarios.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/scenarios.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    {
+      "path": "original-runtime/towerops.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/towerops.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70"
+    },
+    {
+      "path": "original-runtime/web/app.js",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/app.js",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f"
+    },
+    {
+      "path": "original-runtime/web/index.html",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/index.html",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7"
+    },
+    {
+      "path": "original-runtime/web/style.css",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/style.css",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4"
+    },
+    {
+      "path": "original-source/EXPLORER.md",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/EXPLORER.md",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09"
+    },
+    {
+      "path": "original-source/explorer.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/explorer.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9"
+    },
+    {
+      "path": "original-source/replay_explain.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/replay_explain.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b"
+    },
+    {
+      "path": "original-source/scenarios.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/scenarios.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    {
+      "path": "original-source/towerops.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/towerops.py",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70"
+    },
+    {
+      "path": "original-source/web/app.js",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/web/app.js",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f"
+    },
+    {
+      "path": "original-source/web/index.html",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/web/index.html",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7"
+    },
+    {
+      "path": "original-source/web/style.css",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/web/style.css",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4"
+    },
+    {
+      "path": "original-spec.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-spec.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 4128,
+      "sha256": "89b1be732c20cc11df7a161ac9ddfa27bce1f97acbb8ab74081c57979b4abe16"
+    },
+    {
+      "path": "original-v1/original-mismatch-no-action.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/original-mismatch-no-action.png",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 166660,
+      "sha256": "6c93f6ea9bd65a273c33755696144412b86b1c0f6db3561c9f4aa83efe2f8f30"
+    },
+    {
+      "path": "original-v1/receipt.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/receipt.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 158295,
+      "sha256": "c5da677c7ac6bdd91b7064265e2ecc56ce152dca355b21d079a28b0ad39e37c1"
+    },
+    {
+      "path": "original-v1/streams/001-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/001-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7"
+    },
+    {
+      "path": "original-v1/streams/002-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/002-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4"
+    },
+    {
+      "path": "original-v1/streams/003-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/003-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f"
+    },
+    {
+      "path": "original-v1/streams/004-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/004-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 1303,
+      "sha256": "d8e97f9e4aea80a4512020023b5fe3fa81b437d574a9b1e37786677614790d4b"
+    },
+    {
+      "path": "original-v1/streams/005-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/005-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 22,
+      "sha256": "064e1262e82600f52520eec5a475fe906f349f8a6452efa8b1ba6f39250902b6"
+    },
+    {
+      "path": "original-v1/streams/006-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/006-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4753,
+      "sha256": "ed152653da5e9d9d0989f05a206ce883e55891426c654135836cf23fafa4cefc"
+    },
+    {
+      "path": "original-v1/streams/006-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/006-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 66,
+      "sha256": "039f014e76f5d8f32d8a213555100b738e68cca0ccf24a2819150a6205892473"
+    },
+    {
+      "path": "original-v1/streams/007-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/007-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 289,
+      "sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f"
+    },
+    {
+      "path": "original-v1/streams/007-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/007-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4418,
+      "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578"
+    },
+    {
+      "path": "original-v1/streams/008-backend.body",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/008-backend.body",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 22,
+      "sha256": "064e1262e82600f52520eec5a475fe906f349f8a6452efa8b1ba6f39250902b6"
+    },
+    {
+      "path": "original-v1/streams/008-request.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/008-request.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 4418,
+      "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578"
+    },
+    {
+      "path": "original-v1/streams/backend.stderr",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/backend.stderr",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 557,
+      "sha256": "13e487644d0e2d6598faa8e275cb1a0fa5a39ef79177037568f83c98c719dc21"
+    },
+    {
+      "path": "original-v1/streams/backend.stdout",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/backend.stdout",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 198,
+      "sha256": "d05fb2e99cf5876a27ff6adac35045dd035e9cacda0beb6ae514368f1904c43f"
+    },
+    {
+      "path": "original-visual-review.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-visual-review.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 811,
+      "sha256": "84f98fec3f8c34bc652e9c44d8908ebb21ff1592364f5b6a6eca78c1498bb1ea"
+    },
+    {
+      "path": "receive-explain-v1.cjs",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v1.cjs",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 21435,
+      "sha256": "2fc30ab95dccdb66c9ef2bef9b3519fcc579423bee6fc0ebe364a24a73d1634a"
+    },
+    {
+      "path": "receive-explain-v2.cjs",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v2.cjs",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 21502,
+      "sha256": "2490839a8603e0fbd91c6b7b5b75febfdf156431526bdfc8cf8c937ba267f59b"
+    },
+    {
+      "path": "receive-visual-C-v1.cjs",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-visual-C-v1.cjs",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 8848,
+      "sha256": "0a263abe4add4f2a5194c93167f040bfa6f3dd2a3e0762c9a3ae0aadce3c09ea"
+    },
+    {
+      "path": "receive-visual-C-v2.cjs",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-visual-C-v2.cjs",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 8767,
+      "sha256": "f682ba774ccac3d8e7e8e348896e315a3c79dea64b5a1477458919028500c0e4"
+    },
+    {
+      "path": "receiver-v1-to-v2.patch",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receiver-v1-to-v2.patch",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 4603,
+      "sha256": "ac95461ced7e7ec7d096633da0799f058610fefe04fc781681fd852b0f2bf60e"
+    },
+    {
+      "path": "source-binding.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/source-binding.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 7359,
+      "sha256": "03e05ee475871f9e44554a1a3de3ccb45704538846079c4c33b50cf9134b7607"
+    },
+    {
+      "path": "visual-C-v2/C-details-complete-panel.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/C-details-complete-panel.png",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 109204,
+      "sha256": "fbdba351caa5913e552e9ad6624113408af92ddf24a269a263b2e35f66d01a1b"
+    },
+    {
+      "path": "visual-C-v2/C-details-scrolled-viewport.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/C-details-scrolled-viewport.png",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 119611,
+      "sha256": "8a8684a369b03cfefd43ff0601db43749c606a632ed0f99d06e168069123ba72"
+    },
+    {
+      "path": "visual-C-v2/C-literal-row-scrolled.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/C-literal-row-scrolled.png",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 99207,
+      "sha256": "908a7690cb5e15e07df4a2f8eff719de2113494e38f9fcbedd8660bdb4e29e38"
+    },
+    {
+      "path": "visual-C-v2/backend.stderr",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/backend.stderr",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 489,
+      "sha256": "5c6916d994c73f4d3583f472f3c3e7f540da70f49d6bc8b7631c481ae5d579ac"
+    },
+    {
+      "path": "visual-C-v2/backend.stdout",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/backend.stdout",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 198,
+      "sha256": "62a6364ce9e0068dc20dc546e9cbc6fcb2ca2494715f5a1155e57cd5f6a38cad"
+    },
+    {
+      "path": "visual-C-v2/receipt.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/receipt.json",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "bytes": 37474,
+      "sha256": "0bc30d24398aa7a8c176203a16e16df4d38f745a765e4cd7337690bc48f34c2c"
+    },
+    {
+      "path": "visual-freeze-v1.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-freeze-v1.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 1024,
+      "sha256": "794dc1a3fb567dc69d4fe86c50a8d5832f4426730df801eb8d8662c05dabf64b"
+    },
+    {
+      "path": "visual-freeze-v2.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-freeze-v2.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 1886,
+      "sha256": "282d6a4979dcfebbc7f4b429a2f3c79fb26c005e2d2d2b54b8533ab653864be8"
+    },
+    {
+      "path": "visual-receiver-v1-to-v2.patch",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-receiver-v1-to-v2.patch",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 6579,
+      "sha256": "8fbfa48089f2ad4a18ed0bcdc76a8ac6600682c71e3663a9e1e9b0d46f4a9d5c"
+    },
+    {
+      "path": "visual-review.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-review.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 2755,
+      "sha256": "d905bb24b457304f1e54c24ac9e14d733ad2655efdd7788817915a6cd2d9b235"
+    },
+    {
+      "path": "visual-v1-failure-and-cleanup.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-v1-failure-and-cleanup.json",
+      "mode": "100644",
+      "native_mode": "0o644",
+      "bytes": 1806,
+      "sha256": "53a9065e9cec01392d16670b1f45c466824fc590a4f315ee13632a6c274f70c7"
+    }
+  ],
+  "notes": [
+    "Original explicit descriptor sealed after source-unexposed criteria/functional freeze, original15 comparisons and candidate85 comparisons, then separate disclosed post-exposure10-check actual layout opening.",
+    "All failed raw observations/versioned fixes retained; no original rerun or product mutation.",
+    "Source paths are custody annotations. Exact relative destination membership is explicit, all native modes retained separately from normalized Git modes.",
+    "No browser profiles/cache/temp or peer review receipts are selected. Peer reviews belong to separate explicit support.",
+    "Selected source projections preserve criteria-freeze originals plus actual original/candidate execution inputs. Later publication/adoption binding is separate."
+  ]
+}

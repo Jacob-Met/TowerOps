@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: only an explicit current mismatch click compares the captured parsed value
+ok 1 - only an explicit current mismatch click compares the captured parsed value
+  ---
+  duration_ms: 7.486363
+  type: 'test'
+  ...
+# Subtest: new file selection immediately retires old explanation success and finally
+ok 2 - new file selection immediately retires old explanation success and finally
+  ---
+  duration_ms: 2.490641
+  type: 'test'
+  ...
+# Subtest: clearing retires an old explanation failure without restoring controls
+ok 3 - clearing retires an old explanation failure without restoring controls
+  ---
+  duration_ms: 1.441886
+  type: 'test'
+  ...
+# Subtest: a current failure keeps the mismatch and permits an explicit same-selection retry
+ok 4 - a current failure keeps the mismatch and permits an explicit same-selection retry
+  ---
+  duration_ms: 1.590434
+  type: 'test'
+  ...
+# Subtest: ordered typed rows retain full envelopes and expose the observed truncation
+ok 5 - ordered typed rows retain full envelopes and expose the observed truncation
+  ---
+  duration_ms: 3.354458
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 22.847989

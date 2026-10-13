@@ -1,0 +1,25 @@
+{
+  "schema": "hamon.loom.towerops-explain-visual-v1-failure.v1",
+  "at": "2026-10-13T16:30:52.326504+00:00",
+  "receiver_pid": 4126637,
+  "exit": 1,
+  "raw_tool_output": "[Reading 12 new lines (total: 12 lines)]\n\nfile:///home/jacob/.local/lib/node_modules/@wonderwhy-er/desktop-commander/node_modules/puppeteer-core/lib/puppeteer/bidi/HTTPRequest.js:89\n            throw new UnsupportedOperation();\n                  ^\n\nUnsupportedOperation\n    at BidiHTTPRequest.postData (file:///home/jacob/.local/lib/node_modules/@wonderwhy-er/desktop-commander/node_modules/puppeteer-core/lib/puppeteer/bidi/HTTPRequest.js:89:19)\n    at /home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-visual-C-v1.cjs:24:247\n    at file:///home/jacob/.local/lib/node_modules/@wonderwhy-er/desktop-commander/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:232:32\n    at async BidiHTTPRequest.finalizeInterceptions (file:///home/jacob/.local/lib/node_modules/@wonderwhy-er/desktop-commander/node_modules/puppeteer-core/lib/puppeteer/api/HTTPRequest.js:144:9)\n\nNode.js v22.22.1\n\n\u2705 Process completed with exit code 1 (runtime: 3.77s)",
+  "failure": "Unsupported Puppeteer Firefox BiDi request.postData in receiver event observer, before visual capture; no product failure established.",
+  "own_process_cleanup": [
+    {
+      "pid": 4126710,
+      "cmd": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/explorer.py",
+        "serve",
+        "--port",
+        "0"
+      ],
+      "kind": "python",
+      "proc_present_after": false
+    }
+  ],
+  "preserved_closed_behavior_course": "candidate-v2/receipt.json remains unchanged",
+  "stage_retained": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v1"
+}

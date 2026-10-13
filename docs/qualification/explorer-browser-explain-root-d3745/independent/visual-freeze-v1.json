@@ -1,0 +1,25 @@
+{
+  "schema": "hamon.loom.towerops-explain-visual-freeze.v1",
+  "at": "2026-10-13T16:26:44.616364+00:00",
+  "receiver": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-visual-C-v1.cjs",
+    "bytes": 8848,
+    "sha256": "0a263abe4add4f2a5194c93167f040bfa6f3dd2a3e0762c9a3ae0aadce3c09ea"
+  },
+  "candidate_spec": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-spec-v1.json",
+    "bytes": 4233,
+    "sha256": "00f953e8b555d528a11029bc79f1b31d6112bdf566ed758546008c47bbe84f93"
+  },
+  "prior_course": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/receipt.json",
+    "bytes": 689799,
+    "sha256": "ee3d0afd77da9bd6c6d3c37517956b4ad48ce1928c5f48774ddfcfdead584181"
+  },
+  "exposure": "Separate post-exposure layout opening after the accepted85-check course. Root requested actual field-row width/wrapping/scrollability inspection; no behavior relabeling.",
+  "syntax": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

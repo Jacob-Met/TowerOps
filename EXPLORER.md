@@ -123,3 +123,42 @@ Focused standard-library tests:
 ```sh
 python3 -m unittest discover -s tests -p 'test_replay_explain.py' -v
 ```
+
+## Inspect field differences in the browser
+
+After selecting a saved export that reports MISMATCH, choose **Explain this
+mismatch**. The existing replay verdict stays visible while a separate field
+comparison loads. Expand or collapse **Field differences** to read each JSON
+Pointer, difference kind, and complete expected/actual JSON envelope. Expected
+is the local synthetic reproduction; actual is the selected saved export.
+An envelope with present:false is absent, distinct from a present null.
+
+The browser requests details only after this explicit action. It compares the
+parsed value already accepted for that selection, without rereading the file
+or replacing the displayed scenario and its export. Values are rendered as
+literal text. JSON formatting, original numeric spelling and exact input bytes
+are not preserved by the browser's parse/serialize step. The existing numerical
+equivalence, 32-difference cap and explicit more-found indication are unchanged.
+
+Selecting another file or clearing the chooser immediately retires old details,
+including unfinished comparison responses and errors. A current comparison
+failure leaves the replay verdict intact and enables an explicit retry.
+A match, invalid input or pending ordinary replay has no old-file explanation
+available. This action describes differing fields; it makes no causal inference.
+
+The additive POST /api/replay/explain route admits a complete exported result
+through the existing local HTTP boundary and calls the unchanged
+replay_explain.explain_replay helper. It returns the same explanation object as
+the optional CLI, within the existing HTTP body limit. The ordinary /api/replay
+route, fixed scenario model and engine remain unchanged. Nothing is stored.
+
+Focused route and presentation controls:
+
+~~~sh
+python3 -B -m unittest discover -s tests -p 'test_explorer_explanation_http.py' -v
+node tests/test_explorer_explanation.cjs
+~~~
+
+The existing replay-selection control excludes only these newly added replay
+widgets from its unrelated-display snapshot. Its original selected-file,
+stale-response, refusal and recovery assertions remain intact.

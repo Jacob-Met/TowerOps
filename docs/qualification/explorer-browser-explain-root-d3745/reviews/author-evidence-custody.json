@@ -1,0 +1,74 @@
+{
+  "schema": "hamon.anvil.author-evidence-custody.v1",
+  "scope": "Read-only audit and exact own-stage copying; no product or test execution",
+  "descriptor": {
+    "bytes": 6216,
+    "sha256": "c85bb1ff6cc1ec08ffefb4a841303ec5874518455ece9defdbb87b9a1e44830a",
+    "git_blob": "d60892ec56a104d6a507ea38ae518a977ef81ba3"
+  },
+  "records": 16,
+  "source_before_after_exact": true,
+  "source_packet_bindings": 12,
+  "commands": 5,
+  "all_exits": 0,
+  "raw_streams": [
+    {
+      "path": "streams-v1/0.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "streams-v1/0.stderr",
+      "bytes": 820,
+      "sha256": "5b8990bdddb8d17709f1590e5b18e5a104a68577858b25a4cb7a2613cd07c7b4"
+    },
+    {
+      "path": "streams-v1/1.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "streams-v1/1.stderr",
+      "bytes": 820,
+      "sha256": "91f6cff3c3de95486d1f8ce64e962f7db66eae27bc78b7ae3676d8a16dc4f2ec"
+    },
+    {
+      "path": "streams-v1/2.stdout",
+      "bytes": 1221,
+      "sha256": "ce76769552eccd5be5c6cd4e0088581b46650d13843896cc9ed532a103eb34b4"
+    },
+    {
+      "path": "streams-v1/2.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "streams-v1/3.stdout",
+      "bytes": 2153,
+      "sha256": "68f896220d020e4485967565144116baaa9a732f0fd2ac23acb14095b4720a39"
+    },
+    {
+      "path": "streams-v1/3.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "streams-v1/4.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "streams-v1/4.stderr",
+      "bytes": 3660,
+      "sha256": "41948a4c6d1ef09fff5ff1bc31ef058b4868187f6d389f3cb919f2583fd6f8d5"
+    }
+  ],
+  "author_method_counts": [
+    4,
+    4,
+    5,
+    10,
+    8
+  ],
+  "accepted": true
+}

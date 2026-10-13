@@ -1,0 +1,82 @@
+{
+  "schema": "hamon.anvil.towerops-browser-explain-source-authority.v1",
+  "base": "6991198cde605b683331290c8c898ac5dbec6643",
+  "base_tree": "bf63ce7b3ac761bf02c9184747575f989a2876ab",
+  "original_packet": {
+    "path": "/home/jacob/hamon/receiving/root-d3745-browser-explain/candidate-packet-v1.json",
+    "bytes": 99606,
+    "sha256": "bc4450944a7aa7170e963af8f98e912283f17ae0df22b72f86f399ab9ef1b171"
+  },
+  "source_allowlist": [
+    "EXPLORER.md",
+    "explorer.py",
+    "tests/test_explorer_explanation.cjs",
+    "tests/test_explorer_explanation_http.py",
+    "tests/test_explorer_replay_selection.cjs",
+    "web/app.js",
+    "web/index.html",
+    "web/style.css"
+  ],
+  "source_files": [
+    {
+      "path": "EXPLORER.md",
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "git_blob": "3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66",
+      "mode": "0o644"
+    },
+    {
+      "path": "explorer.py",
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "mode": "0o755"
+    },
+    {
+      "path": "tests/test_explorer_explanation.cjs",
+      "bytes": 8796,
+      "sha256": "43a186375092cd125700f0106f7a1ccd27447e8cc2a770d4638297c31832c436",
+      "git_blob": "eb1e758a44ed3e7d734db4d71c9e21309c6cd811",
+      "mode": "0o644"
+    },
+    {
+      "path": "tests/test_explorer_explanation_http.py",
+      "bytes": 4165,
+      "sha256": "c5c385da77329da75843a8e16716e107aaf6a71140002f1b73645be3ec31d713",
+      "git_blob": "92fd918db8ca231add75040011d49f84c038297f",
+      "mode": "0o644"
+    },
+    {
+      "path": "tests/test_explorer_replay_selection.cjs",
+      "bytes": 8168,
+      "sha256": "df20845a15c9585a202778b0a3793df0f05723f8a977dc6c20e4729d63ca298b",
+      "git_blob": "821428e280841900994ef3f66511e1579172ca18",
+      "mode": "0o644"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "git_blob": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "mode": "0o644"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "git_blob": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "mode": "0o644"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mode": "0o644"
+    }
+  ],
+  "notes": [
+    "Explicit eight-path frozen author input subset, independent of proposed tree; four unchanged closure inputs remain inherited.",
+    "Original author support and Loom evidence descriptors are separate authorities."
+  ]
+}

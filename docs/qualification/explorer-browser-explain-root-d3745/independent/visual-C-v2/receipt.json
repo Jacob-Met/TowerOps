@@ -1,0 +1,558 @@
+{
+  "schema": "hamon.loom.towerops-explain-visual-C.v2",
+  "started": "2026-10-13T16:32:34.703Z",
+  "scope": "Separate post-exposure direct-production visual opening of saved C after the closed85-check course; no original control or race/retry replay.",
+  "inputs_before": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/EXPLORER.md",
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/explorer.py",
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/app.js",
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/index.html",
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/style.css",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-spec-v1.json",
+      "bytes": 4233,
+      "sha256": "00f953e8b555d528a11029bc79f1b31d6112bdf566ed758546008c47bbe84f93",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+      "bytes": 13808,
+      "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+      "bytes": 5787,
+      "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-visual-C-v2.cjs",
+      "bytes": 8767,
+      "sha256": "f682ba774ccac3d8e7e8e348896e315a3c79dea64b5a1477458919028500c0e4",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-freeze-v2.json",
+      "bytes": 1886,
+      "sha256": "282d6a4979dcfebbc7f4b429a2f3c79fb26c005e2d2d2b54b8533ab653864be8",
+      "mode": "0o644"
+    }
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/api/replay"
+    },
+    {
+      "method": "POST",
+      "path": "/api/replay/explain"
+    }
+  ],
+  "responses": [
+    {
+      "path": "/api/replay",
+      "status": 200
+    },
+    {
+      "path": "/api/replay/explain",
+      "status": 200
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "external_requests": [],
+  "inline_requests": [
+    "data:font/woff2;base64,d09GMgABAAAAAAScAAsAAAAACfAAAARNAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAhBIRCAqGMIRJATYCJAMsCxgABCAFhF4HaBsuCMgehXEsLOlXaXd7sgbPQ172fjLwdhYFM92mABaiTuRVdO5/mx9I5UJiJom3phLRQw/TSF2M/vo25+pNyWkNws81NrUDAAf0QOdfcf7nmPEyBPZtCbbZEDuosskKZG922ZhBenh05qcSXktf6s3Oy9dAkWsyDzMoM5QTKcwKNjFayUPSREGFhUMrdE8MJsH052qGcYNO3pbEaYIBoDTItIKGAqhDdKHRD0kkKg6QGSCWEfueTNr3P6OvYaIbDH/8ULEAbjQtUt+hT/qmX/SH/twwMLDqN4jxzXjy4PHtltSA6lINqkpRd7N7onVBP20y7YBWyDIHFEBjqKBFMmECfQcTZtD3MmEB/SATVtCPM2ED/TQTdtCfS0/pEsN4ySin3r8q8xHE+0D0XMg8gJi4YrNpNv3qetXuDyeo6OBNZrq5gi7ouC1zcmB2Fd+FewIhcUIfszpF1hzXhrmMCwxaznRyZjig6Y2W7+bBn2DL8fJu/2oHbWc6X80+LUTXcVzv8O3IOy4qKVyFw/DHaMtfzNQEi5gbFT/EDpiofbpkYq2dQui6WcpfxrVBEJ/KxbLA4ZroZoVx+iE+QeTIiI7oKuoUIk/a1ekEOoNFjozm0suYYUelq13/88K1c3PTH9O9Q0d5LZbu7+J2aT7XP23KyQs+34WTU7r8d/k0l6dLl98Dn+/BSUZc7U0mm7FqhSMO9EHV/j5FB4qYX4aXNaKwz/4RRfAWsW8xGW+hvr8PTAf6IP9mRpkDwwv7QFz9HRuOeGWfd8rkyYsWTVy4vpG/pgVNWzBx0aTeIgeq58XFVfZXVduwuOq51a77aT0XLVw4v1PBFjRsQzO+tVeVp3KIwqfKbd6sdjzGvFSuPMquGpMT29lkrhwbE5uz6cGHhIETB06oUk+6tHLJgfnu/3nVnJzYxiXNjQNjYqsu+vCgYKDla5uUOzTNDZg46eCBd3d3gSk9Kz/bFiv8hvOzCT5eqyjBGerT+EiG/JGqwbC+UQ6Bv9bmKGWMj8Yn+fPVRJxKBGqTFXQyM9DhHSlvEHmLVxyYjY/Fdd3hACfLyP3VVZLvVR7B0pxSsGIBqHhwT5sSMOMkRG0BJhpsWMkEO24KwE0pqp3tIYTWCIjJjuBiGNTKTj8JoBLKAn4TmPFnj9oywZwFGx4egp1g3oObeLHdwUO2pFcYTITZCa2c1GQbNg6RCsu9bpikThhAWnLaBi3LM8+5VbMU6rUn30owOC83ULcfBlClb5BBre46BinaWRal85SUvlCbUx1Nbyj2HWCxBTkEgWScQKzsTioJW0IanAYRZqET4mZLSKU2JABII9np01lQ7lOt3srtM1KAeqgQPhYJSMCZJRuAukRZB1CF35gB1MJBr4ilIPZchNyIlDkpRt+3s96cz9K8XKQvCdZfcqWxgtLoXZ2AoKAyVSRRxSRmsYjVOriP089q3z6gdMjE5KI7kzumWzpnAwAAAA=="
+  ],
+  "screenshots": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/C-details-scrolled-viewport.png",
+      "bytes": 119611,
+      "sha256": "8a8684a369b03cfefd43ff0601db43749c606a632ed0f99d06e168069123ba72",
+      "mode": "0o664"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/C-details-complete-panel.png",
+      "bytes": 109204,
+      "sha256": "fbdba351caa5913e552e9ad6624113408af92ddf24a269a263b2e35f66d01a1b",
+      "mode": "0o664"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/C-literal-row-scrolled.png",
+      "bytes": 99207,
+      "sha256": "908a7690cb5e15e07df4a2f8eff719de2113494e38f9fcbedd8660bdb4e29e38",
+      "mode": "0o664"
+    }
+  ],
+  "checks": [
+    {
+      "id": "actual-three-full-rows",
+      "actual": [
+        {
+          "path": "/after/version",
+          "kind": "type",
+          "expected": {
+            "present": true,
+            "type": "number",
+            "value": 2
+          },
+          "actual": {
+            "present": true,
+            "type": "boolean",
+            "value": true
+          }
+        },
+        {
+          "path": "/description",
+          "kind": "missing",
+          "expected": {
+            "present": true,
+            "type": "string",
+            "value": "Both exact-hash fixtures arrive before simulated dispatch."
+          },
+          "actual": {
+            "present": false
+          }
+        },
+        {
+          "path": "/literal~1~0雪",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "object",
+            "value": {
+              "marker": "<b data-loom-literal=\"yes\">literal 雪</b> & \"quoted\"\nline",
+              "nothing": null,
+              "items": [
+                false,
+                0,
+                ""
+              ]
+            }
+          }
+        }
+      ],
+      "expected": [
+        {
+          "path": "/after/version",
+          "kind": "type",
+          "expected": {
+            "present": true,
+            "type": "number",
+            "value": 2
+          },
+          "actual": {
+            "present": true,
+            "type": "boolean",
+            "value": true
+          }
+        },
+        {
+          "path": "/description",
+          "kind": "missing",
+          "expected": {
+            "present": true,
+            "type": "string",
+            "value": "Both exact-hash fixtures arrive before simulated dispatch."
+          },
+          "actual": {
+            "present": false
+          }
+        },
+        {
+          "path": "/literal~1~0雪",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "object",
+            "value": {
+              "marker": "<b data-loom-literal=\"yes\">literal 雪</b> & \"quoted\"\nline",
+              "nothing": null,
+              "items": [
+                false,
+                0,
+                ""
+              ]
+            }
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "literal-text-no-elements",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "no-page-horizontal-overflow",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "only-explicit-replay-and-explain",
+      "actual": [
+        "/api/replay",
+        "/api/replay/explain"
+      ],
+      "expected": [
+        "/api/replay",
+        "/api/replay/explain"
+      ],
+      "pass": true
+    },
+    {
+      "id": "both-production-success",
+      "actual": [
+        200,
+        200
+      ],
+      "expected": [
+        200,
+        200
+      ],
+      "pass": true
+    },
+    {
+      "id": "saved-input-exact",
+      "actual": "{\n  \"format\": \"towerops.synthetic-explorer.v1\",\n  \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\n  \"request\": {\n    \"scenario\": \"approved\",\n    \"include_approval\": true,\n    \"include_ack\": true\n  },\n  \"label\": \"Approval + acknowledgement\",\n  \"simulation_clock\": {\n    \"dispatch_sec\": 1002.5,\n    \"observed_sec\": 1001,\n    \"projection_horizon_min\": 5\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"before\": {\n    \"version\": 1,\n    \"observed_at\": 1001,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"after\": {\n    \"version\": true,\n    \"observed_at\": 1002.5,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 2,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"status\": \"accepted\",\n      \"acknowledged_at\": 1002.4\n    }\n  },\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"before_conflict\": true,\n  \"after_conflict\": false,\n  \"audit_events\": [\n    {\n      \"seq\": 0,\n      \"kind\": \"fixture_proposal\",\n      \"payload\": {\n        \"scenario\": \"approved\",\n        \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory\": {\n          \"aircraft_id\": \"FIXTURE-B\",\n          \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n          \"set_vx_nm_min\": -1,\n          \"set_vy_nm_min\": 2,\n          \"set_climb_ft_min\": 0,\n          \"issued_at\": 1002,\n          \"expires_at\": 1010,\n          \"rationale\": \"synthetic projected-separation recovery\"\n        },\n        \"simulation_only\": true\n      },\n      \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\",\n      \"event_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"\n    },\n    {\n      \"seq\": 1,\n      \"kind\": \"screen_pass\",\n      \"payload\": {\n        \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory_hashes\": [\n          \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n        ]\n      },\n      \"prev_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\",\n      \"event_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"\n    },\n    {\n      \"seq\": 2,\n      \"kind\": \"approval\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"decision\": \"approve\",\n        \"approved_at\": 1002.2,\n        \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n      },\n      \"prev_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\",\n      \"event_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"\n    },\n    {\n      \"seq\": 3,\n      \"kind\": \"ack\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"status\": \"accepted\",\n        \"acknowledged_at\": 1002.4\n      },\n      \"prev_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\",\n      \"event_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"\n    },\n    {\n      \"seq\": 4,\n      \"kind\": \"simulated_actuation\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"\n      },\n      \"prev_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\",\n      \"event_hash\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"\n    }\n  ],\n  \"audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"audit_valid\": true,\n  \"literal/~雪\": {\n    \"marker\": \"<b data-loom-literal=\\\"yes\\\">literal 雪</b> & \\\"quoted\\\"\\nline\",\n    \"nothing\": null,\n    \"items\": [\n      false,\n      0,\n      \"\"\n    ]\n  }\n}\n",
+      "expected": "{\n  \"format\": \"towerops.synthetic-explorer.v1\",\n  \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\n  \"request\": {\n    \"scenario\": \"approved\",\n    \"include_approval\": true,\n    \"include_ack\": true\n  },\n  \"label\": \"Approval + acknowledgement\",\n  \"simulation_clock\": {\n    \"dispatch_sec\": 1002.5,\n    \"observed_sec\": 1001,\n    \"projection_horizon_min\": 5\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"before\": {\n    \"version\": 1,\n    \"observed_at\": 1001,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"after\": {\n    \"version\": true,\n    \"observed_at\": 1002.5,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 2,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"status\": \"accepted\",\n      \"acknowledged_at\": 1002.4\n    }\n  },\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"before_conflict\": true,\n  \"after_conflict\": false,\n  \"audit_events\": [\n    {\n      \"seq\": 0,\n      \"kind\": \"fixture_proposal\",\n      \"payload\": {\n        \"scenario\": \"approved\",\n        \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory\": {\n          \"aircraft_id\": \"FIXTURE-B\",\n          \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n          \"set_vx_nm_min\": -1,\n          \"set_vy_nm_min\": 2,\n          \"set_climb_ft_min\": 0,\n          \"issued_at\": 1002,\n          \"expires_at\": 1010,\n          \"rationale\": \"synthetic projected-separation recovery\"\n        },\n        \"simulation_only\": true\n      },\n      \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\",\n      \"event_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"\n    },\n    {\n      \"seq\": 1,\n      \"kind\": \"screen_pass\",\n      \"payload\": {\n        \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory_hashes\": [\n          \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n        ]\n      },\n      \"prev_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\",\n      \"event_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"\n    },\n    {\n      \"seq\": 2,\n      \"kind\": \"approval\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"decision\": \"approve\",\n        \"approved_at\": 1002.2,\n        \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n      },\n      \"prev_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\",\n      \"event_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"\n    },\n    {\n      \"seq\": 3,\n      \"kind\": \"ack\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"status\": \"accepted\",\n        \"acknowledged_at\": 1002.4\n      },\n      \"prev_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\",\n      \"event_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"\n    },\n    {\n      \"seq\": 4,\n      \"kind\": \"simulated_actuation\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"\n      },\n      \"prev_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\",\n      \"event_hash\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"\n    }\n  ],\n  \"audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"audit_valid\": true,\n  \"literal/~雪\": {\n    \"marker\": \"<b data-loom-literal=\\\"yes\\\">literal 雪</b> & \\\"quoted\\\"\\nline\",\n    \"nothing\": null,\n    \"items\": [\n      false,\n      0,\n      \"\"\n    ]\n  }\n}\n",
+      "pass": true
+    },
+    {
+      "id": "literal-row-scroll-reachable",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "no-page-errors",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "no-failed-requests",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "no-external-requests",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    }
+  ],
+  "error": null,
+  "backend_pid": 4134039,
+  "origin": "http://127.0.0.1:35125",
+  "browser_pid": 4134059,
+  "browser_version": "firefox/157.0",
+  "dom": {
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "document": {
+      "clientWidth": 1428,
+      "scrollWidth": 1428
+    },
+    "details": {
+      "box": {
+        "x": 198,
+        "y": 959.8333129882812,
+        "width": 1032,
+        "height": 1164.25
+      },
+      "scrollWidth": 1030,
+      "clientWidth": 1030,
+      "open": true,
+      "hidden": false
+    },
+    "rows": [
+      {
+        "path": "/after/version",
+        "kind": "type",
+        "expected_text": "{\n  \"present\": true,\n  \"type\": \"number\",\n  \"value\": 2\n}",
+        "actual_text": "{\n  \"present\": true,\n  \"type\": \"boolean\",\n  \"value\": true\n}",
+        "box": {
+          "x": 244.60000610351562,
+          "y": 1128.5333251953125,
+          "width": 964.4000244140625,
+          "height": 252.34999084472656
+        },
+        "sides": [
+          {
+            "box": {
+              "x": 248.60000610351562,
+              "y": 1234.13330078125,
+              "width": 470.20001220703125,
+              "height": 124.75
+            },
+            "clientWidth": 470,
+            "scrollWidth": 470,
+            "whiteSpace": "pre-wrap",
+            "overflowWrap": "anywhere",
+            "overflowX": "visible"
+          },
+          {
+            "box": {
+              "x": 734.7999877929688,
+              "y": 1234.13330078125,
+              "width": 470.20001220703125,
+              "height": 124.75
+            },
+            "clientWidth": 470,
+            "scrollWidth": 470,
+            "whiteSpace": "pre-wrap",
+            "overflowWrap": "anywhere",
+            "overflowX": "visible"
+          }
+        ]
+      },
+      {
+        "path": "/description",
+        "kind": "missing",
+        "expected_text": "{\n  \"present\": true,\n  \"type\": \"string\",\n  \"value\": \"Both exact-hash fixtures arrive before simulated dispatch.\"\n}",
+        "actual_text": "{\n  \"present\": false\n}",
+        "box": {
+          "x": 244.60000610351562,
+          "y": 1380.88330078125,
+          "width": 964.4000244140625,
+          "height": 272.5
+        },
+        "sides": [
+          {
+            "box": {
+              "x": 248.60000610351562,
+              "y": 1486.4833984375,
+              "width": 470.20001220703125,
+              "height": 144.89999389648438
+            },
+            "clientWidth": 470,
+            "scrollWidth": 470,
+            "whiteSpace": "pre-wrap",
+            "overflowWrap": "anywhere",
+            "overflowX": "visible"
+          },
+          {
+            "box": {
+              "x": 734.7999877929688,
+              "y": 1486.4833984375,
+              "width": 470.20001220703125,
+              "height": 84.44999694824219
+            },
+            "clientWidth": 470,
+            "scrollWidth": 470,
+            "whiteSpace": "pre-wrap",
+            "overflowWrap": "anywhere",
+            "overflowX": "visible"
+          }
+        ]
+      },
+      {
+        "path": "/literal~1~0雪",
+        "kind": "unexpected",
+        "expected_text": "{\n  \"present\": false\n}",
+        "actual_text": "{\n  \"present\": true,\n  \"type\": \"object\",\n  \"value\": {\n    \"marker\": \"<b data-loom-literal=\\\"yes\\\">literal 雪</b> & \\\"quoted\\\"\\nline\",\n    \"nothing\": null,\n    \"items\": [\n      false,\n      0,\n      \"\"\n    ]\n  }\n}",
+        "box": {
+          "x": 244.60000610351562,
+          "y": 1653.38330078125,
+          "width": 964.4000244140625,
+          "height": 433.70001220703125
+        },
+        "sides": [
+          {
+            "box": {
+              "x": 248.60000610351562,
+              "y": 1758.9833984375,
+              "width": 470.20001220703125,
+              "height": 84.44999694824219
+            },
+            "clientWidth": 470,
+            "scrollWidth": 470,
+            "whiteSpace": "pre-wrap",
+            "overflowWrap": "anywhere",
+            "overflowX": "visible"
+          },
+          {
+            "box": {
+              "x": 734.7999877929688,
+              "y": 1758.9833984375,
+              "width": 470.20001220703125,
+              "height": 306.0999755859375
+            },
+            "clientWidth": 470,
+            "scrollWidth": 470,
+            "whiteSpace": "pre-wrap",
+            "overflowWrap": "anywhere",
+            "overflowX": "visible"
+          }
+        ]
+      }
+    ],
+    "injected_elements": 0
+  },
+  "selected_file_text": "{\n  \"format\": \"towerops.synthetic-explorer.v1\",\n  \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\n  \"request\": {\n    \"scenario\": \"approved\",\n    \"include_approval\": true,\n    \"include_ack\": true\n  },\n  \"label\": \"Approval + acknowledgement\",\n  \"simulation_clock\": {\n    \"dispatch_sec\": 1002.5,\n    \"observed_sec\": 1001,\n    \"projection_horizon_min\": 5\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5,\n    \"min_vertical_ft\": 1000,\n    \"horizon_min\": 5,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10,\n    \"max_speed_nm_min\": 6,\n    \"max_climb_ft_min\": 3000\n  },\n  \"before\": {\n    \"version\": 1,\n    \"observed_at\": 1001,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"after\": {\n    \"version\": true,\n    \"observed_at\": 1002.5,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": 1,\n        \"vy_nm_min\": 0,\n        \"climb_ft_min\": 0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5,\n        \"y_nm\": 0,\n        \"altitude_ft\": 10000,\n        \"vx_nm_min\": -1,\n        \"vy_nm_min\": 2,\n        \"climb_ft_min\": 0\n      }\n    ]\n  },\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"status\": \"accepted\",\n      \"acknowledged_at\": 1002.4\n    }\n  },\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"before_conflict\": true,\n  \"after_conflict\": false,\n  \"audit_events\": [\n    {\n      \"seq\": 0,\n      \"kind\": \"fixture_proposal\",\n      \"payload\": {\n        \"scenario\": \"approved\",\n        \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory\": {\n          \"aircraft_id\": \"FIXTURE-B\",\n          \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n          \"set_vx_nm_min\": -1,\n          \"set_vy_nm_min\": 2,\n          \"set_climb_ft_min\": 0,\n          \"issued_at\": 1002,\n          \"expires_at\": 1010,\n          \"rationale\": \"synthetic projected-separation recovery\"\n        },\n        \"simulation_only\": true\n      },\n      \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\",\n      \"event_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"\n    },\n    {\n      \"seq\": 1,\n      \"kind\": \"screen_pass\",\n      \"payload\": {\n        \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory_hashes\": [\n          \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n        ]\n      },\n      \"prev_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\",\n      \"event_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"\n    },\n    {\n      \"seq\": 2,\n      \"kind\": \"approval\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"decision\": \"approve\",\n        \"approved_at\": 1002.2,\n        \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n      },\n      \"prev_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\",\n      \"event_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"\n    },\n    {\n      \"seq\": 3,\n      \"kind\": \"ack\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"status\": \"accepted\",\n        \"acknowledged_at\": 1002.4\n      },\n      \"prev_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\",\n      \"event_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"\n    },\n    {\n      \"seq\": 4,\n      \"kind\": \"simulated_actuation\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"\n      },\n      \"prev_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\",\n      \"event_hash\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"\n    }\n  ],\n  \"audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"audit_valid\": true,\n  \"literal/~雪\": {\n    \"marker\": \"<b data-loom-literal=\\\"yes\\\">literal 雪</b> & \\\"quoted\\\"\\nline\",\n    \"nothing\": null,\n    \"items\": [\n      false,\n      0,\n      \"\"\n    ]\n  }\n}\n",
+  "last_row_visibility": {
+    "top": 387.3833312988281,
+    "bottom": 821.0833435058594,
+    "viewport": 1100,
+    "visible": true
+  },
+  "browser_closed": true,
+  "browser_exit": 0,
+  "backend_exit": {
+    "code": 0,
+    "signal": null
+  },
+  "backend_closed": true,
+  "backend.stdout": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/backend.stdout",
+    "bytes": 198,
+    "sha256": "62a6364ce9e0068dc20dc546e9cbc6fcb2ca2494715f5a1155e57cd5f6a38cad",
+    "mode": "0o664"
+  },
+  "backend.stderr": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/backend.stderr",
+    "bytes": 489,
+    "sha256": "5c6916d994c73f4d3583f472f3c3e7f540da70f49d6bc8b7631c481ae5d579ac",
+    "mode": "0o664"
+  },
+  "inputs_after": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/EXPLORER.md",
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/explorer.py",
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/app.js",
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/index.html",
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/style.css",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-spec-v1.json",
+      "bytes": 4233,
+      "sha256": "00f953e8b555d528a11029bc79f1b31d6112bdf566ed758546008c47bbe84f93",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+      "bytes": 13808,
+      "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+      "bytes": 5787,
+      "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-visual-C-v2.cjs",
+      "bytes": 8767,
+      "sha256": "f682ba774ccac3d8e7e8e348896e315a3c79dea64b5a1477458919028500c0e4",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-freeze-v2.json",
+      "bytes": 1886,
+      "sha256": "282d6a4979dcfebbc7f4b429a2f3c79fb26c005e2d2d2b54b8533ab653864be8",
+      "mode": "0o644"
+    }
+  ],
+  "inputs_preserved": true,
+  "accepted": true,
+  "finished": "2026-10-13T16:32:39.716Z"
+}

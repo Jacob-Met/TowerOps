@@ -1,0 +1,7 @@
+127.0.0.1 - - [13/Oct/2026 16:32:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:32:38] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:32:38] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:32:38] "GET /api/scenarios HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:32:38] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [13/Oct/2026 16:32:38] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:32:38] "POST /api/replay/explain HTTP/1.1" 200 -
