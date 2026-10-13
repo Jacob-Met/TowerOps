@@ -31,6 +31,26 @@ python3 audit_replay.py -
 python3 audit_replay.py -- -trace.json
 ```
 
+## Read saved UTF-8 bytes
+
+Saved trace files and binary-backed stdin are decoded as UTF-8.
+For byte-preserving stdin in a POSIX shell:
+
+```sh
+python3 audit_replay.py - < trace.json
+```
+
+From PowerShell, run a named file directly or use `cmd.exe` for byte redirection:
+
+```powershell
+py -3 audit_replay.py trace.json
+cmd /d /c "py -3 audit_replay.py - < trace.json"
+```
+
+Shells and upstream programs may transcode text pipelines before input reaches
+the checker. See [UTF-8 input for saved audit reviews](AUDIT_STDIN_UTF8.md) for
+strict decoding, malformed-byte refusal and text-only embedded streams.
+
 ## A recorded actuation needs both world identities
 
 For each recorded `simulated_actuation`, replay checks its screening,
