@@ -1,0 +1,177 @@
+{
+  "recorded_utc": "2026-10-13T02:49:06.662323+00:00",
+  "runtime": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "source_commit": "1ce5a91431dce0ca43813ba3198e602f4ae218f5",
+  "sources_before": {
+    "towerops.py": {
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70"
+    },
+    "advisory_options.py": {
+      "bytes": 2380,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    "scenarios.py": {
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    "explorer.py": {
+      "bytes": 7141,
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75"
+    },
+    "plan_world.py": {
+      "bytes": 8977,
+      "sha256": "94d9bfcc5da7b18d297520ca030ce2b91da1ab32d7580e5de9a0700c6fcf1929"
+    },
+    "explorer_world.py": {
+      "bytes": 4549,
+      "sha256": "34ba708c7bc82d9b9bbcb5fd7bc4feee7a3a236eb7ae1db45fb0012911529801"
+    },
+    "tests/test_explorer_world.py": {
+      "bytes": 7194,
+      "sha256": "9f069838621ff3a39b8563ae55bd575aa36331e65ac158c8f4e5902c60af3419"
+    },
+    "EXPLORER_WORLD.md": {
+      "bytes": 5187,
+      "sha256": "3a627abaf05bdaa23e2284eab198735d012749d8de02df9f65abecaaf8a06f9d"
+    }
+  },
+  "sources_after": {
+    "towerops.py": {
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70"
+    },
+    "advisory_options.py": {
+      "bytes": 2380,
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    "scenarios.py": {
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    "explorer.py": {
+      "bytes": 7141,
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75"
+    },
+    "plan_world.py": {
+      "bytes": 8977,
+      "sha256": "94d9bfcc5da7b18d297520ca030ce2b91da1ab32d7580e5de9a0700c6fcf1929"
+    },
+    "explorer_world.py": {
+      "bytes": 4549,
+      "sha256": "34ba708c7bc82d9b9bbcb5fd7bc4feee7a3a236eb7ae1db45fb0012911529801"
+    },
+    "tests/test_explorer_world.py": {
+      "bytes": 7194,
+      "sha256": "9f069838621ff3a39b8563ae55bd575aa36331e65ac158c8f4e5902c60af3419"
+    },
+    "EXPLORER_WORLD.md": {
+      "bytes": 5187,
+      "sha256": "3a627abaf05bdaa23e2284eab198735d012749d8de02df9f65abecaaf8a06f9d"
+    }
+  },
+  "sources_unchanged": true,
+  "saved_export_before": {
+    "bytes": 5770,
+    "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592"
+  },
+  "saved_export_after": {
+    "bytes": 5770,
+    "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592"
+  },
+  "saved_export_unchanged": true,
+  "courses": [
+    {
+      "phase": "before",
+      "extraction_command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/source/explorer_world.py",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/approved-explorer.json",
+        "--phase",
+        "before"
+      ],
+      "extraction_exit": 0,
+      "extraction_stderr": "",
+      "native_pipe": {
+        "producer": [
+          "/usr/bin/python3",
+          "-B",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/source/explorer_world.py",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/approved-explorer.json",
+          "--phase",
+          "before"
+        ],
+        "consumer": [
+          "/usr/bin/python3",
+          "-B",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/source/plan_world.py",
+          "-"
+        ],
+        "producer_exit": 0,
+        "consumer_exit": 0,
+        "producer_stderr": "",
+        "consumer_stderr": ""
+      },
+      "world": {
+        "bytes": 444,
+        "sha256": "bbfe3946b98e4ccf6ab5838eaa5bae1efe58275e727f5a312b8c0b52afccdb9a"
+      },
+      "plan": {
+        "bytes": 30712,
+        "sha256": "ee1bf7c6ba68cdd89a4b48644d4db3538d3c3521d483b76400ebe41473bbd8c6"
+      },
+      "planner_status": "options_available",
+      "proposal_only": true,
+      "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+      "input_sha256": "bbfe3946b98e4ccf6ab5838eaa5bae1efe58275e727f5a312b8c0b52afccdb9a"
+    },
+    {
+      "phase": "after",
+      "extraction_command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/source/explorer_world.py",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/approved-explorer.json",
+        "--phase",
+        "after"
+      ],
+      "extraction_exit": 0,
+      "extraction_stderr": "",
+      "native_pipe": {
+        "producer": [
+          "/usr/bin/python3",
+          "-B",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/source/explorer_world.py",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/approved-explorer.json",
+          "--phase",
+          "after"
+        ],
+        "consumer": [
+          "/usr/bin/python3",
+          "-B",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/source/plan_world.py",
+          "-"
+        ],
+        "producer_exit": 0,
+        "consumer_exit": 0,
+        "producer_stderr": "",
+        "consumer_stderr": ""
+      },
+      "world": {
+        "bytes": 444,
+        "sha256": "967045ed9f7edaea2f61fa025ab87b04439ec50846e98a1094a5b2d081183adf"
+      },
+      "plan": {
+        "bytes": 1114,
+        "sha256": "6463fb7e6f92fbbdad72b5979c1f0f96883d6e3b575ef9349e5b74c6aea21614"
+      },
+      "planner_status": "no_conflict",
+      "proposal_only": true,
+      "world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424",
+      "input_sha256": "967045ed9f7edaea2f61fa025ab87b04439ec50846e98a1094a5b2d081183adf"
+    }
+  ],
+  "scope": "Actual OS pipes from the new extractor to the unchanged native planner; fixed synthetic fixture, not external or operational adoption."
+}

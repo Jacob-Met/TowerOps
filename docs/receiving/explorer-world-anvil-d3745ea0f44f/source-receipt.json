@@ -1,0 +1,36 @@
+{
+  "commit": "1ce5a91431dce0ca43813ba3198e602f4ae218f5",
+  "python": "3.14.4",
+  "files": [
+    {
+      "path": "towerops.py",
+      "bytes": 19684,
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70"
+    },
+    {
+      "path": "advisory_options.py",
+      "bytes": 2380,
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    {
+      "path": "scenarios.py",
+      "bytes": 5989,
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    {
+      "path": "explorer.py",
+      "bytes": 7141,
+      "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f",
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75"
+    },
+    {
+      "path": "plan_world.py",
+      "bytes": 8977,
+      "git_blob": "2d26b2a3ec9171f9bdb7444cec72a33a5930e3b9",
+      "sha256": "94d9bfcc5da7b18d297520ca030ce2b91da1ab32d7580e5de9a0700c6fcf1929"
+    }
+  ]
+}
