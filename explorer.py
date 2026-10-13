@@ -123,6 +123,8 @@ def main():
     run.add_argument("--without-ack", action="store_true")
     replay = commands.add_parser("replay", help="Recompute and compare a local JSON export")
     replay.add_argument("file", type=Path)
+    replay.add_argument("--explain", action="store_true",
+                        help="Report up to 32 literal differing JSON paths")
     args = parser.parse_args()
     if args.command == "serve":
         with ThreadingHTTPServer(("127.0.0.1", args.port), Handler) as server:
@@ -134,6 +136,9 @@ def main():
     elif args.command == "run":
         print(json.dumps(run_scenario(args.scenario, not args.without_approval, not args.without_ack), indent=2))
     else:
+        if args.explain:
+            from replay_explain import run_explanation
+            raise SystemExit(run_explanation(args.file, MAX_BODY))
         try:
             if args.file.stat().st_size > MAX_BODY:
                 raise ValueError("Export exceeds 262144 bytes")

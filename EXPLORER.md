@@ -80,3 +80,46 @@ python explorer.py serve --port 8765
 ```
 
 A transfer zip of the same files (`towerops-explorer.zip`) runs the same way after extraction; compare its SHA-256 with the delivery report if you move it between machines.
+
+## Explain an Explorer replay mismatch
+
+Use the optional detailed report to locate differences in one saved export:
+
+```sh
+python3 explorer.py replay approved.json --explain
+```
+
+The ordinary reply fields stay present. The report adds `difference_limit: 32`,
+`differences` and `differences_truncated`. Each row names an RFC6901 JSON Pointer
+(`~0` means a literal tilde and `~1` a literal slash), a missing/unexpected/type/value
+kind, and literal expected/actual sides. A side with `present: false` is absent;
+`present: true, type: "null", value: null` is an explicit null. Object keys are
+visited in sorted order and array indices in increasing order. A type difference
+reports that subtree once. Values are complete, not shortened.
+
+For the documented edited `after.version` copy, a row identifies `/after/version`.
+Finite numerically equal integers and floats remain equal; booleans do not become
+numbers. The first 32 differences are returned. `differences_truncated: true`
+means at least one more was found, not a total count. Paths describe differences
+from the fixed local reproduction; they do not infer why an export changed or
+authenticate it. The existing reproducibility/authority caveats still apply.
+
+Explain mode reads one regular UTF-8 file, bounded to 262,144 bytes at the actual
+read. It refuses malformed, excessively deep or nonfinite JSON, including overflow
+numbers, before report output. It follows the existing fixture request admission;
+it does not accept arbitrary engine input. It neither writes the input nor opens
+an output file. Concurrent file writers and adversarial directory changes are not
+excluded. Keep the original when redirecting stdout: a shell may truncate its
+destination before this command starts.
+
+Exit 0 is a delivered matching report, 1 a delivered mismatch report, and 2 a
+refusal or stdout write/flush failure. The complete JSON is prepared first, but
+bytes already written cannot be rolled back on output failure. Default replay
+without `--explain`, its original decoding and exits, and the browser HTTP reply
+remain unchanged.
+
+Focused standard-library tests:
+
+```sh
+python3 -m unittest discover -s tests -p 'test_replay_explain.py' -v
+```

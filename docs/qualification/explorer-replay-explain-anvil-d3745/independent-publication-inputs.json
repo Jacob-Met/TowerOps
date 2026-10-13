@@ -1,0 +1,115 @@
+{
+  "schema": "hamon.root.towerops-explain-publication-inputs.v1",
+  "prefix": "docs/qualification/explorer-replay-explain-anvil-d3745/independent/",
+  "files": [
+    {
+      "path": "receive.py",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/receive.py",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/receive.py",
+      "bytes": 9462,
+      "sha256": "c0e4f69204fd2f88c58771355dd33a05c0dbdeb72f0be1d6049abd31f014fef4",
+      "git_blob": "3b0b8f67d9a6ac11596180f2930f78f843fb7e1f",
+      "mode": "100644"
+    },
+    {
+      "path": "freeze.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/freeze.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/freeze.json",
+      "bytes": 1341,
+      "sha256": "a46c6dc4f81fa19bdf8deafc4ac1360ac5c13bed8af6d905a37ef1fdd0182abf",
+      "git_blob": "5566865142dc36e8bac467d7e61709e461c2597a",
+      "mode": "100644"
+    },
+    {
+      "path": "original-spec.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/original-spec.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/original-spec.json",
+      "bytes": 850,
+      "sha256": "16e823ad2953e449f7f004d988e24ad4ccd33eef16d0a65ce20fb7f168c68ce5",
+      "git_blob": "671d390ab6b05966377bd0c1c573b42dc50f22eb",
+      "mode": "100644"
+    },
+    {
+      "path": "candidate-spec.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/candidate-spec.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/candidate-spec.json",
+      "bytes": 1650,
+      "sha256": "9f7905fffe3eb3f283d67a57cdec61e9b76e710156e61a92a4e4569ca67d86f4",
+      "git_blob": "54d445afa71195495a30f1a972c12936ced3e50d",
+      "mode": "100644"
+    },
+    {
+      "path": "original-receipt.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/original-receipt.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/original-v1/receipt.json",
+      "bytes": 26215,
+      "sha256": "5f67d5cc49a5123128c943d850a576feb84a4aee918a967e7b8e585492c963f0",
+      "git_blob": "681f041e941f7f601d716f214f470860973c7124",
+      "mode": "100644"
+    },
+    {
+      "path": "candidate-receipt.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/candidate-receipt.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/receipt.json",
+      "bytes": 184449,
+      "sha256": "293582ab7b1c4b4a24abcb50c034e0239af2c896c56ac3ffdc5325d59b331a88",
+      "git_blob": "66786f3e4d49df91c85e9023e5bd19168346213a",
+      "mode": "100644"
+    },
+    {
+      "path": "stream-custody.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/stream-custody.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/publication/stream-custody.json",
+      "bytes": 17532,
+      "sha256": "9857e3ecb7ea2bccf338a9b105399f4e7a4db14c3fa8c4dfd29fb105c1b97cce",
+      "git_blob": "ea8b336d1d27439c4a10b9c39235aa2e917bac73",
+      "mode": "100644"
+    },
+    {
+      "path": "review.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/review.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/publication/review.json",
+      "bytes": 5253,
+      "sha256": "d5fe7ba4bdbc7b4eb34ccf603fd06d2343b98080cc5ea3a0b47ceda5d77bb0e1",
+      "git_blob": "8d75b89c1949b1243ad79b82cc8dc21d3b810c4f",
+      "mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/README.md",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/publication/README.md",
+      "bytes": 4159,
+      "sha256": "3bee388654ce643a8396f9e938b1a72bba4f298b26cddcc9171f93fcc3aed360",
+      "git_blob": "e4cdfe324a6ea63dd88b29e891895fde735ed48d",
+      "mode": "100644"
+    },
+    {
+      "path": "worked/saved-approved.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/worked/saved-approved.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+      "mode": "100644"
+    },
+    {
+      "path": "worked/changed-version.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/worked/changed-version.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+      "bytes": 5770,
+      "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+      "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+      "mode": "100644"
+    },
+    {
+      "path": "worked/explanation.json",
+      "source_path": "/dev/shm/root-d3745-towerops-explain/publication/worked/explanation.json",
+      "original_source_path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/streams/06-one-field.stdout",
+      "bytes": 650,
+      "sha256": "e8242e77c7d0721fa85d949bcf94f24f1ec813a201d4bec514e7fcb3e4828ef6",
+      "git_blob": "df3e8fd29be4ef8e95abf2338872d8f4f049c1e9",
+      "mode": "100644"
+    }
+  ],
+  "scope": "Original fixed selection; portable destination aliases explicitly authored here before publication. No recursive directory admission. Complete captured raw streams are represented losslessly in the unchanged receipts and identified in stream-custody.json."
+}

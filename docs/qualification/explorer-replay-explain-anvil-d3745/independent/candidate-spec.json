@@ -1,0 +1,50 @@
+{
+  "variant": "candidate",
+  "source": "/dev/shm/root-d3745-towerops-explain/candidate",
+  "base_commit": "8a87ad1331d7e7100367dde583d59560836f9eb8",
+  "author_packet_sha256": "63c36c4bee90e2e9d2da0681a1d0f9bd328e1bb9e44198e0d8680afd89dcb5e3",
+  "files": [
+    {
+      "path": "replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": 420
+    },
+    {
+      "path": "explorer.py",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+      "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a",
+      "mode": 493
+    },
+    {
+      "path": "EXPLORER.md",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+      "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d",
+      "mode": 420
+    },
+    {
+      "path": "tests/test_replay_explain.py",
+      "bytes": 9191,
+      "sha256": "2628d98c691fff88054f168fc1faad81af40c6becca5441da515b98acd2d1623",
+      "git_blob": "392bb213c04ee6646455d176f2060760cf95de4f",
+      "mode": 420
+    },
+    {
+      "path": "scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": 420
+    },
+    {
+      "path": "towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": 420
+    }
+  ]
+}

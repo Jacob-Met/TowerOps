@@ -1,0 +1,422 @@
+--- a/explorer.py
++++ b/explorer.py
+@@ -123,6 +123,8 @@
+     run.add_argument("--without-ack", action="store_true")
+     replay = commands.add_parser("replay", help="Recompute and compare a local JSON export")
+     replay.add_argument("file", type=Path)
++    replay.add_argument("--explain", action="store_true",
++                        help="Report up to 32 literal differing JSON paths")
+     args = parser.parse_args()
+     if args.command == "serve":
+         with ThreadingHTTPServer(("127.0.0.1", args.port), Handler) as server:
+@@ -134,6 +136,9 @@
+     elif args.command == "run":
+         print(json.dumps(run_scenario(args.scenario, not args.without_approval, not args.without_ack), indent=2))
+     else:
++        if args.explain:
++            from replay_explain import run_explanation
++            raise SystemExit(run_explanation(args.file, MAX_BODY))
+         try:
+             if args.file.stat().st_size > MAX_BODY:
+                 raise ValueError("Export exceeds 262144 bytes")
+--- a/EXPLORER.md
++++ b/EXPLORER.md
+@@ -80,3 +80,46 @@
+ ```
+ 
+ A transfer zip of the same files (`towerops-explorer.zip`) runs the same way after extraction; compare its SHA-256 with the delivery report if you move it between machines.
++
++## Explain an Explorer replay mismatch
++
++Use the optional detailed report to locate differences in one saved export:
++
++```sh
++python3 explorer.py replay approved.json --explain
++```
++
++The ordinary reply fields stay present. The report adds `difference_limit: 32`,
++`differences` and `differences_truncated`. Each row names an RFC6901 JSON Pointer
++(`~0` means a literal tilde and `~1` a literal slash), a missing/unexpected/type/value
++kind, and literal expected/actual sides. A side with `present: false` is absent;
++`present: true, type: "null", value: null` is an explicit null. Object keys are
++visited in sorted order and array indices in increasing order. A type difference
++reports that subtree once. Values are complete, not shortened.
++
++For the documented edited `after.version` copy, a row identifies `/after/version`.
++Finite numerically equal integers and floats remain equal; booleans do not become
++numbers. The first 32 differences are returned. `differences_truncated: true`
++means at least one more was found, not a total count. Paths describe differences
++from the fixed local reproduction; they do not infer why an export changed or
++authenticate it. The existing reproducibility/authority caveats still apply.
++
++Explain mode reads one regular UTF-8 file, bounded to 262,144 bytes at the actual
++read. It refuses malformed, excessively deep or nonfinite JSON, including overflow
++numbers, before report output. It follows the existing fixture request admission;
++it does not accept arbitrary engine input. It neither writes the input nor opens
++an output file. Concurrent file writers and adversarial directory changes are not
++excluded. Keep the original when redirecting stdout: a shell may truncate its
++destination before this command starts.
++
++Exit 0 is a delivered matching report, 1 a delivered mismatch report, and 2 a
++refusal or stdout write/flush failure. The complete JSON is prepared first, but
++bytes already written cannot be rolled back on output failure. Default replay
++without `--explain`, its original decoding and exits, and the browser HTTP reply
++remain unchanged.
++
++Focused standard-library tests:
++
++```sh
++python3 -m unittest discover -s tests -p 'test_replay_explain.py' -v
++```
+--- /dev/null
++++ b/replay_explain.py
+@@ -0,0 +1,150 @@
++"""Bounded literal differences for the local synthetic Explorer replay command."""
++import copy
++import json
++import math
++import os
++from pathlib import Path
++import stat
++import sys
++
++from scenarios import json_equivalent, replay_result, run_scenario
++
++DIFFERENCE_LIMIT = 32
++_MISSING = object()
++
++
++def _json_type(value):
++    if value is None:
++        return "null"
++    if type(value) is bool:
++        return "boolean"
++    if type(value) in (int, float):
++        return "number"
++    if isinstance(value, str):
++        return "string"
++    if isinstance(value, list):
++        return "array"
++    if isinstance(value, dict):
++        return "object"
++    raise TypeError("Expected a JSON value")
++
++
++def _side(value):
++    if value is _MISSING:
++        return {"present": False}
++    return {"present": True, "type": _json_type(value), "value": value}
++
++
++def _pointer(parent, key):
++    return parent + "/" + str(key).replace("~", "~0").replace("/", "~1")
++
++
++def _walk(expected, actual, pointer=""):
++    if expected is _MISSING or actual is _MISSING:
++        yield {
++            "path": pointer,
++            "kind": "unexpected" if expected is _MISSING else "missing",
++            "expected": _side(expected),
++            "actual": _side(actual),
++        }
++        return
++    if json_equivalent(expected, actual):
++        return
++    expected_type, actual_type = _json_type(expected), _json_type(actual)
++    if expected_type != actual_type:
++        yield {"path": pointer, "kind": "type",
++               "expected": _side(expected), "actual": _side(actual)}
++    elif isinstance(expected, dict):
++        for key in sorted(expected.keys() | actual.keys()):
++            yield from _walk(expected.get(key, _MISSING),
++                             actual.get(key, _MISSING), _pointer(pointer, key))
++    elif isinstance(expected, list):
++        for index in range(max(len(expected), len(actual))):
++            left = expected[index] if index < len(expected) else _MISSING
++            right = actual[index] if index < len(actual) else _MISSING
++            yield from _walk(left, right, _pointer(pointer, index))
++    else:
++        yield {"path": pointer, "kind": "value",
++               "expected": _side(expected), "actual": _side(actual)}
++
++
++def explain_replay(value):
++    """Return the ordinary replay reply plus at most 32 detached differences.
++
++    Input is a finite decoded JSON export. This describes local reproduction,
++    not provenance, causation or authority. Numeric comparison stays with the
++    maintained Explorer comparator.
++    """
++    # Refuse nonfinite or excessively deep values before computing a report.
++    json.dumps(value, allow_nan=False)
++    actual = copy.deepcopy(value)
++    reply = replay_result(actual)
++    expected = run_scenario(**actual["request"])
++    differences = []
++    truncated = False
++    for difference in _walk(expected, actual):
++        if len(differences) == DIFFERENCE_LIMIT:
++            truncated = True
++            break
++        differences.append(difference)
++    return {**reply, "difference_limit": DIFFERENCE_LIMIT,
++            "differences": differences, "differences_truncated": truncated}
++
++
++def _finite_float(text):
++    value = float(text)
++    if not math.isfinite(value):
++        raise ValueError("Non-finite JSON numbers are not supported")
++    return value
++
++
++def _reject_constant(_text):
++    raise ValueError("Non-finite JSON numbers are not supported")
++
++
++def _read_export(path, max_bytes):
++    # The descriptor check avoids consuming devices or pipes. It does not
++    # promise exclusion of concurrent regular-file writers or directory races.
++    flags = os.O_RDONLY | getattr(os, "O_BINARY", 0) | getattr(os, "O_NONBLOCK", 0)
++    fd = os.open(path, flags)
++    try:
++        if not stat.S_ISREG(os.fstat(fd).st_mode):
++            raise ValueError("Replay explanation requires a regular file")
++        with os.fdopen(fd, "rb") as source:
++            fd = None
++            raw = source.read(max_bytes + 1)
++    finally:
++        if fd is not None:
++            os.close(fd)
++    if len(raw) > max_bytes:
++        raise ValueError(f"Export exceeds {max_bytes} bytes")
++    return json.loads(raw.decode("utf-8"), parse_float=_finite_float,
++                      parse_constant=_reject_constant)
++
++
++def run_explanation(path: Path, max_bytes: int, stdout=None, stderr=None):
++    """Deliver one complete prepared report; 0 match, 1 mismatch, 2 refusal."""
++    output = sys.stdout if stdout is None else stdout
++    errors = sys.stderr if stderr is None else stderr
++    try:
++        reply = explain_replay(_read_export(path, max_bytes))
++        text = json.dumps(reply, ensure_ascii=False, allow_nan=False, indent=2) + "\n"
++    except (OSError, ValueError, TypeError, RecursionError) as exc:
++        print(f"Replay explanation rejected: {exc}", file=errors)
++        return 2
++    try:
++        count = output.write(text)
++        if type(count) is not int or count != len(text):
++            raise OSError("Incomplete stdout write")
++        output.flush()
++    except (OSError, ValueError, UnicodeError) as exc:
++        # The CLI exits immediately. Closing only its actual stdout suppresses
++        # a second shutdown flush; caller-supplied streams remain caller-owned.
++        if output is sys.stdout:
++            try:
++                output.close()
++            except OSError:
++                pass
++        print(f"Replay explanation output failed: {exc}", file=errors)
++        return 2
++    return 0 if reply["matches"] else 1
+--- /dev/null
++++ b/tests/test_replay_explain.py
+@@ -0,0 +1,196 @@
++"""Focused public API and actual CLI controls for Explorer replay explanations."""
++import copy
++import io
++import json
++import os
++from pathlib import Path
++import subprocess
++import sys
++import tempfile
++import unittest
++
++from replay_explain import explain_replay, run_explanation
++from scenarios import replay_result, run_scenario
++
++ROOT = Path(__file__).resolve().parents[1]
++MAX_BYTES = 262144
++
++
++class ReplayExplanationTests(unittest.TestCase):
++    def setUp(self):
++        self.export = run_scenario("approved")
++        self.directory = tempfile.TemporaryDirectory()
++        self.addCleanup(self.directory.cleanup)
++        self.path = Path(self.directory.name) / "export 東京.json"
++
++    def save(self, value=None):
++        self.path.write_text(json.dumps(self.export if value is None else value),
++                             encoding="utf-8")
++        return self.path
++
++    def cli(self, *args, stdout=subprocess.PIPE):
++        env = {k: v for k, v in os.environ.items() if not k.startswith("PYTHON")}
++        env["PYTHONDONTWRITEBYTECODE"] = "1"
++        optimize = ["-O"] if sys.flags.optimize else []
++        return subprocess.run([sys.executable, *optimize, "-B", str(ROOT / "explorer.py"),
++                               "replay", *map(str, args)], cwd=self.directory.name,
++                              env=env, stdout=stdout, stderr=subprocess.PIPE, timeout=15)
++
++    def test_match_and_finite_numeric_equivalence(self):
++        actual = copy.deepcopy(self.export)
++        actual["before"]["aircraft"][0]["x_nm"] = -5
++        report = explain_replay(actual)
++        self.assertTrue(report["matches"])
++        self.assertEqual(report["differences"], [])
++        self.assertFalse(report["differences_truncated"])
++        self.assertEqual(report["difference_limit"], 32)
++        self.assertEqual({k: report[k] for k in replay_result(actual)}, replay_result(actual))
++
++    def test_literal_type_value_missing_null_and_pointer_order(self):
++        actual = copy.deepcopy(self.export)
++        actual["after"]["version"] += 1
++        actual["policy"]["horizon_min"] = True
++        del actual["rejection_reason"]
++        actual["z/~東京"] = "<literal>&\nline"
++        report = explain_replay(actual)
++        self.assertFalse(report["matches"])
++        self.assertEqual([(r["path"], r["kind"]) for r in report["differences"]],
++                         [("/after/version", "value"), ("/policy/horizon_min", "type"),
++                          ("/rejection_reason", "missing"), ("/z~1~0東京", "unexpected")])
++        rows = report["differences"]
++        self.assertEqual(rows[1]["expected"]["type"], "number")
++        self.assertEqual(rows[1]["actual"], {"present": True, "type": "boolean", "value": True})
++        self.assertEqual(rows[2]["expected"], {"present": True, "type": "null", "value": None})
++        self.assertEqual(rows[2]["actual"], {"present": False})
++        self.assertEqual(rows[3]["actual"]["value"], "<literal>&\nline")
++
++    def test_array_presence_and_subtree_type_are_explicit(self):
++        actual = copy.deepcopy(self.export)
++        missing = actual["before"]["aircraft"].pop()
++        report = explain_replay(actual)
++        self.assertEqual(report["differences"], [{
++            "path": "/before/aircraft/1", "kind": "missing",
++            "expected": {"present": True, "type": "object", "value": missing},
++            "actual": {"present": False}}])
++        actual = copy.deepcopy(self.export)
++        actual["before"]["aircraft"].append(None)
++        report = explain_replay(actual)
++        self.assertEqual(report["differences"][0]["path"], "/before/aircraft/2")
++        self.assertEqual(report["differences"][0]["kind"], "unexpected")
++        actual["before"]["aircraft"] = "not an array"
++        report = explain_replay(actual)
++        self.assertEqual(len(report["differences"]), 1)
++        self.assertEqual(report["differences"][0]["kind"], "type")
++        self.assertEqual(report["differences"][0]["path"], "/before/aircraft")
++
++    def test_limit_detects_more_without_claiming_total(self):
++        actual = copy.deepcopy(self.export)
++        for index in range(32):
++            actual[f"z{index:02}"] = index
++        exact = explain_replay(actual)
++        self.assertEqual(len(exact["differences"]), 32)
++        self.assertFalse(exact["differences_truncated"])
++        actual["z32"] = 32
++        overflow = explain_replay(actual)
++        self.assertEqual(overflow["differences"], exact["differences"])
++        self.assertTrue(overflow["differences_truncated"])
++        self.assertNotIn("difference_count", overflow)
++
++    def test_report_is_detached_and_input_unchanged(self):
++        actual = copy.deepcopy(self.export)
++        actual["extra"] = {"literal": ["東京"]}
++        before = copy.deepcopy(actual)
++        report = explain_replay(actual)
++        self.assertEqual(actual, before)
++        report["differences"][0]["actual"]["value"]["literal"].append("local note")
++        self.assertEqual(actual, before)
++
++    def test_default_reply_and_actual_cli_match_mismatch(self):
++        path = self.save()
++        original_bytes = path.read_bytes()
++        default = self.cli(path)
++        self.assertEqual((default.returncode, default.stderr), (0, b""))
++        self.assertEqual(default.stdout, (json.dumps(replay_result(self.export), indent=2) + "\n").encode())
++        matching = self.cli(path, "--explain")
++        self.assertEqual((matching.returncode, matching.stderr), (0, b""))
++        self.assertEqual(json.loads(matching.stdout)["differences"], [])
++        self.assertEqual(path.read_bytes(), original_bytes)
++        self.export["after"]["version"] += 1
++        self.save()
++        mismatch = self.cli("--explain", path)
++        self.assertEqual((mismatch.returncode, mismatch.stderr), (1, b""))
++        self.assertEqual(json.loads(mismatch.stdout)["differences"][0]["path"], "/after/version")
++
++    def test_explain_refuses_malformed_deep_nonfinite_and_bad_utf8_before_stdout(self):
++        valid = json.dumps(self.export).encode()
++        cases = [b"{", b"\xff", b"[" * 2000 + b"0" + b"]" * 2000]
++        for token in [b"NaN", b"Infinity", b"-Infinity", b"1e999"]:
++            cases.append(valid[:-1] + b', "extra": ' + token + b"}")
++        for raw in cases:
++            with self.subTest(raw_prefix=raw[:16]):
++                self.path.write_bytes(raw)
++                result = self.cli(self.path, "--explain")
++                self.assertEqual(result.returncode, 2)
++                self.assertEqual(result.stdout, b"")
++                self.assertIn(b"Replay explanation rejected:", result.stderr)
++                self.assertNotIn(b"Traceback", result.stderr)
++                self.assertEqual(self.path.read_bytes(), raw)
++
++    def test_explain_actual_byte_bound_and_regular_file_refusal(self):
++        self.path.write_bytes(b" " * (MAX_BYTES + 1))
++        result = self.cli(self.path, "--explain")
++        self.assertEqual((result.returncode, result.stdout), (2, b""))
++        self.assertIn(b"Export exceeds 262144 bytes", result.stderr)
++        for path in [Path(self.directory.name), Path(self.directory.name) / "missing.json"]:
++            with self.subTest(path=str(path)):
++                result = self.cli(path, "--explain")
++                self.assertEqual((result.returncode, result.stdout), (2, b""))
++                self.assertNotIn(b"Traceback", result.stderr)
++        if hasattr(os, "mkfifo"):
++            fifo = Path(self.directory.name) / "input.fifo"
++            os.mkfifo(fifo)
++            result = self.cli(fifo, "--explain")
++            self.assertEqual((result.returncode, result.stdout), (2, b""))
++            self.assertIn(b"regular file", result.stderr)
++
++    def test_short_write_and_flush_failure_never_claim_success(self):
++        self.save()
++
++        class Output:
++            def __init__(self, short=False):
++                self.short = short
++                self.text = ""
++                self.closed = False
++
++            def write(self, text):
++                self.text += text
++                return len(text) - 1 if self.short else len(text)
++
++            def flush(self):
++                raise OSError("authored flush failure")
++
++            def close(self):
++                self.closed = True
++
++        for short in [False, True]:
++            output, errors = Output(short), io.StringIO()
++            self.assertEqual(run_explanation(self.path, MAX_BYTES, output, errors), 2)
++            self.assertIn("output failed:", errors.getvalue())
++            self.assertFalse(output.closed)
++            self.assertTrue(json.loads(output.text)["matches"])
++
++    @unittest.skipUnless(Path("/dev/full").exists(), "/dev/full is unavailable")
++    def test_actual_stdout_failure_is_controlled_and_preserves_input(self):
++        self.save()
++        before = self.path.read_bytes()
++        with open("/dev/full", "wb") as sink:
++            result = self.cli(self.path, "--explain", stdout=sink)
++        self.assertEqual(result.returncode, 2)
++        self.assertIn(b"Replay explanation output failed:", result.stderr)
++        self.assertNotIn(b"Traceback", result.stderr)
++        self.assertNotIn(b"Exception ignored", result.stderr)
++        self.assertEqual(self.path.read_bytes(), before)
++
++
++if __name__ == "__main__":
++    unittest.main()

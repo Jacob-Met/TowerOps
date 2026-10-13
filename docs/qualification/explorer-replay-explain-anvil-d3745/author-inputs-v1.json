@@ -1,0 +1,256 @@
+{
+  "schema": "hamon.anvil.replay-explain-author-inputs.v1",
+  "source_base": "8a87ad1331d7e7100367dde583d59560836f9eb8",
+  "publication_state": "unpublished candidate v1; all source frozen before independent candidate execution",
+  "prefix": "docs/qualification/explorer-replay-explain-anvil-d3745/",
+  "files": [
+    {
+      "path": "replay_explain.py",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/candidate/replay_explain.py",
+      "role": "source",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": "100644"
+    },
+    {
+      "path": "explorer.py",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/candidate/explorer.py",
+      "role": "source",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+      "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a",
+      "mode": "100755"
+    },
+    {
+      "path": "tests/test_replay_explain.py",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/candidate/tests/test_replay_explain.py",
+      "role": "source",
+      "bytes": 9191,
+      "sha256": "2628d98c691fff88054f168fc1faad81af40c6becca5441da515b98acd2d1623",
+      "git_blob": "392bb213c04ee6646455d176f2060760cf95de4f",
+      "mode": "100644"
+    },
+    {
+      "path": "EXPLORER.md",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/candidate/EXPLORER.md",
+      "role": "source",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+      "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/author/candidate-v1/executed-course.py",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/author/candidate-v1/executed-course.py",
+      "role": "author-evidence",
+      "bytes": 35491,
+      "sha256": "a46dadd19a8a6a499cd862899f76caf3474b57e10bd7adb57ca64ea9c72bb50a",
+      "git_blob": "5e226669333446a15f90f631fdd13ebd165d3345",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/author/candidate-v1/normal.stderr",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/author/candidate-v1/normal.stderr",
+      "role": "author-evidence",
+      "bytes": 1683,
+      "sha256": "a5a0b9c76279b703407ab39d7a4adb59948fad6ac680c33447e35b8f495e482d",
+      "git_blob": "2b9fcf693c5a27f46149cd85433f38cb05bc6646",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/author/candidate-v1/normal.stdout",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/author/candidate-v1/normal.stdout",
+      "role": "author-evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/author/candidate-v1/optimized.stderr",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/author/candidate-v1/optimized.stderr",
+      "role": "author-evidence",
+      "bytes": 1683,
+      "sha256": "80755abddb59163f62713af09079ce57f5d65b433b8f4fe702d84e83bebb587f",
+      "git_blob": "b6c332985a7e6b7ca7467c34a0b3030f0170813f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/author/candidate-v1/optimized.stdout",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/author/candidate-v1/optimized.stdout",
+      "role": "author-evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/author/candidate-v1/receipt.json",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/author/candidate-v1/receipt.json",
+      "role": "author-evidence",
+      "bytes": 13394,
+      "sha256": "9e74e3b9bad3bf5b6efce7305c0e41e9c103ae50b4ba9559219ad3a0843be631",
+      "git_blob": "9e276a343cda2bf446d13cd07ee1991cce751fc6",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/author/candidate-v1/source-before.json",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/author/candidate-v1/source-before.json",
+      "role": "author-evidence",
+      "bytes": 2947,
+      "sha256": "f60ef673efc830179c8d843186ad4f9686fd006b393180eaeb90859412d5fded",
+      "git_blob": "a77dddcb012ea51f23e8c6a591028e7ec5acf554",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/author/stage-original.py",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/author/stage-original.py",
+      "role": "author-evidence",
+      "bytes": 6223,
+      "sha256": "59f61410b84da62ed4365462290b06b08ab7fc8efcda124c7e5835fb887a1361",
+      "git_blob": "b8ff935c308ac89d75a231272cd674482e2506f6",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/01-export.stderr",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/01-export.stderr",
+      "role": "author-evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/01-export.stdout",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/01-export.stdout",
+      "role": "author-evidence",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/02-match.stderr",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/02-match.stderr",
+      "role": "author-evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/02-match.stdout",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/02-match.stdout",
+      "role": "author-evidence",
+      "bytes": 303,
+      "sha256": "6892bb6cf0b702b9637837a3e642f2e68bdbb3f45685d79e3bfa14972fd94981",
+      "git_blob": "19e9fce4840fcf1ef8e392d33e3aea8aeeedd92f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/03-mismatch.stderr",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/03-mismatch.stderr",
+      "role": "author-evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/03-mismatch.stdout",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/03-mismatch.stdout",
+      "role": "author-evidence",
+      "bytes": 304,
+      "sha256": "fdbe100cd5a17b7208209ac2aaf561fe04ddb93b7c779c864c68c838d3df7c2d",
+      "git_blob": "2e652113b4bee0e313d32a0db210698ff6939a96",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/04-explain-absent.stderr",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/04-explain-absent.stderr",
+      "role": "author-evidence",
+      "bytes": 101,
+      "sha256": "bbe310abb78a3b97bfabafc4a37ee68290b75b2f59b69bccf9c9a45300bf3b33",
+      "git_blob": "ae053ee03793321d3228154e94978546a1ee8574",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/04-explain-absent.stdout",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/04-explain-absent.stdout",
+      "role": "author-evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/approved.json",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/approved.json",
+      "role": "author-evidence",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/changed.json",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/changed.json",
+      "role": "author-evidence",
+      "bytes": 5770,
+      "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+      "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/original/receipt.json",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/original/receipt.json",
+      "role": "author-evidence",
+      "bytes": 9537,
+      "sha256": "dedaad1ef810a2b845be4b616c995c123d21cfe272824a6b38aa2ed3bab968af",
+      "git_blob": "d451e693e2190e2ff733560f48824d001118e055",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/source-spec-v1.json",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/source-spec-v1.json",
+      "role": "author-evidence",
+      "bytes": 4719,
+      "sha256": "819e00367f53aa912d7145d33377249b9c78169cc1532c8db43bbb506e0047aa",
+      "git_blob": "7aa9b9ff35cfebe03bb7948407b3644fe427ab8c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/source-spec-complete-six.json",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/source-spec-complete-six.json",
+      "role": "author-evidence",
+      "bytes": 5731,
+      "sha256": "63c36c4bee90e2e9d2da0681a1d0f9bd328e1bb9e44198e0d8680afd89dcb5e3",
+      "git_blob": "52c6d91438743803b1228d30f643e10ff7e95aff",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/source.patch",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/source.patch",
+      "role": "author-support",
+      "bytes": 18560,
+      "sha256": "0f191f5b7623d177e4fe13f9017b081142467f10386844b9884d99c44eb63014",
+      "git_blob": "54cb1db04351d0afb7970ca98b2a1dc61a902d01",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-explain-anvil-d3745/README.md",
+      "source_path": "/dev/shm/anvil-d3745-towerops-explain/evidence/README.md",
+      "role": "author-support",
+      "bytes": 5861,
+      "sha256": "3772012c6d0d4cd9dd098150b753a148bc463cbe95e69a5c6686d53ad2a92684",
+      "git_blob": "2a67f7d782278ddba844d8a5b6e073061b6d34d5",
+      "mode": "100644"
+    }
+  ],
+  "notes": [
+    "Explicit four-source allowlist; no path-substring source classification.",
+    "Author normal/O qualification is distinct from root independent receiving.",
+    "Native raw author records and staging scripts are retained without rewriting."
+  ]
+}
