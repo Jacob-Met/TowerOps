@@ -1,0 +1,147 @@
+{
+  "format": "towerops.audit-cli-output-receiving.v1",
+  "owner": "dc7255e161d3/estate_source",
+  "issue": "https://github.com/Jacob-Met/TowerOps/issues/114",
+  "outcome": "Report stdout write/flush refusal as a controlled exit 2 before interpreter shutdown.",
+  "source": {
+    "parent": "1ce5a91431dce0ca43813ba3198e602f4ae218f5",
+    "parent_tree": "ee9c38bcbb9929564f38d3cf00900c37c99a189a",
+    "original_production_blob": "607b8b0893fcc4489d16addec0d6aab17505b38e",
+    "candidate_files": {
+      "audit_replay.py": {
+        "bytes": 9146,
+        "sha256": "1c5263c2b3fb8b3eb6ab60b3c5c5fc8a963601b05aa5ce258c082554a18d3142",
+        "git_blob": "29b35dd160f24714ff637a7169a7a9d9c5bb46ee"
+      },
+      "tests/test_audit_replay_output.py": {
+        "bytes": 1896,
+        "sha256": "a7e7e7e698b94a29666539bcca97fb9ba71fee93ec4cedb6b43d5060c07109fe",
+        "git_blob": "f1f2f10ae04831cacfa423638b4c2c0c388e29bc"
+      },
+      "AUDIT_REPLAY.md": {
+        "bytes": 3239,
+        "sha256": "4ed5ba558b9c213bccaa7047febcf44f51b4695e063325a3982aa33e170599ea",
+        "git_blob": "71b0fceeb5bdafd4058d6f2324afc77d318aac5e"
+      }
+    }
+  },
+  "original_receiving": [
+    {
+      "platform": "Linux",
+      "python": "3.14.4",
+      "device": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+      "receipt": "/home/jacob/hamon-estate-dc7255e161d3-towerops-audit-cli/output-evidence/baseline-output.json",
+      "sha256": "b66e95497ebebc6b62bb63069a36c852f82c795c35b2f66c717f8de266237228",
+      "command": "python3 audit_replay.py -",
+      "input": "[]",
+      "normal_exit": 0,
+      "full_device_exit": 120,
+      "full_device_stderr": "Exception ignored while flushing sys.stdout:\nOSError: [Errno 28] No space left on device\n"
+    },
+    {
+      "platform": "Linux",
+      "python": "3.14.4",
+      "pytest": "9.0.2",
+      "receipt": "/home/jacob/hamon-estate-dc7255e161d3-towerops-audit-cli/output-evidence/baseline-output-regressions.json",
+      "sha256": "7f004d9edbff4a32dfa357dd8f9b226f92e2545823bb0918d0d81e0366d2fd03",
+      "new_output_failures": 8,
+      "existing_passes": 53,
+      "subtests_passed": 31,
+      "controls": "Native valid, forged and empty audit reports, each through file and stdin, frozen before candidate. Original inputs and complete stdout/stderr retained."
+    },
+    {
+      "platform": "macOS",
+      "python": "3.12.8",
+      "pytest": "8.3.5",
+      "receipt": "/Users/me/hamon-estate-dc7255e161d3-towerops-audit-cli/output-evidence/baseline-output-regressions.json",
+      "sha256": "25cb7199c1955164fdf3129db2c3dcdd06caf1e3bfd22f3edd4d3743ecd8c869",
+      "new_output_failures": 4,
+      "existing_passes": 53,
+      "skipped": 4,
+      "skip_reason": "The Linux /dev/full character device is unavailable; four actual closed-pipe cases reproduced the defect."
+    }
+  ],
+  "candidate_receiving": [
+    {
+      "platform": "Linux",
+      "python": "3.14.4",
+      "pytest": "9.0.2",
+      "receipt": "/home/jacob/hamon-estate-dc7255e161d3-towerops-audit-cli/output-evidence/candidate-output-linux.json",
+      "sha256": "a76f9b4a745f8f7acb2a8dc279137541e652989e6dc7fd9eacd9bac6da22c624",
+      "command": "python3 -m pytest -q",
+      "exit": 0,
+      "tests_passed": 248,
+      "subtests_passed": 231,
+      "reported_seconds": 10.82,
+      "original_report_parity_controls": 6,
+      "input_bytes_preserved": true,
+      "diff_check_exit": 0
+    },
+    {
+      "platform": "macOS",
+      "python": "3.12.8",
+      "pytest": "8.3.5",
+      "ruff": "0.16.10",
+      "receipt": "/Users/me/hamon-estate-dc7255e161d3-towerops-audit-cli/output-evidence/candidate-output-mac.json",
+      "sha256": "46396c9c7363b5202f93660c2c6d97e573784608d32da4c62093e3a41be22cf9",
+      "command": "python -m pytest -q tests/test_audit_replay_output.py tests/test_audit_replay.py tests/test_audit_replay_depth.py tests/test_trace_duplicate_fields.py tests/test_audit_world_linkage.py",
+      "exit": 0,
+      "tests_passed": 57,
+      "skipped": 4,
+      "reported_seconds": 1.1,
+      "full_ruff_exit": 0,
+      "diff_check_exit": 0,
+      "scope": "Targeted native audit checks and full Ruff. Full macOS test-suite acceptance is not claimed."
+    }
+  ],
+  "independent_review": {
+    "reviewer": "dc7255e161d3/estate_context",
+    "frozen_protocol": "/home/jacob/hamon-estate-dc7255e161d3-towerops-audit-cli/output-evidence/context-stdout-refusal-protocol-dc7255-v1.json",
+    "protocol_sha256": "222852c44bdefa09739bbce308c4a545794f1b0042a8ae41d434f2994c1bbc66",
+    "frozen_before_candidate_exposure": true,
+    "status": "accepted",
+    "native_receipt": "/home/jacob/hamon-estate-dc7255e161d3-towerops-audit-cli/output-evidence/context-native-v1-758y2knp/receipt.json",
+    "native_receipt_sha256": "101e5ce33aff74a12514e580c1ee317529e8ece4bf3f209b22989c978c47122a",
+    "native_result": {
+      "accepted": true,
+      "checks": {
+        "ordinary_controls": true,
+        "candidate_refusals": true,
+        "original_failures": true,
+        "source_inputs_protocol_unchanged": true,
+        "count_44": true
+      },
+      "counts": {
+        "ordinary_control_children": 12,
+        "original_refusal_children": 16,
+        "candidate_refusal_children": 16
+      },
+      "source_blobs": {
+        "original": "607b8b0893fcc4489d16addec0d6aab17505b38e",
+        "candidate": "29b35dd160f24714ff637a7169a7a9d9c5bb46ee"
+      }
+    },
+    "scope": "Independent complete source/test/guide review and 44 real Linux child processes, including original/candidate parity, actual writer refusals for empty and forged audits, and source/input preservation.",
+    "driver_wrapper_exit": "Not separately observed: driver printed accepted=true and all 44 child codes were recorded, but the RDC session expired before the final wrapper exit-status read."
+  },
+  "limits": [
+    "Writer refusal may leave a partial report in the destination; no downstream consumption or durable-storage acknowledgement is claimed.",
+    "Native /dev/full and closed-pipe tests cover actual buffered flush and unbuffered write errors, not every arbitrary Python text stream or stderr failure.",
+    "The prior depth-change full Mac suite result remains 227 passed, 1 skipped, 1 failed because its unchanged comparison receiver requires Linux /dev/full.",
+    "No browser, installed service, live state, planner, audit hash/lifecycle, dependency or workflow change.",
+    "Best-effort stream close is cleanup and can internally flush pending buffered bytes. No zero-low-level-write guarantee is made; the command does not regenerate or explicitly write a second report after refusal."
+  ],
+  "delivery": {
+    "branch": "estate-dc7255e161d3/audit-cli-output",
+    "workflow_events_inspected": [
+      "ci.yml: push, pull_request",
+      "airspace-demo.yml: filtered push/pull_request and explicit workflow_dispatch"
+    ],
+    "skip_markers": [
+      "[skip ci]",
+      "[skip actions]"
+    ],
+    "actions_dispatch_or_rerun": false,
+    "next_handoff": "Publish only reviewed files, verify exact remote source, and complete ordinary expected-head integration."
+  }
+}

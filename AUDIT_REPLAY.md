@@ -4,7 +4,12 @@
 A demo document with an `audit_events` list is also accepted. With no filename
 or a single `-`, the command reads JSON from stdin. It prints a JSON summary:
 exit 0 means no replay findings, exit 1 means findings, and exit 2 means the
-input could not be read or reviewed.
+input could not be read or reviewed, or the summary could not be written.
+
+The command flushes its summary before returning a clean or findings status.
+If the output destination refuses a write or flush, it reports the error on
+stderr and returns exit 2. A failed destination may already hold a partial
+summary; the command does not replay the audit or emit another report.
 
 The existing Airspace Lab decision-trace panel uses the same replay checker
 through `decision_trace.review_trace`. Opening a saved trace does not apply

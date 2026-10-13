@@ -218,7 +218,16 @@ def main(argv: list[str]) -> int:
         # KeyboardInterrupt / SystemExit still propagate (correct for a CLI).
         print(f"error: replay failed: {exc}", file=sys.stderr)
         return 2
-    print(json.dumps(summary, indent=2))
+    try:
+        print(json.dumps(summary, indent=2))
+        sys.stdout.flush()
+    except OSError as exc:
+        print(f"error: cannot write audit summary: {exc}", file=sys.stderr)
+        try:
+            sys.stdout.close()
+        except OSError:
+            pass
+        return 2
     return 0 if report.ok else 1
 
 
