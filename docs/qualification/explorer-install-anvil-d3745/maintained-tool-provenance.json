@@ -1,0 +1,32 @@
+{
+  "schema": "hamon.anvil.explorer-install.publication-tools.v1",
+  "repository": "Jacob-Met/estate-push-tools",
+  "commit": "c00eadc94f81d2e8608a6e8a23bcfa9b201646a6",
+  "files": [
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/tools/prepare_git_objects.py",
+      "repository_path": "prepare_git_objects.py",
+      "bytes": 4041,
+      "sha256": "fb6596df63889b6b72038e3921b9144b802cc9546f9617705cfd112b57dab676",
+      "git_blob": "5a31e72360b1ebcd7595c97c8f1dc433659e71b9",
+      "native_mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/tools/receive_source.py",
+      "repository_path": "receive_source.py",
+      "bytes": 12539,
+      "sha256": "90af676b35c39f3cb1a3295d94a31a752893265af3a73292e2b2b22fb2750f35",
+      "git_blob": "c39c963f472c74c96320ad4174c886c2315d5cba",
+      "native_mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/tools/validate_publication_layout.py",
+      "repository_path": "validate_publication_layout.py",
+      "bytes": 10827,
+      "sha256": "09e931bcdb5d1ec5e55d76c8123a973a75a2d5072c6ffb84b302ddac8f443907",
+      "git_blob": "ff680dc0db8600e1e29a16e5516aa74632891e5a",
+      "native_mode": "0o644"
+    }
+  ],
+  "scope": "Exact already authenticated maintained three-file projection copied read-only; no tool modification or tool-suite replay."
+}

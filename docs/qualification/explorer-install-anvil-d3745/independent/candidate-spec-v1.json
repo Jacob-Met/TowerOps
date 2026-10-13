@@ -1,0 +1,40 @@
+{
+  "schema": "hamon.loom.towerops-installed-candidate-spec.v1",
+  "utc": "2026-10-13T18:17:58.398660+00:00",
+  "publication_state_at_receiving": "Unpublished installer; root full source and frozen receiver review accepted before this copy and actual execution.",
+  "installer": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/candidate/install_explorer.py",
+    "bytes": 12558,
+    "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+    "mode": "0o755"
+  },
+  "original_installer": {
+    "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/tools/install_explorer.py",
+    "bytes": 12558,
+    "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+    "mode": "0o755"
+  },
+  "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+  "source_dir": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source",
+  "runtime_source_pin": "c77e98e68d627c3ad75edc2d775ee8da018dbdcf",
+  "runtime_adopted_merge": "db62f253a0b0b2b8fe80a5412a2bdf38ec7c720d",
+  "root_source_review": {
+    "path": "/home/jacob/hamon/receiving/root-d3745-towerops-install/source-review-v1.json",
+    "bytes": 1971,
+    "sha256": "aa6efe1c3f6fedb396fd4d83c8ed77c5c94992422fdc53ffe858cffc7d8b2c98",
+    "mode": "0o664"
+  },
+  "root_harness_review": {
+    "path": "/home/jacob/hamon/receiving/root-d3745-towerops-install/harness-review-v1.json",
+    "bytes": 1341,
+    "sha256": "4910dc3cbd1183f4e4c639e85a718c26b23f19750a671d27cd854c871fe72da2",
+    "mode": "0o664"
+  },
+  "mode_adaptation": false,
+  "author_after_copy": {
+    "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/tools/install_explorer.py",
+    "bytes": 12558,
+    "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+    "mode": "0o755"
+  }
+}

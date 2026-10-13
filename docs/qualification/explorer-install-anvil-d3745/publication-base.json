@@ -1,0 +1,63 @@
+{
+  "schema": "hamon.anvil.explorer-install.publication-base.v1",
+  "repository": "Jacob-Met/TowerOps",
+  "commit": "db62f253a0b0b2b8fe80a5412a2bdf38ec7c720d",
+  "tree": "834cd97dde6632fed687c1eed3a23c0c9d9bf692",
+  "complete_tree_cached_from_independent_readback": true,
+  "truncated": false,
+  "leaf_count": 1518,
+  "source_paths": [
+    {
+      "path": "README.md",
+      "previous": {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c4cd2b9b993a5e83aa696767716dab86cb5a3c91",
+        "size": 4484,
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/c4cd2b9b993a5e83aa696767716dab86cb5a3c91"
+      }
+    },
+    {
+      "path": "docs/EXPLORER_INSTALL.md",
+      "previous": null
+    },
+    {
+      "path": "tests/test_explorer_install.py",
+      "previous": null
+    },
+    {
+      "path": "tools/install_explorer.py",
+      "previous": null
+    }
+  ],
+  "inherited_workflows": [
+    {
+      "path": ".github/workflows/airspace-demo.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24356d4f5ce88f21cc1a27329b06df351e156810",
+      "size": 2312,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/24356d4f5ce88f21cc1a27329b06df351e156810"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4791e16741c2ee136585d8f4d99f918535a3a017",
+      "size": 1423,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/4791e16741c2ee136585d8f4d99f918535a3a017"
+    }
+  ],
+  "instructions": {
+    "agents_files": [],
+    "standing_no_actions": true,
+    "workflow_changes": false,
+    "publication_skip_markers": [
+      "[skip ci]",
+      "[skip actions]",
+      "skip-checks: true"
+    ]
+  },
+  "limits": "Parent/current ref readback is a point-in-time observation; final ordinary expected-head integration rechecks current state."
+}

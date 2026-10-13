@@ -1,0 +1,51 @@
+{
+  "schema": "hamon.loom.towerops-installed-driver-freeze.v3",
+  "utc": "2026-10-13T18:25:06.986292+00:00",
+  "candidate_installer_body_or_spec_exposed_before_this_correction": true,
+  "actual_installer_executions_so_far": 0,
+  "driver": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v3.py",
+    "bytes": 17262,
+    "sha256": "5dc6ce13f7a58e04b098e4c43db9cbdf63081e454be715e5152d28e5f40a3d77",
+    "mode": "0o644"
+  },
+  "criteria": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/criteria-v1.json",
+    "bytes": 23882,
+    "sha256": "5c3835e230b9a8acc36653b5ba17b8e5bbee07b833032541e1f28229c3b5c26c",
+    "mode": "0o644"
+  },
+  "previous_driver": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v2.py",
+    "bytes": 16747,
+    "sha256": "a488fc033beaa74499e4b03883c2d4125f0557daac2d16bb01c26f73ae6f80ee",
+    "mode": "0o644"
+  },
+  "previous_freeze": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/driver-freeze-v2.json",
+    "bytes": 2462,
+    "sha256": "7bd1eebd277b4f0cecbcb98d338963cab4515876d057285a2e01a196b2628fd2",
+    "mode": "0o644"
+  },
+  "patch": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receiver-v2-to-v3.patch",
+    "bytes": 3551,
+    "sha256": "46d985fd155e2397d17d81cde9b59081fa1959d338f215202d930681ab6570c3",
+    "mode": "0o644"
+  },
+  "failed_admission": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/admission-failure-v2.json",
+    "bytes": 2112,
+    "sha256": "bf3557d253b00d1fdbfa227fc6a4dc570f3431f1b3783469ad4aa8948e5dbc03",
+    "mode": "0o664"
+  },
+  "separate_environment_audit": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/admission-v2-environment-audit.json",
+    "bytes": 1698,
+    "sha256": "438615002311d8a1cb11c769aa7689cd3967ad23267ba4490d78d36d32082183",
+    "mode": "0o644"
+  },
+  "reason": "Correct the unsupported environment-derived Path.home real-account assumption to passwd home /home/jacob, matching the public criteria and accepted installer. Record transport HOME/Path.home explicitly without modifying inherited environment. Version references and retain exact failed v2 controls; no product/HTTP/closure/repeat/source-preservation criteria changed.",
+  "syntax": "compile-only accepted; v3 not yet executed",
+  "gate": "Root reviews exact narrow post-exposure correction before first actual installer invocation."
+}

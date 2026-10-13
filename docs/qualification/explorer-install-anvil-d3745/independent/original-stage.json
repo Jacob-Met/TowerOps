@@ -1,0 +1,179 @@
+{
+  "schema": "hamon.loom.towerops-installed-original-stage.v1",
+  "utc": "2026-10-13T17:49:23.531021+00:00",
+  "candidate_installer_body_seen": false,
+  "identity": {
+    "host": "hamon-thinkpad",
+    "uid": 1000,
+    "user": "jacob"
+  },
+  "PATH": "/home/jacob/.local/bin:/usr/local/bin:/usr/bin:/bin:/snap/bin",
+  "source_pin": "c77e98e68d627c3ad75edc2d775ee8da018dbdcf",
+  "namespace_absent": true,
+  "selector_absent": true,
+  "PATH_command_absent": true,
+  "existing_commands": [
+    {
+      "path": "/home/jacob/.local/bin/tsuka",
+      "lexists": true,
+      "mode": "0o777",
+      "symlink": true,
+      "link": "/home/jacob/.local/share/tsuka/releases/d043962f147668f7251b4432539248f7354ad9d5/tsuka",
+      "resolved": "/home/jacob/.local/share/tsuka/releases/d043962f147668f7251b4432539248f7354ad9d5/tsuka",
+      "bytes": 8957736,
+      "sha256": "9b0523c79ff034ce43b484e175c9102fa37729991b084faff7666b980f776e50",
+      "target_mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/.local/bin/tsuka-report",
+      "lexists": true,
+      "mode": "0o777",
+      "symlink": true,
+      "link": "/home/jacob/.local/share/tsuka/tools/request-report/bc67f8c36e91e357340916f93bfb7fe881a8f507/report-request-metadata.py",
+      "resolved": "/home/jacob/.local/share/tsuka/tools/request-report/bc67f8c36e91e357340916f93bfb7fe881a8f507/report-request-metadata.py",
+      "bytes": 20647,
+      "sha256": "b06cb9577ba94dc2f56780bca1ef298d9accd27030ac62fc357f667ec6c3d1cb",
+      "target_mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/.local/bin/tsuka-lookup",
+      "lexists": true,
+      "mode": "0o777",
+      "symlink": true,
+      "link": "/home/jacob/.local/share/tsuka/tools/request-lookup/9e13a78bec35b0e59eb9e7e372557684c4670ace/tsuka-lookup",
+      "resolved": "/home/jacob/.local/share/tsuka/tools/request-lookup/9e13a78bec35b0e59eb9e7e372557684c4670ace/tsuka-lookup",
+      "bytes": 161,
+      "sha256": "d9f623b52204c88532755e6b14ee76719f5e83882243b0468be477ec493667b5",
+      "target_mode": "0o755"
+    }
+  ],
+  "sources": [
+    {
+      "original": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/EXPLORER.md",
+        "bytes": 9288,
+        "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+        "mode": "0o644"
+      },
+      "copied": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source/EXPLORER.md",
+        "bytes": 9288,
+        "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+        "mode": "0o644"
+      }
+    },
+    {
+      "original": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/explorer.py",
+        "bytes": 7604,
+        "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+        "mode": "0o755"
+      },
+      "copied": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source/explorer.py",
+        "bytes": 7604,
+        "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+        "mode": "0o755"
+      }
+    },
+    {
+      "original": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/replay_explain.py",
+        "bytes": 5432,
+        "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+        "mode": "0o644"
+      },
+      "copied": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source/replay_explain.py",
+        "bytes": 5432,
+        "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+        "mode": "0o644"
+      }
+    },
+    {
+      "original": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/scenarios.py",
+        "bytes": 5989,
+        "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+        "mode": "0o644"
+      },
+      "copied": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source/scenarios.py",
+        "bytes": 5989,
+        "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+        "mode": "0o644"
+      }
+    },
+    {
+      "original": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/towerops.py",
+        "bytes": 19684,
+        "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+        "mode": "0o644"
+      },
+      "copied": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source/towerops.py",
+        "bytes": 19684,
+        "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+        "mode": "0o644"
+      }
+    },
+    {
+      "original": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/app.js",
+        "bytes": 9430,
+        "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+        "mode": "0o644"
+      },
+      "copied": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source/web/app.js",
+        "bytes": 9430,
+        "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+        "mode": "0o644"
+      }
+    },
+    {
+      "original": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/index.html",
+        "bytes": 3934,
+        "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+        "mode": "0o644"
+      },
+      "copied": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source/web/index.html",
+        "bytes": 3934,
+        "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+        "mode": "0o644"
+      }
+    },
+    {
+      "original": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-source/web/style.css",
+        "bytes": 2566,
+        "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+        "mode": "0o644"
+      },
+      "copied": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source/web/style.css",
+        "bytes": 2566,
+        "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+        "mode": "0o644"
+      }
+    }
+  ],
+  "original_oracle_receipt": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/receipt.json",
+    "bytes": 689799,
+    "sha256": "ee3d0afd77da9bd6c6d3c37517956b4ad48ce1928c5f48774ddfcfdead584181",
+    "mode": "0o664"
+  },
+  "fixtures": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+      "bytes": 5787,
+      "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+      "mode": "0o644"
+    }
+  ],
+  "scope": "Read-only original absence/source/neighbor witness, own exact eight-file source copy; no installer or product execution."
+}

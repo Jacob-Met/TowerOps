@@ -1,0 +1,53 @@
+--- receive-install-v1.py
++++ receive-install-v2.py
+@@ -20,8 +20,8 @@
+ ROOT = Path(__file__).resolve().parent
+ CRITERIA_SHA = "5c3835e230b9a8acc36653b5ba17b8e5bbee07b833032541e1f28229c3b5c26c"
+ ORACLE_SHA = "ee3d0afd77da9bd6c6d3c37517956b4ad48ce1928c5f48774ddfcfdead584181"
+-OUT = ROOT / "course-v1"
+-record = {"schema": "hamon.loom.towerops-installed-explorer-receiving.v1",
++OUT = ROOT / "course-v2"
++record = {"schema": "hamon.loom.towerops-installed-explorer-receiving.v2",
+           "started_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+           "accepted": False, "checks": [], "commands": [], "http": [], "errors": [],
+           "scope": "Actual create-only installation, existing PATH launcher, relocated static assets and three complete prior HTTP oracles. No browser replay."}
+@@ -96,8 +96,9 @@
+ 
+ def selected_inputs():
+     paths = [ROOT / "criteria-v1.json", ROOT / "criteria-freeze-v1.json",
+-             ROOT / "receive-install-v1.py", ROOT / "driver-freeze-v1.json",
+-             ROOT / "original-stage.json", spec_path, installer]
++             ROOT / "receive-install-v2.py", ROOT / "driver-freeze-v2.json",
++             ROOT / "original-stage.json", ROOT / "receive-install-v1.py",
++             ROOT / "driver-freeze-v1.json", ROOT / "receiver-v1-to-v2.patch", spec_path, installer]
+     paths += [source / r["path"] for r in criteria["runtime"]]
+     paths += [Path(r["path"]) for r in criteria["original_oracles"]["fixtures"]]
+     paths += [Path(criteria["original_oracles"]["receipt"])]
+@@ -188,7 +189,7 @@
+     criteria_raw = (ROOT / "criteria-v1.json").read_bytes()
+     check("root original criteria bytes", digest(criteria_raw), CRITERIA_SHA)
+     criteria = json.loads(criteria_raw)
+-    freeze = json.loads((ROOT / "driver-freeze-v1.json").read_text())
++    freeze = json.loads((ROOT / "driver-freeze-v2.json").read_text())
+     check("frozen driver", digest(Path(__file__).read_bytes()), freeze["driver"]["sha256"])
+     check("hostname", platform.node(), criteria["required_identity"]["hostname"])
+     check("uid", os.getuid(), criteria["required_identity"]["uid"])
+@@ -252,7 +253,8 @@
+     for row in criteria["runtime"]:
+         supplied(release / row["path"], row)
+     check("exact release files", sorted(str(p.relative_to(release)) for p in release.rglob("*") if not p.is_dir()),
+-          sorted([r["path"] for r in criteria["runtime"]] + ["towerops-explorer"]))
++          sorted([r["path"] for r in criteria["runtime"]] + ["towerops-explorer", "installation.json"]))
++    check("declared installation manifest mode", identity(release / "installation.json")["mode"], "0o644")
+     installed_before = {"namespace": namespace_snapshot(namespace), "selector": command_identity(selector)}
+     record["installed_before_use"] = installed_before
+     so = (OUT / "server.stdout").open("xb")
+@@ -326,7 +328,7 @@
+             json.dump(record, f, indent=2, ensure_ascii=True)
+             f.write("\n")
+     else:
+-        with (ROOT / "admission-failure-v1.json").open("x") as f:
++        with (ROOT / "admission-failure-v2.json").open("x") as f:
+             json.dump(record, f, indent=2, ensure_ascii=True)
+             f.write("\n")
+     print(json.dumps({"accepted": record["accepted"], "checks": len(record["checks"]),

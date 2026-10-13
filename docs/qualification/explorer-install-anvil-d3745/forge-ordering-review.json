@@ -1,0 +1,38 @@
+{
+  "findings": [
+    "All eight admitted source bodies are captured before receipt/namespace creation and reused verbatim.",
+    "Exclusive namespace reservation precedes every version write. mkdir_new synchronizes each newly created entry in its parent; file writes synchronize file and parent before final selector.",
+    "The selector is created exclusively only after complete installed-byte/mode validation; bin directory is synchronized and source/installed identities are checked again.",
+    "Errors retain receipt, partial namespace/version and any published selector; created list records each successful creation immediately. Receipt rewrite is best effort and records its own failure when available.",
+    "Late stdout failure reports console phase with selector_may_exist and does not mislabel retained successful receipt as rollback.",
+    "Guide correctly distinguishes stable-owned-directory assumptions and improved durability from untested power-loss atomicity; no new locking/hostile-writer claim."
+  ],
+  "host": {
+    "hostname": "hamon-thinkpad",
+    "uid": 1000
+  },
+  "identities": {
+    "docs/EXPLORER_INSTALL.md": {
+      "bytes": 8441,
+      "git_blob": "d9c4968ef553be17f1f33a66ccb3e43398865cda",
+      "mode": "0o644",
+      "sha256": "cb684f14e458b3feb206e42a60107e0e4839043e0446c213833526bfafc39ee0"
+    },
+    "tools/install_explorer.py": {
+      "bytes": 12558,
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "mode": "0o755",
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7"
+    }
+  },
+  "limitations": [
+    "Root owns full source acceptance and Loom owns actual PATH/HTTP receiving.",
+    "No independent runtime, failure injection, power-loss or malicious concurrent directory mutation test performed.",
+    "Source/guide only; author test counts are attributed to Anvil, not independently replayed."
+  ],
+  "review": "accepted",
+  "schema": "forge.towerops-install-ordering-review.v1",
+  "scope": "Independent full installer/guide read, limited verdict on namespace and selector ordering, durability and retained failure state; read-only identity audit, no installer/test/server execution.",
+  "source_root": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate",
+  "utc": "2026-10-13T18:18:07.571425+00:00"
+}

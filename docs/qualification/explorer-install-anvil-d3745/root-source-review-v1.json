@@ -1,0 +1,33 @@
+{
+  "schema": "hamon.root.towerops-launcher-source-review.v1",
+  "accepted": true,
+  "scope": "Complete four maintained source/test/guide/README bodies read; runtime receiving remains a separate Loom course",
+  "source": {
+    "installer": {
+      "bytes": 12558,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7"
+    },
+    "tests": {
+      "bytes": 16331,
+      "sha256": "d35f4bf198feeff2f4d21d9699a16535d8c298fd37dc92a66370d8513c94994a"
+    },
+    "guide": {
+      "bytes": 8441,
+      "sha256": "cb684f14e458b3feb206e42a60107e0e4839043e0446c213833526bfafc39ee0"
+    },
+    "readme": {
+      "bytes": 4997,
+      "sha256": "7af1dc26acc5359e5cbd035ef26ff1d5933082385a97893635f249af1802197c"
+    }
+  },
+  "findings": [
+    "Fixed Linux host/account/Python admission; public CLI exposes no target-prefix override",
+    "Pinned captured eight-file runtime; owned singly linked regular files and stable repeated source capture; installed modes normalized to fixed pins",
+    "New external receipt reserved before exclusive namespace creation; each new parent entry fsynced, new files fsynced, complete release verified before exclusive selector publication",
+    "Late failure retains receipt and created paths, including already-published selector; no replacement/rollback/cleanup/retry",
+    "Wrapper uses quoted absolute explorer.py with serve and literal argv; -B avoids installed caches; installer neither starts server nor changes PATH",
+    "13 temporary methods cover meaningful refusal/recovery states; normal and optimized child flags explicit; real EFBIG and /dev/full included",
+    "Documentation distinguishes source-only author controls from pending actual installed-use receiving, and states power-loss/concurrency limitations"
+  ],
+  "decision": "Loom may admit exact candidate pins and execute its frozen v2 actual-install/relocation course once. Preserve original receipt/streams and any failure; no automatic rerun."
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "hamon.root.towerops-launcher-harness-review.v2",
+  "accepted": true,
+  "prior_review": "harness-review-v1.json",
+  "correction_scope": "Read complete v2-to-v3 patch supplied by original Loom author. Replace Path.home with passwd account-home admission, retain transport HOME/Path.home as observations without environment changes; version output names and preserve v1/v2/failure/absence-audit inputs.",
+  "post_candidate_exposure": true,
+  "reason": "RDC transport HOME is not the real account home. Actual installer uses pwd.getpwuid(uid).pw_dir and a fixed absolute prefix.",
+  "v2_failure": {
+    "pid": 76165,
+    "exit_code": 1,
+    "receipt_bytes": 2112,
+    "receipt_sha256": "bf3557d253b00d1fdbfa227fc6a4dc570f3431f1b3783469ad4aa8948e5dbc03",
+    "installer_commands": 0,
+    "http_requests": 0
+  },
+  "v3": {
+    "bytes": 17262,
+    "sha256": "5dc6ce13f7a58e04b098e4c43db9cbdf63081e454be715e5152d28e5f40a3d77",
+    "patch_bytes": 3551,
+    "patch_sha256": "46d985fd155e2397d17d81cde9b59081fa1959d338f215202d930681ab6570c3"
+  },
+  "route_recovery": {
+    "device_id": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+    "config_server_pid": 3216281,
+    "read_only_identity_process": 99014,
+    "closed_exit": 0,
+    "hostname": "hamon-thinkpad",
+    "user": "jacob",
+    "uid": 1000,
+    "passwd_home": "/home/jacob",
+    "v3_driver_and_installer_full_hashes_verified": true,
+    "old_seal_pid_84321": "absent in /proc; original completed sealing output retained, alternate server does not inherit former session records"
+  },
+  "decision": "First actual installation may run once through frozen v3 on the freshly verified route. No product source change and no v2 runtime replay."
+}

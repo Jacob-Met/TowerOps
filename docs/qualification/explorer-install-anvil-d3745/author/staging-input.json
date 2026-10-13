@@ -1,0 +1,72 @@
+{
+  "runtime": [
+    {
+      "archive_path": "candidate-source/EXPLORER.md",
+      "repository_path": "EXPLORER.md",
+      "git_blob": "3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66",
+      "git_mode": "100644",
+      "bytes": 9288,
+      "received_sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3"
+    },
+    {
+      "archive_path": "candidate-source/explorer.py",
+      "repository_path": "explorer.py",
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "git_mode": "100755",
+      "bytes": 7604,
+      "received_sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843"
+    },
+    {
+      "archive_path": "candidate-source/replay_explain.py",
+      "repository_path": "replay_explain.py",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "git_mode": "100644",
+      "bytes": 5432,
+      "received_sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b"
+    },
+    {
+      "archive_path": "candidate-source/scenarios.py",
+      "repository_path": "scenarios.py",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "git_mode": "100644",
+      "bytes": 5989,
+      "received_sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    {
+      "archive_path": "candidate-source/towerops.py",
+      "repository_path": "towerops.py",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "git_mode": "100644",
+      "bytes": 19684,
+      "received_sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70"
+    },
+    {
+      "archive_path": "candidate-source/web/app.js",
+      "repository_path": "web/app.js",
+      "git_blob": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "git_mode": "100644",
+      "bytes": 9430,
+      "received_sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739"
+    },
+    {
+      "archive_path": "candidate-source/web/index.html",
+      "repository_path": "web/index.html",
+      "git_blob": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "git_mode": "100644",
+      "bytes": 3934,
+      "received_sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1"
+    },
+    {
+      "archive_path": "candidate-source/web/style.css",
+      "repository_path": "web/style.css",
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "git_mode": "100644",
+      "bytes": 2566,
+      "received_sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9"
+    }
+  ],
+  "readme": "# TowerOps / Airspace Lab\n\nAn interactive 2D traffic-management workbench, not a recorded animation. Add flights from your own callsign, position, flight level, bearing, speed and climb; or edit/import a `WorldState` JSON. Traffic advances from those velocity vectors. You can add/perturb/remove tracks, tune the horizontal/vertical separation envelope and look-ahead, run repeated planner passes, then approve and read back a world-bound setpoint before simulated actuation. A hash-chained audit trace can be verified in the page.\n\n## Real TowerOps logic\n\nThe browser hosts a faithful TypeScript port of the Python `SafetyPolicy`, `AdvisoryPlanner`, `ControlRoom` safety gates, canonical world/advisory hashes and SHA-256 audit log. `tools/generate_airspace_reference.py` executes the original Python classes to maintain four reference scenarios; Vitest checks the browser port against those outputs. Additional tests construct visitor-authored worlds and run them through conflict timing, advisory search, approval, readback, actuation and audit verification. No prerecorded output drives the UI, and there is no model, network, live aircraft or external data call.\n\n## Review a saved world from the terminal\n\n`python3 plan_world.py world.json` inspects raw synthetic WorldState JSON with the\nexisting native planner and returns every individually screened alternative.\nIt preserves the saved input and performs no actuation. See [PLAN_WORLD.md](PLAN_WORLD.md)\nfor file/stdin use, clock and policy settings, complete results, and refusal limits.\n\nFor a saved synthetic Explorer result, select its before or after world explicitly\nand pass it to the same planner. In Bash:\n\n```bash\nset -o pipefail\npython3 explorer_world.py approved-explorer.json --phase before | python3 plan_world.py -\npython3 explorer_world.py approved-explorer.json --phase after | python3 plan_world.py -\n```\n\nReplay recomputes the local synthetic fixture; the planner results remain\n`proposal_only: true`. See [EXPLORER_WORLD.md](EXPLORER_WORLD.md) for creating\nan export, complete replay validation and refusal statuses.\n\n`python3 compare_plans.py left.plan.json right.plan.json` compares saved policy\nexperiments for the same exact native world and review clock, showing policy\nchanges and complete advisory membership/order without planning again.\nSee [COMPARE_PLANS.md](COMPARE_PLANS.md) for exact identities, file limits and JSON output.\n\n## Explain a saved Explorer result\n\nTo see which saved fields differ from a locally reconstructed synthetic scenario,\nadd `--explain` to the replay command:\n\n```bash\npython3 explorer.py run approved > approved-explorer.json\npython3 explorer.py replay approved-explorer.json --explain\n```\n\nThe JSON result retains the ordinary replay summary and adds typed differences\nwith JSON Pointer paths. These rows describe literal field differences in the\nlocal synthetic reproduction. It reports up to 32 differences and indicates\nwhen more were observed. Exit 0 means a match, exit 1 means a mismatch, and exit 2\nmeans invalid input or a read, replay or output error. The input file is preserved.\nSee [EXPLORER.md](EXPLORER.md) for limits and complete output, or try the\n[retained one-field mismatch example](docs/qualification/explorer-replay-explain-anvil-d3745/independent/README.md).\n\n## Review a saved audit trace from the terminal\n\nThe audit checker reviews a saved hash chain, recorded lifecycle and world links\nwithout changing the trace or applying an advisory:\n\n```bash\npython3 audit_replay.py trace.json\npython3 audit_replay.py - < trace.json\npython3 audit_replay.py --help\n```\n\nA completed review emits a JSON summary; `--help` prints usage and exits 0.\nFor a review, exit 0 means no findings, exit 1 means findings, and exit 2 means\ninvalid arguments or an input, review or output error.\nSupply one source at most; omit it or use `-` for stdin.\nSee [AUDIT_REPLAY.md](AUDIT_REPLAY.md) for accepted trace formats,\ndash-prefixed filenames, output-failure behavior and the limits of the review.\n\n## Verify\n\nFrom the repository root:\n\n```bash\npy -3 tools/generate_airspace_reference.py --check\ncd web/airspace\nnpm ci\nnpm test\nnpm run build\n```\n\nOptional Raider browser acceptance and desktop/phone captures:\n\n```bash\npy -3 tools/capture_airspace.py\n```\n\nThe app uses synthetic or visitor-provided state only. It is a research simulation, not operational air-traffic-control software or aviation assurance. Approval/readback controls are fixtures, not real authority.",
+  "readme_git": "c4cd2b9b993a5e83aa696767716dab86cb5a3c91",
+  "source_commit": "c77e98e68d627c3ad75edc2d775ee8da018dbdcf",
+  "base_commit": "db62f253a0b0b2b8fe80a5412a2bdf38ec7c720d"
+}

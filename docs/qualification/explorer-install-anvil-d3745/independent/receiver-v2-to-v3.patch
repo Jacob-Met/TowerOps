@@ -1,0 +1,55 @@
+--- receive-install-v2.py
++++ receive-install-v3.py
+@@ -20,8 +20,8 @@
+ ROOT = Path(__file__).resolve().parent
+ CRITERIA_SHA = "5c3835e230b9a8acc36653b5ba17b8e5bbee07b833032541e1f28229c3b5c26c"
+ ORACLE_SHA = "ee3d0afd77da9bd6c6d3c37517956b4ad48ce1928c5f48774ddfcfdead584181"
+-OUT = ROOT / "course-v2"
+-record = {"schema": "hamon.loom.towerops-installed-explorer-receiving.v2",
++OUT = ROOT / "course-v3"
++record = {"schema": "hamon.loom.towerops-installed-explorer-receiving.v3",
+           "started_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+           "accepted": False, "checks": [], "commands": [], "http": [], "errors": [],
+           "scope": "Actual create-only installation, existing PATH launcher, relocated static assets and three complete prior HTTP oracles. No browser replay."}
+@@ -96,9 +96,12 @@
+ 
+ def selected_inputs():
+     paths = [ROOT / "criteria-v1.json", ROOT / "criteria-freeze-v1.json",
++             ROOT / "receive-install-v3.py", ROOT / "driver-freeze-v3.json",
++             ROOT / "original-stage.json", ROOT / "receive-install-v1.py",
++             ROOT / "driver-freeze-v1.json", ROOT / "receiver-v1-to-v2.patch",
+              ROOT / "receive-install-v2.py", ROOT / "driver-freeze-v2.json",
+-             ROOT / "original-stage.json", ROOT / "receive-install-v1.py",
+-             ROOT / "driver-freeze-v1.json", ROOT / "receiver-v1-to-v2.patch", spec_path, installer]
++             ROOT / "admission-failure-v2.json", ROOT / "admission-v2-environment-audit.json",
++             ROOT / "receiver-v2-to-v3.patch", spec_path, installer]
+     paths += [source / r["path"] for r in criteria["runtime"]]
+     paths += [Path(r["path"]) for r in criteria["original_oracles"]["fixtures"]]
+     paths += [Path(criteria["original_oracles"]["receipt"])]
+@@ -189,12 +192,15 @@
+     criteria_raw = (ROOT / "criteria-v1.json").read_bytes()
+     check("root original criteria bytes", digest(criteria_raw), CRITERIA_SHA)
+     criteria = json.loads(criteria_raw)
+-    freeze = json.loads((ROOT / "driver-freeze-v2.json").read_text())
++    freeze = json.loads((ROOT / "driver-freeze-v3.json").read_text())
+     check("frozen driver", digest(Path(__file__).read_bytes()), freeze["driver"]["sha256"])
+     check("hostname", platform.node(), criteria["required_identity"]["hostname"])
+     check("uid", os.getuid(), criteria["required_identity"]["uid"])
+     check("user", pwd.getpwuid(os.getuid()).pw_name, criteria["required_identity"]["user"])
+-    check("real home", str(Path.home()), "/home/jacob")
++    check("real account home", pwd.getpwuid(os.getuid()).pw_dir, "/home/jacob")
++    record["transport_home_observation"] = {"HOME": os.environ.get("HOME"), "Path.home": str(Path.home()),
++                                           "passwd_home": pwd.getpwuid(os.getuid()).pw_dir,
++                                           "environment_changed": False}
+     check("Python >=3.12", sys.version_info[:2] >= (3, 12), True)
+     for p in [Path("/home"), Path("/home/jacob"), Path("/home/jacob/.local"),
+               Path("/home/jacob/.local/bin"), Path("/home/jacob/.local/share")]:
+@@ -328,7 +334,7 @@
+             json.dump(record, f, indent=2, ensure_ascii=True)
+             f.write("\n")
+     else:
+-        with (ROOT / "admission-failure-v2.json").open("x") as f:
++        with (ROOT / "admission-failure-v3.json").open("x") as f:
+             json.dump(record, f, indent=2, ensure_ascii=True)
+             f.write("\n")
+     print(json.dumps({"accepted": record["accepted"], "checks": len(record["checks"]),

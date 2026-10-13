@@ -1,0 +1,43 @@
+{
+  "schema": "hamon.loom.towerops-installed-admission-environment-audit.v1",
+  "utc": "2026-10-13T18:25:06.985396+00:00",
+  "raw_receipt": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/admission-failure-v2.json",
+    "bytes": 2112,
+    "sha256": "bf3557d253b00d1fdbfa227fc6a4dc570f3431f1b3783469ad4aa8948e5dbc03",
+    "mode": "0o664"
+  },
+  "original_receiver_pid": 76165,
+  "independent_process_followup": "RDC read_process_output returned completed exit1/runtime0.11s; raw receipt unchanged.",
+  "comparisons": {
+    "pass": 5,
+    "failed": 1,
+    "sole_failure": "Path.home() observed /home/jacob/.commander-tp-1 versus /home/jacob"
+  },
+  "identity": {
+    "host": "hamon-thinkpad",
+    "uid": 1000,
+    "user": "jacob",
+    "passwd_home": "/home/jacob",
+    "HOME": "/home/jacob/.commander-tp-1",
+    "Path.home": "/home/jacob/.commander-tp-1"
+  },
+  "installer_children_started": 0,
+  "http_requests": 0,
+  "namespace_absent": true,
+  "selector_absent": true,
+  "course_v2_absent": true,
+  "scope": "Admission-only failed receiver; no product invocation or mutation. Public real-account authority confirmed by root and Anvil as passwd home; transport HOME remains unchanged.",
+  "candidate_spec": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/candidate-spec-v1.json",
+    "bytes": 1830,
+    "sha256": "5e4d5902676fbf922feea46fc1ba7da2d55a57312569586f57946bdfa8450ad5",
+    "mode": "0o644"
+  },
+  "installer": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/candidate/install_explorer.py",
+    "bytes": 12558,
+    "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+    "mode": "0o755"
+  }
+}

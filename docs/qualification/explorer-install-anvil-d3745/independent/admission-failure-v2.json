@@ -1,0 +1,55 @@
+{
+  "schema": "hamon.loom.towerops-installed-explorer-receiving.v2",
+  "started_utc": "2026-10-13T18:18:43.922776+00:00",
+  "accepted": false,
+  "checks": [
+    {
+      "name": "root original criteria bytes",
+      "actual": "5c3835e230b9a8acc36653b5ba17b8e5bbee07b833032541e1f28229c3b5c26c",
+      "expected": "5c3835e230b9a8acc36653b5ba17b8e5bbee07b833032541e1f28229c3b5c26c",
+      "pass": true
+    },
+    {
+      "name": "frozen driver",
+      "actual": "a488fc033beaa74499e4b03883c2d4125f0557daac2d16bb01c26f73ae6f80ee",
+      "expected": "a488fc033beaa74499e4b03883c2d4125f0557daac2d16bb01c26f73ae6f80ee",
+      "pass": true
+    },
+    {
+      "name": "hostname",
+      "actual": "hamon-thinkpad",
+      "expected": "hamon-thinkpad",
+      "pass": true
+    },
+    {
+      "name": "uid",
+      "actual": 1000,
+      "expected": 1000,
+      "pass": true
+    },
+    {
+      "name": "user",
+      "actual": "jacob",
+      "expected": "jacob",
+      "pass": true
+    },
+    {
+      "name": "real home",
+      "actual": "/home/jacob/.commander-tp-1",
+      "expected": "/home/jacob",
+      "pass": false
+    }
+  ],
+  "commands": [],
+  "http": [],
+  "errors": [
+    {
+      "type": "RuntimeError",
+      "message": "Comparison failed: real home",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v2.py\", line 197, in <module>\n    check(\"real home\", str(Path.home()), \"/home/jacob\")\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v2.py\", line 51, in check\n    raise RuntimeError(\"Comparison failed: \" + name)\nRuntimeError: Comparison failed: real home\n"
+    }
+  ],
+  "scope": "Actual create-only installation, existing PATH launcher, relocated static assets and three complete prior HTTP oracles. No browser replay.",
+  "finished_utc": "2026-10-13T18:18:43.924561+00:00",
+  "no_installation_cleanup": "No installation/selector removal or automatic retry was performed; failed partial state remains for explicit review."
+}

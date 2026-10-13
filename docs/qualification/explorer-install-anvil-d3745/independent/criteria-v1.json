@@ -1,0 +1,174 @@
+{
+  "schema": "hamon.root.towerops-installed-explorer-criteria.v1",
+  "candidate_body_seen": false,
+  "device_id": "cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90",
+  "required_identity": {
+    "hostname": "hamon-thinkpad",
+    "uid": 1000,
+    "user": "jacob"
+  },
+  "source_pin": "c77e98e68d627c3ad75edc2d775ee8da018dbdcf",
+  "adopted_merge": "db62f253a0b0b2b8fe80a5412a2bdf38ec7c720d",
+  "tree": "834cd97dde6632fed687c1eed3a23c0c9d9bf692",
+  "runtime": [
+    {
+      "path": "EXPLORER.md",
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "git_blob": "3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66",
+      "mode": "0o644"
+    },
+    {
+      "path": "explorer.py",
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "mode": "0o755"
+    },
+    {
+      "path": "replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": "0o644"
+    },
+    {
+      "path": "scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": "0o644"
+    },
+    {
+      "path": "towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": "0o644"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "git_blob": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "mode": "0o644"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "git_blob": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "mode": "0o644"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mode": "0o644"
+    }
+  ],
+  "existing_commands": [
+    {
+      "path": "/home/jacob/.local/bin/tsuka",
+      "lexists": true,
+      "mode": "0o777",
+      "symlink": true,
+      "link": "/home/jacob/.local/share/tsuka/releases/d043962f147668f7251b4432539248f7354ad9d5/tsuka",
+      "resolved": "/home/jacob/.local/share/tsuka/releases/d043962f147668f7251b4432539248f7354ad9d5/tsuka",
+      "bytes": 8957736,
+      "sha256": "9b0523c79ff034ce43b484e175c9102fa37729991b084faff7666b980f776e50",
+      "target_mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/.local/bin/tsuka-report",
+      "lexists": true,
+      "mode": "0o777",
+      "symlink": true,
+      "link": "/home/jacob/.local/share/tsuka/tools/request-report/bc67f8c36e91e357340916f93bfb7fe881a8f507/report-request-metadata.py",
+      "resolved": "/home/jacob/.local/share/tsuka/tools/request-report/bc67f8c36e91e357340916f93bfb7fe881a8f507/report-request-metadata.py",
+      "bytes": 20647,
+      "sha256": "b06cb9577ba94dc2f56780bca1ef298d9accd27030ac62fc357f667ec6c3d1cb",
+      "target_mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/.local/bin/tsuka-lookup",
+      "lexists": true,
+      "mode": "0o777",
+      "symlink": true,
+      "link": "/home/jacob/.local/share/tsuka/tools/request-lookup/9e13a78bec35b0e59eb9e7e372557684c4670ace/tsuka-lookup",
+      "resolved": "/home/jacob/.local/share/tsuka/tools/request-lookup/9e13a78bec35b0e59eb9e7e372557684c4670ace/tsuka-lookup",
+      "bytes": 161,
+      "sha256": "d9f623b52204c88532755e6b14ee76719f5e83882243b0468be477ec493667b5",
+      "target_mode": "0o755"
+    }
+  ],
+  "namespace": "/home/jacob/.local/share/towerops",
+  "release": "/home/jacob/.local/share/towerops/explorer/c77e98e68d627c3ad75edc2d775ee8da018dbdcf",
+  "selector": "/home/jacob/.local/bin/towerops-explorer",
+  "public_interface": {
+    "installer": "tools/install_explorer.py --source-dir ABS --receipt-new ABS",
+    "launcher": "towerops-explorer [--port N]",
+    "wrapper": "exec /usr/bin/python3 -B ABS/explorer.py serve \"$@\"",
+    "fresh_namespace_required": true,
+    "late_failure_preserves_state": true,
+    "repeat_refuses": 2
+  },
+  "original_oracles": {
+    "receipt": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/receipt.json",
+    "authority": "Previously accepted independent85-check actual production HTTP/Firefox course; exact complete HTTP body oracles reused solely to check installed relocation",
+    "fixtures": [
+      {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+        "bytes": 5787,
+        "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+        "mode": "0o644"
+      }
+    ],
+    "http": [
+      {
+        "method": "POST",
+        "path": "/api/run",
+        "request_body": "{\"scenario\":\"approved\",\"include_approval\":true,\"include_ack\":true}",
+        "expected_status": 200,
+        "expected_body": "{\"format\": \"towerops.synthetic-explorer.v1\", \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\", \"request\": {\"scenario\": \"approved\", \"include_approval\": true, \"include_ack\": true}, \"label\": \"Approval + acknowledgement\", \"description\": \"Both exact-hash fixtures arrive before simulated dispatch.\", \"simulation_clock\": {\"dispatch_sec\": 1002.5, \"observed_sec\": 1001.0, \"projection_horizon_min\": 5.0}, \"policy\": {\"min_horizontal_nm\": 5.0, \"min_vertical_ft\": 1000.0, \"horizon_min\": 5.0, \"sample_step_min\": 0.5, \"max_state_age_sec\": 10.0, \"max_speed_nm_min\": 6.0, \"max_climb_ft_min\": 3000.0}, \"before\": {\"version\": 1, \"observed_at\": 1001.0, \"aircraft\": [{\"aircraft_id\": \"FIXTURE-A\", \"x_nm\": -5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": 1.0, \"vy_nm_min\": 0.0, \"climb_ft_min\": 0.0}, {\"aircraft_id\": \"FIXTURE-B\", \"x_nm\": 5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": -1.0, \"vy_nm_min\": 0.0, \"climb_ft_min\": 0.0}]}, \"after\": {\"version\": 2, \"observed_at\": 1002.5, \"aircraft\": [{\"aircraft_id\": \"FIXTURE-A\", \"x_nm\": -5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": 1.0, \"vy_nm_min\": 0.0, \"climb_ft_min\": 0.0}, {\"aircraft_id\": \"FIXTURE-B\", \"x_nm\": 5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": -1.0, \"vy_nm_min\": 2.0, \"climb_ft_min\": 0.0}]}, \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\", \"advisory\": {\"aircraft_id\": \"FIXTURE-B\", \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"set_vx_nm_min\": -1.0, \"set_vy_nm_min\": 2.0, \"set_climb_ft_min\": 0.0, \"issued_at\": 1002.0, \"expires_at\": 1010.0, \"rationale\": \"synthetic projected-separation recovery\"}, \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"fixtures\": {\"approval\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"}, \"ack\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}}, \"outcome\": \"simulated_actuation\", \"rejection_reason\": null, \"before_conflict\": true, \"after_conflict\": false, \"audit_events\": [{\"seq\": 0, \"kind\": \"fixture_proposal\", \"payload\": {\"scenario\": \"approved\", \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"advisory\": {\"aircraft_id\": \"FIXTURE-B\", \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"set_vx_nm_min\": -1.0, \"set_vy_nm_min\": 2.0, \"set_climb_ft_min\": 0.0, \"issued_at\": 1002.0, \"expires_at\": 1010.0, \"rationale\": \"synthetic projected-separation recovery\"}, \"simulation_only\": true}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"}, {\"seq\": 1, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"advisory_hashes\": [\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"]}, \"prev_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\", \"event_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"}, {\"seq\": 2, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"}, \"prev_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\", \"event_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"}, {\"seq\": 3, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\", \"event_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"}, {\"seq\": 4, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"}, \"prev_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\", \"event_hash\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"}], \"audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\", \"audit_valid\": true}",
+        "expected_bytes": 4753,
+        "expected_sha256": "ed152653da5e9d9d0989f05a206ce883e55891426c654135836cf23fafa4cefc"
+      },
+      {
+        "method": "POST",
+        "path": "/api/replay",
+        "request_body": "{\"format\":\"towerops.synthetic-explorer.v1\",\"disclaimer\":\"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\"request\":{\"scenario\":\"approved\",\"include_approval\":true,\"include_ack\":true},\"label\":\"Approval + acknowledgement\",\"simulation_clock\":{\"dispatch_sec\":1002.5,\"observed_sec\":1001,\"projection_horizon_min\":5},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"before\":{\"version\":1,\"observed_at\":1001,\"aircraft\":[{\"aircraft_id\":\"FIXTURE-A\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"FIXTURE-B\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"after\":{\"version\":true,\"observed_at\":1002.5,\"aircraft\":[{\"aircraft_id\":\"FIXTURE-A\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"FIXTURE-B\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":2,\"climb_ft_min\":0}]},\"before_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"after_world_hash\":\"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\",\"advisory\":{\"aircraft_id\":\"FIXTURE-B\",\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"set_vx_nm_min\":-1,\"set_vy_nm_min\":2,\"set_climb_ft_min\":0,\"issued_at\":1002,\"expires_at\":1010,\"rationale\":\"synthetic projected-separation recovery\"},\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"fixtures\":{\"approval\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"decision\":\"approve\",\"approved_at\":1002.2,\"approver\":\"FIXTURE-CONTROLLER-NOT-AUTHORITY\"},\"ack\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"status\":\"accepted\",\"acknowledged_at\":1002.4}},\"outcome\":\"simulated_actuation\",\"rejection_reason\":null,\"before_conflict\":true,\"after_conflict\":false,\"audit_events\":[{\"seq\":0,\"kind\":\"fixture_proposal\",\"payload\":{\"scenario\":\"approved\",\"source_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"advisory\":{\"aircraft_id\":\"FIXTURE-B\",\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"set_vx_nm_min\":-1,\"set_vy_nm_min\":2,\"set_climb_ft_min\":0,\"issued_at\":1002,\"expires_at\":1010,\"rationale\":\"synthetic projected-separation recovery\"},\"simulation_only\":true},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"event_hash\":\"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"},{\"seq\":1,\"kind\":\"screen_pass\",\"payload\":{\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"advisory_hashes\":[\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"]},\"prev_hash\":\"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\",\"event_hash\":\"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"},{\"seq\":2,\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"decision\":\"approve\",\"approved_at\":1002.2,\"approver\":\"FIXTURE-CONTROLLER-NOT-AUTHORITY\"},\"prev_hash\":\"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\",\"event_hash\":\"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"},{\"seq\":3,\"kind\":\"ack\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"status\":\"accepted\",\"acknowledged_at\":1002.4},\"prev_hash\":\"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\",\"event_hash\":\"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"},{\"seq\":4,\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"before_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"after_world_hash\":\"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"},\"prev_hash\":\"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\",\"event_hash\":\"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"}],\"audit_head\":\"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\"audit_valid\":true,\"literal/~雪\":{\"marker\":\"<b data-loom-literal=\\\"yes\\\">literal 雪</b> & \\\"quoted\\\"\\nline\",\"nothing\":null,\"items\":[false,0,\"\"]}}",
+        "expected_status": 200,
+        "expected_body": "{\"matches\": false, \"audit_valid\": true, \"outcome\": \"simulated_actuation\", \"rejection_reason\": null, \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\", \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\"}",
+        "expected_bytes": 289,
+        "expected_sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f"
+      },
+      {
+        "method": "POST",
+        "path": "/api/replay/explain",
+        "request_body": "{\"format\":\"towerops.synthetic-explorer.v1\",\"disclaimer\":\"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\"request\":{\"scenario\":\"approved\",\"include_approval\":true,\"include_ack\":true},\"label\":\"Approval + acknowledgement\",\"simulation_clock\":{\"dispatch_sec\":1002.5,\"observed_sec\":1001,\"projection_horizon_min\":5},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"before\":{\"version\":1,\"observed_at\":1001,\"aircraft\":[{\"aircraft_id\":\"FIXTURE-A\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"FIXTURE-B\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"after\":{\"version\":true,\"observed_at\":1002.5,\"aircraft\":[{\"aircraft_id\":\"FIXTURE-A\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"FIXTURE-B\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":2,\"climb_ft_min\":0}]},\"before_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"after_world_hash\":\"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\",\"advisory\":{\"aircraft_id\":\"FIXTURE-B\",\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"set_vx_nm_min\":-1,\"set_vy_nm_min\":2,\"set_climb_ft_min\":0,\"issued_at\":1002,\"expires_at\":1010,\"rationale\":\"synthetic projected-separation recovery\"},\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"fixtures\":{\"approval\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"decision\":\"approve\",\"approved_at\":1002.2,\"approver\":\"FIXTURE-CONTROLLER-NOT-AUTHORITY\"},\"ack\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"status\":\"accepted\",\"acknowledged_at\":1002.4}},\"outcome\":\"simulated_actuation\",\"rejection_reason\":null,\"before_conflict\":true,\"after_conflict\":false,\"audit_events\":[{\"seq\":0,\"kind\":\"fixture_proposal\",\"payload\":{\"scenario\":\"approved\",\"source_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"advisory\":{\"aircraft_id\":\"FIXTURE-B\",\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"set_vx_nm_min\":-1,\"set_vy_nm_min\":2,\"set_climb_ft_min\":0,\"issued_at\":1002,\"expires_at\":1010,\"rationale\":\"synthetic projected-separation recovery\"},\"simulation_only\":true},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"event_hash\":\"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"},{\"seq\":1,\"kind\":\"screen_pass\",\"payload\":{\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"advisory_hashes\":[\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"]},\"prev_hash\":\"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\",\"event_hash\":\"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"},{\"seq\":2,\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"decision\":\"approve\",\"approved_at\":1002.2,\"approver\":\"FIXTURE-CONTROLLER-NOT-AUTHORITY\"},\"prev_hash\":\"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\",\"event_hash\":\"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"},{\"seq\":3,\"kind\":\"ack\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"status\":\"accepted\",\"acknowledged_at\":1002.4},\"prev_hash\":\"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\",\"event_hash\":\"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"},{\"seq\":4,\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"before_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"after_world_hash\":\"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"},\"prev_hash\":\"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\",\"event_hash\":\"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"}],\"audit_head\":\"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\"audit_valid\":true,\"literal/~雪\":{\"marker\":\"<b data-loom-literal=\\\"yes\\\">literal 雪</b> & \\\"quoted\\\"\\nline\",\"nothing\":null,\"items\":[false,0,\"\"]}}",
+        "expected_status": 200,
+        "expected_body": "{\"matches\": false, \"audit_valid\": true, \"outcome\": \"simulated_actuation\", \"rejection_reason\": null, \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\", \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\", \"difference_limit\": 32, \"differences\": [{\"path\": \"/after/version\", \"kind\": \"type\", \"expected\": {\"present\": true, \"type\": \"number\", \"value\": 2}, \"actual\": {\"present\": true, \"type\": \"boolean\", \"value\": true}}, {\"path\": \"/description\", \"kind\": \"missing\", \"expected\": {\"present\": true, \"type\": \"string\", \"value\": \"Both exact-hash fixtures arrive before simulated dispatch.\"}, \"actual\": {\"present\": false}}, {\"path\": \"/literal~1~0\\u96ea\", \"kind\": \"unexpected\", \"expected\": {\"present\": false}, \"actual\": {\"present\": true, \"type\": \"object\", \"value\": {\"marker\": \"<b data-loom-literal=\\\"yes\\\">literal \\u96ea</b> & \\\"quoted\\\"\\nline\", \"nothing\": null, \"items\": [false, 0, \"\"]}}}], \"differences_truncated\": false}",
+        "expected_bytes": 991,
+        "expected_sha256": "da199b386bf9838a9a777fdbb41a2199d998bfdd20530154f67f14c8e191694c"
+      }
+    ]
+  },
+  "course": [
+    "Verify exact current host/user, existing three Tsuka commands, absent new namespace/selector, frozen8 source projection and reviewed candidateinstaller before mutation",
+    "One actual create-only installer invocation exits0 with fresh external receipt; actual PATH command resolves executable wrapper in pinned release",
+    "Every installed primary source retains exact sourcepin bytes and modes; source inputs untouched",
+    "Launch actual PATH command with --port0 from an unrelated receiving workingdirectory; identify loopback port from its own startupstdout",
+    "GET root/app.js/style.css yields exact pinned staticasset bytes, proving installed ROOT-relative serving",
+    "POST the three exact accepted request bodies to actual installed server: runapproved, replayC and explainC; compare complete HTTP responsebytes/status with original accepted backend oracles",
+    "Close only own server by SIGINT; await exit0 and ownportclosure; retain complete stdout/stderr; no backgroundstartup or scheduler",
+    "Explicit repeated install with fresh receipt refuses2; all installed entries/selector and existingTsuka commands preserved",
+    "All candidate/control/source and originalfixture/oracle identities unchanged; full raw commands/HTTP outputs recorded"
+  ],
+  "limits": [
+    "The prior browser race/retry/layout course is not rerun; this course targets installed launcher/relocation/source-serving and realHTTP behavior",
+    "No power-loss, arbitrary concurrent-writer or automatedupgrade claim",
+    "Candidate implementation will be source-reviewed after criteria/driver freeze and beforeactualinstallation"
+  ]
+}

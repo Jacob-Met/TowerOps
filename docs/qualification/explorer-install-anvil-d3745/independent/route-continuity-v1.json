@@ -1,0 +1,39 @@
+{
+  "schema": "hamon.loom.towerops-installed-route-continuity.v1",
+  "utc": "2026-10-13T18:50:13.146537+00:00",
+  "initial_device_id": "cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90",
+  "current_verified_device_id": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "identity": {
+    "host": "hamon-thinkpad",
+    "uid": 1000,
+    "user": "jacob",
+    "passwd_home": "/home/jacob",
+    "transport_HOME": "/home/jacob/.commander-tp-2"
+  },
+  "root_route_validation": "Fresh alternate config and actual root PID99014 exit0 authenticated same host/user/home and exact receiver/installer bytes.",
+  "old_seal_pid": 84321,
+  "old_seal_pid_absent_now": true,
+  "old_session_status": "Alternate RDC instance has no original session record; do not claim independently recovered seal-process exit code. Exact completed files are authenticated separately.",
+  "v2_pid": 76165,
+  "v2_status": "Original connection independently returned completed exit1 before outage; five checks passed, one transport-home admission failed, no installer/HTTP.",
+  "review_gate": "Root accepted complete v2-to-v3 diff and independently verified exact v3 body; root full installer review and Forge ordering review accepted.",
+  "receiver": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v3.py",
+    "bytes": 17262,
+    "sha256": "5dc6ce13f7a58e04b098e4c43db9cbdf63081e454be715e5152d28e5f40a3d77"
+  },
+  "receiver_freeze": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/driver-freeze-v3.json",
+    "bytes": 2473,
+    "sha256": "2bc6a3b98f0e60026ac605d70ec283afdaff24aba850d6028057a396c82009bb"
+  },
+  "installer": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/candidate/install_explorer.py",
+    "bytes": 12558,
+    "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7"
+  },
+  "namespace_absent": true,
+  "selector_absent": true,
+  "actual_installer_invocations_before_this_record": 0,
+  "scope": "Connection continuity and original records only; no source or environment change and no replay of an installer invocation."
+}
