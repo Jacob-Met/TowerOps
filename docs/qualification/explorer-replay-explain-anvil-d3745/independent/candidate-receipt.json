@@ -1,0 +1,4758 @@
+{
+  "schema": "hamon.root.towerops-replay-explain-cli.v1",
+  "started_utc": "2026-10-13T14:31:38.458012+00:00",
+  "variant": "candidate",
+  "spec": {
+    "variant": "candidate",
+    "source": "/dev/shm/root-d3745-towerops-explain/candidate",
+    "base_commit": "8a87ad1331d7e7100367dde583d59560836f9eb8",
+    "author_packet_sha256": "63c36c4bee90e2e9d2da0681a1d0f9bd328e1bb9e44198e0d8680afd89dcb5e3",
+    "files": [
+      {
+        "path": "replay_explain.py",
+        "bytes": 5432,
+        "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+        "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+        "mode": 420
+      },
+      {
+        "path": "explorer.py",
+        "bytes": 7423,
+        "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+        "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a",
+        "mode": 493
+      },
+      {
+        "path": "EXPLORER.md",
+        "bytes": 7158,
+        "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+        "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_replay_explain.py",
+        "bytes": 9191,
+        "sha256": "2628d98c691fff88054f168fc1faad81af40c6becca5441da515b98acd2d1623",
+        "git_blob": "392bb213c04ee6646455d176f2060760cf95de4f",
+        "mode": 420
+      },
+      {
+        "path": "scenarios.py",
+        "bytes": 5989,
+        "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+        "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+        "mode": 420
+      },
+      {
+        "path": "towerops.py",
+        "bytes": 19684,
+        "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+        "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+        "mode": 420
+      }
+    ]
+  },
+  "source_before": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+      "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a",
+      "mode": 493
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/EXPLORER.md",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+      "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/tests/test_replay_explain.py",
+      "bytes": 9191,
+      "sha256": "2628d98c691fff88054f168fc1faad81af40c6becca5441da515b98acd2d1623",
+      "git_blob": "392bb213c04ee6646455d176f2060760cf95de4f",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": 420
+    }
+  ],
+  "controls_before": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/receive.py",
+      "bytes": 9462,
+      "sha256": "c0e4f69204fd2f88c58771355dd33a05c0dbdeb72f0be1d6049abd31f014fef4",
+      "git_blob": "3b0b8f67d9a6ac11596180f2930f78f843fb7e1f",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-spec.json",
+      "bytes": 1650,
+      "sha256": "9f7905fffe3eb3f283d67a57cdec61e9b76e710156e61a92a4e4569ca67d86f4",
+      "git_blob": "54d445afa71195495a30f1a972c12936ced3e50d",
+      "mode": 420
+    }
+  ],
+  "commands": [
+    {
+      "id": "01-export-approved",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "run",
+        "approved"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"format\": \"towerops.synthetic-explorer.v1\",\n  \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\n  \"request\": {\n    \"scenario\": \"approved\",\n    \"include_approval\": true,\n    \"include_ack\": true\n  },\n  \"label\": \"Approval + acknowledgement\",\n  \"description\": \"Both exact-hash fixtures arrive before simulated dispatch.\",\n  \"simulation_clock\": {\n    \"dispatch_sec\": 1002.5,\n    \"observed_sec\": 1001.0,\n    \"projection_horizon_min\": 5.0\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5.0,\n    \"min_vertical_ft\": 1000.0,\n    \"horizon_min\": 5.0,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10.0,\n    \"max_speed_nm_min\": 6.0,\n    \"max_climb_ft_min\": 3000.0\n  },\n  \"before\": {\n    \"version\": 1,\n    \"observed_at\": 1001.0,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": 1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": -1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      }\n    ]\n  },\n  \"after\": {\n    \"version\": 2,\n    \"observed_at\": 1002.5,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": 1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": -1.0,\n        \"vy_nm_min\": 2.0,\n        \"climb_ft_min\": 0.0\n      }\n    ]\n  },\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1.0,\n    \"set_vy_nm_min\": 2.0,\n    \"set_climb_ft_min\": 0.0,\n    \"issued_at\": 1002.0,\n    \"expires_at\": 1010.0,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"status\": \"accepted\",\n      \"acknowledged_at\": 1002.4\n    }\n  },\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"before_conflict\": true,\n  \"after_conflict\": false,\n  \"audit_events\": [\n    {\n      \"seq\": 0,\n      \"kind\": \"fixture_proposal\",\n      \"payload\": {\n        \"scenario\": \"approved\",\n        \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory\": {\n          \"aircraft_id\": \"FIXTURE-B\",\n          \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n          \"set_vx_nm_min\": -1.0,\n          \"set_vy_nm_min\": 2.0,\n          \"set_climb_ft_min\": 0.0,\n          \"issued_at\": 1002.0,\n          \"expires_at\": 1010.0,\n          \"rationale\": \"synthetic projected-separation recovery\"\n        },\n        \"simulation_only\": true\n      },\n      \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\",\n      \"event_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"\n    },\n    {\n      \"seq\": 1,\n      \"kind\": \"screen_pass\",\n      \"payload\": {\n        \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory_hashes\": [\n          \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n        ]\n      },\n      \"prev_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\",\n      \"event_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"\n    },\n    {\n      \"seq\": 2,\n      \"kind\": \"approval\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"decision\": \"approve\",\n        \"approved_at\": 1002.2,\n        \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n      },\n      \"prev_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\",\n      \"event_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"\n    },\n    {\n      \"seq\": 3,\n      \"kind\": \"ack\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"status\": \"accepted\",\n        \"acknowledged_at\": 1002.4\n      },\n      \"prev_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\",\n      \"event_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"\n    },\n    {\n      \"seq\": 4,\n      \"kind\": \"simulated_actuation\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"\n      },\n      \"prev_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\",\n      \"event_hash\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"\n    }\n  ],\n  \"audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"audit_valid\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "02-export-rejected",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "run",
+        "missing_ack"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"format\": \"towerops.synthetic-explorer.v1\",\n  \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\n  \"request\": {\n    \"scenario\": \"missing_ack\",\n    \"include_approval\": true,\n    \"include_ack\": true\n  },\n  \"label\": \"Missing acknowledgement\",\n  \"description\": \"Approval alone does not authorize the simulated transition.\",\n  \"simulation_clock\": {\n    \"dispatch_sec\": 1002.5,\n    \"observed_sec\": 1001.0,\n    \"projection_horizon_min\": 5.0\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5.0,\n    \"min_vertical_ft\": 1000.0,\n    \"horizon_min\": 5.0,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10.0,\n    \"max_speed_nm_min\": 6.0,\n    \"max_climb_ft_min\": 3000.0\n  },\n  \"before\": {\n    \"version\": 1,\n    \"observed_at\": 1001.0,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": 1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": -1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      }\n    ]\n  },\n  \"after\": {\n    \"version\": 1,\n    \"observed_at\": 1001.0,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": 1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": -1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      }\n    ]\n  },\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1.0,\n    \"set_vy_nm_min\": 2.0,\n    \"set_climb_ft_min\": 0.0,\n    \"issued_at\": 1002.0,\n    \"expires_at\": 1010.0,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": null\n  },\n  \"outcome\": \"rejected\",\n  \"rejection_reason\": \"ack_missing\",\n  \"before_conflict\": true,\n  \"after_conflict\": true,\n  \"audit_events\": [\n    {\n      \"seq\": 0,\n      \"kind\": \"fixture_proposal\",\n      \"payload\": {\n        \"scenario\": \"missing_ack\",\n        \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory\": {\n          \"aircraft_id\": \"FIXTURE-B\",\n          \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n          \"set_vx_nm_min\": -1.0,\n          \"set_vy_nm_min\": 2.0,\n          \"set_climb_ft_min\": 0.0,\n          \"issued_at\": 1002.0,\n          \"expires_at\": 1010.0,\n          \"rationale\": \"synthetic projected-separation recovery\"\n        },\n        \"simulation_only\": true\n      },\n      \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\",\n      \"event_hash\": \"6cc73f803c163c2611db426fb649fc695f91160e0bcf4e55e1c0522759f10ec5\"\n    },\n    {\n      \"seq\": 1,\n      \"kind\": \"screen_pass\",\n      \"payload\": {\n        \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory_hashes\": [\n          \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n        ]\n      },\n      \"prev_hash\": \"6cc73f803c163c2611db426fb649fc695f91160e0bcf4e55e1c0522759f10ec5\",\n      \"event_hash\": \"505c30da38ba7d55a236c1951a3cf92d6fade533427d39385882a769663b448b\"\n    },\n    {\n      \"seq\": 2,\n      \"kind\": \"approval\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"decision\": \"approve\",\n        \"approved_at\": 1002.2,\n        \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n      },\n      \"prev_hash\": \"505c30da38ba7d55a236c1951a3cf92d6fade533427d39385882a769663b448b\",\n      \"event_hash\": \"8b16e7b0c673a3910882a860d3d0c3e39b1d786bd7866461eacaf4ef11035a72\"\n    },\n    {\n      \"seq\": 3,\n      \"kind\": \"reject\",\n      \"payload\": {\n        \"reason\": \"ack_missing\",\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n      },\n      \"prev_hash\": \"8b16e7b0c673a3910882a860d3d0c3e39b1d786bd7866461eacaf4ef11035a72\",\n      \"event_hash\": \"aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e\"\n    }\n  ],\n  \"audit_head\": \"aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e\",\n  \"audit_valid\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "03-default-match",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": true,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "04-default-mismatch",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 1,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": false,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "05-exact",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "--explain",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": true,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\",\n  \"difference_limit\": 32,\n  \"differences\": [],\n  \"differences_truncated\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "06-one-field",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "--explain",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 1,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": false,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\",\n  \"difference_limit\": 32,\n  \"differences\": [\n    {\n      \"path\": \"/after/version\",\n      \"kind\": \"value\",\n      \"expected\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 2\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 3\n      }\n    }\n  ],\n  \"differences_truncated\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "07-typed-missing-pointers",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "--explain",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 1,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": false,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\",\n  \"difference_limit\": 32,\n  \"differences\": [\n    {\n      \"path\": \"/after/aircraft/1\",\n      \"kind\": \"missing\",\n      \"expected\": {\n        \"present\": true,\n        \"type\": \"object\",\n        \"value\": {\n          \"aircraft_id\": \"FIXTURE-B\",\n          \"x_nm\": 5.0,\n          \"y_nm\": 0.0,\n          \"altitude_ft\": 10000.0,\n          \"vx_nm_min\": -1.0,\n          \"vy_nm_min\": 2.0,\n          \"climb_ft_min\": 0.0\n        }\n      },\n      \"actual\": {\n        \"present\": false\n      }\n    },\n    {\n      \"path\": \"/audit_events/5\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"null\",\n        \"value\": null\n      }\n    },\n    {\n      \"path\": \"/audit_valid\",\n      \"kind\": \"type\",\n      \"expected\": {\n        \"present\": true,\n        \"type\": \"boolean\",\n        \"value\": true\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 1\n      }\n    },\n    {\n      \"path\": \"/description\",\n      \"kind\": \"missing\",\n      \"expected\": {\n        \"present\": true,\n        \"type\": \"string\",\n        \"value\": \"Both exact-hash fixtures arrive before simulated dispatch.\"\n      },\n      \"actual\": {\n        \"present\": false\n      }\n    },\n    {\n      \"path\": \"/diagnostic~0~1\u6771\u4eac\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"null\",\n        \"value\": null\n      }\n    },\n    {\n      \"path\": \"/fixtures/approval\",\n      \"kind\": \"type\",\n      \"expected\": {\n        \"present\": true,\n        \"type\": \"object\",\n        \"value\": {\n          \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n          \"decision\": \"approve\",\n          \"approved_at\": 1002.2,\n          \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n        }\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"null\",\n        \"value\": null\n      }\n    },\n    {\n      \"path\": \"/rejection_reason\",\n      \"kind\": \"type\",\n      \"expected\": {\n        \"present\": true,\n        \"type\": \"null\",\n        \"value\": null\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"boolean\",\n        \"value\": false\n      }\n    }\n  ],\n  \"differences_truncated\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "08-numeric-equivalence",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "--explain",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": true,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\",\n  \"difference_limit\": 32,\n  \"differences\": [],\n  \"differences_truncated\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "09-default-rejected",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": true,\n  \"audit_valid\": true,\n  \"outcome\": \"rejected\",\n  \"rejection_reason\": \"ack_missing\",\n  \"expected_audit_head\": \"aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "10-rejected-reproducible",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "--explain",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": true,\n  \"audit_valid\": true,\n  \"outcome\": \"rejected\",\n  \"rejection_reason\": \"ack_missing\",\n  \"expected_audit_head\": \"aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\",\n  \"difference_limit\": 32,\n  \"differences\": [],\n  \"differences_truncated\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "11-cap-32",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "--explain",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 1,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": false,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\",\n  \"difference_limit\": 32,\n  \"differences\": [\n    {\n      \"path\": \"/z000\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 0\n      }\n    },\n    {\n      \"path\": \"/z001\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 1\n      }\n    },\n    {\n      \"path\": \"/z002\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 2\n      }\n    },\n    {\n      \"path\": \"/z003\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 3\n      }\n    },\n    {\n      \"path\": \"/z004\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 4\n      }\n    },\n    {\n      \"path\": \"/z005\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 5\n      }\n    },\n    {\n      \"path\": \"/z006\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 6\n      }\n    },\n    {\n      \"path\": \"/z007\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 7\n      }\n    },\n    {\n      \"path\": \"/z008\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 8\n      }\n    },\n    {\n      \"path\": \"/z009\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 9\n      }\n    },\n    {\n      \"path\": \"/z010\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 10\n      }\n    },\n    {\n      \"path\": \"/z011\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 11\n      }\n    },\n    {\n      \"path\": \"/z012\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 12\n      }\n    },\n    {\n      \"path\": \"/z013\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 13\n      }\n    },\n    {\n      \"path\": \"/z014\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 14\n      }\n    },\n    {\n      \"path\": \"/z015\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 15\n      }\n    },\n    {\n      \"path\": \"/z016\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 16\n      }\n    },\n    {\n      \"path\": \"/z017\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 17\n      }\n    },\n    {\n      \"path\": \"/z018\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 18\n      }\n    },\n    {\n      \"path\": \"/z019\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 19\n      }\n    },\n    {\n      \"path\": \"/z020\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 20\n      }\n    },\n    {\n      \"path\": \"/z021\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 21\n      }\n    },\n    {\n      \"path\": \"/z022\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 22\n      }\n    },\n    {\n      \"path\": \"/z023\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 23\n      }\n    },\n    {\n      \"path\": \"/z024\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 24\n      }\n    },\n    {\n      \"path\": \"/z025\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 25\n      }\n    },\n    {\n      \"path\": \"/z026\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 26\n      }\n    },\n    {\n      \"path\": \"/z027\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 27\n      }\n    },\n    {\n      \"path\": \"/z028\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 28\n      }\n    },\n    {\n      \"path\": \"/z029\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 29\n      }\n    },\n    {\n      \"path\": \"/z030\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 30\n      }\n    },\n    {\n      \"path\": \"/z031\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 31\n      }\n    }\n  ],\n  \"differences_truncated\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "11-cap-33",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "--explain",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 1,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": false,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\",\n  \"difference_limit\": 32,\n  \"differences\": [\n    {\n      \"path\": \"/z000\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 0\n      }\n    },\n    {\n      \"path\": \"/z001\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 1\n      }\n    },\n    {\n      \"path\": \"/z002\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 2\n      }\n    },\n    {\n      \"path\": \"/z003\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 3\n      }\n    },\n    {\n      \"path\": \"/z004\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 4\n      }\n    },\n    {\n      \"path\": \"/z005\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 5\n      }\n    },\n    {\n      \"path\": \"/z006\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 6\n      }\n    },\n    {\n      \"path\": \"/z007\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 7\n      }\n    },\n    {\n      \"path\": \"/z008\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 8\n      }\n    },\n    {\n      \"path\": \"/z009\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 9\n      }\n    },\n    {\n      \"path\": \"/z010\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 10\n      }\n    },\n    {\n      \"path\": \"/z011\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 11\n      }\n    },\n    {\n      \"path\": \"/z012\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 12\n      }\n    },\n    {\n      \"path\": \"/z013\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 13\n      }\n    },\n    {\n      \"path\": \"/z014\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 14\n      }\n    },\n    {\n      \"path\": \"/z015\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 15\n      }\n    },\n    {\n      \"path\": \"/z016\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 16\n      }\n    },\n    {\n      \"path\": \"/z017\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 17\n      }\n    },\n    {\n      \"path\": \"/z018\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 18\n      }\n    },\n    {\n      \"path\": \"/z019\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 19\n      }\n    },\n    {\n      \"path\": \"/z020\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 20\n      }\n    },\n    {\n      \"path\": \"/z021\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 21\n      }\n    },\n    {\n      \"path\": \"/z022\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 22\n      }\n    },\n    {\n      \"path\": \"/z023\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 23\n      }\n    },\n    {\n      \"path\": \"/z024\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 24\n      }\n    },\n    {\n      \"path\": \"/z025\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 25\n      }\n    },\n    {\n      \"path\": \"/z026\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 26\n      }\n    },\n    {\n      \"path\": \"/z027\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 27\n      }\n    },\n    {\n      \"path\": \"/z028\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 28\n      }\n    },\n    {\n      \"path\": \"/z029\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 29\n      }\n    },\n    {\n      \"path\": \"/z030\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 30\n      }\n    },\n    {\n      \"path\": \"/z031\",\n      \"kind\": \"unexpected\",\n      \"expected\": {\n        \"present\": false\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 31\n      }\n    }\n  ],\n  \"differences_truncated\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "12-nonfinite",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+        "--explain"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 2,
+      "stdout_destination": "captured",
+      "stdout": "",
+      "stderr": "Replay explanation rejected: Non-finite JSON numbers are not supported\n"
+    },
+    {
+      "id": "13-explicit-correction",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "--explain",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": true,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\",\n  \"difference_limit\": 32,\n  \"differences\": [],\n  \"differences_truncated\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "14-invalid-utf8",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+        "--explain"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 2,
+      "stdout_destination": "captured",
+      "stdout": "",
+      "stderr": "Replay explanation rejected: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte\n"
+    },
+    {
+      "id": "14-overflow",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+        "--explain"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 2,
+      "stdout_destination": "captured",
+      "stdout": "",
+      "stderr": "Replay explanation rejected: Non-finite JSON numbers are not supported\n"
+    },
+    {
+      "id": "14-oversized",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/oversized.json",
+        "--explain"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 2,
+      "stdout_destination": "captured",
+      "stdout": "",
+      "stderr": "Replay explanation rejected: Export exceeds 262144 bytes\n"
+    },
+    {
+      "id": "15-repeat-one-field",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+        "--explain"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 1,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": false,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\",\n  \"difference_limit\": 32,\n  \"differences\": [\n    {\n      \"path\": \"/after/version\",\n      \"kind\": \"value\",\n      \"expected\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 2\n      },\n      \"actual\": {\n        \"present\": true,\n        \"type\": \"number\",\n        \"value\": 3\n      }\n    }\n  ],\n  \"differences_truncated\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "16-output-failure",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+        "--explain"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/candidate-v1",
+      "returncode": 2,
+      "stdout_destination": "/dev/full",
+      "stdout": "",
+      "stderr": "Replay explanation output failed: [Errno 28] No space left on device\n"
+    }
+  ],
+  "checks": [
+    {
+      "id": "01-export-approved.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "01-export-approved.input-preserved",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "01-export-approved.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "02-export-rejected.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "02-export-rejected.input-preserved",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "02-export-rejected.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "03-default-match.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "03-default-match.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "03-default-match.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "04-default-mismatch.exit",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "id": "04-default-mismatch.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "04-default-mismatch.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "default.match",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "default.mismatch",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "default.no-explanation",
+      "actual": [
+        "audit_valid",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "05-exact.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "05-exact.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "05-exact.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "05-exact.field-set",
+      "actual": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "05-exact.ordinary",
+      "actual": {
+        "matches": true,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "expected": {
+        "matches": true,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "pass": true
+    },
+    {
+      "id": "05-exact.limit",
+      "actual": 32,
+      "expected": 32,
+      "pass": true
+    },
+    {
+      "id": "05-exact.rows",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "05-exact.truncated",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "06-one-field.exit",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "id": "06-one-field.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "06-one-field.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "06-one-field.field-set",
+      "actual": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "06-one-field.ordinary",
+      "actual": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "expected": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "pass": true
+    },
+    {
+      "id": "06-one-field.limit",
+      "actual": 32,
+      "expected": 32,
+      "pass": true
+    },
+    {
+      "id": "06-one-field.rows",
+      "actual": [
+        {
+          "path": "/after/version",
+          "kind": "value",
+          "expected": {
+            "present": true,
+            "type": "number",
+            "value": 2
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 3
+          }
+        }
+      ],
+      "expected": [
+        {
+          "path": "/after/version",
+          "kind": "value",
+          "expected": {
+            "present": true,
+            "type": "number",
+            "value": 2
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 3
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "06-one-field.truncated",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "07-typed-missing-pointers.exit",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "id": "07-typed-missing-pointers.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "07-typed-missing-pointers.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "07-typed-missing-pointers.field-set",
+      "actual": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "07-typed-missing-pointers.ordinary",
+      "actual": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "expected": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "pass": true
+    },
+    {
+      "id": "07-typed-missing-pointers.limit",
+      "actual": 32,
+      "expected": 32,
+      "pass": true
+    },
+    {
+      "id": "07-typed-missing-pointers.rows",
+      "actual": [
+        {
+          "path": "/after/aircraft/1",
+          "kind": "missing",
+          "expected": {
+            "present": true,
+            "type": "object",
+            "value": {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": -1.0,
+              "vy_nm_min": 2.0,
+              "climb_ft_min": 0.0
+            }
+          },
+          "actual": {
+            "present": false
+          }
+        },
+        {
+          "path": "/audit_events/5",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "null",
+            "value": null
+          }
+        },
+        {
+          "path": "/audit_valid",
+          "kind": "type",
+          "expected": {
+            "present": true,
+            "type": "boolean",
+            "value": true
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "path": "/description",
+          "kind": "missing",
+          "expected": {
+            "present": true,
+            "type": "string",
+            "value": "Both exact-hash fixtures arrive before simulated dispatch."
+          },
+          "actual": {
+            "present": false
+          }
+        },
+        {
+          "path": "/diagnostic~0~1\u6771\u4eac",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "null",
+            "value": null
+          }
+        },
+        {
+          "path": "/fixtures/approval",
+          "kind": "type",
+          "expected": {
+            "present": true,
+            "type": "object",
+            "value": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+            }
+          },
+          "actual": {
+            "present": true,
+            "type": "null",
+            "value": null
+          }
+        },
+        {
+          "path": "/rejection_reason",
+          "kind": "type",
+          "expected": {
+            "present": true,
+            "type": "null",
+            "value": null
+          },
+          "actual": {
+            "present": true,
+            "type": "boolean",
+            "value": false
+          }
+        }
+      ],
+      "expected": [
+        {
+          "path": "/after/aircraft/1",
+          "kind": "missing",
+          "expected": {
+            "present": true,
+            "type": "object",
+            "value": {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5.0,
+              "y_nm": 0.0,
+              "altitude_ft": 10000.0,
+              "vx_nm_min": -1.0,
+              "vy_nm_min": 2.0,
+              "climb_ft_min": 0.0
+            }
+          },
+          "actual": {
+            "present": false
+          }
+        },
+        {
+          "path": "/audit_events/5",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "null",
+            "value": null
+          }
+        },
+        {
+          "path": "/audit_valid",
+          "kind": "type",
+          "expected": {
+            "present": true,
+            "type": "boolean",
+            "value": true
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "path": "/description",
+          "kind": "missing",
+          "expected": {
+            "present": true,
+            "type": "string",
+            "value": "Both exact-hash fixtures arrive before simulated dispatch."
+          },
+          "actual": {
+            "present": false
+          }
+        },
+        {
+          "path": "/diagnostic~0~1\u6771\u4eac",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "null",
+            "value": null
+          }
+        },
+        {
+          "path": "/fixtures/approval",
+          "kind": "type",
+          "expected": {
+            "present": true,
+            "type": "object",
+            "value": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+            }
+          },
+          "actual": {
+            "present": true,
+            "type": "null",
+            "value": null
+          }
+        },
+        {
+          "path": "/rejection_reason",
+          "kind": "type",
+          "expected": {
+            "present": true,
+            "type": "null",
+            "value": null
+          },
+          "actual": {
+            "present": true,
+            "type": "boolean",
+            "value": false
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "07-typed-missing-pointers.truncated",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "08-numeric-equivalence.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "08-numeric-equivalence.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "08-numeric-equivalence.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "08-numeric-equivalence.field-set",
+      "actual": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "08-numeric-equivalence.ordinary",
+      "actual": {
+        "matches": true,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "expected": {
+        "matches": true,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "pass": true
+    },
+    {
+      "id": "08-numeric-equivalence.limit",
+      "actual": 32,
+      "expected": 32,
+      "pass": true
+    },
+    {
+      "id": "08-numeric-equivalence.rows",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "08-numeric-equivalence.truncated",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "09-default-rejected.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "09-default-rejected.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "09-default-rejected.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "10-rejected-reproducible.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "10-rejected-reproducible.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "10-rejected-reproducible.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "10-rejected-reproducible.field-set",
+      "actual": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "10-rejected-reproducible.ordinary",
+      "actual": {
+        "matches": true,
+        "audit_valid": true,
+        "outcome": "rejected",
+        "rejection_reason": "ack_missing",
+        "expected_audit_head": "aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "expected": {
+        "matches": true,
+        "audit_valid": true,
+        "outcome": "rejected",
+        "rejection_reason": "ack_missing",
+        "expected_audit_head": "aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "pass": true
+    },
+    {
+      "id": "10-rejected-reproducible.limit",
+      "actual": 32,
+      "expected": 32,
+      "pass": true
+    },
+    {
+      "id": "10-rejected-reproducible.rows",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "10-rejected-reproducible.truncated",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "11-cap-32.exit",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "id": "11-cap-32.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "11-cap-32.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "11-cap-32.field-set",
+      "actual": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "11-cap-32.ordinary",
+      "actual": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "expected": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "pass": true
+    },
+    {
+      "id": "11-cap-32.limit",
+      "actual": 32,
+      "expected": 32,
+      "pass": true
+    },
+    {
+      "id": "11-cap-32.rows",
+      "actual": [
+        {
+          "path": "/z000",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "path": "/z001",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "path": "/z002",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 2
+          }
+        },
+        {
+          "path": "/z003",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 3
+          }
+        },
+        {
+          "path": "/z004",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 4
+          }
+        },
+        {
+          "path": "/z005",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 5
+          }
+        },
+        {
+          "path": "/z006",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 6
+          }
+        },
+        {
+          "path": "/z007",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 7
+          }
+        },
+        {
+          "path": "/z008",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 8
+          }
+        },
+        {
+          "path": "/z009",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 9
+          }
+        },
+        {
+          "path": "/z010",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 10
+          }
+        },
+        {
+          "path": "/z011",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 11
+          }
+        },
+        {
+          "path": "/z012",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 12
+          }
+        },
+        {
+          "path": "/z013",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 13
+          }
+        },
+        {
+          "path": "/z014",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 14
+          }
+        },
+        {
+          "path": "/z015",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 15
+          }
+        },
+        {
+          "path": "/z016",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 16
+          }
+        },
+        {
+          "path": "/z017",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 17
+          }
+        },
+        {
+          "path": "/z018",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 18
+          }
+        },
+        {
+          "path": "/z019",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 19
+          }
+        },
+        {
+          "path": "/z020",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 20
+          }
+        },
+        {
+          "path": "/z021",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 21
+          }
+        },
+        {
+          "path": "/z022",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 22
+          }
+        },
+        {
+          "path": "/z023",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 23
+          }
+        },
+        {
+          "path": "/z024",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 24
+          }
+        },
+        {
+          "path": "/z025",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 25
+          }
+        },
+        {
+          "path": "/z026",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 26
+          }
+        },
+        {
+          "path": "/z027",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 27
+          }
+        },
+        {
+          "path": "/z028",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 28
+          }
+        },
+        {
+          "path": "/z029",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 29
+          }
+        },
+        {
+          "path": "/z030",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 30
+          }
+        },
+        {
+          "path": "/z031",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 31
+          }
+        }
+      ],
+      "expected": [
+        {
+          "path": "/z000",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "path": "/z001",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "path": "/z002",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 2
+          }
+        },
+        {
+          "path": "/z003",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 3
+          }
+        },
+        {
+          "path": "/z004",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 4
+          }
+        },
+        {
+          "path": "/z005",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 5
+          }
+        },
+        {
+          "path": "/z006",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 6
+          }
+        },
+        {
+          "path": "/z007",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 7
+          }
+        },
+        {
+          "path": "/z008",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 8
+          }
+        },
+        {
+          "path": "/z009",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 9
+          }
+        },
+        {
+          "path": "/z010",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 10
+          }
+        },
+        {
+          "path": "/z011",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 11
+          }
+        },
+        {
+          "path": "/z012",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 12
+          }
+        },
+        {
+          "path": "/z013",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 13
+          }
+        },
+        {
+          "path": "/z014",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 14
+          }
+        },
+        {
+          "path": "/z015",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 15
+          }
+        },
+        {
+          "path": "/z016",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 16
+          }
+        },
+        {
+          "path": "/z017",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 17
+          }
+        },
+        {
+          "path": "/z018",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 18
+          }
+        },
+        {
+          "path": "/z019",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 19
+          }
+        },
+        {
+          "path": "/z020",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 20
+          }
+        },
+        {
+          "path": "/z021",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 21
+          }
+        },
+        {
+          "path": "/z022",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 22
+          }
+        },
+        {
+          "path": "/z023",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 23
+          }
+        },
+        {
+          "path": "/z024",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 24
+          }
+        },
+        {
+          "path": "/z025",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 25
+          }
+        },
+        {
+          "path": "/z026",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 26
+          }
+        },
+        {
+          "path": "/z027",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 27
+          }
+        },
+        {
+          "path": "/z028",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 28
+          }
+        },
+        {
+          "path": "/z029",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 29
+          }
+        },
+        {
+          "path": "/z030",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 30
+          }
+        },
+        {
+          "path": "/z031",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 31
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "11-cap-32.truncated",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "11-cap-33.exit",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "id": "11-cap-33.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "11-cap-33.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "11-cap-33.field-set",
+      "actual": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "11-cap-33.ordinary",
+      "actual": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "expected": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "pass": true
+    },
+    {
+      "id": "11-cap-33.limit",
+      "actual": 32,
+      "expected": 32,
+      "pass": true
+    },
+    {
+      "id": "11-cap-33.rows",
+      "actual": [
+        {
+          "path": "/z000",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "path": "/z001",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "path": "/z002",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 2
+          }
+        },
+        {
+          "path": "/z003",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 3
+          }
+        },
+        {
+          "path": "/z004",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 4
+          }
+        },
+        {
+          "path": "/z005",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 5
+          }
+        },
+        {
+          "path": "/z006",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 6
+          }
+        },
+        {
+          "path": "/z007",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 7
+          }
+        },
+        {
+          "path": "/z008",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 8
+          }
+        },
+        {
+          "path": "/z009",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 9
+          }
+        },
+        {
+          "path": "/z010",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 10
+          }
+        },
+        {
+          "path": "/z011",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 11
+          }
+        },
+        {
+          "path": "/z012",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 12
+          }
+        },
+        {
+          "path": "/z013",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 13
+          }
+        },
+        {
+          "path": "/z014",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 14
+          }
+        },
+        {
+          "path": "/z015",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 15
+          }
+        },
+        {
+          "path": "/z016",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 16
+          }
+        },
+        {
+          "path": "/z017",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 17
+          }
+        },
+        {
+          "path": "/z018",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 18
+          }
+        },
+        {
+          "path": "/z019",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 19
+          }
+        },
+        {
+          "path": "/z020",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 20
+          }
+        },
+        {
+          "path": "/z021",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 21
+          }
+        },
+        {
+          "path": "/z022",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 22
+          }
+        },
+        {
+          "path": "/z023",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 23
+          }
+        },
+        {
+          "path": "/z024",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 24
+          }
+        },
+        {
+          "path": "/z025",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 25
+          }
+        },
+        {
+          "path": "/z026",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 26
+          }
+        },
+        {
+          "path": "/z027",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 27
+          }
+        },
+        {
+          "path": "/z028",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 28
+          }
+        },
+        {
+          "path": "/z029",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 29
+          }
+        },
+        {
+          "path": "/z030",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 30
+          }
+        },
+        {
+          "path": "/z031",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 31
+          }
+        }
+      ],
+      "expected": [
+        {
+          "path": "/z000",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "path": "/z001",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "path": "/z002",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 2
+          }
+        },
+        {
+          "path": "/z003",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 3
+          }
+        },
+        {
+          "path": "/z004",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 4
+          }
+        },
+        {
+          "path": "/z005",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 5
+          }
+        },
+        {
+          "path": "/z006",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 6
+          }
+        },
+        {
+          "path": "/z007",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 7
+          }
+        },
+        {
+          "path": "/z008",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 8
+          }
+        },
+        {
+          "path": "/z009",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 9
+          }
+        },
+        {
+          "path": "/z010",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 10
+          }
+        },
+        {
+          "path": "/z011",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 11
+          }
+        },
+        {
+          "path": "/z012",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 12
+          }
+        },
+        {
+          "path": "/z013",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 13
+          }
+        },
+        {
+          "path": "/z014",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 14
+          }
+        },
+        {
+          "path": "/z015",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 15
+          }
+        },
+        {
+          "path": "/z016",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 16
+          }
+        },
+        {
+          "path": "/z017",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 17
+          }
+        },
+        {
+          "path": "/z018",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 18
+          }
+        },
+        {
+          "path": "/z019",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 19
+          }
+        },
+        {
+          "path": "/z020",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 20
+          }
+        },
+        {
+          "path": "/z021",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 21
+          }
+        },
+        {
+          "path": "/z022",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 22
+          }
+        },
+        {
+          "path": "/z023",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 23
+          }
+        },
+        {
+          "path": "/z024",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 24
+          }
+        },
+        {
+          "path": "/z025",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 25
+          }
+        },
+        {
+          "path": "/z026",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 26
+          }
+        },
+        {
+          "path": "/z027",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 27
+          }
+        },
+        {
+          "path": "/z028",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 28
+          }
+        },
+        {
+          "path": "/z029",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 29
+          }
+        },
+        {
+          "path": "/z030",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 30
+          }
+        },
+        {
+          "path": "/z031",
+          "kind": "unexpected",
+          "expected": {
+            "present": false
+          },
+          "actual": {
+            "present": true,
+            "type": "number",
+            "value": 31
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "11-cap-33.truncated",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "12-nonfinite.exit",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "id": "12-nonfinite.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 9,
+          "sha256": "c238cb6e9ac5407491b0988102620ab9445290d2ed7713c516a2b28bd2388968",
+          "git_blob": "5b3776dd39195c7f9af67be9e1065c6aa0a85a08",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 9,
+          "sha256": "c238cb6e9ac5407491b0988102620ab9445290d2ed7713c516a2b28bd2388968",
+          "git_blob": "5b3776dd39195c7f9af67be9e1065c6aa0a85a08",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "nonfinite.no-json",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "13-explicit-correction.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "13-explicit-correction.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "13-explicit-correction.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "13-explicit-correction.field-set",
+      "actual": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "difference_limit",
+        "differences",
+        "differences_truncated",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "13-explicit-correction.ordinary",
+      "actual": {
+        "matches": true,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "expected": {
+        "matches": true,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "pass": true
+    },
+    {
+      "id": "13-explicit-correction.limit",
+      "actual": 32,
+      "expected": 32,
+      "pass": true
+    },
+    {
+      "id": "13-explicit-correction.rows",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "13-explicit-correction.truncated",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "14-invalid-utf8.exit",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "id": "14-invalid-utf8.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "invalid-utf8.no-json",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "14-overflow.exit",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "id": "14-overflow.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+          "bytes": 11,
+          "sha256": "cb013dcc16fe0e5ca4b3588e94fedb08d57d0671c0bc216f27e5cd61b59d77b0",
+          "git_blob": "a048f2812d17f28b884c675f1419f2e4e49387db",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+          "bytes": 11,
+          "sha256": "cb013dcc16fe0e5ca4b3588e94fedb08d57d0671c0bc216f27e5cd61b59d77b0",
+          "git_blob": "a048f2812d17f28b884c675f1419f2e4e49387db",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "overflow.no-json",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "14-oversized.exit",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "id": "14-oversized.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+          "bytes": 11,
+          "sha256": "cb013dcc16fe0e5ca4b3588e94fedb08d57d0671c0bc216f27e5cd61b59d77b0",
+          "git_blob": "a048f2812d17f28b884c675f1419f2e4e49387db",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/oversized.json",
+          "bytes": 262145,
+          "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+          "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+          "bytes": 11,
+          "sha256": "cb013dcc16fe0e5ca4b3588e94fedb08d57d0671c0bc216f27e5cd61b59d77b0",
+          "git_blob": "a048f2812d17f28b884c675f1419f2e4e49387db",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/oversized.json",
+          "bytes": 262145,
+          "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+          "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "oversized.no-json",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "15-repeat-one-field.exit",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "id": "15-repeat-one-field.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+          "bytes": 11,
+          "sha256": "cb013dcc16fe0e5ca4b3588e94fedb08d57d0671c0bc216f27e5cd61b59d77b0",
+          "git_blob": "a048f2812d17f28b884c675f1419f2e4e49387db",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/oversized.json",
+          "bytes": 262145,
+          "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+          "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+          "bytes": 11,
+          "sha256": "cb013dcc16fe0e5ca4b3588e94fedb08d57d0671c0bc216f27e5cd61b59d77b0",
+          "git_blob": "a048f2812d17f28b884c675f1419f2e4e49387db",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/oversized.json",
+          "bytes": 262145,
+          "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+          "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "15-repeat-one-field.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "deterministic.bytes",
+      "actual": "e8242e77c7d0721fa85d949bcf94f24f1ec813a201d4bec514e7fcb3e4828ef6",
+      "expected": "e8242e77c7d0721fa85d949bcf94f24f1ec813a201d4bec514e7fcb3e4828ef6",
+      "pass": true
+    },
+    {
+      "id": "16-output-failure.exit",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "id": "16-output-failure.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+          "bytes": 11,
+          "sha256": "cb013dcc16fe0e5ca4b3588e94fedb08d57d0671c0bc216f27e5cd61b59d77b0",
+          "git_blob": "a048f2812d17f28b884c675f1419f2e4e49387db",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/oversized.json",
+          "bytes": 262145,
+          "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+          "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+          "bytes": 6208,
+          "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+          "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+          "bytes": 6222,
+          "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+          "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+          "bytes": 1,
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+          "bytes": 5035,
+          "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+          "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+          "bytes": 5770,
+          "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+          "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+          "bytes": 11,
+          "sha256": "cb013dcc16fe0e5ca4b3588e94fedb08d57d0671c0bc216f27e5cd61b59d77b0",
+          "git_blob": "a048f2812d17f28b884c675f1419f2e4e49387db",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/oversized.json",
+          "bytes": 262145,
+          "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+          "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+          "bytes": 5322,
+          "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+          "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "output-failure.diagnostic",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  ],
+  "error": null,
+  "inputs": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/caller correction.json",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-32.json",
+      "bytes": 6208,
+      "sha256": "9adb9c557b71f69faa2ebbcb669c3d1a90a24e289e1c115395303854a889807f",
+      "git_blob": "8eb30477e2de25af5c6f56f3132ca9e346a49dec",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/cap-33.json",
+      "bytes": 6222,
+      "sha256": "275697c31be0b383fa9df19ba72930db2598f2504d515379723c63fcc86b788a",
+      "git_blob": "409e399907e41892d5168ed2359b90c5ca8cb0cb",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/invalid-utf8.json",
+      "bytes": 1,
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+      "git_blob": "ce542efaa5124a0437f0c4db329d7ec4b7ba70a7",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/native rejection.json",
+      "bytes": 5035,
+      "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+      "git_blob": "3399bd4743216131bd929a989afb28dded6d4288",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/numbers.json",
+      "bytes": 5770,
+      "sha256": "522ad7a53fe23c5e9409ca5e8c2b2711ec43e404811769feb9fb9cff04771f84",
+      "git_blob": "91eef79707656297731fc46c02fd3c8b70de88c3",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/one-field.json",
+      "bytes": 5770,
+      "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+      "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/overflow.json",
+      "bytes": 11,
+      "sha256": "cb013dcc16fe0e5ca4b3588e94fedb08d57d0671c0bc216f27e5cd61b59d77b0",
+      "git_blob": "a048f2812d17f28b884c675f1419f2e4e49387db",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/oversized.json",
+      "bytes": 262145,
+      "sha256": "27cb03b898e978f2493818e414119edabc05246a6697a65ea42b21b682dc07d4",
+      "git_blob": "f734b883e0e1f11a1f1f8aa144e0d130f8d73309",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/saved approved \u6771\u4eac.json",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-v1/inputs/typed and missing.json",
+      "bytes": 5322,
+      "sha256": "6dc9d535eb8ec9489d7c4ff664a449a912f7a5599f1c98160ad859b2ca3ef55a",
+      "git_blob": "45c223a0011816106df9fbf1470374a6bbb5bb9b",
+      "mode": 420
+    }
+  ],
+  "source_after": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/explorer.py",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+      "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a",
+      "mode": 493
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/EXPLORER.md",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+      "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/tests/test_replay_explain.py",
+      "bytes": 9191,
+      "sha256": "2628d98c691fff88054f168fc1faad81af40c6becca5441da515b98acd2d1623",
+      "git_blob": "392bb213c04ee6646455d176f2060760cf95de4f",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": 420
+    }
+  ],
+  "controls_after": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/receive.py",
+      "bytes": 9462,
+      "sha256": "c0e4f69204fd2f88c58771355dd33a05c0dbdeb72f0be1d6049abd31f014fef4",
+      "git_blob": "3b0b8f67d9a6ac11596180f2930f78f843fb7e1f",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/candidate-spec.json",
+      "bytes": 1650,
+      "sha256": "9f7905fffe3eb3f283d67a57cdec61e9b76e710156e61a92a4e4569ca67d86f4",
+      "git_blob": "54d445afa71195495a30f1a972c12936ced3e50d",
+      "mode": 420
+    }
+  ],
+  "source_names_after": [
+    "EXPLORER.md",
+    "explorer.py",
+    "replay_explain.py",
+    "scenarios.py",
+    "tests/test_replay_explain.py",
+    "towerops.py"
+  ],
+  "source_preserved": true,
+  "controls_preserved": true,
+  "accepted": true,
+  "finished_utc": "2026-10-13T14:31:40.587543+00:00"
+}

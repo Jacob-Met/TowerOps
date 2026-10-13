@@ -1,0 +1,97 @@
+{
+  "schema": "hamon.root.towerops-explain-independent-review.v1",
+  "utc": "2026-10-13T14:50:48.859785+00:00",
+  "decision": "accepted",
+  "base_commit": "8a87ad1331d7e7100367dde583d59560836f9eb8",
+  "method": "Public contract and independently authored receiver were frozen before candidate source body or execution. Original and candidate actual CLI courses were then run once; source review followed candidate receiving. This seal only rechecks retained records and bytes.",
+  "receiver": {
+    "bytes": 9462,
+    "sha256": "c0e4f69204fd2f88c58771355dd33a05c0dbdeb72f0be1d6049abd31f014fef4",
+    "git_blob": "3b0b8f67d9a6ac11596180f2930f78f843fb7e1f",
+    "mode": "100644"
+  },
+  "original": {
+    "commands": 5,
+    "checks": 19,
+    "receipt": {
+      "bytes": 26215,
+      "sha256": "5f67d5cc49a5123128c943d850a576feb84a4aee918a967e7b8e585492c963f0",
+      "git_blob": "681f041e941f7f601d716f214f470860973c7124",
+      "mode": "100644"
+    }
+  },
+  "candidate": {
+    "commands": 19,
+    "checks": 101,
+    "receipt": {
+      "bytes": 184449,
+      "sha256": "293582ab7b1c4b4a24abcb50c034e0239af2c896c56ac3ffdc5325d59b331a88",
+      "git_blob": "66786f3e4d49df91c85e9023e5bd19168346213a",
+      "mode": "100644"
+    }
+  },
+  "source": [
+    {
+      "path": "replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": 420
+    },
+    {
+      "path": "explorer.py",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+      "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a",
+      "mode": 493
+    },
+    {
+      "path": "EXPLORER.md",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+      "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d",
+      "mode": 420
+    },
+    {
+      "path": "tests/test_replay_explain.py",
+      "bytes": 9191,
+      "sha256": "2628d98c691fff88054f168fc1faad81af40c6becca5441da515b98acd2d1623",
+      "git_blob": "392bb213c04ee6646455d176f2060760cf95de4f",
+      "mode": 420
+    },
+    {
+      "path": "scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": 420
+    },
+    {
+      "path": "towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": 420
+    }
+  ],
+  "source_findings": [
+    "explorer.py adds only the optional replay flag and lazy dispatch. Removing the reviewed 282-byte addition restores the original 7141-byte body; default replay and HTTP paths are unchanged.",
+    "Explain-only reading opens a regular file, performs an actual MAX+1 bounded read, parses UTF-8 and rejects nonfinite JSON numbers including overflow. The original decoder remains unchanged.",
+    "The deterministic difference walk uses sorted object keys and array indices, RFC 6901 escaping, explicit missing/null/type/value envelopes, and the original boolean-sensitive numeric equivalence. It stops after witnessing the thirty-third difference and reports only the first thirty-two.",
+    "JSON output is prepared before writing, write counts and flushing are checked, and failures return 2. A failed output operation may already have emitted partial bytes.",
+    "Existing engine and scenario source bytes/modes are unchanged. The new guide accurately separates field differences from causal explanation, provenance or operational authority."
+  ],
+  "receiving_findings": [
+    "All four ordinary export/replay command outputs, stderr and exit codes match the original byte for byte.",
+    "Actual candidate CLI checks cover one-field and ordered seven-field changes, Unicode pointer escaping, missing/null/type distinctions, finite numeric equivalence, rejected-but-reproducible fixtures, 32 versus 33 differences, explicit correction after invalid input, invalid UTF-8/nonfinite/overflow/oversized inputs, byte determinism and /dev/full failure.",
+    "All source names, bytes and modes and receiving controls were preserved. Every command includes an input preservation comparison. The harness explicitly corrects one owned invalid fixture between commands.",
+    "All 48 retained streams exactly match the receipts' inline fields under strict UTF-8 decoding and re-encoding; all 120 declared checks recompute from their retained literal actual/expected values."
+  ],
+  "scope": [
+    "Cloud Python CLI and source review only; author native receiving is independently recorded by Anvil.",
+    "No browser replay, live service installation, provider/model invocation or operational-aircraft claim.",
+    "No new product run during sealing; author tests are not counted as root receiving.",
+    "The public --explain input cap and ordinary default decoder behavior intentionally differ; validation is scoped accordingly."
+  ],
+  "cross_review": "Anvil independently read the frozen receiver, both receipts and all 48 raw streams before publication; no optional product rerun requested."
+}

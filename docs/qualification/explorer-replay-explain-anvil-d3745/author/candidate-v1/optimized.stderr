@@ -1,0 +1,15 @@
+test_actual_stdout_failure_is_controlled_and_preserves_input (test_replay_explain.ReplayExplanationTests.test_actual_stdout_failure_is_controlled_and_preserves_input) ... ok
+test_array_presence_and_subtree_type_are_explicit (test_replay_explain.ReplayExplanationTests.test_array_presence_and_subtree_type_are_explicit) ... ok
+test_default_reply_and_actual_cli_match_mismatch (test_replay_explain.ReplayExplanationTests.test_default_reply_and_actual_cli_match_mismatch) ... ok
+test_explain_actual_byte_bound_and_regular_file_refusal (test_replay_explain.ReplayExplanationTests.test_explain_actual_byte_bound_and_regular_file_refusal) ... ok
+test_explain_refuses_malformed_deep_nonfinite_and_bad_utf8_before_stdout (test_replay_explain.ReplayExplanationTests.test_explain_refuses_malformed_deep_nonfinite_and_bad_utf8_before_stdout) ... ok
+test_limit_detects_more_without_claiming_total (test_replay_explain.ReplayExplanationTests.test_limit_detects_more_without_claiming_total) ... ok
+test_literal_type_value_missing_null_and_pointer_order (test_replay_explain.ReplayExplanationTests.test_literal_type_value_missing_null_and_pointer_order) ... ok
+test_match_and_finite_numeric_equivalence (test_replay_explain.ReplayExplanationTests.test_match_and_finite_numeric_equivalence) ... ok
+test_report_is_detached_and_input_unchanged (test_replay_explain.ReplayExplanationTests.test_report_is_detached_and_input_unchanged) ... ok
+test_short_write_and_flush_failure_never_claim_success (test_replay_explain.ReplayExplanationTests.test_short_write_and_flush_failure_never_claim_success) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.936s
+
+OK

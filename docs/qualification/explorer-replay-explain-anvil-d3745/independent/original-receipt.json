@@ -1,0 +1,435 @@
+{
+  "schema": "hamon.root.towerops-replay-explain-cli.v1",
+  "started_utc": "2026-10-13T14:24:11.299022+00:00",
+  "variant": "original",
+  "spec": {
+    "variant": "original",
+    "source": "/dev/shm/root-d3745-towerops-explain/baseline",
+    "base_commit": "8a87ad1331d7e7100367dde583d59560836f9eb8",
+    "files": [
+      {
+        "path": "explorer.py",
+        "bytes": 7141,
+        "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+        "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f",
+        "mode": 493
+      },
+      {
+        "path": "scenarios.py",
+        "bytes": 5989,
+        "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+        "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+        "mode": 420
+      },
+      {
+        "path": "towerops.py",
+        "bytes": 19684,
+        "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+        "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+        "mode": 420
+      }
+    ]
+  },
+  "source_before": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/baseline/explorer.py",
+      "bytes": 7141,
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+      "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f",
+      "mode": 493
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/baseline/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/baseline/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": 420
+    }
+  ],
+  "controls_before": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/receive.py",
+      "bytes": 9462,
+      "sha256": "c0e4f69204fd2f88c58771355dd33a05c0dbdeb72f0be1d6049abd31f014fef4",
+      "git_blob": "3b0b8f67d9a6ac11596180f2930f78f843fb7e1f",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/original-spec.json",
+      "bytes": 850,
+      "sha256": "16e823ad2953e449f7f004d988e24ad4ccd33eef16d0a65ce20fb7f168c68ce5",
+      "git_blob": "671d390ab6b05966377bd0c1c573b42dc50f22eb",
+      "mode": 420
+    }
+  ],
+  "commands": [
+    {
+      "id": "01-export-approved",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/baseline/explorer.py",
+        "run",
+        "approved"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/original-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"format\": \"towerops.synthetic-explorer.v1\",\n  \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\n  \"request\": {\n    \"scenario\": \"approved\",\n    \"include_approval\": true,\n    \"include_ack\": true\n  },\n  \"label\": \"Approval + acknowledgement\",\n  \"description\": \"Both exact-hash fixtures arrive before simulated dispatch.\",\n  \"simulation_clock\": {\n    \"dispatch_sec\": 1002.5,\n    \"observed_sec\": 1001.0,\n    \"projection_horizon_min\": 5.0\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5.0,\n    \"min_vertical_ft\": 1000.0,\n    \"horizon_min\": 5.0,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10.0,\n    \"max_speed_nm_min\": 6.0,\n    \"max_climb_ft_min\": 3000.0\n  },\n  \"before\": {\n    \"version\": 1,\n    \"observed_at\": 1001.0,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": 1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": -1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      }\n    ]\n  },\n  \"after\": {\n    \"version\": 2,\n    \"observed_at\": 1002.5,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": 1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": -1.0,\n        \"vy_nm_min\": 2.0,\n        \"climb_ft_min\": 0.0\n      }\n    ]\n  },\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1.0,\n    \"set_vy_nm_min\": 2.0,\n    \"set_climb_ft_min\": 0.0,\n    \"issued_at\": 1002.0,\n    \"expires_at\": 1010.0,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"status\": \"accepted\",\n      \"acknowledged_at\": 1002.4\n    }\n  },\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"before_conflict\": true,\n  \"after_conflict\": false,\n  \"audit_events\": [\n    {\n      \"seq\": 0,\n      \"kind\": \"fixture_proposal\",\n      \"payload\": {\n        \"scenario\": \"approved\",\n        \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory\": {\n          \"aircraft_id\": \"FIXTURE-B\",\n          \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n          \"set_vx_nm_min\": -1.0,\n          \"set_vy_nm_min\": 2.0,\n          \"set_climb_ft_min\": 0.0,\n          \"issued_at\": 1002.0,\n          \"expires_at\": 1010.0,\n          \"rationale\": \"synthetic projected-separation recovery\"\n        },\n        \"simulation_only\": true\n      },\n      \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\",\n      \"event_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"\n    },\n    {\n      \"seq\": 1,\n      \"kind\": \"screen_pass\",\n      \"payload\": {\n        \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory_hashes\": [\n          \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n        ]\n      },\n      \"prev_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\",\n      \"event_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"\n    },\n    {\n      \"seq\": 2,\n      \"kind\": \"approval\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"decision\": \"approve\",\n        \"approved_at\": 1002.2,\n        \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n      },\n      \"prev_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\",\n      \"event_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"\n    },\n    {\n      \"seq\": 3,\n      \"kind\": \"ack\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"status\": \"accepted\",\n        \"acknowledged_at\": 1002.4\n      },\n      \"prev_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\",\n      \"event_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"\n    },\n    {\n      \"seq\": 4,\n      \"kind\": \"simulated_actuation\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"\n      },\n      \"prev_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\",\n      \"event_hash\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"\n    }\n  ],\n  \"audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"audit_valid\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "02-export-rejected",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/baseline/explorer.py",
+        "run",
+        "missing_ack"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/original-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"format\": \"towerops.synthetic-explorer.v1\",\n  \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\n  \"request\": {\n    \"scenario\": \"missing_ack\",\n    \"include_approval\": true,\n    \"include_ack\": true\n  },\n  \"label\": \"Missing acknowledgement\",\n  \"description\": \"Approval alone does not authorize the simulated transition.\",\n  \"simulation_clock\": {\n    \"dispatch_sec\": 1002.5,\n    \"observed_sec\": 1001.0,\n    \"projection_horizon_min\": 5.0\n  },\n  \"policy\": {\n    \"min_horizontal_nm\": 5.0,\n    \"min_vertical_ft\": 1000.0,\n    \"horizon_min\": 5.0,\n    \"sample_step_min\": 0.5,\n    \"max_state_age_sec\": 10.0,\n    \"max_speed_nm_min\": 6.0,\n    \"max_climb_ft_min\": 3000.0\n  },\n  \"before\": {\n    \"version\": 1,\n    \"observed_at\": 1001.0,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": 1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": -1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      }\n    ]\n  },\n  \"after\": {\n    \"version\": 1,\n    \"observed_at\": 1001.0,\n    \"aircraft\": [\n      {\n        \"aircraft_id\": \"FIXTURE-A\",\n        \"x_nm\": -5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": 1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      },\n      {\n        \"aircraft_id\": \"FIXTURE-B\",\n        \"x_nm\": 5.0,\n        \"y_nm\": 0.0,\n        \"altitude_ft\": 10000.0,\n        \"vx_nm_min\": -1.0,\n        \"vy_nm_min\": 0.0,\n        \"climb_ft_min\": 0.0\n      }\n    ]\n  },\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1.0,\n    \"set_vy_nm_min\": 2.0,\n    \"set_climb_ft_min\": 0.0,\n    \"issued_at\": 1002.0,\n    \"expires_at\": 1010.0,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": null\n  },\n  \"outcome\": \"rejected\",\n  \"rejection_reason\": \"ack_missing\",\n  \"before_conflict\": true,\n  \"after_conflict\": true,\n  \"audit_events\": [\n    {\n      \"seq\": 0,\n      \"kind\": \"fixture_proposal\",\n      \"payload\": {\n        \"scenario\": \"missing_ack\",\n        \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory\": {\n          \"aircraft_id\": \"FIXTURE-B\",\n          \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n          \"set_vx_nm_min\": -1.0,\n          \"set_vy_nm_min\": 2.0,\n          \"set_climb_ft_min\": 0.0,\n          \"issued_at\": 1002.0,\n          \"expires_at\": 1010.0,\n          \"rationale\": \"synthetic projected-separation recovery\"\n        },\n        \"simulation_only\": true\n      },\n      \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\",\n      \"event_hash\": \"6cc73f803c163c2611db426fb649fc695f91160e0bcf4e55e1c0522759f10ec5\"\n    },\n    {\n      \"seq\": 1,\n      \"kind\": \"screen_pass\",\n      \"payload\": {\n        \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n        \"advisory_hashes\": [\n          \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n        ]\n      },\n      \"prev_hash\": \"6cc73f803c163c2611db426fb649fc695f91160e0bcf4e55e1c0522759f10ec5\",\n      \"event_hash\": \"505c30da38ba7d55a236c1951a3cf92d6fade533427d39385882a769663b448b\"\n    },\n    {\n      \"seq\": 2,\n      \"kind\": \"approval\",\n      \"payload\": {\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n        \"decision\": \"approve\",\n        \"approved_at\": 1002.2,\n        \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n      },\n      \"prev_hash\": \"505c30da38ba7d55a236c1951a3cf92d6fade533427d39385882a769663b448b\",\n      \"event_hash\": \"8b16e7b0c673a3910882a860d3d0c3e39b1d786bd7866461eacaf4ef11035a72\"\n    },\n    {\n      \"seq\": 3,\n      \"kind\": \"reject\",\n      \"payload\": {\n        \"reason\": \"ack_missing\",\n        \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n      },\n      \"prev_hash\": \"8b16e7b0c673a3910882a860d3d0c3e39b1d786bd7866461eacaf4ef11035a72\",\n      \"event_hash\": \"aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e\"\n    }\n  ],\n  \"audit_head\": \"aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e\",\n  \"audit_valid\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "03-default-match",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/baseline/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/saved approved \u6771\u4eac.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/original-v1",
+      "returncode": 0,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": true,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "04-default-mismatch",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/baseline/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/one-field.json"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/original-v1",
+      "returncode": 1,
+      "stdout_destination": "captured",
+      "stdout": "{\n  \"matches\": false,\n  \"audit_valid\": true,\n  \"outcome\": \"simulated_actuation\",\n  \"rejection_reason\": null,\n  \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\n  \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "05-original-unsupported",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/dev/shm/root-d3745-towerops-explain/baseline/explorer.py",
+        "replay",
+        "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/saved approved \u6771\u4eac.json",
+        "--explain"
+      ],
+      "cwd": "/dev/shm/root-d3745-towerops-explain/original-v1",
+      "returncode": 2,
+      "stdout_destination": "captured",
+      "stdout": "",
+      "stderr": "usage: explorer.py [-h] {serve,run,replay} ...\nexplorer.py: error: unrecognized arguments: --explain\n"
+    }
+  ],
+  "checks": [
+    {
+      "id": "01-export-approved.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "01-export-approved.input-preserved",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "01-export-approved.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "02-export-rejected.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "02-export-rejected.input-preserved",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "02-export-rejected.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "03-default-match.exit",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "03-default-match.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "03-default-match.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "04-default-mismatch.exit",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "id": "04-default-mismatch.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "04-default-mismatch.stderr",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "default.match",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "default.mismatch",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "default.no-explanation",
+      "actual": [
+        "audit_valid",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "expected": [
+        "audit_valid",
+        "expected_audit_head",
+        "matches",
+        "note",
+        "outcome",
+        "rejection_reason"
+      ],
+      "pass": true
+    },
+    {
+      "id": "05-original-unsupported.exit",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "id": "05-original-unsupported.input-preserved",
+      "actual": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "expected": [
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/one-field.json",
+          "bytes": 5770,
+          "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+          "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+          "mode": 420
+        },
+        {
+          "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/saved approved \u6771\u4eac.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+          "mode": 420
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "original.unsupported-no-json",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "id": "original.flag-named",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  ],
+  "error": null,
+  "inputs": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/one-field.json",
+      "bytes": 5770,
+      "sha256": "c1614c895578927cf77487ac0c87f63589bade9316cd69a2b49e006df2e54578",
+      "git_blob": "d40285be7a02f6716bf2cac0ada28a68dab06de9",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/original-v1/inputs/saved approved \u6771\u4eac.json",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "git_blob": "6b9355736552bb8a66bf406e38241ece66347049",
+      "mode": 420
+    }
+  ],
+  "source_after": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/baseline/explorer.py",
+      "bytes": 7141,
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+      "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f",
+      "mode": 493
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/baseline/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/baseline/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": 420
+    }
+  ],
+  "controls_after": [
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/receive.py",
+      "bytes": 9462,
+      "sha256": "c0e4f69204fd2f88c58771355dd33a05c0dbdeb72f0be1d6049abd31f014fef4",
+      "git_blob": "3b0b8f67d9a6ac11596180f2930f78f843fb7e1f",
+      "mode": 420
+    },
+    {
+      "path": "/dev/shm/root-d3745-towerops-explain/original-spec.json",
+      "bytes": 850,
+      "sha256": "16e823ad2953e449f7f004d988e24ad4ccd33eef16d0a65ce20fb7f168c68ce5",
+      "git_blob": "671d390ab6b05966377bd0c1c573b42dc50f22eb",
+      "mode": 420
+    }
+  ],
+  "source_names_after": [
+    "explorer.py",
+    "scenarios.py",
+    "towerops.py"
+  ],
+  "source_preserved": true,
+  "controls_preserved": true,
+  "accepted": true,
+  "finished_utc": "2026-10-13T14:24:11.782983+00:00"
+}
