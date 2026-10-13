@@ -1,0 +1,20 @@
+{
+  "schema": "hamon.anvil.towerops-replay-original.v1",
+  "utc": "2026-10-13T12:21:51.945688+00:00",
+  "command": [
+    "node",
+    "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/author/test_explorer_replay_selection.cjs",
+    "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/baseline/web/app.js"
+  ],
+  "returncode": 1,
+  "stdout": {
+    "bytes": 7801,
+    "sha256": "4b3bf9127692f287af8d1afa02f5c0314549677a98d746cacc20e1d13fc340b3"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_preserved": true,
+  "candidate_exists": false
+}

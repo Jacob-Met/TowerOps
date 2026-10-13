@@ -77,14 +77,23 @@ $("export").addEventListener("click",()=> {
   const a=document.createElement("a"); a.href=url; a.download=`towerops-${current.request.scenario}.json`; a.click();
   setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
+let replaySelection = null;
 $("replay-file").addEventListener("change",async()=> {
-  const file=$("replay-file").files[0]; if (!file) return;
+  const selection = {};
+  replaySelection = selection;
+  const file=$("replay-file").files[0];
+  if (!file) {$("replay-status").textContent="";return;}
   $("replay-status").textContent="Replaying locally…";
   try {
     if(file.size>262144) throw new Error("Export exceeds 262144 bytes");
-    const value=JSON.parse(await file.text()),reply=await request("/api/replay",value);
+    const text=await file.text();
+    if (replaySelection !== selection) return;
+    const value=JSON.parse(text),reply=await request("/api/replay",value);
+    if (replaySelection !== selection) return;
     $("replay-status").textContent = reply.matches ? `Replay MATCH: ${reply.outcome}. ${reply.note}` : `Replay MISMATCH: export differs from the deterministic engine result. ${reply.note}`;
-  } catch(e) {$("replay-status").textContent=`Replay rejected: ${e.message}`;}
+  } catch(e) {
+    if (replaySelection === selection) $("replay-status").textContent=`Replay rejected: ${e.message}`;
+  }
 });
 request("/api/scenarios").then(data=> {
   data.scenarios.forEach(item=> {const option=document.createElement("option"); option.value=item.id;option.textContent=item.label;option.dataset.description=item.description;$("scenario").append(option);});

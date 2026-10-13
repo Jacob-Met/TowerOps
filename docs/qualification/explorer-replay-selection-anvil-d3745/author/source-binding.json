@@ -1,0 +1,35 @@
+{
+  "schema": "hamon.anvil.towerops-replay-source-binding.v1",
+  "utc": "2026-10-13T12:24:57.493663+00:00",
+  "base": "c7714bbe09c37ead994780af53078df11c99925b",
+  "issue": "https://github.com/Jacob-Met/TowerOps/issues/126",
+  "publication_state": "unpublished candidate",
+  "source_allowlist": [
+    {
+      "path": "web/app.js",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/app.js",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+      "mode": "100644"
+    },
+    {
+      "path": "EXPLORER.md",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/EXPLORER.md",
+      "bytes": 4966,
+      "sha256": "c89087497a6547f91218cf53dc783bce22bfe1f428faaa32cf40adacada930bc",
+      "git_blob": "00cdf262110440bc7f59eeb645835d5f269f10d8",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_explorer_replay_selection.cjs",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/tests/test_explorer_replay_selection.cjs",
+      "bytes": 7996,
+      "sha256": "947c1289a71b361e144e33b260ef6a49e985c7fb2352a847ecbf0577aecc0a01",
+      "git_blob": "d8ccb564692edac407632c6dc8efa2465d8ff47f",
+      "mode": "100644"
+    }
+  ],
+  "non_replay_app_body_exact": true,
+  "scope": "local fixed-fixture Explorer only; browser receiving remains pending"
+}
