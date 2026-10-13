@@ -21,6 +21,7 @@ Exit status 0 when the replay is clean, 1 otherwise.
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from dataclasses import dataclass, field
@@ -197,7 +198,16 @@ def _load_events(source: str) -> list[dict[str, Any]]:
 
 
 def main(argv: list[str]) -> int:
-    source = argv[1] if len(argv) > 1 else "-"
+    parser = argparse.ArgumentParser(
+        description="Review the chain and lifecycle of a saved TowerOps audit trace.",
+        epilog="Exit status: 0 clean audit, 1 audit findings, 2 input/review/output error.",
+        allow_abbrev=False,
+    )
+    parser.add_argument(
+        "source", metavar="SOURCE", nargs="?", default="-",
+        help="JSON trace path, or '-' for stdin (default: stdin)",
+    )
+    source = parser.parse_args(argv[1:]).source
     try:
         events = _load_events(source)
     except (OSError, ValueError, json.JSONDecodeError, RecursionError) as exc:
