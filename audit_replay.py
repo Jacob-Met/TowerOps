@@ -185,7 +185,10 @@ def _unique_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
 
 def _load_events(source: str) -> list[dict[str, Any]]:
     if source == "-":
-        raw = sys.stdin.read()
+        # Saved traces are UTF-8 in both files and pipes, regardless of the
+        # console's text encoding. Retain text-only streams for embedded use.
+        buffer = getattr(sys.stdin, "buffer", None)
+        raw = buffer.read().decode("utf-8") if buffer is not None else sys.stdin.read()
     else:
         with open(source, "r", encoding="utf-8") as fh:
             raw = fh.read()
