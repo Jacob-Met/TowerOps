@@ -1,0 +1,243 @@
+--- a/web/app.js
++++ b/web/app.js
+@@ -77,14 +77,23 @@
+   const a=document.createElement("a"); a.href=url; a.download=`towerops-${current.request.scenario}.json`; a.click();
+   setTimeout(()=>URL.revokeObjectURL(url),1000);
+ });
++let replaySelection = null;
+ $("replay-file").addEventListener("change",async()=> {
+-  const file=$("replay-file").files[0]; if (!file) return;
++  const selection = {};
++  replaySelection = selection;
++  const file=$("replay-file").files[0];
++  if (!file) {$("replay-status").textContent="";return;}
+   $("replay-status").textContent="Replaying locally…";
+   try {
+     if(file.size>262144) throw new Error("Export exceeds 262144 bytes");
+-    const value=JSON.parse(await file.text()),reply=await request("/api/replay",value);
++    const text=await file.text();
++    if (replaySelection !== selection) return;
++    const value=JSON.parse(text),reply=await request("/api/replay",value);
++    if (replaySelection !== selection) return;
+     $("replay-status").textContent = reply.matches ? `Replay MATCH: ${reply.outcome}. ${reply.note}` : `Replay MISMATCH: export differs from the deterministic engine result. ${reply.note}`;
+-  } catch(e) {$("replay-status").textContent=`Replay rejected: ${e.message}`;}
++  } catch(e) {
++    if (replaySelection === selection) $("replay-status").textContent=`Replay rejected: ${e.message}`;
++  }
+ });
+ request("/api/scenarios").then(data=> {
+   data.scenarios.forEach(item=> {const option=document.createElement("option"); option.value=item.id;option.textContent=item.label;option.dataset.description=item.description;$("scenario").append(option);});
+--- a/EXPLORER.md
++++ b/EXPLORER.md
+@@ -19,6 +19,8 @@
+ ## Export and replay
+ 
+ Export JSON after a run. Select that file under **Replay exported JSON**: the backend reexecutes its fixed scenario and fixture switches and compares the entire result. It accepts equivalent finite JSON numbers (1001 versus 1001.0), never boolean→number coercion. Change `after.version` in a copy and replay: MISMATCH. Malformed formats/unknown scenarios are rejected. Uploaded files are not saved or used as arbitrary engine input.
++
++The replay status belongs to the currently selected file. Selecting another export retires earlier file reads and replay responses, including their errors; clearing the input clears the status. An already-sent request may still finish, but cannot replace the newer verdict. Replay does not change the displayed scenario result or its JSON export.
+ 
+ Replay is reproducibility under this local engine, not authenticity. The hash chain is not a signature or external custody anchor; someone can construct another valid fixed-fixture export. No replay result grants real authority.
+ 
+@@ -42,6 +44,14 @@
+ ```
+ 
+ It exercises all eight cases × four fixture-switch combinations, exact no-actuation retention, full-export edits, JS numeric roundtrip, real HTTP run/replay, and invalid requests. No fabricated provider outputs.
++
++Focused Explorer replay-selection lifecycle tests (Node.js 20+; built-in modules only):
++
++```sh
++node tests/test_explorer_replay_selection.cjs
++```
++
++These controlled DOM/fetch tests cover superseded reads, responses, JSON bodies and errors, same-file reselection, clearing, current refusals and explicit recovery. They do not replace actual browser receiving.
+ 
+ Optional actual browser acceptance:
+ 
+--- a/tests/test_explorer_replay_selection.cjs
++++ b/tests/test_explorer_replay_selection.cjs
+@@ -0,0 +1,185 @@
++"use strict";
++const assert = require("node:assert/strict");
++const fs = require("node:fs");
++const path = require("node:path");
++const vm = require("node:vm");
++const test = require("node:test");
++
++const appPath = process.argv[2] || path.join(__dirname, "..", "web", "app.js");
++const app = fs.readFileSync(appPath, "utf8");
++const tick = () => new Promise(resolve => setImmediate(resolve));
++function deferred() {
++  let resolve, reject;
++  const promise = new Promise((yes, no) => { resolve = yes; reject = no; });
++  return {promise, resolve, reject};
++}
++function file(value, overrides = {}) {
++  return {name: "fixture.json", size: 20, text: async () => JSON.stringify(value), ...overrides};
++}
++function reply(matches, note = "current note") {
++  return {matches, outcome: "rejected", note};
++}
++function response(data) {
++  return {ok: true, json: async () => data};
++}
++async function harness() {
++  const nodes = new Map();
++  function node(id) {
++    if (!nodes.has(id)) nodes.set(id, {
++      id, textContent: "", value: "", disabled: false, files: [], dataset: {},
++      children: [], listeners: {}, selectedOptions: [{dataset: {description: "fixture"}}],
++      addEventListener(kind, listener) { this.listeners[kind] = listener; },
++      append(...items) { this.children.push(...items); },
++      replaceChildren(...items) { this.children = items; },
++      setAttribute() {},
++    });
++    return nodes.get(id);
++  }
++  const calls = [];
++  const context = vm.createContext({
++    document: {getElementById: node, createElement: () => node(Symbol()),
++      createElementNS: () => node(Symbol())},
++    fetch: (url, options) => {
++      if (url === "/api/scenarios") return Promise.resolve(response({
++        scenarios: [{id: "approved", label: "Approved", description: "fixture"}],
++      }));
++      assert.equal(url, "/api/replay");
++      const gate = deferred();
++      calls.push({url, body: JSON.parse(options.body), gate});
++      return gate.promise;
++    },
++    console, setTimeout, URL, Blob,
++  });
++  vm.runInContext(app, context, {filename: appPath});
++  await tick();
++  const unrelated = () => JSON.stringify([...nodes].filter(([id]) =>
++    typeof id === "string" && id !== "replay-file" && id !== "replay-status")
++    .map(([id, n]) => [id, n.textContent, n.value, n.disabled, n.children.length]));
++  const before = unrelated();
++  return {
++    calls, context,
++    choose(selected) {
++      node("replay-file").files = selected ? [selected] : [];
++      return node("replay-file").listeners.change();
++    },
++    status: () => node("replay-status").textContent,
++    preserve: () => {
++      assert.equal(unrelated(), before, "replay does not alter other controls");
++      assert.equal(vm.runInContext("current", context), null, "displayed run stays unchanged");
++    },
++  };
++}
++
++test("current match and mismatch keep their existing complete messages", async () => {
++  const h = await harness();
++  let pending = h.choose(file({id: "match"})); await tick();
++  h.calls[0].gate.resolve(response(reply(true))); await pending;
++  assert.equal(h.status(), "Replay MATCH: rejected. current note");
++  pending = h.choose(file({id: "mismatch"})); await tick();
++  h.calls[1].gate.resolve(response(reply(false))); await pending;
++  assert.equal(h.status(), "Replay MISMATCH: export differs from the deterministic engine result. current note");
++  h.preserve();
++});
++
++test("a superseded file read does not send a replay or replace the newer verdict", async () => {
++  const h = await harness(), oldRead = deferred();
++  const old = h.choose(file({}, {text: () => oldRead.promise}));
++  const fresh = h.choose(file({id: "new"})); await tick();
++  h.calls[0].gate.resolve(response(reply(false, "new file"))); await fresh;
++  const accepted = h.status();
++  oldRead.resolve(JSON.stringify({id: "old"})); await tick();
++  // Settle an obsolete request if the original source issued it, without hanging the test.
++  for (const call of h.calls.slice(1)) call.gate.resolve(response(reply(true, "old file")));
++  await old;
++  assert.equal(h.calls.length, 1, "old read must not reach the backend");
++  assert.equal(h.status(), accepted);
++  h.preserve();
++});
++
++test("a superseded file read error cannot replace current pending or completed status", async () => {
++  const h = await harness(), oldRead = deferred();
++  const old = h.choose(file({}, {text: () => oldRead.promise}));
++  const fresh = h.choose(file({id: "new"})); await tick();
++  oldRead.reject(new Error("old read error")); await old;
++  assert.equal(h.status(), "Replaying locally…");
++  h.calls[0].gate.resolve(response(reply(true))); await fresh;
++  assert.equal(h.status(), "Replay MATCH: rejected. current note");
++  h.preserve();
++});
++
++test("a superseded HTTP response cannot replace a newer mismatch", async () => {
++  const h = await harness();
++  const old = h.choose(file({id: "old"})); await tick();
++  const fresh = h.choose(file({id: "new"})); await tick();
++  h.calls[1].gate.resolve(response(reply(false, "new file"))); await fresh;
++  const accepted = h.status();
++  h.calls[0].gate.resolve(response(reply(true, "old file"))); await old;
++  assert.equal(h.status(), accepted);
++  h.preserve();
++});
++
++test("a superseded JSON body cannot replace a newer rejection", async () => {
++  const h = await harness(), body = deferred();
++  const old = h.choose(file({id: "old"})); await tick();
++  h.calls[0].gate.resolve({ok: true, json: () => body.promise}); await tick();
++  await h.choose(file({}, {text: async () => "{"}));
++  const accepted = h.status();
++  assert.match(accepted, /^Replay rejected:/);
++  body.resolve(reply(true, "old body")); await old;
++  assert.equal(h.status(), accepted);
++  h.preserve();
++});
++
++test("a superseded transport error cannot replace a newer match", async () => {
++  const h = await harness();
++  const old = h.choose(file({id: "old"})); await tick();
++  const fresh = h.choose(file({id: "new"})); await tick();
++  h.calls[1].gate.resolve(response(reply(true))); await fresh;
++  const accepted = h.status();
++  h.calls[0].gate.reject(new Error("old network error")); await old;
++  assert.equal(h.status(), accepted);
++  h.preserve();
++});
++
++test("clearing selection retires an in-flight response and clears its status", async () => {
++  const h = await harness();
++  const old = h.choose(file({id: "old"})); await tick();
++  await h.choose(null);
++  assert.equal(h.status(), "");
++  h.calls[0].gate.resolve(response(reply(true))); await old;
++  assert.equal(h.status(), "");
++  h.preserve();
++});
++
++test("selecting the same File again retires its earlier request", async () => {
++  const h = await harness(), same = file({id: "same"});
++  const old = h.choose(same); await tick();
++  const fresh = h.choose(same); await tick();
++  h.calls[1].gate.resolve(response(reply(false, "latest attempt"))); await fresh;
++  const accepted = h.status();
++  h.calls[0].gate.resolve(response(reply(true, "earlier attempt"))); await old;
++  assert.equal(h.status(), accepted);
++  h.preserve();
++});
++
++test("a current oversize or read failure refuses, and an explicit corrected selection recovers", async () => {
++  const h = await harness();
++  await h.choose(file({}, {size: 262145, text: () => { throw new Error("must not read"); }}));
++  assert.equal(h.status(), "Replay rejected: Export exceeds 262144 bytes");
++  assert.equal(h.calls.length, 0);
++  await h.choose(file({}, {text: async () => { throw new Error("current read error"); }}));
++  assert.equal(h.status(), "Replay rejected: current read error");
++  const fresh = h.choose(file({id: "corrected"})); await tick();
++  h.calls[0].gate.resolve(response(reply(true))); await fresh;
++  assert.equal(h.status(), "Replay MATCH: rejected. current note");
++  h.preserve();
++});
++
++test("a current backend refusal retains the existing error display", async () => {
++  const h = await harness();
++  const pending = h.choose(file({id: "current"})); await tick();
++  h.calls[0].gate.resolve({ok: false, status: 400, json: async () => ({error: "current server refusal"})});
++  await pending;
++  assert.equal(h.status(), "Replay rejected: current server refusal");
++  h.preserve();
++});

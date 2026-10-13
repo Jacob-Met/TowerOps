@@ -1,0 +1,70 @@
+{
+  "accepted": true,
+  "base_commit": "c7714bbe09c37ead994780af53078df11c99925b",
+  "findings": [
+    "Each change event creates a fresh identity even for the same File object; older asynchronous work loses display authority immediately.",
+    "The token is checked after file.text and after request resolves its JSON body. Synchronous parse and either awaited failure update only current selection.",
+    "Empty selection retires pending work and clears its status. Current size/read/backend refusals and explicit recovery retain their existing messages.",
+    "No scenario run, current result, plotting, export, backend, request helper or airspace source changed. Already sent requests are not cancelled, as documented.",
+    "Controlled Node cases cover stale read success/error, transport success/error, delayed JSON, same-file reselection, clear, current size/read/server refusal and recovery."
+  ],
+  "limits": [
+    "Source/test design review and mechanical comparison only; no Node or browser replay by root.",
+    "Author original child3-pass/7-fail and candidate10-pass evidence remains Anvil's course; actual browser receiving remains independently owned by Loom.",
+    "Approval is for the narrow contribution. Current remote base and complete publication tree still require preservation review."
+  ],
+  "mechanical_verification": "Replacing only the new replaySelection declaration and complete replay change-listener span with the original span reproduces every original app byte.",
+  "native_source_identity_audit": [
+    {
+      "bytes": 6147,
+      "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+      "native_mode": "0o644",
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/app.js",
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f"
+    },
+    {
+      "bytes": 4966,
+      "git_blob": "00cdf262110440bc7f59eeb645835d5f269f10d8",
+      "native_mode": "0o644",
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/EXPLORER.md",
+      "sha256": "c89087497a6547f91218cf53dc783bce22bfe1f428faaa32cf40adacada930bc"
+    },
+    {
+      "bytes": 7996,
+      "git_blob": "d8ccb564692edac407632c6dc8efa2465d8ff47f",
+      "native_mode": "0o644",
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/tests/test_explorer_replay_selection.cjs",
+      "sha256": "947c1289a71b361e144e33b260ef6a49e985c7fb2352a847ecbf0577aecc0a01"
+    }
+  ],
+  "read": "Complete candidate app, new ten-method Node suite, practical EXPLORER guide and original app; immutable remote original app raw body equals read native baseline.",
+  "reviewed_utc": "2026-10-13T12:40:44.834767+00:00",
+  "reviewer": "root",
+  "schema": "hamon.root.towerops-replay-source-review.v1",
+  "source_files": [
+    {
+      "bytes": 6147,
+      "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+      "mode": "100644",
+      "path": "web/app.js",
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/app.js"
+    },
+    {
+      "bytes": 4966,
+      "git_blob": "00cdf262110440bc7f59eeb645835d5f269f10d8",
+      "mode": "100644",
+      "path": "EXPLORER.md",
+      "sha256": "c89087497a6547f91218cf53dc783bce22bfe1f428faaa32cf40adacada930bc",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/EXPLORER.md"
+    },
+    {
+      "bytes": 7996,
+      "git_blob": "d8ccb564692edac407632c6dc8efa2465d8ff47f",
+      "mode": "100644",
+      "path": "tests/test_explorer_replay_selection.cjs",
+      "sha256": "947c1289a71b361e144e33b260ef6a49e985c7fb2352a847ecbf0577aecc0a01",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/tests/test_explorer_replay_selection.cjs"
+    }
+  ]
+}

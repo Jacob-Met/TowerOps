@@ -1,0 +1,62 @@
+{
+  "schema": "hamon.anvil.explorer-replay-custody-recovery.v1",
+  "original_authority": {
+    "path": "author-inputs.json",
+    "git_blob": "a06ed2130eb2d1da7631b62ac60d6be6ff623b53",
+    "bytes": 11869,
+    "sha256": "f256b5c20a91e6f2189f5e5bf0695dbe72c474107c65884000f4fd3f09233f5d"
+  },
+  "original_rows": 26,
+  "available_original_rows": 24,
+  "missing_original_rows": [
+    {
+      "path": "docs/qualification/explorer-replay-selection-anvil-d3745/source-receipt.json",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/source-receipt.json",
+      "bytes": 3149,
+      "sha256": "5102489620bc7b9b884233aa284b59b0b02fd1c5c9c4bca53a6d7df12c21df86",
+      "git_blob": "1a491fa4430f99cc745a46f06a86c7c6effbbd5a",
+      "mode": "100644",
+      "role": "support"
+    },
+    {
+      "path": "docs/qualification/explorer-replay-selection-anvil-d3745/author/candidate-1.stdout",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/author/candidate-1.stdout",
+      "bytes": 2154,
+      "sha256": "5c8121cb2039827bc0dde5730dfe34ae29ba39029f780d6666f9e1bbe987e018",
+      "git_blob": "0b31d591fa1d037cda7e331d2c1eca4f8421142a",
+      "mode": "100644",
+      "role": "support"
+    }
+  ],
+  "scope": "Transport recovery and publication metadata after completed native author qualification; no product replay.",
+  "preserved_execution": {
+    "original": {
+      "supervisor_pid": 3848776,
+      "supervisor_exit": 0,
+      "node_exit": 1,
+      "passing": 3,
+      "expected_failures": 7,
+      "candidate_existed": false
+    },
+    "candidate": {
+      "supervisor_pid": 3850202,
+      "supervisor_exit": 0,
+      "syntax_exit": 0,
+      "node_exit": 0,
+      "passing": 10
+    },
+    "native": "hamon-thinkpad / jacob UID1000 / Python3.14.4 / Node22.22.1"
+  },
+  "recovery_method": [
+    "Exact original source, test, guide and staging-script bytes retained from prior authenticated reads matched the original authority's byte lengths, SHA256 and Git identities.",
+    "The original receipt JSON was recovered from its already completed tool output using its recorded timestamp and exact original formatting; the complete original Node stdout was recovered from that same output. Both match the original native size, SHA256 and Git blob.",
+    "The source diff was reconstructed only by the original executed difflib recipe over exact original/candidate bodies; its complete native byte/SHA256/Git identity matched.",
+    "Root recovered the complete candidate receipt and source-binding JSON from prior full native reads, preserving every field/timestamp; both independently rehashed against the original authority.",
+    "Known zero-byte streams remain zero bytes. Existing baseline bodies retain exact Git modes, including explorer.py100755.",
+    "The source receipt and candidate Node stdout bodies were not recovered. Their original identities remain in author-inputs.json and missing_original_rows; no replacement body or replay output is offered."
+  ],
+  "remote_route_state": "Original and alternate ThinkPad configuration/read operations timed out with no response after qualification. An attempted copy of root's unchanged review to an owned peer directory returned no PID/call_id; it has not been repeated or represented as complete. The independently received and Git-readback-verified root review is published directly.",
+  "browser_receiving": "Pending. Loom owns a separate original-first browser course; no candidate exposure before its freeze and no real-browser claim attaches to this publication.",
+  "publication": "New available-evidence/README/custody records are authored publication metadata. The source packet identifies the integration base as caller-supplied context; new selected source blobs are not claimed to belong to that baseline commit.",
+  "later_recovery": "Missing native originals and any later browser receipt may be added in a separate change without rewriting these raw records."
+}

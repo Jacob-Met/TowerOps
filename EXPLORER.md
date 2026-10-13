@@ -20,6 +20,8 @@ Other fixed cases: missing approval, acknowledgement dated after dispatch cutoff
 
 Export JSON after a run. Select that file under **Replay exported JSON**: the backend reexecutes its fixed scenario and fixture switches and compares the entire result. It accepts equivalent finite JSON numbers (1001 versus 1001.0), never boolean→number coercion. Change `after.version` in a copy and replay: MISMATCH. Malformed formats/unknown scenarios are rejected. Uploaded files are not saved or used as arbitrary engine input.
 
+The replay status belongs to the currently selected file. Selecting another export retires earlier file reads and replay responses, including their errors; clearing the input clears the status. An already-sent request may still finish, but cannot replace the newer verdict. Replay does not change the displayed scenario result or its JSON export.
+
 Replay is reproducibility under this local engine, not authenticity. The hash chain is not a signature or external custody anchor; someone can construct another valid fixed-fixture export. No replay result grants real authority.
 
 CLI (shell redirection saves real engine output):
@@ -42,6 +44,14 @@ python -m unittest -v test_explorer
 ```
 
 It exercises all eight cases × four fixture-switch combinations, exact no-actuation retention, full-export edits, JS numeric roundtrip, real HTTP run/replay, and invalid requests. No fabricated provider outputs.
+
+Focused Explorer replay-selection lifecycle tests (Node.js 20+; built-in modules only):
+
+```sh
+node tests/test_explorer_replay_selection.cjs
+```
+
+These controlled DOM/fetch tests cover superseded reads, responses, JSON bodies and errors, same-file reselection, clearing, current refusals and explicit recovery. They do not replace actual browser receiving.
 
 Optional actual browser acceptance:
 

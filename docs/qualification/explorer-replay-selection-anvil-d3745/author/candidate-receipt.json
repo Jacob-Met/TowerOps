@@ -1,0 +1,194 @@
+{
+  "schema": "hamon.anvil.towerops-replay-candidate.v1",
+  "utc": "2026-10-13T12:23:09.896046+00:00",
+  "source_base": "c7714bbe09c37ead994780af53078df11c99925b",
+  "publication_state_at_receiving": "unpublished candidate",
+  "runs": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "web/app.js"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/author/candidate-0.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/author/candidate-0.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": [
+        "node",
+        "tests/test_explorer_replay_selection.cjs"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/author/candidate-1.stdout",
+        "bytes": 2154,
+        "sha256": "5c8121cb2039827bc0dde5730dfe34ae29ba39029f780d6666f9e1bbe987e018"
+      },
+      "stderr": {
+        "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/author/candidate-1.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "source_before": [
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/EXPLORER.md",
+      "relative": "EXPLORER.md",
+      "bytes": 4966,
+      "sha256": "c89087497a6547f91218cf53dc783bce22bfe1f428faaa32cf40adacada930bc",
+      "git_blob": "00cdf262110440bc7f59eeb645835d5f269f10d8",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/explorer.py",
+      "relative": "explorer.py",
+      "bytes": 7141,
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+      "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f",
+      "mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/scenarios.py",
+      "relative": "scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/test_explorer.py",
+      "relative": "test_explorer.py",
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/tests/test_explorer_replay_selection.cjs",
+      "relative": "tests/test_explorer_replay_selection.cjs",
+      "bytes": 7996,
+      "sha256": "947c1289a71b361e144e33b260ef6a49e985c7fb2352a847ecbf0577aecc0a01",
+      "git_blob": "d8ccb564692edac407632c6dc8efa2465d8ff47f",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/towerops.py",
+      "relative": "towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/app.js",
+      "relative": "web/app.js",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/index.html",
+      "relative": "web/index.html",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/style.css",
+      "relative": "web/style.css",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb",
+      "mode": "0o644"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/EXPLORER.md",
+      "relative": "EXPLORER.md",
+      "bytes": 4966,
+      "sha256": "c89087497a6547f91218cf53dc783bce22bfe1f428faaa32cf40adacada930bc",
+      "git_blob": "00cdf262110440bc7f59eeb645835d5f269f10d8",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/explorer.py",
+      "relative": "explorer.py",
+      "bytes": 7141,
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+      "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f",
+      "mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/scenarios.py",
+      "relative": "scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/test_explorer.py",
+      "relative": "test_explorer.py",
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/tests/test_explorer_replay_selection.cjs",
+      "relative": "tests/test_explorer_replay_selection.cjs",
+      "bytes": 7996,
+      "sha256": "947c1289a71b361e144e33b260ef6a49e985c7fb2352a847ecbf0577aecc0a01",
+      "git_blob": "d8ccb564692edac407632c6dc8efa2465d8ff47f",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/towerops.py",
+      "relative": "towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/app.js",
+      "relative": "web/app.js",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/index.html",
+      "relative": "web/index.html",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/style.css",
+      "relative": "web/style.css",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb",
+      "mode": "0o644"
+    }
+  ],
+  "source_unchanged": true,
+  "baseline_preserved": true,
+  "pass": true
+}
