@@ -1,0 +1,49 @@
+{
+  "schema": "hamon.loom.towerops-installed-driver-freeze.v2",
+  "utc": "2026-10-13T18:00:54.148903+00:00",
+  "candidate_installer_body_or_spec_seen": false,
+  "driver": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v2.py",
+    "bytes": 16747,
+    "sha256": "a488fc033beaa74499e4b03883c2d4125f0557daac2d16bb01c26f73ae6f80ee",
+    "mode": "0o644"
+  },
+  "criteria": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/criteria-v1.json",
+    "bytes": 23882,
+    "sha256": "5c3835e230b9a8acc36653b5ba17b8e5bbee07b833032541e1f28229c3b5c26c",
+    "mode": "0o644"
+  },
+  "original_driver": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v1.py",
+    "bytes": 16508,
+    "sha256": "15f1422e18cfb8aa0d5dee69bb04dcdaf8e0f27222816e5af4f32ba6de942b44",
+    "mode": "0o644"
+  },
+  "original_freeze": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/driver-freeze-v1.json",
+    "bytes": 1717,
+    "sha256": "f237dbd8f101e141036db371682a36460eb277c4a79b633cee53a28e42407ee0",
+    "mode": "0o644"
+  },
+  "patch": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receiver-v1-to-v2.patch",
+    "bytes": 3286,
+    "sha256": "7f9099db6449d7fba7c537a0686b30ceb1977d554b75cbee7c87e4a2e5a09e17",
+    "mode": "0o644"
+  },
+  "reason": "Root bounded review identified an unsupported exact-release-name assumption. Anvil publicly clarified installation.json provenance lives in release mode0644, alongside eight pinned runtime/source/guide files and wrapper. V2 admits that declared manifest, verifies its mode and versions output/control references; all first-use, HTTP, closure and preservation comparisons remain. V1 is retained unexecuted.",
+  "exposure": "Installer implementation reportedly authored privately; no candidate body or identity spec exposed to Loom. Clarification is public layout only.",
+  "syntax": "compile-only accepted; neither receiver executed",
+  "planned_spec": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/candidate-spec-v1.json",
+    "installer": {
+      "path": "absolute reviewed installer path",
+      "bytes": "integer",
+      "sha256": "64 hex",
+      "mode": "native octal string"
+    }
+  },
+  "source_directory": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/source",
+  "gate": "Root accepts exact narrow correction and reviewed candidate before actual installation."
+}

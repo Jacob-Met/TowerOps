@@ -31,6 +31,15 @@ experiments for the same exact native world and review clock, showing policy
 changes and complete advisory membership/order without planning again.
 See [COMPARE_PLANS.md](COMPARE_PLANS.md) for exact identities, file limits and JSON output.
 
+## Launch the installed Synthetic Explorer on the ThinkPad
+
+The [fixed ThinkPad installation](docs/EXPLORER_INSTALL.md) provides
+`towerops-explorer --port 8765` after one explicit, reviewed adoption of the
+accepted source. Open its printed loopback address to replay a saved synthetic
+export and choose **Explain this mismatch**. The command runs in the foreground;
+Ctrl+C stops it. Existing commands and prior versions are preserved by refusal
+when the target command or TowerOps namespace is already occupied.
+
 ## Explain a saved Explorer result
 
 To see which saved fields differ from a locally reconstructed synthetic scenario,

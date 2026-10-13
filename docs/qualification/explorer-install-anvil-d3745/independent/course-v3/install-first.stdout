@@ -1,0 +1,7 @@
+{
+  "accepted_source": "c77e98e68d627c3ad75edc2d775ee8da018dbdcf",
+  "ok": true,
+  "receipt": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/installation-receipt.json",
+  "release": "/home/jacob/.local/share/towerops/explorer/c77e98e68d627c3ad75edc2d775ee8da018dbdcf",
+  "selector": "/home/jacob/.local/bin/towerops-explorer"
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "hamon.root.towerops-launcher-harness-review.v1",
+  "accepted": true,
+  "scope": "Independent harness source review only; installer source not yet exposed to root, no installation executed",
+  "driver_v1": {
+    "bytes": 16508,
+    "sha256": "15f1422e18cfb8aa0d5dee69bb04dcdaf8e0f27222816e5af4f32ba6de942b44",
+    "review": "Complete334lines read. Actual PATH launch from unrelated cwd, original exact runtime and HTTP oracles, own-process SIGINT/port closure, repeat refusal and complete source/namespace/neighbor conservation."
+  },
+  "driver_v2": {
+    "bytes": 16747,
+    "sha256": "a488fc033beaa74499e4b03883c2d4125f0557daac2d16bb01c26f73ae6f80ee",
+    "review": "Complete diff read; versioned paths preserve v1 and add only public installation.json0644 to exact release inventory. Original9-file assumption was unsupported;10-file public layout now admitted before candidate exposure."
+  },
+  "verification": {
+    "native_pid": 56122,
+    "closed_exit": 0,
+    "v1_digest_exact": true,
+    "v2_digest_exact": true,
+    "complete_diff_exact": true,
+    "criteria_sha256": "5c3835e230b9a8acc36653b5ba17b8e5bbee07b833032541e1f28229c3b5c26c"
+  },
+  "limits": "Runtime pending reviewed candidate. Receipt and namespace custody do not claim power-loss or hostile concurrent writer behavior. Browser course is not repeated."
+}

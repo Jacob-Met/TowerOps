@@ -1,0 +1,56 @@
+{
+  "schema": "hamon.anvil.explorer-install.source-authority.v1",
+  "base": "db62f253a0b0b2b8fe80a5412a2bdf38ec7c720d",
+  "base_tree": "834cd97dde6632fed687c1eed3a23c0c9d9bf692",
+  "source_allowlist": [
+    "README.md",
+    "docs/EXPLORER_INSTALL.md",
+    "tests/test_explorer_install.py",
+    "tools/install_explorer.py"
+  ],
+  "source_files": [
+    {
+      "path": "README.md",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/README.md",
+      "mode": "100644",
+      "bytes": 4997,
+      "sha256": "7af1dc26acc5359e5cbd035ef26ff1d5933082385a97893635f249af1802197c",
+      "git_blob": "bb5440aeec36a81d95d56efab11790d68bc4becb",
+      "native_mode": "0o644"
+    },
+    {
+      "path": "docs/EXPLORER_INSTALL.md",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/EXPLORER_INSTALL.md",
+      "mode": "100644",
+      "bytes": 8441,
+      "sha256": "cb684f14e458b3feb206e42a60107e0e4839043e0446c213833526bfafc39ee0",
+      "git_blob": "d9c4968ef553be17f1f33a66ccb3e43398865cda",
+      "native_mode": "0o644"
+    },
+    {
+      "path": "tests/test_explorer_install.py",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/tests/test_explorer_install.py",
+      "mode": "100644",
+      "bytes": 16331,
+      "sha256": "d35f4bf198feeff2f4d21d9699a16535d8c298fd37dc92a66370d8513c94994a",
+      "git_blob": "fadef1ffb038eb7853a445a9c8d2743221516cea",
+      "native_mode": "0o644"
+    },
+    {
+      "path": "tools/install_explorer.py",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/tools/install_explorer.py",
+      "mode": "100755",
+      "bytes": 12558,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "native_mode": "0o755"
+    }
+  ],
+  "original_packet": {
+    "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/evidence/source-packet-v1.json",
+    "bytes": 45117,
+    "sha256": "6d3b996d2a7c60002df5ed76708ad0c9d1b53cb0b924293ed1d6539db5acaed9",
+    "git_blob": "b25bcdbfbae808e97ca76b3177cb1307c816b5c2",
+    "native_mode": "0o664"
+  }
+}

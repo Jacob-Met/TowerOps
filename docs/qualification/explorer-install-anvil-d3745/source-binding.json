@@ -1,0 +1,146 @@
+{
+  "schema": "hamon.anvil.explorer-install.source-binding.v1",
+  "repository": "Jacob-Met/TowerOps",
+  "authored_base": "db62f253a0b0b2b8fe80a5412a2bdf38ec7c720d",
+  "authored_base_tree": "834cd97dde6632fed687c1eed3a23c0c9d9bf692",
+  "accepted_runtime": "c77e98e68d627c3ad75edc2d775ee8da018dbdcf",
+  "accepted_runtime_tree": "834cd97dde6632fed687c1eed3a23c0c9d9bf692",
+  "source_allowlist": [
+    "README.md",
+    "docs/EXPLORER_INSTALL.md",
+    "tests/test_explorer_install.py",
+    "tools/install_explorer.py"
+  ],
+  "product": [
+    {
+      "bytes": 4997,
+      "git_blob": "bb5440aeec36a81d95d56efab11790d68bc4becb",
+      "mode": "0o644",
+      "path": "README.md",
+      "sha256": "7af1dc26acc5359e5cbd035ef26ff1d5933082385a97893635f249af1802197c",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/README.md"
+    },
+    {
+      "bytes": 8441,
+      "git_blob": "d9c4968ef553be17f1f33a66ccb3e43398865cda",
+      "mode": "0o644",
+      "path": "docs/EXPLORER_INSTALL.md",
+      "sha256": "cb684f14e458b3feb206e42a60107e0e4839043e0446c213833526bfafc39ee0",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/EXPLORER_INSTALL.md"
+    },
+    {
+      "bytes": 16331,
+      "git_blob": "fadef1ffb038eb7853a445a9c8d2743221516cea",
+      "mode": "0o644",
+      "path": "tests/test_explorer_install.py",
+      "sha256": "d35f4bf198feeff2f4d21d9699a16535d8c298fd37dc92a66370d8513c94994a",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/tests/test_explorer_install.py"
+    },
+    {
+      "bytes": 12558,
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "mode": "0o755",
+      "path": "tools/install_explorer.py",
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/tools/install_explorer.py"
+    }
+  ],
+  "accepted_runtime_support": [
+    {
+      "bytes": 9288,
+      "git_blob": "3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66",
+      "mode": "0o644",
+      "path": "docs/qualification/explorer-install-anvil-d3745/accepted-source/EXPLORER.md",
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/qualification/explorer-install-anvil-d3745/accepted-source/EXPLORER.md"
+    },
+    {
+      "bytes": 7604,
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "mode": "0o755",
+      "path": "docs/qualification/explorer-install-anvil-d3745/accepted-source/explorer.py",
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/qualification/explorer-install-anvil-d3745/accepted-source/explorer.py"
+    },
+    {
+      "bytes": 5432,
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": "0o644",
+      "path": "docs/qualification/explorer-install-anvil-d3745/accepted-source/replay_explain.py",
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/qualification/explorer-install-anvil-d3745/accepted-source/replay_explain.py"
+    },
+    {
+      "bytes": 5989,
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": "0o644",
+      "path": "docs/qualification/explorer-install-anvil-d3745/accepted-source/scenarios.py",
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/qualification/explorer-install-anvil-d3745/accepted-source/scenarios.py"
+    },
+    {
+      "bytes": 19684,
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": "0o644",
+      "path": "docs/qualification/explorer-install-anvil-d3745/accepted-source/towerops.py",
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/qualification/explorer-install-anvil-d3745/accepted-source/towerops.py"
+    },
+    {
+      "bytes": 9430,
+      "git_blob": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "mode": "0o644",
+      "path": "docs/qualification/explorer-install-anvil-d3745/accepted-source/web/app.js",
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/qualification/explorer-install-anvil-d3745/accepted-source/web/app.js"
+    },
+    {
+      "bytes": 3934,
+      "git_blob": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "mode": "0o644",
+      "path": "docs/qualification/explorer-install-anvil-d3745/accepted-source/web/index.html",
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/qualification/explorer-install-anvil-d3745/accepted-source/web/index.html"
+    },
+    {
+      "bytes": 2566,
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mode": "0o644",
+      "path": "docs/qualification/explorer-install-anvil-d3745/accepted-source/web/style.css",
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-install/candidate/docs/qualification/explorer-install-anvil-d3745/accepted-source/web/style.css"
+    }
+  ],
+  "author_execution": {
+    "receipt": "author/author-v1/receipt.json",
+    "bytes": 19326,
+    "sha256": "6bbe32d4727929c667304e15692eeb4523345d968845b9f8fa7163be3a78de1e",
+    "normal_methods": 13,
+    "optimized_methods": 13,
+    "live_adoption": false,
+    "source_unchanged": true
+  },
+  "source_state_at_author_execution": "Frozen unpublished candidate; later source publication and actual adoption remain separate facts.",
+  "limits": [
+    "Runtime/guide eight-file projection is copied unchanged from accepted c77 source, not the changing latest checkout.",
+    "Four product paths only; no engine/web/runtime behavior or inherited workflow changes.",
+    "Independent actual receiving preserves its own original descriptor, admission chronology and raw outcomes under independent/.",
+    "Temporary author controls do not establish actual installed PATH/HTTP adoption, power-loss atomicity, hostile-directory safety, or an upgrade/rollback facility.",
+    "Source and evidence authorizations are explicit original inputs; the proposed Git tree does not define allowed paths."
+  ],
+  "metadata_authority": "Byte counts, SHA256, Git IDs and modes are publication identities. Exact native inode/nanosecond values remain solely in the unchanged raw author receipt; the historical source-freeze-v1 projection passed through a JavaScript numeric parser and is not a nanosecond-stat authority.",
+  "independent_execution": {
+    "receipt": "independent/course-v3/receipt.json",
+    "bytes": 128367,
+    "sha256": "128b03c2159099a7928289f85b07adfd4c247ffcc5fcee4cb40e24cc677ab928",
+    "checks": 119,
+    "installer_invocations": 2,
+    "first_install_exit": 0,
+    "repeat_exit": 2,
+    "path_server_exit": 0,
+    "http_requests": 6,
+    "preserved_inputs": 25,
+    "source_state": "Same frozen unpublished installer and exact c77 runtime; actual adoption precedes later source publication.",
+    "review": "independent-receiving-review.json"
+  }
+}

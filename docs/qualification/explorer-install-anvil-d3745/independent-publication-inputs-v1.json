@@ -1,0 +1,309 @@
+{
+  "files": [
+    {
+      "bytes": 23882,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "criteria-v1.json",
+      "sha256": "5c3835e230b9a8acc36653b5ba17b8e5bbee07b833032541e1f28229c3b5c26c",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/criteria-v1.json"
+    },
+    {
+      "bytes": 402,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "criteria-freeze-v1.json",
+      "sha256": "4c75ceb46ca2d2916f7e93cce0e674e6b3db5deff1b114afd1b3f69b00d1ad13",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/criteria-freeze-v1.json"
+    },
+    {
+      "bytes": 6973,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "original-stage.json",
+      "sha256": "e3cacb8855a418039bd57b4f9a438a776dcc5a17ff78078589971bde19a97e5b",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/original-stage.json"
+    },
+    {
+      "bytes": 16508,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "receive-install-v1.py",
+      "sha256": "15f1422e18cfb8aa0d5dee69bb04dcdaf8e0f27222816e5af4f32ba6de942b44",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v1.py"
+    },
+    {
+      "bytes": 1717,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "driver-freeze-v1.json",
+      "sha256": "f237dbd8f101e141036db371682a36460eb277c4a79b633cee53a28e42407ee0",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/driver-freeze-v1.json"
+    },
+    {
+      "bytes": 16747,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "receive-install-v2.py",
+      "sha256": "a488fc033beaa74499e4b03883c2d4125f0557daac2d16bb01c26f73ae6f80ee",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v2.py"
+    },
+    {
+      "bytes": 2462,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "driver-freeze-v2.json",
+      "sha256": "7bd1eebd277b4f0cecbcb98d338963cab4515876d057285a2e01a196b2628fd2",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/driver-freeze-v2.json"
+    },
+    {
+      "bytes": 3286,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "receiver-v1-to-v2.patch",
+      "sha256": "7f9099db6449d7fba7c537a0686b30ceb1977d554b75cbee7c87e4a2e5a09e17",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receiver-v1-to-v2.patch"
+    },
+    {
+      "bytes": 1830,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "candidate-spec-v1.json",
+      "sha256": "5e4d5902676fbf922feea46fc1ba7da2d55a57312569586f57946bdfa8450ad5",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/candidate-spec-v1.json"
+    },
+    {
+      "bytes": 17262,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "receive-install-v3.py",
+      "sha256": "5dc6ce13f7a58e04b098e4c43db9cbdf63081e454be715e5152d28e5f40a3d77",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receive-install-v3.py"
+    },
+    {
+      "bytes": 2473,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "driver-freeze-v3.json",
+      "sha256": "2bc6a3b98f0e60026ac605d70ec283afdaff24aba850d6028057a396c82009bb",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/driver-freeze-v3.json"
+    },
+    {
+      "bytes": 3551,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "receiver-v2-to-v3.patch",
+      "sha256": "46d985fd155e2397d17d81cde9b59081fa1959d338f215202d930681ab6570c3",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/receiver-v2-to-v3.patch"
+    },
+    {
+      "bytes": 2112,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "admission-failure-v2.json",
+      "sha256": "bf3557d253b00d1fdbfa227fc6a4dc570f3431f1b3783469ad4aa8948e5dbc03",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/admission-failure-v2.json"
+    },
+    {
+      "bytes": 1698,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "admission-v2-environment-audit.json",
+      "sha256": "438615002311d8a1cb11c769aa7689cd3967ad23267ba4490d78d36d32082183",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/admission-v2-environment-audit.json"
+    },
+    {
+      "bytes": 2089,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "route-continuity-v1.json",
+      "sha256": "7ce61ea62645e9d83f50d4434cb0c8d0d021846de28223f31fae1f48d32f3eb5",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/route-continuity-v1.json"
+    },
+    {
+      "bytes": 128367,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/receipt.json",
+      "sha256": "128b03c2159099a7928289f85b07adfd4c247ffcc5fcee4cb40e24cc677ab928",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/receipt.json"
+    },
+    {
+      "bytes": 9353,
+      "mode": "100644",
+      "native_mode": "0o600",
+      "path": "course-v3/installation-receipt.json",
+      "sha256": "eeb04340da98a8542d973eaf0dc2f6462c37a818f96ddab98d78eccdad436576",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/installation-receipt.json"
+    },
+    {
+      "bytes": 348,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/install-first.stdout",
+      "sha256": "c5ed7379a2ab6272309427cbcbcfea0807350693e2410f2d09c20bff3b2a1200",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/install-first.stdout"
+    },
+    {
+      "bytes": 0,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/install-first.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/install-first.stderr"
+    },
+    {
+      "bytes": 0,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/install-repeat.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/install-repeat.stdout"
+    },
+    {
+      "bytes": 702,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/install-repeat.stderr",
+      "sha256": "ec3299d84ab5018327fa2fee681ceed78e06b15f57cfc4e19d15768828688461",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/install-repeat.stderr"
+    },
+    {
+      "bytes": 198,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/server.stdout",
+      "sha256": "7ae4e956e1890e0ca844b2e01a6e29fca41f7d05a75b72f4d4e14d1e3b7d2ac8",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/server.stdout"
+    },
+    {
+      "bytes": 413,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/server.stderr",
+      "sha256": "0f185431967c62a5750fe86f986713dee6a800b053ac9eb4f31285377d08202a",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/server.stderr"
+    },
+    {
+      "bytes": 0,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/static-index.request",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/static-index.request"
+    },
+    {
+      "bytes": 3934,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/static-index.response",
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/static-index.response"
+    },
+    {
+      "bytes": 0,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/static-app.request",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/static-app.request"
+    },
+    {
+      "bytes": 9430,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/static-app.response",
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/static-app.response"
+    },
+    {
+      "bytes": 0,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/static-style.request",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/static-style.request"
+    },
+    {
+      "bytes": 2566,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/static-style.response",
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/static-style.response"
+    },
+    {
+      "bytes": 66,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/prior-oracle-1.request",
+      "sha256": "039f014e76f5d8f32d8a213555100b738e68cca0ccf24a2819150a6205892473",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/prior-oracle-1.request"
+    },
+    {
+      "bytes": 4753,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/prior-oracle-1.response",
+      "sha256": "ed152653da5e9d9d0989f05a206ce883e55891426c654135836cf23fafa4cefc",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/prior-oracle-1.response"
+    },
+    {
+      "bytes": 4474,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/prior-oracle-2.request",
+      "sha256": "7aeb41e2cd876e3ed73c00ebec58d65191303ced9d01ccf6e86d230a9ae8a98f",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/prior-oracle-2.request"
+    },
+    {
+      "bytes": 289,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/prior-oracle-2.response",
+      "sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/prior-oracle-2.response"
+    },
+    {
+      "bytes": 4474,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/prior-oracle-3.request",
+      "sha256": "7aeb41e2cd876e3ed73c00ebec58d65191303ced9d01ccf6e86d230a9ae8a98f",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/prior-oracle-3.request"
+    },
+    {
+      "bytes": 991,
+      "mode": "100644",
+      "native_mode": "0o664",
+      "path": "course-v3/prior-oracle-3.response",
+      "sha256": "da199b386bf9838a9a777fdbb41a2199d998bfdd20530154f67f14c8e191694c",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/course-v3/prior-oracle-3.response"
+    },
+    {
+      "bytes": 11487,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "consumer-custody.json",
+      "sha256": "c0586923f03b2e5c9c81dba28590f98f2356ba5ba56ee5c62ced03bed30f110b",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/consumer-custody.json"
+    },
+    {
+      "bytes": 6600,
+      "mode": "100644",
+      "native_mode": "0o644",
+      "path": "README.md",
+      "sha256": "b6cbe5d941df4e06c1e5c0ce59e615ea82433a846ba1b20a6f41b309a58c7217",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-install/README.md"
+    }
+  ],
+  "notes": [
+    "Original immutable authored descriptor. Each relative path is appended to prefix. source_path is the retained native authority.",
+    "All regular evidence is Git mode 100644; native_mode records original permissions without changing any source evidence.",
+    "Product installer and eight runtime files are author source and excluded. Root source/harness reviews and Anvil receiving review are separate support.",
+    "V1 unexecuted; v2 failed before product execution; v3 correction after exposure and verified route continuity are preserved. Actual course 119 comparisons, six HTTP requests; no replay during sealing.",
+    "No repeat-receipt.json was created by the refused repeated installation; exact absence and process streams retained."
+  ],
+  "prefix": "docs/qualification/explorer-install-anvil-d3745/independent/",
+  "schema": "hamon.loom.towerops-installed-explorer-publication-inputs.v1"
+}

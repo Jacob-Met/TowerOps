@@ -1,0 +1,18 @@
+test_actual_main_success_and_argument_host_refusals (test_explorer_install.ExplorerInstallTests.test_actual_main_success_and_argument_host_refusals) ... ok
+test_install_exact_files_manifest_wrapper_and_repeat_refusal (test_explorer_install.ExplorerInstallTests.test_install_exact_files_manifest_wrapper_and_repeat_refusal) ... ok
+test_late_receipt_failure_reports_published_selector_without_rollback (test_explorer_install.ExplorerInstallTests.test_late_receipt_failure_reports_published_selector_without_rollback) ... ok
+test_missing_linked_hardlinked_and_fifo_sources_refuse (test_explorer_install.ExplorerInstallTests.test_missing_linked_hardlinked_and_fifo_sources_refuse) ... ok
+test_namespace_sync_failure_retains_partial_receipt_without_selector (test_explorer_install.ExplorerInstallTests.test_namespace_sync_failure_retains_partial_receipt_without_selector) ... ok
+test_occupied_namespace_variants_preserve_everything (test_explorer_install.ExplorerInstallTests.test_occupied_namespace_variants_preserve_everything) ... ok
+test_occupied_selector_variants_preserve_everything (test_explorer_install.ExplorerInstallTests.test_occupied_selector_variants_preserve_everything) ... ok
+test_real_bounded_file_write_failure_keeps_partial_version_and_no_selector (test_explorer_install.ExplorerInstallTests.test_real_bounded_file_write_failure_keeps_partial_version_and_no_selector) ... ok
+test_real_stdout_failure_leaves_inspectable_successful_installation (test_explorer_install.ExplorerInstallTests.test_real_stdout_failure_leaves_inspectable_successful_installation) ... ok
+test_selector_collision_is_never_replaced (test_explorer_install.ExplorerInstallTests.test_selector_collision_is_never_replaced) ... ok
+test_source_change_after_capture_cannot_publish_selector (test_explorer_install.ExplorerInstallTests.test_source_change_after_capture_cannot_publish_selector) ... ok
+test_symlink_ancestry_and_receipt_placement_refuse_before_writes (test_explorer_install.ExplorerInstallTests.test_symlink_ancestry_and_receipt_placement_refuse_before_writes) ... ok
+test_wrong_source_refuses_without_writes_then_explicit_correction (test_explorer_install.ExplorerInstallTests.test_wrong_source_refuses_without_writes_then_explicit_correction) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.588s
+
+OK

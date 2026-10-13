@@ -1,0 +1,11 @@
+{
+  "schema": "hamon.root.towerops-installed-explorer-criteria-freeze.v1",
+  "utc": "2026-10-13T17:32:40.175880+00:00",
+  "criteria": {
+    "path": "/home/jacob/hamon/receiving/root-d3745-towerops-install/criteria-v1.json",
+    "bytes": 23882,
+    "sha256": "5c3835e230b9a8acc36653b5ba17b8e5bbee07b833032541e1f28229c3b5c26c"
+  },
+  "candidate_body_seen": false,
+  "complete_http_oracles_verified": 3
+}
