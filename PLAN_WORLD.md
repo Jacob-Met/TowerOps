@@ -88,7 +88,9 @@ The report always records all seven actual policy fields:
 | Fixed native default | `max_climb_ft_min` | 3000.0 feet/minute |
 
 Clock and policy arguments use JSON numeric syntax. Booleans, null, strings and
-non-finite values are refused. The Python API also exposes
+non-finite values are refused. Nested JSON shapes, including inputs that exceed
+the decoder's nesting limit, are ordinary argument errors (exit 2) before the
+world is read or reviewed. The Python API also exposes
 `review_world(raw_bytes, now=None, policy=None)` for a caller-supplied native
 `SafetyPolicy`; `None` selects the same default clock or policy.
 

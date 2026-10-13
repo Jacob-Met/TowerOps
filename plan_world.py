@@ -137,7 +137,7 @@ def review_world(
 def _argument_number(value: str) -> int | float:
     try:
         return _number(json.loads(value, parse_constant=_reject_constant), "argument")
-    except (ValueError, TypeError) as exc:
+    except (ValueError, TypeError, RecursionError) as exc:
         raise argparse.ArgumentTypeError(str(exc)) from exc
 
 
