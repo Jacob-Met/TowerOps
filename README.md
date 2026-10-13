@@ -31,6 +31,24 @@ experiments for the same exact native world and review clock, showing policy
 changes and complete advisory membership/order without planning again.
 See [COMPARE_PLANS.md](COMPARE_PLANS.md) for exact identities, file limits and JSON output.
 
+## Review a saved audit trace from the terminal
+
+The audit checker reviews a saved hash chain, recorded lifecycle and world links
+without changing the trace or applying an advisory:
+
+```bash
+python3 audit_replay.py trace.json
+python3 audit_replay.py - < trace.json
+python3 audit_replay.py --help
+```
+
+A completed review emits a JSON summary; `--help` prints usage and exits 0.
+For a review, exit 0 means no findings, exit 1 means findings, and exit 2 means
+invalid arguments or an input, review or output error.
+Supply one source at most; omit it or use `-` for stdin.
+See [AUDIT_REPLAY.md](AUDIT_REPLAY.md) for accepted trace formats,
+dash-prefixed filenames, output-failure behavior and the limits of the review.
+
 ## Verify
 
 From the repository root:
