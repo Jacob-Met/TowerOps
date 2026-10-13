@@ -1,0 +1,321 @@
+{
+  "scope": "Named-file admission for TowerOps saved-world CLI; no Actions or installed-consumer claim",
+  "issue": "https://github.com/Jacob-Met/TowerOps/issues/106",
+  "parent_commit": "b893a67a9d0db4227ae7417ecf083b6ed49dfe41",
+  "parent_tree": "8a732d5c44163fb394a5f83fa733bf99a9b41605",
+  "original_source_manifest": {
+    "plan_world.py": {
+      "git_blob": "8e826a10cc2f9425de26727dce07851497174bba",
+      "sha256": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e",
+      "bytes": 8119
+    },
+    "towerops.py": {
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "bytes": 19684
+    },
+    "advisory_options.py": {
+      "git_blob": "2cb3bb564559fb2fa2b20d9a215b4cb99badecbd",
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+      "bytes": 2380
+    },
+    "PLAN_WORLD.md": {
+      "git_blob": "4b73b0ff02748528ed698118e034c79ef517f9be",
+      "sha256": "e081823cb1b43aa458a25590d63785ee7b12b26d67bae53e70d20ad43505d3e7",
+      "bytes": 7722
+    },
+    "tests/test_plan_world.py": {
+      "git_blob": "8ea1e3f8ea138f9b5b8b42fdadba2bc147c0db6f",
+      "sha256": "4217c6de94844cdbcd135ee2ae21305b665176bc0d99a32900acb51219c54ca4",
+      "bytes": 16361
+    }
+  },
+  "source_review": {
+    "preserved_functions": [
+      "_number",
+      "_unique_object",
+      "_reject_constant",
+      "parse_world",
+      "_check_policy",
+      "review_world",
+      "_argument_number"
+    ],
+    "production_inverse_exact": true,
+    "ordinary_results_exact": [
+      "regular",
+      "regular_symlink",
+      "stdin",
+      "malformed",
+      "native_stale",
+      "oversized"
+    ],
+    "repair_cases": [
+      "fifo",
+      "fifo_symlink"
+    ],
+    "candidate_sha256": "e688539341b2129a0ab7c7f66698fb733d3661e975107ff5f3879f9f9d357fed"
+  },
+  "author_witness_source": "import hashlib\nimport json\nimport os\nimport pathlib\nimport subprocess\nimport sys\nimport tempfile\n\nsource = pathlib.Path(sys.argv[1]).resolve()\ndestination = pathlib.Path(sys.argv[2]).resolve()\nraw = b'{\"version\":7,\"observed_at\":120.0,\"aircraft\":[{\"aircraft_id\":\"EAST\",\"x_nm\":-8.0,\"y_nm\":1.0,\"altitude_ft\":12000.0,\"vx_nm_min\":2.0,\"vy_nm_min\":0.0,\"climb_ft_min\":0.0},{\"aircraft_id\":\"WEST\",\"x_nm\":8.0,\"y_nm\":1.0,\"altitude_ft\":12000.0,\"vx_nm_min\":-2.0,\"vy_nm_min\":0.0,\"climb_ft_min\":0.0}]}\\n'\nenv = {**os.environ, \"PYTHONDONTWRITEBYTECODE\": \"1\"}\nresults = {}\nwith tempfile.TemporaryDirectory(prefix=\"file-witness-\", dir=destination.parent) as directory:\n    root = pathlib.Path(directory)\n    world = root / \"world \u03a9.json\"\n    world.write_bytes(raw)\n    regular_link = root / \"world-link.json\"\n    regular_link.symlink_to(world.name)\n    fifo = root / \"waiting.fifo\"\n    os.mkfifo(fifo)\n    fifo_link = root / \"fifo-link\"\n    fifo_link.symlink_to(fifo.name)\n    oversized = root / \"oversized.json\"\n    with oversized.open(\"wb\") as output:\n        output.write(raw)\n        output.truncate(262145)\n    cases = {\n        \"regular\": ([str(world)], None),\n        \"regular_symlink\": ([str(regular_link)], None),\n        \"stdin\": ([\"-\"], raw),\n        \"malformed\": ([\"-\"], b\"{broken}\"),\n        \"native_stale\": ([str(world), \"--now\", \"131\"], None),\n        \"oversized\": ([str(oversized)], None),\n        \"directory\": ([str(root)], None),\n        \"fifo\": ([str(fifo)], None),\n        \"fifo_symlink\": ([str(fifo_link)], None),\n        \"character_device\": ([\"/dev/null\"], None),\n    }\n    for label, (arguments, input_bytes) in cases.items():\n        command = [sys.executable, \"-B\", str(source / \"plan_world.py\"), *arguments]\n        try:\n            process = subprocess.run(command, input=input_bytes, capture_output=True,\n                                     timeout=2, check=False, env=env, cwd=root)\n        except subprocess.TimeoutExpired as error:\n            results[label] = {\"outcome\": \"timeout\", \"limit_seconds\": 2,\n                              \"stdout\": (error.stdout or b\"\").decode(),\n                              \"stderr\": (error.stderr or b\"\").decode()}\n        else:\n            results[label] = {\"outcome\": \"completed\", \"returncode\": process.returncode,\n                              \"stdout_bytes\": len(process.stdout),\n                              \"stdout_sha256\": hashlib.sha256(process.stdout).hexdigest(),\n                              \"stderr\": process.stderr.decode()}\n            if process.returncode == 0:\n                report = json.loads(process.stdout)\n                results[label].update({\"status\": report[\"status\"],\n                                       \"candidate_count\": report[\"candidate_count\"],\n                                       \"advisory_count\": len(report[\"advisories\"]),\n                                       \"input_sha256\": report[\"input_sha256\"]})\n    assert world.read_bytes() == raw\n    results[\"input_unchanged\"] = True\nreceipt = {\"source\": str(source), \"python\": sys.version,\n           \"source_sha256\": {name: hashlib.sha256((source / name).read_bytes()).hexdigest()\n                             for name in (\"plan_world.py\", \"towerops.py\", \"advisory_options.py\")},\n           \"results\": results}\ndestination.write_text(json.dumps(receipt, indent=2) + \"\\n\")\nprint(json.dumps(receipt, indent=2))\n",
+  "author_original": {
+    "source": "/dev/shm/hamon-a332a613a308/product/original",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "source_sha256": {
+      "plan_world.py": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e",
+      "towerops.py": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    "results": {
+      "regular": {
+        "outcome": "completed",
+        "returncode": 0,
+        "stdout_bytes": 29377,
+        "stdout_sha256": "721eb6b524a349008c97443ae272caac122c52b9d051d26407939a157e749ba4",
+        "stderr": "",
+        "status": "options_available",
+        "candidate_count": 74,
+        "advisory_count": 66,
+        "input_sha256": "dbe9c3f3a2a864d461e5e6d5cb7772ef0f6b9be4944dfd9c33aedde74e2d2520"
+      },
+      "regular_symlink": {
+        "outcome": "completed",
+        "returncode": 0,
+        "stdout_bytes": 29377,
+        "stdout_sha256": "721eb6b524a349008c97443ae272caac122c52b9d051d26407939a157e749ba4",
+        "stderr": "",
+        "status": "options_available",
+        "candidate_count": 74,
+        "advisory_count": 66,
+        "input_sha256": "dbe9c3f3a2a864d461e5e6d5cb7772ef0f6b9be4944dfd9c33aedde74e2d2520"
+      },
+      "stdin": {
+        "outcome": "completed",
+        "returncode": 0,
+        "stdout_bytes": 29377,
+        "stdout_sha256": "721eb6b524a349008c97443ae272caac122c52b9d051d26407939a157e749ba4",
+        "stderr": "",
+        "status": "options_available",
+        "candidate_count": 74,
+        "advisory_count": 66,
+        "input_sha256": "dbe9c3f3a2a864d461e5e6d5cb7772ef0f6b9be4944dfd9c33aedde74e2d2520"
+      },
+      "malformed": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n"
+      },
+      "native_stale": {
+        "outcome": "completed",
+        "returncode": 1,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: native review refused: stale_state\n"
+      },
+      "oversized": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: World input exceeds 262144 bytes.\n"
+      },
+      "directory": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: [Errno 21] Is a directory: '/dev/shm/hamon-a332a613a308/product/file-witness-r3xng2c9'\n"
+      },
+      "fifo": {
+        "outcome": "timeout",
+        "limit_seconds": 2,
+        "stdout": "",
+        "stderr": ""
+      },
+      "fifo_symlink": {
+        "outcome": "timeout",
+        "limit_seconds": 2,
+        "stdout": "",
+        "stderr": ""
+      },
+      "character_device": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: Expecting value: line 1 column 1 (char 0)\n"
+      },
+      "input_unchanged": true
+    }
+  },
+  "author_candidate": {
+    "source": "/dev/shm/hamon-a332a613a308/product/candidate",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "source_sha256": {
+      "plan_world.py": "e688539341b2129a0ab7c7f66698fb733d3661e975107ff5f3879f9f9d357fed",
+      "towerops.py": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6"
+    },
+    "results": {
+      "regular": {
+        "outcome": "completed",
+        "returncode": 0,
+        "stdout_bytes": 29377,
+        "stdout_sha256": "721eb6b524a349008c97443ae272caac122c52b9d051d26407939a157e749ba4",
+        "stderr": "",
+        "status": "options_available",
+        "candidate_count": 74,
+        "advisory_count": 66,
+        "input_sha256": "dbe9c3f3a2a864d461e5e6d5cb7772ef0f6b9be4944dfd9c33aedde74e2d2520"
+      },
+      "regular_symlink": {
+        "outcome": "completed",
+        "returncode": 0,
+        "stdout_bytes": 29377,
+        "stdout_sha256": "721eb6b524a349008c97443ae272caac122c52b9d051d26407939a157e749ba4",
+        "stderr": "",
+        "status": "options_available",
+        "candidate_count": 74,
+        "advisory_count": 66,
+        "input_sha256": "dbe9c3f3a2a864d461e5e6d5cb7772ef0f6b9be4944dfd9c33aedde74e2d2520"
+      },
+      "stdin": {
+        "outcome": "completed",
+        "returncode": 0,
+        "stdout_bytes": 29377,
+        "stdout_sha256": "721eb6b524a349008c97443ae272caac122c52b9d051d26407939a157e749ba4",
+        "stderr": "",
+        "status": "options_available",
+        "candidate_count": 74,
+        "advisory_count": 66,
+        "input_sha256": "dbe9c3f3a2a864d461e5e6d5cb7772ef0f6b9be4944dfd9c33aedde74e2d2520"
+      },
+      "malformed": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n"
+      },
+      "native_stale": {
+        "outcome": "completed",
+        "returncode": 1,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: native review refused: stale_state\n"
+      },
+      "oversized": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: World input exceeds 262144 bytes.\n"
+      },
+      "directory": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: World input path must resolve to a regular file.\n"
+      },
+      "fifo": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: World input path must resolve to a regular file.\n"
+      },
+      "fifo_symlink": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: World input path must resolve to a regular file.\n"
+      },
+      "character_device": {
+        "outcome": "completed",
+        "returncode": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "error: cannot review world: World input path must resolve to a regular file.\n"
+      },
+      "input_unchanged": true
+    }
+  },
+  "focused_test_command": "TMPDIR=/dev/shm/hamon-a332a613a308/tmp PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s tests -p 'test_plan_world*.py' -v",
+  "focused_test_output": "test_explicit_policy_and_clock_match_the_native_review (test_plan_world.WorldPlanProcessReceiving.test_explicit_policy_and_clock_match_the_native_review) ... ok\ntest_file_and_stdin_outputs_are_exact_and_input_is_unchanged (test_plan_world.WorldPlanProcessReceiving.test_file_and_stdin_outputs_are_exact_and_input_is_unchanged) ... ok\ntest_help_argument_and_policy_refusals_precede_file_access (test_plan_world.WorldPlanProcessReceiving.test_help_argument_and_policy_refusals_precede_file_access) ... ok\ntest_native_freshness_refusals_have_exit_one_and_no_report (test_plan_world.WorldPlanProcessReceiving.test_native_freshness_refusals_have_exit_one_and_no_report) ... ok\ntest_no_conflict_and_no_option_are_successful_completed_reviews (test_plan_world.WorldPlanProcessReceiving.test_no_conflict_and_no_option_are_successful_completed_reviews) ... ok\ntest_output_io_failure_does_not_claim_a_successful_review (test_plan_world.WorldPlanProcessReceiving.test_output_io_failure_does_not_claim_a_successful_review) ... ok\ntest_oversized_file_and_stdin_are_refused_without_source_changes (test_plan_world.WorldPlanProcessReceiving.test_oversized_file_and_stdin_are_refused_without_source_changes) ... ok\ntest_unreadable_and_malformed_inputs_have_exit_two_and_no_report (test_plan_world.WorldPlanProcessReceiving.test_unreadable_and_malformed_inputs_have_exit_two_and_no_report) ... ok\ntest_complete_native_menu_order_bodies_and_hashes_are_retained (test_plan_world.WorldPlanReceiving.test_complete_native_menu_order_bodies_and_hashes_are_retained) ... ok\ntest_complete_world_and_aircraft_shapes_are_required (test_plan_world.WorldPlanReceiving.test_complete_world_and_aircraft_shapes_are_required) ... ok\ntest_conflicted_world_without_an_admitted_option_is_distinct (test_plan_world.WorldPlanReceiving.test_conflicted_world_without_an_admitted_option_is_distinct) ... ok\ntest_duplicate_fields_and_duplicate_native_ids_are_refused (test_plan_world.WorldPlanReceiving.test_duplicate_fields_and_duplicate_native_ids_are_refused) ... ok\ntest_empty_singleton_and_separated_worlds_need_no_advisory (test_plan_world.WorldPlanReceiving.test_empty_singleton_and_separated_worlds_need_no_advisory) ... ok\ntest_exact_byte_limit_retains_original_byte_identity (test_plan_world.WorldPlanReceiving.test_exact_byte_limit_retains_original_byte_identity) ... ok\ntest_identity_and_aircraft_count_limits_are_checked (test_plan_world.WorldPlanReceiving.test_identity_and_aircraft_count_limits_are_checked) ... ok\ntest_malformed_text_and_depth_are_refused_without_repair (test_plan_world.WorldPlanReceiving.test_malformed_text_and_depth_are_refused_without_repair) ... ok\ntest_native_case_numeric_types_and_negative_zero_are_not_normalized (test_plan_world.WorldPlanReceiving.test_native_case_numeric_types_and_negative_zero_are_not_normalized) ... ok\ntest_nonfinite_coerced_and_unsupported_numbers_are_refused (test_plan_world.WorldPlanReceiving.test_nonfinite_coerced_and_unsupported_numbers_are_refused) ... ok\ntest_policy_and_review_clock_use_the_original_native_gate (test_plan_world.WorldPlanReceiving.test_policy_and_review_clock_use_the_original_native_gate) ... ok\ntest_stale_future_and_exact_freshness_boundary_keep_native_reasons (test_plan_world.WorldPlanReceiving.test_stale_future_and_exact_freshness_boundary_keep_native_reasons) ... ok\ntest_supported_numeric_boundary_and_policy_range_are_explicit (test_plan_world.WorldPlanReceiving.test_supported_numeric_boundary_and_policy_range_are_explicit) ... ok\ntest_version_is_a_bounded_json_integer (test_plan_world.WorldPlanReceiving.test_version_is_a_bounded_json_integer) ... ok\ntest_a_literal_dash_filename_remains_distinct_from_stdin (test_plan_world_file_input.WorldFileInput.test_a_literal_dash_filename_remains_distinct_from_stdin) ... ok\ntest_a_path_replaced_with_a_fifo_after_preflight_cannot_block_open (test_plan_world_file_input.WorldFileInput.test_a_path_replaced_with_a_fifo_after_preflight_cannot_block_open) ... ok\ntest_character_device_is_refused_as_a_path (test_plan_world_file_input.WorldFileInput.test_character_device_is_refused_as_a_path) ... ok\ntest_directory_and_missing_paths_refuse_without_a_report (test_plan_world_file_input.WorldFileInput.test_directory_and_missing_paths_refuse_without_a_report) ... ok\ntest_exact_limit_is_admitted_and_oversize_refuses (test_plan_world_file_input.WorldFileInput.test_exact_limit_is_admitted_and_oversize_refuses) ... ok\ntest_fifo_and_fifo_symlink_refuse_without_waiting_for_a_writer (test_plan_world_file_input.WorldFileInput.test_fifo_and_fifo_symlink_refuse_without_waiting_for_a_writer) ... ok\ntest_malformed_file_and_native_gate_keep_their_exit_contracts (test_plan_world_file_input.WorldFileInput.test_malformed_file_and_native_gate_keep_their_exit_contracts) ... ok\ntest_oversize_is_refused_before_reading_the_opened_file (test_plan_world_file_input.WorldFileInput.test_oversize_is_refused_before_reading_the_opened_file) ... ok\ntest_regular_file_and_stdin_retain_exact_output_and_input (test_plan_world_file_input.WorldFileInput.test_regular_file_and_stdin_retain_exact_output_and_input) ... ok\ntest_regular_file_symlink_remains_supported_and_untouched (test_plan_world_file_input.WorldFileInput.test_regular_file_symlink_remains_supported_and_untouched) ... ok\n\n----------------------------------------------------------------------\nRan 32 tests in 3.072s\n\nOK\n",
+  "lint": {
+    "version": "ruff 0.16.10",
+    "command": "ruff check --no-cache plan_world.py tests/test_plan_world_file_input.py",
+    "exit": 0,
+    "stdout": "All checks passed!"
+  },
+  "independent_review": {
+    "reviewer": "integration worker a332a613a308",
+    "source": "candidate source inspected independently against original; Linux Python 3.12.14",
+    "verdict": "approve",
+    "findings": [],
+    "scope": "named regular-file admission only; no live aviation or installed-runtime qualification",
+    "files": {
+      "plan_world.py": "e688539341b2129a0ab7c7f66698fb733d3661e975107ff5f3879f9f9d357fed",
+      "PLAN_WORLD.md": "d7fe426a98d97d8055851ae9248f125d43af2f1a93632303b38d2dea3b36b0a9",
+      "tests/test_plan_world_file_input.py": "b79a5f7433cd49a965ac9f19d65879226855dcf162ca349b5f040db6d073c6c8"
+    },
+    "observations": [
+      {
+        "optimized": false,
+        "case": "regular/symlink/stdin parity",
+        "passed": true
+      },
+      {
+        "optimized": false,
+        "case": "baseline FIFO",
+        "outcome": "timeout; subprocess killed and reaped"
+      },
+      {
+        "optimized": false,
+        "case": "candidate FIFO",
+        "passed": true
+      },
+      {
+        "optimized": false,
+        "case": "independent os.open swaps and descriptor cleanup",
+        "passed": true,
+        "stdout": "swap-before-open rejects and closes; swap-after-open reads retained file; fdopen failure closes"
+      },
+      {
+        "optimized": true,
+        "case": "regular/symlink/stdin parity",
+        "passed": true
+      },
+      {
+        "optimized": true,
+        "case": "baseline FIFO",
+        "outcome": "timeout; subprocess killed and reaped"
+      },
+      {
+        "optimized": true,
+        "case": "candidate FIFO",
+        "passed": true
+      },
+      {
+        "optimized": true,
+        "case": "independent os.open swaps and descriptor cleanup",
+        "passed": true,
+        "stdout": "swap-before-open rejects and closes; swap-after-open reads retained file; fdopen failure closes"
+      }
+    ],
+    "review_notes": [
+      "Preflight and opened-descriptor checks preserve regular symlinks and fail before file reads on unsupported file types.",
+      "O_NONBLOCK prevents the tested regular-to-FIFO replacement from trapping open on this POSIX host.",
+      "Descriptor ownership transfers only after successful fdopen; all tested refusal paths close their descriptor.",
+      "Reading a previously opened regular file survives subsequent pathname replacement and remains bounded.",
+      "Documentation accurately excludes streamed-input and unresponsive-filesystem deadlines."
+    ]
+  },
+  "limits": [
+    "Focused Linux CPython source/CLI qualification only.",
+    "Full repository, Windows, browser, deployed application, and installed-native adoption are not claimed.",
+    "Regular file type checks do not provide a timeout for arbitrary filesystems or explicit stdin."
+  ]
+}
