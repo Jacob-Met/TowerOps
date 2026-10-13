@@ -1,0 +1,52 @@
+{
+  "schema": "hamon.loom.towerops-replay-selection-criteria.v1",
+  "frozen_against": {
+    "repository": "Jacob-Met/TowerOps",
+    "commit": "c7714bbe09c37ead994780af53078df11c99925b",
+    "tree": "1614130c0adce082b065e4f59cc5fd359e90083d",
+    "issue": "https://github.com/Jacob-Met/TowerOps/issues/126"
+  },
+  "scope": "Two actual browser/file/loopback HTTP courses using unchanged backend-generated saved JSON and controlled delivery of its actual replay replies. Candidate implementation has not been read. Original first, then exact candidate through the same frozen driver.",
+  "preparation": [
+    "Preserve all eight selected source files and modes before/after. Source projection is not the full repository.",
+    "Run unchanged explorer.py run approved once to save actual stdout as export-A.json; copy and increment after.version by one for deliberately altered export-B.json.",
+    "Run unchanged explorer.py replay against both saved files; expect A exit0/matches true and B exit1/matches false. Keep exact commands/stdout/stderr."
+  ],
+  "courses": [
+    {
+      "name": "newer-file",
+      "sequence": [
+        "Load exact web assets in owned Firefox and click Run using actual native generated A response.",
+        "Select saved A with the public file-input API. The first /api/replay HTTP response flushes no-store headers and the first JSON character, then holds only the remaining body.",
+        "Select saved B while A is pending. B response must display its exact actual backend-derived MISMATCH text.",
+        "Release A body, await the browser's public requestfinished witness bearing the authored response label, then two animation frames plus 150ms before observation."
+      ],
+      "requirement": "B MISMATCH remains after old A MATCH completes; run display and export enabled state remain unchanged."
+    },
+    {
+      "name": "cleared-file",
+      "sequence": [
+        "Use a fresh page; Run the same actual fixture, then select saved A and hold only its replay response body.",
+        "Clear the input value and dispatch the ordinary bubbling change event. This is an authored clear-selection event, not a native file-chooser UX claim.",
+        "Confirm files.length zero and immediate replay-status empty. Release A, require its requestfinished witness and the same observation barrier."
+      ],
+      "requirement": "Status remains empty after retired A MATCH; run display and export enabled state unchanged."
+    }
+  ],
+  "acceptance": {
+    "original_expected_failed_check_ids": [
+      "newer-file.final-status",
+      "cleared-file.immediate-status",
+      "cleared-file.final-status"
+    ],
+    "candidate_expected_failed_check_ids": [],
+    "transport": "Exactly one pending old POST per course; native file reads, actual HTTP responses, no mocked fetch, no source hooks. Completion is witnessed before final state checks.",
+    "closure": "No page errors or observed external page requests, exact request counts, closed browser and server, source/controls/files unchanged."
+  },
+  "limits": [
+    "No file.text delay/error course; those remain distinct author Node tests.",
+    "No backend HTTP framing/same-origin or full engine suite qualification: controlled loopback server serves actual native CLI results and authored scenarios response.",
+    "No cancellation promise, deployment, real aviation authority, external provenance, OS-wide network audit or subjective acceptance.",
+    "No original or candidate execution occurred at this freeze; native routes are unavailable. Any later harness amendment must be versioned with candidacy exposure timing."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "hamon.loom.towerops-receiver-syntax.v1",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--check",
+    "/dev/shm/loom-d3745ea0f44f/towerops-replay-freeze/receive-replay-selection-v1.cjs"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "",
+  "product_executed": false,
+  "browser_launched": false
+}

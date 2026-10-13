@@ -1,0 +1,10 @@
+{
+  "schema": "hamon.loom.towerops-original-mode-adaptation-note.v1",
+  "recorded_at": "2026-10-13T14:20:08.637652+00:00",
+  "path": "explorer.py",
+  "published_git_mode": "100755",
+  "original_receiving_copy_mode": "0o644",
+  "candidate_receiving_copy_mode": "0o755",
+  "body_sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+  "correction": "The original stage copier used0644 for all eight files, so the raw stage-receipt canonical-nonexecutable wording is inaccurate for explorer.py. Raw originalspec/receipt actual mode0644 is correct and unchanged. Candidate retains canonical0755. All CLI children explicitly invoke Python -B with script path; no direct executable-bit launch is qualified. No original file/mode/receipt was rewritten and no original course replayed."
+}

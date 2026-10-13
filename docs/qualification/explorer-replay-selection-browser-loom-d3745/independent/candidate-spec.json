@@ -1,0 +1,87 @@
+{
+  "schema": "hamon.loom.towerops-browser-source-spec.v1",
+  "variant": "candidate",
+  "repository": "Jacob-Met/TowerOps",
+  "source_commit": "67cc9807c096f3e4b6f7b1155008294415f31d23",
+  "source_tree": "ffacbb9ace1a360d0aeca2bdb33b70e0c0422418",
+  "adopted_commit": "8a87ad1331d7e7100367dde583d59560836f9eb8",
+  "publication_state_at_browser_receiving": "Published and merged; exact source originally qualified before publication",
+  "files": [
+    {
+      "path": "EXPLORER.md",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-source/EXPLORER.md",
+      "bytes": 4966,
+      "sha256": "c89087497a6547f91218cf53dc783bce22bfe1f428faaa32cf40adacada930bc",
+      "mode": "0o644",
+      "git_blob": "00cdf262110440bc7f59eeb645835d5f269f10d8",
+      "original_donor_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/EXPLORER.md"
+    },
+    {
+      "path": "explorer.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-source/explorer.py",
+      "bytes": 7141,
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+      "mode": "0o755",
+      "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f",
+      "original_donor_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/explorer.py"
+    },
+    {
+      "path": "scenarios.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-source/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": "0o644",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "original_donor_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/scenarios.py"
+    },
+    {
+      "path": "test_explorer.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-source/test_explorer.py",
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "mode": "0o644",
+      "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+      "original_donor_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/test_explorer.py"
+    },
+    {
+      "path": "towerops.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-source/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": "0o644",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "original_donor_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/towerops.py"
+    },
+    {
+      "path": "web/app.js",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-source/web/app.js",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "mode": "0o644",
+      "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+      "original_donor_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/app.js"
+    },
+    {
+      "path": "web/index.html",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-source/web/index.html",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "mode": "0o644",
+      "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b",
+      "original_donor_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/index.html"
+    },
+    {
+      "path": "web/style.css",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-source/web/style.css",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "mode": "0o644",
+      "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb",
+      "original_donor_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/candidate/web/style.css"
+    }
+  ],
+  "runtime_fields": "Receiver owner supplies independently verified python, browser_module and browser_executable; source metadata does not select their runtime.",
+  "python": "/usr/bin/python3",
+  "browser_module": "/home/jacob/.local/lib/node_modules/@wonderwhy-er/desktop-commander/node_modules/puppeteer",
+  "browser_executable": "/usr/bin/firefox"
+}

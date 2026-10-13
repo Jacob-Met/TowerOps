@@ -1,0 +1,76 @@
+{
+  "schema": "hamon.loom.towerops-browser-source-spec.v1",
+  "variant": "original",
+  "repository": "Jacob-Met/TowerOps",
+  "commit": "c7714bbe09c37ead994780af53078df11c99925b",
+  "tree": "1614130c0adce082b065e4f59cc5fd359e90083d",
+  "python": "/usr/bin/python3",
+  "browser_module": "/home/jacob/.local/lib/node_modules/@wonderwhy-er/desktop-commander/node_modules/puppeteer",
+  "browser_executable": "/usr/bin/firefox",
+  "files": [
+    {
+      "path": "web/app.js",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/web/app.js",
+      "bytes": 5868,
+      "sha256": "5821c5881cb2966f01d18edfe9e60bbda06f63586318b368010ad44aebb317e6",
+      "mode": "0o644",
+      "git_blob": "8e1722a24196b81bad4f1c5837128d7113a96585"
+    },
+    {
+      "path": "web/index.html",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/web/index.html",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "mode": "0o644",
+      "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b"
+    },
+    {
+      "path": "web/style.css",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/web/style.css",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "mode": "0o644",
+      "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb"
+    },
+    {
+      "path": "EXPLORER.md",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/EXPLORER.md",
+      "bytes": 4260,
+      "sha256": "6f1cdb12279ad3706102b31b5c2588d95d615cd5e9a78cf200633bf696b69823",
+      "mode": "0o644",
+      "git_blob": "177f7e55002eabfee7a7f54846d063bb3dc9371f"
+    },
+    {
+      "path": "explorer.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/explorer.py",
+      "bytes": 7141,
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+      "mode": "0o644",
+      "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f"
+    },
+    {
+      "path": "scenarios.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": "0o644",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b"
+    },
+    {
+      "path": "towerops.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": "0o644",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5"
+    },
+    {
+      "path": "test_explorer.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/test_explorer.py",
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "mode": "0o644",
+      "git_blob": "51f7de9067a733d11649684d799417d66c84c36d"
+    }
+  ]
+}
