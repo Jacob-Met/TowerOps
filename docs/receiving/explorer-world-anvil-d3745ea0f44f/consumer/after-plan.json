@@ -1,0 +1,45 @@
+{
+  "format": "towerops.world-plan.v1",
+  "simulation_only": true,
+  "proposal_only": true,
+  "input_sha256": "967045ed9f7edaea2f61fa025ab87b04439ec50846e98a1094a5b2d081183adf",
+  "world": {
+    "version": 2,
+    "observed_at": 1002.5,
+    "aircraft": [
+      {
+        "aircraft_id": "FIXTURE-A",
+        "x_nm": -5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": 1.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0.0
+      },
+      {
+        "aircraft_id": "FIXTURE-B",
+        "x_nm": 5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": -1.0,
+        "vy_nm_min": 2.0,
+        "climb_ft_min": 0.0
+      }
+    ]
+  },
+  "world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424",
+  "reviewed_at": 1002.5,
+  "policy": {
+    "min_horizontal_nm": 5.0,
+    "min_vertical_ft": 1000.0,
+    "horizon_min": 5.0,
+    "sample_step_min": 0.5,
+    "max_state_age_sec": 10.0,
+    "max_speed_nm_min": 6.0,
+    "max_climb_ft_min": 3000.0
+  },
+  "status": "no_conflict",
+  "conflicting_aircraft": [],
+  "candidate_count": 0,
+  "advisories": []
+}

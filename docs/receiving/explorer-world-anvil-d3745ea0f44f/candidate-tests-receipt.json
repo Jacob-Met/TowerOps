@@ -1,0 +1,57 @@
+{
+  "recorded_utc": "2026-10-13T02:46:55.141583+00:00",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "source_commit": "1ce5a91431dce0ca43813ba3198e602f4ae218f5",
+  "tests": [
+    {
+      "optimized": false,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/source/tests/test_explorer_world.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_all_fixed_scenarios_switches_and_both_worlds_reach_native_consumer (__main__.ExplorerWorldTests.test_all_fixed_scenarios_switches_and_both_worlds_reach_native_consumer) ... ok\ntest_cli_reports_actual_output_failure_before_shutdown (__main__.ExplorerWorldTests.test_cli_reports_actual_output_failure_before_shutdown) ... ok\ntest_complete_export_is_verified_including_the_unselected_world_and_audit (__main__.ExplorerWorldTests.test_complete_export_is_verified_including_the_unselected_world_and_audit) ... ok\ntest_equivalent_finite_json_numbers_are_preserved_and_results_are_detached (__main__.ExplorerWorldTests.test_equivalent_finite_json_numbers_are_preserved_and_results_are_detached) ... ok\ntest_exact_export_size_limit_including_whitespace (__main__.ExplorerWorldTests.test_exact_export_size_limit_including_whitespace) ... ok\ntest_invalid_carriers_formats_encoding_and_duplicate_fields_refuse (__main__.ExplorerWorldTests.test_invalid_carriers_formats_encoding_and_duplicate_fields_refuse) ... ok\ntest_real_cli_file_stdin_and_planner_handoff_preserve_source (__main__.ExplorerWorldTests.test_real_cli_file_stdin_and_planner_handoff_preserve_source) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 1.615s\n\nOK\n"
+    },
+    {
+      "optimized": true,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-tower-explorer-world/source/tests/test_explorer_world.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_all_fixed_scenarios_switches_and_both_worlds_reach_native_consumer (__main__.ExplorerWorldTests.test_all_fixed_scenarios_switches_and_both_worlds_reach_native_consumer) ... ok\ntest_cli_reports_actual_output_failure_before_shutdown (__main__.ExplorerWorldTests.test_cli_reports_actual_output_failure_before_shutdown) ... ok\ntest_complete_export_is_verified_including_the_unselected_world_and_audit (__main__.ExplorerWorldTests.test_complete_export_is_verified_including_the_unselected_world_and_audit) ... ok\ntest_equivalent_finite_json_numbers_are_preserved_and_results_are_detached (__main__.ExplorerWorldTests.test_equivalent_finite_json_numbers_are_preserved_and_results_are_detached) ... ok\ntest_exact_export_size_limit_including_whitespace (__main__.ExplorerWorldTests.test_exact_export_size_limit_including_whitespace) ... ok\ntest_invalid_carriers_formats_encoding_and_duplicate_fields_refuse (__main__.ExplorerWorldTests.test_invalid_carriers_formats_encoding_and_duplicate_fields_refuse) ... ok\ntest_real_cli_file_stdin_and_planner_handoff_preserve_source (__main__.ExplorerWorldTests.test_real_cli_file_stdin_and_planner_handoff_preserve_source) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 4.532s\n\nOK\n"
+    }
+  ],
+  "original_sources_before": {
+    "towerops.py": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+    "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "scenarios.py": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+    "explorer.py": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+    "plan_world.py": "94d9bfcc5da7b18d297520ca030ce2b91da1ab32d7580e5de9a0700c6fcf1929"
+  },
+  "original_sources_after": {
+    "towerops.py": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+    "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "scenarios.py": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+    "explorer.py": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+    "plan_world.py": "94d9bfcc5da7b18d297520ca030ce2b91da1ab32d7580e5de9a0700c6fcf1929"
+  },
+  "original_sources_unchanged": true,
+  "files": {
+    "explorer_world.py": {
+      "bytes": 4549,
+      "sha256": "34ba708c7bc82d9b9bbcb5fd7bc4feee7a3a236eb7ae1db45fb0012911529801"
+    },
+    "tests/test_explorer_world.py": {
+      "bytes": 7194,
+      "sha256": "9f069838621ff3a39b8563ae55bd575aa36331e65ac158c8f4e5902c60af3419"
+    }
+  },
+  "setup_note": "First test invocation found missing tests directory; no product test executed then. Directory created and test source written before this receiving run."
+}

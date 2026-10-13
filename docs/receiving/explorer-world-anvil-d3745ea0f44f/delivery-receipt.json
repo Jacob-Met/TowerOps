@@ -1,0 +1,172 @@
+{
+  "schema": "hamon.towerops-explorer-world-delivery/1",
+  "source": {
+    "repository": "Jacob-Met/TowerOps",
+    "commit": "96a7f707f7d9b630f30d3deb8991b1d5383f11a5",
+    "tree": "38e46ee7ef3841c260c41d3994afe6a8cf739bdd",
+    "parent": "1ce5a91431dce0ca43813ba3198e602f4ae218f5",
+    "issue": "https://github.com/Jacob-Met/TowerOps/issues/115",
+    "detached": true,
+    "added_files": [
+      {
+        "path": "explorer_world.py",
+        "bytes": 4549,
+        "sha256": "34ba708c7bc82d9b9bbcb5fd7bc4feee7a3a236eb7ae1db45fb0012911529801",
+        "git_blob": "3d750f32a0f3729a098f301056bab943cb2723f1"
+      },
+      {
+        "path": "tests/test_explorer_world.py",
+        "bytes": 7194,
+        "sha256": "9f069838621ff3a39b8563ae55bd575aa36331e65ac158c8f4e5902c60af3419",
+        "git_blob": "dc379e6b25800cb8df6208976105b93ee197029a"
+      },
+      {
+        "path": "EXPLORER_WORLD.md",
+        "bytes": 5187,
+        "sha256": "3a627abaf05bdaa23e2284eab198735d012749d8de02df9f65abecaaf8a06f9d",
+        "git_blob": "331afdb357bf3ed963ce858f4c9679ef9360ef4e"
+      },
+      {
+        "path": "docs/receiving/explorer-world-anvil-d3745ea0f44f/source-receipt.json",
+        "bytes": 1150,
+        "sha256": "5d40438fce60d07cb0633641609f0d11fc6756fc6ce6d27124a573f1adda87c9",
+        "git_blob": "b2a0d5474101b3bc63fe58446f687acd11779417"
+      },
+      {
+        "path": "docs/receiving/explorer-world-anvil-d3745ea0f44f/baseline-consumer-receipt.json",
+        "bytes": 40691,
+        "sha256": "d49a64e7dfd0d8a1f53af490c89f3a1f3d9d7e709c607cddfe15bac6b6a66361",
+        "git_blob": "e53d7de9d16f8d5b3834938c29db528825b63b61"
+      },
+      {
+        "path": "docs/receiving/explorer-world-anvil-d3745ea0f44f/candidate-tests-receipt.json",
+        "bytes": 4874,
+        "sha256": "b4bdb68492790014cacf3e9d88c0c577f74c5aa144be12f198449ba126b8f187",
+        "git_blob": "477e50b419a769e5371cb4693e44688e14051ec3"
+      },
+      {
+        "path": "docs/receiving/explorer-world-anvil-d3745ea0f44f/actual-consumer-receipt.json",
+        "bytes": 6199,
+        "sha256": "76eaa9993a66cb24dcb79bf58b4746c73a237345543aed6f8c909df4648acd19",
+        "git_blob": "c370246346865631ed1e2698f806d35347a6e8a1"
+      },
+      {
+        "path": "docs/receiving/explorer-world-anvil-d3745ea0f44f/approved-explorer.json",
+        "bytes": 5770,
+        "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+        "git_blob": "6b9355736552bb8a66bf406e38241ece66347049"
+      },
+      {
+        "path": "docs/receiving/explorer-world-anvil-d3745ea0f44f/consumer/before-world.json",
+        "bytes": 444,
+        "sha256": "bbfe3946b98e4ccf6ab5838eaa5bae1efe58275e727f5a312b8c0b52afccdb9a",
+        "git_blob": "8e729d662be0098458ec1d56e45235d0147f7b41"
+      },
+      {
+        "path": "docs/receiving/explorer-world-anvil-d3745ea0f44f/consumer/after-world.json",
+        "bytes": 444,
+        "sha256": "967045ed9f7edaea2f61fa025ab87b04439ec50846e98a1094a5b2d081183adf",
+        "git_blob": "f75842b911df6645d6ee8de1af192e59e76298b8"
+      },
+      {
+        "path": "docs/receiving/explorer-world-anvil-d3745ea0f44f/consumer/before-plan.json",
+        "bytes": 30712,
+        "sha256": "ee1bf7c6ba68cdd89a4b48644d4db3538d3c3521d483b76400ebe41473bbd8c6",
+        "git_blob": "7e05ccdd9de727e6e60ecd496a64eb7e9575058b"
+      },
+      {
+        "path": "docs/receiving/explorer-world-anvil-d3745ea0f44f/consumer/after-plan.json",
+        "bytes": 1114,
+        "sha256": "6463fb7e6f92fbbdad72b5979c1f0f96883d6e3b575ef9349e5b74c6aea21614",
+        "git_blob": "74fd05e9f2091fe9248aa93c9618a6c5e01dd551"
+      }
+    ],
+    "all_twelve_complete_raw_readbacks_exact": true,
+    "inherited_leaves_and_modes_preserved": 1218,
+    "actions_head_query_count": 0
+  },
+  "native": {
+    "device": "hamon-thinkpad",
+    "python": "3.14.4",
+    "tests": {
+      "methods_per_mode": 7,
+      "modes": [
+        "normal",
+        "-O"
+      ],
+      "scenario_switch_phase_cases_per_mode": 64,
+      "all_pass": true,
+      "all_child_python_calls_inherit_optimization": true
+    },
+    "actual_os_pipes": [
+      {
+        "phase": "before",
+        "producer_exit": 0,
+        "consumer_exit": 0,
+        "planner_status": "options_available",
+        "proposal_only": true,
+        "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "input_sha256": "bbfe3946b98e4ccf6ab5838eaa5bae1efe58275e727f5a312b8c0b52afccdb9a"
+      },
+      {
+        "phase": "after",
+        "producer_exit": 0,
+        "consumer_exit": 0,
+        "planner_status": "no_conflict",
+        "proposal_only": true,
+        "world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424",
+        "input_sha256": "967045ed9f7edaea2f61fa025ab87b04439ec50846e98a1094a5b2d081183adf"
+      }
+    ],
+    "sources_unchanged": true,
+    "saved_export_unchanged": true
+  },
+  "artifact": {
+    "filename": "TowerOps-Explorer-World-96a7f707-20261013.zip",
+    "bytes": 43531,
+    "sha256": "640c5114b7f4a4f5ac9041749c27c2c842bbe6a0417def7935973982c0a9f21f",
+    "members": 20,
+    "manifested_payloads": 19,
+    "published_repository_files": 18,
+    "all_published_modes_preserved": true,
+    "drive_id": "1SzeDO1SPjdKfe6T10S4Q5PokoBvBSSF0",
+    "drive_url": "https://drive.google.com/file/d/1SzeDO1SPjdKfe6T10S4Q5PokoBvBSSF0/view?usp=drivesdk",
+    "folder_id": "1for5kGniDXsNyYNLNC9wNXclUy7iTIcK",
+    "complete_drive_raw_readback": {
+      "recorded_utc": "2026-10-13T02:58:08.242106+00:00",
+      "http_status": 200,
+      "bytes": 43531,
+      "sha256": "640c5114b7f4a4f5ac9041749c27c2c842bbe6a0417def7935973982c0a9f21f",
+      "exact_local_archive": true,
+      "regular_members": 20,
+      "manifested_payloads": 19,
+      "source_files": 18,
+      "all_payloads_verified": true
+    },
+    "contents_note": "The archive preserves the source commit above. This later delivery receipt is intentionally outside that immutable archive."
+  },
+  "independent_custody": {
+    "reviewer": "Loom, continuing HAMON team d3745ea0f44f",
+    "recorded_utc": "2026-10-13T02:59:28Z",
+    "archive_bytes_hash_members_manifest_published_git_blobs_and_modes": "accepted",
+    "opening_guide_api_guide_source_and_receipts": "read",
+    "static_import_closure": "all required non-stdlib modules included",
+    "scope": "Memory-only custody and guide review; no extraction, product replay, source edits or Drive changes."
+  },
+  "ledger": {
+    "id": "3f4aedcd-f4a5-8119-bf4f-f87a0c51f6a4",
+    "url": "https://app.notion.com/p/3f4aedcdf4a58119bf4ff87a0c51f6a4?pvs=204",
+    "section": "TowerOps Explorer world — Anvil d3745ea0f44f",
+    "source_artifact_links_fresh_readback_verified": true
+  },
+  "limits": [
+    "Fixed local synthetic-fixture replay and native planner receiving only; no live traffic, browser interaction or operational adoption established.",
+    "Native replay recomputes its modeled transition where applicable; replay establishes reproducibility, not authenticity, approval authority or a signature.",
+    "Independent root source review and default-branch integration remain separate from this delivery record."
+  ],
+  "setup_observations": [
+    "The first native test invocation encountered a missing tests directory before any product test ran; directory and test source were then created and the retained receiving completed in both modes.",
+    "Cloud mirror staging hit ENOSPC; only an owned redundant OpenCLI ZIP with already verified durable copies and an owned zero-byte failed staging file were removed. Source/evidence mirrors then completed exactly.",
+    "The first archive builder rejected explorer.py's executable mode before creating an archive; the corrected builder preserved every actual published mode."
+  ]
+}
