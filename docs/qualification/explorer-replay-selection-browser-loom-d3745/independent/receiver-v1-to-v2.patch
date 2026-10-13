@@ -1,0 +1,35 @@
+--- receive-replay-selection-v1.cjs
++++ receive-replay-selection-v2.cjs
+@@ -9,16 +9,16 @@
+ async function until(fn,label){const end=Date.now()+12000;while(Date.now()<end){if(await fn())return;await wait(25);}throw Error("Timed out: "+label);}
+ async function bounded(p,ms,label){let t;try{return await Promise.race([p,new Promise((_,rej)=>t=setTimeout(()=>rej(Error(label)),ms))]);}finally{clearTimeout(t);}}
+ (async()=>{
+- const base=__dirname,freeze=JSON.parse(fs.readFileSync(path.join(base,"freeze.json"))),criteria=JSON.parse(fs.readFileSync(path.join(base,"criteria.json")));
++ const base=__dirname,freeze=JSON.parse(fs.readFileSync(path.join(base,"freeze-v2.json"))),criteria=JSON.parse(fs.readFileSync(path.join(base,"criteria.json")));
+  assert.equal(sha(fs.readFileSync(__filename)),freeze.receiver.sha256);
+  assert.equal(sha(fs.readFileSync(path.join(base,"criteria.json"))),freeze.criteria.sha256);
+  const spec=JSON.parse(fs.readFileSync(specPath));assert.equal(spec.variant,variant);assert.equal(spec.files.length,8);
+  const sourceBefore=spec.files.map(r=>{assert(path.isAbsolute(r.source_path));const i=ident(r.source_path);assert.equal(i.bytes,r.bytes);assert.equal(i.sha256,r.sha256);assert.equal(i.mode,r.mode);return i;});
+  assert.deepEqual(spec.files.map(r=>r.path).sort(),["EXPLORER.md","explorer.py","scenarios.py","test_explorer.py","towerops.py","web/app.js","web/index.html","web/style.css"].sort());
+  const source=new Map(spec.files.map(r=>[r.path,r.source_path]));
+- const controlsBefore=[__filename,path.join(base,"criteria.json"),path.join(base,"freeze.json"),specPath].map(ident);
++ const controlsBefore=[__filename,path.join(base,"criteria.json"),path.join(base,"freeze-v2.json"),specPath].map(ident);
+  fs.mkdirSync(out);fs.mkdirSync(path.join(out,"streams"));fs.mkdirSync(path.join(out,"fixtures"));
+- const receipt={schema:"hamon.loom.towerops-replay-browser.v1",started:new Date().toISOString(),variant,source_spec:spec,source_before:sourceBefore,controls_before:controlsBefore,commands:[],checks:[],courses:[],screenshots:[],error:null};
++ const receipt={schema:"hamon.loom.towerops-replay-browser.v2",started:new Date().toISOString(),variant,source_spec:spec,source_before:sourceBefore,controls_before:controlsBefore,commands:[],checks:[],courses:[],screenshots:[],error:null};
+  const check=(id,actual,expected)=>{const pass=equal(actual,expected);receipt.checks.push({id,actual,expected,pass});return pass;};
+  const run=(label,args,expected)=>{const env={...process.env};for(const k of Object.keys(env))if(k.startsWith("PYTHON"))delete env[k];env.PYTHONDONTWRITEBYTECODE="1";
+    const child=spawnSync(spec.python,["-B",source.get("explorer.py"),...args],{cwd:out,env,encoding:"utf8",timeout:10000,maxBuffer:1024*1024});
+@@ -70,10 +70,10 @@
+    receipt.browser_version=await browser.version();receipt.browser_pid=browser.process()?.pid;
+    const shot=async(page,name)=>{const p=path.join(out,name+".png");await page.screenshot({path:p,fullPage:false});receipt.screenshots.push(ident(p));};
+    for(const name of ["newer-file","cleared-file"]){
+-    course={name,requests:[],finished:[],failed_requests:[],page_errors:[],external_requests:[],held_ready:false};receipt.courses.push(course);
++    course={name,requests:[],finished:[],failed_requests:[],page_errors:[],external_requests:[],inline_requests:[],held_ready:false};receipt.courses.push(course);
+     const page=await browser.newPage();await page.setViewport({width:1280,height:1000});
+     page.on("pageerror",e=>course.page_errors.push(String(e)));
+-    page.on("request",r=>{if(!r.url().startsWith(origin+"/"))course.external_requests.push(r.url());});
++    page.on("request",r=>{if(new URL(r.url()).protocol==="data:")course.inline_requests.push(r.url());else if(!r.url().startsWith(origin+"/"))course.external_requests.push(r.url());});
+     page.on("requestfailed",r=>course.failed_requests.push({url:r.url(),error:r.failure()}));
+     page.on("requestfinished",r=>{const label=r.response()?.headers()["x-loom-response"];if(label)course.finished.push(label);});
+     await page.goto(origin+"/",{waitUntil:"networkidle0",timeout:15000});

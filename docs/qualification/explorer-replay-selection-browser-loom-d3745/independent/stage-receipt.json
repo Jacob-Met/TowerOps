@@ -1,0 +1,113 @@
+{
+  "schema": "hamon.loom.towerops-original-stage.v1",
+  "accepted": true,
+  "identity": {
+    "uid": 1000,
+    "host": "hamon-thinkpad"
+  },
+  "source": {
+    "commit": "c7714bbe09c37ead994780af53078df11c99925b",
+    "tree": "1614130c0adce082b065e4f59cc5fd359e90083d"
+  },
+  "native_modes": "Canonical nonexecutable Git source files copied as0644; original author stage untouched.",
+  "files": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/criteria.json",
+      "bytes": 3615,
+      "sha256": "22d35e12e98a48f19cb3dd536b6a092ee1d83687095daf9e5327f5012bf6c35b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/freeze.json",
+      "bytes": 1609,
+      "sha256": "5d4a79a5fd7871aa69ecad33b485022e4c4a8da072a5d63e466a28237be301fc",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-browser-inputs.json",
+      "bytes": 60598,
+      "sha256": "806795faa971b703532609ec644505399c6837e74c4c29cfd6835e944180d538",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/EXPLORER.md",
+      "bytes": 4260,
+      "sha256": "6f1cdb12279ad3706102b31b5c2588d95d615cd5e9a78cf200633bf696b69823",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/explorer.py",
+      "bytes": 7141,
+      "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/test_explorer.py",
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/web/app.js",
+      "bytes": 5868,
+      "sha256": "5821c5881cb2966f01d18edfe9e60bbda06f63586318b368010ad44aebb317e6",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/web/index.html",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source/web/style.css",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-source-leaf-check.json",
+      "bytes": 198,
+      "sha256": "9221c6378cf4b50aa8cecd728f4b5946fa5b1431dd8574532e8966ccc2005b33",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-spec.json",
+      "bytes": 3246,
+      "sha256": "70d5168430ead0a86bcbca91940f57cfee26e68776d9bea21567420f6f85b026",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/receive-replay-selection-v1.cjs",
+      "bytes": 13010,
+      "sha256": "b20ce2ce38961eea75e7e267a7ff1748cd0101bbcbf50d6b64db7e6b3f1ea1e8",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/syntax-admission.json",
+      "bytes": 359,
+      "sha256": "69bb9b728e1f9feb116467970fedbc69f037b979d6f60cd3436c0450b6a29525",
+      "mode": "0o644"
+    }
+  ],
+  "candidate_body_read": false,
+  "product_executed": false,
+  "browser_launched": false,
+  "syntax": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

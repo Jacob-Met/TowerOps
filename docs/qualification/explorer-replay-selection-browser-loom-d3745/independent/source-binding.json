@@ -1,0 +1,173 @@
+{
+  "schema": "hamon.loom.towerops-browser-source-binding.v1",
+  "repository": "Jacob-Met/TowerOps",
+  "original": {
+    "commit": "c7714bbe09c37ead994780af53078df11c99925b",
+    "tree": "1614130c0adce082b065e4f59cc5fd359e90083d",
+    "files": [
+      {
+        "path": "web/app.js",
+        "projection_path": "original-source/web/app.js",
+        "bytes": 5868,
+        "sha256": "5821c5881cb2966f01d18edfe9e60bbda06f63586318b368010ad44aebb317e6",
+        "git_blob": "8e1722a24196b81bad4f1c5837128d7113a96585",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "web/index.html",
+        "projection_path": "original-source/web/index.html",
+        "bytes": 3396,
+        "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+        "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "web/style.css",
+        "projection_path": "original-source/web/style.css",
+        "bytes": 2037,
+        "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+        "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "EXPLORER.md",
+        "projection_path": "original-source/EXPLORER.md",
+        "bytes": 4260,
+        "sha256": "6f1cdb12279ad3706102b31b5c2588d95d615cd5e9a78cf200633bf696b69823",
+        "git_blob": "177f7e55002eabfee7a7f54846d063bb3dc9371f",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "explorer.py",
+        "projection_path": "original-source/explorer.py",
+        "bytes": 7141,
+        "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+        "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f",
+        "published_mode": "100755",
+        "received_mode": "100644"
+      },
+      {
+        "path": "scenarios.py",
+        "projection_path": "original-source/scenarios.py",
+        "bytes": 5989,
+        "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+        "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "towerops.py",
+        "projection_path": "original-source/towerops.py",
+        "bytes": 19684,
+        "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+        "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "test_explorer.py",
+        "projection_path": "original-source/test_explorer.py",
+        "bytes": 7460,
+        "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+        "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      }
+    ]
+  },
+  "candidate": {
+    "commit": "67cc9807c096f3e4b6f7b1155008294415f31d23",
+    "tree": "ffacbb9ace1a360d0aeca2bdb33b70e0c0422418",
+    "adopted_commit": "8a87ad1331d7e7100367dde583d59560836f9eb8",
+    "files": [
+      {
+        "path": "EXPLORER.md",
+        "projection_path": "candidate-source/EXPLORER.md",
+        "bytes": 4966,
+        "sha256": "c89087497a6547f91218cf53dc783bce22bfe1f428faaa32cf40adacada930bc",
+        "git_blob": "00cdf262110440bc7f59eeb645835d5f269f10d8",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "explorer.py",
+        "projection_path": "candidate-source/explorer.py",
+        "bytes": 7141,
+        "sha256": "da950f18a267a36e018649e2b29df19ae34f3679358227ea5afbc69bb7a42c75",
+        "git_blob": "897ddf219cb5be863ff89318d1bf8b22a08e3e2f",
+        "published_mode": "100755",
+        "received_mode": "100755"
+      },
+      {
+        "path": "scenarios.py",
+        "projection_path": "candidate-source/scenarios.py",
+        "bytes": 5989,
+        "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+        "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "test_explorer.py",
+        "projection_path": "candidate-source/test_explorer.py",
+        "bytes": 7460,
+        "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+        "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "towerops.py",
+        "projection_path": "candidate-source/towerops.py",
+        "bytes": 19684,
+        "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+        "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "web/app.js",
+        "projection_path": "candidate-source/web/app.js",
+        "bytes": 6147,
+        "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+        "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "web/index.html",
+        "projection_path": "candidate-source/web/index.html",
+        "bytes": 3396,
+        "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+        "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      },
+      {
+        "path": "web/style.css",
+        "projection_path": "candidate-source/web/style.css",
+        "bytes": 2037,
+        "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+        "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb",
+        "published_mode": "100644",
+        "received_mode": "100644"
+      }
+    ]
+  },
+  "license": {
+    "path": "LICENSE",
+    "commit": "67cc9807c096f3e4b6f7b1155008294415f31d23",
+    "git_blob": "8d091d5ee1cc4b8fc2d2f6e2f360a9f1edf6912a",
+    "bytes": 1066,
+    "mode": "100644"
+  },
+  "notes": [
+    "Complete published source trees were read independently before staging; all selected blob/size/executable-mode identities matched.",
+    "Original explorer.py received 0644 despite published 100755; its exact body is unchanged and invocation explicitly used Python. See separate original-mode-adaptation-note.json.",
+    "Native evidence files may be 0664; Git serializes nonexecutables as 100644. Descriptor records native_mode separately; source paths and raw receipts remain unchanged."
+  ]
+}

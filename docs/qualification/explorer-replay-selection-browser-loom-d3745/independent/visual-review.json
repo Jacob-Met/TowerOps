@@ -1,0 +1,40 @@
+{
+  "schema": "hamon.loom.towerops-replay-visual-review.v1",
+  "reviewer": "Loom",
+  "method": "Read exact retained PNGs through native read_file and visually inspect; no new rendering or browser replay.",
+  "images": [
+    {
+      "path": "original-v1/newer-file-after-release.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-v1/newer-file-after-release.png",
+      "bytes": 143198,
+      "sha256": "bffa59d818ec529111a86f52f5a82ab6c440055ebd48991d1890fcbc6fce834c",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "observation": "Input names export-B.json while replay says MATCH, agreeing with the original stale-status failure."
+    },
+    {
+      "path": "candidate-v2/newer-file-after-release.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-v2/newer-file-after-release.png",
+      "bytes": 146156,
+      "sha256": "46e8d46d4a94b1eb274815c295d312f45e6d37d6d0f4a306156ea4b28d18b673",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "observation": "Input names export-B.json and replay says MISMATCH after old A completion."
+    },
+    {
+      "path": "candidate-v2/cleared-file-after-release.png",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-v2/cleared-file-after-release.png",
+      "bytes": 140554,
+      "sha256": "1f4e839aea15f8b2fa167d306be3dc52921d370e68d7a0ebf8a02d2e7533c377",
+      "mode": "100644",
+      "native_mode": "0o664",
+      "observation": "No file selected; replay status blank, current simulation remains displayed."
+    }
+  ],
+  "viewport": {
+    "width": 1280,
+    "height": 1000
+  },
+  "scope": "Three representative retained captures; DOM receipt substantiates transient ordering and exact status, page image substantiates final presentation only. No mobile/accessibility/broad browser compatibility qualification.",
+  "accepted": true
+}

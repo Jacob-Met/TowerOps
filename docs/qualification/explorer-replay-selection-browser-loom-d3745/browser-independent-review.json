@@ -1,0 +1,78 @@
+{
+  "schema": "hamon.anvil.towerops-replay-browser-independent-review.v1",
+  "reviewer": "Anvil",
+  "decision": "accepted within the explicitly recorded receiving scope",
+  "source": {
+    "repository": "Jacob-Met/TowerOps",
+    "commit": "67cc9807c096f3e4b6f7b1155008294415f31d23",
+    "tree": "ffacbb9ace1a360d0aeca2bdb33b70e0c0422418",
+    "adoption": "8a87ad1331d7e7100367dde583d59560836f9eb8"
+  },
+  "candidate_receipt": {
+    "bytes": 117788,
+    "sha256": "b55d3c4fe12dedb0e95c8058b49530c0d47fd49b2a9061912ce3f53b78e54a38"
+  },
+  "read_only_audit": {
+    "device": "cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90",
+    "pid": 3968944,
+    "exit_code": 0,
+    "files_rehashed": 23,
+    "comparisons_recomputed": 23,
+    "raw_streams_read": 6,
+    "product_execution": false
+  },
+  "reviewed_contract": [
+    "Full v2 receiver read; original-only criteria and narrow v1-to-v2 inline-data classification correction were reviewed before candidate execution.",
+    "Three native commands generate a real approved export and obtain unchanged public replay replies for A MATCH and B MISMATCH; B differs only in after.version.",
+    "Two actual Firefox file-selection courses serve authenticated assets and replay native CLI replies through controlled loopback HTTP.",
+    "Each old A response sends headers and the first JSON byte, retains its tail, and is explicitly released only after the newer-file or cleared-input state is observed.",
+    "The exact labelled requestfinished event is observed once before the final stable DOM observation; no cancellation is claimed.",
+    "All 23 recorded actual/expected comparisons recompute; current MISMATCH and cleared empty status remain stable; displayed result/status/export-disabled values remain unchanged.",
+    "All eight source files, four controls, two fixture files, six streams and three screenshots match recorded lengths, SHA256 and modes.",
+    "Browser exit code is zero; server close callback completed with zero remaining sockets. No errors or failed requests are recorded."
+  ],
+  "visual_review": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-v2/newer-file-after-release.png",
+      "bytes": 146156,
+      "sha256": "46e8d46d4a94b1eb274815c295d312f45e6d37d6d0f4a306156ea4b28d18b673",
+      "mode": "0o664",
+      "observation": "Selected export-B.json shows MISMATCH after old response completion."
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-v2/cleared-file-after-release.png",
+      "bytes": 140554,
+      "sha256": "1f4e839aea15f8b2fa167d306be3dc52921d370e68d7a0ebf8a02d2e7533c377",
+      "mode": "0o664",
+      "observation": "No file selected and empty replay status after old response completion; prior simulation remains visible."
+    }
+  ],
+  "limits": [
+    "No new product, CLI, browser, server or network replay by Anvil; the only Anvil native process hashes and examines retained data.",
+    "Controlled loopback receiving with local synthetic exports; no live aviation system, provider, model, identity authority or safety assurance.",
+    "Browser request observations are not an operating-system network audit. Inline data-font requests are retained separately.",
+    "Original raw v1 accepted=false and classification audit remain unchanged. The original explorer.py executable-mode adaptation is separate from candidate source copied with published modes.",
+    "The earlier Node-only source/packet and its historical pending-browser and custody statements remain immutable; this is later evidence."
+  ],
+  "guide_review": {
+    "path": "README.md",
+    "bytes": 10322,
+    "sha256": "00e804c3979ad64f21d9998bd267c4386a4948c5db938307c0fb2644847bd149",
+    "accepted": true,
+    "findings": [
+      "Normal use starts from the displayed directory, invokes Python on candidate-source/explorer.py, and names both actual saved fixtures explicitly.",
+      "The authored HTTP transport and native CLI boundary are distinguished from production server framing.",
+      "Clear-input DOM change is distinguished from file chooser cancellation; no new Clear button is claimed.",
+      "Original false receipt, logger correction, original mode adaptation, partial screenshot scope, and adapted replay limits remain explicit."
+    ]
+  },
+  "original_descriptor": {
+    "schema": "hamon.loom.towerops-browser-publication-inputs.v1",
+    "prefix": "docs/qualification/explorer-replay-selection-browser-loom-d3745/independent/",
+    "bytes": 21099,
+    "sha256": "d4416e77c25464945b0a5ee752c90a51709c043099c69f7e17a180230cc20970",
+    "payloads": 60,
+    "native_bodies_complete_readback": "pending publication staging; review of executed candidate23 referenced files already complete"
+  },
+  "reviewed_utc": "2026-10-13 14:41:25 UTC"
+}

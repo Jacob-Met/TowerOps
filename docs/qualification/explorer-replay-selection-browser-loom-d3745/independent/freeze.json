@@ -1,0 +1,36 @@
+{
+  "schema": "hamon.loom.towerops-replay-browser-freeze.v1",
+  "frozen_at": "2026-10-13T13:33:38.326093+00:00",
+  "receiver": {
+    "path": "/dev/shm/loom-d3745ea0f44f/towerops-replay-freeze/receive-replay-selection-v1.cjs",
+    "bytes": 13010,
+    "sha256": "b20ce2ce38961eea75e7e267a7ff1748cd0101bbcbf50d6b64db7e6b3f1ea1e8",
+    "mode": "0o644"
+  },
+  "criteria": {
+    "path": "/dev/shm/loom-d3745ea0f44f/towerops-replay-freeze/criteria.json",
+    "bytes": 3615,
+    "sha256": "22d35e12e98a48f19cb3dd536b6a092ee1d83687095daf9e5327f5012bf6c35b",
+    "mode": "0o644"
+  },
+  "original_inputs": {
+    "path": "/dev/shm/loom-d3745ea0f44f/towerops-replay-freeze/original-browser-inputs.json",
+    "bytes": 60598,
+    "sha256": "806795faa971b703532609ec644505399c6837e74c4c29cfd6835e944180d538",
+    "mode": "0o644"
+  },
+  "original_published_leaf_check": {
+    "path": "/dev/shm/loom-d3745ea0f44f/towerops-replay-freeze/original-source-leaf-check.json",
+    "bytes": 198,
+    "sha256": "9221c6378cf4b50aa8cecd728f4b5946fa5b1431dd8574532e8966ccc2005b33",
+    "mode": "0o644"
+  },
+  "exposure": {
+    "candidate_body_read": false,
+    "candidate_identity_received": false,
+    "candidate_execution": false,
+    "original_execution": false,
+    "basis": "Public issue126 + exact original eight-file source projection only. Source owner has a separately reviewed candidate, intentionally withheld. Native routes unavailable; neither browser course has run."
+  },
+  "intended_order": "Original expected three failures first; same driver candidate thereafter, only after live identity/config/dependency admission."
+}

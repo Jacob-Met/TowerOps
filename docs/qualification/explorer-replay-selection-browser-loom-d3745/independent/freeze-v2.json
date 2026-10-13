@@ -1,0 +1,32 @@
+{
+  "schema": "hamon.loom.towerops-replay-browser-freeze.v2",
+  "frozen_at": "2026-10-13T14:07:18.401878+00:00",
+  "receiver": {
+    "path": "/dev/shm/loom-d3745ea0f44f/towerops-replay-freeze/receive-replay-selection-v2.cjs",
+    "bytes": 13116,
+    "sha256": "0d173ef3f432b0cc75bb7982c0d1ed7c8bb027c1f380bf09918405704e98b293",
+    "mode": "0o644"
+  },
+  "criteria": {
+    "path": "/dev/shm/loom-d3745ea0f44f/towerops-replay-freeze/criteria.json",
+    "bytes": 3615,
+    "sha256": "22d35e12e98a48f19cb3dd536b6a092ee1d83687095daf9e5327f5012bf6c35b",
+    "mode": "0o644"
+  },
+  "original_freeze": {
+    "path": "/dev/shm/loom-d3745ea0f44f/towerops-replay-freeze/freeze.json",
+    "bytes": 1609,
+    "sha256": "5d4a79a5fd7871aa69ecad33b485022e4c4a8da072a5d63e466a28237be301fc",
+    "mode": "0o644"
+  },
+  "scope": "Only versioned freeze/schema and protocol-based classification: data: observations retained in inline_requests; every other URL outside exact loopback origin remains external and fails unchanged zero-external criterion. No product/status/request/completion/closure assertion changes.",
+  "reason": "Original course reproduced three exact intended status failures and two logger failures caused by one nonnetwork data:font/woff2 request per page. Raw v1 accepted=false remains unchanged.",
+  "exposure": {
+    "original_course_completed": true,
+    "candidate_source_identity_metadata_received": true,
+    "candidate_implementation_body_read": false,
+    "candidate_runtime_started": false
+  },
+  "original_receipt_native_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/original-v1/receipt.json",
+  "original_disposition": "Retain raw accepted=false; separate classification audit may accept exact original behavioral control without rerunning."
+}

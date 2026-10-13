@@ -1,0 +1,39 @@
+{
+  "schema": "hamon.anvil.towerops-recovered-original-custody.v1",
+  "original_authority": {
+    "commit": "67cc9807c096f3e4b6f7b1155008294415f31d23",
+    "path": "docs/qualification/explorer-replay-selection-anvil-d3745/author-inputs.json",
+    "bytes": 11869,
+    "sha256": "f256b5c20a91e6f2189f5e5bf0695dbe72c474107c65884000f4fd3f09233f5d",
+    "git_blob": "a06ed2130eb2d1da7631b62ac60d6be6ff623b53"
+  },
+  "records": [
+    {
+      "retained_path": "recovered-original/source-receipt.json",
+      "original_authority_record": {
+        "path": "docs/qualification/explorer-replay-selection-anvil-d3745/source-receipt.json",
+        "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/source-receipt.json",
+        "bytes": 3149,
+        "sha256": "5102489620bc7b9b884233aa284b59b0b02fd1c5c9c4bca53a6d7df12c21df86",
+        "git_blob": "1a491fa4430f99cc745a46f06a86c7c6effbbd5a",
+        "mode": "100644",
+        "role": "support"
+      },
+      "detached_raw_git_readback": "byte-equal after read-only native recovery"
+    },
+    {
+      "retained_path": "recovered-original/author/candidate-1.stdout",
+      "original_authority_record": {
+        "path": "docs/qualification/explorer-replay-selection-anvil-d3745/author/candidate-1.stdout",
+        "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-replay-selection/author/candidate-1.stdout",
+        "bytes": 2154,
+        "sha256": "5c8121cb2039827bc0dde5730dfe34ae29ba39029f780d6666f9e1bbe987e018",
+        "git_blob": "0b31d591fa1d037cda7e331d2c1eca4f8421142a",
+        "mode": "100644",
+        "role": "support"
+      },
+      "detached_raw_git_readback": "byte-equal after read-only native recovery"
+    }
+  ],
+  "scope": "Exact original native bodies recovered through read-only calls after original publication; no regenerated timestamp, reconstruction, source edit or product replay. Historical missing-body disclosures are unchanged."
+}
