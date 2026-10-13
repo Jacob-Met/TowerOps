@@ -13,6 +13,19 @@ existing native planner and returns every individually screened alternative.
 It preserves the saved input and performs no actuation. See [PLAN_WORLD.md](PLAN_WORLD.md)
 for file/stdin use, clock and policy settings, complete results, and refusal limits.
 
+For a saved synthetic Explorer result, select its before or after world explicitly
+and pass it to the same planner. In Bash:
+
+```bash
+set -o pipefail
+python3 explorer_world.py approved-explorer.json --phase before | python3 plan_world.py -
+python3 explorer_world.py approved-explorer.json --phase after | python3 plan_world.py -
+```
+
+Replay recomputes the local synthetic fixture; the planner results remain
+`proposal_only: true`. See [EXPLORER_WORLD.md](EXPLORER_WORLD.md) for creating
+an export, complete replay validation and refusal statuses.
+
 `python3 compare_plans.py left.plan.json right.plan.json` compares saved policy
 experiments for the same exact native world and review clock, showing policy
 changes and complete advisory membership/order without planning again.
