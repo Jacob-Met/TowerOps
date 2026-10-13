@@ -1,0 +1,84 @@
+{
+  "format": "towerops.audit-cli-depth-receiving.v1",
+  "objective": "Return the audit CLI input-error status when JSON decoding raises RecursionError.",
+  "issue": "https://github.com/Jacob-Met/TowerOps/issues/108",
+  "owner": "HAMON dc7255e161d3/estate_source",
+  "parent": "ab6546256b2dbcfb8715d744856d40193aa0a321",
+  "parent_tree": "c153922887b74df9e445c9bcebabd75845f06ea8",
+  "original_witness_parent": "b893a67a9d0db4227ae7417ecf083b6ed49dfe41",
+  "changes": [
+    {
+      "path": "audit_replay.py",
+      "original_blob": "a364b810a51afef39e8467b3afb6b870797cceed",
+      "candidate_blob": "607b8b0893fcc4489d16addec0d6aab17505b38e",
+      "sha256": "26898f975d0c3c61847954a761dbc32b7eaa549e3c3c32a8be1cb5a288a22d71",
+      "scope": "Add RecursionError only to main's _load_events exception tuple."
+    },
+    {
+      "path": "tests/test_audit_replay_depth.py",
+      "candidate_blob": "86f2673505877997e9c2c81809ccec36940eeec9",
+      "sha256": "e0a670ea441f4e8637776bb9c204d5fd31064ae13db855aece627d415001e9d0",
+      "scope": "Actual file/stdin subprocess regressions; exit 2, empty stdout, error prefix, no traceback, file bytes preserved."
+    }
+  ],
+  "witness": {
+    "input": "10,000 opening brackets, digit 0, 10,000 closing brackets (20,001 ASCII bytes).",
+    "python": "CPython 3.12.8",
+    "original": "File and stdin both exit 1 with a json.loads RecursionError traceback and empty stdout.",
+    "regression_command": "python -m pytest -q tests/test_audit_replay_depth.py tests/test_audit_replay.py tests/test_trace_duplicate_fields.py tests/test_audit_world_linkage.py",
+    "original_result": "2 failed, 51 passed",
+    "original_receipt_sha256": "55dab9f4b676348b5984b19fdcf52d5ad07e6283e3d4652cba34338652c56221",
+    "version_limit": "CPython 3.14.4 accepts this nesting depth and then rejects the malformed event shape. This is a compatibility control on that runtime, not a decoder-failure reproduction."
+  },
+  "validation": [
+    {
+      "platform": "macOS",
+      "python": "3.12.8",
+      "pytest": "8.3.5",
+      "parent": "b893a67a9d0db4227ae7417ecf083b6ed49dfe41",
+      "command": "python -m pytest -q",
+      "exit": 1,
+      "result": "227 passed, 1 skipped, 1 failed",
+      "failure": "tests/test_compare_plans.py::test_frozen_independent_receiving requires Linux /dev/full, unavailable on this Mac.",
+      "receipt_sha256": "32f87915cc830e69fde9405316685813cee059bd90c5e914dc781e6e9e77a7f2"
+    },
+    {
+      "platform": "macOS",
+      "python": "3.12.8",
+      "ruff": "0.16.10",
+      "command": "python -m ruff check .",
+      "exit": 0,
+      "result": "All checks passed."
+    },
+    {
+      "platform": "Linux",
+      "python": "3.14.4",
+      "pytest": "9.0.2",
+      "parent": "ab6546256b2dbcfb8715d744856d40193aa0a321",
+      "command": "python3 -m pytest -q",
+      "exit": 0,
+      "result": "239 passed, 227 subtests passed in 7.44s",
+      "receipt_sha256": "c859e6806ab338917c7ebbfa773718b6c551c7da6935d880840093c37a12d5fb"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0,
+      "result": "Clean."
+    }
+  ],
+  "review": {
+    "reviewer": "HAMON dc7255e161d3/estate_context",
+    "outcome": "Accepted; no blocking findings.",
+    "basis": "Independent full-file source and test review, exact native file identities, one-line diff, original failure receipts and composed Linux/Mac receipt readback.",
+    "limit": "Reviewer did not independently rerun the tests."
+  },
+  "delivery": {
+    "branch": "estate-dc7255e161d3/audit-cli-depth",
+    "commit_markers": [
+      "[skip ci]",
+      "[skip actions]"
+    ],
+    "actions": "No workflow dispatch or rerun; workflow and gate files unchanged.",
+    "handoff": "Review the isolated source branch for ordinary guarded integration."
+  }
+}

@@ -200,7 +200,7 @@ def main(argv: list[str]) -> int:
     source = argv[1] if len(argv) > 1 else "-"
     try:
         events = _load_events(source)
-    except (OSError, ValueError, json.JSONDecodeError) as exc:
+    except (OSError, ValueError, json.JSONDecodeError, RecursionError) as exc:
         print(f"error: cannot load audit events: {exc}", file=sys.stderr)
         return 2
     try:
