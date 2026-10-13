@@ -1,0 +1,92 @@
+{
+  "schema": "hamon.loom.towerops-explain-criteria-freeze.v1",
+  "frozen_at": "2026-10-13T15:37:02.735948+00:00",
+  "candidate_exposure": "Public issue/DOM contract and original adopted source only; root has confirmed no candidate authored yet. Driver freeze will be separate before candidate exposure.",
+  "files": [
+    {
+      "path": "criteria.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+      "bytes": 13808,
+      "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505",
+      "git_blob": "5dd177e0a81cfbe9ea5de7c24607ea000812b9b0"
+    },
+    {
+      "path": "fixtures/B.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/B.json",
+      "bytes": 5684,
+      "sha256": "5d00c4c20385b398c4e60d84326924fab2cabaae7b2c95cc1ebe046e340af5b0",
+      "git_blob": "dfec8463586c95aea115a8da44e5bde99367608b"
+    },
+    {
+      "path": "fixtures/C.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+      "bytes": 5787,
+      "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+      "git_blob": "db412d6bb280316a5f15037982d5e998caeb83dd"
+    },
+    {
+      "path": "fixtures/D.json",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/D.json",
+      "bytes": 6474,
+      "sha256": "c02df565471b55487479efce0712cd5c1e88ebd83adca3c70ffea7d443fb601f",
+      "git_blob": "16ec67df84d48ec0f7a565485d4dfbef27266048"
+    },
+    {
+      "path": "original-source/explorer.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/explorer.py",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+      "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a"
+    },
+    {
+      "path": "original-source/replay_explain.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6"
+    },
+    {
+      "path": "original-source/web/app.js",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/web/app.js",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "git_blob": "c340207635b819d0877797b2c84002b79865660d"
+    },
+    {
+      "path": "original-source/web/index.html",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/web/index.html",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b"
+    },
+    {
+      "path": "original-source/web/style.css",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/web/style.css",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb"
+    },
+    {
+      "path": "original-source/scenarios.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b"
+    },
+    {
+      "path": "original-source/towerops.py",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5"
+    },
+    {
+      "path": "original-source/EXPLORER.md",
+      "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-source/EXPLORER.md",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+      "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d"
+    }
+  ],
+  "earlier_cloud_attempt": "Shared cloud posix_fallocate failed ENOSPC before a complete criteria file; no cloud freeze accepted. Native explicit save is the first completed freeze."
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "hamon.loom.towerops-explain-visual-freeze.v2",
+  "at": "2026-10-13T16:32:07.946485+00:00",
+  "receiver": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-visual-C-v2.cjs",
+    "bytes": 8767,
+    "sha256": "f682ba774ccac3d8e7e8e348896e315a3c79dea64b5a1477458919028500c0e4"
+  },
+  "candidate_spec": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-spec-v1.json",
+    "bytes": 4233,
+    "sha256": "00f953e8b555d528a11029bc79f1b31d6112bdf566ed758546008c47bbe84f93"
+  },
+  "prior_course": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/candidate-v2/receipt.json",
+    "bytes": 689799,
+    "sha256": "ee3d0afd77da9bd6c6d3c37517956b4ad48ce1928c5f48774ddfcfdead584181"
+  },
+  "previous_freeze": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-freeze-v1.json",
+    "bytes": 1024,
+    "sha256": "794dc1a3fb567dc69d4fe86c50a8d5832f4426730df801eb8d8662c05dabf64b"
+  },
+  "previous_failure": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-v1-failure-and-cleanup.json",
+    "bytes": 1806,
+    "sha256": "53a9065e9cec01392d16670b1f45c466824fc590a4f315ee13632a6c274f70c7"
+  },
+  "patch": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-receiver-v1-to-v2.patch",
+    "bytes": 6579,
+    "sha256": "8fbfa48089f2ad4a18ed0bcdc76a8ac6600682c71e3663a9e1e9b0d46f4a9d5c"
+  },
+  "reason": "Firefox BiDi request.postData is unsupported. This visual-only observer now retains supported POST path/status and actual selected File text; the already accepted prior course retains all request/backend bodies. No product changes or behavior-course replay.",
+  "exposure": "Post-exposure visual-only receiving; both source and85-check result already known.",
+  "syntax": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

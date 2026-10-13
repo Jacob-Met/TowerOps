@@ -1,0 +1,1996 @@
+{
+  "schema": "hamon.loom.towerops-explain-browser.v1",
+  "variant": "original",
+  "started": "2026-10-13T16:01:04.270Z",
+  "source_spec": {
+    "schema": "hamon.loom.towerops-explain-source-spec.v1",
+    "variant": "original",
+    "commit": "fd0c5e829d89c9e88ac310ed237b74588fddfd09",
+    "source_publication": "Exact adopted CLI explanation helper and old browser; new explanation UI absent.",
+    "python": "/usr/bin/python3",
+    "browser_module": "/home/jacob/.local/lib/node_modules/@wonderwhy-er/desktop-commander/node_modules/puppeteer",
+    "browser_executable": "/usr/bin/firefox",
+    "files": [
+      {
+        "path": "EXPLORER.md",
+        "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/EXPLORER.md",
+        "bytes": 7158,
+        "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+        "mode": "0o644",
+        "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d",
+        "git_mode": "100644"
+      },
+      {
+        "path": "explorer.py",
+        "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/explorer.py",
+        "bytes": 7423,
+        "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+        "mode": "0o755",
+        "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a",
+        "git_mode": "100755"
+      },
+      {
+        "path": "replay_explain.py",
+        "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/replay_explain.py",
+        "bytes": 5432,
+        "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+        "mode": "0o644",
+        "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+        "git_mode": "100644"
+      },
+      {
+        "path": "scenarios.py",
+        "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/scenarios.py",
+        "bytes": 5989,
+        "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+        "mode": "0o644",
+        "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+        "git_mode": "100644"
+      },
+      {
+        "path": "towerops.py",
+        "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/towerops.py",
+        "bytes": 19684,
+        "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+        "mode": "0o644",
+        "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+        "git_mode": "100644"
+      },
+      {
+        "path": "web/app.js",
+        "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/app.js",
+        "bytes": 6147,
+        "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+        "mode": "0o644",
+        "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+        "git_mode": "100644"
+      },
+      {
+        "path": "web/index.html",
+        "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/index.html",
+        "bytes": 3396,
+        "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+        "mode": "0o644",
+        "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b",
+        "git_mode": "100644"
+      },
+      {
+        "path": "web/style.css",
+        "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/style.css",
+        "bytes": 2037,
+        "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+        "mode": "0o644",
+        "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb",
+        "git_mode": "100644"
+      }
+    ],
+    "runtime": {
+      "python": {
+        "argv": [
+          "/usr/bin/python3",
+          "--version"
+        ],
+        "stdout": "Python 3.14.4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "node": {
+        "argv": [
+          "/usr/bin/node",
+          "--version"
+        ],
+        "stdout": "v22.22.1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "firefox": {
+        "argv": [
+          "/usr/bin/firefox",
+          "--version"
+        ],
+        "stdout": "Mozilla Firefox 157.0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    },
+    "canonical_mode_projection": "Frozen original-source remains untouched; original-runtime copies exact eight Git bodies with published modes. In particular explorer.py is 0755 here."
+  },
+  "source_before": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/EXPLORER.md",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/explorer.py",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+      "mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/app.js",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/index.html",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/style.css",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "mode": "0o644"
+    }
+  ],
+  "controls_before": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v1.cjs",
+      "bytes": 21435,
+      "sha256": "2fc30ab95dccdb66c9ef2bef9b3519fcc579423bee6fc0ebe364a24a73d1634a",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+      "bytes": 13808,
+      "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/driver-freeze-v1.json",
+      "bytes": 2412,
+      "sha256": "30e1cd5cff25bc19ccbffdcbbab0ec74a7fb2f43da663b0414ac51c0e2bd496e",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria-freeze.json",
+      "bytes": 4416,
+      "sha256": "43eab80cff5e55607ff0a6bebd4168134cf8098e456ab66c6d75527d741d6c5b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-spec.json",
+      "bytes": 4128,
+      "sha256": "89b1be732c20cc11df7a161ac9ddfa27bce1f97acbb8ab74081c57979b4abe16",
+      "mode": "0o644"
+    }
+  ],
+  "fixtures_before": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/A.json",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/B.json",
+      "bytes": 5684,
+      "sha256": "5d00c4c20385b398c4e60d84326924fab2cabaae7b2c95cc1ebe046e340af5b0",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+      "bytes": 5787,
+      "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/D.json",
+      "bytes": 6474,
+      "sha256": "c02df565471b55487479efce0712cd5c1e88ebd83adca3c70ffea7d443fb601f",
+      "mode": "0o644"
+    }
+  ],
+  "checks": [
+    {
+      "id": "production.run-export",
+      "actual": {
+        "format": "towerops.synthetic-explorer.v1",
+        "disclaimer": "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+        "request": {
+          "scenario": "approved",
+          "include_approval": true,
+          "include_ack": true
+        },
+        "label": "Approval + acknowledgement",
+        "description": "Both exact-hash fixtures arrive before simulated dispatch.",
+        "simulation_clock": {
+          "dispatch_sec": 1002.5,
+          "observed_sec": 1001,
+          "projection_horizon_min": 5
+        },
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "before": {
+          "version": 1,
+          "observed_at": 1001,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "after": {
+          "version": 2,
+          "observed_at": 1002.5,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 2,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424",
+        "advisory": {
+          "aircraft_id": "FIXTURE-B",
+          "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery"
+        },
+        "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+        "fixtures": {
+          "approval": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "decision": "approve",
+            "approved_at": 1002.2,
+            "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+          },
+          "ack": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "status": "accepted",
+            "acknowledged_at": 1002.4
+          }
+        },
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "before_conflict": true,
+        "after_conflict": false,
+        "audit_events": [
+          {
+            "seq": 0,
+            "kind": "fixture_proposal",
+            "payload": {
+              "scenario": "approved",
+              "source_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory": {
+                "aircraft_id": "FIXTURE-B",
+                "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+                "set_vx_nm_min": -1,
+                "set_vy_nm_min": 2,
+                "set_climb_ft_min": 0,
+                "issued_at": 1002,
+                "expires_at": 1010,
+                "rationale": "synthetic projected-separation recovery"
+              },
+              "simulation_only": true
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d"
+          },
+          {
+            "seq": 1,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory_hashes": [
+                "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+              ]
+            },
+            "prev_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d",
+            "event_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12"
+          },
+          {
+            "seq": 2,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+            },
+            "prev_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12",
+            "event_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d"
+          },
+          {
+            "seq": 3,
+            "kind": "ack",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "status": "accepted",
+              "acknowledged_at": 1002.4
+            },
+            "prev_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d",
+            "event_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee"
+          },
+          {
+            "seq": 4,
+            "kind": "simulated_actuation",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424"
+            },
+            "prev_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee",
+            "event_hash": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778"
+          }
+        ],
+        "audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "audit_valid": true
+      },
+      "expected": {
+        "format": "towerops.synthetic-explorer.v1",
+        "disclaimer": "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+        "request": {
+          "scenario": "approved",
+          "include_approval": true,
+          "include_ack": true
+        },
+        "label": "Approval + acknowledgement",
+        "description": "Both exact-hash fixtures arrive before simulated dispatch.",
+        "simulation_clock": {
+          "dispatch_sec": 1002.5,
+          "observed_sec": 1001,
+          "projection_horizon_min": 5
+        },
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "before": {
+          "version": 1,
+          "observed_at": 1001,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "after": {
+          "version": 2,
+          "observed_at": 1002.5,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 2,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424",
+        "advisory": {
+          "aircraft_id": "FIXTURE-B",
+          "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery"
+        },
+        "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+        "fixtures": {
+          "approval": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "decision": "approve",
+            "approved_at": 1002.2,
+            "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+          },
+          "ack": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "status": "accepted",
+            "acknowledged_at": 1002.4
+          }
+        },
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "before_conflict": true,
+        "after_conflict": false,
+        "audit_events": [
+          {
+            "seq": 0,
+            "kind": "fixture_proposal",
+            "payload": {
+              "scenario": "approved",
+              "source_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory": {
+                "aircraft_id": "FIXTURE-B",
+                "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+                "set_vx_nm_min": -1,
+                "set_vy_nm_min": 2,
+                "set_climb_ft_min": 0,
+                "issued_at": 1002,
+                "expires_at": 1010,
+                "rationale": "synthetic projected-separation recovery"
+              },
+              "simulation_only": true
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d"
+          },
+          {
+            "seq": 1,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory_hashes": [
+                "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+              ]
+            },
+            "prev_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d",
+            "event_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12"
+          },
+          {
+            "seq": 2,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+            },
+            "prev_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12",
+            "event_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d"
+          },
+          {
+            "seq": 3,
+            "kind": "ack",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "status": "accepted",
+              "acknowledged_at": 1002.4
+            },
+            "prev_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d",
+            "event_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee"
+          },
+          {
+            "seq": 4,
+            "kind": "simulated_actuation",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424"
+            },
+            "prev_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee",
+            "event_hash": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778"
+          }
+        ],
+        "audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "audit_valid": true
+      },
+      "pass": true
+    },
+    {
+      "id": "ordinary.B.7.body",
+      "actual": {
+        "format": "towerops.synthetic-explorer.v1",
+        "disclaimer": "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+        "request": {
+          "scenario": "approved",
+          "include_approval": true,
+          "include_ack": true
+        },
+        "label": "Approval + acknowledgement",
+        "description": "Both exact-hash fixtures arrive before simulated dispatch.",
+        "simulation_clock": {
+          "dispatch_sec": 1002.5,
+          "observed_sec": 1001,
+          "projection_horizon_min": 5
+        },
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "before": {
+          "version": 1,
+          "observed_at": 1001,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "after": {
+          "version": 3,
+          "observed_at": 1002.5,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 2,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424",
+        "advisory": {
+          "aircraft_id": "FIXTURE-B",
+          "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery"
+        },
+        "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+        "fixtures": {
+          "approval": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "decision": "approve",
+            "approved_at": 1002.2,
+            "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+          },
+          "ack": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "status": "accepted",
+            "acknowledged_at": 1002.4
+          }
+        },
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "before_conflict": true,
+        "after_conflict": false,
+        "audit_events": [
+          {
+            "seq": 0,
+            "kind": "fixture_proposal",
+            "payload": {
+              "scenario": "approved",
+              "source_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory": {
+                "aircraft_id": "FIXTURE-B",
+                "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+                "set_vx_nm_min": -1,
+                "set_vy_nm_min": 2,
+                "set_climb_ft_min": 0,
+                "issued_at": 1002,
+                "expires_at": 1010,
+                "rationale": "synthetic projected-separation recovery"
+              },
+              "simulation_only": true
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d"
+          },
+          {
+            "seq": 1,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory_hashes": [
+                "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+              ]
+            },
+            "prev_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d",
+            "event_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12"
+          },
+          {
+            "seq": 2,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+            },
+            "prev_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12",
+            "event_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d"
+          },
+          {
+            "seq": 3,
+            "kind": "ack",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "status": "accepted",
+              "acknowledged_at": 1002.4
+            },
+            "prev_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d",
+            "event_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee"
+          },
+          {
+            "seq": 4,
+            "kind": "simulated_actuation",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424"
+            },
+            "prev_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee",
+            "event_hash": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778"
+          }
+        ],
+        "audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "audit_valid": true
+      },
+      "expected": {
+        "format": "towerops.synthetic-explorer.v1",
+        "disclaimer": "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+        "request": {
+          "scenario": "approved",
+          "include_approval": true,
+          "include_ack": true
+        },
+        "label": "Approval + acknowledgement",
+        "description": "Both exact-hash fixtures arrive before simulated dispatch.",
+        "simulation_clock": {
+          "dispatch_sec": 1002.5,
+          "observed_sec": 1001,
+          "projection_horizon_min": 5
+        },
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "before": {
+          "version": 1,
+          "observed_at": 1001,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "after": {
+          "version": 3,
+          "observed_at": 1002.5,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 2,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424",
+        "advisory": {
+          "aircraft_id": "FIXTURE-B",
+          "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery"
+        },
+        "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+        "fixtures": {
+          "approval": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "decision": "approve",
+            "approved_at": 1002.2,
+            "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+          },
+          "ack": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "status": "accepted",
+            "acknowledged_at": 1002.4
+          }
+        },
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "before_conflict": true,
+        "after_conflict": false,
+        "audit_events": [
+          {
+            "seq": 0,
+            "kind": "fixture_proposal",
+            "payload": {
+              "scenario": "approved",
+              "source_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory": {
+                "aircraft_id": "FIXTURE-B",
+                "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+                "set_vx_nm_min": -1,
+                "set_vy_nm_min": 2,
+                "set_climb_ft_min": 0,
+                "issued_at": 1002,
+                "expires_at": 1010,
+                "rationale": "synthetic projected-separation recovery"
+              },
+              "simulation_only": true
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d"
+          },
+          {
+            "seq": 1,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory_hashes": [
+                "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+              ]
+            },
+            "prev_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d",
+            "event_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12"
+          },
+          {
+            "seq": 2,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+            },
+            "prev_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12",
+            "event_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d"
+          },
+          {
+            "seq": 3,
+            "kind": "ack",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "status": "accepted",
+              "acknowledged_at": 1002.4
+            },
+            "prev_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d",
+            "event_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee"
+          },
+          {
+            "seq": 4,
+            "kind": "simulated_actuation",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424"
+            },
+            "prev_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee",
+            "event_hash": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778"
+          }
+        ],
+        "audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "audit_valid": true
+      },
+      "pass": true
+    },
+    {
+      "id": "ordinary.B.7.reply",
+      "actual": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "expected": {
+        "matches": false,
+        "audit_valid": true,
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "expected_audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+      },
+      "pass": true
+    },
+    {
+      "id": "ordinary.no-auto-explanation",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "id": "original.action-absent",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "id": "original.endpoint-absent",
+      "actual": 404,
+      "expected": 404,
+      "pass": true
+    },
+    {
+      "id": "original.post-paths",
+      "actual": [
+        "/api/run",
+        "/api/replay",
+        "/api/replay/explain"
+      ],
+      "expected": [
+        "/api/run",
+        "/api/replay",
+        "/api/replay/explain"
+      ],
+      "pass": true
+    },
+    {
+      "id": "display.unchanged",
+      "actual": {
+        "result": "<h2 id=\"outcome\" class=\"\">Fixture accepted · simulated actuation only</h2><p id=\"reason\">Exact-hash fixture approval and acknowledgement passed the engine gates.</p><div class=\"metrics\"><p id=\"conflicts\">Projected conflict: before true → after false</p><p id=\"clock\">Observation 1001s · dispatch 1002.5s (synthetic)</p></div>\n<label for=\"minute\">Projected time <output id=\"minute-label\">0.0 min</output></label><input id=\"minute\" type=\"range\" min=\"0\" max=\"5\" step=\"0.1\" value=\"0\"><p class=\"hint\">This slider projects the constant-velocity model in minutes. It does not advance the gate's synthetic dispatch clock (seconds). Dotted paths are projections, not live tracks.</p>\n<div class=\"plots\"><section><h3>Before proposal</h3><svg id=\"before\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories before gating\"><line x1=\"50\" y1=\"25\" x2=\"50\" y2=\"325\" stroke=\"#293952\"></line><text x=\"50\" y=\"348\" text-anchor=\"middle\">-6</text><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"325\" stroke=\"#293952\"></line><text x=\"120\" y=\"348\" text-anchor=\"middle\">-4</text><line x1=\"190\" y1=\"25\" x2=\"190\" y2=\"325\" stroke=\"#293952\"></line><text x=\"190\" y=\"348\" text-anchor=\"middle\">-2</text><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"325\" stroke=\"#293952\"></line><text x=\"260\" y=\"348\" text-anchor=\"middle\">0</text><line x1=\"330\" y1=\"25\" x2=\"330\" y2=\"325\" stroke=\"#293952\"></line><text x=\"330\" y=\"348\" text-anchor=\"middle\">2</text><line x1=\"400\" y1=\"25\" x2=\"400\" y2=\"325\" stroke=\"#293952\"></line><text x=\"400\" y=\"348\" text-anchor=\"middle\">4</text><line x1=\"470\" y1=\"25\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"470\" y=\"348\" text-anchor=\"middle\">6</text><line x1=\"50\" y1=\"325\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"34\" y=\"330\" text-anchor=\"end\">0</text><line x1=\"50\" y1=\"273\" x2=\"470\" y2=\"273\" stroke=\"#293952\"></line><text x=\"34\" y=\"278\" text-anchor=\"end\">2</text><line x1=\"50\" y1=\"221\" x2=\"470\" y2=\"221\" stroke=\"#293952\"></line><text x=\"34\" y=\"226\" text-anchor=\"end\">4</text><line x1=\"50\" y1=\"169\" x2=\"470\" y2=\"169\" stroke=\"#293952\"></line><text x=\"34\" y=\"174\" text-anchor=\"end\">6</text><line x1=\"50\" y1=\"117\" x2=\"470\" y2=\"117\" stroke=\"#293952\"></line><text x=\"34\" y=\"122\" text-anchor=\"end\">8</text><line x1=\"50\" y1=\"65\" x2=\"470\" y2=\"65\" stroke=\"#293952\"></line><text x=\"34\" y=\"70\" text-anchor=\"end\">10</text><text x=\"255\" y=\"377\" text-anchor=\"middle\">x / nautical miles (synthetic)</text><text x=\"50\" y=\"18\">y / nm • both at 10,000 fixture ft</text><line x1=\"85\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#74d7cf\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"85\" cy=\"325\" r=\"8\" fill=\"#74d7cf\"></circle><text x=\"97\" y=\"311\" fill=\"#74d7cf\">FIXTURE-A</text><line x1=\"435\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#eec277\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"435\" cy=\"325\" r=\"8\" fill=\"#eec277\"></circle><text x=\"430\" y=\"311\" fill=\"#eec277\">FIXTURE-B</text></svg></section><section><h3 id=\"after-title\">After simulated advisory</h3><svg id=\"after\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories after gating\"><line x1=\"50\" y1=\"25\" x2=\"50\" y2=\"325\" stroke=\"#293952\"></line><text x=\"50\" y=\"348\" text-anchor=\"middle\">-6</text><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"325\" stroke=\"#293952\"></line><text x=\"120\" y=\"348\" text-anchor=\"middle\">-4</text><line x1=\"190\" y1=\"25\" x2=\"190\" y2=\"325\" stroke=\"#293952\"></line><text x=\"190\" y=\"348\" text-anchor=\"middle\">-2</text><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"325\" stroke=\"#293952\"></line><text x=\"260\" y=\"348\" text-anchor=\"middle\">0</text><line x1=\"330\" y1=\"25\" x2=\"330\" y2=\"325\" stroke=\"#293952\"></line><text x=\"330\" y=\"348\" text-anchor=\"middle\">2</text><line x1=\"400\" y1=\"25\" x2=\"400\" y2=\"325\" stroke=\"#293952\"></line><text x=\"400\" y=\"348\" text-anchor=\"middle\">4</text><line x1=\"470\" y1=\"25\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"470\" y=\"348\" text-anchor=\"middle\">6</text><line x1=\"50\" y1=\"325\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"34\" y=\"330\" text-anchor=\"end\">0</text><line x1=\"50\" y1=\"273\" x2=\"470\" y2=\"273\" stroke=\"#293952\"></line><text x=\"34\" y=\"278\" text-anchor=\"end\">2</text><line x1=\"50\" y1=\"221\" x2=\"470\" y2=\"221\" stroke=\"#293952\"></line><text x=\"34\" y=\"226\" text-anchor=\"end\">4</text><line x1=\"50\" y1=\"169\" x2=\"470\" y2=\"169\" stroke=\"#293952\"></line><text x=\"34\" y=\"174\" text-anchor=\"end\">6</text><line x1=\"50\" y1=\"117\" x2=\"470\" y2=\"117\" stroke=\"#293952\"></line><text x=\"34\" y=\"122\" text-anchor=\"end\">8</text><line x1=\"50\" y1=\"65\" x2=\"470\" y2=\"65\" stroke=\"#293952\"></line><text x=\"34\" y=\"70\" text-anchor=\"end\">10</text><text x=\"255\" y=\"377\" text-anchor=\"middle\">x / nautical miles (synthetic)</text><text x=\"50\" y=\"18\">y / nm • both at 10,000 fixture ft</text><line x1=\"85\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#74d7cf\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"85\" cy=\"325\" r=\"8\" fill=\"#74d7cf\"></circle><text x=\"97\" y=\"311\" fill=\"#74d7cf\">FIXTURE-A</text><line x1=\"435\" y1=\"325\" x2=\"260\" y2=\"65\" stroke=\"#eec277\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"435\" cy=\"325\" r=\"8\" fill=\"#eec277\"></circle><text x=\"430\" y=\"311\" fill=\"#eec277\">FIXTURE-B</text></svg></section></div>\n<section class=\"details\"><h2>Advisory &amp; fixture inputs</h2><pre id=\"advisory\">{\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"status\": \"accepted\",\n      \"acknowledged_at\": 1002.4\n    }\n  }\n}</pre><h2>Audit timeline</h2><p id=\"chain\">Local chain valid: true · head 7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778</p><ol id=\"timeline\"><li><strong>1. fixture_proposal</strong><pre>{\n  \"scenario\": \"approved\",\n  \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"simulation_only\": true\n}</pre></li><li><strong>2. screen_pass</strong><pre>{\n  \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory_hashes\": [\n    \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n  ]\n}</pre></li><li><strong>3. approval</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"decision\": \"approve\",\n  \"approved_at\": 1002.2,\n  \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n}</pre></li><li><strong>4. ack</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"status\": \"accepted\",\n  \"acknowledged_at\": 1002.4\n}</pre></li><li><strong>5. simulated_actuation</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"\n}</pre></li></ol></section>",
+        "status": "Result: Approval + acknowledgement. Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+        "export_disabled": false
+      },
+      "expected": {
+        "result": "<h2 id=\"outcome\" class=\"\">Fixture accepted · simulated actuation only</h2><p id=\"reason\">Exact-hash fixture approval and acknowledgement passed the engine gates.</p><div class=\"metrics\"><p id=\"conflicts\">Projected conflict: before true → after false</p><p id=\"clock\">Observation 1001s · dispatch 1002.5s (synthetic)</p></div>\n<label for=\"minute\">Projected time <output id=\"minute-label\">0.0 min</output></label><input id=\"minute\" type=\"range\" min=\"0\" max=\"5\" step=\"0.1\" value=\"0\"><p class=\"hint\">This slider projects the constant-velocity model in minutes. It does not advance the gate's synthetic dispatch clock (seconds). Dotted paths are projections, not live tracks.</p>\n<div class=\"plots\"><section><h3>Before proposal</h3><svg id=\"before\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories before gating\"><line x1=\"50\" y1=\"25\" x2=\"50\" y2=\"325\" stroke=\"#293952\"></line><text x=\"50\" y=\"348\" text-anchor=\"middle\">-6</text><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"325\" stroke=\"#293952\"></line><text x=\"120\" y=\"348\" text-anchor=\"middle\">-4</text><line x1=\"190\" y1=\"25\" x2=\"190\" y2=\"325\" stroke=\"#293952\"></line><text x=\"190\" y=\"348\" text-anchor=\"middle\">-2</text><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"325\" stroke=\"#293952\"></line><text x=\"260\" y=\"348\" text-anchor=\"middle\">0</text><line x1=\"330\" y1=\"25\" x2=\"330\" y2=\"325\" stroke=\"#293952\"></line><text x=\"330\" y=\"348\" text-anchor=\"middle\">2</text><line x1=\"400\" y1=\"25\" x2=\"400\" y2=\"325\" stroke=\"#293952\"></line><text x=\"400\" y=\"348\" text-anchor=\"middle\">4</text><line x1=\"470\" y1=\"25\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"470\" y=\"348\" text-anchor=\"middle\">6</text><line x1=\"50\" y1=\"325\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"34\" y=\"330\" text-anchor=\"end\">0</text><line x1=\"50\" y1=\"273\" x2=\"470\" y2=\"273\" stroke=\"#293952\"></line><text x=\"34\" y=\"278\" text-anchor=\"end\">2</text><line x1=\"50\" y1=\"221\" x2=\"470\" y2=\"221\" stroke=\"#293952\"></line><text x=\"34\" y=\"226\" text-anchor=\"end\">4</text><line x1=\"50\" y1=\"169\" x2=\"470\" y2=\"169\" stroke=\"#293952\"></line><text x=\"34\" y=\"174\" text-anchor=\"end\">6</text><line x1=\"50\" y1=\"117\" x2=\"470\" y2=\"117\" stroke=\"#293952\"></line><text x=\"34\" y=\"122\" text-anchor=\"end\">8</text><line x1=\"50\" y1=\"65\" x2=\"470\" y2=\"65\" stroke=\"#293952\"></line><text x=\"34\" y=\"70\" text-anchor=\"end\">10</text><text x=\"255\" y=\"377\" text-anchor=\"middle\">x / nautical miles (synthetic)</text><text x=\"50\" y=\"18\">y / nm • both at 10,000 fixture ft</text><line x1=\"85\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#74d7cf\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"85\" cy=\"325\" r=\"8\" fill=\"#74d7cf\"></circle><text x=\"97\" y=\"311\" fill=\"#74d7cf\">FIXTURE-A</text><line x1=\"435\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#eec277\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"435\" cy=\"325\" r=\"8\" fill=\"#eec277\"></circle><text x=\"430\" y=\"311\" fill=\"#eec277\">FIXTURE-B</text></svg></section><section><h3 id=\"after-title\">After simulated advisory</h3><svg id=\"after\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories after gating\"><line x1=\"50\" y1=\"25\" x2=\"50\" y2=\"325\" stroke=\"#293952\"></line><text x=\"50\" y=\"348\" text-anchor=\"middle\">-6</text><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"325\" stroke=\"#293952\"></line><text x=\"120\" y=\"348\" text-anchor=\"middle\">-4</text><line x1=\"190\" y1=\"25\" x2=\"190\" y2=\"325\" stroke=\"#293952\"></line><text x=\"190\" y=\"348\" text-anchor=\"middle\">-2</text><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"325\" stroke=\"#293952\"></line><text x=\"260\" y=\"348\" text-anchor=\"middle\">0</text><line x1=\"330\" y1=\"25\" x2=\"330\" y2=\"325\" stroke=\"#293952\"></line><text x=\"330\" y=\"348\" text-anchor=\"middle\">2</text><line x1=\"400\" y1=\"25\" x2=\"400\" y2=\"325\" stroke=\"#293952\"></line><text x=\"400\" y=\"348\" text-anchor=\"middle\">4</text><line x1=\"470\" y1=\"25\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"470\" y=\"348\" text-anchor=\"middle\">6</text><line x1=\"50\" y1=\"325\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"34\" y=\"330\" text-anchor=\"end\">0</text><line x1=\"50\" y1=\"273\" x2=\"470\" y2=\"273\" stroke=\"#293952\"></line><text x=\"34\" y=\"278\" text-anchor=\"end\">2</text><line x1=\"50\" y1=\"221\" x2=\"470\" y2=\"221\" stroke=\"#293952\"></line><text x=\"34\" y=\"226\" text-anchor=\"end\">4</text><line x1=\"50\" y1=\"169\" x2=\"470\" y2=\"169\" stroke=\"#293952\"></line><text x=\"34\" y=\"174\" text-anchor=\"end\">6</text><line x1=\"50\" y1=\"117\" x2=\"470\" y2=\"117\" stroke=\"#293952\"></line><text x=\"34\" y=\"122\" text-anchor=\"end\">8</text><line x1=\"50\" y1=\"65\" x2=\"470\" y2=\"65\" stroke=\"#293952\"></line><text x=\"34\" y=\"70\" text-anchor=\"end\">10</text><text x=\"255\" y=\"377\" text-anchor=\"middle\">x / nautical miles (synthetic)</text><text x=\"50\" y=\"18\">y / nm • both at 10,000 fixture ft</text><line x1=\"85\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#74d7cf\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"85\" cy=\"325\" r=\"8\" fill=\"#74d7cf\"></circle><text x=\"97\" y=\"311\" fill=\"#74d7cf\">FIXTURE-A</text><line x1=\"435\" y1=\"325\" x2=\"260\" y2=\"65\" stroke=\"#eec277\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"435\" cy=\"325\" r=\"8\" fill=\"#eec277\"></circle><text x=\"430\" y=\"311\" fill=\"#eec277\">FIXTURE-B</text></svg></section></div>\n<section class=\"details\"><h2>Advisory &amp; fixture inputs</h2><pre id=\"advisory\">{\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"status\": \"accepted\",\n      \"acknowledged_at\": 1002.4\n    }\n  }\n}</pre><h2>Audit timeline</h2><p id=\"chain\">Local chain valid: true · head 7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778</p><ol id=\"timeline\"><li><strong>1. fixture_proposal</strong><pre>{\n  \"scenario\": \"approved\",\n  \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"simulation_only\": true\n}</pre></li><li><strong>2. screen_pass</strong><pre>{\n  \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory_hashes\": [\n    \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n  ]\n}</pre></li><li><strong>3. approval</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"decision\": \"approve\",\n  \"approved_at\": 1002.2,\n  \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n}</pre></li><li><strong>4. ack</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"status\": \"accepted\",\n  \"acknowledged_at\": 1002.4\n}</pre></li><li><strong>5. simulated_actuation</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"\n}</pre></li></ol></section>",
+        "status": "Result: Approval + acknowledgement. Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+        "export_disabled": false
+      },
+      "pass": true
+    },
+    {
+      "id": "network.no-external",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "browser.no-page-errors",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "network.no-failed",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "relay.no-error",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "id": "source.preserved",
+      "actual": [
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/EXPLORER.md",
+          "bytes": 7158,
+          "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/explorer.py",
+          "bytes": 7423,
+          "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+          "mode": "0o755"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/replay_explain.py",
+          "bytes": 5432,
+          "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/scenarios.py",
+          "bytes": 5989,
+          "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/towerops.py",
+          "bytes": 19684,
+          "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/app.js",
+          "bytes": 6147,
+          "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/index.html",
+          "bytes": 3396,
+          "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/style.css",
+          "bytes": 2037,
+          "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+          "mode": "0o644"
+        }
+      ],
+      "expected": [
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/EXPLORER.md",
+          "bytes": 7158,
+          "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/explorer.py",
+          "bytes": 7423,
+          "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+          "mode": "0o755"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/replay_explain.py",
+          "bytes": 5432,
+          "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/scenarios.py",
+          "bytes": 5989,
+          "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/towerops.py",
+          "bytes": 19684,
+          "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/app.js",
+          "bytes": 6147,
+          "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/index.html",
+          "bytes": 3396,
+          "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/style.css",
+          "bytes": 2037,
+          "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+          "mode": "0o644"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "controls.preserved",
+      "actual": [
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v1.cjs",
+          "bytes": 21435,
+          "sha256": "2fc30ab95dccdb66c9ef2bef9b3519fcc579423bee6fc0ebe364a24a73d1634a",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+          "bytes": 13808,
+          "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/driver-freeze-v1.json",
+          "bytes": 2412,
+          "sha256": "30e1cd5cff25bc19ccbffdcbbab0ec74a7fb2f43da663b0414ac51c0e2bd496e",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria-freeze.json",
+          "bytes": 4416,
+          "sha256": "43eab80cff5e55607ff0a6bebd4168134cf8098e456ab66c6d75527d741d6c5b",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-spec.json",
+          "bytes": 4128,
+          "sha256": "89b1be732c20cc11df7a161ac9ddfa27bce1f97acbb8ab74081c57979b4abe16",
+          "mode": "0o644"
+        }
+      ],
+      "expected": [
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v1.cjs",
+          "bytes": 21435,
+          "sha256": "2fc30ab95dccdb66c9ef2bef9b3519fcc579423bee6fc0ebe364a24a73d1634a",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+          "bytes": 13808,
+          "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/driver-freeze-v1.json",
+          "bytes": 2412,
+          "sha256": "30e1cd5cff25bc19ccbffdcbbab0ec74a7fb2f43da663b0414ac51c0e2bd496e",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria-freeze.json",
+          "bytes": 4416,
+          "sha256": "43eab80cff5e55607ff0a6bebd4168134cf8098e456ab66c6d75527d741d6c5b",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-spec.json",
+          "bytes": 4128,
+          "sha256": "89b1be732c20cc11df7a161ac9ddfa27bce1f97acbb8ab74081c57979b4abe16",
+          "mode": "0o644"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "fixtures.preserved",
+      "actual": [
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/A.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/B.json",
+          "bytes": 5684,
+          "sha256": "5d00c4c20385b398c4e60d84326924fab2cabaae7b2c95cc1ebe046e340af5b0",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+          "bytes": 5787,
+          "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/D.json",
+          "bytes": 6474,
+          "sha256": "c02df565471b55487479efce0712cd5c1e88ebd83adca3c70ffea7d443fb601f",
+          "mode": "0o644"
+        }
+      ],
+      "expected": [
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/A.json",
+          "bytes": 5770,
+          "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/B.json",
+          "bytes": 5684,
+          "sha256": "5d00c4c20385b398c4e60d84326924fab2cabaae7b2c95cc1ebe046e340af5b0",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+          "bytes": 5787,
+          "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+          "mode": "0o644"
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/D.json",
+          "bytes": 6474,
+          "sha256": "c02df565471b55487479efce0712cd5c1e88ebd83adca3c70ffea7d443fb601f",
+          "mode": "0o644"
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "http": [
+    {
+      "id": 1,
+      "method": "GET",
+      "path": "/",
+      "request_body": "",
+      "request_json": null,
+      "backend_status": 200,
+      "backend_body": "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>TowerOps · Synthetic explorer</title><link rel=\"stylesheet\" href=\"/style.css\"><script src=\"/app.js\" defer></script></head>\n<body><header><p class=\"eyebrow\">TOWEROPS / LOCAL RESEARCH SIMULATION</p><h1>See the proposal. Follow the gates.</h1><p>Two fictional trajectories, one deterministic engine. Explore what happens when fixture approval, acknowledgement, timing or binding fails.</p></header>\n<main><aside class=\"warning\"><strong>No real-world authority.</strong> Synthetic research simulation only. No live feeds, model calls, real clearances or aviation safety assurance. Every identity and approval here is a fixture.</aside>\n<section class=\"controls\"><label for=\"scenario\">Synthetic case</label><select id=\"scenario\"></select><p id=\"description\"></p><div class=\"switches\"><label><input id=\"approval\" type=\"checkbox\" checked> Supply simulated approval fixture</label><label><input id=\"ack\" type=\"checkbox\" checked> Supply simulated acknowledgement fixture</label></div><p class=\"hint\">A selected missing-fixture case still withholds that fixture. Switches may withhold additional fixtures; they cannot bypass the engine.</p><button id=\"run\">Run synthetic case</button><button id=\"export\" disabled>Export this result (JSON)</button><label class=\"file-label\">Replay exported JSON <input id=\"replay-file\" type=\"file\" accept=\"application/json,.json\"></label><p id=\"replay-status\" role=\"status\"></p></section>\n<p id=\"status\" role=\"status\" aria-live=\"polite\">Loading fixed scenarios…</p>\n<section id=\"result\" hidden><h2 id=\"outcome\"></h2><p id=\"reason\"></p><div class=\"metrics\"><p id=\"conflicts\"></p><p id=\"clock\"></p></div>\n<label for=\"minute\">Projected time <output id=\"minute-label\">0.0 min</output></label><input id=\"minute\" type=\"range\" min=\"0\" max=\"5\" step=\"0.1\" value=\"0\"><p class=\"hint\">This slider projects the constant-velocity model in minutes. It does not advance the gate's synthetic dispatch clock (seconds). Dotted paths are projections, not live tracks.</p>\n<div class=\"plots\"><section><h3>Before proposal</h3><svg id=\"before\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories before gating\"></svg></section><section><h3 id=\"after-title\">After gate</h3><svg id=\"after\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories after gating\"></svg></section></div>\n<section class=\"details\"><h2>Advisory &amp; fixture inputs</h2><pre id=\"advisory\"></pre><h2>Audit timeline</h2><p id=\"chain\"></p><ol id=\"timeline\"></ol></section></section>\n<details><summary>First run &amp; replay limits</summary><p>Select “Approval + acknowledgement” and run: the engine applies the fixture advisory and projected conflict becomes false. Try “Missing acknowledgement”: the world stays unchanged. Export either result, then choose that JSON under Replay to rerun its fixed inputs and compare every output field.</p><p>The audit chain detects edits relative to the exported head. Deterministic replay checks local reproduction; neither proves authorship, external provenance, human identity, or real authority. A wholly rewritten self-consistent fixture export is not a signed receipt.</p></details></main><footer>Offline-capable loopback app · Python standard library · No SDK or subscription required</footer></body></html>",
+      "backend_sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "backend_bytes": 3396,
+      "backend_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/001-backend.body",
+        "bytes": 3396,
+        "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+        "mode": "0o664"
+      },
+      "delivered_status": 200,
+      "delivered_body": "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>TowerOps · Synthetic explorer</title><link rel=\"stylesheet\" href=\"/style.css\"><script src=\"/app.js\" defer></script></head>\n<body><header><p class=\"eyebrow\">TOWEROPS / LOCAL RESEARCH SIMULATION</p><h1>See the proposal. Follow the gates.</h1><p>Two fictional trajectories, one deterministic engine. Explore what happens when fixture approval, acknowledgement, timing or binding fails.</p></header>\n<main><aside class=\"warning\"><strong>No real-world authority.</strong> Synthetic research simulation only. No live feeds, model calls, real clearances or aviation safety assurance. Every identity and approval here is a fixture.</aside>\n<section class=\"controls\"><label for=\"scenario\">Synthetic case</label><select id=\"scenario\"></select><p id=\"description\"></p><div class=\"switches\"><label><input id=\"approval\" type=\"checkbox\" checked> Supply simulated approval fixture</label><label><input id=\"ack\" type=\"checkbox\" checked> Supply simulated acknowledgement fixture</label></div><p class=\"hint\">A selected missing-fixture case still withholds that fixture. Switches may withhold additional fixtures; they cannot bypass the engine.</p><button id=\"run\">Run synthetic case</button><button id=\"export\" disabled>Export this result (JSON)</button><label class=\"file-label\">Replay exported JSON <input id=\"replay-file\" type=\"file\" accept=\"application/json,.json\"></label><p id=\"replay-status\" role=\"status\"></p></section>\n<p id=\"status\" role=\"status\" aria-live=\"polite\">Loading fixed scenarios…</p>\n<section id=\"result\" hidden><h2 id=\"outcome\"></h2><p id=\"reason\"></p><div class=\"metrics\"><p id=\"conflicts\"></p><p id=\"clock\"></p></div>\n<label for=\"minute\">Projected time <output id=\"minute-label\">0.0 min</output></label><input id=\"minute\" type=\"range\" min=\"0\" max=\"5\" step=\"0.1\" value=\"0\"><p class=\"hint\">This slider projects the constant-velocity model in minutes. It does not advance the gate's synthetic dispatch clock (seconds). Dotted paths are projections, not live tracks.</p>\n<div class=\"plots\"><section><h3>Before proposal</h3><svg id=\"before\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories before gating\"></svg></section><section><h3 id=\"after-title\">After gate</h3><svg id=\"after\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories after gating\"></svg></section></div>\n<section class=\"details\"><h2>Advisory &amp; fixture inputs</h2><pre id=\"advisory\"></pre><h2>Audit timeline</h2><p id=\"chain\"></p><ol id=\"timeline\"></ol></section></section>\n<details><summary>First run &amp; replay limits</summary><p>Select “Approval + acknowledgement” and run: the engine applies the fixture advisory and projected conflict becomes false. Try “Missing acknowledgement”: the world stays unchanged. Export either result, then choose that JSON under Replay to rerun its fixed inputs and compare every output field.</p><p>The audit chain detects edits relative to the exported head. Deterministic replay checks local reproduction; neither proves authorship, external provenance, human identity, or real authority. A wholly rewritten self-consistent fixture export is not a signed receipt.</p></details></main><footer>Offline-capable loopback app · Python standard library · No SDK or subscription required</footer></body></html>",
+      "delivered_sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "response_label": "http-1"
+    },
+    {
+      "id": 2,
+      "method": "GET",
+      "path": "/style.css",
+      "request_body": "",
+      "request_json": null,
+      "backend_status": 200,
+      "backend_body": "*{box-sizing:border-box}body{overflow-wrap:anywhere;margin:0;background:#0e1726;color:#e3ebf6;font:16px/1.55 system-ui,sans-serif}header,main,footer{max-width:1120px;margin:auto;padding:24px}header{padding-top:42px}h1{font-size:clamp(28px,5vw,44px);line-height:1.15}.eyebrow{color:#74d7cf;font-size:13px;letter-spacing:2px}.warning{border-left:4px solid #eec277;background:#29283a;padding:18px;margin-bottom:24px}.controls,.details,details{background:#18253a;padding:20px;border-radius:10px}select,button,input{font:inherit}select{display:block;width:100%;max-width:540px;background:#0e1726;color:#fff;border:1px solid #8495af;border-radius:5px;padding:10px}button{background:#74d7cf;color:#0e1726;border:0;border-radius:5px;padding:10px 14px;margin:8px 8px 8px 0;cursor:pointer}button:disabled{opacity:.5;cursor:default}input[type=checkbox]{width:18px;height:18px;vertical-align:middle}.switches{display:flex;flex-wrap:wrap;gap:14px}input[type=range]{width:100%;accent-color:#74d7cf}.hint{font-size:14px;color:#b5c4da}.file-label{display:block;margin-top:12px}input[type=file]{max-width:100%;display:block;margin-top:6px}input::file-selector-button{padding:8px}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #eec277;outline-offset:3px}#outcome{padding:12px;background:#193b36}#outcome.rejected{background:#4a2835}.metrics{display:flex;flex-wrap:wrap;gap:24px}.plots{display:grid;grid-template-columns:1fr 1fr;gap:18px}.plots section{min-width:0}svg{width:100%;background:#142136;border:1px solid #485873;border-radius:8px}svg text{font:14px system-ui;fill:#d9e5f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}li{padding:8px 4px;border-bottom:1px solid #485873}li strong{color:#74d7cf}details{margin-top:24px}summary{cursor:pointer}footer{font-size:13px;color:#b5c4da}[hidden]{display:none!important}@media(max-width:700px){.plots{grid-template-columns:1fr}header,main,footer{padding:16px}.controls,.details{padding:14px}.switches{display:grid}h1{font-size:30px}}\n",
+      "backend_sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "backend_bytes": 2037,
+      "backend_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/002-backend.body",
+        "bytes": 2037,
+        "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+        "mode": "0o664"
+      },
+      "delivered_status": 200,
+      "delivered_body": "*{box-sizing:border-box}body{overflow-wrap:anywhere;margin:0;background:#0e1726;color:#e3ebf6;font:16px/1.55 system-ui,sans-serif}header,main,footer{max-width:1120px;margin:auto;padding:24px}header{padding-top:42px}h1{font-size:clamp(28px,5vw,44px);line-height:1.15}.eyebrow{color:#74d7cf;font-size:13px;letter-spacing:2px}.warning{border-left:4px solid #eec277;background:#29283a;padding:18px;margin-bottom:24px}.controls,.details,details{background:#18253a;padding:20px;border-radius:10px}select,button,input{font:inherit}select{display:block;width:100%;max-width:540px;background:#0e1726;color:#fff;border:1px solid #8495af;border-radius:5px;padding:10px}button{background:#74d7cf;color:#0e1726;border:0;border-radius:5px;padding:10px 14px;margin:8px 8px 8px 0;cursor:pointer}button:disabled{opacity:.5;cursor:default}input[type=checkbox]{width:18px;height:18px;vertical-align:middle}.switches{display:flex;flex-wrap:wrap;gap:14px}input[type=range]{width:100%;accent-color:#74d7cf}.hint{font-size:14px;color:#b5c4da}.file-label{display:block;margin-top:12px}input[type=file]{max-width:100%;display:block;margin-top:6px}input::file-selector-button{padding:8px}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #eec277;outline-offset:3px}#outcome{padding:12px;background:#193b36}#outcome.rejected{background:#4a2835}.metrics{display:flex;flex-wrap:wrap;gap:24px}.plots{display:grid;grid-template-columns:1fr 1fr;gap:18px}.plots section{min-width:0}svg{width:100%;background:#142136;border:1px solid #485873;border-radius:8px}svg text{font:14px system-ui;fill:#d9e5f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}li{padding:8px 4px;border-bottom:1px solid #485873}li strong{color:#74d7cf}details{margin-top:24px}summary{cursor:pointer}footer{font-size:13px;color:#b5c4da}[hidden]{display:none!important}@media(max-width:700px){.plots{grid-template-columns:1fr}header,main,footer{padding:16px}.controls,.details{padding:14px}.switches{display:grid}h1{font-size:30px}}\n",
+      "delivered_sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "response_label": "http-2"
+    },
+    {
+      "id": 3,
+      "method": "GET",
+      "path": "/app.js",
+      "request_body": "",
+      "request_json": null,
+      "backend_status": 200,
+      "backend_body": "\"use strict\";\nconst $ = id => document.getElementById(id);\nlet current = null;\nasync function request(path, value) {\n  const options = value === undefined ? {} : {method:\"POST\",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify(value)};\n  const response = await fetch(path, options), data = await response.json();\n  if (!response.ok) throw new Error(data.error || `HTTP ${response.status}`);\n  return data;\n}\nfunction svgElement(tag, attrs, text) {\n  const node = document.createElementNS(\"http://www.w3.org/2000/svg\", tag);\n  for (const [k,v] of Object.entries(attrs)) node.setAttribute(k,v);\n  if (text !== undefined) node.textContent = text;\n  return node;\n}\nfunction plot(id, state, minute) {\n  const svg = $(id); svg.replaceChildren();\n  const X = x => 50 + (x+6)*35, Y = y => 325-y*26;\n  for (let x=-6;x<=6;x+=2) {\n    svg.append(svgElement(\"line\",{x1:X(x),y1:25,x2:X(x),y2:325,stroke:\"#293952\"}));\n    svg.append(svgElement(\"text\",{x:X(x),y:348,\"text-anchor\":\"middle\"},x));\n  }\n  for (let y=0;y<=10;y+=2) {\n    svg.append(svgElement(\"line\",{x1:50,y1:Y(y),x2:470,y2:Y(y),stroke:\"#293952\"}));\n    svg.append(svgElement(\"text\",{x:34,y:Y(y)+5,\"text-anchor\":\"end\"},y));\n  }\n  svg.append(svgElement(\"text\",{x:255,y:377,\"text-anchor\":\"middle\"},\"x / nautical miles (synthetic)\"));\n  svg.append(svgElement(\"text\",{x:50,y:18},\"y / nm • both at 10,000 fixture ft\"));\n  state.aircraft.forEach((a,index) => {\n    const color = index===0 ? \"#74d7cf\" : \"#eec277\";\n    svg.append(svgElement(\"line\",{x1:X(a.x_nm),y1:Y(a.y_nm),x2:X(a.x_nm+a.vx_nm_min*5),y2:Y(a.y_nm+a.vy_nm_min*5),stroke:color,\"stroke-width\":3,\"stroke-dasharray\":\"6 5\"}));\n    const x=X(a.x_nm+a.vx_nm_min*minute),y=Y(a.y_nm+a.vy_nm_min*minute);\n    svg.append(svgElement(\"circle\",{cx:x,cy:y,r:8,fill:color}));\n    svg.append(svgElement(\"text\",{x:Math.min(430,Math.max(60,x+12)),y:Math.max(42,y-14),fill:color},a.aircraft_id));\n  });\n}\nfunction plots() {\n  if (!current) return;\n  const minute = Number($(\"minute\").value);\n  $(\"minute-label\").value = `${minute.toFixed(1)} min`;\n  plot(\"before\", current.before, minute); plot(\"after\", current.after, minute);\n}\nfunction render(data) {\n  current=data; $(\"result\").hidden=false; $(\"export\").disabled=false;\n  $(\"outcome\").textContent = data.outcome===\"rejected\" ? \"Rejected · no simulated actuation\" : \"Fixture accepted · simulated actuation only\";\n  $(\"outcome\").className = data.outcome===\"rejected\" ? \"rejected\" : \"\";\n  $(\"reason\").textContent = data.rejection_reason ? `Engine reason: ${data.rejection_reason}` : \"Exact-hash fixture approval and acknowledgement passed the engine gates.\";\n  $(\"conflicts\").textContent = `Projected conflict: before ${data.before_conflict} → after ${data.after_conflict}`;\n  $(\"clock\").textContent = `Observation ${data.simulation_clock.observed_sec}s · dispatch ${data.simulation_clock.dispatch_sec}s (synthetic)`;\n  $(\"after-title\").textContent = data.outcome===\"rejected\" ? \"After rejection · unchanged world\" : \"After simulated advisory\";\n  $(\"advisory\").textContent=JSON.stringify({advisory:data.advisory,advisory_hash:data.advisory_hash,fixtures:data.fixtures},null,2);\n  $(\"chain\").textContent=`Local chain valid: ${data.audit_valid} · head ${data.audit_head}`;\n  $(\"timeline\").replaceChildren();\n  data.audit_events.forEach(event => {\n    const li=document.createElement(\"li\"),title=document.createElement(\"strong\"),payload=document.createElement(\"pre\");\n    title.textContent=`${event.seq+1}. ${event.kind}`; payload.textContent=JSON.stringify(event.payload,null,2);\n    li.append(title,payload); $(\"timeline\").append(li);\n  });\n  $(\"minute\").value=0; plots();\n}\n$(\"scenario\").addEventListener(\"change\",()=> {\n  $(\"description\").textContent=$(\"scenario\").selectedOptions[0].dataset.description;\n  $(\"status\").textContent=\"Selection changed. Run to produce a new result; displayed result still belongs to the previous run.\";\n});\n$(\"minute\").addEventListener(\"input\",plots);\n$(\"run\").addEventListener(\"click\",async()=> {\n  $(\"run\").disabled=true; $(\"status\").textContent=\"Running local deterministic fixture…\";\n  try {\n    const data=await request(\"/api/run\",{scenario:$(\"scenario\").value,include_approval:$(\"approval\").checked,include_ack:$(\"ack\").checked});\n    render(data); $(\"status\").textContent=`Result: ${data.label}. ${data.disclaimer}`;\n  } catch(e) {$(\"status\").textContent=`Run failed: ${e.message}`;}\n  finally {$(\"run\").disabled=false;}\n});\n$(\"export\").addEventListener(\"click\",()=> {\n  if (!current) return;\n  const url=URL.createObjectURL(new Blob([JSON.stringify(current,null,2)],{type:\"application/json\"}));\n  const a=document.createElement(\"a\"); a.href=url; a.download=`towerops-${current.request.scenario}.json`; a.click();\n  setTimeout(()=>URL.revokeObjectURL(url),1000);\n});\nlet replaySelection = null;\n$(\"replay-file\").addEventListener(\"change\",async()=> {\n  const selection = {};\n  replaySelection = selection;\n  const file=$(\"replay-file\").files[0];\n  if (!file) {$(\"replay-status\").textContent=\"\";return;}\n  $(\"replay-status\").textContent=\"Replaying locally…\";\n  try {\n    if(file.size>262144) throw new Error(\"Export exceeds 262144 bytes\");\n    const text=await file.text();\n    if (replaySelection !== selection) return;\n    const value=JSON.parse(text),reply=await request(\"/api/replay\",value);\n    if (replaySelection !== selection) return;\n    $(\"replay-status\").textContent = reply.matches ? `Replay MATCH: ${reply.outcome}. ${reply.note}` : `Replay MISMATCH: export differs from the deterministic engine result. ${reply.note}`;\n  } catch(e) {\n    if (replaySelection === selection) $(\"replay-status\").textContent=`Replay rejected: ${e.message}`;\n  }\n});\nrequest(\"/api/scenarios\").then(data=> {\n  data.scenarios.forEach(item=> {const option=document.createElement(\"option\"); option.value=item.id;option.textContent=item.label;option.dataset.description=item.description;$(\"scenario\").append(option);});\n  $(\"description\").textContent=data.scenarios[0].description;\n  $(\"status\").textContent=\"Ready. Choose a case, then run the simulated fixtures.\";\n}).catch(e=> {$(\"status\").textContent=`Load failed: ${e.message}`;$(\"run\").disabled=true;});\n",
+      "backend_sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "backend_bytes": 6147,
+      "backend_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/003-backend.body",
+        "bytes": 6147,
+        "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+        "mode": "0o664"
+      },
+      "delivered_status": 200,
+      "delivered_body": "\"use strict\";\nconst $ = id => document.getElementById(id);\nlet current = null;\nasync function request(path, value) {\n  const options = value === undefined ? {} : {method:\"POST\",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify(value)};\n  const response = await fetch(path, options), data = await response.json();\n  if (!response.ok) throw new Error(data.error || `HTTP ${response.status}`);\n  return data;\n}\nfunction svgElement(tag, attrs, text) {\n  const node = document.createElementNS(\"http://www.w3.org/2000/svg\", tag);\n  for (const [k,v] of Object.entries(attrs)) node.setAttribute(k,v);\n  if (text !== undefined) node.textContent = text;\n  return node;\n}\nfunction plot(id, state, minute) {\n  const svg = $(id); svg.replaceChildren();\n  const X = x => 50 + (x+6)*35, Y = y => 325-y*26;\n  for (let x=-6;x<=6;x+=2) {\n    svg.append(svgElement(\"line\",{x1:X(x),y1:25,x2:X(x),y2:325,stroke:\"#293952\"}));\n    svg.append(svgElement(\"text\",{x:X(x),y:348,\"text-anchor\":\"middle\"},x));\n  }\n  for (let y=0;y<=10;y+=2) {\n    svg.append(svgElement(\"line\",{x1:50,y1:Y(y),x2:470,y2:Y(y),stroke:\"#293952\"}));\n    svg.append(svgElement(\"text\",{x:34,y:Y(y)+5,\"text-anchor\":\"end\"},y));\n  }\n  svg.append(svgElement(\"text\",{x:255,y:377,\"text-anchor\":\"middle\"},\"x / nautical miles (synthetic)\"));\n  svg.append(svgElement(\"text\",{x:50,y:18},\"y / nm • both at 10,000 fixture ft\"));\n  state.aircraft.forEach((a,index) => {\n    const color = index===0 ? \"#74d7cf\" : \"#eec277\";\n    svg.append(svgElement(\"line\",{x1:X(a.x_nm),y1:Y(a.y_nm),x2:X(a.x_nm+a.vx_nm_min*5),y2:Y(a.y_nm+a.vy_nm_min*5),stroke:color,\"stroke-width\":3,\"stroke-dasharray\":\"6 5\"}));\n    const x=X(a.x_nm+a.vx_nm_min*minute),y=Y(a.y_nm+a.vy_nm_min*minute);\n    svg.append(svgElement(\"circle\",{cx:x,cy:y,r:8,fill:color}));\n    svg.append(svgElement(\"text\",{x:Math.min(430,Math.max(60,x+12)),y:Math.max(42,y-14),fill:color},a.aircraft_id));\n  });\n}\nfunction plots() {\n  if (!current) return;\n  const minute = Number($(\"minute\").value);\n  $(\"minute-label\").value = `${minute.toFixed(1)} min`;\n  plot(\"before\", current.before, minute); plot(\"after\", current.after, minute);\n}\nfunction render(data) {\n  current=data; $(\"result\").hidden=false; $(\"export\").disabled=false;\n  $(\"outcome\").textContent = data.outcome===\"rejected\" ? \"Rejected · no simulated actuation\" : \"Fixture accepted · simulated actuation only\";\n  $(\"outcome\").className = data.outcome===\"rejected\" ? \"rejected\" : \"\";\n  $(\"reason\").textContent = data.rejection_reason ? `Engine reason: ${data.rejection_reason}` : \"Exact-hash fixture approval and acknowledgement passed the engine gates.\";\n  $(\"conflicts\").textContent = `Projected conflict: before ${data.before_conflict} → after ${data.after_conflict}`;\n  $(\"clock\").textContent = `Observation ${data.simulation_clock.observed_sec}s · dispatch ${data.simulation_clock.dispatch_sec}s (synthetic)`;\n  $(\"after-title\").textContent = data.outcome===\"rejected\" ? \"After rejection · unchanged world\" : \"After simulated advisory\";\n  $(\"advisory\").textContent=JSON.stringify({advisory:data.advisory,advisory_hash:data.advisory_hash,fixtures:data.fixtures},null,2);\n  $(\"chain\").textContent=`Local chain valid: ${data.audit_valid} · head ${data.audit_head}`;\n  $(\"timeline\").replaceChildren();\n  data.audit_events.forEach(event => {\n    const li=document.createElement(\"li\"),title=document.createElement(\"strong\"),payload=document.createElement(\"pre\");\n    title.textContent=`${event.seq+1}. ${event.kind}`; payload.textContent=JSON.stringify(event.payload,null,2);\n    li.append(title,payload); $(\"timeline\").append(li);\n  });\n  $(\"minute\").value=0; plots();\n}\n$(\"scenario\").addEventListener(\"change\",()=> {\n  $(\"description\").textContent=$(\"scenario\").selectedOptions[0].dataset.description;\n  $(\"status\").textContent=\"Selection changed. Run to produce a new result; displayed result still belongs to the previous run.\";\n});\n$(\"minute\").addEventListener(\"input\",plots);\n$(\"run\").addEventListener(\"click\",async()=> {\n  $(\"run\").disabled=true; $(\"status\").textContent=\"Running local deterministic fixture…\";\n  try {\n    const data=await request(\"/api/run\",{scenario:$(\"scenario\").value,include_approval:$(\"approval\").checked,include_ack:$(\"ack\").checked});\n    render(data); $(\"status\").textContent=`Result: ${data.label}. ${data.disclaimer}`;\n  } catch(e) {$(\"status\").textContent=`Run failed: ${e.message}`;}\n  finally {$(\"run\").disabled=false;}\n});\n$(\"export\").addEventListener(\"click\",()=> {\n  if (!current) return;\n  const url=URL.createObjectURL(new Blob([JSON.stringify(current,null,2)],{type:\"application/json\"}));\n  const a=document.createElement(\"a\"); a.href=url; a.download=`towerops-${current.request.scenario}.json`; a.click();\n  setTimeout(()=>URL.revokeObjectURL(url),1000);\n});\nlet replaySelection = null;\n$(\"replay-file\").addEventListener(\"change\",async()=> {\n  const selection = {};\n  replaySelection = selection;\n  const file=$(\"replay-file\").files[0];\n  if (!file) {$(\"replay-status\").textContent=\"\";return;}\n  $(\"replay-status\").textContent=\"Replaying locally…\";\n  try {\n    if(file.size>262144) throw new Error(\"Export exceeds 262144 bytes\");\n    const text=await file.text();\n    if (replaySelection !== selection) return;\n    const value=JSON.parse(text),reply=await request(\"/api/replay\",value);\n    if (replaySelection !== selection) return;\n    $(\"replay-status\").textContent = reply.matches ? `Replay MATCH: ${reply.outcome}. ${reply.note}` : `Replay MISMATCH: export differs from the deterministic engine result. ${reply.note}`;\n  } catch(e) {\n    if (replaySelection === selection) $(\"replay-status\").textContent=`Replay rejected: ${e.message}`;\n  }\n});\nrequest(\"/api/scenarios\").then(data=> {\n  data.scenarios.forEach(item=> {const option=document.createElement(\"option\"); option.value=item.id;option.textContent=item.label;option.dataset.description=item.description;$(\"scenario\").append(option);});\n  $(\"description\").textContent=data.scenarios[0].description;\n  $(\"status\").textContent=\"Ready. Choose a case, then run the simulated fixtures.\";\n}).catch(e=> {$(\"status\").textContent=`Load failed: ${e.message}`;$(\"run\").disabled=true;});\n",
+      "delivered_sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "response_label": "http-3"
+    },
+    {
+      "id": 4,
+      "method": "GET",
+      "path": "/api/scenarios",
+      "request_body": "",
+      "request_json": null,
+      "backend_status": 200,
+      "backend_body": "{\"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\", \"scenarios\": [{\"id\": \"approved\", \"label\": \"Approval + acknowledgement\", \"description\": \"Both exact-hash fixtures arrive before simulated dispatch.\"}, {\"id\": \"missing_approval\", \"label\": \"Missing approval\", \"description\": \"The engine must refuse simulated actuation without its approval fixture.\"}, {\"id\": \"missing_ack\", \"label\": \"Missing acknowledgement\", \"description\": \"Approval alone does not authorize the simulated transition.\"}, {\"id\": \"late_ack\", \"label\": \"Late acknowledgement\", \"description\": \"Receipt is dated after the simulated dispatch cutoff; the engine rejects ack_late.\"}, {\"id\": \"stale_state\", \"label\": \"Stale observation\", \"description\": \"The observation is older than the engine's ten-second freshness limit.\"}, {\"id\": \"stale_binding\", \"label\": \"Changed world binding\", \"description\": \"World version changes after proposal; its hash no longer matches.\"}, {\"id\": \"wrong_ack\", \"label\": \"Wrong advisory acknowledgement\", \"description\": \"Receipt binds a different advisory hash.\"}, {\"id\": \"expired\", \"label\": \"Expired proposal\", \"description\": \"Dispatch occurs after the proposal's eight-second validity window.\"}]}",
+      "backend_sha256": "d8e97f9e4aea80a4512020023b5fe3fa81b437d574a9b1e37786677614790d4b",
+      "backend_bytes": 1303,
+      "backend_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/004-backend.body",
+        "bytes": 1303,
+        "sha256": "d8e97f9e4aea80a4512020023b5fe3fa81b437d574a9b1e37786677614790d4b",
+        "mode": "0o664"
+      },
+      "delivered_status": 200,
+      "delivered_body": "{\"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\", \"scenarios\": [{\"id\": \"approved\", \"label\": \"Approval + acknowledgement\", \"description\": \"Both exact-hash fixtures arrive before simulated dispatch.\"}, {\"id\": \"missing_approval\", \"label\": \"Missing approval\", \"description\": \"The engine must refuse simulated actuation without its approval fixture.\"}, {\"id\": \"missing_ack\", \"label\": \"Missing acknowledgement\", \"description\": \"Approval alone does not authorize the simulated transition.\"}, {\"id\": \"late_ack\", \"label\": \"Late acknowledgement\", \"description\": \"Receipt is dated after the simulated dispatch cutoff; the engine rejects ack_late.\"}, {\"id\": \"stale_state\", \"label\": \"Stale observation\", \"description\": \"The observation is older than the engine's ten-second freshness limit.\"}, {\"id\": \"stale_binding\", \"label\": \"Changed world binding\", \"description\": \"World version changes after proposal; its hash no longer matches.\"}, {\"id\": \"wrong_ack\", \"label\": \"Wrong advisory acknowledgement\", \"description\": \"Receipt binds a different advisory hash.\"}, {\"id\": \"expired\", \"label\": \"Expired proposal\", \"description\": \"Dispatch occurs after the proposal's eight-second validity window.\"}]}",
+      "delivered_sha256": "d8e97f9e4aea80a4512020023b5fe3fa81b437d574a9b1e37786677614790d4b",
+      "response_label": "http-4"
+    },
+    {
+      "id": 5,
+      "method": "GET",
+      "path": "/favicon.ico",
+      "request_body": "",
+      "request_json": null,
+      "backend_status": 404,
+      "backend_body": "{\"error\": \"Not found\"}",
+      "backend_sha256": "064e1262e82600f52520eec5a475fe906f349f8a6452efa8b1ba6f39250902b6",
+      "backend_bytes": 22,
+      "backend_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/005-backend.body",
+        "bytes": 22,
+        "sha256": "064e1262e82600f52520eec5a475fe906f349f8a6452efa8b1ba6f39250902b6",
+        "mode": "0o664"
+      },
+      "delivered_status": 404,
+      "delivered_body": "{\"error\": \"Not found\"}",
+      "delivered_sha256": "064e1262e82600f52520eec5a475fe906f349f8a6452efa8b1ba6f39250902b6",
+      "response_label": "http-5"
+    },
+    {
+      "id": 6,
+      "method": "POST",
+      "path": "/api/run",
+      "request_body": "{\"scenario\":\"approved\",\"include_approval\":true,\"include_ack\":true}",
+      "request_json": {
+        "scenario": "approved",
+        "include_approval": true,
+        "include_ack": true
+      },
+      "backend_status": 200,
+      "backend_body": "{\"format\": \"towerops.synthetic-explorer.v1\", \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\", \"request\": {\"scenario\": \"approved\", \"include_approval\": true, \"include_ack\": true}, \"label\": \"Approval + acknowledgement\", \"description\": \"Both exact-hash fixtures arrive before simulated dispatch.\", \"simulation_clock\": {\"dispatch_sec\": 1002.5, \"observed_sec\": 1001.0, \"projection_horizon_min\": 5.0}, \"policy\": {\"min_horizontal_nm\": 5.0, \"min_vertical_ft\": 1000.0, \"horizon_min\": 5.0, \"sample_step_min\": 0.5, \"max_state_age_sec\": 10.0, \"max_speed_nm_min\": 6.0, \"max_climb_ft_min\": 3000.0}, \"before\": {\"version\": 1, \"observed_at\": 1001.0, \"aircraft\": [{\"aircraft_id\": \"FIXTURE-A\", \"x_nm\": -5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": 1.0, \"vy_nm_min\": 0.0, \"climb_ft_min\": 0.0}, {\"aircraft_id\": \"FIXTURE-B\", \"x_nm\": 5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": -1.0, \"vy_nm_min\": 0.0, \"climb_ft_min\": 0.0}]}, \"after\": {\"version\": 2, \"observed_at\": 1002.5, \"aircraft\": [{\"aircraft_id\": \"FIXTURE-A\", \"x_nm\": -5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": 1.0, \"vy_nm_min\": 0.0, \"climb_ft_min\": 0.0}, {\"aircraft_id\": \"FIXTURE-B\", \"x_nm\": 5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": -1.0, \"vy_nm_min\": 2.0, \"climb_ft_min\": 0.0}]}, \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\", \"advisory\": {\"aircraft_id\": \"FIXTURE-B\", \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"set_vx_nm_min\": -1.0, \"set_vy_nm_min\": 2.0, \"set_climb_ft_min\": 0.0, \"issued_at\": 1002.0, \"expires_at\": 1010.0, \"rationale\": \"synthetic projected-separation recovery\"}, \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"fixtures\": {\"approval\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"}, \"ack\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}}, \"outcome\": \"simulated_actuation\", \"rejection_reason\": null, \"before_conflict\": true, \"after_conflict\": false, \"audit_events\": [{\"seq\": 0, \"kind\": \"fixture_proposal\", \"payload\": {\"scenario\": \"approved\", \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"advisory\": {\"aircraft_id\": \"FIXTURE-B\", \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"set_vx_nm_min\": -1.0, \"set_vy_nm_min\": 2.0, \"set_climb_ft_min\": 0.0, \"issued_at\": 1002.0, \"expires_at\": 1010.0, \"rationale\": \"synthetic projected-separation recovery\"}, \"simulation_only\": true}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"}, {\"seq\": 1, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"advisory_hashes\": [\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"]}, \"prev_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\", \"event_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"}, {\"seq\": 2, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"}, \"prev_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\", \"event_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"}, {\"seq\": 3, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\", \"event_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"}, {\"seq\": 4, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"}, \"prev_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\", \"event_hash\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"}], \"audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\", \"audit_valid\": true}",
+      "backend_sha256": "ed152653da5e9d9d0989f05a206ce883e55891426c654135836cf23fafa4cefc",
+      "backend_bytes": 4753,
+      "backend_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/006-backend.body",
+        "bytes": 4753,
+        "sha256": "ed152653da5e9d9d0989f05a206ce883e55891426c654135836cf23fafa4cefc",
+        "mode": "0o664"
+      },
+      "request_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/006-request.json",
+        "bytes": 66,
+        "sha256": "039f014e76f5d8f32d8a213555100b738e68cca0ccf24a2819150a6205892473",
+        "mode": "0o664"
+      },
+      "delivered_status": 200,
+      "delivered_body": "{\"format\": \"towerops.synthetic-explorer.v1\", \"disclaimer\": \"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\", \"request\": {\"scenario\": \"approved\", \"include_approval\": true, \"include_ack\": true}, \"label\": \"Approval + acknowledgement\", \"description\": \"Both exact-hash fixtures arrive before simulated dispatch.\", \"simulation_clock\": {\"dispatch_sec\": 1002.5, \"observed_sec\": 1001.0, \"projection_horizon_min\": 5.0}, \"policy\": {\"min_horizontal_nm\": 5.0, \"min_vertical_ft\": 1000.0, \"horizon_min\": 5.0, \"sample_step_min\": 0.5, \"max_state_age_sec\": 10.0, \"max_speed_nm_min\": 6.0, \"max_climb_ft_min\": 3000.0}, \"before\": {\"version\": 1, \"observed_at\": 1001.0, \"aircraft\": [{\"aircraft_id\": \"FIXTURE-A\", \"x_nm\": -5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": 1.0, \"vy_nm_min\": 0.0, \"climb_ft_min\": 0.0}, {\"aircraft_id\": \"FIXTURE-B\", \"x_nm\": 5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": -1.0, \"vy_nm_min\": 0.0, \"climb_ft_min\": 0.0}]}, \"after\": {\"version\": 2, \"observed_at\": 1002.5, \"aircraft\": [{\"aircraft_id\": \"FIXTURE-A\", \"x_nm\": -5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": 1.0, \"vy_nm_min\": 0.0, \"climb_ft_min\": 0.0}, {\"aircraft_id\": \"FIXTURE-B\", \"x_nm\": 5.0, \"y_nm\": 0.0, \"altitude_ft\": 10000.0, \"vx_nm_min\": -1.0, \"vy_nm_min\": 2.0, \"climb_ft_min\": 0.0}]}, \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\", \"advisory\": {\"aircraft_id\": \"FIXTURE-B\", \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"set_vx_nm_min\": -1.0, \"set_vy_nm_min\": 2.0, \"set_climb_ft_min\": 0.0, \"issued_at\": 1002.0, \"expires_at\": 1010.0, \"rationale\": \"synthetic projected-separation recovery\"}, \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"fixtures\": {\"approval\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"}, \"ack\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}}, \"outcome\": \"simulated_actuation\", \"rejection_reason\": null, \"before_conflict\": true, \"after_conflict\": false, \"audit_events\": [{\"seq\": 0, \"kind\": \"fixture_proposal\", \"payload\": {\"scenario\": \"approved\", \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"advisory\": {\"aircraft_id\": \"FIXTURE-B\", \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"set_vx_nm_min\": -1.0, \"set_vy_nm_min\": 2.0, \"set_climb_ft_min\": 0.0, \"issued_at\": 1002.0, \"expires_at\": 1010.0, \"rationale\": \"synthetic projected-separation recovery\"}, \"simulation_only\": true}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"}, {\"seq\": 1, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"advisory_hashes\": [\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"]}, \"prev_hash\": \"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\", \"event_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"}, {\"seq\": 2, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"}, \"prev_hash\": \"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\", \"event_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"}, {\"seq\": 3, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\", \"event_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"}, {\"seq\": 4, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\", \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\", \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"}, \"prev_hash\": \"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\", \"event_hash\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"}], \"audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\", \"audit_valid\": true}",
+      "delivered_sha256": "ed152653da5e9d9d0989f05a206ce883e55891426c654135836cf23fafa4cefc",
+      "response_label": "http-6"
+    },
+    {
+      "id": 7,
+      "method": "POST",
+      "path": "/api/replay",
+      "request_body": "{\"format\":\"towerops.synthetic-explorer.v1\",\"disclaimer\":\"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\"request\":{\"scenario\":\"approved\",\"include_approval\":true,\"include_ack\":true},\"label\":\"Approval + acknowledgement\",\"description\":\"Both exact-hash fixtures arrive before simulated dispatch.\",\"simulation_clock\":{\"dispatch_sec\":1002.5,\"observed_sec\":1001,\"projection_horizon_min\":5},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"before\":{\"version\":1,\"observed_at\":1001,\"aircraft\":[{\"aircraft_id\":\"FIXTURE-A\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"FIXTURE-B\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"after\":{\"version\":3,\"observed_at\":1002.5,\"aircraft\":[{\"aircraft_id\":\"FIXTURE-A\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"FIXTURE-B\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":2,\"climb_ft_min\":0}]},\"before_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"after_world_hash\":\"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\",\"advisory\":{\"aircraft_id\":\"FIXTURE-B\",\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"set_vx_nm_min\":-1,\"set_vy_nm_min\":2,\"set_climb_ft_min\":0,\"issued_at\":1002,\"expires_at\":1010,\"rationale\":\"synthetic projected-separation recovery\"},\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"fixtures\":{\"approval\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"decision\":\"approve\",\"approved_at\":1002.2,\"approver\":\"FIXTURE-CONTROLLER-NOT-AUTHORITY\"},\"ack\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"status\":\"accepted\",\"acknowledged_at\":1002.4}},\"outcome\":\"simulated_actuation\",\"rejection_reason\":null,\"before_conflict\":true,\"after_conflict\":false,\"audit_events\":[{\"seq\":0,\"kind\":\"fixture_proposal\",\"payload\":{\"scenario\":\"approved\",\"source_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"advisory\":{\"aircraft_id\":\"FIXTURE-B\",\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"set_vx_nm_min\":-1,\"set_vy_nm_min\":2,\"set_climb_ft_min\":0,\"issued_at\":1002,\"expires_at\":1010,\"rationale\":\"synthetic projected-separation recovery\"},\"simulation_only\":true},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"event_hash\":\"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"},{\"seq\":1,\"kind\":\"screen_pass\",\"payload\":{\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"advisory_hashes\":[\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"]},\"prev_hash\":\"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\",\"event_hash\":\"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"},{\"seq\":2,\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"decision\":\"approve\",\"approved_at\":1002.2,\"approver\":\"FIXTURE-CONTROLLER-NOT-AUTHORITY\"},\"prev_hash\":\"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\",\"event_hash\":\"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"},{\"seq\":3,\"kind\":\"ack\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"status\":\"accepted\",\"acknowledged_at\":1002.4},\"prev_hash\":\"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\",\"event_hash\":\"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"},{\"seq\":4,\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"before_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"after_world_hash\":\"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"},\"prev_hash\":\"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\",\"event_hash\":\"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"}],\"audit_head\":\"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\"audit_valid\":true}",
+      "request_json": {
+        "format": "towerops.synthetic-explorer.v1",
+        "disclaimer": "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+        "request": {
+          "scenario": "approved",
+          "include_approval": true,
+          "include_ack": true
+        },
+        "label": "Approval + acknowledgement",
+        "description": "Both exact-hash fixtures arrive before simulated dispatch.",
+        "simulation_clock": {
+          "dispatch_sec": 1002.5,
+          "observed_sec": 1001,
+          "projection_horizon_min": 5
+        },
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "before": {
+          "version": 1,
+          "observed_at": 1001,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "after": {
+          "version": 3,
+          "observed_at": 1002.5,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 2,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424",
+        "advisory": {
+          "aircraft_id": "FIXTURE-B",
+          "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery"
+        },
+        "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+        "fixtures": {
+          "approval": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "decision": "approve",
+            "approved_at": 1002.2,
+            "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+          },
+          "ack": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "status": "accepted",
+            "acknowledged_at": 1002.4
+          }
+        },
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "before_conflict": true,
+        "after_conflict": false,
+        "audit_events": [
+          {
+            "seq": 0,
+            "kind": "fixture_proposal",
+            "payload": {
+              "scenario": "approved",
+              "source_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory": {
+                "aircraft_id": "FIXTURE-B",
+                "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+                "set_vx_nm_min": -1,
+                "set_vy_nm_min": 2,
+                "set_climb_ft_min": 0,
+                "issued_at": 1002,
+                "expires_at": 1010,
+                "rationale": "synthetic projected-separation recovery"
+              },
+              "simulation_only": true
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d"
+          },
+          {
+            "seq": 1,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory_hashes": [
+                "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+              ]
+            },
+            "prev_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d",
+            "event_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12"
+          },
+          {
+            "seq": 2,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+            },
+            "prev_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12",
+            "event_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d"
+          },
+          {
+            "seq": 3,
+            "kind": "ack",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "status": "accepted",
+              "acknowledged_at": 1002.4
+            },
+            "prev_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d",
+            "event_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee"
+          },
+          {
+            "seq": 4,
+            "kind": "simulated_actuation",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424"
+            },
+            "prev_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee",
+            "event_hash": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778"
+          }
+        ],
+        "audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "audit_valid": true
+      },
+      "backend_status": 200,
+      "backend_body": "{\"matches\": false, \"audit_valid\": true, \"outcome\": \"simulated_actuation\", \"rejection_reason\": null, \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\", \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\"}",
+      "backend_sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f",
+      "backend_bytes": 289,
+      "backend_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/007-backend.body",
+        "bytes": 289,
+        "sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f",
+        "mode": "0o664"
+      },
+      "request_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/007-request.json",
+        "bytes": 4418,
+        "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578",
+        "mode": "0o664"
+      },
+      "delivered_status": 200,
+      "delivered_body": "{\"matches\": false, \"audit_valid\": true, \"outcome\": \"simulated_actuation\", \"rejection_reason\": null, \"expected_audit_head\": \"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\", \"note\": \"Local deterministic reproduction only; not a signature, provenance proof, or authority.\"}",
+      "delivered_sha256": "bb781f1c00bd629eead04e1a99acf5c2751873f4acceb101d7b931f09753503f",
+      "response_label": "http-7"
+    },
+    {
+      "id": 8,
+      "method": "POST",
+      "path": "/api/replay/explain",
+      "request_body": "{\"format\":\"towerops.synthetic-explorer.v1\",\"disclaimer\":\"Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.\",\"request\":{\"scenario\":\"approved\",\"include_approval\":true,\"include_ack\":true},\"label\":\"Approval + acknowledgement\",\"description\":\"Both exact-hash fixtures arrive before simulated dispatch.\",\"simulation_clock\":{\"dispatch_sec\":1002.5,\"observed_sec\":1001,\"projection_horizon_min\":5},\"policy\":{\"min_horizontal_nm\":5,\"min_vertical_ft\":1000,\"horizon_min\":5,\"sample_step_min\":0.5,\"max_state_age_sec\":10,\"max_speed_nm_min\":6,\"max_climb_ft_min\":3000},\"before\":{\"version\":1,\"observed_at\":1001,\"aircraft\":[{\"aircraft_id\":\"FIXTURE-A\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"FIXTURE-B\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":0,\"climb_ft_min\":0}]},\"after\":{\"version\":3,\"observed_at\":1002.5,\"aircraft\":[{\"aircraft_id\":\"FIXTURE-A\",\"x_nm\":-5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":1,\"vy_nm_min\":0,\"climb_ft_min\":0},{\"aircraft_id\":\"FIXTURE-B\",\"x_nm\":5,\"y_nm\":0,\"altitude_ft\":10000,\"vx_nm_min\":-1,\"vy_nm_min\":2,\"climb_ft_min\":0}]},\"before_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"after_world_hash\":\"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\",\"advisory\":{\"aircraft_id\":\"FIXTURE-B\",\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"set_vx_nm_min\":-1,\"set_vy_nm_min\":2,\"set_climb_ft_min\":0,\"issued_at\":1002,\"expires_at\":1010,\"rationale\":\"synthetic projected-separation recovery\"},\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"fixtures\":{\"approval\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"decision\":\"approve\",\"approved_at\":1002.2,\"approver\":\"FIXTURE-CONTROLLER-NOT-AUTHORITY\"},\"ack\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"status\":\"accepted\",\"acknowledged_at\":1002.4}},\"outcome\":\"simulated_actuation\",\"rejection_reason\":null,\"before_conflict\":true,\"after_conflict\":false,\"audit_events\":[{\"seq\":0,\"kind\":\"fixture_proposal\",\"payload\":{\"scenario\":\"approved\",\"source_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"advisory\":{\"aircraft_id\":\"FIXTURE-B\",\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"set_vx_nm_min\":-1,\"set_vy_nm_min\":2,\"set_climb_ft_min\":0,\"issued_at\":1002,\"expires_at\":1010,\"rationale\":\"synthetic projected-separation recovery\"},\"simulation_only\":true},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"event_hash\":\"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\"},{\"seq\":1,\"kind\":\"screen_pass\",\"payload\":{\"world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"advisory_hashes\":[\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"]},\"prev_hash\":\"ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d\",\"event_hash\":\"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\"},{\"seq\":2,\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"decision\":\"approve\",\"approved_at\":1002.2,\"approver\":\"FIXTURE-CONTROLLER-NOT-AUTHORITY\"},\"prev_hash\":\"4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12\",\"event_hash\":\"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\"},{\"seq\":3,\"kind\":\"ack\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"status\":\"accepted\",\"acknowledged_at\":1002.4},\"prev_hash\":\"539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d\",\"event_hash\":\"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\"},{\"seq\":4,\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\"before_world_hash\":\"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\"after_world_hash\":\"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"},\"prev_hash\":\"9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee\",\"event_hash\":\"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\"}],\"audit_head\":\"7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778\",\"audit_valid\":true}",
+      "request_json": {
+        "format": "towerops.synthetic-explorer.v1",
+        "disclaimer": "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+        "request": {
+          "scenario": "approved",
+          "include_approval": true,
+          "include_ack": true
+        },
+        "label": "Approval + acknowledgement",
+        "description": "Both exact-hash fixtures arrive before simulated dispatch.",
+        "simulation_clock": {
+          "dispatch_sec": 1002.5,
+          "observed_sec": 1001,
+          "projection_horizon_min": 5
+        },
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "before": {
+          "version": 1,
+          "observed_at": 1001,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "after": {
+          "version": 3,
+          "observed_at": 1002.5,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 2,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424",
+        "advisory": {
+          "aircraft_id": "FIXTURE-B",
+          "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery"
+        },
+        "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+        "fixtures": {
+          "approval": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "decision": "approve",
+            "approved_at": 1002.2,
+            "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+          },
+          "ack": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "status": "accepted",
+            "acknowledged_at": 1002.4
+          }
+        },
+        "outcome": "simulated_actuation",
+        "rejection_reason": null,
+        "before_conflict": true,
+        "after_conflict": false,
+        "audit_events": [
+          {
+            "seq": 0,
+            "kind": "fixture_proposal",
+            "payload": {
+              "scenario": "approved",
+              "source_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory": {
+                "aircraft_id": "FIXTURE-B",
+                "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+                "set_vx_nm_min": -1,
+                "set_vy_nm_min": 2,
+                "set_climb_ft_min": 0,
+                "issued_at": 1002,
+                "expires_at": 1010,
+                "rationale": "synthetic projected-separation recovery"
+              },
+              "simulation_only": true
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d"
+          },
+          {
+            "seq": 1,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory_hashes": [
+                "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+              ]
+            },
+            "prev_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d",
+            "event_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12"
+          },
+          {
+            "seq": 2,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+            },
+            "prev_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12",
+            "event_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d"
+          },
+          {
+            "seq": 3,
+            "kind": "ack",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "status": "accepted",
+              "acknowledged_at": 1002.4
+            },
+            "prev_hash": "539e67d07aeeb59897611c85028298e0543d1fe625c73d60297fce95cb930a2d",
+            "event_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee"
+          },
+          {
+            "seq": 4,
+            "kind": "simulated_actuation",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "after_world_hash": "620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424"
+            },
+            "prev_hash": "9676a6861041ded8b7a2e2c000a1f31814c16f95fbef7bb69a97e109a652eaee",
+            "event_hash": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778"
+          }
+        ],
+        "audit_head": "7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778",
+        "audit_valid": true
+      },
+      "backend_status": 404,
+      "backend_body": "{\"error\": \"Not found\"}",
+      "backend_sha256": "064e1262e82600f52520eec5a475fe906f349f8a6452efa8b1ba6f39250902b6",
+      "backend_bytes": 22,
+      "backend_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/008-backend.body",
+        "bytes": 22,
+        "sha256": "064e1262e82600f52520eec5a475fe906f349f8a6452efa8b1ba6f39250902b6",
+        "mode": "0o664"
+      },
+      "request_stream": {
+        "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/008-request.json",
+        "bytes": 4418,
+        "sha256": "af042da858291bd0b9d9162b4f0f1bb5908a6366403244149af9664a208b5578",
+        "mode": "0o664"
+      },
+      "delivered_status": 404,
+      "delivered_body": "{\"error\": \"Not found\"}",
+      "delivered_sha256": "064e1262e82600f52520eec5a475fe906f349f8a6452efa8b1ba6f39250902b6",
+      "response_label": "http-8"
+    }
+  ],
+  "request_finished": [
+    {
+      "label": "http-1",
+      "url": "http://127.0.0.1:40325/",
+      "at": 1791907268210
+    },
+    {
+      "label": "http-2",
+      "url": "http://127.0.0.1:40325/style.css",
+      "at": 1791907268215
+    },
+    {
+      "label": "http-3",
+      "url": "http://127.0.0.1:40325/app.js",
+      "at": 1791907268217
+    },
+    {
+      "label": "http-4",
+      "url": "http://127.0.0.1:40325/api/scenarios",
+      "at": 1791907268225
+    },
+    {
+      "label": "http-5",
+      "url": "http://127.0.0.1:40325/favicon.ico",
+      "at": 1791907268231
+    },
+    {
+      "label": "http-6",
+      "url": "http://127.0.0.1:40325/api/run",
+      "at": 1791907269077
+    },
+    {
+      "label": "http-7",
+      "url": "http://127.0.0.1:40325/api/replay",
+      "at": 1791907269222
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "external_requests": [],
+  "inline_requests": [
+    "data:font/woff2;base64,d09GMgABAAAAAAScAAsAAAAACfAAAARNAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAhBIRCAqGMIRJATYCJAMsCxgABCAFhF4HaBsuCMgehXEsLOlXaXd7sgbPQ172fjLwdhYFM92mABaiTuRVdO5/mx9I5UJiJom3phLRQw/TSF2M/vo25+pNyWkNws81NrUDAAf0QOdfcf7nmPEyBPZtCbbZEDuosskKZG922ZhBenh05qcSXktf6s3Oy9dAkWsyDzMoM5QTKcwKNjFayUPSREGFhUMrdE8MJsH052qGcYNO3pbEaYIBoDTItIKGAqhDdKHRD0kkKg6QGSCWEfueTNr3P6OvYaIbDH/8ULEAbjQtUt+hT/qmX/SH/twwMLDqN4jxzXjy4PHtltSA6lINqkpRd7N7onVBP20y7YBWyDIHFEBjqKBFMmECfQcTZtD3MmEB/SATVtCPM2ED/TQTdtCfS0/pEsN4ySin3r8q8xHE+0D0XMg8gJi4YrNpNv3qetXuDyeo6OBNZrq5gi7ouC1zcmB2Fd+FewIhcUIfszpF1hzXhrmMCwxaznRyZjig6Y2W7+bBn2DL8fJu/2oHbWc6X80+LUTXcVzv8O3IOy4qKVyFw/DHaMtfzNQEi5gbFT/EDpiofbpkYq2dQui6WcpfxrVBEJ/KxbLA4ZroZoVx+iE+QeTIiI7oKuoUIk/a1ekEOoNFjozm0suYYUelq13/88K1c3PTH9O9Q0d5LZbu7+J2aT7XP23KyQs+34WTU7r8d/k0l6dLl98Dn+/BSUZc7U0mm7FqhSMO9EHV/j5FB4qYX4aXNaKwz/4RRfAWsW8xGW+hvr8PTAf6IP9mRpkDwwv7QFz9HRuOeGWfd8rkyYsWTVy4vpG/pgVNWzBx0aTeIgeq58XFVfZXVduwuOq51a77aT0XLVw4v1PBFjRsQzO+tVeVp3KIwqfKbd6sdjzGvFSuPMquGpMT29lkrhwbE5uz6cGHhIETB06oUk+6tHLJgfnu/3nVnJzYxiXNjQNjYqsu+vCgYKDla5uUOzTNDZg46eCBd3d3gSk9Kz/bFiv8hvOzCT5eqyjBGerT+EiG/JGqwbC+UQ6Bv9bmKGWMj8Yn+fPVRJxKBGqTFXQyM9DhHSlvEHmLVxyYjY/Fdd3hACfLyP3VVZLvVR7B0pxSsGIBqHhwT5sSMOMkRG0BJhpsWMkEO24KwE0pqp3tIYTWCIjJjuBiGNTKTj8JoBLKAn4TmPFnj9oywZwFGx4egp1g3oObeLHdwUO2pFcYTITZCa2c1GQbNg6RCsu9bpikThhAWnLaBi3LM8+5VbMU6rUn30owOC83ULcfBlClb5BBre46BinaWRal85SUvlCbUx1Nbyj2HWCxBTkEgWScQKzsTioJW0IanAYRZqET4mZLSKU2JABII9np01lQ7lOt3srtM1KAeqgQPhYJSMCZJRuAukRZB1CF35gB1MJBr4ilIPZchNyIlDkpRt+3s96cz9K8XKQvCdZfcqWxgtLoXZ2AoKAyVSRRxSRmsYjVOriP089q3z6gdMjE5KI7kzumWzpnAwAAAA=="
+  ],
+  "screenshots": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/original-mismatch-no-action.png",
+      "bytes": 166660,
+      "sha256": "6c93f6ea9bd65a273c33755696144412b86b1c0f6db3561c9f4aa83efe2f8f30",
+      "mode": "0o664"
+    }
+  ],
+  "error": null,
+  "backend_pid": 4093425,
+  "backend_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/explorer.py",
+    "serve",
+    "--port",
+    "0"
+  ],
+  "backend_origin": "http://127.0.0.1:45131",
+  "origin": "http://127.0.0.1:40325",
+  "browser_pid": 4093445,
+  "browser_version": "firefox/157.0",
+  "display_before": {
+    "result": "<h2 id=\"outcome\" class=\"\">Fixture accepted · simulated actuation only</h2><p id=\"reason\">Exact-hash fixture approval and acknowledgement passed the engine gates.</p><div class=\"metrics\"><p id=\"conflicts\">Projected conflict: before true → after false</p><p id=\"clock\">Observation 1001s · dispatch 1002.5s (synthetic)</p></div>\n<label for=\"minute\">Projected time <output id=\"minute-label\">0.0 min</output></label><input id=\"minute\" type=\"range\" min=\"0\" max=\"5\" step=\"0.1\" value=\"0\"><p class=\"hint\">This slider projects the constant-velocity model in minutes. It does not advance the gate's synthetic dispatch clock (seconds). Dotted paths are projections, not live tracks.</p>\n<div class=\"plots\"><section><h3>Before proposal</h3><svg id=\"before\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories before gating\"><line x1=\"50\" y1=\"25\" x2=\"50\" y2=\"325\" stroke=\"#293952\"></line><text x=\"50\" y=\"348\" text-anchor=\"middle\">-6</text><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"325\" stroke=\"#293952\"></line><text x=\"120\" y=\"348\" text-anchor=\"middle\">-4</text><line x1=\"190\" y1=\"25\" x2=\"190\" y2=\"325\" stroke=\"#293952\"></line><text x=\"190\" y=\"348\" text-anchor=\"middle\">-2</text><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"325\" stroke=\"#293952\"></line><text x=\"260\" y=\"348\" text-anchor=\"middle\">0</text><line x1=\"330\" y1=\"25\" x2=\"330\" y2=\"325\" stroke=\"#293952\"></line><text x=\"330\" y=\"348\" text-anchor=\"middle\">2</text><line x1=\"400\" y1=\"25\" x2=\"400\" y2=\"325\" stroke=\"#293952\"></line><text x=\"400\" y=\"348\" text-anchor=\"middle\">4</text><line x1=\"470\" y1=\"25\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"470\" y=\"348\" text-anchor=\"middle\">6</text><line x1=\"50\" y1=\"325\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"34\" y=\"330\" text-anchor=\"end\">0</text><line x1=\"50\" y1=\"273\" x2=\"470\" y2=\"273\" stroke=\"#293952\"></line><text x=\"34\" y=\"278\" text-anchor=\"end\">2</text><line x1=\"50\" y1=\"221\" x2=\"470\" y2=\"221\" stroke=\"#293952\"></line><text x=\"34\" y=\"226\" text-anchor=\"end\">4</text><line x1=\"50\" y1=\"169\" x2=\"470\" y2=\"169\" stroke=\"#293952\"></line><text x=\"34\" y=\"174\" text-anchor=\"end\">6</text><line x1=\"50\" y1=\"117\" x2=\"470\" y2=\"117\" stroke=\"#293952\"></line><text x=\"34\" y=\"122\" text-anchor=\"end\">8</text><line x1=\"50\" y1=\"65\" x2=\"470\" y2=\"65\" stroke=\"#293952\"></line><text x=\"34\" y=\"70\" text-anchor=\"end\">10</text><text x=\"255\" y=\"377\" text-anchor=\"middle\">x / nautical miles (synthetic)</text><text x=\"50\" y=\"18\">y / nm • both at 10,000 fixture ft</text><line x1=\"85\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#74d7cf\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"85\" cy=\"325\" r=\"8\" fill=\"#74d7cf\"></circle><text x=\"97\" y=\"311\" fill=\"#74d7cf\">FIXTURE-A</text><line x1=\"435\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#eec277\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"435\" cy=\"325\" r=\"8\" fill=\"#eec277\"></circle><text x=\"430\" y=\"311\" fill=\"#eec277\">FIXTURE-B</text></svg></section><section><h3 id=\"after-title\">After simulated advisory</h3><svg id=\"after\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories after gating\"><line x1=\"50\" y1=\"25\" x2=\"50\" y2=\"325\" stroke=\"#293952\"></line><text x=\"50\" y=\"348\" text-anchor=\"middle\">-6</text><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"325\" stroke=\"#293952\"></line><text x=\"120\" y=\"348\" text-anchor=\"middle\">-4</text><line x1=\"190\" y1=\"25\" x2=\"190\" y2=\"325\" stroke=\"#293952\"></line><text x=\"190\" y=\"348\" text-anchor=\"middle\">-2</text><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"325\" stroke=\"#293952\"></line><text x=\"260\" y=\"348\" text-anchor=\"middle\">0</text><line x1=\"330\" y1=\"25\" x2=\"330\" y2=\"325\" stroke=\"#293952\"></line><text x=\"330\" y=\"348\" text-anchor=\"middle\">2</text><line x1=\"400\" y1=\"25\" x2=\"400\" y2=\"325\" stroke=\"#293952\"></line><text x=\"400\" y=\"348\" text-anchor=\"middle\">4</text><line x1=\"470\" y1=\"25\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"470\" y=\"348\" text-anchor=\"middle\">6</text><line x1=\"50\" y1=\"325\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"34\" y=\"330\" text-anchor=\"end\">0</text><line x1=\"50\" y1=\"273\" x2=\"470\" y2=\"273\" stroke=\"#293952\"></line><text x=\"34\" y=\"278\" text-anchor=\"end\">2</text><line x1=\"50\" y1=\"221\" x2=\"470\" y2=\"221\" stroke=\"#293952\"></line><text x=\"34\" y=\"226\" text-anchor=\"end\">4</text><line x1=\"50\" y1=\"169\" x2=\"470\" y2=\"169\" stroke=\"#293952\"></line><text x=\"34\" y=\"174\" text-anchor=\"end\">6</text><line x1=\"50\" y1=\"117\" x2=\"470\" y2=\"117\" stroke=\"#293952\"></line><text x=\"34\" y=\"122\" text-anchor=\"end\">8</text><line x1=\"50\" y1=\"65\" x2=\"470\" y2=\"65\" stroke=\"#293952\"></line><text x=\"34\" y=\"70\" text-anchor=\"end\">10</text><text x=\"255\" y=\"377\" text-anchor=\"middle\">x / nautical miles (synthetic)</text><text x=\"50\" y=\"18\">y / nm • both at 10,000 fixture ft</text><line x1=\"85\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#74d7cf\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"85\" cy=\"325\" r=\"8\" fill=\"#74d7cf\"></circle><text x=\"97\" y=\"311\" fill=\"#74d7cf\">FIXTURE-A</text><line x1=\"435\" y1=\"325\" x2=\"260\" y2=\"65\" stroke=\"#eec277\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"435\" cy=\"325\" r=\"8\" fill=\"#eec277\"></circle><text x=\"430\" y=\"311\" fill=\"#eec277\">FIXTURE-B</text></svg></section></div>\n<section class=\"details\"><h2>Advisory &amp; fixture inputs</h2><pre id=\"advisory\">{\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"status\": \"accepted\",\n      \"acknowledged_at\": 1002.4\n    }\n  }\n}</pre><h2>Audit timeline</h2><p id=\"chain\">Local chain valid: true · head 7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778</p><ol id=\"timeline\"><li><strong>1. fixture_proposal</strong><pre>{\n  \"scenario\": \"approved\",\n  \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"simulation_only\": true\n}</pre></li><li><strong>2. screen_pass</strong><pre>{\n  \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory_hashes\": [\n    \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n  ]\n}</pre></li><li><strong>3. approval</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"decision\": \"approve\",\n  \"approved_at\": 1002.2,\n  \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n}</pre></li><li><strong>4. ack</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"status\": \"accepted\",\n  \"acknowledged_at\": 1002.4\n}</pre></li><li><strong>5. simulated_actuation</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"\n}</pre></li></ol></section>",
+    "status": "Result: Approval + acknowledgement. Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+    "export_disabled": false
+  },
+  "original_endpoint_reply": "{\"error\": \"Not found\"}",
+  "display_after": {
+    "result": "<h2 id=\"outcome\" class=\"\">Fixture accepted · simulated actuation only</h2><p id=\"reason\">Exact-hash fixture approval and acknowledgement passed the engine gates.</p><div class=\"metrics\"><p id=\"conflicts\">Projected conflict: before true → after false</p><p id=\"clock\">Observation 1001s · dispatch 1002.5s (synthetic)</p></div>\n<label for=\"minute\">Projected time <output id=\"minute-label\">0.0 min</output></label><input id=\"minute\" type=\"range\" min=\"0\" max=\"5\" step=\"0.1\" value=\"0\"><p class=\"hint\">This slider projects the constant-velocity model in minutes. It does not advance the gate's synthetic dispatch clock (seconds). Dotted paths are projections, not live tracks.</p>\n<div class=\"plots\"><section><h3>Before proposal</h3><svg id=\"before\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories before gating\"><line x1=\"50\" y1=\"25\" x2=\"50\" y2=\"325\" stroke=\"#293952\"></line><text x=\"50\" y=\"348\" text-anchor=\"middle\">-6</text><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"325\" stroke=\"#293952\"></line><text x=\"120\" y=\"348\" text-anchor=\"middle\">-4</text><line x1=\"190\" y1=\"25\" x2=\"190\" y2=\"325\" stroke=\"#293952\"></line><text x=\"190\" y=\"348\" text-anchor=\"middle\">-2</text><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"325\" stroke=\"#293952\"></line><text x=\"260\" y=\"348\" text-anchor=\"middle\">0</text><line x1=\"330\" y1=\"25\" x2=\"330\" y2=\"325\" stroke=\"#293952\"></line><text x=\"330\" y=\"348\" text-anchor=\"middle\">2</text><line x1=\"400\" y1=\"25\" x2=\"400\" y2=\"325\" stroke=\"#293952\"></line><text x=\"400\" y=\"348\" text-anchor=\"middle\">4</text><line x1=\"470\" y1=\"25\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"470\" y=\"348\" text-anchor=\"middle\">6</text><line x1=\"50\" y1=\"325\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"34\" y=\"330\" text-anchor=\"end\">0</text><line x1=\"50\" y1=\"273\" x2=\"470\" y2=\"273\" stroke=\"#293952\"></line><text x=\"34\" y=\"278\" text-anchor=\"end\">2</text><line x1=\"50\" y1=\"221\" x2=\"470\" y2=\"221\" stroke=\"#293952\"></line><text x=\"34\" y=\"226\" text-anchor=\"end\">4</text><line x1=\"50\" y1=\"169\" x2=\"470\" y2=\"169\" stroke=\"#293952\"></line><text x=\"34\" y=\"174\" text-anchor=\"end\">6</text><line x1=\"50\" y1=\"117\" x2=\"470\" y2=\"117\" stroke=\"#293952\"></line><text x=\"34\" y=\"122\" text-anchor=\"end\">8</text><line x1=\"50\" y1=\"65\" x2=\"470\" y2=\"65\" stroke=\"#293952\"></line><text x=\"34\" y=\"70\" text-anchor=\"end\">10</text><text x=\"255\" y=\"377\" text-anchor=\"middle\">x / nautical miles (synthetic)</text><text x=\"50\" y=\"18\">y / nm • both at 10,000 fixture ft</text><line x1=\"85\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#74d7cf\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"85\" cy=\"325\" r=\"8\" fill=\"#74d7cf\"></circle><text x=\"97\" y=\"311\" fill=\"#74d7cf\">FIXTURE-A</text><line x1=\"435\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#eec277\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"435\" cy=\"325\" r=\"8\" fill=\"#eec277\"></circle><text x=\"430\" y=\"311\" fill=\"#eec277\">FIXTURE-B</text></svg></section><section><h3 id=\"after-title\">After simulated advisory</h3><svg id=\"after\" viewBox=\"0 0 520 390\" role=\"img\" aria-label=\"Synthetic trajectories after gating\"><line x1=\"50\" y1=\"25\" x2=\"50\" y2=\"325\" stroke=\"#293952\"></line><text x=\"50\" y=\"348\" text-anchor=\"middle\">-6</text><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"325\" stroke=\"#293952\"></line><text x=\"120\" y=\"348\" text-anchor=\"middle\">-4</text><line x1=\"190\" y1=\"25\" x2=\"190\" y2=\"325\" stroke=\"#293952\"></line><text x=\"190\" y=\"348\" text-anchor=\"middle\">-2</text><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"325\" stroke=\"#293952\"></line><text x=\"260\" y=\"348\" text-anchor=\"middle\">0</text><line x1=\"330\" y1=\"25\" x2=\"330\" y2=\"325\" stroke=\"#293952\"></line><text x=\"330\" y=\"348\" text-anchor=\"middle\">2</text><line x1=\"400\" y1=\"25\" x2=\"400\" y2=\"325\" stroke=\"#293952\"></line><text x=\"400\" y=\"348\" text-anchor=\"middle\">4</text><line x1=\"470\" y1=\"25\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"470\" y=\"348\" text-anchor=\"middle\">6</text><line x1=\"50\" y1=\"325\" x2=\"470\" y2=\"325\" stroke=\"#293952\"></line><text x=\"34\" y=\"330\" text-anchor=\"end\">0</text><line x1=\"50\" y1=\"273\" x2=\"470\" y2=\"273\" stroke=\"#293952\"></line><text x=\"34\" y=\"278\" text-anchor=\"end\">2</text><line x1=\"50\" y1=\"221\" x2=\"470\" y2=\"221\" stroke=\"#293952\"></line><text x=\"34\" y=\"226\" text-anchor=\"end\">4</text><line x1=\"50\" y1=\"169\" x2=\"470\" y2=\"169\" stroke=\"#293952\"></line><text x=\"34\" y=\"174\" text-anchor=\"end\">6</text><line x1=\"50\" y1=\"117\" x2=\"470\" y2=\"117\" stroke=\"#293952\"></line><text x=\"34\" y=\"122\" text-anchor=\"end\">8</text><line x1=\"50\" y1=\"65\" x2=\"470\" y2=\"65\" stroke=\"#293952\"></line><text x=\"34\" y=\"70\" text-anchor=\"end\">10</text><text x=\"255\" y=\"377\" text-anchor=\"middle\">x / nautical miles (synthetic)</text><text x=\"50\" y=\"18\">y / nm • both at 10,000 fixture ft</text><line x1=\"85\" y1=\"325\" x2=\"260\" y2=\"325\" stroke=\"#74d7cf\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"85\" cy=\"325\" r=\"8\" fill=\"#74d7cf\"></circle><text x=\"97\" y=\"311\" fill=\"#74d7cf\">FIXTURE-A</text><line x1=\"435\" y1=\"325\" x2=\"260\" y2=\"65\" stroke=\"#eec277\" stroke-width=\"3\" stroke-dasharray=\"6 5\"></line><circle cx=\"435\" cy=\"325\" r=\"8\" fill=\"#eec277\"></circle><text x=\"430\" y=\"311\" fill=\"#eec277\">FIXTURE-B</text></svg></section></div>\n<section class=\"details\"><h2>Advisory &amp; fixture inputs</h2><pre id=\"advisory\">{\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"fixtures\": {\n    \"approval\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"decision\": \"approve\",\n      \"approved_at\": 1002.2,\n      \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n    },\n    \"ack\": {\n      \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n      \"status\": \"accepted\",\n      \"acknowledged_at\": 1002.4\n    }\n  }\n}</pre><h2>Audit timeline</h2><p id=\"chain\">Local chain valid: true · head 7fa7f30050d023efe1bd59a8dbe2f921d20115fc78c218c5fc6e20a1c2236778</p><ol id=\"timeline\"><li><strong>1. fixture_proposal</strong><pre>{\n  \"scenario\": \"approved\",\n  \"source_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory\": {\n    \"aircraft_id\": \"FIXTURE-B\",\n    \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n    \"set_vx_nm_min\": -1,\n    \"set_vy_nm_min\": 2,\n    \"set_climb_ft_min\": 0,\n    \"issued_at\": 1002,\n    \"expires_at\": 1010,\n    \"rationale\": \"synthetic projected-separation recovery\"\n  },\n  \"simulation_only\": true\n}</pre></li><li><strong>2. screen_pass</strong><pre>{\n  \"world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"advisory_hashes\": [\n    \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\"\n  ]\n}</pre></li><li><strong>3. approval</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"decision\": \"approve\",\n  \"approved_at\": 1002.2,\n  \"approver\": \"FIXTURE-CONTROLLER-NOT-AUTHORITY\"\n}</pre></li><li><strong>4. ack</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"status\": \"accepted\",\n  \"acknowledged_at\": 1002.4\n}</pre></li><li><strong>5. simulated_actuation</strong><pre>{\n  \"advisory_hash\": \"1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3\",\n  \"before_world_hash\": \"93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff\",\n  \"after_world_hash\": \"620f4bb6dc6f9e24b1c59dfcafb4f4344ae615603900b33cebabea1ccc021424\"\n}</pre></li></ol></section>",
+    "status": "Result: Approval + acknowledgement. Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+    "export_disabled": false
+  },
+  "browser_closed": true,
+  "browser_exit_code": 0,
+  "relay_closed": true,
+  "open_relay_sockets": 1,
+  "backend_exit": {
+    "code": 0,
+    "signal": null
+  },
+  "backend_closed": true,
+  "backend_stdout": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/backend.stdout",
+    "bytes": 198,
+    "sha256": "d05fb2e99cf5876a27ff6adac35045dd035e9cacda0beb6ae514368f1904c43f",
+    "mode": "0o664"
+  },
+  "backend_stderr": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/streams/backend.stderr",
+    "bytes": 557,
+    "sha256": "13e487644d0e2d6598faa8e275cb1a0fa5a39ef79177037568f83c98c719dc21",
+    "mode": "0o664"
+  },
+  "source_after": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/EXPLORER.md",
+      "bytes": 7158,
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/explorer.py",
+      "bytes": 7423,
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+      "mode": "0o755"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/app.js",
+      "bytes": 6147,
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/index.html",
+      "bytes": 3396,
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-runtime/web/style.css",
+      "bytes": 2037,
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "mode": "0o644"
+    }
+  ],
+  "controls_after": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v1.cjs",
+      "bytes": 21435,
+      "sha256": "2fc30ab95dccdb66c9ef2bef9b3519fcc579423bee6fc0ebe364a24a73d1634a",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+      "bytes": 13808,
+      "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/driver-freeze-v1.json",
+      "bytes": 2412,
+      "sha256": "30e1cd5cff25bc19ccbffdcbbab0ec74a7fb2f43da663b0414ac51c0e2bd496e",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria-freeze.json",
+      "bytes": 4416,
+      "sha256": "43eab80cff5e55607ff0a6bebd4168134cf8098e456ab66c6d75527d741d6c5b",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-spec.json",
+      "bytes": 4128,
+      "sha256": "89b1be732c20cc11df7a161ac9ddfa27bce1f97acbb8ab74081c57979b4abe16",
+      "mode": "0o644"
+    }
+  ],
+  "fixtures_after": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/A.json",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/B.json",
+      "bytes": 5684,
+      "sha256": "5d00c4c20385b398c4e60d84326924fab2cabaae7b2c95cc1ebe046e340af5b0",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+      "bytes": 5787,
+      "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/D.json",
+      "bytes": 6474,
+      "sha256": "c02df565471b55487479efce0712cd5c1e88ebd83adca3c70ffea7d443fb601f",
+      "mode": "0o644"
+    }
+  ],
+  "failed_checks": [],
+  "accepted": false,
+  "finished": "2026-10-13T16:01:09.762Z"
+}

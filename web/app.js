@@ -78,9 +78,73 @@ $("export").addEventListener("click",()=> {
   setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
 let replaySelection = null;
+function clearReplayExplanation() {
+  $("replay-explain").hidden=true;
+  $("replay-explain").disabled=true;
+  $("replay-explain-status").textContent="";
+  $("replay-differences").hidden=true;
+  $("replay-differences").open=false;
+  $("replay-difference-summary").textContent="Field differences";
+  $("replay-difference-list").replaceChildren();
+  $("replay-difference-limit").textContent="";
+}
+function renderReplayDifferences(reply) {
+  const list=$("replay-difference-list");
+  list.replaceChildren();
+  reply.differences.forEach(difference => {
+    const row=document.createElement("li");
+    const heading=document.createElement("p");
+    const path=document.createElement("code"),kind=document.createElement("code");
+    path.className="replay-path"; path.textContent=difference.path || "(document root)";
+    kind.className="replay-kind"; kind.textContent=difference.kind;
+    heading.append(path,document.createTextNode(" "),kind);
+    const sides=document.createElement("div"); sides.className="replay-sides";
+    [["expected","Expected (local reproduction)"],["actual","Actual (saved export)"]].forEach(([side,label]) => {
+      const column=document.createElement("div"),title=document.createElement("h4"),value=document.createElement("pre");
+      title.textContent=label; value.className="replay-"+side;
+      value.textContent=JSON.stringify(difference[side],null,2);
+      column.append(title,value); sides.append(column);
+    });
+    row.append(heading,sides); list.append(row);
+  });
+  $("replay-difference-summary").textContent="Field differences ("+reply.differences.length+(reply.differences_truncated ? "+" : "")+")";
+  $("replay-difference-limit").textContent=reply.differences_truncated
+    ? "Showing the first "+reply.difference_limit+" differences; more were found."
+    : "All observed field differences are shown.";
+  $("replay-differences").hidden=false;
+  $("replay-differences").open=true;
+}
+clearReplayExplanation();
+$("replay-explain").addEventListener("click",async()=> {
+  const selection=replaySelection;
+  if (!selection || !selection.mismatch || selection.explaining) return;
+  selection.explaining=true;
+  $("replay-explain").disabled=true;
+  $("replay-explain-status").textContent="Comparing saved fields with the local reproduction…";
+  $("replay-differences").hidden=true;
+  $("replay-difference-list").replaceChildren();
+  try {
+    const reply=await request("/api/replay/explain",selection.value);
+    if (replaySelection !== selection) return;
+    renderReplayDifferences(reply);
+    $("replay-explain-status").textContent="Field comparison complete. The replay verdict and displayed run are unchanged.";
+  } catch(e) {
+    if (replaySelection === selection) {
+      $("replay-differences").hidden=true;
+      $("replay-difference-list").replaceChildren();
+      $("replay-explain-status").textContent="Field comparison failed: "+e.message+". You can retry this selection.";
+    }
+  } finally {
+    if (replaySelection === selection) {
+      selection.explaining=false;
+      $("replay-explain").disabled=false;
+    }
+  }
+});
 $("replay-file").addEventListener("change",async()=> {
   const selection = {};
   replaySelection = selection;
+  clearReplayExplanation();
   const file=$("replay-file").files[0];
   if (!file) {$("replay-status").textContent="";return;}
   $("replay-status").textContent="Replaying locally…";
@@ -90,6 +154,12 @@ $("replay-file").addEventListener("change",async()=> {
     if (replaySelection !== selection) return;
     const value=JSON.parse(text),reply=await request("/api/replay",value);
     if (replaySelection !== selection) return;
+    if (reply.matches === false) {
+      selection.value=value;
+      selection.mismatch=true;
+      $("replay-explain").hidden=false;
+      $("replay-explain").disabled=false;
+    }
     $("replay-status").textContent = reply.matches ? `Replay MATCH: ${reply.outcome}. ${reply.note}` : `Replay MISMATCH: export differs from the deterministic engine result. ${reply.note}`;
   } catch(e) {
     if (replaySelection === selection) $("replay-status").textContent=`Replay rejected: ${e.message}`;

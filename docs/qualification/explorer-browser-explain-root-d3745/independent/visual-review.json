@@ -1,0 +1,58 @@
+{
+  "schema": "hamon.loom.towerops-explain-visual-review.v1",
+  "at": "2026-10-13T16:43:38.902059+00:00",
+  "reviewer": "Loom",
+  "accepted": true,
+  "functional_course_images": "Viewed all four actual1440x1100 candidate images: B/C/D action, completion status, counts1/3/32+ visible; actual value rows are below their viewport. Final A image shows MATCH and no stale explanation. These images alone do not visually prove the complete envelopes.",
+  "layout_receipt": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/receipt.json",
+    "bytes": 37474,
+    "sha256": "0bc30d24398aa7a8c176203a16e16df4d38f745a765e4cd7337690bc48f34c2c",
+    "mode": "0o664",
+    "git_blob": "a347edac9e5d20338412d27253147f14c5de5ef6"
+  },
+  "layout_checks_recomputed": 10,
+  "images": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/C-details-scrolled-viewport.png",
+      "bytes": 119611,
+      "sha256": "8a8684a369b03cfefd43ff0601db43749c606a632ed0f99d06e168069123ba72",
+      "mode": "0o664",
+      "git_blob": "3282f4389b5a03ebc748043a2572ebfa2f34defc",
+      "dimensions": [
+        1440,
+        1100
+      ]
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/C-details-complete-panel.png",
+      "bytes": 109204,
+      "sha256": "fbdba351caa5913e552e9ad6624113408af92ddf24a269a263b2e35f66d01a1b",
+      "mode": "0o664",
+      "git_blob": "adaafb6b5eaf90374d6b49fe377ad7c50ed083a3",
+      "dimensions": [
+        1032,
+        1164
+      ]
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/visual-C-v2/C-literal-row-scrolled.png",
+      "bytes": 99207,
+      "sha256": "908a7690cb5e15e07df4a2f8eff719de2113494e38f9fcbedd8660bdb4e29e38",
+      "mode": "0o664",
+      "git_blob": "91d105756b96c7a7aabd26672a5430c49a1f2b35",
+      "dimensions": [
+        1440,
+        1100
+      ]
+    }
+  ],
+  "actual_visual_findings": [
+    "Complete three-row panel inspected; Expected and Actual columns and path/kind labels readable.",
+    "Number2 versus booleantrue and present:false distinction visible.",
+    "Long description and literal markup-looking Unicode object string wrap within their columns, complete nested null/array contents visible.",
+    "Entire final row is reachable by normal page scrolling; no horizontal page overflow at1440x1100."
+  ],
+  "limits": "Separate post-exposure direct production opening; one Linux Firefox viewport. No mobile/cross-browser claim and no reclassification of original failed raw receipts.",
+  "v1_failure_scope": "Unsupported BiDi request.postData in visual-only observer. Exact failure and owned Python cleanup retained; no independent complete v1 browser-closure claim."
+}

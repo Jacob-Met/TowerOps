@@ -1,0 +1,65 @@
+{
+  "schema": "hamon.loom.towerops-explain-driver-freeze.v1",
+  "frozen_at": "2026-10-13T15:59:11.261369+00:00",
+  "candidate_exposure": "Candidate implementation not read or exposed. Criteria were frozen before root implementation; driver is independently authored solely from original source and public contract.",
+  "receiver": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v1.cjs",
+    "bytes": 21435,
+    "sha256": "2fc30ab95dccdb66c9ef2bef9b3519fcc579423bee6fc0ebe364a24a73d1634a",
+    "mode": "0o644"
+  },
+  "criteria": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+    "bytes": 13808,
+    "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505",
+    "mode": "0o644"
+  },
+  "criteria_freeze": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria-freeze.json",
+    "bytes": 4416,
+    "sha256": "43eab80cff5e55607ff0a6bebd4168134cf8098e456ab66c6d75527d741d6c5b",
+    "mode": "0o644"
+  },
+  "fixtures": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/A.json",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/B.json",
+      "bytes": 5684,
+      "sha256": "5d00c4c20385b398c4e60d84326924fab2cabaae7b2c95cc1ebe046e340af5b0",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+      "bytes": 5787,
+      "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/D.json",
+      "bytes": 6474,
+      "sha256": "c02df565471b55487479efce0712cd5c1e88ebd83adca3c70ffea7d443fb601f",
+      "mode": "0o644"
+    }
+  ],
+  "source_spec": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-spec.json",
+    "bytes": 4128,
+    "sha256": "89b1be732c20cc11df7a161ac9ddfa27bce1f97acbb8ab74081c57979b4abe16",
+    "mode": "0o644"
+  },
+  "syntax": {
+    "argv": [
+      "/usr/bin/node",
+      "--check",
+      "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v1.cjs"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

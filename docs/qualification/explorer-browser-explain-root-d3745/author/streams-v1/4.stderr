@@ -1,0 +1,53 @@
+test_invalid_requests_fail (test_explorer.HTTPTests.test_invalid_requests_fail) ... 127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 400 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 400 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 400 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 400 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 415 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 413 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 400 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "GET / HTTP/1.1" 403 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 403 -
+ok
+test_real_run_export_replay (test_explorer.HTTPTests.test_real_run_export_replay) ... 127.0.0.1 - - [13/Oct/2026 16:10:49] "GET /api/scenarios HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "POST /api/replay HTTP/1.1" 200 -
+ok
+test_static_assets_and_unknown_routes (test_explorer.HTTPTests.test_static_assets_and_unknown_routes) ... 127.0.0.1 - - [13/Oct/2026 16:10:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "GET /towerops.py HTTP/1.1" 404 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "GET /../LICENSE HTTP/1.1" 404 -
+127.0.0.1 - - [13/Oct/2026 16:10:49] "GET /.git/config HTTP/1.1" 404 -
+ok
+test_all_cases_and_fixture_switches (test_explorer.ScenarioTests.test_all_cases_and_fixture_switches) ... ok
+test_invalid_input (test_explorer.ScenarioTests.test_invalid_input) ... ok
+test_javascript_numeric_roundtrip (test_explorer.ScenarioTests.test_javascript_numeric_roundtrip) ... ok
+test_no_baseline_changes_or_nondeterminism (test_explorer.ScenarioTests.test_no_baseline_changes_or_nondeterminism) ... ok
+test_replay_checks_whole_export (test_explorer.ScenarioTests.test_replay_checks_whole_export) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.558s
+
+OK

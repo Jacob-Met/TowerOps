@@ -1,0 +1,47 @@
+{
+  "schema": "hamon.anvil.publication-tools.v1",
+  "repository": "Jacob-Met/estate-push-tools",
+  "commit": "c00eadc94f81d2e8608a6e8a23bcfa9b201646a6",
+  "files": [
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-browser-explain-publication/tools/prepare_git_objects.py",
+      "bytes": 4041,
+      "sha256": "fb6596df63889b6b72038e3921b9144b802cc9546f9617705cfd112b57dab676",
+      "git_blob": "5a31e72360b1ebcd7595c97c8f1dc433659e71b9",
+      "native_mode": "0o664",
+      "repository_path": "prepare_git_objects.py"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-browser-explain-publication/tools/receive_source.py",
+      "bytes": 12539,
+      "sha256": "90af676b35c39f3cb1a3295d94a31a752893265af3a73292e2b2b22fb2750f35",
+      "git_blob": "c39c963f472c74c96320ad4174c886c2315d5cba",
+      "native_mode": "0o664",
+      "repository_path": "receive_source.py"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/anvil-d3745-browser-explain-publication/tools/validate_publication_layout.py",
+      "bytes": 10827,
+      "sha256": "09e931bcdb5d1ec5e55d76c8123a973a75a2d5072c6ffb84b302ddac8f443907",
+      "git_blob": "ff680dc0db8600e1e29a16e5516aa74632891e5a",
+      "native_mode": "0o664",
+      "repository_path": "validate_publication_layout.py"
+    }
+  ],
+  "guide": {
+    "path": "docs/prepare-git-objects.md",
+    "git_blob": "2e592c7e3b06ce9c11a21acb0150a90ac64f42cb"
+  },
+  "scope": "All three complete source bodies fetched at the same commit and admitted unchanged; no tool test replay.",
+  "inherited_towerops_workflows": [
+    {
+      "path": ".github/workflows/airspace-demo.yml",
+      "git_blob": "24356d4f5ce88f21cc1a27329b06df351e156810"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "4791e16741c2ee136585d8f4d99f918535a3a017"
+    }
+  ],
+  "no_actions": "No workflow changes or runs requested. Ordinary publication commit requires skip-ci/skip-actions and skip-checks markers."
+}

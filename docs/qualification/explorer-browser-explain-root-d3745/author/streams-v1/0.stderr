@@ -1,0 +1,9 @@
+test_match_adds_empty_differences_and_preserves_ordinary_reply_bytes (test_explorer_explanation_http.ExplanationHTTPTests.test_match_adds_empty_differences_and_preserves_ordinary_reply_bytes) ... ok
+test_one_changed_field_reports_literal_typed_sides (test_explorer_explanation_http.ExplanationHTTPTests.test_one_changed_field_reports_literal_typed_sides) ... ok
+test_refusal_has_existing_error_shape_and_next_explicit_request_recovers (test_explorer_explanation_http.ExplanationHTTPTests.test_refusal_has_existing_error_shape_and_next_explicit_request_recovers) ... ok
+test_unexpected_fields_are_ordered_and_capped (test_explorer_explanation_http.ExplanationHTTPTests.test_unexpected_fields_are_ordered_and_capped) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.512s
+
+OK

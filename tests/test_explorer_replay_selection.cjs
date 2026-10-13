@@ -53,7 +53,11 @@ async function harness() {
   vm.runInContext(app, context, {filename: appPath});
   await tick();
   const unrelated = () => JSON.stringify([...nodes].filter(([id]) =>
-    typeof id === "string" && id !== "replay-file" && id !== "replay-status")
+    typeof id === "string" && ![
+      "replay-file", "replay-status", "replay-explain", "replay-explain-status",
+      "replay-differences", "replay-difference-summary", "replay-difference-list",
+      "replay-difference-limit",
+    ].includes(id))
     .map(([id, n]) => [id, n.textContent, n.value, n.disabled, n.children.length]));
   const before = unrelated();
   return {

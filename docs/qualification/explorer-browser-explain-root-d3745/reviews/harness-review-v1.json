@@ -1,0 +1,47 @@
+{
+  "schema": "hamon.anvil.towerops-explain-harness-review.v1",
+  "accepted": true,
+  "reviewed_at": "2026-10-13T16:11:27.144455+00:00",
+  "inputs": [
+    {
+      "file": "criteria.json",
+      "bytes": 13808,
+      "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505"
+    },
+    {
+      "file": "driver-v1.cjs",
+      "bytes": 21435,
+      "sha256": "2fc30ab95dccdb66c9ef2bef9b3519fcc579423bee6fc0ebe364a24a73d1634a"
+    },
+    {
+      "file": "driver-v2.cjs",
+      "bytes": 21502,
+      "sha256": "2490839a8603e0fbd91c6b7b5b75febfdf156431526bdfc8cf8c937ba267f59b"
+    },
+    {
+      "file": "freeze-v2.json",
+      "bytes": 3492,
+      "sha256": "001345d7d3a45ac929afcd85be5e627358a1a293d59b8de05fd8fe28854faf39"
+    },
+    {
+      "file": "original-audit.json",
+      "bytes": 1207,
+      "sha256": "d685cb73d4c756c0315f68762b7443d1a61d09f48e4bdb876280d63b093e4d8f"
+    },
+    {
+      "file": "original-receipt.json",
+      "bytes": 158295,
+      "sha256": "c5da677c7ac6bdd91b7064265e2ecc56ce152dca355b21d079a28b0ad39e37c1"
+    }
+  ],
+  "review": [
+    "Full frozen criteria, v1 driver and v2 delta read; candidate source was withheld from Loom at both freezes. Exact v2 only changes freeze reference/schema and adds bounded close-event drain after server.close.",
+    "Production Python server responses captured verbatim behind a loopback relay. One authored503 and one held exact body are explicitly recorded. Independent literal expected objects, actual file selection, immediate retirement snapshots, unique public requestfinished and stable later observation support the advertised sequence.",
+    "Independently parsed original raw receipt and recomputed all15 actual/expected pairs: normal run/replay200, additive explanation404, absent action, no automatic call, unchanged displayed run and preserved source/control/fixture inventories.",
+    "Raw original accepted=false and socket Set1 remain unchanged. Later peer-authored closure/custody audit reports recorded receiver/backend/browser absent and exact ports without listeners; scope explicitly separated from raw original observation."
+  ],
+  "limitations": [
+    "No browser/product replay, no candidate-result acceptance, no independent13 raw-stream body reread or fresh process/listener probe in this review.",
+    "Network observation is page/relay scope. Request framing is forwarded through the original production boundary; authored relay faults are not spontaneous product faults."
+  ]
+}

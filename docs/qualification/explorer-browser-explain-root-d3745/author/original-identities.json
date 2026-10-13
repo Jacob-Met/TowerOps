@@ -1,0 +1,72 @@
+[
+  {
+    "path": "explorer.py",
+    "bytes": 7423,
+    "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+    "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a",
+    "mode": 493
+  },
+  {
+    "path": "web/app.js",
+    "bytes": 6147,
+    "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+    "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+    "mode": 420
+  },
+  {
+    "path": "web/index.html",
+    "bytes": 3396,
+    "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+    "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b",
+    "mode": 420
+  },
+  {
+    "path": "web/style.css",
+    "bytes": 2037,
+    "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+    "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb",
+    "mode": 420
+  },
+  {
+    "path": "tests/test_explorer_replay_selection.cjs",
+    "bytes": 7996,
+    "sha256": "947c1289a71b361e144e33b260ef6a49e985c7fb2352a847ecbf0577aecc0a01",
+    "git_blob": "d8ccb564692edac407632c6dc8efa2465d8ff47f",
+    "mode": 420
+  },
+  {
+    "path": "test_explorer.py",
+    "bytes": 7460,
+    "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+    "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+    "mode": 420
+  },
+  {
+    "path": "replay_explain.py",
+    "bytes": 5432,
+    "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+    "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+    "mode": 420
+  },
+  {
+    "path": "scenarios.py",
+    "bytes": 5989,
+    "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+    "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+    "mode": 420
+  },
+  {
+    "path": "towerops.py",
+    "bytes": 19684,
+    "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+    "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+    "mode": 420
+  },
+  {
+    "path": "EXPLORER.md",
+    "bytes": 7158,
+    "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+    "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d",
+    "mode": 420
+  }
+]

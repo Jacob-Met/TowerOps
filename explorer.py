@@ -54,7 +54,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         if not self.local_request():
             return
-        if self.path not in {"/api/run", "/api/replay"}:
+        if self.path not in {"/api/run", "/api/replay", "/api/replay/explain"}:
             self.respond(404, {"error": "Not found"})
             return
         try:
@@ -101,6 +101,9 @@ class Handler(BaseHTTPRequestHandler):
             value = json.loads(raw, parse_constant=reject_constant)
             if self.path == "/api/replay":
                 result = replay_result(value)
+            elif self.path == "/api/replay/explain":
+                from replay_explain import explain_replay
+                result = explain_replay(value)
             else:
                 if not isinstance(value, dict) or set(value) != {"scenario", "include_approval", "include_ack"}:
                     raise ValueError("Provide scenario and both fixture switches")

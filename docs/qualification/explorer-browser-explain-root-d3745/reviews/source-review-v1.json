@@ -1,0 +1,187 @@
+{
+  "schema": "hamon.anvil.towerops-browser-explain-source-review.v1",
+  "accepted": true,
+  "reviewed_at": "2026-10-13T16:11:27.143058+00:00",
+  "reviewer": "Anvil",
+  "base_commit": "6991198cde605b683331290c8c898ac5dbec6643",
+  "independent_base_tree": "bf63ce7b3ac761bf02c9184747575f989a2876ab",
+  "base_tree_complete_entries": 1600,
+  "packet": {
+    "bytes": 99606,
+    "sha256": "bc4450944a7aa7170e963af8f98e912283f17ae0df22b72f86f399ab9ef1b171"
+  },
+  "candidate": [
+    {
+      "path": "EXPLORER.md",
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "git_blob": "3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66",
+      "mode": "0o644"
+    },
+    {
+      "path": "explorer.py",
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "mode": "0o755"
+    },
+    {
+      "path": "replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": "0o644"
+    },
+    {
+      "path": "scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": "0o644"
+    },
+    {
+      "path": "test_explorer.py",
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+      "mode": "0o644"
+    },
+    {
+      "path": "tests/test_explorer_explanation.cjs",
+      "bytes": 8796,
+      "sha256": "43a186375092cd125700f0106f7a1ccd27447e8cc2a770d4638297c31832c436",
+      "git_blob": "eb1e758a44ed3e7d734db4d71c9e21309c6cd811",
+      "mode": "0o644"
+    },
+    {
+      "path": "tests/test_explorer_explanation_http.py",
+      "bytes": 4165,
+      "sha256": "c5c385da77329da75843a8e16716e107aaf6a71140002f1b73645be3ec31d713",
+      "git_blob": "92fd918db8ca231add75040011d49f84c038297f",
+      "mode": "0o644"
+    },
+    {
+      "path": "tests/test_explorer_replay_selection.cjs",
+      "bytes": 8168,
+      "sha256": "df20845a15c9585a202778b0a3793df0f05723f8a977dc6c20e4729d63ca298b",
+      "git_blob": "821428e280841900994ef3f66511e1579172ca18",
+      "mode": "0o644"
+    },
+    {
+      "path": "towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": "0o644"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "git_blob": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "mode": "0o644"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "git_blob": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "mode": "0o644"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mode": "0o644"
+    }
+  ],
+  "authenticated_original": [
+    {
+      "path": "EXPLORER.md",
+      "git_blob": "67104465b77d680302a5cbe400f5bdca78faf92d",
+      "sha256": "a67228abe0bde3e0b1deeb009d11a5837b1d148b5d75752c33c41b7e85a5af09",
+      "bytes": 7158,
+      "mode": "100644"
+    },
+    {
+      "path": "explorer.py",
+      "git_blob": "f53f6035efb2a3ce9adf20dc045042022ee48b4a",
+      "sha256": "a211992781c685bd937493698c22d96c2ede7e3eb5a5e871d026aea8a26429c9",
+      "bytes": 7423,
+      "mode": "100755"
+    },
+    {
+      "path": "replay_explain.py",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "bytes": 5432,
+      "mode": "100644"
+    },
+    {
+      "path": "scenarios.py",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "bytes": 5989,
+      "mode": "100644"
+    },
+    {
+      "path": "test_explorer.py",
+      "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "bytes": 7460,
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_explorer_replay_selection.cjs",
+      "git_blob": "d8ccb564692edac407632c6dc8efa2465d8ff47f",
+      "sha256": "947c1289a71b361e144e33b260ef6a49e985c7fb2352a847ecbf0577aecc0a01",
+      "bytes": 7996,
+      "mode": "100644"
+    },
+    {
+      "path": "towerops.py",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "bytes": 19684,
+      "mode": "100644"
+    },
+    {
+      "path": "web/app.js",
+      "git_blob": "c340207635b819d0877797b2c84002b79865660d",
+      "sha256": "e3ade13b07b119050d9a40b1bba4fd116a037ce0822f7c2c74030d569e7af09f",
+      "bytes": 6147,
+      "mode": "100644"
+    },
+    {
+      "path": "web/index.html",
+      "git_blob": "6bc1ac6ba66826037b292832feef79b3f96c349b",
+      "sha256": "645041b691beb175780edc52bcf78b5e99f9964ff975766433ce8967d5cd28e7",
+      "bytes": 3396,
+      "mode": "100644"
+    },
+    {
+      "path": "web/style.css",
+      "git_blob": "3770b65750778fecfa1ab2adc5f3ba48bafe10fb",
+      "sha256": "af35cb1c6b2eb22bf5f792c3539cff48506fbea31fa347600873fe004459e7c4",
+      "bytes": 2037,
+      "mode": "100644"
+    }
+  ],
+  "findings": [
+    "Read full explorer.py/app.js/index.html/style.css/EXPLORER.md and both new focused test modules, plus complete scoped diff and maintained replay-selection snapshot adaptation.",
+    "Endpoint changes are exactly route allowlist plus lazy dispatch to unchanged explain_replay. Reversing those two additions yields complete original explorer.py; admission, body framing/cap, Host/Origin, default run/replay, CLI and response serialization remain exact.",
+    "Captured selection object and parsed value are used for explicit requests only. Pending double-click guard and current-selection checks cover success/catch/finally; new/empty/rejected/pending selections synchronously retire old action/status/rows/details without changing run state.",
+    "All path/kind/side values use textContent or text nodes. Complete JSON side envelopes distinguish absence from null; ordered rows, cap indication, open native details and explicit local-error retry match the public contract.",
+    "Original plot/render/current/export behavior remains outside the diff. New style rules are scoped to replay details and stack sides at narrow widths; status role and native summary remain accessible.",
+    "Maintained HTTP tests cover whole ordinary reply preservation, exact typed value row,32-row truncation and refusal/explicit recovery. Node tests cover captured value without reread, pending double-click, retired success/finally/error, explicit retry, full ordered side values and unrelated retained run preservation.",
+    "Reversing only the explicit new-widget exclusion restores the entire original replay-selection test byte-for-byte. All original assertions are retained.",
+    "Guide distinguishes parsed JSON from source bytes/numeric spelling, local field comparison from causation, selected-file lifecycle and unchanged displayed run/export."
+  ],
+  "blockers": [],
+  "limits": [
+    "Read-only source/custody review only; no test, backend, browser or model execution by reviewer.",
+    "Author runtime and Loom original-first actual browser receiving remain separate evidence, not inferred from this acceptance.",
+    "No new claim about hostile clients, directory races, remote deployment or OS-wide network activity."
+  ]
+}

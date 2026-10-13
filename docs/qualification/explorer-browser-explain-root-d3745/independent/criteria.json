@@ -1,0 +1,514 @@
+{
+  "schema": "hamon.loom.towerops-explain-browser-criteria.v1",
+  "public_contract": "https://github.com/Jacob-Met/TowerOps/issues/132",
+  "baseline_commit": "fd0c5e829d89c9e88ac310ed237b74588fddfd09",
+  "candidate_exposure": "No candidate code authored or exposed at criteria freeze; exact receiver to freeze before candidate source/body exposure.",
+  "source_boundary": [
+    "explorer.py",
+    "replay_explain.py",
+    "web/app.js",
+    "web/index.html",
+    "web/style.css",
+    "scenarios.py",
+    "towerops.py",
+    "EXPLORER.md"
+  ],
+  "fixture_origin": {
+    "A": "Parsed values of the already completed native approved export from selection receiving; byte-exact prior input will be separately copied and bound where used.",
+    "source_path": "/home/jacob/hamon/receiving/loom-d3745-towerops-replay-selection/candidate-v2/fixtures/export-A.json",
+    "bytes": 5770,
+    "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+    "B": "A after.version incremented by one.",
+    "C": "A with after.version boolean true, description missing, one literal/~雪 extra object containing markup-looking text.",
+    "D": "A with forty extra ordered z-extra-NN fields."
+  },
+  "expected_differences": {
+    "B": [
+      {
+        "path": "/after/version",
+        "kind": "value",
+        "expected": {
+          "present": true,
+          "type": "number",
+          "value": 2
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 3
+        }
+      }
+    ],
+    "C": [
+      {
+        "path": "/after/version",
+        "kind": "type",
+        "expected": {
+          "present": true,
+          "type": "number",
+          "value": 2
+        },
+        "actual": {
+          "present": true,
+          "type": "boolean",
+          "value": true
+        }
+      },
+      {
+        "path": "/description",
+        "kind": "missing",
+        "expected": {
+          "present": true,
+          "type": "string",
+          "value": "Both exact-hash fixtures arrive before simulated dispatch."
+        },
+        "actual": {
+          "present": false
+        }
+      },
+      {
+        "path": "/literal~1~0雪",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "object",
+          "value": {
+            "marker": "<b data-loom-literal=\"yes\">literal 雪</b> & \"quoted\"\nline",
+            "nothing": null,
+            "items": [
+              false,
+              0,
+              ""
+            ]
+          }
+        }
+      }
+    ],
+    "D": [
+      {
+        "path": "/z-extra-00",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 0
+        }
+      },
+      {
+        "path": "/z-extra-01",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 1
+        }
+      },
+      {
+        "path": "/z-extra-02",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 2
+        }
+      },
+      {
+        "path": "/z-extra-03",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 3
+        }
+      },
+      {
+        "path": "/z-extra-04",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 4
+        }
+      },
+      {
+        "path": "/z-extra-05",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 5
+        }
+      },
+      {
+        "path": "/z-extra-06",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 6
+        }
+      },
+      {
+        "path": "/z-extra-07",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 7
+        }
+      },
+      {
+        "path": "/z-extra-08",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 8
+        }
+      },
+      {
+        "path": "/z-extra-09",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 9
+        }
+      },
+      {
+        "path": "/z-extra-10",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 10
+        }
+      },
+      {
+        "path": "/z-extra-11",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 11
+        }
+      },
+      {
+        "path": "/z-extra-12",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 12
+        }
+      },
+      {
+        "path": "/z-extra-13",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 13
+        }
+      },
+      {
+        "path": "/z-extra-14",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 14
+        }
+      },
+      {
+        "path": "/z-extra-15",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 15
+        }
+      },
+      {
+        "path": "/z-extra-16",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 16
+        }
+      },
+      {
+        "path": "/z-extra-17",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 17
+        }
+      },
+      {
+        "path": "/z-extra-18",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 18
+        }
+      },
+      {
+        "path": "/z-extra-19",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 19
+        }
+      },
+      {
+        "path": "/z-extra-20",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 20
+        }
+      },
+      {
+        "path": "/z-extra-21",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 21
+        }
+      },
+      {
+        "path": "/z-extra-22",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 22
+        }
+      },
+      {
+        "path": "/z-extra-23",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 23
+        }
+      },
+      {
+        "path": "/z-extra-24",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 24
+        }
+      },
+      {
+        "path": "/z-extra-25",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 25
+        }
+      },
+      {
+        "path": "/z-extra-26",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 26
+        }
+      },
+      {
+        "path": "/z-extra-27",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 27
+        }
+      },
+      {
+        "path": "/z-extra-28",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 28
+        }
+      },
+      {
+        "path": "/z-extra-29",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 29
+        }
+      },
+      {
+        "path": "/z-extra-30",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 30
+        }
+      },
+      {
+        "path": "/z-extra-31",
+        "kind": "unexpected",
+        "expected": {
+          "present": false
+        },
+        "actual": {
+          "present": true,
+          "type": "number",
+          "value": 31
+        }
+      }
+    ]
+  },
+  "ids": {
+    "button": "replay-explain",
+    "status": "replay-explain-status",
+    "details": "replay-differences",
+    "summary": "replay-difference-summary",
+    "list": "replay-difference-list",
+    "limit": "replay-difference-limit"
+  },
+  "row_contract": {
+    "row": "#replay-difference-list > li",
+    "path": "code.replay-path",
+    "kind": "code.replay-kind",
+    "expected": "pre.replay-expected",
+    "actual": "pre.replay-actual",
+    "sides": "JSON.parse of complete JSON.stringify(side,null,2) envelopes; labels Expected (local reproduction), Actual (saved export)."
+  },
+  "original_course": [
+    "Run actual normal server and browser; select B actual saved file; observe existing MISMATCH with no explain action.",
+    "Retain absence of additive endpoint through one direct HTTP request expecting404, original inputs unchanged and clean server/browser closure."
+  ],
+  "candidate_course": [
+    "Normal production Handler behind transparent loopback relay: exact assets/backend responses, correct Host/Origin forwarding, no successful-body substitution.",
+    "Run A and retain full run/export/status display. Select B: ordinary replay unchanged endpoint, explain action available only after completed current mismatch, zero explanation requests before explicit click.",
+    "Click B explanation; whole backend object and ordered UI rows equal independent one-field expectation. Details initially open and user collapse/expand causes no request.",
+    "Select C retires old details immediately. First explanation injects one clearly attributed relay HTTP503 after recording actual backend response; local error keeps verdict/run/export and enables explicit same-selection retry.",
+    "Retry C normally: three typed/missing/unexpected rows exact; full JSON values including Unicode/control/markup-looking text preserved literally; no injected markup element.",
+    "Select D and explain: exactly32 ordered rows, difference_limit32,differences_truncatedtrue, visible notice communicates additional differences.",
+    "Select B, start one backend-computed explanation with headers and first byte flushed but remainder held; disabled button while pending. Select A; MATCH and details/status/button retirement immediate. Complete old body and await public requestfinished plus final stable observation; old details/status/button must remain retired.",
+    "Select B again and open successful details, then authored file-input clear/change: hidden/cleared/closed details and unavailable action. This is explicit DOM clear, not native chooser UX.",
+    "Before/after exact source/criteria/fixture identity, request POST bodies/counts, unchanged run/export/status, no unexpected remote-origin requests, page errors or failed requests, and clean browser/server/relay closure."
+  ],
+  "limits": [
+    "One original absence witness and one authored candidate sequence; no duplicate broad author suites.",
+    "The transparent relay deliberately supplies one local503 and delays one otherwise exact backend body; successful route bodies are production outputs.",
+    "Page network observations are not an OS network audit. Actual native file selection via browser API; clear is authored DOM change.",
+    "Original and candidate results are separately retained; no rewrite of earlier selection or explanation CLI evidence."
+  ]
+}

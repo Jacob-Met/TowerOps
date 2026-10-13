@@ -1,0 +1,270 @@
+{
+  "schema": "towerops-browser-explanation-author-controls-root-d3745-v1",
+  "scope": "Author tests on actual native Python/Node; not independent browser receiving",
+  "base_commit": "6991198cde605b683331290c8c898ac5dbec6643",
+  "device_id": "cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90",
+  "hostname": "hamon-thinkpad",
+  "user": "jacob",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "supervisor": {
+    "bytes": 4067,
+    "sha256": "de3122da22c423bb4f846e64d18bd763cd7614ae95090c926b469ab79f9b9125",
+    "mode": "0o664"
+  },
+  "packet": {
+    "bytes": 99606,
+    "sha256": "bc4450944a7aa7170e963af8f98e912283f17ae0df22b72f86f399ab9ef1b171",
+    "mode": "0o664"
+  },
+  "source_before": {
+    "EXPLORER.md": {
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "mode": "0o644"
+    },
+    "explorer.py": {
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "mode": "0o755"
+    },
+    "replay_explain.py": {
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "mode": "0o644"
+    },
+    "scenarios.py": {
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": "0o644"
+    },
+    "test_explorer.py": {
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "mode": "0o644"
+    },
+    "tests/test_explorer_explanation.cjs": {
+      "bytes": 8796,
+      "sha256": "43a186375092cd125700f0106f7a1ccd27447e8cc2a770d4638297c31832c436",
+      "mode": "0o644"
+    },
+    "tests/test_explorer_explanation_http.py": {
+      "bytes": 4165,
+      "sha256": "c5c385da77329da75843a8e16716e107aaf6a71140002f1b73645be3ec31d713",
+      "mode": "0o644"
+    },
+    "tests/test_explorer_replay_selection.cjs": {
+      "bytes": 8168,
+      "sha256": "df20845a15c9585a202778b0a3793df0f05723f8a977dc6c20e4729d63ca298b",
+      "mode": "0o644"
+    },
+    "towerops.py": {
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": "0o644"
+    },
+    "web/app.js": {
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "mode": "0o644"
+    },
+    "web/index.html": {
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "mode": "0o644"
+    },
+    "web/style.css": {
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "mode": "0o644"
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_explorer_explanation_http.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-13T16:10:48.017087+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "streams-v1/0.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "utf8": ""
+      },
+      "stderr": {
+        "path": "streams-v1/0.stderr",
+        "bytes": 820,
+        "sha256": "5b8990bdddb8d17709f1590e5b18e5a104a68577858b25a4cb7a2613cd07c7b4",
+        "utf8": "test_match_adds_empty_differences_and_preserves_ordinary_reply_bytes (test_explorer_explanation_http.ExplanationHTTPTests.test_match_adds_empty_differences_and_preserves_ordinary_reply_bytes) ... ok\ntest_one_changed_field_reports_literal_typed_sides (test_explorer_explanation_http.ExplanationHTTPTests.test_one_changed_field_reports_literal_typed_sides) ... ok\ntest_refusal_has_existing_error_shape_and_next_explicit_request_recovers (test_explorer_explanation_http.ExplanationHTTPTests.test_refusal_has_existing_error_shape_and_next_explicit_request_recovers) ... ok\ntest_unexpected_fields_are_ordered_and_capped (test_explorer_explanation_http.ExplanationHTTPTests.test_unexpected_fields_are_ordered_and_capped) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.512s\n\nOK\n"
+      }
+    },
+    {
+      "argv": [
+        "python3",
+        "-O",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_explorer_explanation_http.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-13T16:10:48.600472+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "streams-v1/1.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "utf8": ""
+      },
+      "stderr": {
+        "path": "streams-v1/1.stderr",
+        "bytes": 820,
+        "sha256": "91f6cff3c3de95486d1f8ce64e962f7db66eae27bc78b7ae3676d8a16dc4f2ec",
+        "utf8": "test_match_adds_empty_differences_and_preserves_ordinary_reply_bytes (test_explorer_explanation_http.ExplanationHTTPTests.test_match_adds_empty_differences_and_preserves_ordinary_reply_bytes) ... ok\ntest_one_changed_field_reports_literal_typed_sides (test_explorer_explanation_http.ExplanationHTTPTests.test_one_changed_field_reports_literal_typed_sides) ... ok\ntest_refusal_has_existing_error_shape_and_next_explicit_request_recovers (test_explorer_explanation_http.ExplanationHTTPTests.test_refusal_has_existing_error_shape_and_next_explicit_request_recovers) ... ok\ntest_unexpected_fields_are_ordered_and_capped (test_explorer_explanation_http.ExplanationHTTPTests.test_unexpected_fields_are_ordered_and_capped) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.516s\n\nOK\n"
+      }
+    },
+    {
+      "argv": [
+        "node",
+        "tests/test_explorer_explanation.cjs"
+      ],
+      "started_utc": "2026-10-13T16:10:49.419067+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "streams-v1/2.stdout",
+        "bytes": 1221,
+        "sha256": "ce76769552eccd5be5c6cd4e0088581b46650d13843896cc9ed532a103eb34b4",
+        "utf8": "TAP version 13\n# Subtest: only an explicit current mismatch click compares the captured parsed value\nok 1 - only an explicit current mismatch click compares the captured parsed value\n  ---\n  duration_ms: 7.486363\n  type: 'test'\n  ...\n# Subtest: new file selection immediately retires old explanation success and finally\nok 2 - new file selection immediately retires old explanation success and finally\n  ---\n  duration_ms: 2.490641\n  type: 'test'\n  ...\n# Subtest: clearing retires an old explanation failure without restoring controls\nok 3 - clearing retires an old explanation failure without restoring controls\n  ---\n  duration_ms: 1.441886\n  type: 'test'\n  ...\n# Subtest: a current failure keeps the mismatch and permits an explicit same-selection retry\nok 4 - a current failure keeps the mismatch and permits an explicit same-selection retry\n  ---\n  duration_ms: 1.590434\n  type: 'test'\n  ...\n# Subtest: ordered typed rows retain full envelopes and expose the observed truncation\nok 5 - ordered typed rows retain full envelopes and expose the observed truncation\n  ---\n  duration_ms: 3.354458\n  type: 'test'\n  ...\n1..5\n# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 22.847989\n"
+      },
+      "stderr": {
+        "path": "streams-v1/2.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "utf8": ""
+      }
+    },
+    {
+      "argv": [
+        "node",
+        "tests/test_explorer_replay_selection.cjs"
+      ],
+      "started_utc": "2026-10-13T16:10:49.540633+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "streams-v1/3.stdout",
+        "bytes": 2153,
+        "sha256": "68f896220d020e4485967565144116baaa9a732f0fd2ac23acb14095b4720a39",
+        "utf8": "TAP version 13\n# Subtest: current match and mismatch keep their existing complete messages\nok 1 - current match and mismatch keep their existing complete messages\n  ---\n  duration_ms: 5.91423\n  type: 'test'\n  ...\n# Subtest: a superseded file read does not send a replay or replace the newer verdict\nok 2 - a superseded file read does not send a replay or replace the newer verdict\n  ---\n  duration_ms: 2.008425\n  type: 'test'\n  ...\n# Subtest: a superseded file read error cannot replace current pending or completed status\nok 3 - a superseded file read error cannot replace current pending or completed status\n  ---\n  duration_ms: 1.4093\n  type: 'test'\n  ...\n# Subtest: a superseded HTTP response cannot replace a newer mismatch\nok 4 - a superseded HTTP response cannot replace a newer mismatch\n  ---\n  duration_ms: 1.174485\n  type: 'test'\n  ...\n# Subtest: a superseded JSON body cannot replace a newer rejection\nok 5 - a superseded JSON body cannot replace a newer rejection\n  ---\n  duration_ms: 2.151184\n  type: 'test'\n  ...\n# Subtest: a superseded transport error cannot replace a newer match\nok 6 - a superseded transport error cannot replace a newer match\n  ---\n  duration_ms: 1.018873\n  type: 'test'\n  ...\n# Subtest: clearing selection retires an in-flight response and clears its status\nok 7 - clearing selection retires an in-flight response and clears its status\n  ---\n  duration_ms: 1.162448\n  type: 'test'\n  ...\n# Subtest: selecting the same File again retires its earlier request\nok 8 - selecting the same File again retires its earlier request\n  ---\n  duration_ms: 0.938566\n  type: 'test'\n  ...\n# Subtest: a current oversize or read failure refuses, and an explicit corrected selection recovers\nok 9 - a current oversize or read failure refuses, and an explicit corrected selection recovers\n  ---\n  duration_ms: 1.542656\n  type: 'test'\n  ...\n# Subtest: a current backend refusal retains the existing error display\nok 10 - a current backend refusal retains the existing error display\n  ---\n  duration_ms: 1.257559\n  type: 'test'\n  ...\n1..10\n# tests 10\n# suites 0\n# pass 10\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 25.122747\n"
+      },
+      "stderr": {
+        "path": "streams-v1/3.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "utf8": ""
+      }
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "test_explorer",
+        "-v"
+      ],
+      "started_utc": "2026-10-13T16:10:49.670576+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "streams-v1/4.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "utf8": ""
+      },
+      "stderr": {
+        "path": "streams-v1/4.stderr",
+        "bytes": 3660,
+        "sha256": "41948a4c6d1ef09fff5ff1bc31ef058b4868187f6d389f3cb919f2583fd6f8d5",
+        "utf8": "test_invalid_requests_fail (test_explorer.HTTPTests.test_invalid_requests_fail) ... 127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 400 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 400 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 400 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 400 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 415 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 413 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 400 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"GET / HTTP/1.1\" 403 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 403 -\nok\ntest_real_run_export_replay (test_explorer.HTTPTests.test_real_run_export_replay) ... 127.0.0.1 - - [13/Oct/2026 16:10:49] \"GET /api/scenarios HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/run HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"POST /api/replay HTTP/1.1\" 200 -\nok\ntest_static_assets_and_unknown_routes (test_explorer.HTTPTests.test_static_assets_and_unknown_routes) ... 127.0.0.1 - - [13/Oct/2026 16:10:49] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"GET /app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"GET /towerops.py HTTP/1.1\" 404 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"GET /../LICENSE HTTP/1.1\" 404 -\n127.0.0.1 - - [13/Oct/2026 16:10:49] \"GET /.git/config HTTP/1.1\" 404 -\nok\ntest_all_cases_and_fixture_switches (test_explorer.ScenarioTests.test_all_cases_and_fixture_switches) ... ok\ntest_invalid_input (test_explorer.ScenarioTests.test_invalid_input) ... ok\ntest_javascript_numeric_roundtrip (test_explorer.ScenarioTests.test_javascript_numeric_roundtrip) ... ok\ntest_no_baseline_changes_or_nondeterminism (test_explorer.ScenarioTests.test_no_baseline_changes_or_nondeterminism) ... ok\ntest_replay_checks_whole_export (test_explorer.ScenarioTests.test_replay_checks_whole_export) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.558s\n\nOK\n"
+      }
+    }
+  ],
+  "source_after": {
+    "EXPLORER.md": {
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "mode": "0o644"
+    },
+    "explorer.py": {
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "mode": "0o755"
+    },
+    "replay_explain.py": {
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "mode": "0o644"
+    },
+    "scenarios.py": {
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": "0o644"
+    },
+    "test_explorer.py": {
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "mode": "0o644"
+    },
+    "tests/test_explorer_explanation.cjs": {
+      "bytes": 8796,
+      "sha256": "43a186375092cd125700f0106f7a1ccd27447e8cc2a770d4638297c31832c436",
+      "mode": "0o644"
+    },
+    "tests/test_explorer_explanation_http.py": {
+      "bytes": 4165,
+      "sha256": "c5c385da77329da75843a8e16716e107aaf6a71140002f1b73645be3ec31d713",
+      "mode": "0o644"
+    },
+    "tests/test_explorer_replay_selection.cjs": {
+      "bytes": 8168,
+      "sha256": "df20845a15c9585a202778b0a3793df0f05723f8a977dc6c20e4729d63ca298b",
+      "mode": "0o644"
+    },
+    "towerops.py": {
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": "0o644"
+    },
+    "web/app.js": {
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "mode": "0o644"
+    },
+    "web/index.html": {
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "mode": "0o644"
+    },
+    "web/style.css": {
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "mode": "0o644"
+    }
+  },
+  "source_preserved": true,
+  "accepted": true,
+  "closed_utc": "2026-10-13T16:10:50.303366+00:00"
+}

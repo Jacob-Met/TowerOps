@@ -1,0 +1,90 @@
+{
+  "schema": "hamon.loom.towerops-explain-driver-freeze.v2",
+  "frozen_at": "2026-10-13T16:07:09.997904+00:00",
+  "candidate_exposure": "No candidate body or spec received at v2 freeze; root implementation is underway independently.",
+  "receiver": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v2.cjs",
+    "bytes": 21502,
+    "sha256": "2490839a8603e0fbd91c6b7b5b75febfdf156431526bdfc8cf8c937ba267f59b",
+    "mode": "0o644"
+  },
+  "criteria": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria.json",
+    "bytes": 13808,
+    "sha256": "773e9f28776d6ed352bbdf5bcb095db91ffb0ad64b95915c36766bbc8b696505",
+    "mode": "0o644"
+  },
+  "criteria_freeze": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/criteria-freeze.json",
+    "bytes": 4416,
+    "sha256": "43eab80cff5e55607ff0a6bebd4168134cf8098e456ab66c6d75527d741d6c5b",
+    "mode": "0o644"
+  },
+  "fixtures": [
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/A.json",
+      "bytes": 5770,
+      "sha256": "6267c42f1260bb0910bdc899d42bdbb5ae7d2335921c3d999ed1f360e8683592",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/B.json",
+      "bytes": 5684,
+      "sha256": "5d00c4c20385b398c4e60d84326924fab2cabaae7b2c95cc1ebe046e340af5b0",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/C.json",
+      "bytes": 5787,
+      "sha256": "453ea1fe6bd11d7f6afe80e3c5b7b8ea4b8e5f7d0b4cb7f0fec35deb7a03ac32",
+      "mode": "0o644"
+    },
+    {
+      "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/fixtures/D.json",
+      "bytes": 6474,
+      "sha256": "c02df565471b55487479efce0712cd5c1e88ebd83adca3c70ffea7d443fb601f",
+      "mode": "0o644"
+    }
+  ],
+  "source_spec": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-spec.json",
+    "bytes": 4128,
+    "sha256": "89b1be732c20cc11df7a161ac9ddfa27bce1f97acbb8ab74081c57979b4abe16",
+    "mode": "0o644"
+  },
+  "syntax": {
+    "argv": [
+      "/usr/bin/node",
+      "--check",
+      "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receive-explain-v2.cjs"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "prior_freeze": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/driver-freeze-v1.json",
+    "bytes": 2412,
+    "sha256": "30e1cd5cff25bc19ccbffdcbbab0ec74a7fb2f43da663b0414ac51c0e2bd496e",
+    "mode": "0o644"
+  },
+  "patch": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/receiver-v1-to-v2.patch",
+    "bytes": 4603,
+    "sha256": "ac95461ced7e7ec7d096633da0799f058610fefe04fc781681fd852b0f2bf60e",
+    "mode": "0o644"
+  },
+  "original_raw_receipt": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/receipt.json",
+    "bytes": 158295,
+    "sha256": "c5da677c7ac6bdd91b7064265e2ecc56ce152dca355b21d079a28b0ad39e37c1",
+    "mode": "0o664"
+  },
+  "original_closure_audit": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-closure-audit.json",
+    "bytes": 1207,
+    "sha256": "d685cb73d4c756c0315f68762b7443d1a61d09f48e4bdb876280d63b093e4d8f",
+    "mode": "0o644"
+  },
+  "revision_reason": "Bounded wait for socket close events after server.close callback; original accepted=false remains unchanged; criteria and all behavior assertions unchanged."
+}

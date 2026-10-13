@@ -1,0 +1,30 @@
+{
+  "schema": "hamon.loom.towerops-explain-original-closure-audit.v1",
+  "at": "2026-10-13T16:07:09.928923+00:00",
+  "accepted_original_behavior_and_later_closed_state": true,
+  "raw_original_accepted": false,
+  "raw_receipt": {
+    "path": "/home/jacob/hamon/receiving/loom-d3745-towerops-explain/original-v1/receipt.json",
+    "bytes": 158295,
+    "sha256": "c5da677c7ac6bdd91b7064265e2ecc56ce152dca355b21d079a28b0ad39e37c1",
+    "mode": "0o664"
+  },
+  "checks": 15,
+  "source_controls_fixtures_current_exact": true,
+  "raw_streams_checked": 13,
+  "screenshot_checked": 1,
+  "original_admission_failure": "Receipt sampled one socket in the connection Set immediately after server.close callback; all runtime checks passed. This follow-up verifies the ended receiver/backend/browser and absent exact listeners without rewriting the receipt.",
+  "raw_relay_closed": true,
+  "raw_open_relay_sockets": 1,
+  "pid_paths_exist": {
+    "4093352": false,
+    "4093425": false,
+    "4093445": false
+  },
+  "ports": [
+    40325,
+    45131
+  ],
+  "matching_current_listeners": [],
+  "scope": "Read-only post-course closure/custody. No product/browser replay. Not a claim that the raw receipt observed socket zero."
+}
