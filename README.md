@@ -31,6 +31,24 @@ experiments for the same exact native world and review clock, showing policy
 changes and complete advisory membership/order without planning again.
 See [COMPARE_PLANS.md](COMPARE_PLANS.md) for exact identities, file limits and JSON output.
 
+## Explain a saved Explorer result
+
+To see which saved fields differ from a locally reconstructed synthetic scenario,
+add `--explain` to the replay command:
+
+```bash
+python3 explorer.py run approved > approved-explorer.json
+python3 explorer.py replay approved-explorer.json --explain
+```
+
+The JSON result retains the ordinary replay summary and adds typed differences
+with JSON Pointer paths. These rows describe literal field differences in the
+local synthetic reproduction. It reports up to 32 differences and indicates
+when more were observed. Exit 0 means a match, exit 1 means a mismatch, and exit 2
+means invalid input or a read, replay or output error. The input file is preserved.
+See [EXPLORER.md](EXPLORER.md) for limits and complete output, or try the
+[retained one-field mismatch example](docs/qualification/explorer-replay-explain-anvil-d3745/independent/README.md).
+
 ## Review a saved audit trace from the terminal
 
 The audit checker reviews a saved hash chain, recorded lifecycle and world links
