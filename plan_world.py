@@ -15,6 +15,7 @@ import os
 import re
 import stat
 import sys
+import tempfile
 from dataclasses import asdict, replace
 from pathlib import Path
 from typing import Any
@@ -162,12 +163,38 @@ def _read_world_file(path: Path) -> bytes:
             os.close(descriptor)
 
 
+def _write_new_report(path: Path, report: str) -> None:
+    """Publish a complete report without replacing any existing destination."""
+    descriptor, temporary = tempfile.mkstemp(
+        prefix=".towerops-plan-", suffix=".tmp", dir=path.parent,
+    )
+    try:
+        stream = os.fdopen(descriptor, "w", encoding="utf-8")
+        descriptor = None
+        with stream:
+            stream.write(report)
+            stream.flush()
+            os.fsync(stream.fileno())
+        # A hard link is exclusive even if a creator wins after the preflight.
+        os.link(temporary, path)
+    finally:
+        try:
+            if descriptor is not None:
+                os.close(descriptor)
+        finally:
+            Path(temporary).unlink(missing_ok=True)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Inspect a saved synthetic WorldState with the native planner; proposals only.",
         epilog="See PLAN_WORLD.md. No approval, readback, actuation, network or input-file write.",
     )
     parser.add_argument("world", help="Raw WorldState JSON path, or - to read stdin")
+    parser.add_argument(
+        "--output", type=Path,
+        help="Save the report to a new file instead of stdout; existing paths are refused",
+    )
     parser.add_argument("--now", type=_argument_number, help="Synthetic review seconds; default: observed_at")
     defaults = SafetyPolicy()
     parser.add_argument(
@@ -184,6 +211,11 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
     try:
+        if args.output is not None:
+            if os.path.lexists(args.output):
+                raise ValueError("Report output path already exists; choose a new file.")
+            if not args.output.parent.is_dir():
+                raise ValueError("Report output parent must be an existing directory.")
         policy = replace(
             defaults, min_horizontal_nm=args.horizontal_nm,
             min_vertical_ft=args.vertical_ft, horizon_min=args.horizon_min,
@@ -202,14 +234,18 @@ def main(argv: list[str] | None = None) -> int:
         print(f"error: cannot review world: {exc}", file=sys.stderr)
         return 2
     try:
-        sys.stdout.write(output)
-        sys.stdout.flush()
+        if args.output is None:
+            sys.stdout.write(output)
+            sys.stdout.flush()
+        else:
+            _write_new_report(args.output, output)
     except OSError as exc:
         print(f"error: cannot write report: {exc}", file=sys.stderr)
-        try:
-            sys.stdout.close()
-        except OSError:
-            pass
+        if args.output is None:
+            try:
+                sys.stdout.close()
+            except OSError:
+                pass
         return 2
     return 0
 
