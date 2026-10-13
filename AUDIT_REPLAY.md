@@ -3,8 +3,9 @@
 `python3 audit_replay.py trace.json` reviews an existing native event list.
 A demo document with an `audit_events` list is also accepted. With no filename
 or a single `-`, the command reads JSON from stdin. It prints a JSON summary:
-exit 0 means no replay findings, exit 1 means findings, and exit 2 means the
-input could not be read or reviewed, or the summary could not be written.
+exit 0 means no replay findings, exit 1 means findings, and exit 2 means invalid
+command arguments, input that could not be read or reviewed, or a summary that
+could not be written.
 
 The command flushes its summary before returning a clean or findings status.
 If the output destination refuses a write or flush, it reports the error on
@@ -14,6 +15,21 @@ summary; the command does not replay the audit or emit another report.
 The existing Airspace Lab decision-trace panel uses the same replay checker
 through `decision_trace.review_trace`. Opening a saved trace does not apply
 an advisory or change the active world.
+
+## Choose one input
+
+Use `python3 audit_replay.py --help` (or `-h`) for command usage.
+Supply at most one trace path. Extra paths and unrecognized options are refused
+before the command reads or reviews an input; it does not silently ignore them.
+Omit the path or use `-` to read stdin.
+
+For a filename beginning with `-`, put `--` before the path:
+
+```sh
+python3 audit_replay.py trace.json
+python3 audit_replay.py -
+python3 audit_replay.py -- -trace.json
+```
 
 ## A recorded actuation needs both world identities
 

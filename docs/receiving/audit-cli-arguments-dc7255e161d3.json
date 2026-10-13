@@ -1,0 +1,155 @@
+{
+  "schema": "towerops.audit-cli-arguments.receiving.v1",
+  "owner": "dc7255e161d3/estate_source",
+  "issue": "https://github.com/Jacob-Met/TowerOps/issues/117",
+  "objective": "Admit exactly one optional audit source, offer useful help, and reject ignored extra tokens before loading or replay.",
+  "original_parent": "6d62764fb61e04e199287a876faa5b8980163d08",
+  "publication_parent": "7855384d3882c0969fcd192c9eace6266e39dd93",
+  "source_fence": [
+    "audit_replay.py",
+    "tests/test_audit_replay_arguments.py",
+    "AUDIT_REPLAY.md",
+    "docs/receiving/audit-cli-arguments-dc7255e161d3.json"
+  ],
+  "production_delta": "Only argparse import and main's pre-load source selection change; load, replay, hash/lifecycle and final summary writer bytes remain unchanged.",
+  "files": {
+    "audit_replay.py": {
+      "bytes": 9573,
+      "sha256": "b8fc64a814eb03e909dab582e14925b813311e595ed00d38fcd33e62237fbbca",
+      "git_blob": "388d0f418905f9045b9afe45957d036fef180932"
+    },
+    "tests/test_audit_replay_arguments.py": {
+      "bytes": 3364,
+      "sha256": "4d0447b5ab579fb1d73d4943348759a2b4c545042eccb4a969a451ddb49b1175",
+      "git_blob": "1bcc610e91cf2b55f717d90c9f6a83f1165d7b74"
+    },
+    "AUDIT_REPLAY.md": {
+      "bytes": 3731,
+      "sha256": "507614bf8a7872137eb1ac099fc03f778466b5e49b71e13ea8bdbf29970d226a",
+      "git_blob": "78b16f2e93c064232b76fecb1053fa231e30073c"
+    }
+  },
+  "native_environment": {
+    "device_id": "9ea77fe9-bb87-46e0-a5a8-8b3e25f6ff7e",
+    "platform": "Windows x64",
+    "python": "3.11.9",
+    "pytest": "8.4.2",
+    "ruff": "0.16.10",
+    "root": "D:\\hamon-estate-dc7255e161d3-towerops-audit-arguments",
+    "process_tmp_and_temp": "D:\\hamon-estate-dc7255e161d3-towerops-audit-arguments\\temp",
+    "isolation": "Exclusive task directory with parent-source, source, and integration-source worktrees. Local core.autocrlf=false/core.longpaths=true; no global config or HOME changes."
+  },
+  "original_witnesses": [
+    {
+      "platform": "Linux CPython 3.14.4",
+      "receipt": "evidence/baseline-linux-arguments.json",
+      "sha256": "4d601778c225a440ee7662aca188fb5bbc8cb6a4d0609bad14b9893269ee723e",
+      "observed": "Extra input and misspelled trailing flag after '-' both silently emit a clean [] summary and exit 0; --help attempts to open a filename and exits 2.",
+      "source_identity": "Verified merged production blob 29b35dd160f24714ff637a7169a7a9d9c5bb46ee and imported core blob 0b03cee708cdff5cbacd148633def31f4e9414c5, retained in the previous worktree whose Git HEAD remains 1ce5a914. No new Linux checkout claimed."
+    },
+    {
+      "platform": "Windows CPython 3.11.9",
+      "receipt": "evidence/baseline-windows-arguments.json",
+      "sha256": "c18e30b1be8d9bf244261d2ba89b9474c1eaf159663c1e589ab03536e4ad2965",
+      "parent": "6d62764fb61e04e199287a876faa5b8980163d08",
+      "pytest": {
+        "exit": 1,
+        "passed": 59,
+        "failed": 7,
+        "skipped": 4,
+        "seconds": 7.38
+      },
+      "observed": "All four malformed argument forms, both help forms and '--' literal filename test fail before the production edit; default/explicit stdin controls already pass."
+    }
+  ],
+  "candidate_receiving": {
+    "receipt": "evidence/candidate-windows-arguments-v2.json",
+    "sha256": "4a5ad981d6f72b8f9000b2497e610250406d067494a40aff1787c1ee7268479c",
+    "parent": "6d62764fb61e04e199287a876faa5b8980163d08",
+    "pytest": {
+      "exit": 0,
+      "passed": 66,
+      "skipped": 4,
+      "seconds": 4.86
+    },
+    "full_ruff_exit": 0,
+    "diff_check_exit": 0,
+    "ordinary_controls": 6,
+    "exact_original_report_bytes_and_statuses": true,
+    "source_and_inputs_preserved": true,
+    "wrapper_exit_observed": 0,
+    "first_attempt": "Retained evidence/candidate-windows-arguments.json passes 66/4 but fails Ruff on one extra import-block blank line in the new test; v2 removes that blank line only."
+  },
+  "composed_receiving": {
+    "receipt": "evidence/integration-windows-arguments.json",
+    "sha256": "9908763b3a9597c7dafd2ab721431a19b4ffffc7910d96573756b8ab772df654",
+    "parent": "7855384d3882c0969fcd192c9eace6266e39dd93",
+    "pytest": {
+      "exit": 0,
+      "passed": 66,
+      "skipped": 4,
+      "seconds": 4.52
+    },
+    "ordinary_controls": 6,
+    "exact_original_report_bytes_and_statuses": true,
+    "source_and_inputs_preserved": true,
+    "diff_check_exit": 0,
+    "full_ruff_exit": 1,
+    "wrapper_exit_observed": 1,
+    "overall_driver_accepted": false,
+    "reason": "Full Ruff reports 11 inherited findings in two unchanged Explorer-owned files added after the original parent; there are no findings in this contribution's files.",
+    "inherited_lint_files": {
+      "docs/receiving/explorer-world-anvil-d3745ea0f44f/independent-forge/independent_receive.py": [
+        "I001:2",
+        "I001:7",
+        "F401:8",
+        "PLW1510:13",
+        "PLW1510:53"
+      ],
+      "tests/test_explorer_world.py": [
+        "I001:2",
+        "I001:14",
+        "PLW1510:23",
+        "SIM117:53",
+        "PLW1510:88",
+        "PLW1510:101"
+      ]
+    },
+    "owner_coordination": "https://github.com/Jacob-Met/TowerOps/pull/118#issuecomment-6138308818"
+  },
+  "maintained_test_command": "python -B -m pytest -q tests/test_audit_replay_arguments.py tests/test_audit_replay_output.py tests/test_audit_replay.py tests/test_audit_replay_depth.py tests/test_trace_duplicate_fields.py tests/test_audit_world_linkage.py",
+  "maintained_test_assertions": [
+    "Real subprocess argument refusals require exit 2, empty stdout, usage/error on stderr, no traceback, unchanged source input files and zero bytes consumed from shared seekable stdin sentinel.",
+    "Help exits 0 with meaningful usage/source/stdin/audit documentation, no stderr and zero stdin consumption.",
+    "Default/explicit stdin retain the six-field clean JSON summary; '--' admits a literal filename named '--help' without reading stdin.",
+    "Existing load-depth, duplicate fields, audit semantics/world linkage and real closed-pipe summary-write regressions remain included. Four /dev/full tests skip on this Windows host."
+  ],
+  "independent_review": {
+    "reviewer": "dc7255e161d3/estate_context",
+    "protocol": "https://github.com/Jacob-Met/TowerOps/issues/117#issuecomment-6137754795",
+    "verdict": "ACCEPTED for exact source and bounded native receiving",
+    "receipt": "context-args-v1-mm99mlt4/receipt.json",
+    "bytes": 46782,
+    "sha256": "10b92f97d7ded1ca150769209ee565596308954c5a3b20892e5cfac0be048e81",
+    "child_processes": 48,
+    "ordinary_original_candidate_controls": 18,
+    "wrapper_exit_observed": 0,
+    "seconds": 7.76,
+    "coverage": [
+      "Native/forged/empty file, explicit stdin and default stdin preserve pre-candidate frozen stdout bytes and statuses.",
+      "Seven original/candidate argument cases include malformed unread stdin, absent first file, two files, unknown and abbreviated flags; candidate refusals precede load and consume zero stdin.",
+      "Both help forms, '--' literal dash filenames with empty and forged reports, missing/malformed-load errors and real closed-pipe writer refusal remain correct.",
+      "Original three silent extra-token successes reproduced; all source/core/input hashes unchanged."
+    ],
+    "source_review": "Only pre-load admission changes. Existing argv convention, load/replay/output code and frozen guide/test pins preserved."
+  },
+  "constraints": [
+    "No full Windows suite or current full Linux suite result is claimed for this increment. Previous PR116 Linux 248 passes/231 subtests qualified that earlier increment only.",
+    "Windows ordinary stdout uses CRLF; exact parity is measured against the original on the same platform, not claimed across platforms.",
+    "Standard argparse help/usage stream failures are outside the audit-summary writer qualification.",
+    "Summary output can remain partial after destination failure; existing best-effort close may flush internally and is not a zero-low-level-write guarantee.",
+    "No Actions invocation, dispatch, rerun, workflow edit or required-check bypass. Publication and ordinary integration retain [skip ci] [skip actions].",
+    "No installed-service, GUI, live-traffic or operational aviation acceptance."
+  ],
+  "next_handoff": "Root to review the four-file published composition and current branch requirements. Explorer/Forge retains the inherited lint follow-up. Verify actual merge identities and Actions readback after ordinary expected-head integration."
+}
