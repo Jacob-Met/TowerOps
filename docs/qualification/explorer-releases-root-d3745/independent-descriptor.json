@@ -1,0 +1,595 @@
+{
+  "exclusions": [
+    "new utility body",
+    "unchanged helper body",
+    "Loom formal review",
+    "root independent result review"
+  ],
+  "files": [
+    {
+      "bytes": 4692,
+      "git_blob": "2ee4b187cc9d92d99a0b00a2ba7ad95be112188f",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/README.md",
+      "mode": "100644",
+      "path": "README.md",
+      "sha256": "bc703666fdca095cd59cdcb14302c4eb4fc495c45e00935d1c3d12654b090eaf",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/README.md"
+    },
+    {
+      "bytes": 5552,
+      "git_blob": "88259d8b6327305d977f06ceafbe5c6805a06609",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/criteria-v1.md",
+      "mode": "100644",
+      "path": "criteria-v1.md",
+      "sha256": "d9b8b0674f6d4ba696103af72bd4ccae171d4794f1161bed75b6e946b28f4e93",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/criteria-v1.md"
+    },
+    {
+      "bytes": 7119,
+      "git_blob": "b713dec768d5c8b3961f88357afdecaed3a7f7b1",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/public-contract-v2.md",
+      "mode": "100644",
+      "path": "public-contract-v2.md",
+      "sha256": "9de4c74efe01907bfb02659a168c050fe23f328506f52e3ccab8b28fc734d404",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/public-contract-v2.md"
+    },
+    {
+      "bytes": 2634,
+      "git_blob": "0c1fb9d227007191bcb14d0a23b9962649c5adea",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/public-output-contract-v1.json",
+      "mode": "100644",
+      "path": "public-output-contract-v1.json",
+      "sha256": "b4b8e9062b9f47034385e659f9412f5b87270b40c117569efbe11474402f12ea",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/public-output-contract-v1.json"
+    },
+    {
+      "bytes": 5238,
+      "git_blob": "266722941aefe4e69c5fa651ead9c69904686793",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/prepare-fixtures-v1.py",
+      "mode": "100644",
+      "path": "prepare-fixtures-v1.py",
+      "sha256": "601294ba5527a187a744e2043441cbc677c51d1a0110f18a6ba651859adc1b92",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/prepare-fixtures-v1.py"
+    },
+    {
+      "bytes": 3881,
+      "git_blob": "b9855c20399eb9c6ffc454214cde7072d1045352",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixture-receipt-v1.json",
+      "mode": "100644",
+      "path": "fixture-receipt-v1.json",
+      "sha256": "4b17541fc3da69d77a5cb50b0d8a7a07422b0e9e5290c2b400b2d130d938a0ec",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixture-receipt-v1.json"
+    },
+    {
+      "bytes": 2809,
+      "git_blob": "d08d68b9a74c49d23225712fef5a103ef1b89a95",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/original-tree-bindings.json",
+      "mode": "100644",
+      "path": "original-tree-bindings.json",
+      "sha256": "df105a40953a14ea63b0bf9c0a5ebba7be2a1c981f31426684fbc9729ea88444",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/original-tree-bindings.json"
+    },
+    {
+      "bytes": 3411,
+      "git_blob": "caa9682bd06686df7dc8d89b2bd7f543bee198cf",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/original-source-authority.json",
+      "mode": "100644",
+      "path": "original-source-authority.json",
+      "sha256": "35c6e245f646e3960b755842a4d48d85579941d94b40323ff0f28dea9d7619a5",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/original-source-authority.json"
+    },
+    {
+      "bytes": 1612,
+      "git_blob": "7957d61817d1286926475cbd358bdb83a339d8e7",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/expected-inspect-a.json",
+      "mode": "100644",
+      "path": "expected-inspect-a.json",
+      "sha256": "8e1e9788a4481dac7a4ee2f2a9894db754cb6187344bee21fc5af73e405655b6",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/expected-inspect-a.json"
+    },
+    {
+      "bytes": 1612,
+      "git_blob": "f844d9eaf32599860b246beacee738e4d87b2298",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/expected-inspect-b.json",
+      "mode": "100644",
+      "path": "expected-inspect-b.json",
+      "sha256": "06a56f7a741a291a03a07f88ea1e4ff6d0e6ca0913b50dff64690da27e7facdd",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/expected-inspect-b.json"
+    },
+    {
+      "bytes": 13953,
+      "git_blob": "d01340fed4f3eca767fbdf1aeb514fd926ba46b7",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/receive-releases-v1.py",
+      "mode": "100644",
+      "path": "receive-releases-v1.py",
+      "sha256": "99f50333946b2e78b904659fb681c2d27955ec1d776f04320c8f5f13f57398da",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/receive-releases-v1.py"
+    },
+    {
+      "bytes": 9097,
+      "git_blob": "2b077566cbf08adbb5a9961078ab352889106dd7",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/freeze-v1.json",
+      "mode": "100644",
+      "path": "freeze-v1.json",
+      "sha256": "71158e90f726121c4ad2df82bc084907c0382cc5930803357cc8c6d29fb24b8a",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/freeze-v1.json"
+    },
+    {
+      "bytes": 2445,
+      "git_blob": "9b3e9df108dd6bd7126c1134366f6c866c710e37",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/admit-candidate-v1.py",
+      "mode": "100644",
+      "path": "admit-candidate-v1.py",
+      "sha256": "5239772daf5e11fd4c8b8fd37db5a208fb95c1b1c06fb66752c6a823e7cc7ab9",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/admit-candidate-v1.py"
+    },
+    {
+      "bytes": 2134,
+      "git_blob": "74ecbaf18ae6c0e6b5871fba8e8da53ba6647ea0",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/candidate-manifest-offered-v1.json",
+      "mode": "100644",
+      "path": "candidate-manifest-offered-v1.json",
+      "sha256": "b00645b2a7481aaaa2e9d36dd231b7f509631c0eec1022808e15dc08ef766874",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/candidate-manifest-offered-v1.json"
+    },
+    {
+      "bytes": 736,
+      "git_blob": "4f3bfcad22fc1d065e00b3d08d4881ac2eff5337",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/candidate-spec-v1.json",
+      "mode": "100644",
+      "path": "candidate-spec-v1.json",
+      "sha256": "07803d40b79cf321e7ec8a65c6a19f175ac26382c45a25196088b4a33bef11ac",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/candidate-spec-v1.json"
+    },
+    {
+      "bytes": 2415,
+      "git_blob": "309f8e10625da406d349939e224c3350c4ca742e",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/candidate-admission-v1.json",
+      "mode": "100644",
+      "path": "candidate-admission-v1.json",
+      "sha256": "d997c24c9f7b4863200822016e511fd9ae06221c7426c74dbe77d97005d8de67",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/candidate-admission-v1.json"
+    },
+    {
+      "bytes": 1156,
+      "git_blob": "0f1e300fd90edf3506f95fdc9e1771d9484ec483",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/run-receiving-v1.py",
+      "mode": "100644",
+      "path": "run-receiving-v1.py",
+      "sha256": "e8564d17901bc17966e41664a96def7a5594e79d2f6c0e84547dd6aa3cd45514",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/run-receiving-v1.py"
+    },
+    {
+      "bytes": 442,
+      "git_blob": "5946fda57a2902197d465e46fe3bcabeb917527c",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/controller-launch-v1.json",
+      "mode": "100644",
+      "path": "controller-launch-v1.json",
+      "sha256": "df7d3fbdda27ecec284f5b906181d97c60ce5c344358a0522a9516e7b5cd4256",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/controller-launch-v1.json"
+    },
+    {
+      "bytes": 154,
+      "git_blob": "eff9df6f1d6c027083cb3e903507938c0e11890d",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/controller-v1.stdout",
+      "mode": "100644",
+      "path": "controller-v1.stdout",
+      "sha256": "3d9e3cc01887bca4d4f1ac20d89485d249988b1d3cf3eaa9294701da2515d8fe",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/controller-v1.stdout"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/controller-v1.stderr",
+      "mode": "100644",
+      "path": "controller-v1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/controller-v1.stderr"
+    },
+    {
+      "bytes": 436609,
+      "git_blob": "0e8701bb1cd3d5b2affe27d4890c7a380fdbeec6",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/receipt.json",
+      "mode": "100644",
+      "path": "received-v1/receipt.json",
+      "sha256": "6cd013c4500f1f88d2d9b349410e0e76576bb3739f5017bcd076a06f1c5cf9ca",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/receipt.json"
+    },
+    {
+      "bytes": 11191,
+      "git_blob": "cfe1dcfbaa0f4df2830f030ee155c4a8282e317e",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/04-corrected-a-installation.json",
+      "mode": "100644",
+      "path": "received-v1/04-corrected-a-installation.json",
+      "sha256": "5faf004b12b9a9f1fb904f2ae8f0ff4df5acc57e9e7befe6177a0804c0990c0c",
+      "source_mode": 384,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/04-corrected-a-installation.json"
+    },
+    {
+      "bytes": 11051,
+      "git_blob": "d9892c59b291d553521db96f4316a55717dacc3d",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/06-side-by-side-b-installation.json",
+      "mode": "100644",
+      "path": "received-v1/06-side-by-side-b-installation.json",
+      "sha256": "27214ede530d3317d6a35c7abe2796db3278aecbc3a3f1fad80a409971da6d58",
+      "source_mode": 384,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/06-side-by-side-b-installation.json"
+    },
+    {
+      "bytes": 3656,
+      "git_blob": "a8b14aa2666bc7440cc347388364ea4c81388850",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/seal-publication-v1.py",
+      "mode": "100644",
+      "path": "seal-publication-v1.py",
+      "sha256": "7031f33e5eaf2798a813e9bda9cc4b37b3a58c8d53227b4aa90da41504a5551d",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/seal-publication-v1.py"
+    },
+    {
+      "bytes": 1612,
+      "git_blob": "7957d61817d1286926475cbd358bdb83a339d8e7",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/01-inspect-a.stdout",
+      "mode": "100644",
+      "path": "received-v1/01-inspect-a.stdout",
+      "sha256": "8e1e9788a4481dac7a4ee2f2a9894db754cb6187344bee21fc5af73e405655b6",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/01-inspect-a.stdout"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/01-inspect-a.stderr",
+      "mode": "100644",
+      "path": "received-v1/01-inspect-a.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/01-inspect-a.stderr"
+    },
+    {
+      "bytes": 1612,
+      "git_blob": "f844d9eaf32599860b246beacee738e4d87b2298",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/02-inspect-b.stdout",
+      "mode": "100644",
+      "path": "received-v1/02-inspect-b.stdout",
+      "sha256": "06a56f7a741a291a03a07f88ea1e4ff6d0e6ca0913b50dff64690da27e7facdd",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/02-inspect-b.stdout"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/02-inspect-b.stderr",
+      "mode": "100644",
+      "path": "received-v1/02-inspect-b.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/02-inspect-b.stderr"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/03-wrong-digest.stdout",
+      "mode": "100644",
+      "path": "received-v1/03-wrong-digest.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/03-wrong-digest.stdout"
+    },
+    {
+      "bytes": 967,
+      "git_blob": "e1bbdc698b1b4edc89863ec04345c3dcb99a6cde",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/03-wrong-digest.stderr",
+      "mode": "100644",
+      "path": "received-v1/03-wrong-digest.stderr",
+      "sha256": "944a7cbc5d8b0294061da57fcc1481caa22b5a0dfc214441ec0d3a6147dafef9",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/03-wrong-digest.stderr"
+    },
+    {
+      "bytes": 602,
+      "git_blob": "256f91f95c34b9279ad424d8230896233a4117f3",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/04-corrected-a.stdout",
+      "mode": "100644",
+      "path": "received-v1/04-corrected-a.stdout",
+      "sha256": "9867ef7087e939dbf6900b6c2a13fc5a53bd045df40b36757fcee662e52379a3",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/04-corrected-a.stdout"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/04-corrected-a.stderr",
+      "mode": "100644",
+      "path": "received-v1/04-corrected-a.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/04-corrected-a.stderr"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/05-repeat-a.stdout",
+      "mode": "100644",
+      "path": "received-v1/05-repeat-a.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/05-repeat-a.stdout"
+    },
+    {
+      "bytes": 943,
+      "git_blob": "31239ad23602cee3367d9d02a2f3775a23fcb0c8",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/05-repeat-a.stderr",
+      "mode": "100644",
+      "path": "received-v1/05-repeat-a.stderr",
+      "sha256": "476578530690bb3540ffce0f7ed2e7df9d8096095fbc9882e234680a00b8f1d6",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/05-repeat-a.stderr"
+    },
+    {
+      "bytes": 605,
+      "git_blob": "40cb228080479141e18af2087124145b19f51d25",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/06-side-by-side-b.stdout",
+      "mode": "100644",
+      "path": "received-v1/06-side-by-side-b.stdout",
+      "sha256": "fa3cc937d29b8cb9208e9e1d42f207415c4dcb5eaffe747273ec6bcd49f07e7f",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/06-side-by-side-b.stdout"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/06-side-by-side-b.stderr",
+      "mode": "100644",
+      "path": "received-v1/06-side-by-side-b.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/06-side-by-side-b.stderr"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/07-occupied-alias.stdout",
+      "mode": "100644",
+      "path": "received-v1/07-occupied-alias.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/07-occupied-alias.stdout"
+    },
+    {
+      "bytes": 919,
+      "git_blob": "e1b0b27a8198711962062dcadf9d9153fca62baf",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/07-occupied-alias.stderr",
+      "mode": "100644",
+      "path": "received-v1/07-occupied-alias.stderr",
+      "sha256": "d9262c61d5fa6ae5f1ea07d0be61594a856b91e750c5edbb33b0dbe0cf693042",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/07-occupied-alias.stderr"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/08-dangling-alias.stdout",
+      "mode": "100644",
+      "path": "received-v1/08-dangling-alias.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/08-dangling-alias.stdout"
+    },
+    {
+      "bytes": 919,
+      "git_blob": "0d46aa4c25ee4319387f7bcf74758f68c0d5a23d",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/08-dangling-alias.stderr",
+      "mode": "100644",
+      "path": "received-v1/08-dangling-alias.stderr",
+      "sha256": "74ddda8ab773c08a1bd000a27034c27df466a162997e53b1b0e6bc0554df16f1",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/08-dangling-alias.stderr"
+    },
+    {
+      "bytes": 9288,
+      "git_blob": "3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/EXPLORER.md",
+      "mode": "100644",
+      "path": "fixtures/source-a/EXPLORER.md",
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/EXPLORER.md"
+    },
+    {
+      "bytes": 7604,
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/explorer.py",
+      "mode": "100755",
+      "path": "fixtures/source-a/explorer.py",
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "source_mode": 493,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/explorer.py"
+    },
+    {
+      "bytes": 5432,
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/replay_explain.py",
+      "mode": "100644",
+      "path": "fixtures/source-a/replay_explain.py",
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/replay_explain.py"
+    },
+    {
+      "bytes": 5989,
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/scenarios.py",
+      "mode": "100644",
+      "path": "fixtures/source-a/scenarios.py",
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/scenarios.py"
+    },
+    {
+      "bytes": 19684,
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/towerops.py",
+      "mode": "100644",
+      "path": "fixtures/source-a/towerops.py",
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/towerops.py"
+    },
+    {
+      "bytes": 9430,
+      "git_blob": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/web/app.js",
+      "mode": "100644",
+      "path": "fixtures/source-a/web/app.js",
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/web/app.js"
+    },
+    {
+      "bytes": 3934,
+      "git_blob": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/web/index.html",
+      "mode": "100644",
+      "path": "fixtures/source-a/web/index.html",
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/web/index.html"
+    },
+    {
+      "bytes": 2566,
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/web/style.css",
+      "mode": "100644",
+      "path": "fixtures/source-a/web/style.css",
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/web/style.css"
+    },
+    {
+      "bytes": 39,
+      "git_blob": "f70366424a0206259554c01358b27495e1a86a86",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/ignored-extra.txt",
+      "mode": "100644",
+      "path": "fixtures/source-a/ignored-extra.txt",
+      "sha256": "5eb573f94f01ad1b7c0f15cfaaab896bcd683779df9ca835dabc8fa1f68c6f35",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a/ignored-extra.txt"
+    },
+    {
+      "bytes": 9383,
+      "git_blob": "3786330572280b4ae67b33d2b0856b8550b0f658",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/EXPLORER.md",
+      "mode": "100644",
+      "path": "fixtures/source-b/EXPLORER.md",
+      "sha256": "a5e84aea811a7347bb5553e37a34ef51eca8ea90f7052b743dcbaadfce9c7e44",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/EXPLORER.md"
+    },
+    {
+      "bytes": 7604,
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/explorer.py",
+      "mode": "100644",
+      "path": "fixtures/source-b/explorer.py",
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/explorer.py"
+    },
+    {
+      "bytes": 5432,
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/replay_explain.py",
+      "mode": "100644",
+      "path": "fixtures/source-b/replay_explain.py",
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/replay_explain.py"
+    },
+    {
+      "bytes": 5989,
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/scenarios.py",
+      "mode": "100644",
+      "path": "fixtures/source-b/scenarios.py",
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/scenarios.py"
+    },
+    {
+      "bytes": 19684,
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/towerops.py",
+      "mode": "100644",
+      "path": "fixtures/source-b/towerops.py",
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/towerops.py"
+    },
+    {
+      "bytes": 9430,
+      "git_blob": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/web/app.js",
+      "mode": "100644",
+      "path": "fixtures/source-b/web/app.js",
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/web/app.js"
+    },
+    {
+      "bytes": 3934,
+      "git_blob": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/web/index.html",
+      "mode": "100644",
+      "path": "fixtures/source-b/web/index.html",
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/web/index.html"
+    },
+    {
+      "bytes": 2566,
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/web/style.css",
+      "mode": "100644",
+      "path": "fixtures/source-b/web/style.css",
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "source_mode": 384,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/web/style.css"
+    },
+    {
+      "bytes": 39,
+      "git_blob": "f70366424a0206259554c01358b27495e1a86a86",
+      "mirror_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/ignored-extra.txt",
+      "mode": "100644",
+      "path": "fixtures/source-b/ignored-extra.txt",
+      "sha256": "5eb573f94f01ad1b7c0f15cfaaab896bcd683779df9ca835dabc8fa1f68c6f35",
+      "source_mode": 420,
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b/ignored-extra.txt"
+    }
+  ],
+  "prefix": "docs/qualification/explorer-releases-root-d3745/independent/",
+  "schema": "forge.towerops-release-receiving-publication.v1",
+  "scope": "original cloud temporary-prefix 8CLI/160checks; no native/runtime adoption",
+  "sealed_utc": "2026-10-14T01:22:08.949299+00:00",
+  "total_payload_bytes": 669805
+}

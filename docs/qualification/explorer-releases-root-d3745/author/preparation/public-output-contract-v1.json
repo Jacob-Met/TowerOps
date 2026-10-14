@@ -1,0 +1,52 @@
+{
+  "schema": "hamon.towerops-release-public-output.v1",
+  "supplements": "public-contract-v2.md without changing behavior",
+  "inspect": {
+    "ok": "true",
+    "digest": "64 lowercase hexadecimal SHA256 of canonical manifest",
+    "manifest": {
+      "schema": "towerops.explorer-content.v1",
+      "files": "8 path-sorted rows exactly {path,bytes,sha256,mode}"
+    }
+  },
+  "install_stdout": {
+    "ok": "true",
+    "digest": "expected content digest",
+    "release": "absolute new release directory",
+    "selector": "absolute version command",
+    "receipt": "absolute supplied receipt"
+  },
+  "installation_json": {
+    "schema": "towerops.explorer-staged-version.v1",
+    "digest": "same content digest",
+    "manifest": "same complete inspect manifest",
+    "wrapper": "{bytes,sha256,git_blob} of exact actual wrapper bytes",
+    "python": "/usr/bin/python3",
+    "installed_at": "UTC ISO8601 timestamp",
+    "purpose": "Additional foreground loopback Synthetic Explorer; content identity only."
+  },
+  "receipt_success": {
+    "schema": "towerops.explorer-stage.v1",
+    "ok": "true",
+    "phase": "complete",
+    "started": "UTC ISO8601 timestamp",
+    "finished": "UTC ISO8601 timestamp",
+    "digest": "same content digest",
+    "release": "same absolute directory",
+    "selector": "same absolute command",
+    "receipt": "same absolute receipt",
+    "created": "ordered array of absolute entries actually created including receipt; existing directories absent from this list",
+    "server_started": false,
+    "existing_commands_changed": false,
+    "inputs": "object keyed by exact8 source names with bytes,sha256,git_blob,device,inode,mode,uid,gid,links,mtime_ns,ctime_ns from unchanged helper",
+    "installed": "object keyed by exact8 source names plus towerops-explorer and installation.json, same complete identity fields",
+    "selector_target": "absolute release/towerops-explorer"
+  },
+  "error": {
+    "ok": false,
+    "error": "human readable string",
+    "outcome": "when installation entered, partial/final outcome with same stable fields and actual phase/error; absent for inspection or preliminary argument refusal",
+    "console_failure": "phase:console, installation_receipt:absolute receipt, selector_may_exist:true when installation completed but stdout failed"
+  },
+  "limits": "Argparse syntax errors use ordinary argparse stderr/exit2; controlled input/filesystem refusals use JSON stderr/exit2. Timestamp, inode and diagnostic strings are not fixed test constants. These schemas expose existing design intentions before independent executable freeze; candidate body remains unseen by receiver."
+}

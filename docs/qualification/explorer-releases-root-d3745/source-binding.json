@@ -1,0 +1,168 @@
+{
+  "author_authority": {
+    "bytes": 8594,
+    "git_blob": "89221a5782da27f1438fed3557bbe3933953fa51",
+    "path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/preparation/original-author-selection-v1.json",
+    "rows": 19,
+    "sha256": "e4da2d4a0824e97bdb385b0b654048301cb3e49000f8d02f8d31b7bf3c5f8dc2",
+    "source_rows": 3
+  },
+  "base": {
+    "commit": "f23a2538cbb26d08b7bdaef60f11bb7650d03704",
+    "tree": "5b3b8c2bc64f9de01db58dc2e0fd47842d15be61"
+  },
+  "independent_authority": {
+    "bytes": 30340,
+    "git_blob": "a1d78b387be39b889bc39d7a1ee544c2faaded20",
+    "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-inputs-v1.json",
+    "prefix": "docs/qualification/explorer-releases-root-d3745/independent/",
+    "rows": 58,
+    "sha256": "aea8a21cde0119559604042bd6f3cff585f049c125b64b5a4e5daf98d182b0b6"
+  },
+  "runtime_and_helper_preserved": [
+    {
+      "mode": "100644",
+      "path": "EXPLORER.md",
+      "sha": "3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66",
+      "size": 9288,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66"
+    },
+    {
+      "mode": "100755",
+      "path": "explorer.py",
+      "sha": "875707f6480a54c2e450a4344c35090e7518b284",
+      "size": 7604,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/875707f6480a54c2e450a4344c35090e7518b284"
+    },
+    {
+      "mode": "100644",
+      "path": "replay_explain.py",
+      "sha": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "size": 5432,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/dfd397c81ee14b59a7ae4153db203175e03a6ce6"
+    },
+    {
+      "mode": "100644",
+      "path": "scenarios.py",
+      "sha": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "size": 5989,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/33b5703d2ce0d4177c50f05536e3f2715c8bea3b"
+    },
+    {
+      "mode": "100755",
+      "path": "tools/install_explorer.py",
+      "sha": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "size": 12558,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/a732823616549e398dbd2ff5ad75d17b08442091"
+    },
+    {
+      "mode": "100644",
+      "path": "towerops.py",
+      "sha": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "size": 19684,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/0b03cee708cdff5cbacd148633def31f4e9414c5"
+    },
+    {
+      "mode": "100644",
+      "path": "web/app.js",
+      "sha": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "size": 9430,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0"
+    },
+    {
+      "mode": "100644",
+      "path": "web/index.html",
+      "sha": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "size": 3934,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/3ed669246d6af590acd69bbea09ac5207b0c1471"
+    },
+    {
+      "mode": "100644",
+      "path": "web/style.css",
+      "sha": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "size": 2566,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/7525749bee8a8335b6014844c5afc72d7611e791"
+    }
+  ],
+  "schema": "forge.towerops-release-publication-binding.v1",
+  "scope": "Three new source paths plus exact19-author and58-independent union and explicit support. Native adoption pending.",
+  "source_files": [
+    {
+      "authority": "original root19 authority",
+      "bytes": 9051,
+      "git_blob": "dd673eb056566ea6aae96a437313ceba0503863e",
+      "mode": "100644",
+      "path": "tools/stage_explorer.py",
+      "role": "source",
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/stage_explorer.py"
+    },
+    {
+      "authority": "original root19 authority",
+      "bytes": 11669,
+      "git_blob": "b51850cf784fd32e2b0955257be1d1d0f9eda8c2",
+      "mode": "100644",
+      "path": "tests/test_stage_explorer.py",
+      "role": "source",
+      "sha256": "c35086d55ada5e362e0238c725ccc16e5684b90ef92bb1b9407151fe2a2b292e",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tests/test_stage_explorer.py"
+    },
+    {
+      "authority": "original root19 authority",
+      "bytes": 5658,
+      "git_blob": "7ee8fbf4ddbc4df6519cc9f0326e2118523eb300",
+      "mode": "100644",
+      "path": "docs/EXPLORER_RELEASES.md",
+      "role": "source",
+      "sha256": "ff885c0d067bfc062148dcdf49d121023c4d356f311dbac6a4915e142dc37acd",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/docs/EXPLORER_RELEASES.md"
+    }
+  ],
+  "tool_files": [
+    {
+      "bytes": 4041,
+      "git_blob": "5a31e72360b1ebcd7595c97c8f1dc433659e71b9",
+      "mode": "100644",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/prepare_git_objects.py",
+      "sha256": "fb6596df63889b6b72038e3921b9144b802cc9546f9617705cfd112b57dab676"
+    },
+    {
+      "bytes": 12539,
+      "git_blob": "c39c963f472c74c96320ad4174c886c2315d5cba",
+      "mode": "100755",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/receive_source.py",
+      "sha256": "90af676b35c39f3cb1a3295d94a31a752893265af3a73292e2b2b22fb2750f35"
+    },
+    {
+      "bytes": 10827,
+      "git_blob": "ff680dc0db8600e1e29a16e5516aa74632891e5a",
+      "mode": "100644",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/validate_publication_layout.py",
+      "sha256": "09e931bcdb5d1ec5e55d76c8123a973a75a2d5072c6ffb84b302ddac8f443907"
+    },
+    {
+      "bytes": 4417,
+      "git_blob": "c8609b742a8b5e94a26da17dc94dbf0dc90056d8",
+      "mode": "100644",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/verify_publication_tree.py",
+      "sha256": "39a171bdb2b7efc80675373936e5be08f4e4f372ae554a551d2f70b43ce55898"
+    },
+    {
+      "bytes": 8791,
+      "git_blob": "f6f3585033d393ce9f496336e4626db649f2711f",
+      "mode": "100644",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/verify_tree_union.py",
+      "sha256": "6242be3016714c26b34c1e4640d606a82cfb4df60e56b5a0018c95afc60dacb2"
+    }
+  ],
+  "tools_commit": "ec34e8a2c8166d18565863a9bef2a7e39d2fa857"
+}

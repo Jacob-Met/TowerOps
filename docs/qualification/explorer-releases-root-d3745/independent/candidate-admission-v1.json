@@ -1,0 +1,66 @@
+{
+  "accepted": true,
+  "copied": {
+    "install_explorer.py": {
+      "bytes": 12558,
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "mode": 420,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7"
+    },
+    "stage_explorer.py": {
+      "bytes": 9051,
+      "git_blob": "dd673eb056566ea6aae96a437313ceba0503863e",
+      "mode": 420,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3"
+    }
+  },
+  "external_freeze": {
+    "bytes": 9097,
+    "git_blob": "2b077566cbf08adbb5a9961078ab352889106dd7",
+    "mode": 420,
+    "sha256": "71158e90f726121c4ad2df82bc084907c0382cc5930803357cc8c6d29fb24b8a"
+  },
+  "manifest": {
+    "bytes": 2134,
+    "git_blob": "74ecbaf18ae6c0e6b5871fba8e8da53ba6647ea0",
+    "mode": 420,
+    "sha256": "b00645b2a7481aaaa2e9d36dd231b7f509631c0eec1022808e15dc08ef766874"
+  },
+  "observed_utc": "2026-10-14T01:16:03.629913+00:00",
+  "product_executed": false,
+  "schema": "forge.towerops-release-admission.v1",
+  "source_after": {
+    "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/install_explorer.py": {
+      "bytes": 12558,
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "mode": 420,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7"
+    },
+    "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/stage_explorer.py": {
+      "bytes": 9051,
+      "git_blob": "dd673eb056566ea6aae96a437313ceba0503863e",
+      "mode": 420,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3"
+    }
+  },
+  "source_before": {
+    "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/install_explorer.py": {
+      "bytes": 12558,
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "mode": 420,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7"
+    },
+    "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/stage_explorer.py": {
+      "bytes": 9051,
+      "git_blob": "dd673eb056566ea6aae96a437313ceba0503863e",
+      "mode": 420,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3"
+    }
+  },
+  "spec": {
+    "bytes": 736,
+    "git_blob": "4f3bfcad22fc1d065e00b3d08d4881ac2eff5337",
+    "mode": 420,
+    "sha256": "07803d40b79cf321e7ec8a65c6a19f175ac26382c45a25196088b4a33bef11ac"
+  }
+}

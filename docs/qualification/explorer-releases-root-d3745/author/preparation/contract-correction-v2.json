@@ -1,0 +1,7 @@
+{
+  "reason": "Before candidate implementation or independent receiving freeze, correct the Markdown wrapper pseudocode to use one backslash-n escape for actual LF bytes; V1 accidentally contained doubled escapes. CLI, limits, output and all other behavior unchanged.",
+  "v1_sha256": "02144698003460ac50e9ffc75ce832f6f4dbe4196460176263cd70599d07b847",
+  "v2_sha256": "9de4c74efe01907bfb02659a168c050fe23f328506f52e3ccab8b28fc734d404",
+  "candidate_written": false,
+  "utc": "2026-10-14T01:02:36.620337+00:00"
+}
