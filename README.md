@@ -85,6 +85,21 @@ Supply one source at most; omit it or use `-` for stdin.
 See [AUDIT_REPLAY.md](AUDIT_REPLAY.md) for accepted trace formats,
 dash-prefixed filenames, output-failure behavior and the limits of the review.
 
+## Read a compact recorded plan summary
+
+For an existing `towerops.world-plan.v1` report, inspect its recorded status,
+clock, counts and all seven policy values without planning again:
+
+```bash
+python3 review_saved_plan.py after.plan.json
+python3 review_saved_plan.py after.plan.json --json
+```
+
+The recorded candidate count stays distinct from saved alternatives. No option
+is selected or applied; internal body-hash consistency does not establish
+freshness, menu completeness or safety approval. See
+[REVIEW_SAVED_PLAN.md](REVIEW_SAVED_PLAN.md) for input and output limits.
+
 ## Verify
 
 From the repository root:
