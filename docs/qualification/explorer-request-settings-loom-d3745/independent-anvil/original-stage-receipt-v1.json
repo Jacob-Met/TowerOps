@@ -1,0 +1,122 @@
+{
+  "schema": "anvil.towerops-settings.original-stage-receipt.v1",
+  "time_ns": 1791939614534006444,
+  "files": [
+    {
+      "path": "criteria-v1.json",
+      "bytes": 5640,
+      "sha256": "5d37954b3c584e611d0919f5006b3add50f025b0809e72d72fe24d84ebf17f46",
+      "mode": 420
+    },
+    {
+      "path": "criteria-freeze-v1.json",
+      "bytes": 626,
+      "sha256": "d7e2d0be71f0d36989c94e57cc7cfd63e464e271b18a5b4060eeba90652f9348",
+      "mode": 420
+    },
+    {
+      "path": "public-contract-v1.md",
+      "bytes": 6036,
+      "sha256": "38b186cb3cc20488c8b0aacc484d6b3ba85264b78cb35aab7eef4e4b5e2dc293",
+      "mode": 420
+    },
+    {
+      "path": "original-source-tree-v1.json",
+      "bytes": 2676,
+      "sha256": "b56956e93f32b41113677e8a03b8422ef55d122c1e1908ef80dd24522002d353",
+      "mode": 420
+    },
+    {
+      "path": "prepare-original-fixtures-v1.py",
+      "bytes": 3325,
+      "sha256": "8d58450e89b5bdf2e0588af704e3460bce1c4f1a5af6389e56b265476ec4839d",
+      "mode": 420
+    },
+    {
+      "path": "receive-settings-v1.cjs",
+      "bytes": 22655,
+      "sha256": "073c8a8190e624d6104881baeea572c1540fed94078b4f6dbe7177ecf848530a",
+      "mode": 420
+    },
+    {
+      "path": "receiver-freeze-v1.json",
+      "bytes": 1710,
+      "sha256": "15b19edcfc0fc94fc9cfb1c975822701e028603c8648cacd2b0d9ad27ffd1c7c",
+      "mode": 420
+    },
+    {
+      "path": "receiver-v1-to-v2.patch",
+      "bytes": 8016,
+      "sha256": "9d4befde6ee3551066bc20372a2d41a717c7592b0620e5e1a8902bfc5927b584",
+      "mode": 420
+    },
+    {
+      "path": "controller-addendum-v2.json",
+      "bytes": 832,
+      "sha256": "2891f5fbc24331350905612543423302fd9d00774a9f331d972c4884cadef349",
+      "mode": 420
+    },
+    {
+      "path": "receive-settings-v2.cjs",
+      "bytes": 23231,
+      "sha256": "dd5dfbf9667cbe2ce788eaf022dd7cf9874cd74fc04d25b163e94a704db30aee",
+      "mode": 420
+    },
+    {
+      "path": "receiver-freeze-v2.json",
+      "bytes": 1923,
+      "sha256": "18a7b1290da42f1b4e81a33821ba01a0afa04fc7a3bf46ba5318c3344b3f6294",
+      "mode": 420
+    },
+    {
+      "path": "original/explorer.py",
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "mode": 493
+    },
+    {
+      "path": "original/replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "mode": 420
+    },
+    {
+      "path": "original/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": 420
+    },
+    {
+      "path": "original/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": 420
+    },
+    {
+      "path": "original/web/app.js",
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "mode": 420
+    },
+    {
+      "path": "original/web/index.html",
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "mode": 420
+    },
+    {
+      "path": "original/web/style.css",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "mode": 420
+    },
+    {
+      "path": "original/EXPLORER.md",
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "mode": 420
+    }
+  ],
+  "candidate_exposure": false,
+  "product_execution": false
+}

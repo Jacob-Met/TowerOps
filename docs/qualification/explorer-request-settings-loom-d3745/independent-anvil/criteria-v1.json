@@ -1,0 +1,47 @@
+{
+  "schema": "anvil.towerops-request-settings.public-criteria.v1",
+  "repository": "Jacob-Met/TowerOps",
+  "baseline_commit": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "baseline_tree": "90c81370fb3215943a8b64a4264f8e362a05d479",
+  "candidate_exposure": "No candidate implementation body or candidate identity received before these public expectations.",
+  "public_contract_source": "Root task plus Loom public-only clarification of 2026-10-14, before implementation exposure. Exact owner issue/contract will be retained as additional control before executable freeze.",
+  "source_boundary": ["EXPLORER.md", "explorer.py", "replay_explain.py", "scenarios.py", "towerops.py", "web/app.js", "web/index.html", "web/style.css"],
+  "new_dom": {
+    "button": "replay-use-settings",
+    "label": "Use request settings",
+    "status": "replay-settings-status",
+    "status_role": "status",
+    "applied_text": "Request settings copied. Run synthetic case to produce a new result; displayed result is unchanged."
+  },
+  "request_oracles": {
+    "A": {"scenario": "approved", "include_approval": false, "include_ack": false},
+    "B": {"scenario": "missing_ack", "include_approval": true, "include_ack": true},
+    "C": {"scenario": "stale_binding", "include_approval": false, "include_ack": true}
+  },
+  "fixture_provenance": "Before candidate exposure, generate exact A/B/C exports once through the original pinned public Explorer CLI. Preserve all CLI streams and source identities. C-mismatch is an explicitly authored copy with only label changed; its exact request remains C. A/B/C inputs and malformed JSON are then frozen for both browser variants. Candidate course does not regenerate fixtures.",
+  "original_control": [
+    "Actual baseline backend and Firefox load the original page; the new action/status nodes are absent.",
+    "Set A form values and explicitly Run; full backend response equals the original CLI-generated A export, and the displayed result becomes exportable.",
+    "Save the actual A download, select actual B export and observe a production Replay MATCH. Current form A, displayed A, main status, export and replay verdict remain intact; no new action is available. Save A again and require byte equality.",
+    "Record absence as the expected baseline gap, with clean owned browser/backend/relay closure and exact source/input preservation. No candidate branch or private implementation is read."
+  ],
+  "candidate_course": [
+    "Repeat the common actual A run/B MATCH receiving with the exact frozen inputs; the visible new button has the public label and status role.",
+    "Explicitly apply B request settings. Scenario, exact booleans and description become B. Because B is missing_ack with request include_ack=true but an effective null ack, this checks request fields rather than inferred fixture presence.",
+    "Apply updates only form/description and the fixed settings notice. Main status, displayed result, export bytes, replay verdict and explanation presentation stay exact; no HTTP request is emitted by the action.",
+    "Only explicit Run emits the next /api/run with exact B request. Full resulting response equals frozen B. The settings action remains usable after Run as specified.",
+    "Replay authored C-mismatch through the unchanged production backend; require MISMATCH and existing explanation availability. Apply exact C request while displayed B, main status, export, verdict and explanation stay unchanged. No implicit Run.",
+    "On a new malformed selection, immediately retire action/notice and then keep them retired after current rejection. Copied C form values remain; no reset is implied.",
+    "Recover with an accepted B selection, then hold one genuine C replay response after its headers and first byte. The pending selection immediately retires the action. Clear the input, release the remaining old body, and wait for its unique public requestfinished witness before verifying that no obsolete action/status/verdict reappears.",
+    "In one fresh page within the same owned browser, hold only the genuine scenario-catalog response. Replay B successfully before catalog readiness: action stays unavailable. Release catalog, wait for the exact complete response, then the still-current accepted B becomes available and applies. This emits no /api/run.",
+    "Retain actual before/after downloads and limited screenshots of readable control/result states; close only the owned page/context/browser/backend/relay. Preserve exact sources, fixtures and frozen controls."
+  ],
+  "transport": "Byte-recording loopback relay forwards unchanged production Handler requests/responses, rewriting Host/Origin only for its private backend origin. Only the declared partial-body replay delay and full catalog delay are authored. There is no fake API-success payload, unsupported request.postData observer or browser-interception synthetic fulfillment.",
+  "scope_limits": [
+    "This is a local synthetic Explorer usability boundary, with no live aviation data or authority claim.",
+    "No model/provider call, installed application update, shared port, scheduler or legacy119-course replay.",
+    "The browser course checks the declared sequences; maintained source tests cover other malformed request shapes and fine-grained asynchronous combinations.",
+    "No transport cancellation, universal scheduling or all-browser claim. Ignored old work may still complete; the public completion witness bounds the tested stale response.",
+    "Candidate failures are retained; no assertion changes after candidate exposure without an explicit versioned correction and peer review."
+  ]
+}

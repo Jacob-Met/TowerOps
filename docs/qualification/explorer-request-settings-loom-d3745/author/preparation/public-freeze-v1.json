@@ -1,0 +1,12 @@
+{
+  "schema": "hamon.loom.towerops-request-settings.public-freeze.v1",
+  "frozen_utc": "2026-10-14T00:51:59.438748+00:00",
+  "candidate_authored": false,
+  "contract": {
+    "path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/public-contract-v1.md",
+    "bytes": 6036,
+    "sha256": "38b186cb3cc20488c8b0aacc484d6b3ba85264b78cb35aab7eef4e4b5e2dc293"
+  },
+  "baseline": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "scope": "Frozen public behavior before original observer and candidate authorship; independent receiving remains separately candidate-blind."
+}

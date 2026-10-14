@@ -1,0 +1,10 @@
+{
+  "schema": "anvil.towerops-settings.receiver-addendum.v2",
+  "created_utc": "2026-10-14T00:58:49.086412+00:00",
+  "candidate_exposure": false,
+  "v1_executed": false,
+  "finding": "Peer Forge full read found both Apply comparisons used projected minute0, so an accidental reset-to0 could pass the public no-reset contract.",
+  "change": "Set and independently confirm2.3/4.1 nonzero projected minutes, formatted output and actual plotted SVG change before the two existing full display equality comparisons. Same cases/inputs/requests; only setup plus versioned schema/freeze references.",
+  "preservation": "Original V1 source and original freeze are unchanged and unexecuted. No fixture producer, backend, browser or candidate course has run.",
+  "reviewer": "Forge independent control review; no candidate source received."
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "anvil.towerops-settings.original-course-review.v1",
+  "reviewed_utc": "2026-10-14T01:05:36.776709+00:00",
+  "candidate_exposure": false,
+  "source_commit": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "source_tree": "90c81370fb3215943a8b64a4264f8e362a05d479",
+  "original_browser": {
+    "accepted": true,
+    "meaning": "All24 expected original observations pass, including missing action/status. This is a baseline gap, not feature acceptance.",
+    "parent_pid": 510884,
+    "parent_exit": 0,
+    "raw_receipt_bytes": 148417,
+    "raw_receipt_sha256": "b31cddb0a289fd49f7d0344818ea53ce9ac8d0197deb29f75ae69d173eaeb8bd",
+    "checks": 24,
+    "http": 7,
+    "posts": 2,
+    "download_count": 2,
+    "downloads_equal_sha256": "177905514098eb15d079d4dcd887e925386de7c3aa387e80fedaee388bc1eb61",
+    "page_errors": [],
+    "failed_requests": [],
+    "context_browser_backend_relay_closed": true,
+    "both_private_listeners_closed": true,
+    "source_controls_fixtures_preserved": true
+  },
+  "original_fixture_production": {
+    "parent_pid": 507684,
+    "parent_exit": 0,
+    "public_cli_commands": 3,
+    "all_exits_zero": true,
+    "source_preserved": true,
+    "receipt_bytes": 9367,
+    "receipt_sha256": "1d17edb8f04daf6cdb428e199789c7a61dec72a3e27d92667f0090519699f031",
+    "five_inputs": "Three native CLI outputs plus explicitly authored C-label mismatch and malformed JSON; no candidate regeneration."
+  },
+  "custody": {
+    "full_original_raw_receipt_retrieved": true,
+    "native_private_transfer_pid": 514989,
+    "native_private_transfer_exit": 0,
+    "all29_payload_bytes_hashes_modes_exact": true,
+    "all3_original_processes_absent": true,
+    "all_saved_HTTP_stream_hashes_rechecked": true
+  },
+  "visual": "Viewed the exact original PNG: current form remains Approval + acknowledgement with both switches unchecked, selected B.json has Replay MATCH: rejected, original A result stays displayed, and the new action is absent. The projected-time oracle is DOM/receipt evidence; it is below this screenshot viewport.",
+  "limits": [
+    "No candidate body or identities inspected.",
+    "No new original fixture/API/browser execution for the read-only audit.",
+    "No production/live aviation authority, installed application change or legacy119 replay."
+  ]
+}

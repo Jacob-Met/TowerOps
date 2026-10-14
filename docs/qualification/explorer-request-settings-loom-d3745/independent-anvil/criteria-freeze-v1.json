@@ -1,0 +1,15 @@
+{
+  "schema": "anvil.towerops-settings.criteria-freeze.v1",
+  "frozen_utc": "2026-10-14T00:53:15.305311+00:00",
+  "candidate_exposure": false,
+  "criteria": {
+    "bytes": 5640,
+    "sha256": "5d37954b3c584e611d0919f5006b3add50f025b0809e72d72fe24d84ebf17f46"
+  },
+  "public_contract": {
+    "bytes": 6036,
+    "sha256": "38b186cb3cc20488c8b0aacc484d6b3ba85264b78cb35aab7eef4e4b5e2dc293"
+  },
+  "issue": "https://github.com/Jacob-Met/TowerOps/issues/138",
+  "scope": "Full public contract read; exact original source bodies authenticated against independent complete tree. No candidate body/identity or product course seen."
+}

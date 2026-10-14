@@ -1,0 +1,16 @@
+{
+  "schema": "anvil.towerops-settings.native-admission.v1",
+  "time_ns": 1791939571075880822,
+  "host": "hamon-thinkpad",
+  "uid": 1000,
+  "account": "jacob",
+  "passwd_home": "/home/jacob",
+  "transport_HOME": "/home/jacob/.commander-tp-2",
+  "python": "Python 3.14.4",
+  "node": "v22.22.1",
+  "puppeteer": "25.12.0",
+  "stage_absent_before": true,
+  "stage": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings",
+  "available_bytes": 7534305280,
+  "product_execution": false
+}

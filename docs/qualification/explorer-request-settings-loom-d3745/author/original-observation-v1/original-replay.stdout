@@ -1,0 +1,8 @@
+{
+  "matches": true,
+  "audit_valid": true,
+  "outcome": "rejected",
+  "rejection_reason": "ack_missing",
+  "expected_audit_head": "aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e",
+  "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."
+}

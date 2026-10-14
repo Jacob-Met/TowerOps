@@ -78,6 +78,38 @@ $("export").addEventListener("click",()=> {
   setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
 let replaySelection = null;
+let replayCatalogReady = false;
+function replayRequestSettings(selection) {
+  if (!replayCatalogReady || !selection || !selection.replayed) return null;
+  const request = selection.value && selection.value.request;
+  if (!request || typeof request !== "object" || Array.isArray(request)
+      || Object.keys(request).sort().join(",") !== "include_ack,include_approval,scenario"
+      || typeof request.scenario !== "string"
+      || typeof request.include_approval !== "boolean"
+      || typeof request.include_ack !== "boolean") return null;
+  const option = Array.from($("scenario").options).find(item => item.value === request.scenario);
+  return option ? {request, option} : null;
+}
+function clearReplaySettings() {
+  $("replay-use-settings").hidden=true;
+  $("replay-use-settings").disabled=true;
+  $("replay-settings-status").textContent="";
+}
+function updateReplaySettings() {
+  const available = replayRequestSettings(replaySelection) !== null;
+  $("replay-use-settings").hidden=!available;
+  $("replay-use-settings").disabled=!available;
+}
+clearReplaySettings();
+$("replay-use-settings").addEventListener("click",()=> {
+  const settings = replayRequestSettings(replaySelection);
+  if (!settings) return;
+  $("scenario").value=settings.request.scenario;
+  $("approval").checked=settings.request.include_approval;
+  $("ack").checked=settings.request.include_ack;
+  $("description").textContent=settings.option.dataset.description;
+  $("replay-settings-status").textContent="Request settings copied. Run synthetic case to produce a new result; displayed result is unchanged.";
+});
 function clearReplayExplanation() {
   $("replay-explain").hidden=true;
   $("replay-explain").disabled=true;
@@ -145,6 +177,7 @@ $("replay-file").addEventListener("change",async()=> {
   const selection = {};
   replaySelection = selection;
   clearReplayExplanation();
+  clearReplaySettings();
   const file=$("replay-file").files[0];
   if (!file) {$("replay-status").textContent="";return;}
   $("replay-status").textContent="Replaying locally…";
@@ -154,8 +187,12 @@ $("replay-file").addEventListener("change",async()=> {
     if (replaySelection !== selection) return;
     const value=JSON.parse(text),reply=await request("/api/replay",value);
     if (replaySelection !== selection) return;
-    if (reply.matches === false) {
+    if (typeof reply.matches === "boolean") {
       selection.value=value;
+      selection.replayed=true;
+    }
+    updateReplaySettings();
+    if (reply.matches === false) {
       selection.mismatch=true;
       $("replay-explain").hidden=false;
       $("replay-explain").disabled=false;
@@ -168,5 +205,7 @@ $("replay-file").addEventListener("change",async()=> {
 request("/api/scenarios").then(data=> {
   data.scenarios.forEach(item=> {const option=document.createElement("option"); option.value=item.id;option.textContent=item.label;option.dataset.description=item.description;$("scenario").append(option);});
   $("description").textContent=data.scenarios[0].description;
+  replayCatalogReady=true;
+  updateReplaySettings();
   $("status").textContent="Ready. Choose a case, then run the simulated fixtures.";
 }).catch(e=> {$("status").textContent=`Load failed: ${e.message}`;$("run").disabled=true;});

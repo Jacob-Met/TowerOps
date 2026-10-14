@@ -56,7 +56,7 @@ async function harness() {
     typeof id === "string" && ![
       "replay-file", "replay-status", "replay-explain", "replay-explain-status",
       "replay-differences", "replay-difference-summary", "replay-difference-list",
-      "replay-difference-limit",
+      "replay-difference-limit", "replay-use-settings", "replay-settings-status",
     ].includes(id))
     .map(([id, n]) => [id, n.textContent, n.value, n.disabled, n.children.length]));
   const before = unrelated();

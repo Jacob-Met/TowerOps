@@ -1,0 +1,118 @@
+{
+  "schema": "anvil.towerops-settings.saved-course-audit.v1",
+  "accepted": true,
+  "utc": "2026-10-14T01:18:30.453335+00:00",
+  "method": "Read-only complete JSON predicates, raw stream bytes and local mirrored payload identities; no product execution.",
+  "courses": [
+    {
+      "variant": "original",
+      "receipt_bytes": 148417,
+      "receipt_sha256": "b31cddb0a289fd49f7d0344818ea53ce9ac8d0197deb29f75ae69d173eaeb8bd",
+      "checks_recomputed": 24,
+      "http": 7,
+      "posts": 2,
+      "runs": 1,
+      "downloads": [
+        {
+          "name": "A-before-settings",
+          "actual": {
+            "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/original-browser-v2/downloads/towerops-approved.json",
+            "bytes": 4296,
+            "sha256": "177905514098eb15d079d4dcd887e925386de7c3aa387e80fedaee388bc1eb61",
+            "git_blob": "71e6d435ae5a1e924e7074ad126a7ad65b03d482",
+            "mode": 436
+          },
+          "expected_sha256": "177905514098eb15d079d4dcd887e925386de7c3aa387e80fedaee388bc1eb61"
+        },
+        {
+          "name": "A-after-original-replay",
+          "actual": {
+            "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/original-browser-v2/downloads/towerops-approved(1).json",
+            "bytes": 4296,
+            "sha256": "177905514098eb15d079d4dcd887e925386de7c3aa387e80fedaee388bc1eb61",
+            "git_blob": "71e6d435ae5a1e924e7074ad126a7ad65b03d482",
+            "mode": 436
+          },
+          "expected_sha256": "177905514098eb15d079d4dcd887e925386de7c3aa387e80fedaee388bc1eb61"
+        }
+      ],
+      "raw_relay_streams_verified": 11,
+      "screenshots": [
+        {
+          "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/original-browser-v2/original-match-no-settings-action.png",
+          "bytes": 158305,
+          "sha256": "bfd03aa78771d6cbdf765891bab550d845b25b47bcf126ec0938e765cd6716f4",
+          "git_blob": "44e1e31e755ca80268c1b8b2aaf2fede85d2f21c",
+          "mode": 436
+        }
+      ],
+      "source_controls_fixtures_preserved": true,
+      "closure_accepted": true
+    },
+    {
+      "variant": "candidate",
+      "receipt_bytes": 329640,
+      "receipt_sha256": "3b2a6247ab691eb28d9b77233ceb5bd88112048c8865e58078770894c2bc4ceb",
+      "checks_recomputed": 78,
+      "http": 16,
+      "posts": 7,
+      "runs": 2,
+      "downloads": [
+        {
+          "name": "A-before-settings",
+          "actual": {
+            "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/candidate-browser-v2/downloads/towerops-approved.json",
+            "bytes": 4296,
+            "sha256": "177905514098eb15d079d4dcd887e925386de7c3aa387e80fedaee388bc1eb61",
+            "git_blob": "71e6d435ae5a1e924e7074ad126a7ad65b03d482",
+            "mode": 436
+          },
+          "expected_sha256": "177905514098eb15d079d4dcd887e925386de7c3aa387e80fedaee388bc1eb61"
+        },
+        {
+          "name": "A-after-settings",
+          "actual": {
+            "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/candidate-browser-v2/downloads/towerops-approved(1).json",
+            "bytes": 4296,
+            "sha256": "177905514098eb15d079d4dcd887e925386de7c3aa387e80fedaee388bc1eb61",
+            "git_blob": "71e6d435ae5a1e924e7074ad126a7ad65b03d482",
+            "mode": 436
+          },
+          "expected_sha256": "177905514098eb15d079d4dcd887e925386de7c3aa387e80fedaee388bc1eb61"
+        },
+        {
+          "name": "B-after-C-settings",
+          "actual": {
+            "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/candidate-browser-v2/downloads/towerops-missing_ack.json",
+            "bytes": 4946,
+            "sha256": "17f8d04417744939fc606c34259bb5ffb756b02f4db7153b7781fab9894ea147",
+            "git_blob": "5f12029762998cc31f7875148a963607ab1dc928",
+            "mode": 436
+          },
+          "expected_sha256": "17f8d04417744939fc606c34259bb5ffb756b02f4db7153b7781fab9894ea147"
+        }
+      ],
+      "raw_relay_streams_verified": 25,
+      "screenshots": [
+        {
+          "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/candidate-browser-v2/B-settings-with-A-displayed.png",
+          "bytes": 156450,
+          "sha256": "38d6bc3584fb4cef793e8c88d0a6267b18ccf0e7484a91dfc27fe73946463861",
+          "git_blob": "ec8c6302727359c6f60920ab511d6e649e854652",
+          "mode": 436
+        },
+        {
+          "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/candidate-browser-v2/cleared-selection-retains-copied-controls.png",
+          "bytes": 151909,
+          "sha256": "d28a7acd79eec40e42e7822a10ccd34f7fb95917739ea2f25543b522c3bd4d88",
+          "git_blob": "d33102a604f6d48c731f542a90e128726caffc2e",
+          "mode": 436
+        }
+      ],
+      "source_controls_fixtures_preserved": true,
+      "closure_accepted": true
+    }
+  ],
+  "total_comparisons_recomputed": 102,
+  "product_replay": false
+}

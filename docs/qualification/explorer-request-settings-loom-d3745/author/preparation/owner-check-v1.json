@@ -1,0 +1,283 @@
+{
+  "checked_at": "2026-10-14T00:50:25.810Z",
+  "baseline": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "tree": "90c81370fb3215943a8b64a4264f8e362a05d479",
+  "tree_entries": 1851,
+  "tree_truncated": false,
+  "instructions": [],
+  "open_pr_paths": [
+    {
+      "number": 123,
+      "head": "a99b29a28e46d8fa98b0392dd2c61b1d0635276a",
+      "files": [
+        ".github/workflows/airspace-demo.yml",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "number": 113,
+      "head": "aac3cfb88b3b860410a36832987561d6904f6d90",
+      "files": [
+        "PLAN_WORLD.md",
+        "plan_world.py",
+        "tests/test_plan_world_output.py"
+      ]
+    },
+    {
+      "number": 104,
+      "head": "62e999c197b01b1271809e2b89ec3a4343e8baf0",
+      "files": [
+        "docs/audit-payload-snapshot.md",
+        "tests/test_audit_payload_snapshot.py",
+        "towerops.py"
+      ]
+    },
+    {
+      "number": 81,
+      "head": "3fab25b0dc3dbcb4a98f569b7567f4c879044f12",
+      "files": [
+        "INSPECT_ENCOUNTER.md",
+        "README.md",
+        "docs/receiving/encounter-ac386303dce2/QUALIFICATION.md",
+        "docs/receiving/encounter-ac386303dce2/author-packet.json.gz",
+        "docs/receiving/encounter-ac386303dce2/lint-successor.json",
+        "docs/receiving/encounter-ac386303dce2/lint-successor.json.gz",
+        "docs/receiving/encounter-ac386303dce2/manifest.json",
+        "inspect_encounter.py",
+        "tests/test_inspect_encounter.py"
+      ]
+    },
+    {
+      "number": 80,
+      "head": "ea8df3f2868828672fafa911cf58553decb81ed4",
+      "files": [
+        "COPY_FLIGHT.md",
+        "README.md",
+        "docs/receiving/copy-flight-0378a7b6/MANIFEST.json",
+        "docs/receiving/copy-flight-0378a7b6/RECEIVING.md",
+        "docs/receiving/copy-flight-0378a7b6/baseline-browser-v2/receipt.json",
+        "docs/receiving/copy-flight-0378a7b6/baseline-browser/receipt.json",
+        "docs/receiving/copy-flight-0378a7b6/baseline-gates.json",
+        "docs/receiving/copy-flight-0378a7b6/baseline-native-gates.json",
+        "docs/receiving/copy-flight-0378a7b6/baseline-native-tests.log",
+        "docs/receiving/copy-flight-0378a7b6/baseline-python312-build.log",
+        "docs/receiving/copy-flight-0378a7b6/baseline-python312-gates.json",
+        "docs/receiving/copy-flight-0378a7b6/baseline-python312-tests.log",
+        "docs/receiving/copy-flight-0378a7b6/baseline-tests.log",
+        "docs/receiving/copy-flight-0378a7b6/candidate-browser-v2/desktop-copy-preview.png",
+        "docs/receiving/copy-flight-0378a7b6/candidate-browser-v2/mobile-copy-preview.png",
+        "docs/receiving/copy-flight-0378a7b6/candidate-browser-v2/receipt.json",
+        "docs/receiving/copy-flight-0378a7b6/candidate-browser/receipt.json",
+        "docs/receiving/copy-flight-0378a7b6/candidate-build.log",
+        "docs/receiving/copy-flight-0378a7b6/candidate-gates.json",
+        "docs/receiving/copy-flight-0378a7b6/candidate-tests.log",
+        "docs/receiving/copy-flight-0378a7b6/candidate-v2-build.log",
+        "docs/receiving/copy-flight-0378a7b6/candidate-v2-gates.json",
+        "docs/receiving/copy-flight-0378a7b6/candidate-v2-tests.log",
+        "docs/receiving/copy-flight-0378a7b6/npm-ci.json",
+        "docs/receiving/copy-flight-0378a7b6/receive-baseline-v2.mjs",
+        "docs/receiving/copy-flight-0378a7b6/receive-baseline.mjs",
+        "docs/receiving/copy-flight-0378a7b6/receive-candidate-v2.mjs",
+        "docs/receiving/copy-flight-0378a7b6/receive-candidate.mjs",
+        "docs/receiving/copy-flight-0378a7b6/run-baseline-native.mjs",
+        "docs/receiving/copy-flight-0378a7b6/run-baseline-python312.mjs",
+        "docs/receiving/copy-flight-0378a7b6/run-baseline.mjs",
+        "docs/receiving/copy-flight-0378a7b6/run-candidate-v2.mjs",
+        "docs/receiving/copy-flight-0378a7b6/run-candidate.mjs",
+        "docs/receiving/copy-flight-0378a7b6/source-fence.md",
+        "docs/receiving/copy-flight-0378a7b6/source-freeze.json",
+        "web/airspace/index.html",
+        "web/airspace/src/main.ts",
+        "web/airspace/src/track-copy-view.ts",
+        "web/airspace/src/track-copy.ts",
+        "web/airspace/tests/track-copy.test.ts"
+      ]
+    },
+    {
+      "number": 72,
+      "head": "440d84acdd41edf8e970bbdd5f5f8787e0c61916",
+      "files": [
+        "docs/qualification/radar-view-401c5d17da79/MANIFEST.json",
+        "docs/qualification/radar-view-401c5d17da79/README.md",
+        "docs/qualification/radar-view-401c5d17da79/author-current-evidence.tar.gz",
+        "docs/receiving/radar-navigation-current-scenario-401c5d17da79/register-2119-source-composition.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/MANIFEST.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/README.md",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/accepted/browser-process.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/accepted/held-approval-edit-auto-restored.png",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/accepted/held-approval-edit-offscreen.png",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/accepted/receipt.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/accepted/stderr.log",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/accepted/stdout.log",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/first-run/browser-process.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/first-run/receipt.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/first-run/stderr.log",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/first-run/stdout.log",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/native-keyboard-control/browser-process.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/native-keyboard-control/receipt.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/native-keyboard-control/stderr.log",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/native-keyboard-control/stdout.log",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/evidence/receiver-adjustment.patch",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/inputs/MATERIALIZED-INPUTS.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/inputs/RUNTIME-FREEZE.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/inputs/candidate-v2.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/inputs/first-run-candidate.json",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/methods/calibrate-native-keyboard.mjs",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/methods/cdp.mjs",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/methods/receive-held-state.v2.mjs",
+        "docs/receiving/radar-navigation-held-state-401c5d17da79/methods/receive-held-state.v3.mjs",
+        "web/airspace/README.md",
+        "web/airspace/index.html",
+        "web/airspace/src/draw.ts",
+        "web/airspace/src/main.ts",
+        "web/airspace/src/radar-view.ts",
+        "web/airspace/style.css",
+        "web/airspace/tests/radar-view.test.ts"
+      ]
+    },
+    {
+      "number": 71,
+      "head": "02e9e701c9011568fdd27f5126273ed87b0a0a7a",
+      "files": [
+        "README.md",
+        "WORLD_PLAN_HTML.md",
+        "docs/receiving/world-plan-html-066deeadcc8b/author/README.md",
+        "docs/receiving/world-plan-html-066deeadcc8b/author/native-manifest.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/author/native-packet.tar.xz",
+        "docs/receiving/world-plan-html-066deeadcc8b/author/packaging-verification.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/author/receipt.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/author/verification.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/author/verify-author.py",
+        "docs/receiving/world-plan-html-066deeadcc8b/current-parent/publication-parent-command.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/current-parent/publication-parent-input.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/current-parent/publication-parent-verification.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/current-parent/verify-publication-parent.py",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/README.md",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/archive-freeze.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/cold-replay-commands.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/native-manifest.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/native-peer.tar.xz",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/negative-controls.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/negative-optimized.stderr",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/negative-optimized.stdout",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/negative.stderr",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/negative.stdout",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/normal.stderr",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/normal.stdout",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/optimized.stderr",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/optimized.stdout",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/receipt.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/verification-attempt-1.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/verification-attempt-1.stderr",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/verification-attempt-1.stdout",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/verification.json",
+        "docs/receiving/world-plan-html-066deeadcc8b/independent/verify-peer.py",
+        "docs/receiving/world-plan-html-066deeadcc8b/peer-custody-replay.json",
+        "plan_world.py",
+        "tests/test_world_plan_html.py",
+        "world_plan_html.py"
+      ]
+    },
+    {
+      "number": 58,
+      "head": "a529a70f72fe9e6b0c2a4eaffbf0ffe25363ebf1",
+      "files": [
+        ".github/workflows/airspace-demo.yml",
+        "docs/qualification/traffic-undo-31a349052b90/README.md",
+        "docs/qualification/traffic-undo-31a349052b90/native-history.tar.gz",
+        "docs/qualification/traffic-undo-31a349052b90/source-receipt.json",
+        "web/airspace/README.md",
+        "web/airspace/index.html",
+        "web/airspace/src/main.ts",
+        "web/airspace/src/traffic-undo.ts",
+        "web/airspace/tests/traffic-undo.browser.mjs",
+        "web/airspace/tests/traffic-undo.test.ts"
+      ]
+    },
+    {
+      "number": 54,
+      "head": "62e77cc6f0906ba97eec812db4f0e6f60d2a1398",
+      "files": [
+        "README.md",
+        "WORLD_FROM_CSV.md",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/README.md",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/author-native.json",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/corrected-result.json",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/diagnostic-result.json",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/initial-receiver-result.json",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/original-driver.py.txt",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/baseline/receiver-correction.patch",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/independent-review.tar.gz",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/packaging-correction.json",
+        "docs/receiving/traffic-csv-ae0a1ea0b247/source-pins.json",
+        "examples/traffic.csv",
+        "tests/test_world_from_csv.py",
+        "world_from_csv.py"
+      ]
+    },
+    {
+      "number": 40,
+      "head": "60eacf8931a8878293ad067c19ba7adad454c4b7",
+      "files": [
+        "web/airspace/src/world-tools.ts",
+        "web/airspace/tests/world-version.test.ts"
+      ]
+    },
+    {
+      "number": 31,
+      "head": "4abac6c5b9a092cf9a462531374e710b5f2f8ea1",
+      "files": [
+        "ci/retry_once.py"
+      ]
+    },
+    {
+      "number": 29,
+      "head": "47e7b8d37a7bd922ce7d800066848af76f2f2a36",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "number": 26,
+      "head": "b821ae26188de7ba183a093561122995f41d01bc",
+      "files": [
+        ".github/workflows/flaky-guard.yml",
+        "FLAKY.md",
+        "ci/retry_once.py"
+      ]
+    },
+    {
+      "number": 25,
+      "head": "e034f5e0b6ae4268045ab5af7f4d8f15d55096e6",
+      "files": [
+        ".github/workflows/gitleaks.yml"
+      ]
+    },
+    {
+      "number": 24,
+      "head": "29aa85b3dad0c9ca7967ef99bb5d362ae6bc9e73",
+      "files": [
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "number": 23,
+      "head": "69498a2f4125aed1582f8c6f1426172e0e4985ed",
+      "files": [
+        "docs/agent-operations.md"
+      ]
+    }
+  ],
+  "matching_request_settings_issue_search": {
+    "issues": []
+  },
+  "fence": [
+    "web/app.js",
+    "web/index.html",
+    "EXPLORER.md",
+    "tests/test_explorer_request_settings.cjs",
+    "tests/test_explorer_replay_selection.cjs"
+  ],
+  "overlaps": [],
+  "boundary": "Bounded current repository and existing Applications Synthetic Explorer record check, not universal unpublished ownership clearance. Existing same-team replay/field-explanation/install scopes remain preserved. Workflow issue/comment triggers absent."
+}

@@ -1,0 +1,232 @@
+{
+  "author_descriptor": {
+    "bytes": 15282,
+    "git_blob": "3f3c7f07a2d9c115e2d4e7a6835094181e607a77",
+    "mode": "100644",
+    "native_mode": 420,
+    "sha256": "050bb0aa02e1d3a41c32817365805cc7060de2e82b45a27c4d2928d1de67b731",
+    "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-publication-inputs-v1.json"
+  },
+  "candidate_freeze": {
+    "bytes": 2040,
+    "git_blob": "624fa4eee4cc9b85c4c0dd61e8dea49bf2374ffc",
+    "mode": "100644",
+    "native_mode": 420,
+    "sha256": "277f33898ee7aabe3345a034875b370ff75d84d2f5ba9cbe207a8468ba57d602",
+    "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/candidate-freeze-v1.json"
+  },
+  "consumer": "Independent original descriptor preserves native original/candidate browser receiving and exact source-at-execution state. Installed-use adoption is separately owned and qualified.",
+  "history": "The raw author outer receipt is false for a reporter-prefix predicate; all four commands exited zero, all twenty-five named methods passed, and a separate retained-output classification preserves the original failure. Original observer v1 failed only its GET-body diagnostic; v2 corrected it using exact prior CLI outputs. No author product rerun.",
+  "independent_descriptor": {
+    "bytes": 54228,
+    "git_blob": "dd3651394f50e0f29ffe5a71e3b148859582fb49",
+    "mode": "100644",
+    "native_mode": 420,
+    "sha256": "8a5780111c7beb5636cdccdb201e4fbf2d8ba8782ce8caec23c88384aaa00503",
+    "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-settings-receiving/publication-inputs-v1.json"
+  },
+  "parent_leaf_count": 1600,
+  "parent_tree": "90c81370fb3215943a8b64a4264f8e362a05d479",
+  "qualification_scope": "Focused cloud Node production-script author controls and separately frozen native browser/production-HTTP receiving. No installation, real-world authority or full-repository-suite claim.",
+  "repository": "Jacob-Met/TowerOps",
+  "runtime_projection": {
+    "base_commit": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+    "base_tree": "90c81370fb3215943a8b64a4264f8e362a05d479",
+    "changed_paths": [
+      "web/app.js",
+      "web/index.html",
+      "EXPLORER.md",
+      "tests/test_explorer_request_settings.cjs",
+      "tests/test_explorer_replay_selection.cjs"
+    ],
+    "files": [
+      {
+        "bytes": 2312,
+        "git_blob": "24356d4f5ce88f21cc1a27329b06df351e156810",
+        "mode": 420,
+        "path": ".github/workflows/airspace-demo.yml",
+        "sha256": "42a4f4bb235b11600dfbb317300792f450ef4afd8912df88d0105ac268f87c7b",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/.github/workflows/airspace-demo.yml"
+      },
+      {
+        "bytes": 1423,
+        "git_blob": "4791e16741c2ee136585d8f4d99f918535a3a017",
+        "mode": 420,
+        "path": ".github/workflows/ci.yml",
+        "sha256": "21e82aa2e3f57250bf2880ada9d7d0b9c45e05f4cac10cf8b1a0bfb1140bd6b4",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/.github/workflows/ci.yml"
+      },
+      {
+        "bytes": 11220,
+        "git_blob": "3668e8d6f8092114f388154c8861bea513e104f2",
+        "mode": 420,
+        "path": "EXPLORER.md",
+        "sha256": "39b1cc6789e7ed347593140c3488a558fdf5f43e6994a82535cddfc8be9cd694",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/EXPLORER.md"
+      },
+      {
+        "bytes": 1066,
+        "git_blob": "8d091d5ee1cc4b8fc2d2f6e2f360a9f1edf6912a",
+        "mode": 420,
+        "path": "LICENSE",
+        "sha256": "d946a9700b643b060dd422829c2cb41166f9f2ae4ea08fcebaa2afa173df5f36",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/LICENSE"
+      },
+      {
+        "bytes": 7604,
+        "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+        "mode": 493,
+        "path": "explorer.py",
+        "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/explorer.py"
+      },
+      {
+        "bytes": 5432,
+        "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+        "mode": 420,
+        "path": "replay_explain.py",
+        "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/replay_explain.py"
+      },
+      {
+        "bytes": 5989,
+        "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+        "mode": 420,
+        "path": "scenarios.py",
+        "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/scenarios.py"
+      },
+      {
+        "bytes": 7460,
+        "git_blob": "51f7de9067a733d11649684d799417d66c84c36d",
+        "mode": 420,
+        "path": "test_explorer.py",
+        "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/test_explorer.py"
+      },
+      {
+        "bytes": 8796,
+        "git_blob": "eb1e758a44ed3e7d734db4d71c9e21309c6cd811",
+        "mode": 420,
+        "path": "tests/test_explorer_explanation.cjs",
+        "sha256": "43a186375092cd125700f0106f7a1ccd27447e8cc2a770d4638297c31832c436",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/tests/test_explorer_explanation.cjs"
+      },
+      {
+        "bytes": 8217,
+        "git_blob": "45614216829e2917adc53ed15147bda82ea53519",
+        "mode": 420,
+        "path": "tests/test_explorer_replay_selection.cjs",
+        "sha256": "ce292005bb14ea9e90957b8ec228393e29177ca414bc9227a5a7fcdc191b310f",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/tests/test_explorer_replay_selection.cjs"
+      },
+      {
+        "bytes": 13905,
+        "git_blob": "65d7b015f55b0b45e8b09fd448fe2df1cf570715",
+        "mode": 420,
+        "path": "tests/test_explorer_request_settings.cjs",
+        "sha256": "c743056fc313a4522bb3968882273ba37093425d34daad2c13d4a8e3e05953ba",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/tests/test_explorer_request_settings.cjs"
+      },
+      {
+        "bytes": 19684,
+        "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+        "mode": 420,
+        "path": "towerops.py",
+        "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/towerops.py"
+      },
+      {
+        "bytes": 11206,
+        "git_blob": "6216ffffa06353c730d1da35286cf8470f4f13ac",
+        "mode": 420,
+        "path": "web/app.js",
+        "sha256": "c01d9444d27634345127b3cff455b80cd00bfc36d579ed082fc92546bfff196c",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/web/app.js"
+      },
+      {
+        "bytes": 4063,
+        "git_blob": "5eb4feb1dfc073fc11d306adeacf3c4412678978",
+        "mode": 420,
+        "path": "web/index.html",
+        "sha256": "e988e82953be3f9897d1c035d12a5f0128da188b3e777ca24eaae5e98446b45d",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/web/index.html"
+      },
+      {
+        "bytes": 2566,
+        "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+        "mode": 420,
+        "path": "web/style.css",
+        "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+        "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/web/style.css"
+      }
+    ],
+    "root": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate",
+    "schema": "hamon.loom.towerops-settings-candidate.v1",
+    "state": "unpublished isolated candidate",
+    "unchanged_inherited_leaves": 10
+  },
+  "schema": "hamon.loom.towerops-settings-source-binding.v1",
+  "source_files": [
+    {
+      "bytes": 11220,
+      "git_blob": "3668e8d6f8092114f388154c8861bea513e104f2",
+      "mode": 420,
+      "path": "EXPLORER.md",
+      "sha256": "39b1cc6789e7ed347593140c3488a558fdf5f43e6994a82535cddfc8be9cd694",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/EXPLORER.md"
+    },
+    {
+      "bytes": 8217,
+      "git_blob": "45614216829e2917adc53ed15147bda82ea53519",
+      "mode": 420,
+      "path": "tests/test_explorer_replay_selection.cjs",
+      "sha256": "ce292005bb14ea9e90957b8ec228393e29177ca414bc9227a5a7fcdc191b310f",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/tests/test_explorer_replay_selection.cjs"
+    },
+    {
+      "bytes": 13905,
+      "git_blob": "65d7b015f55b0b45e8b09fd448fe2df1cf570715",
+      "mode": 420,
+      "path": "tests/test_explorer_request_settings.cjs",
+      "sha256": "c743056fc313a4522bb3968882273ba37093425d34daad2c13d4a8e3e05953ba",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/tests/test_explorer_request_settings.cjs"
+    },
+    {
+      "bytes": 11206,
+      "git_blob": "6216ffffa06353c730d1da35286cf8470f4f13ac",
+      "mode": 420,
+      "path": "web/app.js",
+      "sha256": "c01d9444d27634345127b3cff455b80cd00bfc36d579ed082fc92546bfff196c",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/web/app.js"
+    },
+    {
+      "bytes": 4063,
+      "git_blob": "5eb4feb1dfc073fc11d306adeacf3c4412678978",
+      "mode": 420,
+      "path": "web/index.html",
+      "sha256": "e988e82953be3f9897d1c035d12a5f0128da188b3e777ca24eaae5e98446b45d",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/web/index.html"
+    }
+  ],
+  "source_parent": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "source_scope": "Exactly five source/test/guide leaves: four existing files plus one new focused test. All 1596 unselected parent leaves remain unchanged. Existing installed runtime/default selector and disjoint root issue139 staging work remain separate.",
+  "workflows": [
+    {
+      "mode": "100644",
+      "path": ".github/workflows/ci.yml",
+      "sha": "4791e16741c2ee136585d8f4d99f918535a3a017",
+      "size": 1423,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/4791e16741c2ee136585d8f4d99f918535a3a017"
+    },
+    {
+      "mode": "100644",
+      "path": ".github/workflows/airspace-demo.yml",
+      "sha": "24356d4f5ce88f21cc1a27329b06df351e156810",
+      "size": 2312,
+      "type": "blob",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/24356d4f5ce88f21cc1a27329b06df351e156810"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "format": "towerops.synthetic-explorer.v1",
+  "disclaimer": "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+  "request": {
+    "scenario": "approved",
+    "include_approval": false,
+    "include_ack": false
+  },
+  "label": "Approval + acknowledgement",
+  "description": "Both exact-hash fixtures arrive before simulated dispatch.",
+  "simulation_clock": {
+    "dispatch_sec": 1002.5,
+    "observed_sec": 1001.0,
+    "projection_horizon_min": 5.0
+  },
+  "policy": {
+    "min_horizontal_nm": 5.0,
+    "min_vertical_ft": 1000.0,
+    "horizon_min": 5.0,
+    "sample_step_min": 0.5,
+    "max_state_age_sec": 10.0,
+    "max_speed_nm_min": 6.0,
+    "max_climb_ft_min": 3000.0
+  },
+  "before": {
+    "version": 1,
+    "observed_at": 1001.0,
+    "aircraft": [
+      {
+        "aircraft_id": "FIXTURE-A",
+        "x_nm": -5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": 1.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0.0
+      },
+      {
+        "aircraft_id": "FIXTURE-B",
+        "x_nm": 5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": -1.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0.0
+      }
+    ]
+  },
+  "after": {
+    "version": 1,
+    "observed_at": 1001.0,
+    "aircraft": [
+      {
+        "aircraft_id": "FIXTURE-A",
+        "x_nm": -5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": 1.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0.0
+      },
+      {
+        "aircraft_id": "FIXTURE-B",
+        "x_nm": 5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": -1.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0.0
+      }
+    ]
+  },
+  "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+  "after_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+  "advisory": {
+    "aircraft_id": "FIXTURE-B",
+    "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+    "set_vx_nm_min": -1.0,
+    "set_vy_nm_min": 2.0,
+    "set_climb_ft_min": 0.0,
+    "issued_at": 1002.0,
+    "expires_at": 1010.0,
+    "rationale": "synthetic projected-separation recovery"
+  },
+  "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+  "fixtures": {
+    "approval": null,
+    "ack": null
+  },
+  "outcome": "rejected",
+  "rejection_reason": "human_approval_required",
+  "before_conflict": true,
+  "after_conflict": true,
+  "audit_events": [
+    {
+      "seq": 0,
+      "kind": "fixture_proposal",
+      "payload": {
+        "scenario": "approved",
+        "source_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "advisory": {
+          "aircraft_id": "FIXTURE-B",
+          "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+          "set_vx_nm_min": -1.0,
+          "set_vy_nm_min": 2.0,
+          "set_climb_ft_min": 0.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic projected-separation recovery"
+        },
+        "simulation_only": true
+      },
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "event_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d"
+    },
+    {
+      "seq": 1,
+      "kind": "screen_pass",
+      "payload": {
+        "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "advisory_hashes": [
+          "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+        ]
+      },
+      "prev_hash": "ef2ec2b25b5c1aad9e9f2768cbc194ce0d9098c7f4c89cc0c76eea0e86294e5d",
+      "event_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12"
+    },
+    {
+      "seq": 2,
+      "kind": "reject",
+      "payload": {
+        "reason": "human_approval_required",
+        "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+      },
+      "prev_hash": "4e1f310ccc84897490f5fc8b48271f57cbd656ebbddfffb5290017d6c3854d12",
+      "event_hash": "efad291a7b4800457e398c3deb6dfc9813fedafce89c605684008642747966a7"
+    }
+  ],
+  "audit_head": "efad291a7b4800457e398c3deb6dfc9813fedafce89c605684008642747966a7",
+  "audit_valid": true
+}

@@ -1,0 +1,77 @@
+{
+  "schema": "anvil.towerops-settings.source-spec.v1",
+  "variant": "candidate",
+  "source_commit": null,
+  "source_tree": null,
+  "base_commit": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "publication_state_at_receiving": "unpublished isolated candidate",
+  "original_offer_sha256": "80710c05cf9dd536b159e35233c55c593e8cb71311645920e09ebe65ca140462",
+  "source_root": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/candidate",
+  "source_files": [
+    {
+      "path": "EXPLORER.md",
+      "bytes": 11220,
+      "sha256": "39b1cc6789e7ed347593140c3488a558fdf5f43e6994a82535cddfc8be9cd694",
+      "git_blob": "3668e8d6f8092114f388154c8861bea513e104f2",
+      "mode": 420
+    },
+    {
+      "path": "explorer.py",
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "mode": 493
+    },
+    {
+      "path": "replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": 420
+    },
+    {
+      "path": "scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": 420
+    },
+    {
+      "path": "towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": 420
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 11206,
+      "sha256": "c01d9444d27634345127b3cff455b80cd00bfc36d579ed082fc92546bfff196c",
+      "git_blob": "6216ffffa06353c730d1da35286cf8470f4f13ac",
+      "mode": 420
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 4063,
+      "sha256": "e988e82953be3f9897d1c035d12a5f0128da188b3e777ca24eaae5e98446b45d",
+      "git_blob": "5eb4feb1dfc073fc11d306adeacf3c4412678978",
+      "mode": 420
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mode": 420
+    }
+  ],
+  "fixture_receipt": {
+    "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-settings/original-fixtures/receipt.json",
+    "sha256": "1d17edb8f04daf6cdb428e199789c7a61dec72a3e27d92667f0090519699f031"
+  },
+  "python": "/usr/bin/python3",
+  "browser_module": "/home/jacob/.local/lib/node_modules/@wonderwhy-er/desktop-commander/node_modules/puppeteer",
+  "browser_executable": "/usr/bin/firefox",
+  "candidate_exposure": true,
+  "exposure_scope": "Exact source bodies first received after original accepted course and root source release; frozen V2 controller unchanged."
+}

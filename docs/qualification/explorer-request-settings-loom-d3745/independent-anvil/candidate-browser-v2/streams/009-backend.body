@@ -1,0 +1,1 @@
+{"matches": false, "audit_valid": true, "outcome": "rejected", "rejection_reason": "world_hash_mismatch", "expected_audit_head": "8ba10d39ac0adfce34809c8d1f87d4b694f7331e38713aa04f42c76fbac37c47", "note": "Local deterministic reproduction only; not a signature, provenance proof, or authority."}

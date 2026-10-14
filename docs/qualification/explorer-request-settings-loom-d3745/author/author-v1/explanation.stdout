@@ -1,0 +1,13 @@
+✔ only an explicit current mismatch click compares the captured parsed value (16.722732ms)
+✔ new file selection immediately retires old explanation success and finally (9.56816ms)
+✔ clearing retires an old explanation failure without restoring controls (5.382817ms)
+✔ a current failure keeps the mismatch and permits an explicit same-selection retry (7.557069ms)
+✔ ordered typed rows retain full envelopes and expose the observed truncation (18.131071ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 73.437991

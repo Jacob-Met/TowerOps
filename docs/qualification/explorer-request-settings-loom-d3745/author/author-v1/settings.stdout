@@ -1,0 +1,18 @@
+✔ initial settings action is unavailable and cannot fetch or change the form (19.986697ms)
+✔ MATCH copies request switches, not effective fixtures, without changing the displayed run or export (18.822807ms)
+✔ MISMATCH copies exact false switches while retaining the complete open explanation (11.624633ms)
+✔ only explicit Run sends copied controls and the same accepted settings remain reusable (4.905286ms)
+✔ new pending, clear, malformed and oversized selections retire copying without undoing prior form values (6.074193ms)
+✔ an old replay JSON body cannot restore settings after clear or supersede a newer accepted selection (13.981339ms)
+✔ late catalog readiness admits only the still-current accepted request (8.282706ms)
+✔ failed catalog, unknown scenarios and non-native request types never expose usable settings (12.863898ms)
+✔ current read and backend failures retire copying and corrected explicit selection recovers (3.921829ms)
+✔ a retired replay transport error cannot hide or replace the newer usable request (3.468129ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 117.011118
