@@ -1,0 +1,16 @@
+{
+  "schema": "anvil.towerops-release.native-stage-admission.v1",
+  "utc": "2026-10-14T01:26:47.857281+00:00",
+  "pid": 532495,
+  "uid": 1000,
+  "user": "jacob",
+  "passwd_home": "/home/jacob",
+  "transport_HOME": "/home/jacob/.commander-tp-2",
+  "PATH": "/home/jacob/.local/bin:/usr/local/bin:/usr/bin:/bin:/snap/bin",
+  "host": "hamon-thinkpad",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "new_selector_absent": true,
+  "new_release_absent": true,
+  "created_only": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native",
+  "installation": false
+}

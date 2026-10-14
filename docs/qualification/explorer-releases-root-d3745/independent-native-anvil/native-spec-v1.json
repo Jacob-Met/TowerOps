@@ -1,0 +1,16 @@
+{
+  "schema": "anvil.towerops-release.native-spec.v1",
+  "tool_commit": "8b99316b2537a383c40e8a92e924ce4f7e597cc1",
+  "tool_tree": "7be0ff2819f51966eb8659c22346e078e0f07efe",
+  "feature_commit": "c68d148b7941e40f16af2230c46391f4ec3dbdc0",
+  "feature_tree": "4f78c1baa82f177e96a1d932b92386273d1c8b16",
+  "native_authorized": true,
+  "root_release": {
+    "path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-release-v1.json",
+    "sha256": "1a704ca5422f746ae542c56ecdbe1c590314c8232bd03f406b5b85ee56e1fe91"
+  },
+  "content_digest": "82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216",
+  "source_root": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/source",
+  "tool_root": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/tool",
+  "publication_binding": "Exact complete connected tool/helper raw bodies and full feature tree/runtime identities independently matched the pre-staged bytes. Prior private staging history is unchanged."
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "hamon.root.towerops-native-release.v1",
+  "authorized": true,
+  "utc": "2026-10-14T01:37:26.721331+00:00",
+  "device_id": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "client_id": "d2b7a455-1f85-4600-be37-f1f64f0990f0",
+  "host": "hamon-thinkpad",
+  "account": "jacob uid1000 passwdhome/home/jacob",
+  "controller_sha256": "f5bfda3b2d5867e8ecd1b0aaf37de35e9188874e179eb4cb6d2e68694cce89ac",
+  "tool_commit": "8b99316b2537a383c40e8a92e924ce4f7e597cc1",
+  "tool_tree": "7be0ff2819f51966eb8659c22346e078e0f07efe",
+  "tool_merge": "8c9e980ccb3469e777316af472a22a3db7c9edc6",
+  "feature_commit": "c68d148b7941e40f16af2230c46391f4ec3dbdc0",
+  "feature_tree": "4f78c1baa82f177e96a1d932b92386273d1c8b16",
+  "feature_merge": "4a4bc5ab3018f1247b2e7448e8e436cca592399d",
+  "content_digest": "82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216",
+  "command": "towerops-explorer-82d3ab784c22",
+  "gates": [
+    "Complete source and originalauthority plans authenticated",
+    "All111feature and64tool remote bodies fullyreceived bypublishingworkers; rootexactcompletecommit/parent/tree/PR/Actionsverified",
+    "Featureactualbrowser78, independenttoolCLI160 andAnvilfullsource reviewaccepted",
+    "Rootfullnativecontrollerand8frozencontrolsverified",
+    "Publishedtool/helper andfeature8 independentlyboundbyAnvil to exactstagedbytes"
+  ],
+  "scope": "Authorize one already-frozen native course: freshdevice/host/input/absentversionadmission, oneinstall, PATHhelp, PATHforegroundport0, threeexactstaticGETs, ownSIGINT0/listenerclosure andoldnamespace/neighbors/sourcecontrolpreservation. Retainnewcommand; no defaultselectorchange, API POST, browserrepeat, schedule or automaticcleanup/retry. Onanyfailure retainhistoryandstate thenreport before another productexecution."
+}
