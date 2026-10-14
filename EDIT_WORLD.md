@@ -100,3 +100,68 @@ Old world-bound plans, approvals, acknowledgements and traces do not describe
 the new world. The retained observation time is not a freshness renewal. Any
 later consumer performs its own explicit review. Existing composition, rotation,
 selection, CSV and browser-edit tools remain separate and unchanged.
+
+## Review the authored alternative with the original planner
+
+The saved edit is a raw WorldState, which the existing offline `plan_world.py`
+command accepts. It is not a Synthetic Explorer replay export or a complete
+Airspace scenario. Keep the original and edited files separate, and review each
+explicitly with Python 3.12+:
+
+```bash
+python -B plan_world.py before.json --now 1234.5
+python -B plan_world.py after.json --now 1234.5
+```
+
+Both commands read one selected file and print a `towerops.world-plan.v1` report.
+They do not edit either world or apply an advisory. Choose the synthetic review
+clock deliberately: this example uses the saved observation time. The report's
+`reviewed_at` and `observed_at` are seconds; the policy's projection horizon and
+aircraft velocity calculations use minutes. Neither command reads a wall clock.
+See [PLAN_WORLD.md](PLAN_WORLD.md) for policy, freshness and proposal semantics.
+If redirecting stdout, choose a distinct new report filename; the shell controls
+redirection and may overwrite its destination before Python starts.
+
+### Worked three-aircraft example
+
+The [received source/example kit and handoff](https://github.com/Jacob-Met/TowerOps/issues/136#issuecomment-6158356595)
+contains the exact original and edited files used here. The original has ordered
+aircraft ZULU7, ALPHA2 and MID9, version 17 and `observed_at=1234.5`. The edit of
+MID9 changes x from -5.5 to -2.25 nautical miles, x velocity from -1 to 3.0 nautical
+miles/minute and climb from 50.0 to -125 feet/minute. It preserves the other values,
+increments the version to 18 and retains the observation time.
+
+Two actual calls of the unchanged planner, each with `--now 1234.5` and the
+original default policy, produced:
+
+| Recorded field | Before | After |
+| --- | --- | --- |
+| CLI exit | 0 | 0 |
+| `status` | `no_conflict` | `options_available` |
+| `conflicting_aircraft` | empty | MID9, ZULU7 |
+| `candidate_count` | 0 | 77 |
+| admitted alternatives in `advisories` | 0 | 50 |
+| world version | 17 | 18 |
+| `reviewed_at` / `observed_at` | 1234.5 / 1234.5 | 1234.5 / 1234.5 |
+
+At 3.75 projected minutes in the edited world, MID9 and ZULU7 have the same
+horizontal position (9,4) and a 531.25-foot vertical gap. Under the recorded
+five-nautical-mile/1000-foot/five-minute policy this is a predicted conflict in
+this fictional model. ALPHA2 is not in the reported conflict set. The edit is
+therefore not described as an improvement merely because its data is valid.
+
+The 77 count is the enumerated candidate menu, not 77 admitted alternatives.
+The 50 returned proposals are individually screened alternatives, not a batch.
+The first is for ZULU7, even though MID9 was edited: the original planner visits
+conflicting aircraft in descending identifier order. Its unchanged priority is
+not an instruction to select that proposal. No approval, acknowledgement,
+actuation or resolution of the world occurred.
+
+The complete reports retain exact input hashes, native world hashes, policy,
+review time and proposal bodies. The planner's embedded `world` uses native
+identifier sorting, whereas the edited raw file retains source-array order.
+Use `input_sha256` to identify the exact file bytes; the two worlds and their
+world-bound reports are distinct. The original receiving reused the already
+saved 392-byte source and 608-byte editor result, preserved their bytes, and ran
+only those two ordinary planner calls. It is a worked synthetic workflow, not
+a new planner validation campaign or an operational aviation recommendation.
