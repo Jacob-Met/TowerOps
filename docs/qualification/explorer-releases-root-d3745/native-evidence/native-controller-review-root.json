@@ -1,0 +1,16 @@
+{
+  "schema": "hamon.root.towerops-native-release-controller-review.v1",
+  "utc": "2026-10-14T01:25:56.831959+00:00",
+  "accepted": true,
+  "driver_sha256": "f5bfda3b2d5867e8ecd1b0aaf37de35e9188874e179eb4cb6d2e68694cce89ac",
+  "controls_exact": 8,
+  "read_scope": "Complete criteria and17,124B controller read; all8 frozencontrolbytes/modes verified. Sourceexposure correctlydisclosed.",
+  "observations": [
+    "RequiresnativeLinuxhamon-thinkpadjacobuid1000/passwdhome andexplicitpublishedcommitpins/rootrelease beforeanyinstallation",
+    "Oneinstall,onePATHhelp,oneforegroundPATHport0 and3exactstaticGETs; no API POST orbrowserrepeat",
+    "Olddefault+c77entire10fileversion+fourneighborselectors/targets read andpreserved; intentionalnewchilddirmetadataexceptionnarrow",
+    "Inputs/toolidentities, exactcanonicalcontentdigest, absoluteversionselector, all10installedfileidentities andoriginalsuccessfulreceipt crosschecked",
+    "Newrelease/source/controlcustody checkedaroundactualhelp/serve; ownSIGINT0, listenerclosed, ownedgroupsabsent; falsehistory retainedonfailure"
+  ],
+  "release_scope": "Controller accepted for staging only. Actual installation awaits immutablepublishedfeature/tool body/tree readback and separate root release file."
+}

@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "bytes": 11220,
+      "mode": 420,
+      "path": "EXPLORER.md",
+      "sha256": "39b1cc6789e7ed347593140c3488a558fdf5f43e6994a82535cddfc8be9cd694"
+    },
+    {
+      "bytes": 7604,
+      "mode": 493,
+      "path": "explorer.py",
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843"
+    },
+    {
+      "bytes": 5432,
+      "mode": 420,
+      "path": "replay_explain.py",
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b"
+    },
+    {
+      "bytes": 5989,
+      "mode": 420,
+      "path": "scenarios.py",
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+    },
+    {
+      "bytes": 19684,
+      "mode": 420,
+      "path": "towerops.py",
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70"
+    },
+    {
+      "bytes": 11206,
+      "mode": 420,
+      "path": "web/app.js",
+      "sha256": "c01d9444d27634345127b3cff455b80cd00bfc36d579ed082fc92546bfff196c"
+    },
+    {
+      "bytes": 4063,
+      "mode": 420,
+      "path": "web/index.html",
+      "sha256": "e988e82953be3f9897d1c035d12a5f0128da188b3e777ca24eaae5e98446b45d"
+    },
+    {
+      "bytes": 2566,
+      "mode": 420,
+      "path": "web/style.css",
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9"
+    }
+  ],
+  "schema": "towerops.explorer-content.v1"
+}

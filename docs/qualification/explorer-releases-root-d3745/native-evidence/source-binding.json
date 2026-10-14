@@ -1,0 +1,120 @@
+{
+  "base": {
+    "commit": "8c9e980ccb3469e777316af472a22a3db7c9edc6",
+    "tree": "b46791df00af8878a9583c4b70f73f1a588d6e69"
+  },
+  "original_descriptor": {
+    "bytes": 16574,
+    "git_blob": "b9b6b52e0b8f21d4d3bbd4e5cd2fe1634b03148a",
+    "path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/publication-inputs-v1.json",
+    "prefix": "docs/qualification/explorer-releases-root-d3745/independent-native-anvil/",
+    "rows": 34,
+    "sha256": "2a9d8327bbdb841f131e18bf7f5d5759cf1640932a7dd536cdb3455f5e48ce3b"
+  },
+  "schema": "forge.towerops-native-evidence-binding.v1",
+  "source_paths": [],
+  "source_scope": "Evidence-only addition; preserve all1843 base leaves and original source87/root19/Forge58 authority. No product execution.",
+  "support_authority": [
+    {
+      "bytes": 16574,
+      "git_blob": "b9b6b52e0b8f21d4d3bbd4e5cd2fe1634b03148a",
+      "mode": "100644",
+      "path": "docs/qualification/explorer-releases-root-d3745/native-evidence/native-descriptor.json",
+      "role": "support",
+      "sha256": "2a9d8327bbdb841f131e18bf7f5d5759cf1640932a7dd536cdb3455f5e48ce3b",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/publication-inputs-v1.json"
+    },
+    {
+      "bytes": 2948,
+      "git_blob": "3df79e8054b0d3300f8794d837444dfc4a148d1d",
+      "mode": "100644",
+      "path": "docs/qualification/explorer-releases-root-d3745/native-evidence/native-receiving-review-forge.json",
+      "role": "support",
+      "sha256": "99278a8851e49f1343ffd6661fe57915ea14762688644d260dcbd6397ac5a2ff",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/reviews/towerops-release-native-review-v1.json"
+    },
+    {
+      "bytes": 9170,
+      "git_blob": "1f242dbc7aee18fb3a280e98269f40751766f59b",
+      "mode": "100644",
+      "path": "docs/qualification/explorer-releases-root-d3745/native-evidence/audit-native-receiving-v1.py",
+      "role": "support",
+      "sha256": "4c4c4923c6bb21a750c0f10674c442ad66db095bdba32f4f2ba147ccbcf82d64",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/reviews/audit-towerops-release-native-v1.py"
+    },
+    {
+      "bytes": 1253,
+      "git_blob": "337e199ec17e2e37f1a007c52ce3514615b259e3",
+      "mode": "100644",
+      "path": "docs/qualification/explorer-releases-root-d3745/native-evidence/native-controller-review-root.json",
+      "role": "support",
+      "sha256": "99c2755285ef6b0ffe90580e1ded5eaf90fccfe2c81231bb97de11c7e45a5cd5",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/native-controller-review-v1.json"
+    },
+    {
+      "bytes": 622,
+      "git_blob": "8537feab8b23480d2d3416c23c8f99ae44758ac8",
+      "mode": "100644",
+      "path": "docs/qualification/explorer-releases-root-d3745/native-evidence/source-adoption-verification-root.json",
+      "role": "support",
+      "sha256": "30b7f084574ebc546190d4464c49a530ffa54ca8edfcfdfa6bf4f9471d95ea6f",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/release-merge-verification-v1.json"
+    },
+    {
+      "bytes": 4220,
+      "git_blob": "d4d471675d753a163d881a4cd5f4ad3a96732c83",
+      "mode": "100644",
+      "path": "docs/qualification/explorer-releases-root-d3745/native-evidence/README.md",
+      "role": "support",
+      "sha256": "4ad246c3e9e9cf131dd0800aa58b1b7bf44d3dc56c52906610235a93d76e7a31",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-release-native-evidence/publication-v1/README.md"
+    },
+    {
+      "bytes": 6817,
+      "git_blob": "b2d2bb6d589042777b8114ecb65384e08a24483c",
+      "mode": "100644",
+      "path": "docs/qualification/explorer-releases-root-d3745/native-evidence/prepare-evidence-v1.py",
+      "role": "support",
+      "sha256": "42b94ae3ab7e660473df8111cabb46ce4be4d97c1f9dffb1ee38f11175b0f785",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-release-native-evidence/publication-v1/prepare-evidence-v1.py"
+    }
+  ],
+  "tool_files": [
+    {
+      "bytes": 4041,
+      "git_blob": "5a31e72360b1ebcd7595c97c8f1dc433659e71b9",
+      "mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/prepare_git_objects.py",
+      "sha256": "fb6596df63889b6b72038e3921b9144b802cc9546f9617705cfd112b57dab676"
+    },
+    {
+      "bytes": 12539,
+      "git_blob": "c39c963f472c74c96320ad4174c886c2315d5cba",
+      "mode": 493,
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/receive_source.py",
+      "sha256": "90af676b35c39f3cb1a3295d94a31a752893265af3a73292e2b2b22fb2750f35"
+    },
+    {
+      "bytes": 10827,
+      "git_blob": "ff680dc0db8600e1e29a16e5516aa74632891e5a",
+      "mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/validate_publication_layout.py",
+      "sha256": "09e931bcdb5d1ec5e55d76c8123a973a75a2d5072c6ffb84b302ddac8f443907"
+    },
+    {
+      "bytes": 4417,
+      "git_blob": "c8609b742a8b5e94a26da17dc94dbf0dc90056d8",
+      "mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/verify_publication_tree.py",
+      "sha256": "39a171bdb2b7efc80675373936e5be08f4e4f372ae554a551d2f70b43ce55898"
+    },
+    {
+      "bytes": 8791,
+      "git_blob": "f6f3585033d393ce9f496336e4626db649f2711f",
+      "mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/tools/verify_tree_union.py",
+      "sha256": "6242be3016714c26b34c1e4640d606a82cfb4df60e56b5a0018c95afc60dacb2"
+    }
+  ],
+  "tools_commit": "ec34e8a2c8166d18565863a9bef2a7e39d2fa857"
+}

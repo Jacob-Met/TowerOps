@@ -1,0 +1,165 @@
+{
+  "schema": "anvil.towerops-release.native-custody-transfer.v1",
+  "utc": "2026-10-14T01:40:15.827311+00:00",
+  "pid": 543874,
+  "all_course_pids_absent": [
+    543088,
+    543089,
+    543105,
+    543106
+  ],
+  "files": [
+    {
+      "path": "stage-admission-v1.json",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/stage-admission-v1.json",
+      "bytes": 585,
+      "sha256": "c7d73514d797d2b45febbc9f9a7f346d1f85f95064fd53fac6ff5b17503ff33e",
+      "git_blob": "0f428b6d92bfdefd51c0def050dbcf2896a8eb71",
+      "mode": 436
+    },
+    {
+      "path": "stage-receipt-v1.json",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/stage-receipt-v1.json",
+      "bytes": 7196,
+      "sha256": "1493e5f8d60ae418d86afbb6bff50f319ef8a1f6a60c47215d30935bbb555aae",
+      "git_blob": "11ab2fc40f9b4d2e5b26ae8bc1eafb5bb747f39e",
+      "mode": 436
+    },
+    {
+      "path": "native-release-v1.json",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-release-v1.json",
+      "bytes": 1790,
+      "sha256": "1a704ca5422f746ae542c56ecdbe1c590314c8232bd03f406b5b85ee56e1fe91",
+      "git_blob": "3ef3efc2b7ee72f2f4f43ee1b5d56d24a16ed7d0",
+      "mode": 436
+    },
+    {
+      "path": "native-spec-v1.json",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-spec-v1.json",
+      "bytes": 1010,
+      "sha256": "c1087fca3e43f1fb9c7a9462d231ecb10e7b68a84dd0fae506f8db3ebe90394e",
+      "git_blob": "346622d9a627a6312f11cada51df405425b6a992",
+      "mode": 436
+    },
+    {
+      "path": "native-v1.stdout",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1.stdout",
+      "bytes": 236,
+      "sha256": "c0cd1e7a01532473814d3f10f293a7139f2f7fd4070936c92820174d930d0d6d",
+      "git_blob": "e2ba6683e9921384fbe0b97e563db247a0977a31",
+      "mode": 436
+    },
+    {
+      "path": "native-v1.stderr",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/help.stderr",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/help.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/help.stdout",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/help.stdout",
+      "bytes": 115,
+      "sha256": "9f4a5c6cf1b8016dd8a1712def8c492faf2c1459154d85554009eeece51750bb",
+      "git_blob": "cd48d9297f94f47141c2aa5ca91124c286e199cd",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/http-app.js.body",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/http-app.js.body",
+      "bytes": 11206,
+      "sha256": "c01d9444d27634345127b3cff455b80cd00bfc36d579ed082fc92546bfff196c",
+      "git_blob": "6216ffffa06353c730d1da35286cf8470f4f13ac",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/http-index.html.body",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/http-index.html.body",
+      "bytes": 4063,
+      "sha256": "e988e82953be3f9897d1c035d12a5f0128da188b3e777ca24eaae5e98446b45d",
+      "git_blob": "5eb4feb1dfc073fc11d306adeacf3c4412678978",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/http-style.css.body",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/http-style.css.body",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/install.stderr",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/install.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/install.stdout",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/install.stdout",
+      "bytes": 417,
+      "sha256": "eeab8ab0b184be767ecd0dc9f09791898bd91aa67ee85c66daaee75f84f5c3f4",
+      "git_blob": "4bc17233a54b8f935f8013c5cdd90c2c2561ad30",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/installation-receipt.json",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/installation-receipt.json",
+      "bytes": 9856,
+      "sha256": "1acaddce4758454046af0c8c18bccff5b76ad9d80b4db2ec9d4f040435ab8cf2",
+      "git_blob": "6a65a084da42a1a89eaf6b6190fb8078feb81224",
+      "mode": 384
+    },
+    {
+      "path": "native-v1/receipt.json",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/receipt.json",
+      "bytes": 87028,
+      "sha256": "e78c3c336505dab5599ea1a29a6bc09f7bf39cce95a75d8e159268175521ad5a",
+      "git_blob": "4a698ba2391699edc4d840c4ddddfbebe19c0f67",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/server.stderr",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/server.stderr",
+      "bytes": 195,
+      "sha256": "adef3ad964c73f81be3d4fa0b06bb27c2a56a4c099cd6d8a87569650bd91bf05",
+      "git_blob": "1c4811924aebd1ffab31c920e13244c88b888177",
+      "mode": 436
+    },
+    {
+      "path": "native-v1/server.stdout",
+      "source_path": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/server.stdout",
+      "bytes": 198,
+      "sha256": "3798a3f70944ed1ae160752e51d77615185828fcac0e29ef5420b3ee4ec4402c",
+      "git_blob": "a5fe384d0d973cb101ca805111e0d9524c60ccb1",
+      "mode": 436
+    },
+    {
+      "path": "installed/towerops-explorer",
+      "source_path": "/home/jacob/.local/share/towerops/explorer/releases/82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216/towerops-explorer",
+      "bytes": 175,
+      "sha256": "e7a30f52ea29e963cf7cb25a4bf598042a7af0c46534a436f0ef06da6173aac7",
+      "git_blob": "364a27be582034929172697d0bdc955007674666",
+      "mode": 493
+    },
+    {
+      "path": "installed/installation.json",
+      "source_path": "/home/jacob/.local/share/towerops/explorer/releases/82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216/installation.json",
+      "bytes": 2006,
+      "sha256": "40580f36e46e6d68e824e37063d22fdb9f56b068f829339a4a5f5bd0b317022a",
+      "git_blob": "4a19d05fb2ecdb65c7e3c8f590b179e9c714119a",
+      "mode": 420
+    }
+  ]
+}

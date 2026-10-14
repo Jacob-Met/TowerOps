@@ -1,0 +1,48 @@
+{
+  "schema": "anvil.towerops-release.native-freeze.v1",
+  "frozen_utc": "2026-10-14T01:24:23.619725+00:00",
+  "source_exposure": "Source and original author review preceded this independently authored native controller. Not candidate-blind; Forge owns that CLI boundary.",
+  "execution": false,
+  "files": {
+    "accepted-original-source-v1.json": {
+      "bytes": 2676,
+      "sha256": "b56956e93f32b41113677e8a03b8422ef55d122c1e1908ef80dd24522002d353",
+      "mode": 420
+    },
+    "criteria-v1.json": {
+      "bytes": 2902,
+      "sha256": "c21b6307889388f2f93151e2cd66eebf4d001b41fd5d7954144bf434958c4eca",
+      "mode": 420
+    },
+    "expected-content-v1.json": {
+      "bytes": 1398,
+      "sha256": "82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216",
+      "mode": 420
+    },
+    "public-contract-v2.md": {
+      "bytes": 7119,
+      "sha256": "9de4c74efe01907bfb02659a168c050fe23f328506f52e3ccab8b28fc734d404",
+      "mode": 420
+    },
+    "public-output-contract-v1.json": {
+      "bytes": 2634,
+      "sha256": "b4b8e9062b9f47034385e659f9412f5b87270b40c117569efbe11474402f12ea",
+      "mode": 420
+    },
+    "receive-native-v1.py": {
+      "bytes": 17124,
+      "sha256": "f5bfda3b2d5867e8ecd1b0aaf37de35e9188874e179eb4cb6d2e68694cce89ac",
+      "mode": 420
+    },
+    "received-source-authority-v1.json": {
+      "bytes": 2980,
+      "sha256": "80710c05cf9dd536b159e35233c55c593e8cb71311645920e09ebe65ca140462",
+      "mode": 420
+    },
+    "reviewed-tool-authority-v1.json": {
+      "bytes": 2134,
+      "sha256": "b00645b2a7481aaaa2e9d36dd231b7f509631c0eec1022808e15dc08ef766874",
+      "mode": 420
+    }
+  }
+}

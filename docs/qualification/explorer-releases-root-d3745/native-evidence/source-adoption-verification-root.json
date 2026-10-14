@@ -1,0 +1,17 @@
+{
+  "schema": "hamon.root.towerops-release-merge-verification.v1",
+  "accepted": true,
+  "utc": "2026-10-14T01:37:26.719820+00:00",
+  "merge": "8c9e980ccb3469e777316af472a22a3db7c9edc6",
+  "parents": [
+    "4a4bc5ab3018f1247b2e7448e8e436cca592399d",
+    "8b99316b2537a383c40e8a92e924ce4f7e597cc1"
+  ],
+  "tree": "b46791df00af8878a9583c4b70f73f1a588d6e69",
+  "complete_leaves": 1843,
+  "all1756current_main_leaves_preserved": true,
+  "main_at_merge": true,
+  "pr142_merged": true,
+  "actions_runs": 0,
+  "scope": "Source adoption only. IndependentCLI160 retains original8b99316 source; nativeinstallationnotyetexecuted."
+}

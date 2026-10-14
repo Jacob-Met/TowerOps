@@ -1,0 +1,164 @@
+{
+  "schema": "anvil.towerops-release.native-staging.v1",
+  "utc": "2026-10-14T01:29:58.224603+00:00",
+  "pid": 534871,
+  "accepted": true,
+  "files": [
+    {
+      "path": "accepted-original-source-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/accepted-original-source-v1.json",
+      "bytes": 2676,
+      "sha256": "b56956e93f32b41113677e8a03b8422ef55d122c1e1908ef80dd24522002d353",
+      "git_blob": "29addc0c30fdd70230013a044ec8b50de9c2466b",
+      "mode": 420
+    },
+    {
+      "path": "criteria-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/criteria-v1.json",
+      "bytes": 2902,
+      "sha256": "c21b6307889388f2f93151e2cd66eebf4d001b41fd5d7954144bf434958c4eca",
+      "git_blob": "67fe2475f512be985fcab4e0762f2691f3350b64",
+      "mode": 420
+    },
+    {
+      "path": "expected-content-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/expected-content-v1.json",
+      "bytes": 1398,
+      "sha256": "82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216",
+      "git_blob": "91f58b69367ed1af8ad8130d9d52dfb7b37cdf2b",
+      "mode": 420
+    },
+    {
+      "path": "public-contract-v2.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/public-contract-v2.md",
+      "bytes": 7119,
+      "sha256": "9de4c74efe01907bfb02659a168c050fe23f328506f52e3ccab8b28fc734d404",
+      "git_blob": "b713dec768d5c8b3961f88357afdecaed3a7f7b1",
+      "mode": 420
+    },
+    {
+      "path": "public-output-contract-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/public-output-contract-v1.json",
+      "bytes": 2634,
+      "sha256": "b4b8e9062b9f47034385e659f9412f5b87270b40c117569efbe11474402f12ea",
+      "git_blob": "0c1fb9d227007191bcb14d0a23b9962649c5adea",
+      "mode": 420
+    },
+    {
+      "path": "receive-native-v1.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/receive-native-v1.py",
+      "bytes": 17124,
+      "sha256": "f5bfda3b2d5867e8ecd1b0aaf37de35e9188874e179eb4cb6d2e68694cce89ac",
+      "git_blob": "84dddcb003f46e0236f265c6567d1fae8da277a3",
+      "mode": 420
+    },
+    {
+      "path": "received-source-authority-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/received-source-authority-v1.json",
+      "bytes": 2980,
+      "sha256": "80710c05cf9dd536b159e35233c55c593e8cb71311645920e09ebe65ca140462",
+      "git_blob": "0b6e3e0a996c56c5da66b54b93582527d1be1389",
+      "mode": 420
+    },
+    {
+      "path": "reviewed-tool-authority-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/reviewed-tool-authority-v1.json",
+      "bytes": 2134,
+      "sha256": "b00645b2a7481aaaa2e9d36dd231b7f509631c0eec1022808e15dc08ef766874",
+      "git_blob": "74ecbaf18ae6c0e6b5871fba8e8da53ba6647ea0",
+      "mode": 420
+    },
+    {
+      "path": "freeze-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/freeze-v1.json",
+      "bytes": 1642,
+      "sha256": "764b5dd603abe96f5611c1efb55b0df92f5ccafb4cb6ff2dabbf08fad85c8159",
+      "git_blob": "9bdd1373e9ff6a57c5d5137b64d083d44cb23f9b",
+      "mode": 420
+    },
+    {
+      "path": "source/EXPLORER.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/EXPLORER.md",
+      "bytes": 11220,
+      "sha256": "39b1cc6789e7ed347593140c3488a558fdf5f43e6994a82535cddfc8be9cd694",
+      "git_blob": "3668e8d6f8092114f388154c8861bea513e104f2",
+      "mode": 420
+    },
+    {
+      "path": "source/explorer.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/explorer.py",
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "mode": 493
+    },
+    {
+      "path": "source/replay_explain.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/replay_explain.py",
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": 420
+    },
+    {
+      "path": "source/scenarios.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/scenarios.py",
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": 420
+    },
+    {
+      "path": "source/towerops.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/towerops.py",
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": 420
+    },
+    {
+      "path": "source/web/app.js",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/web/app.js",
+      "bytes": 11206,
+      "sha256": "c01d9444d27634345127b3cff455b80cd00bfc36d579ed082fc92546bfff196c",
+      "git_blob": "6216ffffa06353c730d1da35286cf8470f4f13ac",
+      "mode": 420
+    },
+    {
+      "path": "source/web/index.html",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/web/index.html",
+      "bytes": 4063,
+      "sha256": "e988e82953be3f9897d1c035d12a5f0128da188b3e777ca24eaae5e98446b45d",
+      "git_blob": "5eb4feb1dfc073fc11d306adeacf3c4412678978",
+      "mode": 420
+    },
+    {
+      "path": "source/web/style.css",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/candidate/web/style.css",
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mode": 420
+    },
+    {
+      "path": "tool/tools/install_explorer.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/install_explorer.py",
+      "bytes": 12558,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "mode": 420
+    },
+    {
+      "path": "tool/tools/stage_explorer.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/stage_explorer.py",
+      "bytes": 9051,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+      "git_blob": "dd673eb056566ea6aae96a437313ceba0503863e",
+      "mode": 420
+    }
+  ],
+  "state": "Private staging of exact reviewed bytes; published pins and separate root release still pending. No installation authorization.",
+  "product_execution": false,
+  "installation": false,
+  "orchestration_history": "One local packet-read orchestration failed at undefined JavaScript require before any native transfer or staging. Corrected transfer only; no product process."
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "hamon.forge.towerops-native-release-review.v1",
+  "observed_utc": "2026-10-14T01:45:14.104958+00:00",
+  "status": "accepted",
+  "scope": "Read-only full controller/receipt, raw streams, mirrored bytes, source bindings and reported installed-state review. No product/native execution or fresh process query.",
+  "receipt": {
+    "path": "/workspace/scratch/d3745ea0f44f/anvil/towerops-release-native/native-mirror/native-v1/receipt.json",
+    "bytes": 87028,
+    "sha256": "e78c3c336505dab5599ea1a29a6bc09f7bf39cce95a75d8e159268175521ad5a",
+    "git_blob": "4a698ba2391699edc4d840c4ddddfbebe19c0f67",
+    "recorded_checks": 69,
+    "all_recorded_flags_true": true,
+    "commands": 3,
+    "http_gets": 3
+  },
+  "source": {
+    "tool_commit": "8b99316b2537a383c40e8a92e924ce4f7e597cc1",
+    "feature_commit": "c68d148b7941e40f16af2230c46391f4ec3dbdc0",
+    "content_digest": "82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216",
+    "eight_source_bindings": "Each captured body rehashed against complete independently fetched c68 tree and installed inventory; three served bodies exact.",
+    "controls": "All eight freeze controls, nineteen staged inputs and two later release/spec inputs bind the unchanged before/after inventory."
+  },
+  "custody": {
+    "native_mirror_files": 19,
+    "native_mirror_payload_bytes": 128642,
+    "raw_child_streams": 6,
+    "installed_files": 10,
+    "preserved_neighbor_selectors_and_targets": 10,
+    "preserved_old_namespace_entries": 14,
+    "allowed_new_namespace_entries": 13,
+    "directory_exception": "Only explorer parent retains stable ownership/inode/mode while receiving expected new child metadata; atime is excluded."
+  },
+  "result": {
+    "command": "towerops-explorer-82d3ab784c22",
+    "release": "/home/jacob/.local/share/towerops/explorer/releases/82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216",
+    "wrapper": {
+      "bytes": 175,
+      "sha256": "e7a30f52ea29e963cf7cb25a4bf598042a7af0c46534a436f0ef06da6173aac7",
+      "git_blob": "364a27be582034929172697d0bdc955007674666"
+    },
+    "help_exit": 0,
+    "server_port": 44251,
+    "server_closure": {
+      "exit": 0,
+      "actions": [
+        "SIGINT"
+      ],
+      "group_absent": true
+    },
+    "recorded_course_pids_absent": [
+      543088,
+      543089,
+      543105,
+      543106
+    ],
+    "absence_observer_pid": 543874,
+    "server_stopped_command_retained": true
+  },
+  "limits": [
+    "All69 flags are read as recorded; substantive byte, JSON, source, namespace and stream predicates were independently recomputed. Live process/listener/initial PATH absence remains attributed to the original receiver and later native transfer observer.",
+    "No browser, API POST, scenario/replay/explain, repeat install or prior feature78/Forge160 rerun.",
+    "Original c77 default and all five neighboring commands remain distinct; this is the additional content-addressed command."
+  ]
+}

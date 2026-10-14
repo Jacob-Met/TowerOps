@@ -1,0 +1,7 @@
+{
+  "digest": "82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216",
+  "ok": true,
+  "receipt": "/home/jacob/hamon/receiving/anvil-d3745-towerops-release-native/native-v1/installation-receipt.json",
+  "release": "/home/jacob/.local/share/towerops/explorer/releases/82d3ab784c221b9fa320edbfc0a6f725a5beb8c293d0681646fedcfb880e0216",
+  "selector": "/home/jacob/.local/bin/towerops-explorer-82d3ab784c22"
+}
