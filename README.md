@@ -31,6 +31,15 @@ experiments for the same exact native world and review clock, showing policy
 changes and complete advisory membership/order without planning again.
 See [COMPARE_PLANS.md](COMPARE_PLANS.md) for exact identities, file limits and JSON output.
 
+## Edit one aircraft in a saved synthetic world
+
+Create an explicit authored alternative with
+`python3 edit_world.py before.json --aircraft ALPHA --x-nm 4.5 --out after.json`.
+The new file preserves other aircraft and the recorded observation time, while
+using the native one-step version increment. It does not plan or apply an advisory.
+See [EDIT_WORLD.md](EDIT_WORLD.md) for all six field options, exact identity and
+representation rules, and new-file output behavior.
+
 ## Launch the installed Synthetic Explorer on the ThinkPad
 
 The [fixed ThinkPad installation](docs/EXPLORER_INSTALL.md) provides
