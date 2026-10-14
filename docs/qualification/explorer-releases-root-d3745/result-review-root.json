@@ -1,0 +1,21 @@
+{
+  "schema": "hamon.root.explorer-release-independent-result-review.v1",
+  "utc": "2026-10-14T01:20:08.265182+00:00",
+  "accepted": true,
+  "original_receipt_sha256": "6cd013c4500f1f88d2d9b349410e0e76576bb3739f5017bcd076a06f1c5cf9ca",
+  "full_predicate_pairs_recomputed": 160,
+  "actual_cli_exits": [
+    0,
+    0,
+    2,
+    0,
+    2,
+    0,
+    2,
+    2
+  ],
+  "complete_raw_streams_authenticated": 16,
+  "groups_absent": true,
+  "controls_source_tools_foreign_namespace_preserved": true,
+  "scope": "Read-only audit of original Forge temporary-prefix eight-command course, two content-identities and coexisting releases; no new execution or native installation."
+}

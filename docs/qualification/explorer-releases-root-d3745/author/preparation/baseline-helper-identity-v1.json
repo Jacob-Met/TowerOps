@@ -1,0 +1,11 @@
+{
+  "repository": "Jacob-Met/TowerOps",
+  "commit": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "tree": "90c81370fb3215943a8b64a4264f8e362a05d479",
+  "path": "tools/install_explorer.py",
+  "bytes": 12558,
+  "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+  "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+  "mode": "100644",
+  "status": "Complete remote blob read and local Git body hash verified; inherited unchanged. New staging utility explicitly imports this sibling's filesystem helpers. Its original installer is never called."
+}

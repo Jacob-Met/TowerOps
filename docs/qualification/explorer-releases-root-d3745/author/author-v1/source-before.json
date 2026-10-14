@@ -1,0 +1,22 @@
+{
+  "docs/EXPLORER_RELEASES.md": {
+    "bytes": 5658,
+    "sha256": "ff885c0d067bfc062148dcdf49d121023c4d356f311dbac6a4915e142dc37acd",
+    "mode": 420
+  },
+  "tests/test_stage_explorer.py": {
+    "bytes": 11311,
+    "sha256": "39d698e1562a5d4c50a30f530dd4d135a5483411dc52918668209a4110c286e7",
+    "mode": 420
+  },
+  "tools/install_explorer.py": {
+    "bytes": 12558,
+    "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+    "mode": 420
+  },
+  "tools/stage_explorer.py": {
+    "bytes": 9051,
+    "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+    "mode": 420
+  }
+}

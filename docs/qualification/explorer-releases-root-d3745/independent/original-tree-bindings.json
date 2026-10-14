@@ -1,0 +1,80 @@
+{
+  "tree": "90c81370fb3215943a8b64a4264f8e362a05d479",
+  "truncated": false,
+  "observed_utc": "2026-10-14T01:07:57.889Z",
+  "origin_url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/trees/90c81370fb3215943a8b64a4264f8e362a05d479?recursive=1",
+  "rows": [
+    {
+      "path": "EXPLORER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66",
+      "size": 9288,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66"
+    },
+    {
+      "path": "explorer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "875707f6480a54c2e450a4344c35090e7518b284",
+      "size": 7604,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/875707f6480a54c2e450a4344c35090e7518b284"
+    },
+    {
+      "path": "replay_explain.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "size": 5432,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/dfd397c81ee14b59a7ae4153db203175e03a6ce6"
+    },
+    {
+      "path": "scenarios.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "size": 5989,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/33b5703d2ce0d4177c50f05536e3f2715c8bea3b"
+    },
+    {
+      "path": "tools/install_explorer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "size": 12558,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/a732823616549e398dbd2ff5ad75d17b08442091"
+    },
+    {
+      "path": "towerops.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "size": 19684,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/0b03cee708cdff5cbacd148633def31f4e9414c5"
+    },
+    {
+      "path": "web/app.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "size": 9430,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0"
+    },
+    {
+      "path": "web/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "size": 3934,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/3ed669246d6af590acd69bbea09ac5207b0c1471"
+    },
+    {
+      "path": "web/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "size": 2566,
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/blobs/7525749bee8a8335b6014844c5afc72d7611e791"
+    }
+  ]
+}

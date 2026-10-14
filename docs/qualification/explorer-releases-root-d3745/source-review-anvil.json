@@ -1,0 +1,56 @@
+{
+  "schema": "anvil.towerops-releases.source-review.v1",
+  "utc": "2026-10-14T01:20:47.709401+00:00",
+  "accepted": true,
+  "source_manifest": {
+    "bytes": 2134,
+    "sha256": "b00645b2a7481aaaa2e9d36dd231b7f509631c0eec1022808e15dc08ef766874"
+  },
+  "source_files": [
+    {
+      "path": "docs/EXPLORER_RELEASES.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/docs/EXPLORER_RELEASES.md",
+      "bytes": 5658,
+      "sha256": "ff885c0d067bfc062148dcdf49d121023c4d356f311dbac6a4915e142dc37acd",
+      "git_blob": "7ee8fbf4ddbc4df6519cc9f0326e2118523eb300",
+      "mode": 420
+    },
+    {
+      "path": "tests/test_stage_explorer.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tests/test_stage_explorer.py",
+      "bytes": 11669,
+      "sha256": "c35086d55ada5e362e0238c725ccc16e5684b90ef92bb1b9407151fe2a2b292e",
+      "git_blob": "b51850cf784fd32e2b0955257be1d1d0f9eda8c2",
+      "mode": 420
+    },
+    {
+      "path": "tools/install_explorer.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/install_explorer.py",
+      "bytes": 12558,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "mode": 420
+    },
+    {
+      "path": "tools/stage_explorer.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/stage_explorer.py",
+      "bytes": 9051,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+      "git_blob": "dd673eb056566ea6aae96a437313ceba0503863e",
+      "mode": 420
+    }
+  ],
+  "scope": "Full read of new staging utility, complete maintained helper, focused tests, practical guide, public V2/output contracts and both original author receipts/raw streams. Read-only review and identity recomputation; no source import, tests, CLI, installation, server or browser executed. Forge independent CLI receiver remained candidate-blind; implementation observations sent only root.",
+  "findings": [
+    "No source change requested. Exactly eight selected source bodies are captured with per-file and aggregate bounds plus stable owned regular-file identity; installed canonical modes and deterministic content manifest match the public contract.",
+    "Prefix/source/receipt admission and all collisions precede receipt creation. Missing namespace directories, release, files and selector use exclusive creation. Original default selector and older release bodies have no write path. Short-alias collisions refuse rather than overwrite.",
+    "File and parent directory synchronization, full release byte/mode readback and source rechecks precede selector publication; absolute selector is exclusive and final. Full recheck follows it. This is not a same-account adversarial directory guarantee, as explicitly documented.",
+    "Captured bytes feed writes; changes in selected inputs stop admission or selector completion. Partial state is retained. Late selector fsync/readback/receipt failure can leave a usable selector with false/error outcome; console failure can retain a successful receipt and reports selector_may_exist. No rollback or retry.",
+    "Quoted wrapper calls /usr/bin/python3 -B exact release explorer.py serve with literal argument forwarding; no source runtime execution during inspect/install, no network, PATH edit, service or default selector change.",
+    "Author V1 is preserved accepted:false, 10 methods passed and one coexistence assertion failed because readlink changed access time. Exact V2 patch excludes atime while retaining bytes and modification/custody fields; only that one method passed on rerun. Production/helper/guide bodies are unchanged across both receipts."
+  ],
+  "limits": [
+    "Independent Forge CLI receiving and actual versioned native adoption remain separate and pending; this review does not satisfy those execution gates.",
+    "No optimized-author-course claim; no new runtime result inferred from source review."
+  ]
+}

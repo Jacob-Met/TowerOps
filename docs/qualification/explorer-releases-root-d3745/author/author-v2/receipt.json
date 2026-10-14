@@ -1,0 +1,67 @@
+{
+  "schema": "hamon.root.explorer-release-author.v2",
+  "utc": "2026-10-14T01:12:14.163139+00:00",
+  "reason": "V1 full11 course had10pass/1false: test compared read-access time of a symlink after its own readlink. Compare full bytes plus dev/inode/mode/uid/gid/nlink/size/mtime_ns/ctime_ns, excluding read-access time only. Production code unchanged. Original failed receipt and test retained.",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "root-towerops-releases/source/tests/test_stage_explorer.py",
+    "Releases.test_two_releases_and_quote_safe_real_launcher_preserve_default"
+  ],
+  "exit": 0,
+  "rerun_scope": "Only original failing coexistence/quote-safe actual launcher method; ten previously passing methods not rerun.",
+  "source_before": {
+    "docs/EXPLORER_RELEASES.md": {
+      "bytes": 5658,
+      "sha256": "ff885c0d067bfc062148dcdf49d121023c4d356f311dbac6a4915e142dc37acd",
+      "mode": 420
+    },
+    "tests/test_stage_explorer.py": {
+      "bytes": 11669,
+      "sha256": "c35086d55ada5e362e0238c725ccc16e5684b90ef92bb1b9407151fe2a2b292e",
+      "mode": 420
+    },
+    "tools/install_explorer.py": {
+      "bytes": 12558,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+      "mode": 420
+    },
+    "tools/stage_explorer.py": {
+      "bytes": 9051,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+      "mode": 420
+    }
+  },
+  "source_after": {
+    "docs/EXPLORER_RELEASES.md": {
+      "bytes": 5658,
+      "sha256": "ff885c0d067bfc062148dcdf49d121023c4d356f311dbac6a4915e142dc37acd",
+      "mode": 420
+    },
+    "tests/test_stage_explorer.py": {
+      "bytes": 11669,
+      "sha256": "c35086d55ada5e362e0238c725ccc16e5684b90ef92bb1b9407151fe2a2b292e",
+      "mode": 420
+    },
+    "tools/install_explorer.py": {
+      "bytes": 12558,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+      "mode": 420
+    },
+    "tools/stage_explorer.py": {
+      "bytes": 9051,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+      "mode": 420
+    }
+  },
+  "source_unchanged": true,
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "bytes": 252,
+    "sha256": "c7c92762b848ac458c48530e86aaeefac29ace3bfd7c046cfdfe4c35b6158523"
+  },
+  "accepted": true
+}

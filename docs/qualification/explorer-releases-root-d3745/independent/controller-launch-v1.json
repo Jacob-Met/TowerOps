@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/receive-releases-v1.py",
+    "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/candidate-spec-v1.json"
+  ],
+  "exit_code": 0,
+  "finished": "2026-10-14T01:17:35.744513+00:00",
+  "pid": 3,
+  "schema": "forge.towerops-release-launch.v1",
+  "started": "2026-10-14T01:17:31.865180+00:00",
+  "wrapper_pid": 2
+}

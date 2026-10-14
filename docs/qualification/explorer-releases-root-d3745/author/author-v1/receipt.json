@@ -1,0 +1,65 @@
+{
+  "schema": "hamon.root.explorer-release-author.v1",
+  "utc": "2026-10-14T01:11:43.043077+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "source/tests/test_stage_explorer.py"
+  ],
+  "exit": 1,
+  "source_before": {
+    "docs/EXPLORER_RELEASES.md": {
+      "bytes": 5658,
+      "sha256": "ff885c0d067bfc062148dcdf49d121023c4d356f311dbac6a4915e142dc37acd",
+      "mode": 420
+    },
+    "tests/test_stage_explorer.py": {
+      "bytes": 11311,
+      "sha256": "39d698e1562a5d4c50a30f530dd4d135a5483411dc52918668209a4110c286e7",
+      "mode": 420
+    },
+    "tools/install_explorer.py": {
+      "bytes": 12558,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+      "mode": 420
+    },
+    "tools/stage_explorer.py": {
+      "bytes": 9051,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+      "mode": 420
+    }
+  },
+  "source_after": {
+    "docs/EXPLORER_RELEASES.md": {
+      "bytes": 5658,
+      "sha256": "ff885c0d067bfc062148dcdf49d121023c4d356f311dbac6a4915e142dc37acd",
+      "mode": 420
+    },
+    "tests/test_stage_explorer.py": {
+      "bytes": 11311,
+      "sha256": "39d698e1562a5d4c50a30f530dd4d135a5483411dc52918668209a4110c286e7",
+      "mode": 420
+    },
+    "tools/install_explorer.py": {
+      "bytes": 12558,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+      "mode": 420
+    },
+    "tools/stage_explorer.py": {
+      "bytes": 9051,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+      "mode": 420
+    }
+  },
+  "source_unchanged": true,
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "bytes": 2890,
+    "sha256": "e0ead1dc66ea6411ff8f86916e8036d4dac5decf496e0c2c7d8e27535761fa6a"
+  },
+  "accepted": false
+}

@@ -1,0 +1,57 @@
+{
+  "digest": "70b8e14ce9789864f1f5e97d817659d93b18eec941c0abb344b5348898dad6dd",
+  "manifest": {
+    "files": [
+      {
+        "bytes": 9288,
+        "mode": 420,
+        "path": "EXPLORER.md",
+        "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3"
+      },
+      {
+        "bytes": 7604,
+        "mode": 493,
+        "path": "explorer.py",
+        "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843"
+      },
+      {
+        "bytes": 5432,
+        "mode": 420,
+        "path": "replay_explain.py",
+        "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b"
+      },
+      {
+        "bytes": 5989,
+        "mode": 420,
+        "path": "scenarios.py",
+        "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52"
+      },
+      {
+        "bytes": 19684,
+        "mode": 420,
+        "path": "towerops.py",
+        "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70"
+      },
+      {
+        "bytes": 9430,
+        "mode": 420,
+        "path": "web/app.js",
+        "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739"
+      },
+      {
+        "bytes": 3934,
+        "mode": 420,
+        "path": "web/index.html",
+        "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1"
+      },
+      {
+        "bytes": 2566,
+        "mode": 420,
+        "path": "web/style.css",
+        "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9"
+      }
+    ],
+    "schema": "towerops.explorer-content.v1"
+  },
+  "ok": true
+}

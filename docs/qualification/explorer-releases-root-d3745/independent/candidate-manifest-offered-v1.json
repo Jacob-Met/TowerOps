@@ -1,0 +1,49 @@
+{
+  "schema": "hamon.root.explorer-releases-candidate.v1",
+  "utc": "2026-10-14T01:12:55.882560+00:00",
+  "repository": "Jacob-Met/TowerOps",
+  "baseline": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "tree": "90c81370fb3215943a8b64a4264f8e362a05d479",
+  "new_source_paths": [
+    "tools/stage_explorer.py",
+    "tests/test_stage_explorer.py",
+    "docs/EXPLORER_RELEASES.md"
+  ],
+  "unchanged_helper": "tools/install_explorer.py",
+  "files": [
+    {
+      "path": "docs/EXPLORER_RELEASES.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/docs/EXPLORER_RELEASES.md",
+      "bytes": 5658,
+      "sha256": "ff885c0d067bfc062148dcdf49d121023c4d356f311dbac6a4915e142dc37acd",
+      "git_blob": "7ee8fbf4ddbc4df6519cc9f0326e2118523eb300",
+      "mode": 420
+    },
+    {
+      "path": "tests/test_stage_explorer.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tests/test_stage_explorer.py",
+      "bytes": 11669,
+      "sha256": "c35086d55ada5e362e0238c725ccc16e5684b90ef92bb1b9407151fe2a2b292e",
+      "git_blob": "b51850cf784fd32e2b0955257be1d1d0f9eda8c2",
+      "mode": 420
+    },
+    {
+      "path": "tools/install_explorer.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/install_explorer.py",
+      "bytes": 12558,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "mode": 420
+    },
+    {
+      "path": "tools/stage_explorer.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/stage_explorer.py",
+      "bytes": 9051,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+      "git_blob": "dd673eb056566ea6aae96a437313ceba0503863e",
+      "mode": 420
+    }
+  ],
+  "author_scope": "V1tenpass/onefalse retained; test-only atime correction; isolatedoriginalfailingmethod passedV2. No productioncodechange or entirecoursererun.",
+  "independent_scope": "Forge candidate-blind CLI receiving notyetoffered; no nativeinstallationyet."
+}

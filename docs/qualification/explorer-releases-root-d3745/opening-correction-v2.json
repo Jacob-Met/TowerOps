@@ -1,0 +1,19 @@
+{
+  "change": "One relative guide link ascends two directories to docs/ rather than three to repository root.",
+  "new": {
+    "bytes": 2932,
+    "git_blob": "ada4365f1a07a0747336c11a55c2fa7581040d3f",
+    "sha256": "2ab702c4dff27819687af41af806afaf2f5c652f4f7b11db956db108c30d7617"
+  },
+  "new_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/README-corrected-v2.md",
+  "no_product_execution": true,
+  "old": {
+    "bytes": 2935,
+    "git_blob": "4042014fecffed08bae0f77bd72751b6f9b03bc7",
+    "sha256": "eb1bf7ae9aa335493627a07e45b2ee27c17e17619d29edca4407d37e3baad175"
+  },
+  "old_path": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/publication-v1/README.md",
+  "preservation": "Original README,85-entry packet/plan/policy/receipt remain untouched. Product3, originalroot19 and originalForge58 remain byte-exact.",
+  "schema": "forge.towerops-release-opening-correction.v2",
+  "timing": "After initial local selected-layout preflight; before any Git object/tree/ref mutation."
+}

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "install_explorer.py": {
+      "bytes": 12558,
+      "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+      "mode": 420,
+      "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7"
+    },
+    "stage_explorer.py": {
+      "bytes": 9051,
+      "git_blob": "dd673eb056566ea6aae96a437313ceba0503863e",
+      "mode": 420,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3"
+    }
+  },
+  "publication_state": "unpublished isolated root candidate",
+  "schema": "forge.towerops-release-offer.v1",
+  "source_baseline": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "tools_dir": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/offered-tools-v1"
+}

@@ -1,0 +1,85 @@
+{
+  "digests": {
+    "a": "70b8e14ce9789864f1f5e97d817659d93b18eec941c0abb344b5348898dad6dd",
+    "b": "a7a9f69c6a8a45fc5abcdfb71ca297effcbd55b4ef2611fc294d282edc85963b"
+  },
+  "helper_original": {
+    "bytes": 12558,
+    "git_blob": "a732823616549e398dbd2ff5ad75d17b08442091",
+    "mode": 420,
+    "sha256": "2177f9c8c77c54056cd6f1e0b0ff4cddd1302a694020a035bd8e6ae39d6996a7",
+    "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/install_explorer.py"
+  },
+  "interpreter": "/usr/bin/python3",
+  "original_before_after": true,
+  "originals": {
+    "EXPLORER.md": {
+      "bytes": 9288,
+      "git_blob": "3b9cd8b36c3c517bc3f10e6010e0184e7c8a7e66",
+      "mode": 420,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original/EXPLORER.md"
+    },
+    "explorer.py": {
+      "bytes": 7604,
+      "git_blob": "875707f6480a54c2e450a4344c35090e7518b284",
+      "mode": 493,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original/explorer.py"
+    },
+    "replay_explain.py": {
+      "bytes": 5432,
+      "git_blob": "dfd397c81ee14b59a7ae4153db203175e03a6ce6",
+      "mode": 420,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original/replay_explain.py"
+    },
+    "scenarios.py": {
+      "bytes": 5989,
+      "git_blob": "33b5703d2ce0d4177c50f05536e3f2715c8bea3b",
+      "mode": 420,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original/scenarios.py"
+    },
+    "towerops.py": {
+      "bytes": 19684,
+      "git_blob": "0b03cee708cdff5cbacd148633def31f4e9414c5",
+      "mode": 420,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original/towerops.py"
+    },
+    "web/app.js": {
+      "bytes": 9430,
+      "git_blob": "ca183c7bff0bc42a3b9a8f7494fd2cca1816bec0",
+      "mode": 420,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original/web/app.js"
+    },
+    "web/index.html": {
+      "bytes": 3934,
+      "git_blob": "3ed669246d6af590acd69bbea09ac5207b0c1471",
+      "mode": 420,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original/web/index.html"
+    },
+    "web/style.css": {
+      "bytes": 2566,
+      "git_blob": "7525749bee8a8335b6014844c5afc72d7611e791",
+      "mode": 420,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original/web/style.css"
+    }
+  },
+  "prefixes": {
+    "dangling": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/dangling-prefix",
+    "main": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/prefix with apostrophe's space",
+    "occupied": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/occupied-prefix"
+  },
+  "python_version": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "schema": "forge.towerops-release-fixtures.v1",
+  "sources": {
+    "a": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-a",
+    "b": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/source-b"
+  },
+  "uid": 0
+}

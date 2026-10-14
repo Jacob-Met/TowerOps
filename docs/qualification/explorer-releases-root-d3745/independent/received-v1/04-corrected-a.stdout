@@ -1,0 +1,7 @@
+{
+  "digest": "70b8e14ce9789864f1f5e97d817659d93b18eec941c0abb344b5348898dad6dd",
+  "ok": true,
+  "receipt": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/received-v1/04-corrected-a-installation.json",
+  "release": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/prefix with apostrophe's space/share/towerops/explorer/releases/70b8e14ce9789864f1f5e97d817659d93b18eec941c0abb344b5348898dad6dd",
+  "selector": "/workspace/scratch/d3745ea0f44f/forge/towerops-releases-receiving/fixtures/prefix with apostrophe's space/bin/towerops-explorer-70b8e14ce978"
+}

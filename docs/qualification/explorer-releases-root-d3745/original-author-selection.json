@@ -1,0 +1,180 @@
+{
+  "schema": "hamon.root.explorer-release-original-selection.v1",
+  "utc": "2026-10-14T01:15:57.466412+00:00",
+  "repository": "Jacob-Met/TowerOps",
+  "baseline": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "prefix": "docs/qualification/explorer-releases-root-d3745/",
+  "rows": [
+    {
+      "kind": "production",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tools/stage_explorer.py",
+      "destination": "tools/stage_explorer.py",
+      "bytes": 9051,
+      "sha256": "2e42d40253991526f737020b0c64fd1be363bf6d0f0ea6e6f698656e1b5735e3",
+      "git_blob": "dd673eb056566ea6aae96a437313ceba0503863e",
+      "mode": "100644"
+    },
+    {
+      "kind": "production",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/tests/test_stage_explorer.py",
+      "destination": "tests/test_stage_explorer.py",
+      "bytes": 11669,
+      "sha256": "c35086d55ada5e362e0238c725ccc16e5684b90ef92bb1b9407151fe2a2b292e",
+      "git_blob": "b51850cf784fd32e2b0955257be1d1d0f9eda8c2",
+      "mode": "100644"
+    },
+    {
+      "kind": "production",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/source/docs/EXPLORER_RELEASES.md",
+      "destination": "docs/EXPLORER_RELEASES.md",
+      "bytes": 5658,
+      "sha256": "ff885c0d067bfc062148dcdf49d121023c4d356f311dbac6a4915e142dc37acd",
+      "git_blob": "7ee8fbf4ddbc4df6519cc9f0326e2118523eb300",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/preparation/public-contract-v1.md",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/preparation/public-contract-v1.md",
+      "bytes": 7121,
+      "sha256": "02144698003460ac50e9ffc75ce832f6f4dbe4196460176263cd70599d07b847",
+      "git_blob": "c34962c2fb3ac4aae8faf77d2673672fea2265bf",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/preparation/public-contract-v2.md",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/preparation/public-contract-v2.md",
+      "bytes": 7119,
+      "sha256": "9de4c74efe01907bfb02659a168c050fe23f328506f52e3ccab8b28fc734d404",
+      "git_blob": "b713dec768d5c8b3961f88357afdecaed3a7f7b1",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/preparation/contract-correction-v2.json",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/preparation/contract-correction-v2.json",
+      "bytes": 512,
+      "sha256": "ea9e66bd11caf0a05d7a18c83da0e28a86659009309771e3e1b329d56ff3ccfb",
+      "git_blob": "351e957acdc743eb6fa6d0fef2bcfcf31c9f07d0",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/preparation/public-output-contract-v1.json",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/preparation/public-output-contract-v1.json",
+      "bytes": 2634,
+      "sha256": "b4b8e9062b9f47034385e659f9412f5b87270b40c117569efbe11474402f12ea",
+      "git_blob": "0c1fb9d227007191bcb14d0a23b9962649c5adea",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/preparation/candidate-manifest-v1.json",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/preparation/candidate-manifest-v1.json",
+      "bytes": 2134,
+      "sha256": "b00645b2a7481aaaa2e9d36dd231b7f509631c0eec1022808e15dc08ef766874",
+      "git_blob": "74ecbaf18ae6c0e6b5871fba8e8da53ba6647ea0",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/preparation/baseline-helper-identity-v1.json",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/preparation/baseline-helper-identity-v1.json",
+      "bytes": 576,
+      "sha256": "26f56e17888eb2e2eab1c155c8ad8ddb01d03874c92c382077d85c318bf7b5dc",
+      "git_blob": "71f84ccc74f7be4e32f43674d654f1eb9609376f",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-evidence.md",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-evidence.md",
+      "bytes": 2192,
+      "sha256": "0d90143500d77fdde2dd928d75b53bc91206473d044472ef432f7a9d4885171c",
+      "git_blob": "e9120487457639f4819abaac6957dcafd08c2148",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-v1/source-before.json",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-v1/source-before.json",
+      "bytes": 626,
+      "sha256": "ea994265ccd717eeb6906bf11635e89f4d54f5ba470a2c9c360ab64ed7261793",
+      "git_blob": "bb51b02a5b75c5420250fbd9e97c5a0094a571fe",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-v1/receipt.json",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-v1/receipt.json",
+      "bytes": 1995,
+      "sha256": "08247e5502957ddfaa97cbdfa4ac60040e79ee525b2042dfb49c5851d8d4acb0",
+      "git_blob": "315ccae8a6a0e0a7085287ea7ba53452c292c4b2",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-v1/tests.stdout",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-v1/tests.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-v1/tests.stderr",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-v1/tests.stderr",
+      "bytes": 2890,
+      "sha256": "e0ead1dc66ea6411ff8f86916e8036d4dac5decf496e0c2c7d8e27535761fa6a",
+      "git_blob": "6806d41c0eeba3165f1bfd431747ab0a84e4020b",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-v1/test_stage_explorer.py",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-v1/test_stage_explorer.py",
+      "bytes": 11311,
+      "sha256": "39d698e1562a5d4c50a30f530dd4d135a5483411dc52918668209a4110c286e7",
+      "git_blob": "0d8af1c94340831bfb2351fdc1d50a7ad9f74070",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-v2/receipt.json",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-v2/receipt.json",
+      "bytes": 2456,
+      "sha256": "4df659754c022a6833bff4dd36fa4080db5a3d4649539acdfeecb17744dad02e",
+      "git_blob": "c388ad0e51784749c337b9289d107266441697da",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-v2/tests.stdout",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-v2/tests.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-v2/tests.stderr",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-v2/tests.stderr",
+      "bytes": 252,
+      "sha256": "c7c92762b848ac458c48530e86aaeefac29ace3bfd7c046cfdfe4c35b6158523",
+      "git_blob": "742b1ed4189da6cce927a1d1e2de438fae0bab8a",
+      "mode": "100644"
+    },
+    {
+      "kind": "author",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-towerops-releases/author-v2/test-correction.patch",
+      "destination": "docs/qualification/explorer-releases-root-d3745/author/author-v2/test-correction.patch",
+      "bytes": 2297,
+      "sha256": "cf72b5c3e88740386e80028a1def3f2acb71c2e8fc2bd5abda9aeac210056418",
+      "git_blob": "060b249c359bd8576773f26a9cad9588e2af48a7",
+      "mode": "100644"
+    }
+  ]
+}
