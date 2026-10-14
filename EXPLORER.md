@@ -162,3 +162,38 @@ node tests/test_explorer_explanation.cjs
 The existing replay-selection control excludes only these newly added replay
 widgets from its unrelated-display snapshot. Its original selected-file,
 stale-response, refusal and recovery assertions remain intact.
+
+## Reuse a saved request as the next form input
+
+After a current saved export finishes replaying, choose **Use request settings**
+to copy its synthetic case and two simulated-fixture switches into the existing
+controls. Both MATCH and MISMATCH can supply an admitted request. The description
+updates, but the displayed run, projected time, JSON export, replay verdict and
+any field explanation remain unchanged. The copy sends no request and does not
+run the engine. Change any controls you want, then explicitly choose **Run
+synthetic case** to produce a new result.
+
+The switches come from the saved `request`, not from whether its effective
+approval/acknowledgement fixture is present. For example, Missing acknowledgement
+can have `include_ack: true` while its effective acknowledgement is absent. These
+are simulated research inputs, never real approval or operational authority.
+A mismatching export is not thereby authenticated or accepted as genuine output.
+
+The action requires a known scenario in the loaded catalog and two actual
+boolean switches. It stays unavailable while the catalog or current replay is
+pending, or after rejection. Selecting another file or clearing the chooser
+immediately retires old copy actions and their local status; an old completion
+cannot re-enable them. Already copied ordinary form values are not undone.
+Pressing Run does not retire the current accepted request, so an explicit later
+copy can restore its settings after manual edits. Nothing is automatically saved,
+imported into an arbitrary world, downloaded, or installed.
+
+Focused controlled form/lifecycle tests (Node.js 20+, built-in modules only):
+
+```sh
+node tests/test_explorer_request_settings.cjs
+```
+
+These controls are separate from actual browser/HTTP receiving. The existing
+selection test excludes only the two added replay widgets from its unrelated
+snapshot; all original selection assertions and cases remain intact.

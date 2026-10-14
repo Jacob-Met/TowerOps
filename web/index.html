@@ -3,6 +3,8 @@
 <body><header><p class="eyebrow">TOWEROPS / LOCAL RESEARCH SIMULATION</p><h1>See the proposal. Follow the gates.</h1><p>Two fictional trajectories, one deterministic engine. Explore what happens when fixture approval, acknowledgement, timing or binding fails.</p></header>
 <main><aside class="warning"><strong>No real-world authority.</strong> Synthetic research simulation only. No live feeds, model calls, real clearances or aviation safety assurance. Every identity and approval here is a fixture.</aside>
 <section class="controls"><label for="scenario">Synthetic case</label><select id="scenario"></select><p id="description"></p><div class="switches"><label><input id="approval" type="checkbox" checked> Supply simulated approval fixture</label><label><input id="ack" type="checkbox" checked> Supply simulated acknowledgement fixture</label></div><p class="hint">A selected missing-fixture case still withholds that fixture. Switches may withhold additional fixtures; they cannot bypass the engine.</p><button id="run">Run synthetic case</button><button id="export" disabled>Export this result (JSON)</button><label class="file-label">Replay exported JSON <input id="replay-file" type="file" accept="application/json,.json"></label><p id="replay-status" role="status"></p>
+<button id="replay-use-settings" hidden disabled>Use request settings</button>
+<p id="replay-settings-status" role="status"></p>
 <button id="replay-explain" hidden disabled>Explain this mismatch</button>
 <p id="replay-explain-status" role="status"></p>
 <details id="replay-differences" hidden>

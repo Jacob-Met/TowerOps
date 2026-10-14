@@ -1,0 +1,20 @@
+{
+  "schema": "hamon.root.towerops-settings-source-review.v1",
+  "accepted_for_independent_browser": true,
+  "utc": "2026-10-14T01:07:25.754384+00:00",
+  "candidate_manifest_sha256": "d8854e0f5a39330cde0d57099569af6b20097d48785a17128c4f959a9e1e1551",
+  "reviewed": [
+    "Complete production app and all5diffs",
+    "Complete new10case test controller",
+    "Public contract and typedknownrequest semantics",
+    "Currentselection identity after file/responsebody awaits",
+    "MATCH and MISMATCH availability only afterbooleanverdict",
+    "Catalogreadiness gate and cataloglatecurrentselection",
+    "Copychangesonlyformdescriptionandlocalstatus; nofetch/rerender/export/currentmutation",
+    "Existing selectiontest exacttwoIDaddition; allprior assertions preserved",
+    "Complete raw Node10+10+5 pass outputs; authorfalse due reporterdetection retained",
+    "Complete15leaf bytes/modes and exact5pathfence"
+  ],
+  "product_execution": false,
+  "pending": "Anvil sole frozen actual candidate browser receiving; no browser acceptance yet"
+}

@@ -1,0 +1,221 @@
+{
+  "schema": "hamon.loom.towerops-settings.original-course.v1",
+  "finished_utc": "2026-10-14T00:53:58.935275+00:00",
+  "candidate_implemented": false,
+  "accepted": false,
+  "error": "original-ui exited 1",
+  "source_commit": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+  "commands": [
+    {
+      "label": "original-export",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "explorer.py",
+        "run",
+        "missing_ack"
+      ],
+      "cwd": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original",
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 5035,
+        "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+        "mode": 420
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 420
+      }
+    },
+    {
+      "label": "original-replay",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "explorer.py",
+        "replay",
+        "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-export.stdout"
+      ],
+      "cwd": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original",
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 301,
+        "sha256": "1b3a791c59db50b7349df848027d4814afe979f704cf7e1509c6ea8af875f7ed",
+        "mode": 420
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 420
+      }
+    },
+    {
+      "label": "original-ui",
+      "argv": [
+        "node",
+        "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/observe-original-v1.cjs",
+        "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original",
+        "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-export.stdout",
+        "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-replay.stdout"
+      ],
+      "cwd": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings",
+      "exit_code": 1,
+      "stdout": {
+        "bytes": 8253,
+        "sha256": "5fda47e39a7e4034e4569ad99ef181080e06def7f3318aa3dc4133318c61c207",
+        "mode": 420
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 420
+      }
+    }
+  ],
+  "source_before": {
+    "LICENSE": {
+      "bytes": 1066,
+      "sha256": "d946a9700b643b060dd422829c2cb41166f9f2ae4ea08fcebaa2afa173df5f36",
+      "mode": 420
+    },
+    "explorer.py": {
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "mode": 493
+    },
+    "scenarios.py": {
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": 420
+    },
+    "towerops.py": {
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": 420
+    },
+    "replay_explain.py": {
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "mode": 420
+    },
+    "test_explorer.py": {
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "mode": 420
+    },
+    "EXPLORER.md": {
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "mode": 420
+    },
+    "web/style.css": {
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "mode": 420
+    },
+    "web/app.js": {
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "mode": 420
+    },
+    "web/index.html": {
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "mode": 420
+    },
+    "tests/test_explorer_explanation.cjs": {
+      "bytes": 8796,
+      "sha256": "43a186375092cd125700f0106f7a1ccd27447e8cc2a770d4638297c31832c436",
+      "mode": 420
+    },
+    "tests/test_explorer_replay_selection.cjs": {
+      "bytes": 8168,
+      "sha256": "df20845a15c9585a202778b0a3793df0f05723f8a977dc6c20e4729d63ca298b",
+      "mode": 420
+    },
+    ".github/workflows/ci.yml": {
+      "bytes": 1423,
+      "sha256": "21e82aa2e3f57250bf2880ada9d7d0b9c45e05f4cac10cf8b1a0bfb1140bd6b4",
+      "mode": 420
+    },
+    ".github/workflows/airspace-demo.yml": {
+      "bytes": 2312,
+      "sha256": "42a4f4bb235b11600dfbb317300792f450ef4afd8912df88d0105ac268f87c7b",
+      "mode": 420
+    }
+  },
+  "source_after": {
+    "LICENSE": {
+      "bytes": 1066,
+      "sha256": "d946a9700b643b060dd422829c2cb41166f9f2ae4ea08fcebaa2afa173df5f36",
+      "mode": 420
+    },
+    "explorer.py": {
+      "bytes": 7604,
+      "sha256": "0d2d9ce308bb5a1648ae03fb3230d5f6beed629314c2a7a76b0bab187392c843",
+      "mode": 493
+    },
+    "scenarios.py": {
+      "bytes": 5989,
+      "sha256": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+      "mode": 420
+    },
+    "towerops.py": {
+      "bytes": 19684,
+      "sha256": "b8bb4a15c70b0137e1c47aa614e6ed1b6f3cae096af9fb0c8810f3d900a48f70",
+      "mode": 420
+    },
+    "replay_explain.py": {
+      "bytes": 5432,
+      "sha256": "bd717d3bd86f238e3f44c2710b56f88d142046cf02ec9049fd337a9a7db9fc7b",
+      "mode": 420
+    },
+    "test_explorer.py": {
+      "bytes": 7460,
+      "sha256": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+      "mode": 420
+    },
+    "EXPLORER.md": {
+      "bytes": 9288,
+      "sha256": "135c46bab3ef61c90d88cf6599f129c36f446a164214a37099b0dba71ad399e3",
+      "mode": 420
+    },
+    "web/style.css": {
+      "bytes": 2566,
+      "sha256": "b0ee12c04e0b0bb4b7bb1e9ce0dc7dbc9e874966d9e326784f3728e42dc023c9",
+      "mode": 420
+    },
+    "web/app.js": {
+      "bytes": 9430,
+      "sha256": "9e3d38e3dec59d0b4725771770c05a89afa0190fec8438cd61921b6d3b846739",
+      "mode": 420
+    },
+    "web/index.html": {
+      "bytes": 3934,
+      "sha256": "d616416300f809bce0b843b792a65f15f560bb8c543f49936744dfd95b46a0b1",
+      "mode": 420
+    },
+    "tests/test_explorer_explanation.cjs": {
+      "bytes": 8796,
+      "sha256": "43a186375092cd125700f0106f7a1ccd27447e8cc2a770d4638297c31832c436",
+      "mode": 420
+    },
+    "tests/test_explorer_replay_selection.cjs": {
+      "bytes": 8168,
+      "sha256": "df20845a15c9585a202778b0a3793df0f05723f8a977dc6c20e4729d63ca298b",
+      "mode": 420
+    },
+    ".github/workflows/ci.yml": {
+      "bytes": 1423,
+      "sha256": "21e82aa2e3f57250bf2880ada9d7d0b9c45e05f4cac10cf8b1a0bfb1140bd6b4",
+      "mode": 420
+    },
+    ".github/workflows/airspace-demo.yml": {
+      "bytes": 2312,
+      "sha256": "42a4f4bb235b11600dfbb317300792f450ef4afd8912df88d0105ac268f87c7b",
+      "mode": 420
+    }
+  },
+  "scope": "Original native fixed-fixture export/replay and controlled browser-script missing-action witness; no actual browser or network."
+}

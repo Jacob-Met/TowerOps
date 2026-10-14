@@ -1,0 +1,16 @@
+{
+  "schema": "hamon.loom.towerops-settings-fresh-owner.v1",
+  "utc": "2026-10-14",
+  "main": {
+    "ref": "refs/heads/main",
+    "node_id": "REF_kwDOUbLgRq9yZWZzL2hlYWRzL21haW4",
+    "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/refs/heads/main",
+    "object": {
+      "sha": "202782f29f3a0ed1411e67a7744f9e63f26926f1",
+      "type": "commit",
+      "url": "https://api.github.com/repos/Jacob-Met/TowerOps/git/commits/202782f29f3a0ed1411e67a7744f9e63f26926f1"
+    }
+  },
+  "issue_comments": [],
+  "source_fence": "Five exact original-reserved paths, no incoming issue138 comment. Original complete 16-PR path review retained in preparation/owner-check-v1.json. Root issue139 is complementary disjoint installation path."
+}

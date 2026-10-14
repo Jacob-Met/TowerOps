@@ -1,0 +1,355 @@
+{
+  "schema": "hamon.loom.towerops-settings-author-publication.v1",
+  "prefix": "docs/qualification/explorer-request-settings-loom-d3745/author/",
+  "files": [
+    {
+      "path": "preparation/observe-original-v1.cjs",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/observe-original-v1.cjs",
+      "bytes": 3577,
+      "sha256": "09de63bb57f2004eee37ffb560428f6cc80935755afacbe592419a6eb31b47b0",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/observe-original-v2.cjs",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/observe-original-v2.cjs",
+      "bytes": 3611,
+      "sha256": "681add45fe6620863b1e248d897868760755a1a25a63fc1a827a8758ef9245ad",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/original-correction-freeze-v2.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/original-correction-freeze-v2.json",
+      "bytes": 6043,
+      "sha256": "674ac087ef75bf0e98369d9457483ab755fdaf2c31ebad07f1a8afb688eb9044",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/original-freeze-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/original-freeze-v1.json",
+      "bytes": 1361,
+      "sha256": "78f549eda6d9eb7cc8715b117fce23c01710b22b0cd7dd522b991094f80886c6",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/original-observer-v1-to-v2.patch",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/original-observer-v1-to-v2.patch",
+      "bytes": 4128,
+      "sha256": "f7162ef948ddb2c5a8f75d8d09a299632c1aa091d4ab5f180dc808e61b4779c4",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/original-source-identities-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/original-source-identities-v1.json",
+      "bytes": 3411,
+      "sha256": "35c6e245f646e3960b755842a4d48d85579941d94b40323ff0f28dea9d7619a5",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/original-source-packet-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/original-source-packet-v1.json",
+      "bytes": 99594,
+      "sha256": "7adf25da98a922a8d24bfa3e316eeab4351cda3117cdad0f7cd2f28a2c09968c",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/owner-check-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/owner-check-v1.json",
+      "bytes": 13849,
+      "sha256": "0d995457eb1579d442b05bebd1777d68a67c601051b39c226871bb0729fa1c98",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/public-contract-v1.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/public-contract-v1.md",
+      "bytes": 6036,
+      "sha256": "38b186cb3cc20488c8b0aacc484d6b3ba85264b78cb35aab7eef4e4b5e2dc293",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/public-freeze-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/public-freeze-v1.json",
+      "bytes": 592,
+      "sha256": "1ca38931f56e80b3eb43af9fff317862b4d94133e9df66b1731542fcf05ddf14",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/qualify-author-v1.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/qualify-author-v1.py",
+      "bytes": 3592,
+      "sha256": "398c91e781d535f31b5e9392698a49563bda06511501c109a391dd4d4b484a95",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/receive-original-v1.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/receive-original-v1.py",
+      "bytes": 2319,
+      "sha256": "c4d1bb19e7de49f52780157bbd8e1069b9c9e865fe0c7b912cbbbbc0ec534a59",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "preparation/seal-candidate-v1.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/seal-candidate-v1.py",
+      "bytes": 5100,
+      "sha256": "a1f2204dc83d638aa410190a13a638d11e48844d6d50a27e90415fe6ee7ad1c3",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v1/original-export.stderr",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-export.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v1/original-export.stdout",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-export.stdout",
+      "bytes": 5035,
+      "sha256": "1221a426b11589c814d38408812400c78687a2e043d5da8a83d0de27e095605a",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v1/original-replay.stderr",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-replay.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v1/original-replay.stdout",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-replay.stdout",
+      "bytes": 301,
+      "sha256": "1b3a791c59db50b7349df848027d4814afe979f704cf7e1509c6ea8af875f7ed",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v1/original-ui.stderr",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-ui.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v1/original-ui.stdout",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-ui.stdout",
+      "bytes": 8253,
+      "sha256": "5fda47e39a7e4034e4569ad99ef181080e06def7f3318aa3dc4133318c61c207",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v1/receipt.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/receipt.json",
+      "bytes": 7243,
+      "sha256": "b6b512c6071f13286795e27a6856c17afb0e2052deba044467978a97fda698d9",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v2/receipt.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v2/receipt.json",
+      "bytes": 1986,
+      "sha256": "b6297e53ae6b933efd9c521c47dbedc78518106de0b5c12d177a2fe550458464",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v2/stderr.txt",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "original-observation-v2/stdout.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v2/stdout.json",
+      "bytes": 8372,
+      "sha256": "ccae5b0fbbf8975809017597a0e16ba7c6ce2bd0e0052416a236efa19f73c5f8",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/EXPLORER.md.patch",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/EXPLORER.md.patch",
+      "bytes": 2240,
+      "sha256": "3e4c4457f7418ebc3d5da0fcd1e27e0569aae1603e63cbf5cbf188392d55e4d8",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/README.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/README.md",
+      "bytes": 3219,
+      "sha256": "bdcf6498253655d55692d05714372d310e0a5c9495f5e52e9692f513ebbbe596",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/candidate-freeze-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/candidate-freeze-v1.json",
+      "bytes": 2040,
+      "sha256": "277f33898ee7aabe3345a034875b370ff75d84d2f5ba9cbe207a8468ba57d602",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/candidate-manifest-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/candidate-manifest-v1.json",
+      "bytes": 5850,
+      "sha256": "d8854e0f5a39330cde0d57099569af6b20097d48785a17128c4f959a9e1e1551",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/explanation.stderr",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/explanation.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/explanation.stdout",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/explanation.stdout",
+      "bytes": 579,
+      "sha256": "2182fc359deeb61bd23244a7ab7cfb3d8dcc5b95e0ae82fcc6e92fc980832493",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/receipt.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/receipt.json",
+      "bytes": 9885,
+      "sha256": "cabf87b5d156eef35fbd6462f3f4dc999b6bdf6e37922166d3553321ba87cf1f",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/reporter-classification-audit-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/reporter-classification-audit-v1.json",
+      "bytes": 3700,
+      "sha256": "03f1869365818138513677b9aedd08ed0644ac74cfc8c262743d296459e52088",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/runtime-projection-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/runtime-projection-v1.json",
+      "bytes": 2980,
+      "sha256": "80710c05cf9dd536b159e35233c55c593e8cb71311645920e09ebe65ca140462",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/selection.stderr",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/selection.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/selection.stdout",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/selection.stdout",
+      "bytes": 962,
+      "sha256": "31f411444bacbf1407bb27bf1f0bc2826049dffd7e5cd68e7810cbd0e8944752",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/settings.stderr",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/settings.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/settings.stdout",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/settings.stdout",
+      "bytes": 1175,
+      "sha256": "50c461669613d2089be6da649c86237b9cf612f62c86d4853ccf91021c2d555e",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/source-freeze.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/source-freeze.json",
+      "bytes": 3765,
+      "sha256": "5eb372cec1d648f3d2e581dbfc07e5f9863a528d9387e359829216192fd299c4",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/syntax.stderr",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/syntax.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/syntax.stdout",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/syntax.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/tests--test_explorer_replay_selection.cjs.patch",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/tests--test_explorer_replay_selection.cjs.patch",
+      "bytes": 567,
+      "sha256": "664e8c72535254892e286aacd15cac70a5ee39ab8c8ab6d3d71384539a632dd4",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/tests--test_explorer_request_settings.cjs.patch",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/tests--test_explorer_request_settings.cjs.patch",
+      "bytes": 14248,
+      "sha256": "c3ca1199c66175e52370b7c32c915f33e45e612740d312c8e49ab3ceef7a3bb1",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/web--app.js.patch",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/web--app.js.patch",
+      "bytes": 3243,
+      "sha256": "977b35649023874acad833962f41ce4ad47b07cea8401a56932499912c309ddb",
+      "mode": "100644",
+      "native_mode": 420
+    },
+    {
+      "path": "author-v1/web--index.html.patch",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/web--index.html.patch",
+      "bytes": 1638,
+      "sha256": "2b3ba1f74069cc14336efe025d5557001fe29ce9a43905b79808b88ce00d6aee",
+      "mode": "100644",
+      "native_mode": 420
+    }
+  ],
+  "notes": [
+    "Original false observer and author reporter receipts remain unchanged; their versioned correction/read-only classification are separate.",
+    "No candidate source is duplicated as qualification projection; original baseline packet preserves exact pre-change authority.",
+    "All rows explicitly selected before independent descriptor or source publication."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "hamon.loom.towerops-settings-freeze.v1",
+  "utc": "2026-10-14T01:06:09.767959+00:00",
+  "manifest": {
+    "path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/candidate-manifest-v1.json",
+    "bytes": 5850,
+    "sha256": "d8854e0f5a39330cde0d57099569af6b20097d48785a17128c4f959a9e1e1551",
+    "mode": 420,
+    "git_blob": "807c7bbd1144545e38503bc9ccb821107ecb0bb5"
+  },
+  "runtime_projection": {
+    "path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/runtime-projection-v1.json",
+    "bytes": 2980,
+    "sha256": "80710c05cf9dd536b159e35233c55c593e8cb71311645920e09ebe65ca140462",
+    "mode": 420,
+    "git_blob": "0b6e3e0a996c56c5da66b54b93582527d1be1389"
+  },
+  "author_receipt": {
+    "path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/receipt.json",
+    "bytes": 9885,
+    "sha256": "cabf87b5d156eef35fbd6462f3f4dc999b6bdf6e37922166d3553321ba87cf1f",
+    "mode": 420,
+    "git_blob": "3a4e3f9cefafb4608203a2cead08dc263cdc4345"
+  },
+  "classification_audit": {
+    "path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/author-v1/reporter-classification-audit-v1.json",
+    "bytes": 3700,
+    "sha256": "03f1869365818138513677b9aedd08ed0644ac74cfc8c262743d296459e52088",
+    "mode": 420,
+    "git_blob": "76b97ac8f2f4ba4061ea33d2a5cb7d39490d4ad2"
+  },
+  "public_contract": {
+    "bytes": 6036,
+    "sha256": "38b186cb3cc20488c8b0aacc484d6b3ba85264b78cb35aab7eef4e4b5e2dc293",
+    "mode": 420,
+    "git_blob": "02329968ccfb5fa6a2f106dc89fff58c5e8b07dc"
+  },
+  "original_corrected_observation": {
+    "bytes": 1986,
+    "sha256": "b6297e53ae6b933efd9c521c47dbedc78518106de0b5c12d177a2fe550458464",
+    "mode": 420,
+    "git_blob": "ab3fe3793e8d3fa7a3db7bed8b2efaeb2d416feb"
+  },
+  "limits": "Original v1 observation and author outer false receipts remain exact. Product commands are controlled cloud Node methods, not actual browser receiving. Independent browser candidate remains unexposed pending source gate."
+}

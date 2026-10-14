@@ -1,0 +1,41 @@
+{
+  "schema": "anvil.towerops-settings.receiver-freeze.v1",
+  "frozen_utc": "2026-10-14T00:56:31.539485+00:00",
+  "candidate_exposure": false,
+  "controls": [
+    {
+      "path": "criteria-v1.json",
+      "bytes": 5640,
+      "sha256": "5d37954b3c584e611d0919f5006b3add50f025b0809e72d72fe24d84ebf17f46"
+    },
+    {
+      "path": "criteria-freeze-v1.json",
+      "bytes": 626,
+      "sha256": "d7e2d0be71f0d36989c94e57cc7cfd63e464e271b18a5b4060eeba90652f9348"
+    },
+    {
+      "path": "public-contract-v1.md",
+      "bytes": 6036,
+      "sha256": "38b186cb3cc20488c8b0aacc484d6b3ba85264b78cb35aab7eef4e4b5e2dc293"
+    },
+    {
+      "path": "original-source-tree-v1.json",
+      "bytes": 2676,
+      "sha256": "b56956e93f32b41113677e8a03b8422ef55d122c1e1908ef80dd24522002d353"
+    },
+    {
+      "path": "prepare-original-fixtures-v1.py",
+      "bytes": 3325,
+      "sha256": "8d58450e89b5bdf2e0588af704e3460bce1c4f1a5af6389e56b265476ec4839d"
+    },
+    {
+      "path": "receive-settings-v1.cjs",
+      "bytes": 22655,
+      "sha256": "073c8a8190e624d6104881baeea572c1540fed94078b4f6dbe7177ecf848530a"
+    }
+  ],
+  "syntax_only": "Node --check and Python ast.parse completed; no product/backend/browser or fixture producer executed.",
+  "planned_original": "Three original public CLI export commands once, followed by original browser A run and B MATCH with action absence.",
+  "planned_candidate": "Same received fixtures and same frozen receiver; bounded declared candidate branch. No producer regeneration.",
+  "note": "Separate source and fixture identity specs contain data only; all offered bodies must match full before/after identities. Original source independently matches complete remote tree."
+}

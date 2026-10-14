@@ -1,0 +1,18 @@
+✔ current match and mismatch keep their existing complete messages (88.345736ms)
+✔ a superseded file read does not send a replay or replace the newer verdict (12.175767ms)
+✔ a superseded file read error cannot replace current pending or completed status (12.624246ms)
+✔ a superseded HTTP response cannot replace a newer mismatch (6.454759ms)
+✔ a superseded JSON body cannot replace a newer rejection (4.210418ms)
+✔ a superseded transport error cannot replace a newer match (4.861942ms)
+✔ clearing selection retires an in-flight response and clears its status (4.041479ms)
+✔ selecting the same File again retires its earlier request (4.334938ms)
+✔ a current oversize or read failure refuses, and an explicit corrected selection recovers (6.937012ms)
+✔ a current backend refusal retains the existing error display (4.873186ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 185.989455

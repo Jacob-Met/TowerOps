@@ -1,0 +1,19 @@
+{
+  "schema": "hamon.root.towerops-settings-browser-review.v1",
+  "utc": "2026-10-14T01:18:48.315826+00:00",
+  "accepted": true,
+  "original_receipt_sha256": "3b2a6247ab691eb28d9b77233ceb5bd88112048c8865e58078770894c2bc4ceb",
+  "recomputed_full_actual_expected_pairs": 78,
+  "http_responses": 16,
+  "post_responses": 7,
+  "saved_downloads_exact": 3,
+  "actual_screenshots_inspected": 2,
+  "visual_observations": [
+    "At1440x1100 the new button and entire copiedsettingsmessage are visible and readable while resultAremainslabelled.",
+    "Afterclear the action/localmessage are absent, copiedCcontrols and displayedBwith4.1minremain visible."
+  ],
+  "source_controls_fixtures_preserved": true,
+  "browser_backend_exit0_listeners_closed": true,
+  "rerun": false,
+  "scope": "Review of original sole Anvil candidatecourse and exact5artifactbodies; not additional browser execution, mobile layout claim or installed native version."
+}

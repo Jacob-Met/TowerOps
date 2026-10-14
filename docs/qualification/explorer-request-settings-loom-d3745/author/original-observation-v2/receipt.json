@@ -1,0 +1,57 @@
+{
+  "schema": "hamon.loom.towerops-settings.original-correction.v2",
+  "candidate_implemented": false,
+  "argv": [
+    "node",
+    "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/preparation/observe-original-v2.cjs",
+    "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original",
+    "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-export.stdout",
+    "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v1/original-replay.stdout"
+  ],
+  "exit_code": 0,
+  "stdout": {
+    "path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v2/stdout.json",
+    "bytes": 8372,
+    "sha256": "ccae5b0fbbf8975809017597a0e16ba7c6ce2bd0e0052416a236efa19f73c5f8",
+    "mode": 420
+  },
+  "stderr": {
+    "path": "/workspace/scratch/d3745ea0f44f/loom-towerops-request-settings/original-observation-v2/stderr.txt",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": 420
+  },
+  "observations": [
+    {
+      "name": "original native replay matches",
+      "pass": true
+    },
+    {
+      "name": "request switch differs from effective fixture",
+      "pass": true
+    },
+    {
+      "name": "ordinary form/display state preserved",
+      "pass": true
+    },
+    {
+      "name": "original has no settings button",
+      "pass": true
+    },
+    {
+      "name": "original has no registered settings action",
+      "pass": true
+    },
+    {
+      "name": "only catalog and replay requested",
+      "pass": true
+    },
+    {
+      "name": "ordinary match status present",
+      "pass": true
+    }
+  ],
+  "source_controls_exact": true,
+  "accepted": true,
+  "history": "V1 original native export/replay0; V1 UI observer false6/7 due absent GET-body diagnostic. Retained, not relabeled. This one controlled UI observer uses exact saved native results with corrected diagnostic; no actual browser/HTTP."
+}

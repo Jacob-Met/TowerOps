@@ -1,0 +1,22 @@
+{
+  "schema": "anvil.towerops-settings.visual-review.v1",
+  "accepted": true,
+  "method": "Direct view of the exact three retained PNG files; no image editing or new capture.",
+  "original": {
+    "path": "original-browser-v2/original-match-no-settings-action.png",
+    "observation": "Original accepted B replay displays MATCH with B.json selected while A result and original controls remain. The new action is absent. The 2.3 minute projection is below this viewport; its preservation is proved by the DOM receipt, not this screenshot."
+  },
+  "candidate": [
+    {
+      "path": "candidate-browser-v2/B-settings-with-A-displayed.png",
+      "sha256": "38d6bc3584fb4cef793e8c88d0a6267b18ccf0e7484a91dfc27fe73946463861",
+      "observation": "Missing acknowledgement is selected and both requested fixture switches are checked. B replay remains MATCH, the Use request settings action and complete applied message are readable, and the prior Approval + acknowledgement result remains displayed below. The result details and 2.3 minute projection extend below this viewport."
+    },
+    {
+      "path": "candidate-browser-v2/cleared-selection-retains-copied-controls.png",
+      "sha256": "d28a7acd79eec40e42e7822a10ccd34f7fb95917739ea2f25543b522c3bd4d88",
+      "observation": "Changed world binding and false/true fixture switches remain copied after the file is cleared. No file, replay verdict or settings action is shown. The prior Missing acknowledgement result and engine reason remain visible, with projected time 4.1 min at the bottom of the viewport."
+    }
+  ],
+  "limits": "These are 1440 by 1100 desktop views. No mobile, accessibility audit, complete-chart screenshot or additional runtime claim. Delayed completion and HTTP silence are established by the raw receipt, not still images."
+}

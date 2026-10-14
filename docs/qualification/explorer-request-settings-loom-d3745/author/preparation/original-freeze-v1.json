@@ -1,0 +1,38 @@
+{
+  "schema": "hamon.loom.towerops-settings.original-freeze.v1",
+  "frozen_utc": "2026-10-14T00:53:56.617814+00:00",
+  "candidate_implemented": false,
+  "controls": [
+    {
+      "path": "preparation/public-contract-v1.md",
+      "bytes": 6036,
+      "sha256": "38b186cb3cc20488c8b0aacc484d6b3ba85264b78cb35aab7eef4e4b5e2dc293"
+    },
+    {
+      "path": "preparation/public-freeze-v1.json",
+      "bytes": 592,
+      "sha256": "1ca38931f56e80b3eb43af9fff317862b4d94133e9df66b1731542fcf05ddf14"
+    },
+    {
+      "path": "preparation/original-source-identities-v1.json",
+      "bytes": 3411,
+      "sha256": "35c6e245f646e3960b755842a4d48d85579941d94b40323ff0f28dea9d7619a5"
+    },
+    {
+      "path": "preparation/observe-original-v1.cjs",
+      "bytes": 3577,
+      "sha256": "09de63bb57f2004eee37ffb560428f6cc80935755afacbe592419a6eb31b47b0"
+    },
+    {
+      "path": "preparation/receive-original-v1.py",
+      "bytes": 2319,
+      "sha256": "c4d1bb19e7de49f52780157bbd8e1069b9c9e865fe0c7b912cbbbbc0ec534a59"
+    }
+  ],
+  "expected_request": {
+    "scenario": "missing_ack",
+    "include_approval": true,
+    "include_ack": true
+  },
+  "expected_original": "Ordinary replay MATCH with request acknowledgement true but effective ack null; original form/display preserved and no settings action. Two native CLI calls plus controlled Node UI observation."
+}

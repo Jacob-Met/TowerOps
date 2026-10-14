@@ -1,0 +1,238 @@
+{
+  "schema": "hamon.loom.towerops-settings.original-observation.v2",
+  "scope": "Controlled Node DOM/fetch observation of unchanged browser script, using exact saved fixture and complete real native CLI replay reply; not an actual browser/HTTP course.",
+  "candidate_implemented": false,
+  "accepted": true,
+  "checks": [
+    {
+      "name": "original native replay matches",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "request switch differs from effective fixture",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "ordinary form/display state preserved",
+      "actual": "{\"scenario\":\"approved\",\"approval\":false,\"ack\":false,\"main_status\":\"Ready. Choose a case, then run the simulated fixtures.\",\"current\":\"{\\\"retained\\\":\\\"original displayed result\\\"}\"}",
+      "expected": "{\"scenario\":\"approved\",\"approval\":false,\"ack\":false,\"main_status\":\"Ready. Choose a case, then run the simulated fixtures.\",\"current\":\"{\\\"retained\\\":\\\"original displayed result\\\"}\"}",
+      "pass": true
+    },
+    {
+      "name": "original has no settings button",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "name": "original has no registered settings action",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "name": "only catalog and replay requested",
+      "actual": [
+        "/api/scenarios",
+        "/api/replay"
+      ],
+      "expected": [
+        "/api/scenarios",
+        "/api/replay"
+      ],
+      "pass": true
+    },
+    {
+      "name": "ordinary match status present",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  ],
+  "before": {
+    "scenario": "approved",
+    "approval": false,
+    "ack": false,
+    "main_status": "Ready. Choose a case, then run the simulated fixtures.",
+    "current": "{\"retained\":\"original displayed result\"}"
+  },
+  "after": {
+    "scenario": "approved",
+    "approval": false,
+    "ack": false,
+    "main_status": "Ready. Choose a case, then run the simulated fixtures.",
+    "current": "{\"retained\":\"original displayed result\"}"
+  },
+  "calls": [
+    {
+      "url": "/api/scenarios",
+      "body": null
+    },
+    {
+      "url": "/api/replay",
+      "body": {
+        "format": "towerops.synthetic-explorer.v1",
+        "disclaimer": "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+        "request": {
+          "scenario": "missing_ack",
+          "include_approval": true,
+          "include_ack": true
+        },
+        "label": "Missing acknowledgement",
+        "description": "Approval alone does not authorize the simulated transition.",
+        "simulation_clock": {
+          "dispatch_sec": 1002.5,
+          "observed_sec": 1001,
+          "projection_horizon_min": 5
+        },
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        },
+        "before": {
+          "version": 1,
+          "observed_at": 1001,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "after": {
+          "version": 1,
+          "observed_at": 1001,
+          "aircraft": [
+            {
+              "aircraft_id": "FIXTURE-A",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "FIXTURE-B",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "before_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "after_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "advisory": {
+          "aircraft_id": "FIXTURE-B",
+          "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002,
+          "expires_at": 1010,
+          "rationale": "synthetic projected-separation recovery"
+        },
+        "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+        "fixtures": {
+          "approval": {
+            "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+            "decision": "approve",
+            "approved_at": 1002.2,
+            "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+          },
+          "ack": null
+        },
+        "outcome": "rejected",
+        "rejection_reason": "ack_missing",
+        "before_conflict": true,
+        "after_conflict": true,
+        "audit_events": [
+          {
+            "seq": 0,
+            "kind": "fixture_proposal",
+            "payload": {
+              "scenario": "missing_ack",
+              "source_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory": {
+                "aircraft_id": "FIXTURE-B",
+                "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+                "set_vx_nm_min": -1,
+                "set_vy_nm_min": 2,
+                "set_climb_ft_min": 0,
+                "issued_at": 1002,
+                "expires_at": 1010,
+                "rationale": "synthetic projected-separation recovery"
+              },
+              "simulation_only": true
+            },
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "event_hash": "6cc73f803c163c2611db426fb649fc695f91160e0bcf4e55e1c0522759f10ec5"
+          },
+          {
+            "seq": 1,
+            "kind": "screen_pass",
+            "payload": {
+              "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+              "advisory_hashes": [
+                "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+              ]
+            },
+            "prev_hash": "6cc73f803c163c2611db426fb649fc695f91160e0bcf4e55e1c0522759f10ec5",
+            "event_hash": "505c30da38ba7d55a236c1951a3cf92d6fade533427d39385882a769663b448b"
+          },
+          {
+            "seq": 2,
+            "kind": "approval",
+            "payload": {
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "FIXTURE-CONTROLLER-NOT-AUTHORITY"
+            },
+            "prev_hash": "505c30da38ba7d55a236c1951a3cf92d6fade533427d39385882a769663b448b",
+            "event_hash": "8b16e7b0c673a3910882a860d3d0c3e39b1d786bd7866461eacaf4ef11035a72"
+          },
+          {
+            "seq": 3,
+            "kind": "reject",
+            "payload": {
+              "reason": "ack_missing",
+              "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+            },
+            "prev_hash": "8b16e7b0c673a3910882a860d3d0c3e39b1d786bd7866461eacaf4ef11035a72",
+            "event_hash": "aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e"
+          }
+        ],
+        "audit_head": "aca55845d0a7e6755f416ffb49205c45ccca0530fa5ffcd0c9155bae3d57139e",
+        "audit_valid": true
+      }
+    }
+  ],
+  "replay_status": "Replay MATCH: rejected. Local deterministic reproduction only; not a signature, provenance proof, or authority."
+}

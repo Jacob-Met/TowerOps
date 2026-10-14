@@ -1,0 +1,81 @@
+{
+  "schema": "hamon.loom.towerops-settings-reporter-audit.v1",
+  "utc": "2026-10-14T01:06:09.748184+00:00",
+  "raw_receipt": {
+    "bytes": 9885,
+    "sha256": "cabf87b5d156eef35fbd6462f3f4dc999b6bdf6e37922166d3553321ba87cf1f",
+    "mode": 420,
+    "git_blob": "3a4e3f9cefafb4608203a2cead08dc263cdc4345"
+  },
+  "raw_accepted_preserved": false,
+  "finding": "Collector required TAP summary lines; actual Node 24.19.0 spec reporter emitted \u2139 summary lines. All four commands exited 0; complete retained streams establish ten new and fifteen inherited passing methods, no failures/cancellations/skips/todos.",
+  "checks": [
+    {
+      "label": "settings",
+      "summary": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "named_passes": [
+        "initial settings action is unavailable and cannot fetch or change the form",
+        "MATCH copies request switches, not effective fixtures, without changing the displayed run or export",
+        "MISMATCH copies exact false switches while retaining the complete open explanation",
+        "only explicit Run sends copied controls and the same accepted settings remain reusable",
+        "new pending, clear, malformed and oversized selections retire copying without undoing prior form values",
+        "an old replay JSON body cannot restore settings after clear or supersede a newer accepted selection",
+        "late catalog readiness admits only the still-current accepted request",
+        "failed catalog, unknown scenarios and non-native request types never expose usable settings",
+        "current read and backend failures retire copying and corrected explicit selection recovers",
+        "a retired replay transport error cannot hide or replace the newer usable request"
+      ]
+    },
+    {
+      "label": "selection",
+      "summary": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "named_passes": [
+        "current match and mismatch keep their existing complete messages",
+        "a superseded file read does not send a replay or replace the newer verdict",
+        "a superseded file read error cannot replace current pending or completed status",
+        "a superseded HTTP response cannot replace a newer mismatch",
+        "a superseded JSON body cannot replace a newer rejection",
+        "a superseded transport error cannot replace a newer match",
+        "clearing selection retires an in-flight response and clears its status",
+        "selecting the same File again retires its earlier request",
+        "a current oversize or read failure refuses, and an explicit corrected selection recovers",
+        "a current backend refusal retains the existing error display"
+      ]
+    },
+    {
+      "label": "explanation",
+      "summary": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "named_passes": [
+        "only an explicit current mismatch click compares the captured parsed value",
+        "new file selection immediately retires old explanation success and finally",
+        "clearing retires an old explanation failure without restoring controls",
+        "a current failure keeps the mismatch and permits an explicit same-selection retry",
+        "ordered typed rows retain full envelopes and expose the observed truncation"
+      ]
+    }
+  ],
+  "product_rerun": false,
+  "accepted_within_scope": true,
+  "scope": "Read-only classification of exact retained raw output; no rewritten original receipt or browser/native HTTP claim."
+}

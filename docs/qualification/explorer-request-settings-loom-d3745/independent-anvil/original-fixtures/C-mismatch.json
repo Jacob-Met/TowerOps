@@ -1,0 +1,133 @@
+{
+  "format": "towerops.synthetic-explorer.v1",
+  "disclaimer": "Synthetic research simulation only. Fixture identities, not real approval or authority. Not operational ATC, aviation assurance, or live aircraft control.",
+  "request": {
+    "scenario": "stale_binding",
+    "include_approval": false,
+    "include_ack": true
+  },
+  "label": "Retained literal mismatch <settings> \u6771\u4eac",
+  "description": "World version changes after proposal; its hash no longer matches.",
+  "simulation_clock": {
+    "dispatch_sec": 1002.5,
+    "observed_sec": 1001.0,
+    "projection_horizon_min": 5.0
+  },
+  "policy": {
+    "min_horizontal_nm": 5.0,
+    "min_vertical_ft": 1000.0,
+    "horizon_min": 5.0,
+    "sample_step_min": 0.5,
+    "max_state_age_sec": 10.0,
+    "max_speed_nm_min": 6.0,
+    "max_climb_ft_min": 3000.0
+  },
+  "before": {
+    "version": 2,
+    "observed_at": 1001.0,
+    "aircraft": [
+      {
+        "aircraft_id": "FIXTURE-A",
+        "x_nm": -5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": 1.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0.0
+      },
+      {
+        "aircraft_id": "FIXTURE-B",
+        "x_nm": 5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": -1.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0.0
+      }
+    ]
+  },
+  "after": {
+    "version": 2,
+    "observed_at": 1001.0,
+    "aircraft": [
+      {
+        "aircraft_id": "FIXTURE-A",
+        "x_nm": -5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": 1.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0.0
+      },
+      {
+        "aircraft_id": "FIXTURE-B",
+        "x_nm": 5.0,
+        "y_nm": 0.0,
+        "altitude_ft": 10000.0,
+        "vx_nm_min": -1.0,
+        "vy_nm_min": 0.0,
+        "climb_ft_min": 0.0
+      }
+    ]
+  },
+  "before_world_hash": "e6587fb2e77163e61404085cf126d477ccfa18615c3d7e7a3d2c0aa313f30101",
+  "after_world_hash": "e6587fb2e77163e61404085cf126d477ccfa18615c3d7e7a3d2c0aa313f30101",
+  "advisory": {
+    "aircraft_id": "FIXTURE-B",
+    "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+    "set_vx_nm_min": -1.0,
+    "set_vy_nm_min": 2.0,
+    "set_climb_ft_min": 0.0,
+    "issued_at": 1002.0,
+    "expires_at": 1010.0,
+    "rationale": "synthetic projected-separation recovery"
+  },
+  "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+  "fixtures": {
+    "approval": null,
+    "ack": {
+      "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3",
+      "status": "accepted",
+      "acknowledged_at": 1002.4
+    }
+  },
+  "outcome": "rejected",
+  "rejection_reason": "world_hash_mismatch",
+  "before_conflict": true,
+  "after_conflict": true,
+  "audit_events": [
+    {
+      "seq": 0,
+      "kind": "fixture_proposal",
+      "payload": {
+        "scenario": "stale_binding",
+        "source_world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+        "advisory": {
+          "aircraft_id": "FIXTURE-B",
+          "world_hash": "93bbb002dde937c88dcb36c04724f57c4ba0ecafe30f60700ee21fd94e1a17ff",
+          "set_vx_nm_min": -1.0,
+          "set_vy_nm_min": 2.0,
+          "set_climb_ft_min": 0.0,
+          "issued_at": 1002.0,
+          "expires_at": 1010.0,
+          "rationale": "synthetic projected-separation recovery"
+        },
+        "simulation_only": true
+      },
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "event_hash": "69e8865da14f14d04829ba585e10b1971e8ae96ebbb46170bf4978a85d64a018"
+    },
+    {
+      "seq": 1,
+      "kind": "reject",
+      "payload": {
+        "reason": "world_hash_mismatch",
+        "advisory_hash": "1aa1f338d41c8ebed698e70f0c9d24a6d45b07f0ec0c2878eee6d8378535baa3"
+      },
+      "prev_hash": "69e8865da14f14d04829ba585e10b1971e8ae96ebbb46170bf4978a85d64a018",
+      "event_hash": "8ba10d39ac0adfce34809c8d1f87d4b694f7331e38713aa04f42c76fbac37c47"
+    }
+  ],
+  "audit_head": "8ba10d39ac0adfce34809c8d1f87d4b694f7331e38713aa04f42c76fbac37c47",
+  "audit_valid": true
+}
