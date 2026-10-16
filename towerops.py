@@ -4,6 +4,7 @@ import hashlib
 import json
 import math
 from collections.abc import Iterable
+from copy import deepcopy
 from dataclasses import asdict, dataclass, replace
 from fractions import Fraction
 from typing import Any
@@ -131,6 +132,8 @@ class AuditLog:
         self.events: list[dict[str, Any]] = []
 
     def append(self, kind: str, payload: dict[str, Any]) -> str:
+        # Hash and retain the same value even when the caller later reuses it.
+        payload = deepcopy(payload)
         prev = self.events[-1]["event_hash"] if self.events else ZERO_HASH
         event = {"seq": len(self.events), "kind": kind, "payload": payload, "prev_hash": prev}
         event_hash = hashlib.sha256(prev.encode("ascii") + b"\n" + canonical_bytes(event)).hexdigest()
