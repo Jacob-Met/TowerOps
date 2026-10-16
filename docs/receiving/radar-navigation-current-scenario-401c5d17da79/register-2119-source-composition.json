@@ -1,0 +1,34 @@
+{
+  "schema": "towerops.radar-register.source-composition/1",
+  "created_at": "2026-10-08T20:50:11.408379+00:00",
+  "ordered_parents": [
+    "808e1f29c7f013f4b11f38bc0a015182ac763084",
+    "2119eac83f97763cfb66f8c29bff506437ba4725"
+  ],
+  "canonical_tree": "bb500f893ee7397b241e453cc51b1c97be071e6f",
+  "radar_tree": "6b9f18d9c1a89edc93e7880662b36ac6b258d00a",
+  "native_merge": "git merge-file --diff3 -p current base radar; only the README append conflicted",
+  "readme_resolution": "Complete radar README, including its automatic-mode wording, followed by the exact current register append. Both complete sections preserved.",
+  "resolved_sources": [
+    {
+      "path": "web/airspace/README.md",
+      "bytes": 18189,
+      "sha256": "aab955745ba3a579f571fb5317decbde5294a43535b345f31340dc92106c7494",
+      "git_blob": "b8798bb6b7564224c164281a16984cdbc4c47ae0"
+    },
+    {
+      "path": "web/airspace/index.html",
+      "bytes": 19904,
+      "sha256": "6a06da008fea2aca40f6ce2b0260a8d365ba13bd484022ada59982f56ffc228b",
+      "git_blob": "64a15de20dddd4f73931ed0cfaaa4834c3d5cc86"
+    },
+    {
+      "path": "web/airspace/src/main.ts",
+      "bytes": 28683,
+      "sha256": "fc392a6aa20620281c1191d4c61a8ab9d349f7d051f9ec7963f249e3a059571d",
+      "git_blob": "5d9522527113b451ed8ef63a74e2d2479d9d52ab"
+    }
+  ],
+  "unchanged_radar_entries": 32,
+  "qualification": "Exact source composition and root source review only. Combined hosted and cross-feature browser receiving are pending. Original native 22/38/18 results retain their own source pins."
+}

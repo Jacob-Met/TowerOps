@@ -80,3 +80,17 @@
 .scenario-review .button{min-height:40px}
 #scenario-review[hidden],#cancel-scenario[hidden],#scenario-file[hidden]{display:none}
 @media(max-width:560px){.scenario-review{padding:12px}.scenario-policy{gap:8px;font-size:10px}.scenario-review .button{width:100%}}
+
+/* Radar navigation changes only the view; the world check remains global. */
+.radar-navigation{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;min-width:0}
+.radar-view-actions,.radar-pan-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.radar-view-actions .button{flex:1 1 105px;min-height:40px;padding:10px 8px;overflow-wrap:anywhere}
+.radar-pan-actions{margin-top:8px}
+.radar-pan-actions .micro{flex:0 0 76px}
+.radar-pan-actions .button{flex:1 1 70px;min-height:36px;padding:8px 6px}
+#radar-fit[aria-pressed=true]{border-color:var(--mint);color:var(--mint);background:#16322f}
+#airspace:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.radar-center-label{font:9px/1.7 var(--mono);letter-spacing:.04em;color:var(--amber);margin:12px 0 4px;overflow-wrap:anywhere}
+.radar-view-summary{font:10px/1.6 var(--mono);color:var(--ink);margin:0;overflow-wrap:anywhere}
+.radar-view-help{font-size:10px;line-height:1.55;color:var(--muted);margin:6px 0 0}
+@media(max-width:560px){.radar-view-actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.radar-view-actions .button,.radar-pan-actions .button{min-height:44px}.radar-pan-actions .micro{flex-basis:100%}.radar-pan-actions .button{flex-basis:50px;font-size:9px}.radar-center-label{font-size:8px}}

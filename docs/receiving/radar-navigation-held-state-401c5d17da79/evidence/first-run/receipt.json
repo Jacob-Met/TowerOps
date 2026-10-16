@@ -1,0 +1,960 @@
+{
+  "schema": "towerops.radar-navigation-independent-receiving.v1",
+  "source_head": "6eb54df0ad71ef3539d3ca6d8dd985eff875f435",
+  "source_tree": "6c9ac3fedaf8edd4962da238278a42ed81261221",
+  "source_root": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar-independent/source",
+  "source_fence": "TowerOps #59",
+  "started_at": "2026-10-08T17:30:46.845Z",
+  "node": "v22.22.1",
+  "method_sha256": "cf25a49e352601f99c7400be9a2fce974b24975912a1227b00eb948c605bbc9f",
+  "helper_sha256": "be20b757f9cd7b3b85bcc701b589d61ad338123be70d75acb914eda529af5639",
+  "checks": [
+    {
+      "name": "ArrowLeft remains a real text-editor operation",
+      "passed": true,
+      "details": {
+        "caretBefore": 73,
+        "caretAfter": 72
+      }
+    },
+    {
+      "name": "Editing arrow key leaves the radar range and status unchanged",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Raw-editor keyboard focus preserves the complete held state",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Native click enters a changed manual radar view",
+      "passed": true,
+      "details": {
+        "range": "MANUAL +/- 7.5 NM"
+      }
+    },
+    {
+      "name": "Zoom click preserves proposal, approval, audit, drafts and simulation",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Enter activates the focused zoom button and keeps its focus",
+      "passed": false,
+      "details": {
+        "before": "MANUAL +/- 7.5 NM",
+        "after": "MANUAL +/- 7.5 NM",
+        "active": "radar-zoom-in"
+      }
+    },
+    {
+      "name": "Isolated source and borrowed native runtime inputs remain byte-identical",
+      "passed": true,
+      "details": {
+        "source_changed": [],
+        "borrowed_changed": []
+      }
+    }
+  ],
+  "observations": [],
+  "setup": [
+    {
+      "action": "Initial explicit native plan, approval and readback",
+      "plan": {
+        "request": {
+          "id": 1,
+          "base": "http://127.0.0.1:40197/",
+          "request": {
+            "op": "plan",
+            "state": {
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -5,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 5,
+                  "y_nm": 0
+                }
+              ],
+              "observed_at": 1000,
+              "version": 1
+            },
+            "now": 1002,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            }
+          }
+        },
+        "response": {
+          "id": 1,
+          "result": {
+            "advisory": {
+              "aircraft_id": "TWR419",
+              "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+              "set_vx_nm_min": -1,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 0,
+              "issued_at": 1002,
+              "expires_at": 1010,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+            }
+          }
+        }
+      },
+      "apply": {
+        "request": {
+          "id": 2,
+          "base": "http://127.0.0.1:40197/",
+          "request": {
+            "op": "apply",
+            "state": {
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "x_nm": -5,
+                  "y_nm": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "altitude_ft": 10000,
+                  "climb_ft_min": 0,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 0,
+                  "x_nm": 5,
+                  "y_nm": 0
+                }
+              ],
+              "observed_at": 1000,
+              "version": 1
+            },
+            "advisory": {
+              "aircraft_id": "TWR419",
+              "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+              "set_vx_nm_min": -1,
+              "set_vy_nm_min": 2,
+              "set_climb_ft_min": 0,
+              "issued_at": 1002,
+              "expires_at": 1010,
+              "rationale": "synthetic projected-separation recovery",
+              "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+            },
+            "approval": {
+              "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "decision": "approve",
+              "approved_at": 1002.2,
+              "approver": "synthetic-controller"
+            },
+            "ack": {
+              "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+              "status": "accepted",
+              "acknowledged_at": 1002.4
+            },
+            "now": 1002.5,
+            "policy": {
+              "min_horizontal_nm": 5,
+              "min_vertical_ft": 1000,
+              "horizon_min": 5,
+              "sample_step_min": 0.5,
+              "max_state_age_sec": 10,
+              "max_speed_nm_min": 6,
+              "max_climb_ft_min": 3000
+            },
+            "audit_json": "[]"
+          }
+        },
+        "response": {
+          "id": 2,
+          "result": {
+            "state": {
+              "version": 2,
+              "observed_at": 1002.5,
+              "aircraft": [
+                {
+                  "aircraft_id": "TWR218",
+                  "x_nm": -5,
+                  "y_nm": 0,
+                  "altitude_ft": 10000,
+                  "vx_nm_min": 1,
+                  "vy_nm_min": 0,
+                  "climb_ft_min": 0
+                },
+                {
+                  "aircraft_id": "TWR419",
+                  "x_nm": 5,
+                  "y_nm": 0,
+                  "altitude_ft": 10000,
+                  "vx_nm_min": -1,
+                  "vy_nm_min": 2,
+                  "climb_ft_min": 0
+                }
+              ]
+            },
+            "valid": true,
+            "events": [
+              {
+                "seq": 0,
+                "kind": "screen_pass",
+                "payload": {
+                  "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+                  "advisory_hashes": [
+                    "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+                  ]
+                },
+                "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+                "event_hash": "1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e"
+              },
+              {
+                "seq": 1,
+                "kind": "approval",
+                "payload": {
+                  "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+                  "decision": "approve",
+                  "approved_at": 1002.2,
+                  "approver": "synthetic-controller"
+                },
+                "prev_hash": "1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e",
+                "event_hash": "9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085"
+              },
+              {
+                "seq": 2,
+                "kind": "ack",
+                "payload": {
+                  "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+                  "status": "accepted",
+                  "acknowledged_at": 1002.4
+                },
+                "prev_hash": "9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085",
+                "event_hash": "72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9"
+              },
+              {
+                "seq": 3,
+                "kind": "simulated_actuation",
+                "payload": {
+                  "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+                  "before_world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+                  "after_world_hash": "3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35"
+                },
+                "prev_hash": "72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9",
+                "event_hash": "04ad4e3453871c1ba209ef53cfffb58f8b8b3544ce5ea7d549f84c39a04171d5"
+              }
+            ],
+            "audit_canonical": [
+              "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"],\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+              "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"approved_at\":1002.2,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\",\"seq\":1}",
+              "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":1002.4,\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\"},\"prev_hash\":\"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\",\"seq\":2}",
+              "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"after_world_hash\":\"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\",\"before_world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\",\"seq\":3}"
+            ],
+            "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\", \"event_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\", \"event_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\"}, \"prev_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\", \"event_hash\": \"04ad4e3453871c1ba209ef53cfffb58f8b8b3544ce5ea7d549f84c39a04171d5\"}]"
+          }
+        }
+      }
+    }
+  ],
+  "phase": "camera receiving",
+  "source_changed": [],
+  "borrowed_changed": [],
+  "failure": {
+    "phase": "camera receiving",
+    "message": "Error: Enter activates the focused zoom button and keeps its focus\n    at check (file:///home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar-independent/methods/receive-held-state.v2.mjs:23:118)\n    at file:///home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar-independent/methods/receive-held-state.v2.mjs:107:2"
+  },
+  "source_before": {
+    "LICENSE": "d946a9700b643b060dd422829c2cb41166f9f2ae4ea08fcebaa2afa173df5f36",
+    "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "audit_replay.py": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+    "browser_acceptance.py": "88ffdce97c2440dc57bd9f08f38097b9893d38b896c4f0b71695c5bab9a8b54e",
+    "decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "demo.py": "52ca8211495839d4ed29d59ce76fcb11500443106dc1015b5849e5f416722923",
+    "explorer.py": "c16106e27f44f9dd247bcbc6ae677dc74db5340ffc8d2df9fd6df655fc9cb340",
+    "plan_world.py": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e",
+    "scenarios.py": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+    "strands_adapter.py": "bc3d9bac2858827fac096f1faa9b5dbd4aba5bbdc7597a2c4d63e3a063b5e632",
+    "test_explorer.py": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "web/airspace/.gitignore": "3c3d8ee71c7cb202a6b724b6c42b8e104651dfa767292c29592ae5e4679befbe",
+    "web/airspace/.npmrc": "cc37e56acfb8e6a45d1fc786e6f4fa16a62a570ac7d85fb3ad84227e21694bcf",
+    "web/airspace/README.md": "4cf271294a85949922a4d3690edaa5bc3b87717d1bd67a7e409cbcd63ee7d051",
+    "web/airspace/index.html": "9e33df6f94174a880640819677cb315ef9e43286fe642bddc14b4507502647bf",
+    "web/airspace/package-lock.json": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+    "web/airspace/package.json": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd",
+    "web/airspace/prepare-python.mjs": "e67ea0d07b7043fc191b4bb4473ff6b45ba7f173eeec294c2f43ace429c61484",
+    "web/airspace/src/actuation.ts": "a6a3186003cbd7fdcba6e7bc0847c9abfa4ba5174d3c98ce2da651941360dcfb",
+    "web/airspace/src/advisory-options.ts": "4b001ebf546e10761906c19e09af5ef19967e45d994c1b090d376cad695ea976",
+    "web/airspace/src/advisory-review.ts": "45c170f976ffc886db49aef120361cbabc99884f63b3f017fc7a0c7b9923ed3e",
+    "web/airspace/src/audit.ts": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075",
+    "web/airspace/src/core.ts": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+    "web/airspace/src/decision-trace.css": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e",
+    "web/airspace/src/decision-trace.ts": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce",
+    "web/airspace/src/draw.ts": "26ddd9f92b1391d6ece5578f8e65ee82acb47458705d6670a805cde079375acc",
+    "web/airspace/src/encounter-view.ts": "329ac5994841291b3922702f035fac4d03766ae522eb52b807954f4d5ad508c4",
+    "web/airspace/src/encounter.ts": "efd010d007c8b63830d09fdda9bf8724316803937e373f44fd7f504ff1355883",
+    "web/airspace/src/gate.ts": "3f135cabba46d9b6316475424841e543b5f7488a70d85cba25be5cd8cf5e8c8a",
+    "web/airspace/src/main.ts": "812b9c0d586d69cb2be7aad45f72900fd588cbb805f1a15445901d50bb0d7e1e",
+    "web/airspace/src/maneuvers.ts": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d",
+    "web/airspace/src/planner.ts": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74",
+    "web/airspace/src/python-worker.ts": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987",
+    "web/airspace/src/python.ts": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c",
+    "web/airspace/src/radar-geometry.ts": "4df8158d1ca92115ef9be8067fecb377a1e2ccf72b5cd0f3fa27691284e77349",
+    "web/airspace/src/radar-view.ts": "0e61e50b2a2b6d60ef8e958dc9b481a8c4348838fdb451b9f29553b80838efd8",
+    "web/airspace/src/track-edit.ts": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046",
+    "web/airspace/src/world-tools.ts": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+    "web/airspace/style.css": "ad7d9baba6611f762dc2ae22cdcbb780130ebfdc764bb98fc82e3f9a82668280",
+    "web/airspace/tests/advisory-numeric.test.ts": "4c36af766b9b30160b069d6ce31580741387989680be0118a8ac6f5c5fe8fd19",
+    "web/airspace/tests/advisory-options.test.ts": "111e9cdef1612992382ef8b13e88184a41c760a5f16c72e79a865c9c971b7ff3",
+    "web/airspace/tests/algorithm.test.ts": "117539be86d2fc5f26adef7151c8a55c85096d65e80ebc6e7d263aae89a3b178",
+    "web/airspace/tests/audit-wire.test.ts": "7ced880e8615caef1e3b12b8097eee256b7b4cf286aedec59a68393d014ce8a7",
+    "web/airspace/tests/decision-trace.test.mjs": "92a6e7f2cd834fb271a3aadd37e3dc1235691b0e258d351e43cdb0e6a9b39c67",
+    "web/airspace/tests/encounter.test.ts": "81600f27fd777d2abbba2948267980b5bace5bec394f24373f9f1d89c3656488",
+    "web/airspace/tests/playback-controls.test.ts": "1a3d17a0f87c9e250da5996fbf15d87ed2329bc66d1da6297e58932a0bcefe89",
+    "web/airspace/tests/python-audit-interop.test.mjs": "d0538f519c8e2f4b0fef49580cd82178b16ccf53824b851226e263d2be80a77f",
+    "web/airspace/tests/python-audit-wire.json": "7d30312dc70d7655cea7ab162912ced0265f21ebd3c4d9057933a51c72801e31",
+    "web/airspace/tests/python-float-parity.test.mjs": "86b0eb813c03fecb7c188f6bb77d76f4b77cea8fe37c2d282cf602dafc27f235",
+    "web/airspace/tests/python-reference.json": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+    "web/airspace/tests/radar-geometry.test.ts": "f7285383bd4f8039328adc23f41f21225d84d7b78642e0b91172d7049b27ace2",
+    "web/airspace/tests/radar-view.test.ts": "dbd5e22a5bd622c80f41423dd1488c64e9579dc6ac64fcf7051fec8cedbb8085",
+    "web/airspace/tests/track-edit.test.ts": "58adb9d2d42ae7284e8d3c3a949157ff80b46a1d63d9a2859b28d418497a647e",
+    "web/airspace/tests/world-json-draft.browser.mjs": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+    "web/airspace/tests/world-tools.test.ts": "7c4f1889d0d4fd3104def954234fc0269820396ebb85f4495ee0b388969a7095",
+    "web/airspace/tsconfig.json": "994b5ffe77837a183106072a881d44d74a1b6a5d6e6e964ae5364971573c7e6a",
+    "web/airspace/vite.config.ts": "36c16c15fb1ea9d20fafaf0962addb32ceb20e4b87868ac0656d1d9c4c4f7aa6"
+  },
+  "borrowed_before": {
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/audit_replay.py": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide-lock.json": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide.asm.js": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide.asm.wasm": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide.mjs": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/python_stdlib.zip": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/favicon.svg": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/package-lock.json": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/node_modules/vite/dist/node/index.js": "f109fff88512ed5cf39503b7a4b2a1de1c95bff333cb1d3635454558e3bfefc7"
+  },
+  "origin": "http://127.0.0.1:40197",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "held_state": {
+    "clock": "T+0 SEC",
+    "speed": {
+      "value": "1",
+      "disabled": false,
+      "readOnly": false,
+      "hidden": false
+    },
+    "speedText": "1.0x",
+    "runningControl": {
+      "text": "Run traffic",
+      "disabled": true,
+      "hidden": false
+    },
+    "selected": "TWR218",
+    "flights": [
+      {
+        "text": "TWR218100 FL / 1.0, 0.0 NM/M",
+        "className": "flight-row selected",
+        "disabled": true
+      },
+      {
+        "text": "TWR419100 FL / -1.0, -0.0 NM/M",
+        "className": "flight-row ",
+        "disabled": true
+      }
+    ],
+    "proposal": "TWR419 -> vx -1.0 / vy 2.0 NM/M / climb 0 FT/M. Bound to a5089b4d1e.",
+    "proposalState": "PROPOSAL READY",
+    "gates": [
+      {
+        "id": "gate-screen",
+        "text": "01Fresh state + safety screenPASS",
+        "className": "gate-step done"
+      },
+      {
+        "id": "gate-approval",
+        "text": "02Controller approval fixtureAPPROVED",
+        "className": "gate-step done"
+      },
+      {
+        "id": "gate-ack",
+        "text": "03Readback acknowledgementWAIT",
+        "className": "gate-step wait"
+      }
+    ],
+    "plannerControls": [
+      {
+        "text": "Run planner",
+        "disabled": true,
+        "hidden": false
+      },
+      {
+        "text": "Approve",
+        "disabled": true,
+        "hidden": false
+      },
+      {
+        "text": "Accept readback + apply",
+        "disabled": true,
+        "hidden": false
+      }
+    ],
+    "auditStatus": "4 EVENTS / VALID",
+    "auditRows": [
+      "00  screen_pass  {\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\",\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c  1347d837ac80",
+      "01  approval  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"decision\":\"approve\",\"approved_at\":1  9da8e15a5d4b",
+      "02  ack  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\",\"acknowledged_at  72859479c128",
+      "03  simulated_actuation  {\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"before_world_hash\":\"d01e0ef289cfb13  04ad4e345387"
+    ],
+    "worldDraft": {
+      "value": "{\n  \"version\": 71,\n  \"note\": \"unfinished receiving draft <keep literal>\"\n",
+      "disabled": false,
+      "readOnly": false,
+      "hidden": false
+    },
+    "worldDraftFeedback": "Draft kept. Load it into the simulation, or export the live world to replace it.",
+    "builderMode": "EDIT TWR218",
+    "builderTarget": "PREVIEW → APPLY ONE EDIT",
+    "builderFeedback": "Editing TWR218. Its callsign stays fixed. Cancel keeps the world and any pending proposal.",
+    "trackPreview": "Fields changed. Preview again before Apply.",
+    "trackFields": [
+      {
+        "value": "TWR218",
+        "disabled": false,
+        "readOnly": true,
+        "hidden": false
+      },
+      {
+        "value": "-4.5",
+        "disabled": false,
+        "readOnly": false,
+        "hidden": false
+      },
+      {
+        "value": "0",
+        "disabled": false,
+        "readOnly": false,
+        "hidden": false
+      },
+      {
+        "value": "100",
+        "disabled": false,
+        "readOnly": false,
+        "hidden": false
+      },
+      {
+        "value": "90",
+        "disabled": false,
+        "readOnly": false,
+        "hidden": false
+      },
+      {
+        "value": "60",
+        "disabled": false,
+        "readOnly": false,
+        "hidden": false
+      },
+      {
+        "value": "0",
+        "disabled": false,
+        "readOnly": false,
+        "hidden": false
+      }
+    ],
+    "trackControls": [
+      {
+        "text": "Preview edit",
+        "disabled": false,
+        "hidden": false
+      },
+      {
+        "text": "Apply scenario edit",
+        "disabled": true,
+        "hidden": false
+      },
+      {
+        "text": "Cancel edit",
+        "disabled": false,
+        "hidden": false
+      }
+    ],
+    "policy": [
+      {
+        "value": "5",
+        "disabled": true,
+        "readOnly": false,
+        "hidden": false
+      },
+      {
+        "value": "1000",
+        "disabled": true,
+        "readOnly": false,
+        "hidden": false
+      },
+      {
+        "value": "5",
+        "disabled": true,
+        "readOnly": false,
+        "hidden": false
+      }
+    ],
+    "pythonStatus": "Live CPython · towerops.py · AdvisoryPlanner",
+    "workerRequests": [
+      {
+        "id": 1,
+        "base": "http://127.0.0.1:40197/",
+        "request": {
+          "op": "plan",
+          "state": {
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -5,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 5,
+                "y_nm": 0
+              }
+            ],
+            "observed_at": 1000,
+            "version": 1
+          },
+          "now": 1002,
+          "policy": {
+            "min_horizontal_nm": 5,
+            "min_vertical_ft": 1000,
+            "horizon_min": 5,
+            "sample_step_min": 0.5,
+            "max_state_age_sec": 10,
+            "max_speed_nm_min": 6,
+            "max_climb_ft_min": 3000
+          }
+        }
+      },
+      {
+        "id": 2,
+        "base": "http://127.0.0.1:40197/",
+        "request": {
+          "op": "apply",
+          "state": {
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "x_nm": -5,
+                "y_nm": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "altitude_ft": 10000,
+                "climb_ft_min": 0,
+                "vx_nm_min": -1,
+                "vy_nm_min": 0,
+                "x_nm": 5,
+                "y_nm": 0
+              }
+            ],
+            "observed_at": 1000,
+            "version": 1
+          },
+          "advisory": {
+            "aircraft_id": "TWR419",
+            "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+            "set_vx_nm_min": -1,
+            "set_vy_nm_min": 2,
+            "set_climb_ft_min": 0,
+            "issued_at": 1002,
+            "expires_at": 1010,
+            "rationale": "synthetic projected-separation recovery",
+            "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+          },
+          "approval": {
+            "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+            "decision": "approve",
+            "approved_at": 1002.2,
+            "approver": "synthetic-controller"
+          },
+          "ack": {
+            "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+            "status": "accepted",
+            "acknowledged_at": 1002.4
+          },
+          "now": 1002.5,
+          "policy": {
+            "min_horizontal_nm": 5,
+            "min_vertical_ft": 1000,
+            "horizon_min": 5,
+            "sample_step_min": 0.5,
+            "max_state_age_sec": 10,
+            "max_speed_nm_min": 6,
+            "max_climb_ft_min": 3000
+          },
+          "audit_json": "[]"
+        }
+      },
+      {
+        "id": 3,
+        "base": "http://127.0.0.1:40197/",
+        "request": {
+          "op": "plan",
+          "state": {
+            "version": 3,
+            "observed_at": 1002.5,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "x_nm": -5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "x_nm": 5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": -1,
+                "vy_nm_min": -1.8369701987210297e-16,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "now": 1002.5,
+          "policy": {
+            "min_horizontal_nm": 5,
+            "min_vertical_ft": 1000,
+            "horizon_min": 5,
+            "sample_step_min": 0.5,
+            "max_state_age_sec": 10,
+            "max_speed_nm_min": 6,
+            "max_climb_ft_min": 3000
+          }
+        }
+      }
+    ],
+    "workerResponses": [
+      {
+        "id": 1,
+        "result": {
+          "advisory": {
+            "aircraft_id": "TWR419",
+            "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+            "set_vx_nm_min": -1,
+            "set_vy_nm_min": 2,
+            "set_climb_ft_min": 0,
+            "issued_at": 1002,
+            "expires_at": 1010,
+            "rationale": "synthetic projected-separation recovery",
+            "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+          }
+        }
+      },
+      {
+        "id": 2,
+        "result": {
+          "state": {
+            "version": 2,
+            "observed_at": 1002.5,
+            "aircraft": [
+              {
+                "aircraft_id": "TWR218",
+                "x_nm": -5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": 1,
+                "vy_nm_min": 0,
+                "climb_ft_min": 0
+              },
+              {
+                "aircraft_id": "TWR419",
+                "x_nm": 5,
+                "y_nm": 0,
+                "altitude_ft": 10000,
+                "vx_nm_min": -1,
+                "vy_nm_min": 2,
+                "climb_ft_min": 0
+              }
+            ]
+          },
+          "valid": true,
+          "events": [
+            {
+              "seq": 0,
+              "kind": "screen_pass",
+              "payload": {
+                "world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+                "advisory_hashes": [
+                  "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f"
+                ]
+              },
+              "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+              "event_hash": "1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e"
+            },
+            {
+              "seq": 1,
+              "kind": "approval",
+              "payload": {
+                "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+                "decision": "approve",
+                "approved_at": 1002.2,
+                "approver": "synthetic-controller"
+              },
+              "prev_hash": "1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e",
+              "event_hash": "9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085"
+            },
+            {
+              "seq": 2,
+              "kind": "ack",
+              "payload": {
+                "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+                "status": "accepted",
+                "acknowledged_at": 1002.4
+              },
+              "prev_hash": "9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085",
+              "event_hash": "72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9"
+            },
+            {
+              "seq": 3,
+              "kind": "simulated_actuation",
+              "payload": {
+                "advisory_hash": "d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f",
+                "before_world_hash": "d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a",
+                "after_world_hash": "3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35"
+              },
+              "prev_hash": "72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9",
+              "event_hash": "04ad4e3453871c1ba209ef53cfffb58f8b8b3544ce5ea7d549f84c39a04171d5"
+            }
+          ],
+          "audit_canonical": [
+            "{\"kind\":\"screen_pass\",\"payload\":{\"advisory_hashes\":[\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"],\"world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":0}",
+            "{\"kind\":\"approval\",\"payload\":{\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"approved_at\":1002.2,\"approver\":\"synthetic-controller\",\"decision\":\"approve\"},\"prev_hash\":\"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\",\"seq\":1}",
+            "{\"kind\":\"ack\",\"payload\":{\"acknowledged_at\":1002.4,\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"status\":\"accepted\"},\"prev_hash\":\"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\",\"seq\":2}",
+            "{\"kind\":\"simulated_actuation\",\"payload\":{\"advisory_hash\":\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\",\"after_world_hash\":\"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\",\"before_world_hash\":\"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\"},\"prev_hash\":\"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\",\"seq\":3}"
+          ],
+          "audit_json": "[{\"seq\": 0, \"kind\": \"screen_pass\", \"payload\": {\"world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"advisory_hashes\": [\"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\"]}, \"prev_hash\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"event_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\"}, {\"seq\": 1, \"kind\": \"approval\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"decision\": \"approve\", \"approved_at\": 1002.2, \"approver\": \"synthetic-controller\"}, \"prev_hash\": \"1347d837ac806b790dcb301b47e79f1b610d6204b0df7351a77e9e3c6079ec8e\", \"event_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\"}, {\"seq\": 2, \"kind\": \"ack\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"status\": \"accepted\", \"acknowledged_at\": 1002.4}, \"prev_hash\": \"9da8e15a5d4ba43b0c1dc9025584039d7a15046283d02f334dff04b2ab46a085\", \"event_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\"}, {\"seq\": 3, \"kind\": \"simulated_actuation\", \"payload\": {\"advisory_hash\": \"d7af68a35f2bd3b5f5c6f88b892acb8b5b11533992df0b6dc255b485b03cc27f\", \"before_world_hash\": \"d01e0ef289cfb1310e8090bd2f068862f8d90f92b7939b8227223c2b85d0da6a\", \"after_world_hash\": \"3741eb3b2fe72f06313a8872f34f1a54c8bc857d3cb87fbb40a96128f4709e35\"}, \"prev_hash\": \"72859479c1281b46c8c84abaac22a35ef316fe941ce0939a5e024459295689e9\", \"event_hash\": \"04ad4e3453871c1ba209ef53cfffb58f8b8b3544ce5ea7d549f84c39a04171d5\"}]"
+        }
+      },
+      {
+        "id": 3,
+        "result": {
+          "advisory": {
+            "aircraft_id": "TWR419",
+            "world_hash": "a5089b4d1ebaa95e490840b2cfdc011ed03138328379acc59fec3fc50e6446b7",
+            "set_vx_nm_min": -1,
+            "set_vy_nm_min": 2,
+            "set_climb_ft_min": 0,
+            "issued_at": 1002.5,
+            "expires_at": 1010.5,
+            "rationale": "synthetic projected-separation recovery",
+            "advisory_hash": "0bd5b401a2ac5c57be4abb7eb8b7e574ac579f9b82740d75cb0f5da95d078eee"
+          }
+        }
+      }
+    ]
+  },
+  "world_before": {
+    "version": 3,
+    "observed_at": 1002.5,
+    "aircraft": [
+      {
+        "aircraft_id": "TWR218",
+        "x_nm": -5,
+        "y_nm": 0,
+        "altitude_ft": 10000,
+        "vx_nm_min": 1,
+        "vy_nm_min": 0,
+        "climb_ft_min": 0
+      },
+      {
+        "aircraft_id": "TWR419",
+        "x_nm": 5,
+        "y_nm": 0,
+        "altitude_ft": 10000,
+        "vx_nm_min": -1,
+        "vy_nm_min": -1.8369701987210297e-16,
+        "climb_ft_min": 0
+      }
+    ]
+  },
+  "world_before_raw": "{\n  \"version\": 3,\n  \"observed_at\": 1002.5,\n  \"aircraft\": [\n    {\n      \"aircraft_id\": \"TWR218\",\n      \"x_nm\": -5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": 1,\n      \"vy_nm_min\": 0,\n      \"climb_ft_min\": 0\n    },\n    {\n      \"aircraft_id\": \"TWR419\",\n      \"x_nm\": 5,\n      \"y_nm\": 0,\n      \"altitude_ft\": 10000,\n      \"vx_nm_min\": -1,\n      \"vy_nm_min\": -1.8369701987210297e-16,\n      \"climb_ft_min\": 0\n    }\n  ]\n}",
+  "second_native_plan": {
+    "request": {
+      "id": 3,
+      "base": "http://127.0.0.1:40197/",
+      "request": {
+        "op": "plan",
+        "state": {
+          "version": 3,
+          "observed_at": 1002.5,
+          "aircraft": [
+            {
+              "aircraft_id": "TWR218",
+              "x_nm": -5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": 1,
+              "vy_nm_min": 0,
+              "climb_ft_min": 0
+            },
+            {
+              "aircraft_id": "TWR419",
+              "x_nm": 5,
+              "y_nm": 0,
+              "altitude_ft": 10000,
+              "vx_nm_min": -1,
+              "vy_nm_min": -1.8369701987210297e-16,
+              "climb_ft_min": 0
+            }
+          ]
+        },
+        "now": 1002.5,
+        "policy": {
+          "min_horizontal_nm": 5,
+          "min_vertical_ft": 1000,
+          "horizon_min": 5,
+          "sample_step_min": 0.5,
+          "max_state_age_sec": 10,
+          "max_speed_nm_min": 6,
+          "max_climb_ft_min": 3000
+        }
+      }
+    },
+    "response": {
+      "id": 3,
+      "result": {
+        "advisory": {
+          "aircraft_id": "TWR419",
+          "world_hash": "a5089b4d1ebaa95e490840b2cfdc011ed03138328379acc59fec3fc50e6446b7",
+          "set_vx_nm_min": -1,
+          "set_vy_nm_min": 2,
+          "set_climb_ft_min": 0,
+          "issued_at": 1002.5,
+          "expires_at": 1010.5,
+          "rationale": "synthetic projected-separation recovery",
+          "advisory_hash": "0bd5b401a2ac5c57be4abb7eb8b7e574ac579f9b82740d75cb0f5da95d078eee"
+        }
+      }
+    }
+  },
+  "page_errors": [],
+  "blocked_external_requests": [],
+  "source_after": {
+    "LICENSE": "d946a9700b643b060dd422829c2cb41166f9f2ae4ea08fcebaa2afa173df5f36",
+    "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "audit_replay.py": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+    "browser_acceptance.py": "88ffdce97c2440dc57bd9f08f38097b9893d38b896c4f0b71695c5bab9a8b54e",
+    "decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "demo.py": "52ca8211495839d4ed29d59ce76fcb11500443106dc1015b5849e5f416722923",
+    "explorer.py": "c16106e27f44f9dd247bcbc6ae677dc74db5340ffc8d2df9fd6df655fc9cb340",
+    "plan_world.py": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e",
+    "scenarios.py": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+    "strands_adapter.py": "bc3d9bac2858827fac096f1faa9b5dbd4aba5bbdc7597a2c4d63e3a063b5e632",
+    "test_explorer.py": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "web/airspace/.gitignore": "3c3d8ee71c7cb202a6b724b6c42b8e104651dfa767292c29592ae5e4679befbe",
+    "web/airspace/.npmrc": "cc37e56acfb8e6a45d1fc786e6f4fa16a62a570ac7d85fb3ad84227e21694bcf",
+    "web/airspace/README.md": "4cf271294a85949922a4d3690edaa5bc3b87717d1bd67a7e409cbcd63ee7d051",
+    "web/airspace/index.html": "9e33df6f94174a880640819677cb315ef9e43286fe642bddc14b4507502647bf",
+    "web/airspace/package-lock.json": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+    "web/airspace/package.json": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd",
+    "web/airspace/prepare-python.mjs": "e67ea0d07b7043fc191b4bb4473ff6b45ba7f173eeec294c2f43ace429c61484",
+    "web/airspace/src/actuation.ts": "a6a3186003cbd7fdcba6e7bc0847c9abfa4ba5174d3c98ce2da651941360dcfb",
+    "web/airspace/src/advisory-options.ts": "4b001ebf546e10761906c19e09af5ef19967e45d994c1b090d376cad695ea976",
+    "web/airspace/src/advisory-review.ts": "45c170f976ffc886db49aef120361cbabc99884f63b3f017fc7a0c7b9923ed3e",
+    "web/airspace/src/audit.ts": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075",
+    "web/airspace/src/core.ts": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+    "web/airspace/src/decision-trace.css": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e",
+    "web/airspace/src/decision-trace.ts": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce",
+    "web/airspace/src/draw.ts": "26ddd9f92b1391d6ece5578f8e65ee82acb47458705d6670a805cde079375acc",
+    "web/airspace/src/encounter-view.ts": "329ac5994841291b3922702f035fac4d03766ae522eb52b807954f4d5ad508c4",
+    "web/airspace/src/encounter.ts": "efd010d007c8b63830d09fdda9bf8724316803937e373f44fd7f504ff1355883",
+    "web/airspace/src/gate.ts": "3f135cabba46d9b6316475424841e543b5f7488a70d85cba25be5cd8cf5e8c8a",
+    "web/airspace/src/main.ts": "812b9c0d586d69cb2be7aad45f72900fd588cbb805f1a15445901d50bb0d7e1e",
+    "web/airspace/src/maneuvers.ts": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d",
+    "web/airspace/src/planner.ts": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74",
+    "web/airspace/src/python-worker.ts": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987",
+    "web/airspace/src/python.ts": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c",
+    "web/airspace/src/radar-geometry.ts": "4df8158d1ca92115ef9be8067fecb377a1e2ccf72b5cd0f3fa27691284e77349",
+    "web/airspace/src/radar-view.ts": "0e61e50b2a2b6d60ef8e958dc9b481a8c4348838fdb451b9f29553b80838efd8",
+    "web/airspace/src/track-edit.ts": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046",
+    "web/airspace/src/world-tools.ts": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+    "web/airspace/style.css": "ad7d9baba6611f762dc2ae22cdcbb780130ebfdc764bb98fc82e3f9a82668280",
+    "web/airspace/tests/advisory-numeric.test.ts": "4c36af766b9b30160b069d6ce31580741387989680be0118a8ac6f5c5fe8fd19",
+    "web/airspace/tests/advisory-options.test.ts": "111e9cdef1612992382ef8b13e88184a41c760a5f16c72e79a865c9c971b7ff3",
+    "web/airspace/tests/algorithm.test.ts": "117539be86d2fc5f26adef7151c8a55c85096d65e80ebc6e7d263aae89a3b178",
+    "web/airspace/tests/audit-wire.test.ts": "7ced880e8615caef1e3b12b8097eee256b7b4cf286aedec59a68393d014ce8a7",
+    "web/airspace/tests/decision-trace.test.mjs": "92a6e7f2cd834fb271a3aadd37e3dc1235691b0e258d351e43cdb0e6a9b39c67",
+    "web/airspace/tests/encounter.test.ts": "81600f27fd777d2abbba2948267980b5bace5bec394f24373f9f1d89c3656488",
+    "web/airspace/tests/playback-controls.test.ts": "1a3d17a0f87c9e250da5996fbf15d87ed2329bc66d1da6297e58932a0bcefe89",
+    "web/airspace/tests/python-audit-interop.test.mjs": "d0538f519c8e2f4b0fef49580cd82178b16ccf53824b851226e263d2be80a77f",
+    "web/airspace/tests/python-audit-wire.json": "7d30312dc70d7655cea7ab162912ced0265f21ebd3c4d9057933a51c72801e31",
+    "web/airspace/tests/python-float-parity.test.mjs": "86b0eb813c03fecb7c188f6bb77d76f4b77cea8fe37c2d282cf602dafc27f235",
+    "web/airspace/tests/python-reference.json": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+    "web/airspace/tests/radar-geometry.test.ts": "f7285383bd4f8039328adc23f41f21225d84d7b78642e0b91172d7049b27ace2",
+    "web/airspace/tests/radar-view.test.ts": "dbd5e22a5bd622c80f41423dd1488c64e9579dc6ac64fcf7051fec8cedbb8085",
+    "web/airspace/tests/track-edit.test.ts": "58adb9d2d42ae7284e8d3c3a949157ff80b46a1d63d9a2859b28d418497a647e",
+    "web/airspace/tests/world-json-draft.browser.mjs": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+    "web/airspace/tests/world-tools.test.ts": "7c4f1889d0d4fd3104def954234fc0269820396ebb85f4495ee0b388969a7095",
+    "web/airspace/tsconfig.json": "994b5ffe77837a183106072a881d44d74a1b6a5d6e6e964ae5364971573c7e6a",
+    "web/airspace/vite.config.ts": "36c16c15fb1ea9d20fafaf0962addb32ceb20e4b87868ac0656d1d9c4c4f7aa6"
+  },
+  "borrowed_after": {
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/audit_replay.py": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide-lock.json": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide.asm.js": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide.asm.wasm": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide.mjs": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/python_stdlib.zip": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/favicon.svg": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/package-lock.json": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/node_modules/vite/dist/node/index.js": "f109fff88512ed5cf39503b7a4b2a1de1c95bff333cb1d3635454558e3bfefc7"
+  },
+  "finished_at": "2026-10-08T17:31:26.746Z",
+  "passed": 6,
+  "failed": 1,
+  "status": "failed"
+}
