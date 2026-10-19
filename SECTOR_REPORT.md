@@ -31,6 +31,21 @@ sector/horizon, and `contacts` sorted by entry offset then case-sensitive
 callsign. Each contact has `entry_after_min`, `exit_after_min`,
 `inside_at_observation` (inclusive boundary) and `contact_only` (zero-duration).
 Absent aircraft have no intersection in the chosen horizon and are omitted.
+
+Both offsets describe the intersection of the trajectory's contact interval
+with the **requested observation window**, not necessarily the actual first
+entry or final exit from the rectangle. Each row additionally reports:
+- `entry_window_clipped: true` when the track was already within the
+  rectangle *before* observation (the actual ingress precedes offset 0).
+- `exit_window_clipped: true` when the track remains within the rectangle
+  *past* the requested horizon (the actual egress follows the horizon).
+
+An exact entry on the rectangle edge at offset 0 is *not* entry-clipped; an
+exact exit on its edge at the horizon is *not* exit-clipped. A stationary
+interior flight has both flags true. A track that first reaches the rectangle
+at the final horizon instant can legitimately have `contact_only: true`
+**and** `exit_window_clipped: true`: it continues inside *after* the report
+ends. These flags do not project beyond the declared straight-line model.
 Altitude is intentionally **not** filtered: this is planar occupancy, not a
 3D controlled airspace or aviation separation rule. Counts are not risks.
 
