@@ -233,7 +233,10 @@ class ActualNativeProducerTests(unittest.TestCase):
             input=bytes_for(world), capture_output=True, check=False,
         )
         self.assertEqual(produced.returncode, 0, produced.stderr)
-        received = self.command(produced.stdout)
+        received = subprocess.run(
+            [sys.executable, str(ROOT / "sector_occupancy.py"), "-"],
+            input=produced.stdout, capture_output=True, check=False,
+        )
         self.assertEqual(received.returncode, 0, received.stderr)
         report = json.loads(received.stdout)
         self.assertEqual(report["peak_open_interval_count"], 2)
