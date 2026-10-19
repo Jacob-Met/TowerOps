@@ -108,6 +108,48 @@ class NativeCliTests(unittest.TestCase):
         self.assertTrue(report["read_only"])
         self.assertEqual(report["world_version"], 3)
 
+    def test_native_window_cutoffs_are_reported(self):
+        result = self.command()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        contacts = {track["aircraft_id"]: track for track in json.loads(result.stdout)["contacts"]}
+        self.assertTrue(contacts["NOW"]["entry_window_clipped"])
+        self.assertTrue(contacts["NOW"]["exit_window_clipped"])
+        self.assertFalse(contacts["LATER"]["entry_window_clipped"])
+        self.assertTrue(contacts["LATER"]["exit_window_clipped"])
+        self.assertTrue(contacts["LATER"]["contact_only"])
+
+    def test_exact_sector_border_events_are_not_clipped(self):
+        def aircraft(name: str, x: float, vx: float):
+            return {
+                "aircraft_id": name, "x_nm": x, "y_nm": 5,
+                "altitude_ft": 10000, "vx_nm_min": vx,
+                "vy_nm_min": 0, "climb_ft_min": 0,
+            }
+
+        world = {
+            "version": 1, "observed_at": 15,
+            "aircraft": [
+                aircraft("ENTER0", 0, 1),
+                aircraft("EXIT0", 0, -1),
+                aircraft("ENTER5", -5, 1),
+                aircraft("EXIT5", 5, 1),
+            ],
+        }
+        result = self.command(payload=json.dumps(world).encode())
+        self.assertEqual(result.returncode, 0, result.stderr)
+        entries = {track["aircraft_id"]: track for track in json.loads(result.stdout)["contacts"]}
+        self.assertFalse(entries["ENTER0"]["entry_window_clipped"])
+        self.assertTrue(entries["ENTER0"]["exit_window_clipped"])
+        self.assertTrue(entries["EXIT0"]["entry_window_clipped"])
+        self.assertFalse(entries["EXIT0"]["exit_window_clipped"])
+        self.assertTrue(entries["EXIT0"]["contact_only"])
+        self.assertFalse(entries["ENTER5"]["entry_window_clipped"])
+        self.assertTrue(entries["ENTER5"]["exit_window_clipped"])
+        self.assertTrue(entries["ENTER5"]["contact_only"])
+        self.assertTrue(entries["EXIT5"]["entry_window_clipped"])
+        self.assertFalse(entries["EXIT5"]["exit_window_clipped"])
+        self.assertEqual(entries["EXIT5"]["exit_after_min"], 5)
+
     def test_no_contact_and_zero_horizon(self):
         result = self.command("--horizon-min", "0")
         self.assertEqual(result.returncode, 0, result.stderr)
