@@ -8,9 +8,8 @@ from pathlib import Path
 
 import pytest
 
-from proximity_report import MAX_PAIRS, report_proximity
 from plan_world import parse_world
-
+from proximity_report import MAX_PAIRS, report_proximity
 
 ROOT = Path(__file__).resolve().parents[1]
 

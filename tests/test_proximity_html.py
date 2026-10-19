@@ -1,7 +1,6 @@
 """Native-report-to-offline-page receiving without a browser dependency."""
 
 import hashlib
-import json
 import subprocess
 import sys
 from pathlib import Path
@@ -11,7 +10,6 @@ import pytest
 from proximity_html import render_html
 from proximity_report import report_proximity
 from tests.test_proximity_report import flight, world
-
 
 ROOT = Path(__file__).resolve().parents[1]
 

@@ -18,8 +18,8 @@ if not (ROOT / "proximity_html.py").exists():
     ROOT = ROOT.parent
 sys.path.insert(0, str(ROOT))
 
-from proximity_html import render_html  # noqa: E402
-from proximity_report import report_proximity  # noqa: E402
+from proximity_html import render_html
+from proximity_report import report_proximity
 
 
 def _flight(id_: str, x: float, y: float, alt: float, vx: float, vy: float):
