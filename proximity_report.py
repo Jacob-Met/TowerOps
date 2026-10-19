@@ -11,13 +11,17 @@ import hashlib
 import json
 import math
 import sys
-from dataclasses import asdict, replace
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
 from plan_world import (
-    MAX_AIRCRAFT, MAX_WORLD_BYTES, _argument_number, _check_policy,
-    _read_world_file, parse_world,
+    MAX_AIRCRAFT,
+    MAX_WORLD_BYTES,
+    _argument_number,
+    _check_policy,
+    _read_world_file,
+    parse_world,
 )
 from towerops import Aircraft, SafetyPolicy
 
