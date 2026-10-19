@@ -13,7 +13,10 @@ python3 sector_occupancy.py contacts.json --format html > occupancy.html
 Open `occupancy.html` locally in a browser for a portable, responsive, script-free
 timeline, including an at-a-glance sustained-occupancy strip. On narrow screens
 the detailed track table scrolls **inside its own panel**, while the rest of
-the page and long SHA-256 digest wrap to the available viewport width. The producer already determines contact from the real native
+the page and long SHA-256 digest wrap to the available viewport width.
+Expand **Show aircraft IDs at the peak times** to read the exact callsigns
+at every peak sustained interval and peak boundary instant without opening the
+JSON report. The producer already determines contact from the real native
 `WorldState`; this consumer admits saved report bytes and builds an interval
 sweep, including tracked occupancy windows, an exact-boundary event register,
 peak concurrent counts and per-track bars or point-contact dots. It does not

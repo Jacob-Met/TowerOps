@@ -188,6 +188,19 @@ def render_html(summary: dict[str, Any]) -> str:
     inst = summary["peak_instantaneous_count"]
     intervals = ", ".join(f'{x["start_after_min"]:g}–{x["end_after_min"]:g} min' for x in summary["peak_open_windows"]) or "None"
     instantaneous = ", ".join(f"{t:g}" for t in summary["peak_instantaneous_times_min"]) or "None"
+    peak_intervals = "".join(
+        f'<li>{segment["start_after_min"]:g}–{segment["end_after_min"]:g} min: '
+        + ", ".join(html.escape(aircraft_id) for aircraft_id in segment["aircraft_ids"])
+        + "</li>"
+        for segment in summary["peak_open_windows"]
+    ) or "<li>None</li>"
+    peak_times = set(summary["peak_instantaneous_times_min"])
+    peak_instants = "".join(
+        f'<li>{event["at_after_min"]:g} min: '
+        + ", ".join(html.escape(aircraft_id) for aircraft_id in event["aircraft_ids"])
+        + "</li>"
+        for event in summary["boundary_events"] if event["at_after_min"] in peak_times
+    ) or "<li>None</li>"
     occupancy_bars = []
     for segment in summary["segments"]:
         if segment["count"] == 0:
@@ -215,6 +228,7 @@ th,td{border-bottom:1px solid #8885;padding:.55rem;text-align:left}th{font-weigh
 .point{height:1rem;width:.45rem;background:#d15c30;transform:translate(-50%,-50%);border-radius:1rem}
 .occ-strip{position:relative;height:2rem;border:1px solid #8887;border-radius:.4rem;background:repeating-linear-gradient(90deg,transparent 0,transparent 24.8%,#8883 25%,transparent 25.2%)}
 .occ-block{position:absolute;top:0;bottom:0;background:#207a9b}.occ-legend{font-size:.85rem;opacity:.82;margin-top:.3rem}
+.peak-details{border:1px solid #8887;border-radius:.5rem;padding:.7rem 1rem;margin:1.5rem 0}.peak-details summary{cursor:pointer;font-weight:650}.peak-details li{overflow-wrap:anywhere}
 footer{margin-top:2rem;font-size:.85rem;opacity:.82;overflow-wrap:anywhere}
 </style></head><body>
 <h1>Sector occupancy timeline</h1>
@@ -222,6 +236,9 @@ footer{margin-top:2rem;font-size:.85rem;opacity:.82;overflow-wrap:anywhere}
 """ + f"""<p>Sector bounds (NM): west {sector['west_nm']:g}, east {sector['east_nm']:g}, south {sector['south_nm']:g}, north {sector['north_nm']:g}. Horizon: {horizon:g} minutes after synthetic observation.</p>
 <div class="metrics"><div class="metric"><strong>{summary['contact_count']}</strong>tracks contacted</div><div class="metric"><strong>{peak}</strong>peak between-event tracks</div><div class="metric"><strong>{inst}</strong>peak at exact event time</div><div class="metric"><strong>{summary['contact_only_count']}</strong>instant-only contacts</div></div>
 <p><strong>Peak sustained windows:</strong> {intervals}. <strong>Peak exact instants (minutes):</strong> {instantaneous}.</p>
+<details class="peak-details"><summary>Show aircraft IDs at the peak times</summary>
+<h3>Peak sustained windows</h3><ul>{peak_intervals}</ul>
+<h3>Peak exact instants</h3><ul>{peak_instants}</ul></details>
 <h2>Between-event occupancy</h2>
 <div class="occ-strip" role="img" aria-label="Synthetic positive-duration occupancy shown as horizontal blocks; opacity increases with track count">{''.join(occupancy_bars)}</div>
 <p class="occ-legend">0 to {horizon:g} minutes, left to right. Taller occupancy counts are darker; exact-instant touches are excluded. Full values are in the JSON report.</p>
