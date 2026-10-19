@@ -12,6 +12,23 @@ Open the HTML in a regular web browser. Search by callsign, filter native confli
 
 `--limit` is 1–1770; the main tool default of 20 applies. The report states when saved rows are truncated, while retaining the full native conflict count. Output is created only on stdout; no source file is changed. The `>` redirection is a normal user-selected operation and *can replace an existing HTML file*; choose a new destination filename if preservation matters. Bad input emits no HTML, exits 2 and writes a diagnostic to stderr. For complete native parser/policy inputs and bounds, see `PROXIMITY_REPORT.md`.
 
+## Optional native consumer browser receiving
+
+From a complete TowerOps checkout with the Playwright Python package and a
+supported Chromium installation:
+
+```bash
+python3 tools/verify_proximity_browser.py
+```
+
+The script exercises the *actual native report renderer and browser DOM* on a
+held synthetic four-aircraft world, asserting conflict counts, search, sorting,
+filtering, pair inspection, both separation-shortfall bars, a 390px mobile
+viewport, zero page errors and zero network requests. It writes no files and
+emits one machine-readable JSON receipt on success. Playwright is optional and
+is not added to the repository's required dependencies. An installed-browser
+pass is separate from independent review or operational aviation assurance.
+
 ## Local qualification (component-only)
 
 On 2026-10-19 using a local native-compatible fixture for missing `towerops.py`/`plan_world.py` modules, not a fresh remote checkout:
