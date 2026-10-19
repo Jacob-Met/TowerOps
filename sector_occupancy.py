@@ -15,6 +15,7 @@ import os
 import re
 import stat
 import sys
+from itertools import pairwise
 from pathlib import Path
 from typing import Any
 
@@ -129,7 +130,7 @@ def summarize_occupancy(raw: bytes) -> dict[str, Any]:
     horizon = source["horizon_min"]
     times = sorted({0, horizon, *(t for row in contacts for t in (row["entry_after_min"], row["exit_after_min"]))})
     segments = []
-    for left, right in zip(times, times[1:]):
+    for left, right in pairwise(times):
         if left == right:
             continue
         ids = sorted(row["aircraft_id"] for row in contacts if row["entry_after_min"] <= left and row["exit_after_min"] >= right)
