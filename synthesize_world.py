@@ -55,7 +55,7 @@ def synthesize_world(
     seed: int,
     aircraft_count: int = 2,
     mode: str = "encounter",
-    observed_at: int | float = 1000.0,
+    observed_at: float = 1000.0,
     version: int = 1,
 ) -> dict[str, Any]:
     """Make one bounded, native-admitted simulated world.
