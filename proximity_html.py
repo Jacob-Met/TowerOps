@@ -13,7 +13,6 @@ from pathlib import Path
 from plan_world import MAX_WORLD_BYTES, _argument_number, _read_world_file
 from proximity_report import report_proximity
 
-
 _HTML = r'''<!doctype html>
 <html lang="en">
 <head>
