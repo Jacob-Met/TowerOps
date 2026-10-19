@@ -84,6 +84,30 @@ class WorldSvgTests(unittest.TestCase):
         self.assertTrue(all(math.isfinite(tick) for tick in _ticks(-5, 5)))
         ET.fromstring(render_svg(state, MAX_HORIZON_MIN))
 
+    def test_native_maximum_sixty_tracks_have_complete_legend(self) -> None:
+        tracks = [
+            {**PAIR[0], 'aircraft_id': f'T{i:03d}', 'x_nm': i - 30,
+             'y_nm': (i % 7) - 3, 'altitude_ft': 9000 + 100 * i}
+            for i in range(60)
+        ]
+        svg = render_svg(parse_world(raw_world(tracks)), 7.5)
+        document = ET.fromstring(svg)
+        groups = document.findall('.//' + SVG + 'g')
+        self.assertEqual(len(groups), 60)
+        self.assertEqual({g.get('data-aircraft') for g in groups},
+                         {f'T{i:03d}' for i in range(60)})
+        self.assertIn('T059 · 14900 → 15275 FT', svg)
+        self.assertIn('60 aircraft', svg)
+        with self.assertRaises(ValueError):
+            parse_world(raw_world(tracks + [{**tracks[0], 'aircraft_id': 'EXTRA'}]))
+
+    def test_direct_native_nonfinite_projection_is_not_drawn(self) -> None:
+        # The saved-world parser has a tighter numeric envelope; the public
+        # pure rendering function must still fail closed on a direct model.
+        enormous = Aircraft('HOT', 1e308, 0, 0, 1e308, 0, 0)
+        with self.assertRaises(ValueError, msg='non-finite projected track'):
+            render_svg(WorldState(1, 0.0, (enormous,)), 120.0)
+
     def test_cli_real_stdin_and_file_path_match(self) -> None:
         raw = raw_world(PAIR)
         with tempfile.TemporaryDirectory() as tmp:
