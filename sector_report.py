@@ -87,10 +87,21 @@ def sector_report(
         if interval is None:
             continue
         entry, exit_ = interval
+        # The returned offsets are clipped to the requested window. Preserve
+        # whether the *unbounded* rectangle crossing began before observation
+        # or continues after the end of the report horizon.
+        x_window = axis_interval(aircraft.x_nm, aircraft.vx_nm_min, west_nm, east_nm)
+        y_window = axis_interval(aircraft.y_nm, aircraft.vy_nm_min, south_nm, north_nm)
+        if x_window is None or y_window is None:
+            continue  # Defensive; a clipped contact requires both axis windows.
+        entry_window_clipped = max(x_window[0], y_window[0]) < 0.0
+        exit_window_clipped = min(x_window[1], y_window[1]) > horizon_min
         tracks.append({
             "aircraft_id": aircraft.aircraft_id,
             "entry_after_min": entry,
             "exit_after_min": exit_,
+            "entry_window_clipped": entry_window_clipped,
+            "exit_window_clipped": exit_window_clipped,
             "inside_at_observation": west_nm <= aircraft.x_nm <= east_nm and south_nm <= aircraft.y_nm <= north_nm,
             "contact_only": entry == exit_,
         })
