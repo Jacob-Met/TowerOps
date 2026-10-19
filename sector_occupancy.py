@@ -188,6 +188,17 @@ def render_html(summary: dict[str, Any]) -> str:
     inst = summary["peak_instantaneous_count"]
     intervals = ", ".join(f'{x["start_after_min"]:g}–{x["end_after_min"]:g} min' for x in summary["peak_open_windows"]) or "None"
     instantaneous = ", ".join(f"{t:g}" for t in summary["peak_instantaneous_times_min"]) or "None"
+    occupancy_bars = []
+    for segment in summary["segments"]:
+        if segment["count"] == 0:
+            continue
+        left = 100 * segment["start_after_min"] / horizon if horizon else 0
+        width = 100 * (segment["end_after_min"] - segment["start_after_min"]) / horizon if horizon else 0
+        opacity = 0.4 + 0.6 * segment["count"] / max(1, peak)
+        label = f'{segment["start_after_min"]:g} to {segment["end_after_min"]:g} minutes: {segment["count"]} tracks'
+        occupancy_bars.append(
+            f'<span class="occ-block" style="left:{left:.10g}%;width:{width:.10g}%;opacity:{opacity:.3g}" title="{label}"></span>'
+        )
     sector = summary["sector"]
     return """<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -201,13 +212,19 @@ h1{font-size:1.7rem}p{max-width:85ch}.notice{border-left:4px solid #b47800;paddi
 th,td{border-bottom:1px solid #8885;padding:.55rem;text-align:left}th{font-weight:650}.scroll{overflow-x:auto}
 .timeline{width:45%;min-width:220px;position:relative;background:linear-gradient(90deg,transparent 24.8%,#8883 25%,transparent 25.2%,transparent 49.8%,#8883 50%,transparent 50.2%,transparent 74.8%,#8883 75%,transparent 75.2%)}
 .timeline::before{content:"";display:block;height:1.2rem}.bar,.point{position:absolute;top:50%;display:block;background:#207a9b;transform:translateY(-50%);height:.85rem;border-radius:2px;min-width:1px}
-.point{height:1rem;width:.45rem;background:#d15c30;transform:translate(-50%,-50%);border-radius:1rem}footer{margin-top:2rem;font-size:.85rem;opacity:.82}
+.point{height:1rem;width:.45rem;background:#d15c30;transform:translate(-50%,-50%);border-radius:1rem}
+.occ-strip{position:relative;height:2rem;border:1px solid #8887;border-radius:.4rem;background:repeating-linear-gradient(90deg,transparent 0,transparent 24.8%,#8883 25%,transparent 25.2%)}
+.occ-block{position:absolute;top:0;bottom:0;background:#207a9b}.occ-legend{font-size:.85rem;opacity:.82;margin-top:.3rem}
+footer{margin-top:2rem;font-size:.85rem;opacity:.82}
 </style></head><body>
 <h1>Sector occupancy timeline</h1>
 <p class="notice"><strong>Synthetic research only.</strong> The saved report is not independently authenticated. This review neither validates real aircraft movements nor issues safety guidance or clearances. Closed-interval boundary touches are counted separately from sustained occupancy.</p>
 """ + f"""<p>Sector bounds (NM): west {sector['west_nm']:g}, east {sector['east_nm']:g}, south {sector['south_nm']:g}, north {sector['north_nm']:g}. Horizon: {horizon:g} minutes after synthetic observation.</p>
 <div class="metrics"><div class="metric"><strong>{summary['contact_count']}</strong>tracks contacted</div><div class="metric"><strong>{peak}</strong>peak between-event tracks</div><div class="metric"><strong>{inst}</strong>peak at exact event time</div><div class="metric"><strong>{summary['contact_only_count']}</strong>instant-only contacts</div></div>
 <p><strong>Peak sustained windows:</strong> {intervals}. <strong>Peak exact instants (minutes):</strong> {instantaneous}.</p>
+<h2>Between-event occupancy</h2>
+<div class="occ-strip" role="img" aria-label="Synthetic positive-duration occupancy shown as horizontal blocks; opacity increases with track count">{''.join(occupancy_bars)}</div>
+<p class="occ-legend">0 to {horizon:g} minutes, left to right. Taller occupancy counts are darker; exact-instant touches are excluded. Full values are in the JSON report.</p>
 <div class="scroll"><table><caption>Synthetic contact intervals in minutes, with native horizon clipping labels</caption><thead><tr><th>Track</th><th>Enter</th><th>Exit</th><th>Timeline</th><th>Cutoff interpretation</th></tr></thead><tbody>{''.join(lines)}</tbody></table></div>
 <footer>Generated from a saved towerops.sector-report.v1 report. SHA-256 of report bytes: {summary['source_sector_report_sha256']}. No external scripts, fonts, images or network requests.</footer>
 </body></html>\n"""
