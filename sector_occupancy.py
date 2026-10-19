@@ -209,13 +209,13 @@ def render_html(summary: dict[str, Any]) -> str:
 h1{font-size:1.7rem}p{max-width:85ch}.notice{border-left:4px solid #b47800;padding:.6rem 1rem;background:rgba(180,120,0,.08)}
 .metrics{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0}.metric{border:1px solid #8887;border-radius:.5rem;padding:1rem;min-width:11rem}
 .metric strong{display:block;font-size:1.7rem}table{width:100%;border-collapse:collapse;min-width:660px;text-align:left}
-th,td{border-bottom:1px solid #8885;padding:.55rem;text-align:left}th{font-weight:650}.scroll{overflow-x:auto}
+th,td{border-bottom:1px solid #8885;padding:.55rem;text-align:left}th{font-weight:650}.scroll{overflow-x:auto;max-width:100%}
 .timeline{width:45%;min-width:220px;position:relative;background:linear-gradient(90deg,transparent 24.8%,#8883 25%,transparent 25.2%,transparent 49.8%,#8883 50%,transparent 50.2%,transparent 74.8%,#8883 75%,transparent 75.2%)}
 .timeline::before{content:"";display:block;height:1.2rem}.bar,.point{position:absolute;top:50%;display:block;background:#207a9b;transform:translateY(-50%);height:.85rem;border-radius:2px;min-width:1px}
 .point{height:1rem;width:.45rem;background:#d15c30;transform:translate(-50%,-50%);border-radius:1rem}
 .occ-strip{position:relative;height:2rem;border:1px solid #8887;border-radius:.4rem;background:repeating-linear-gradient(90deg,transparent 0,transparent 24.8%,#8883 25%,transparent 25.2%)}
 .occ-block{position:absolute;top:0;bottom:0;background:#207a9b}.occ-legend{font-size:.85rem;opacity:.82;margin-top:.3rem}
-footer{margin-top:2rem;font-size:.85rem;opacity:.82}
+footer{margin-top:2rem;font-size:.85rem;opacity:.82;overflow-wrap:anywhere}
 </style></head><body>
 <h1>Sector occupancy timeline</h1>
 <p class="notice"><strong>Synthetic research only.</strong> The saved report is not independently authenticated. This review neither validates real aircraft movements nor issues safety guidance or clearances. Closed-interval boundary touches are counted separately from sustained occupancy.</p>

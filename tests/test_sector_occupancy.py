@@ -112,6 +112,8 @@ class CoreTests(unittest.TestCase):
         self.assertIn('left:25%;width:25%;', page)
         self.assertIn('class="point"', page)
         self.assertIn('class="occ-strip"', page)
+        self.assertIn("overflow-wrap:anywhere", page)
+        self.assertIn("overflow-x:auto;max-width:100%", page)
         self.assertIn('2 to 4 minutes: 2 tracks', page)
         self.assertIn('4 to 5 minutes: 2 tracks', page)
         self.assertNotIn("<script", page)
