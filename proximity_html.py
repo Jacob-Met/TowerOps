@@ -53,7 +53,7 @@ tbody tr {transition:background .15s;} tbody tr:hover {background:#1a2f48;} tbod
 .detail {padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:28px;} .detail p {color:#a9bed1;margin:6px 0 16px;}
 .detail h3 {margin:0;font-size:1.4rem;letter-spacing:-.015em;} .bar-label {display:flex;justify-content:space-between;font-size:.78rem;color:#bacbdb;margin:17px 0 8px;}
 .meter {height:8px;background:#21374e;border-radius:8px;overflow:hidden;} .meter > span {display:block;height:100%;background:#67c8d2;width:0%;}
-.meter > span.warning {background:#eb966e;} .timeline {position:relative;height:12px;border-radius:12px;background:#294058;margin:23px 2px 8px;}
+.meter.under {background:#92514b;} .meter > span.warning {background:#67c8d2;} .timeline {position:relative;height:12px;border-radius:12px;background:#294058;margin:23px 2px 8px;}
 .timeline:after {content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent calc(25% - 1px),#8aa2b2 25%);opacity:.35;}
 .timeline-pin {position:absolute;top:-6px;left:0;width:4px;height:24px;background:#b0f0de;border-radius:2px;box-shadow:0 0 0 3px #263a43;z-index:2;}
 .timeline-labels {display:flex;justify-content:space-between;color:#9cb5c8;font-size:.75rem;}
@@ -89,7 +89,7 @@ footer code {color:#adc9db;} .visually-hidden {position:absolute;width:1px;heigh
 <div class="bar-label"><span>Vertical at closest time</span><span id="vertical-value">—</span></div><div class="meter"><span id="vertical-bar"></span></div>
 <p class="small" id="separate">—</p></div>
 <div><span class="small">Forecast time of closest combined proximity</span><div class="timeline" aria-hidden="true"><div id="time-pin" class="timeline-pin"></div></div>
-<div class="timeline-labels"><span>0 min</span><span id="time-end">—</span></div><p id="selected-time">—</p><p class="small">Thresholds are horizontal <span id="h-limit">—</span> NM and vertical <span id="v-limit">—</span> ft. Bars reach their full width at the configured minimum and do not convey operational safety.</p></div></div>
+<div class="timeline-labels"><span>0 min</span><span id="time-end">—</span></div><p id="selected-time">—</p><p class="small">Thresholds are horizontal <span id="h-limit">—</span> NM and vertical <span id="v-limit">—</span> ft. Bars show distance up to each minimum; a red unfilled segment marks the shortfall. Neither bar is a safety decision.</p></div></div>
 </section>
 <footer id="provenance">—</footer>
 <noscript><div class="wrap">JavaScript is needed for interactive local review; no network calls are made.</div></noscript>
@@ -125,7 +125,7 @@ function show(row){
   txt($('vertical-value'),fmt(row.vertical_ft_at_closest,1)+' ft');
   for(const [id,ratio] of [['horizontal-bar',row.horizontal_nm_at_closest/h],['vertical-bar',row.vertical_ft_at_closest/v]]){
     $(id).style.width=Math.min(100,Math.max(0,ratio*100))+'%';
-    $(id).classList.toggle('warning',ratio<1);
+    $(id).parentElement.classList.toggle('under',ratio<1);
   }
   txt($('separate'),'Horizontal CPA: '+fmt(row.horizontal_cpa_nm,3)+' NM at '+fmt(row.horizontal_cpa_time_min,3)+' min · Vertical CPA: '+fmt(row.vertical_cpa_ft,1)+' ft at '+fmt(row.vertical_cpa_time_min,3)+' min');
   const fraction=report.horizon_min ? row.closest_time_min/report.horizon_min : 0;
