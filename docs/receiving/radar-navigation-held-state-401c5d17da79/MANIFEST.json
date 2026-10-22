@@ -1,0 +1,150 @@
+{
+  "schema": "towerops.radar-held-state.receiving-files.v1",
+  "source_head": "6eb54df0ad71ef3539d3ca6d8dd985eff875f435",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "f0b64009c1b8c4cfa07852f6cf49c847561011e5cf3e15da5137b03b1889a608",
+      "git_blob": "a890679b8cb1b13549a058799990bcc884f256e5",
+      "bytes": 5872
+    },
+    {
+      "path": "evidence/accepted/browser-process.json",
+      "sha256": "26ac192d20d13d0e3ddb33b978c50e4fa11a0ffbf711f14dee4a49ed94221146",
+      "git_blob": "a736abf8440b27dd54315faaded7eab0112a95b0",
+      "bytes": 4328
+    },
+    {
+      "path": "evidence/accepted/held-approval-edit-auto-restored.png",
+      "sha256": "38ada13a782dcf6b9ffdccf30140f29c6520c9b389923f90a9dbf3fb40618ce0",
+      "git_blob": "cb15a871a31a6575d323de9c611983e0fca045dc",
+      "bytes": 281110
+    },
+    {
+      "path": "evidence/accepted/held-approval-edit-offscreen.png",
+      "sha256": "c21954d1b712d0eda99f55e5e6fd003ec174bb541afadf3399fd26b368633dc4",
+      "git_blob": "9e9278dfd0c57484fb9b8839c65feb04d572a09a",
+      "bytes": 268068
+    },
+    {
+      "path": "evidence/accepted/receipt.json",
+      "sha256": "9bbcc22006e7cd0e930d10f7be3e1f7d728ef8c44c46c950804ab980d7e310a9",
+      "git_blob": "1e29fec7c720f1660d93d8c0ef325e67d4617c01",
+      "bytes": 88495
+    },
+    {
+      "path": "evidence/accepted/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/accepted/stdout.log",
+      "sha256": "93d4d29a71a0596daa10b8d062f9fac99c6fd455de619546b936afc098753cdb",
+      "git_blob": "2e9e39d749b6bb66a5d550b4946df95ac33f0397",
+      "bytes": 464
+    },
+    {
+      "path": "evidence/first-run/browser-process.json",
+      "sha256": "c0794d9ed7d1d941dd4891a83cd844bc0b9010ad8d5e9e569baf7955a5acb859",
+      "git_blob": "ff4845dfeb19a118482692321bdb1c7e79a9dda9",
+      "bytes": 4046
+    },
+    {
+      "path": "evidence/first-run/receipt.json",
+      "sha256": "5fd88a9044334b7e27aa0b784b76432f5688feff790610fdd2bf19a55c71cdbe",
+      "git_blob": "fd3da859a5b9c15188650de10ce662a54304ae73",
+      "bytes": 49043
+    },
+    {
+      "path": "evidence/first-run/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/first-run/stdout.log",
+      "sha256": "cdb4733bf9f790ad727a6a7e59fceccf985c19976e26a41b15312f2129f24613",
+      "git_blob": "0f632f89a1781336e7b29427db7e3422a76d8f19",
+      "bytes": 864
+    },
+    {
+      "path": "evidence/native-keyboard-control/browser-process.json",
+      "sha256": "33760aacf3108b9d86b81ac4a3207eeeaa6c5a9877e46e305477f181eaa2e4f9",
+      "git_blob": "67361c028ff514928a3ed2c1645acbcb565f3f11",
+      "bytes": 3575
+    },
+    {
+      "path": "evidence/native-keyboard-control/receipt.json",
+      "sha256": "2e34c17b6831f08a67145fcf808107de32ba2963975a36687039e6624be2bc5d",
+      "git_blob": "0becee723c99ceecd1431332e292e9708c1df646",
+      "bytes": 3460
+    },
+    {
+      "path": "evidence/native-keyboard-control/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/native-keyboard-control/stdout.log",
+      "sha256": "3aa8da4de85b316fb3b6b170fa80d114d3c8dd43a7c58088cffb054a5281a450",
+      "git_blob": "73136456e2e05340d738517eff07a8dac8ae63be",
+      "bytes": 3461
+    },
+    {
+      "path": "evidence/receiver-adjustment.patch",
+      "sha256": "cfb0ce08117284128255c3687b5a9bfe8540704645074ff7ba46f0ec46d6b92a",
+      "git_blob": "06a40fb296add46c8fe9c63b65540e3935613746",
+      "bytes": 4176
+    },
+    {
+      "path": "inputs/MATERIALIZED-INPUTS.json",
+      "sha256": "d72253271daea9ad4d7861bbc827c6188cfb9f3e0a6bfc142f2959fe8e796ee7",
+      "git_blob": "18c247f26ff41ec7c2a6467358c8b16cffe2b958",
+      "bytes": 18455
+    },
+    {
+      "path": "inputs/RUNTIME-FREEZE.json",
+      "sha256": "99c1b130c5cc348c819e8332f8f3b3ecdced0d78a8ba7a27182c6c82adf7e20e",
+      "git_blob": "8e6ef2de09edda354e062f26871963737dbbea7a",
+      "bytes": 68194
+    },
+    {
+      "path": "inputs/candidate-v2.json",
+      "sha256": "e7ed4f6998c794ecf9b6156c51f602cc8a28016c4993e98ca3960f41d5b4da98",
+      "git_blob": "2a7848c284fbc4520a4cb8442676b88da1327f07",
+      "bytes": 11089
+    },
+    {
+      "path": "inputs/first-run-candidate.json",
+      "sha256": "048881fdf8a033f56c22f5ece49978697f5646efa9852babf7f7fe0685dd1988",
+      "git_blob": "583af9ad94477f9fa5986a845c34de58281351d2",
+      "bytes": 10880
+    },
+    {
+      "path": "methods/calibrate-native-keyboard.mjs",
+      "sha256": "b738dab91670d1c45de8ac996a8c92c12b6e73ab34ff219467e935dc319f6187",
+      "git_blob": "e7803144be10761475cefb88bcfad5707ae09995",
+      "bytes": 2603
+    },
+    {
+      "path": "methods/cdp.mjs",
+      "sha256": "be20b757f9cd7b3b85bcc701b589d61ad338123be70d75acb914eda529af5639",
+      "git_blob": "af1856eba92170f1b7083ce9168ec2b50dc78306",
+      "bytes": 5755
+    },
+    {
+      "path": "methods/receive-held-state.v2.mjs",
+      "sha256": "cf25a49e352601f99c7400be9a2fce974b24975912a1227b00eb948c605bbc9f",
+      "git_blob": "dc6324f5d2a240d86d8d2f13f01ddc6a7c6d84fe",
+      "bytes": 22935
+    },
+    {
+      "path": "methods/receive-held-state.v3.mjs",
+      "sha256": "9451087dac93e1013a0d37a39f2eb5db359acdf243f85f24df077e5803c3ae29",
+      "git_blob": "11cd499dec4876518598bf1a0d9ba7c3d520ae44",
+      "bytes": 23242
+    }
+  ]
+}

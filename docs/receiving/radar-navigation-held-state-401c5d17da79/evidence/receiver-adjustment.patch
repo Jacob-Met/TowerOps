@@ -1,0 +1,31 @@
+--- receive-held-state.v2.mjs
++++ receive-held-state.v3.mjs
+@@ -9,7 +9,9 @@
+ import { openBrowser } from './cdp.mjs';
+ 
+ const here=resolve(fileURLToPath(new URL('..',import.meta.url)));
+-const config=JSON.parse(await readFile(join(here,'candidate.json'),'utf8'));
++const configPath=process.argv[2]?resolve(process.argv[2]):join(here,'candidate.json');
++const configRaw=await readFile(configPath);
++const config=JSON.parse(configRaw.toString('utf8'));
+ const output=join(here,'evidence',config.run_name);
+ const profile='/home/jacob/towerops-radar-profiles-401c5d17da79/'+config.profile_name;
+ assert.match(config.run_name,/^candidate-[a-z0-9-]+$/);
+@@ -17,7 +19,7 @@
+ for(const p of [output,profile]){let existing=false;try{await lstat(p);existing=true;}catch(e){if(e.code!=='ENOENT')throw e;}assert.equal(existing,false,'receiving output/profile must be new: '+p);}
+ await mkdir(output,{recursive:false});
+ const sha=b=>createHash('sha256').update(b).digest('hex');
+-const receipt={schema:'towerops.radar-navigation-independent-receiving.v1',source_head:config.source_head,source_tree:config.source_tree,source_root:config.source_root,source_fence:'TowerOps #59',started_at:new Date().toISOString(),node:process.version,method_sha256:sha(await readFile(fileURLToPath(import.meta.url))),helper_sha256:sha(await readFile(new URL('./cdp.mjs',import.meta.url))),checks:[],observations:[],setup:[],phase:'source guards',source_changed:[],borrowed_changed:[],failure:null};
++const receipt={schema:'towerops.radar-navigation-independent-receiving.v1',source_head:config.source_head,source_tree:config.source_tree,source_root:config.source_root,source_fence:'TowerOps #59',input_config_sha256:sha(configRaw),started_at:new Date().toISOString(),node:process.version,method_sha256:sha(await readFile(fileURLToPath(import.meta.url))),helper_sha256:sha(await readFile(new URL('./cdp.mjs',import.meta.url))),checks:[],observations:[],setup:[],phase:'source guards',source_changed:[],borrowed_changed:[],failure:null};
+ let server,browser;
+ const protectedStates=[];
+ const check=(name,condition,details={})=>{receipt.checks.push({name,passed:!!condition,details});if(!condition)throw new Error(name);};
+@@ -46,7 +48,7 @@
+  async function active(){return cdp.evaluate('document.activeElement?.id??""');}
+  async function click(id){await cdp.click('#'+id);await settle();}
+  async function openDetails(selector){if(!await cdp.evaluate('document.querySelector('+JSON.stringify(selector)+').open')){await cdp.click(selector+' > summary');await settle();}}
+- async function key(name,code,keyCode,modifiers=0){for(const type of ['keyDown','keyUp'])await cdp.send('Input.dispatchKeyEvent',{type,key:name,code,windowsVirtualKeyCode:keyCode,nativeVirtualKeyCode:keyCode,modifiers});await settle();}
++ async function key(name,code,keyCode,modifiers=0){for(const type of ['keyDown','keyUp']){const params={type,key:name,code,windowsVirtualKeyCode:keyCode,nativeVirtualKeyCode:keyCode,modifiers};const typed=name==='Enter'?'\r':name.length===1?name:'';if(type==='keyDown'&&!modifiers&&typed){params.text=typed;params.unmodifiedText=typed;}await cdp.send('Input.dispatchKeyEvent',params);}await settle();}
+  async function native(operation){return cdp.evaluate('(()=>{const q=[...window.__towerReceiverIO.requests].reverse().find(x=>x.request.op==='+JSON.stringify(operation)+');return q?{request:q,response:window.__towerReceiverIO.responses.find(x=>x.id===q.id)}:null;})()');}
+  async function plan(){await click('run-planner');await cdp.wait('document.querySelector("#proposal-state").textContent==="PROPOSAL READY" && !document.querySelector("#approve").disabled',90000);const x=await native('plan');assert.ok(x?.response?.result?.advisory,'real native planner must return an advisory for setup');return x;}
+  async function approveAndApply(){await click('approve');await click('readback');await cdp.wait('document.querySelector("#gate-ack i").textContent==="ACCEPTED" && document.querySelector("#audit-status").textContent==="4 EVENTS / VALID"',90000);const x=await native('apply');assert.ok(x?.response?.result?.valid&&!x.response.result.error,'native setup apply must be accepted');return x;}

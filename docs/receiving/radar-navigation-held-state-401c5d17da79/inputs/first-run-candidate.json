@@ -1,0 +1,151 @@
+{
+  "run_name": "candidate-6eb54df0-held-v1",
+  "profile_name": "independent-6eb54df0-held-v1",
+  "source_head": "6eb54df0ad71ef3539d3ca6d8dd985eff875f435",
+  "source_tree": "6c9ac3fedaf8edd4962da238278a42ed81261221",
+  "source_parent": "5b3015567a01017245c5f715c1bce65e20a06138",
+  "source_root": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar-independent/source",
+  "source_files": {
+    "LICENSE": "d946a9700b643b060dd422829c2cb41166f9f2ae4ea08fcebaa2afa173df5f36",
+    "advisory_options.py": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+    "audit_replay.py": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+    "browser_acceptance.py": "88ffdce97c2440dc57bd9f08f38097b9893d38b896c4f0b71695c5bab9a8b54e",
+    "decision_trace.py": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+    "demo.py": "52ca8211495839d4ed29d59ce76fcb11500443106dc1015b5849e5f416722923",
+    "explorer.py": "c16106e27f44f9dd247bcbc6ae677dc74db5340ffc8d2df9fd6df655fc9cb340",
+    "plan_world.py": "62dc9be45f9973318846e8452826112e120b93b9f4507d9198a625ef0682c92e",
+    "scenarios.py": "bda24452b41a9ec8b6a7a0865b2fb95217a4a304ecf17b1c5d72b2dab65f6a52",
+    "strands_adapter.py": "bc3d9bac2858827fac096f1faa9b5dbd4aba5bbdc7597a2c4d63e3a063b5e632",
+    "test_explorer.py": "40550e034a6d2ff9f8125feecd58b63205028c12346f1e1e68fdf16dbfc657c7",
+    "towerops.py": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+    "web/airspace/.gitignore": "3c3d8ee71c7cb202a6b724b6c42b8e104651dfa767292c29592ae5e4679befbe",
+    "web/airspace/.npmrc": "cc37e56acfb8e6a45d1fc786e6f4fa16a62a570ac7d85fb3ad84227e21694bcf",
+    "web/airspace/README.md": "4cf271294a85949922a4d3690edaa5bc3b87717d1bd67a7e409cbcd63ee7d051",
+    "web/airspace/index.html": "9e33df6f94174a880640819677cb315ef9e43286fe642bddc14b4507502647bf",
+    "web/airspace/package-lock.json": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+    "web/airspace/package.json": "7ea61558d0891b84a1bba070c0deffee4978d4307a92fd4a4b42c186720e82fd",
+    "web/airspace/prepare-python.mjs": "e67ea0d07b7043fc191b4bb4473ff6b45ba7f173eeec294c2f43ace429c61484",
+    "web/airspace/src/actuation.ts": "a6a3186003cbd7fdcba6e7bc0847c9abfa4ba5174d3c98ce2da651941360dcfb",
+    "web/airspace/src/advisory-options.ts": "4b001ebf546e10761906c19e09af5ef19967e45d994c1b090d376cad695ea976",
+    "web/airspace/src/advisory-review.ts": "45c170f976ffc886db49aef120361cbabc99884f63b3f017fc7a0c7b9923ed3e",
+    "web/airspace/src/audit.ts": "80ba5c956cffa3ede818fc0eb3ed8e694962b9b2493f14062e09ac1c1e58e075",
+    "web/airspace/src/core.ts": "4f705e060ec70735c2687c7f27ccefb4f070a699352a974b4436ebf693b615ac",
+    "web/airspace/src/decision-trace.css": "6a53d401b24a34cb71f75242c1cbd5cae718403157905e8d74e96cc6c8947c7e",
+    "web/airspace/src/decision-trace.ts": "0d0696520de828bf9752a9b8b06299cf5c5d9265ee4cb68d8b9ee9ba45c442ce",
+    "web/airspace/src/draw.ts": "26ddd9f92b1391d6ece5578f8e65ee82acb47458705d6670a805cde079375acc",
+    "web/airspace/src/encounter-view.ts": "329ac5994841291b3922702f035fac4d03766ae522eb52b807954f4d5ad508c4",
+    "web/airspace/src/encounter.ts": "efd010d007c8b63830d09fdda9bf8724316803937e373f44fd7f504ff1355883",
+    "web/airspace/src/gate.ts": "3f135cabba46d9b6316475424841e543b5f7488a70d85cba25be5cd8cf5e8c8a",
+    "web/airspace/src/main.ts": "812b9c0d586d69cb2be7aad45f72900fd588cbb805f1a15445901d50bb0d7e1e",
+    "web/airspace/src/maneuvers.ts": "fc39861adf2a8977e689405f53315997275b4cc752d11ec5b5f5af71ec34d60d",
+    "web/airspace/src/planner.ts": "5a8139b8fe31ffe51f7a7af3273ef84c776dccbc85954a075a8476515a2f0c74",
+    "web/airspace/src/python-worker.ts": "ed48504574a2778713e35d724905f27a2f63493c7e739b9f869945ff13ad4987",
+    "web/airspace/src/python.ts": "8d7ee802aa3775867f4ffeb0195251f87e7d68203a5654c4a7b157807f6b7d0c",
+    "web/airspace/src/radar-geometry.ts": "4df8158d1ca92115ef9be8067fecb377a1e2ccf72b5cd0f3fa27691284e77349",
+    "web/airspace/src/radar-view.ts": "0e61e50b2a2b6d60ef8e958dc9b481a8c4348838fdb451b9f29553b80838efd8",
+    "web/airspace/src/track-edit.ts": "80ce537aa01e613a47d7c9620b6a8ff732f7ada0c48c21dc02d5947fb8f06046",
+    "web/airspace/src/world-tools.ts": "3bcb60995d2355db389226cfc7a277512ef2a6abc1599a0289112be746045115",
+    "web/airspace/style.css": "ad7d9baba6611f762dc2ae22cdcbb780130ebfdc764bb98fc82e3f9a82668280",
+    "web/airspace/tests/advisory-numeric.test.ts": "4c36af766b9b30160b069d6ce31580741387989680be0118a8ac6f5c5fe8fd19",
+    "web/airspace/tests/advisory-options.test.ts": "111e9cdef1612992382ef8b13e88184a41c760a5f16c72e79a865c9c971b7ff3",
+    "web/airspace/tests/algorithm.test.ts": "117539be86d2fc5f26adef7151c8a55c85096d65e80ebc6e7d263aae89a3b178",
+    "web/airspace/tests/audit-wire.test.ts": "7ced880e8615caef1e3b12b8097eee256b7b4cf286aedec59a68393d014ce8a7",
+    "web/airspace/tests/decision-trace.test.mjs": "92a6e7f2cd834fb271a3aadd37e3dc1235691b0e258d351e43cdb0e6a9b39c67",
+    "web/airspace/tests/encounter.test.ts": "81600f27fd777d2abbba2948267980b5bace5bec394f24373f9f1d89c3656488",
+    "web/airspace/tests/playback-controls.test.ts": "1a3d17a0f87c9e250da5996fbf15d87ed2329bc66d1da6297e58932a0bcefe89",
+    "web/airspace/tests/python-audit-interop.test.mjs": "d0538f519c8e2f4b0fef49580cd82178b16ccf53824b851226e263d2be80a77f",
+    "web/airspace/tests/python-audit-wire.json": "7d30312dc70d7655cea7ab162912ced0265f21ebd3c4d9057933a51c72801e31",
+    "web/airspace/tests/python-float-parity.test.mjs": "86b0eb813c03fecb7c188f6bb77d76f4b77cea8fe37c2d282cf602dafc27f235",
+    "web/airspace/tests/python-reference.json": "7c54e4989f3795219cf810e0aacb1ee1d1f8a5d9a459a3f4f57b8fbba2d91ae2",
+    "web/airspace/tests/radar-geometry.test.ts": "f7285383bd4f8039328adc23f41f21225d84d7b78642e0b91172d7049b27ace2",
+    "web/airspace/tests/radar-view.test.ts": "dbd5e22a5bd622c80f41423dd1488c64e9579dc6ac64fcf7051fec8cedbb8085",
+    "web/airspace/tests/track-edit.test.ts": "58adb9d2d42ae7284e8d3c3a949157ff80b46a1d63d9a2859b28d418497a647e",
+    "web/airspace/tests/world-json-draft.browser.mjs": "441e5b9ef989ce9e301ae09c21441dcba41bcb0188b85319dbbd1434fd58849f",
+    "web/airspace/tests/world-tools.test.ts": "7c4f1889d0d4fd3104def954234fc0269820396ebb85f4495ee0b388969a7095",
+    "web/airspace/tsconfig.json": "994b5ffe77837a183106072a881d44d74a1b6a5d6e6e964ae5364971573c7e6a",
+    "web/airspace/vite.config.ts": "36c16c15fb1ea9d20fafaf0962addb32ceb20e4b87868ac0656d1d9c4c4f7aa6"
+  },
+  "borrowed_files": [
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/advisory_options.py",
+      "sha256": "2c0f35f7d541cb11ba73fc0e4f8eec3731572d8b56a027e487697e229c533ee6",
+      "bytes": 2380,
+      "kind": "original native Python/Pyodide asset"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/audit_replay.py",
+      "sha256": "cc06d7952241860aa290764c48aaef855aaab9a264f8bca5a548b183714757f2",
+      "bytes": 7927,
+      "kind": "original native Python/Pyodide asset"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/decision_trace.py",
+      "sha256": "04d7514733979dd8c5bdb19e61226717a71c6369c20fd65d34f874c25e1d1675",
+      "bytes": 2099,
+      "kind": "original native Python/Pyodide asset"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide-lock.json",
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "bytes": 112205,
+      "kind": "original native Python/Pyodide asset"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide.asm.js",
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "bytes": 1255688,
+      "kind": "original native Python/Pyodide asset"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide.asm.wasm",
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "bytes": 10105545,
+      "kind": "original native Python/Pyodide asset"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/pyodide.mjs",
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+      "bytes": 13931,
+      "kind": "original native Python/Pyodide asset"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/python_stdlib.zip",
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "bytes": 2360737,
+      "kind": "original native Python/Pyodide asset"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/python/towerops.py",
+      "sha256": "6c0634e2ff02f38ff99a0983d5a3564b877553cf2f426e0da269cbd5a48c7874",
+      "bytes": 19462,
+      "kind": "original native Python/Pyodide asset"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public/favicon.svg",
+      "sha256": "b986e29482d5602cf1385209ce8f69939684560c4e0f631c790547a19efcfda2",
+      "bytes": 252,
+      "kind": "favicon"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/package-lock.json",
+      "sha256": "6383a64a31a875a6de8be29e34ca0fee30bc6890b1d32974c1e907caa8f35655",
+      "bytes": 40499,
+      "kind": "frozen lock"
+    },
+    {
+      "path": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/node_modules/vite/dist/node/index.js",
+      "sha256": "f109fff88512ed5cf39503b7a4b2a1de1c95bff333cb1d3635454558e3bfefc7",
+      "bytes": 2670,
+      "kind": "Vite native entrypoint"
+    }
+  ],
+  "vite_module": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/node_modules/vite/dist/node/index.js",
+  "public_dir": "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source/web/airspace/public",
+  "allowed_roots": [
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar-independent/source",
+    "/home/jacob/.commander-tp-1/hamon-work/estate-401c5d17da79/towerops-radar/source",
+    "/home/jacob/towerops-current-main-31366547c1f5/repository/web/airspace/node_modules"
+  ],
+  "status_id": "radar-view-summary",
+  "offscreen_pattern": "0 of 2 aircraft positions in view\\. 2 outside;"
+}
