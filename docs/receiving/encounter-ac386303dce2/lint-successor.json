@@ -1,0 +1,320 @@
+{
+  "schema": "towerops.encounter.lint-successor.v1",
+  "claim": 77,
+  "pull_request": 81,
+  "parent": "2e3efac6013b23471dd1f5870b50a7a2b276e70b",
+  "original_source_sha256": "bb6e5586196f77f6ac7bd994d9d1f07c818ec79f5a6f01845568e6262a491715",
+  "successor": {
+    "source": {
+      "sha256": "322aaf153a4468c48925b24f7587bac3c6f8b8e4acb233006d7908d51e386758",
+      "git_blob": "acb0d9dab3d4eff009319fb5d3bed54a8e4e86d1",
+      "normalized_ast_equal": true,
+      "diff": "--- source-before\n+++ source-after\n@@ -11,12 +11,18 @@\n from pathlib import Path\n from typing import Any\n \n-from plan_world import MAX_WORLD_BYTES, _argument_number, _check_policy, _number, parse_world\n+from plan_world import (\n+    MAX_WORLD_BYTES,\n+    _argument_number,\n+    _check_policy,\n+    _number,\n+    parse_world,\n+)\n from towerops import Aircraft, SafetyPolicy\n \n \n def _separation(\n-    first: Aircraft, second: Aircraft, policy: SafetyPolicy, minutes: int | float,\n+    first: Aircraft, second: Aircraft, policy: SafetyPolicy, minutes: float,\n ) -> dict[str, Any]:\n     # Use relative motion, as the existing browser encounter consumer does.\n     # Large shared motion must not erase the pair's initial separation.\n@@ -42,7 +48,7 @@\n \n def inspect_encounter(\n     raw: bytes, first: str, second: str, *,\n-    at_min: int | float = 0, policy: SafetyPolicy | None = None,\n+    at_min: float = 0, policy: SafetyPolicy | None = None,\n ) -> dict[str, Any]:\n     \"\"\"Explain a chosen pair using the unchanged native analytical intervals.\n \n"
+    },
+    "test": {
+      "sha256": "54438e3131258beb0975a38df356dd052edd8ac0fdca54957cd1edca633587b8",
+      "git_blob": "8188ebb559d1d3c56d31c40f2d7dfaf0192df1e2",
+      "normalized_ast_equal": true,
+      "diff": "--- test-before\n+++ test-after\n@@ -21,11 +21,11 @@\n ROOT = Path(__file__).resolve().parents[1]\n \n \n-def world_bytes(altitude: int | float = 12000, **second_changes: int | float) -> bytes:\n-    first = dict(\n-        aircraft_id=\"A\", x_nm=0, y_nm=0, altitude_ft=10000,\n-        vx_nm_min=0, vy_nm_min=0, climb_ft_min=0,\n-    )\n+def world_bytes(altitude: float = 12000, **second_changes: float) -> bytes:\n+    first = {\n+        \"aircraft_id\": \"A\", \"x_nm\": 0, \"y_nm\": 0, \"altitude_ft\": 10000,\n+        \"vx_nm_min\": 0, \"vy_nm_min\": 0, \"climb_ft_min\": 0,\n+    }\n     second = {\n         **first, \"aircraft_id\": \"B\", \"x_nm\": 6, \"altitude_ft\": altitude,\n         \"vx_nm_min\": -4, \"climb_ft_min\": -1000, **second_changes,\n@@ -161,25 +161,21 @@\n \n     def test_unknown_same_or_invalid_selected_identifiers(self):\n         for first, second in [(\"A\", \"missing\"), (\"missing\", \"A\"), (\"a\", \"B\"), (\"A\", \"A\"), (None, \"B\"), (\"A\", [\"B\"])]:\n-            with self.subTest(first=first, second=second):\n-                with self.assertRaises((ValueError, TypeError)):\n-                    inspect_encounter(world_bytes(), first, second)\n+            with self.subTest(first=first, second=second), self.assertRaises((ValueError, TypeError)):\n+                inspect_encounter(world_bytes(), first, second)\n \n     def test_cursor_and_policy_refusals(self):\n         for cursor in [-1, 5.00001, True, \"1\", None, float(\"nan\"), float(\"inf\")]:\n-            with self.subTest(cursor=cursor):\n-                with self.assertRaises(ValueError):\n-                    inspect_encounter(world_bytes(), \"A\", \"B\", at_min=cursor)\n+            with self.subTest(cursor=cursor), self.assertRaises(ValueError):\n+                inspect_encounter(world_bytes(), \"A\", \"B\", at_min=cursor)\n         for policy in [False, replace(SafetyPolicy(), horizon_min=0), replace(SafetyPolicy(), min_horizontal_nm=float(\"inf\"))]:\n-            with self.subTest(policy=policy):\n-                with self.assertRaises((ValueError, TypeError)):\n-                    inspect_encounter(world_bytes(), \"A\", \"B\", policy=policy)\n+            with self.subTest(policy=policy), self.assertRaises((ValueError, TypeError)):\n+                inspect_encounter(world_bytes(), \"A\", \"B\", policy=policy)\n \n     def test_existing_complete_world_admission_is_retained(self):\n         for raw in [b\"{}\", b\"\\xff\", b'{\"version\":1,\"version\":2}', b\" \"*(MAX_WORLD_BYTES+1), world_bytes()+b\"bad\"]:\n-            with self.subTest(raw=raw[:80]):\n-                with self.assertRaises((ValueError, TypeError)):\n-                    inspect_encounter(raw, \"A\", \"B\")\n+            with self.subTest(raw=raw[:80]), self.assertRaises((ValueError, TypeError)):\n+                inspect_encounter(raw, \"A\", \"B\")\n \n \n class CliTests(unittest.TestCase):\n"
+    }
+  },
+  "actual_pr_gate": {
+    "run": 37847362429,
+    "tested_merge": "c2fdee39c99702d7688848c188e4fdb3c6af2b65",
+    "tree": "052ec87dd29b85878c70a72fa742f2c5fc1b1e99",
+    "python": "3.12.15",
+    "pytest": "8.3.5",
+    "ruff": "0.16.10",
+    "test_job": 113551462691,
+    "test_result": "186 passed in 6.13s",
+    "adapter_job": 113551462544,
+    "adapter_result": "success; adapter import ok",
+    "lint_job": 113551462381,
+    "lint_result": "10 findings, all in the two new Python files"
+  },
+  "effect": "Production: same imports formatted across lines; two deferred int|float annotations shortened to float, which accepts int in Python typing and does not coerce values. Executable AST otherwise identical. Tests: same two annotations, equivalent literal dict preserving every key/value/order, four nested with contexts combined in the same enter/exit order. All test fixtures and assertions unchanged.",
+  "normalized_ast_comparison": "Strip argument/return annotations; normalize keyword-only dict() calls to literal AST; flatten a With containing exactly one nested With. Complete original and successor normalized AST dumps compared equal.",
+  "preserved": "Original candidate/source/test/21-member archive and initial CI failures remain in parent history and native custody. No model/planner/parser/browser/workflow changes. Hosted gate rerun and independent unchanged probe bind the successor separately.",
+  "native_path": "/home/jacob/towerops-encounter-ac386303dce2-xr9jqwkg/lint-successor",
+  "jobs": {
+    "total_count": 3,
+    "jobs": [
+      {
+        "id": 113551462381,
+        "run_id": 37847362429,
+        "workflow_name": "ci",
+        "head_branch": "work/ac386303dce2-inspect-encounter",
+        "run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37847362429",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOUbLgRs8AAAAacDHP7Q",
+        "head_sha": "2e3efac6013b23471dd1f5870b50a7a2b276e70b",
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/jobs/113551462381",
+        "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37847362429/job/113551462381",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-10-08T21:31:19Z",
+        "started_at": "2026-10-08T21:31:21Z",
+        "completed_at": "2026-10-08T21:31:29Z",
+        "name": "lint",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-08T21:31:22Z",
+            "completed_at": "2026-10-08T21:31:23Z"
+          },
+          {
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-08T21:31:23Z",
+            "completed_at": "2026-10-08T21:31:25Z"
+          },
+          {
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-08T21:31:25Z",
+            "completed_at": "2026-10-08T21:31:25Z"
+          },
+          {
+            "name": "Install ruff",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-08T21:31:25Z",
+            "completed_at": "2026-10-08T21:31:27Z"
+          },
+          {
+            "name": "Run ruff",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-10-08T21:31:27Z",
+            "completed_at": "2026-10-08T21:31:27Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-10-08T21:31:27Z",
+            "completed_at": "2026-10-08T21:31:27Z"
+          },
+          {
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-08T21:31:27Z",
+            "completed_at": "2026-10-08T21:31:27Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-08T21:31:27Z",
+            "completed_at": "2026-10-08T21:31:27Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-runs/113551462381",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000009183,
+        "runner_name": "GitHub Actions 1000009183",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 113551462544,
+        "run_id": 37847362429,
+        "workflow_name": "ci",
+        "head_branch": "work/ac386303dce2-inspect-encounter",
+        "run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37847362429",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOUbLgRs8AAAAacDHQkA",
+        "head_sha": "2e3efac6013b23471dd1f5870b50a7a2b276e70b",
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/jobs/113551462544",
+        "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37847362429/job/113551462544",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-08T21:31:19Z",
+        "started_at": "2026-10-08T21:31:21Z",
+        "completed_at": "2026-10-08T21:31:38Z",
+        "name": "strands-adapter",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-08T21:31:22Z",
+            "completed_at": "2026-10-08T21:31:23Z"
+          },
+          {
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-08T21:31:23Z",
+            "completed_at": "2026-10-08T21:31:26Z"
+          },
+          {
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-08T21:31:26Z",
+            "completed_at": "2026-10-08T21:31:26Z"
+          },
+          {
+            "name": "Install declared dependency",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-08T21:31:26Z",
+            "completed_at": "2026-10-08T21:31:35Z"
+          },
+          {
+            "name": "Import adapter",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-08T21:31:35Z",
+            "completed_at": "2026-10-08T21:31:36Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-10-08T21:31:36Z",
+            "completed_at": "2026-10-08T21:31:36Z"
+          },
+          {
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-08T21:31:36Z",
+            "completed_at": "2026-10-08T21:31:36Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-08T21:31:36Z",
+            "completed_at": "2026-10-08T21:31:36Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-runs/113551462544",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000009185,
+        "runner_name": "GitHub Actions 1000009185",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 113551462691,
+        "run_id": 37847362429,
+        "workflow_name": "ci",
+        "head_branch": "work/ac386303dce2-inspect-encounter",
+        "run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/runs/37847362429",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOUbLgRs8AAAAacDHRIw",
+        "head_sha": "2e3efac6013b23471dd1f5870b50a7a2b276e70b",
+        "url": "https://api.github.com/repos/Jacob-Met/TowerOps/actions/jobs/113551462691",
+        "html_url": "https://github.com/Jacob-Met/TowerOps/actions/runs/37847362429/job/113551462691",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-08T21:31:19Z",
+        "started_at": "2026-10-08T21:31:21Z",
+        "completed_at": "2026-10-08T21:31:35Z",
+        "name": "test",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-08T21:31:22Z",
+            "completed_at": "2026-10-08T21:31:23Z"
+          },
+          {
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-08T21:31:23Z",
+            "completed_at": "2026-10-08T21:31:24Z"
+          },
+          {
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-08T21:31:24Z",
+            "completed_at": "2026-10-08T21:31:25Z"
+          },
+          {
+            "name": "Install test deps",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-08T21:31:25Z",
+            "completed_at": "2026-10-08T21:31:26Z"
+          },
+          {
+            "name": "Run tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-08T21:31:26Z",
+            "completed_at": "2026-10-08T21:31:32Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-10-08T21:31:32Z",
+            "completed_at": "2026-10-08T21:31:32Z"
+          },
+          {
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-08T21:31:32Z",
+            "completed_at": "2026-10-08T21:31:32Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-08T21:31:32Z",
+            "completed_at": "2026-10-08T21:31:32Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/Jacob-Met/TowerOps/check-runs/113551462691",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000009184,
+        "runner_name": "GitHub Actions 1000009184",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      }
+    ]
+  }
+}
