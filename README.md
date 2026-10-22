@@ -100,6 +100,16 @@ is selected or applied; internal body-hash consistency does not establish
 freshness, menu completeness or safety approval. See
 [REVIEW_SAVED_PLAN.md](REVIEW_SAVED_PLAN.md) for input and output limits.
 
+## Match a saved plan to an exact original world
+
+`python3 check_plan_source.py saved.plan.json source-world.json` compares an
+existing recorded plan with an explicitly selected raw synthetic world, without
+rerunning the planner or changing traffic. It distinguishes exact original
+bytes, the same native world with different serialized bytes, and genuinely
+different world content. Add `--json` for a structured provenance check.
+See [CHECK_PLAN_SOURCE.md](CHECK_PLAN_SOURCE.md) for statuses, exit codes and
+the limits of this non-authenticating comparison.
+
 ## Verify
 
 From the repository root:
