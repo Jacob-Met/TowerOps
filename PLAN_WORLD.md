@@ -15,7 +15,7 @@ Save the raw JSON from Airspace Lab's **Inspect or load a WorldState** editor as
 
 ```sh
 python3 plan_world.py world.json
-python3 plan_world.py world.json > review.json
+python3 plan_world.py world.json --output review.json
 ```
 
 The command reads the file without changing it. It does not start a browser or
@@ -58,6 +58,37 @@ literal name is a dash. In a POSIX shell:
 cat world.json | python3 plan_world.py -
 ```
 
+## Save a complete report to a new file
+
+Use `--output NEW_REPORT.json` to save the same JSON report that the ordinary
+command writes to stdout. Success leaves stdout and stderr empty. The destination
+must not already exist, and its parent must be an existing directory. Standard
+input works with this option too:
+
+```sh
+cat world.json | python3 plan_world.py - --output review.json
+```
+
+Existing files, including empty files, directories, symbolic links (even dangling
+links), hard links and aliases of the input are refused without changing them.
+Choose a fresh name to keep another review. There is no overwrite option, parent
+directory creation or fallback path. For the output argument, `-` is a literal
+filename rather than a stdout shortcut; omit `--output` to use stdout.
+
+The complete native review is prepared before a private temporary file is written
+in the destination directory. The command flushes and closes that file, then
+publishes it with an exclusive hard link. The final name first becomes visible as
+a complete report, and a competing creator cannot be overwritten. Filesystems
+without hard-link support return exit 2 rather than falling back to a write that
+could truncate a file. A saved report is UTF-8, with the ordinary JSON layout and
+platform line endings; temporary-file permissions remain in effect on the report.
+
+Failures before publication leave no final report. The private temporary file is
+removed during normal cleanup. If the filesystem refuses cleanup after successful
+publication, exit 2 is reported and the complete published report is retained;
+the command does not delete it to attempt a rollback. This is complete-file
+publication, not a guarantee of persistence through a machine or filesystem crash.
+
 ## Choose the synthetic clock and policy
 
 By default, review time equals the world's `observed_at`. This deliberately
@@ -96,8 +127,9 @@ world is read or reviewed. The Python API also exposes
 
 ## Read the result
 
-A successful invocation writes one `towerops.world-plan.v1` JSON document to
-stdout. It includes the input byte SHA-256, the decoded world and native world
+A successful invocation produces one `towerops.world-plan.v1` JSON document on
+stdout, or in the new file selected by `--output`. It includes the input byte
+SHA-256, the decoded world and native world
 hash, review time, complete policy, conflicting aircraft, number of candidates
 examined, and the complete ordered `advisories` array.
 
@@ -164,11 +196,13 @@ as a successful review. Native model and library admission behavior are unchange
 | 1 | The unchanged native gate refused the review, with its reason on stderr. |
 | 2 | Invalid arguments/input, unsupported numerical domain, unreadable file, or report output failure. |
 
-Read, validation and native-gate failures produce no stdout report. An output
-device failure can leave partial bytes, so automation must check the exit code
-before accepting output. The command does not write an input or a fallback
-report file. Shell redirection is controlled by the caller: choose a different
-output path from the input path.
+Read, validation and native-gate failures produce no report. A stdout device
+failure can leave partial bytes, so automation must check the exit code before
+accepting output. `--output` uses the complete-file publication described above
+and refuses an occupied destination. The command does not write an input or a
+fallback report file. Shell redirection remains controlled by the caller and
+can truncate its destination before this command runs: choose a different output
+path from the input, or use `--output` with a new name.
 
 ## Receiving
 
@@ -176,9 +210,12 @@ The focused suite runs actual native imports and actual Python subprocesses:
 
 ```sh
 python3 -m unittest discover -s tests -p test_plan_world.py -v
+python3 -m unittest discover -s tests -p test_plan_world_output.py -v
 ```
 
 It checks complete native option/body/hash parity, meaningful empty outcomes,
 clock/policy behavior, type and resource refusals, exact input retention, file and
-stdin equivalence, and output failure. The existing repository Python, lint and
+stdin equivalence, and output failure. The saved-output suite exercises actual
+CLI byte parity, occupied paths, failure noncreation, complete-file visibility
+and competing creators. The existing repository Python, lint and
 Airspace Lab gates remain the current-composition acceptance path.
