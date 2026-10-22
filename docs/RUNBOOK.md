@@ -65,7 +65,7 @@ validation.
 The Strands proposal layer is only needed if you want to run the agent side:
 
 ```bash
-pip install -r requirements.txt   # pins strands-agents==1.55.1
+pip install -r requirements.txt   # pins strands-agents==1.58.1
 ```
 
 The demo and tests do not import Strands and run without it. `strands_adapter.py`
