@@ -40,7 +40,7 @@ jobs:
           mkdir -p site/airspace
           cp -R web/airspace/dist/. site/airspace/
           touch site/.nojekyll
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
   deploy:
